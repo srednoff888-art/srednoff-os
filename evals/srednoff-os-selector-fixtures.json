@@ -64,5 +64,14 @@
     "expectedAny": [
       "codex-subagent-orchestration"
     ]
+  },
+  {
+    "id": "multi_direct_aliases",
+    "brief": "source ranking UI kits 3D assets design brief selector ROI per token",
+    "budget": "deep",
+    "expectedAll": [
+      "source-ranking-roi-selector",
+      "design-brief-autogenerator"
+    ]
   }
 ]

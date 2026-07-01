@@ -26,6 +26,8 @@
   |
   <a href="#safety-model">Safety</a>
   |
+  <a href="QUALITY.md">Quality</a>
+  |
   <a href="INSTALL.md">Install Guide</a>
 </p>
 
@@ -86,6 +88,8 @@ Srednoff OS v2.1.2 loaded: OK | project=OK | skills=<count> | kernel=3000 | sele
 | Skill library | Ships reusable `SKILL.md` workflows and agent profiles | Consistent execution across projects |
 | Design/source ranking | Scores UI kits, 3D sources, assets, and external component sources | Less dependency bloat and safer copying |
 | Review gates | Adds security, quality, build, docs, and validation expectations | Cleaner handoff and fewer regressions |
+
+Srednoff OS is not a stronger model and it cannot guarantee that an AI agent will obey every instruction. It is an opinionated workflow layer: routing, checks, skills, scripts, and documentation that make the expected behavior more explicit and easier to audit.
 
 ```mermaid
 flowchart LR
@@ -148,6 +152,10 @@ This README layout borrows proven open-source packaging patterns without copying
 Friends can open an issue with a skill idea, bug report, or improvement proposal. Keep contributions portable: no personal paths, no secrets, no private connector state.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Quality Status
+
+Current local smoke status is tracked in [QUALITY.md](QUALITY.md). The selector and routing checks are intentionally lightweight so they can run before publishing changes.
 
 ## License
 

@@ -1,16 +1,31 @@
 param(
-    [string]$ProjectPath = "<project-path>",
+    [string]$ProjectPath = "",
     [switch]$Json
 )
 
 $ErrorActionPreference = "Stop"
 
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$PackageRoot = (Resolve-Path -LiteralPath (Join-Path $ScriptDir "..")).Path
 $CodexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME ".codex" }
-$Selector = Join-Path $CodexHome "scripts\select-quality-cost-capabilities.ps1"
-$SourceRanker = Join-Path $CodexHome "scripts\srednoff-os-source-ranker.ps1"
-$DesignBrief = Join-Path $CodexHome "scripts\srednoff-os-design-brief.ps1"
-$DomainRouter = Join-Path $CodexHome "scripts\srednoff-os-domain-router.ps1"
-$Registry = Join-Path $CodexHome "srednoff-os\design-source-registry.json"
+if (-not $ProjectPath -or $ProjectPath -eq "<project-path>") {
+    $ProjectPath = $PackageRoot
+}
+
+function Resolve-LocalOrHomeScript {
+    param([string]$Name)
+    $Local = Join-Path $ScriptDir $Name
+    if (Test-Path -LiteralPath $Local -PathType Leaf) { return $Local }
+    return (Join-Path $CodexHome "scripts\$Name")
+}
+
+$Selector = Resolve-LocalOrHomeScript "select-quality-cost-capabilities.ps1"
+$SourceRanker = Resolve-LocalOrHomeScript "srednoff-os-source-ranker.ps1"
+$DesignBrief = Resolve-LocalOrHomeScript "srednoff-os-design-brief.ps1"
+$DomainRouter = Resolve-LocalOrHomeScript "srednoff-os-domain-router.ps1"
+$LocalRegistry = Join-Path $PackageRoot ".codex\srednoff-os\design-source-registry.json"
+$HomeRegistry = Join-Path $CodexHome "srednoff-os\design-source-registry.json"
+$Registry = if (Test-Path -LiteralPath $LocalRegistry -PathType Leaf) { $LocalRegistry } else { $HomeRegistry }
 
 function Add-Result {
     param([string]$Id, [bool]$Passed, [string]$Detail)

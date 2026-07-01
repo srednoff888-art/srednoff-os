@@ -6,9 +6,24 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $CodexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME ".codex" }
-$DomainRouter = Join-Path $CodexHome "scripts\srednoff-os-domain-router.ps1"
+$LocalDomainRouter = Join-Path $ScriptDir "srednoff-os-domain-router.ps1"
+$HomeDomainRouter = Join-Path $CodexHome "scripts\srednoff-os-domain-router.ps1"
+$DomainRouter = if (Test-Path -LiteralPath $LocalDomainRouter -PathType Leaf) { $LocalDomainRouter } else { $HomeDomainRouter }
 $Lower = $Brief.ToLowerInvariant()
+
+function Resolve-PathOrLiteral {
+    param([string]$Path)
+    try {
+        if (Test-Path -LiteralPath $Path) {
+            return (Resolve-Path -LiteralPath $Path).Path
+        }
+    } catch {
+        return $Path
+    }
+    return $Path
+}
 
 if (Test-Path -LiteralPath $DomainRouter -PathType Leaf) {
     $Domain = & $DomainRouter -ProjectPath $ProjectPath -Brief $Brief -Json | ConvertFrom-Json
@@ -61,7 +76,7 @@ if ($Questions.Count -eq 0) {
 $Result = [ordered]@{
     name = "Srednoff OS design brief generator"
     version = "v2.1.2"
-    project = if (Test-Path -LiteralPath $ProjectPath) { (Resolve-Path -LiteralPath $ProjectPath).Path } else { $ProjectPath }
+    project = Resolve-PathOrLiteral -Path $ProjectPath
     mode = $Domain.mode
     domains = @($Domains)
     should_ask_user = ($Questions.Count -gt 0)

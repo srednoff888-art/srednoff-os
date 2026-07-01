@@ -1,17 +1,37 @@
 param(
-    [string]$ProjectPath = "<project-path>",
+    [string]$ProjectPath = "",
     [switch]$Json
 )
 
 $ErrorActionPreference = "Stop"
 
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$PackageRoot = (Resolve-Path -LiteralPath (Join-Path $ScriptDir "..")).Path
 $CodexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME ".codex" }
-$ModeRouter = Join-Path $CodexHome "scripts\srednoff-os-mode-router.ps1"
-$DomainRouter = Join-Path $CodexHome "scripts\srednoff-os-domain-router.ps1"
-$InventoryScript = Join-Path $CodexHome "scripts\srednoff-os-mcp-inventory.ps1"
-$HookScript = Join-Path $CodexHome "scripts\srednoff-os-hook.ps1"
-$ModeFixtures = Join-Path $CodexHome "evals\srednoff-os-mode-fixtures.json"
-$DomainFixtures = Join-Path $CodexHome "evals\srednoff-os-domain-fixtures.json"
+if (-not $ProjectPath -or $ProjectPath -eq "<project-path>") {
+    $ProjectPath = $PackageRoot
+}
+
+function Resolve-LocalOrHomeScript {
+    param([string]$Name)
+    $Local = Join-Path $ScriptDir $Name
+    if (Test-Path -LiteralPath $Local -PathType Leaf) { return $Local }
+    return (Join-Path $CodexHome "scripts\$Name")
+}
+
+function Resolve-LocalOrHomeEval {
+    param([string]$Name)
+    $Local = Join-Path $PackageRoot "evals\$Name"
+    if (Test-Path -LiteralPath $Local -PathType Leaf) { return $Local }
+    return (Join-Path $CodexHome "evals\$Name")
+}
+
+$ModeRouter = Resolve-LocalOrHomeScript "srednoff-os-mode-router.ps1"
+$DomainRouter = Resolve-LocalOrHomeScript "srednoff-os-domain-router.ps1"
+$InventoryScript = Resolve-LocalOrHomeScript "srednoff-os-mcp-inventory.ps1"
+$HookScript = Resolve-LocalOrHomeScript "srednoff-os-hook.ps1"
+$ModeFixtures = Resolve-LocalOrHomeEval "srednoff-os-mode-fixtures.json"
+$DomainFixtures = Resolve-LocalOrHomeEval "srednoff-os-domain-fixtures.json"
 
 function Add-Result {
     param([string]$Id, [bool]$Passed, [string]$Detail)

@@ -6,11 +6,30 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$PackageRootPath = Resolve-Path -LiteralPath (Join-Path $ScriptDir "..") -ErrorAction SilentlyContinue
+$PackageRoot = if ($PackageRootPath) { $PackageRootPath.Path } else { "" }
 $CodexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME ".codex" }
-$ModeRouter = Join-Path $CodexHome "scripts\srednoff-os-mode-router.ps1"
-$RegistryPath = Join-Path $CodexHome "srednoff-os\design-source-registry.json"
+$LocalModeRouter = Join-Path $ScriptDir "srednoff-os-mode-router.ps1"
+$HomeModeRouter = Join-Path $CodexHome "scripts\srednoff-os-mode-router.ps1"
+$ModeRouter = if (Test-Path -LiteralPath $LocalModeRouter -PathType Leaf) { $LocalModeRouter } else { $HomeModeRouter }
+$LocalRegistryPath = if ($PackageRoot) { Join-Path $PackageRoot ".codex\srednoff-os\design-source-registry.json" } else { "" }
+$HomeRegistryPath = Join-Path $CodexHome "srednoff-os\design-source-registry.json"
+$RegistryPath = if ($LocalRegistryPath -and (Test-Path -LiteralPath $LocalRegistryPath -PathType Leaf)) { $LocalRegistryPath } else { $HomeRegistryPath }
 $Mode = (& $ModeRouter -Brief $Brief -Json | ConvertFrom-Json)
 $Lower = $Brief.ToLowerInvariant()
+
+function Resolve-PathOrLiteral {
+    param([string]$Path)
+    try {
+        if (Test-Path -LiteralPath $Path) {
+            return (Resolve-Path -LiteralPath $Path).Path
+        }
+    } catch {
+        return $Path
+    }
+    return $Path
+}
 
 function Test-Any {
     param([string[]]$Patterns)
@@ -138,7 +157,7 @@ if (Test-Path -LiteralPath $RegistryPath -PathType Leaf) {
 $Result = [ordered]@{
     name = "Srednoff OS domain router"
     version = "v2.1.2"
-    project = if (Test-Path -LiteralPath $ProjectPath) { (Resolve-Path -LiteralPath $ProjectPath).Path } else { $ProjectPath }
+    project = Resolve-PathOrLiteral -Path $ProjectPath
     mode = $Mode.mode
     turbo = [bool]$Mode.turbo
     budget = $Mode.budget

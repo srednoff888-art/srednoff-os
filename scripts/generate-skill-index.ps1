@@ -1,9 +1,20 @@
 param(
-    [string]$SkillsRoot = "$HOME\.codex\skills",
-    [string]$OutputPath = "$HOME\.codex\skill-index.json"
+    [string]$SkillsRoot = "",
+    [string]$OutputPath = ""
 )
 
 $ErrorActionPreference = "Stop"
+
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$PackageRoot = (Resolve-Path -LiteralPath (Join-Path $ScriptDir "..") -ErrorAction SilentlyContinue).Path
+if (-not $SkillsRoot) {
+    $LocalSkillsRoot = if ($PackageRoot) { Join-Path $PackageRoot ".codex\skills" } else { "" }
+    $SkillsRoot = if ($LocalSkillsRoot -and (Test-Path -LiteralPath $LocalSkillsRoot -PathType Container)) { $LocalSkillsRoot } else { "$HOME\.codex\skills" }
+}
+if (-not $OutputPath) {
+    $LocalCodexRoot = if ($PackageRoot) { Join-Path $PackageRoot ".codex" } else { "" }
+    $OutputPath = if ($LocalCodexRoot -and (Test-Path -LiteralPath $LocalCodexRoot -PathType Container)) { Join-Path $LocalCodexRoot "skill-index.json" } else { "$HOME\.codex\skill-index.json" }
+}
 
 if (-not (Test-Path -LiteralPath $SkillsRoot)) {
     throw "Skills root not found: $SkillsRoot"

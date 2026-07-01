@@ -7,6 +7,9 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$PackageRootPath = Resolve-Path -LiteralPath (Join-Path $ScriptDir "..") -ErrorAction SilentlyContinue
+$PackageRoot = if ($PackageRootPath) { $PackageRootPath.Path } else { "" }
 $CodexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME ".codex" }
 $ProjectRoot = if (Test-Path -LiteralPath $ProjectPath) { (Resolve-Path -LiteralPath $ProjectPath).Path } else { $ProjectPath }
 
@@ -46,11 +49,27 @@ function Test-JsonFile {
     }
 }
 
+function Resolve-LocalOrHome {
+    param(
+        [string]$LocalRelative,
+        [string]$HomeRelative,
+        [string]$PathType = "Any"
+    )
+    $Local = if ($PackageRoot) { Join-Path $PackageRoot $LocalRelative } else { "" }
+    $HomePath = Join-Path $CodexHome $HomeRelative
+    if ($Local) {
+        if ($PathType -eq "Container" -and (Test-Path -LiteralPath $Local -PathType Container)) { return $Local }
+        if ($PathType -eq "Leaf" -and (Test-Path -LiteralPath $Local -PathType Leaf)) { return $Local }
+        if ($PathType -eq "Any" -and (Test-Path -LiteralPath $Local)) { return $Local }
+    }
+    return $HomePath
+}
+
 if ($FixSafe) {
     New-Item -ItemType Directory -Force -Path (Join-Path $CodexHome "srednoff-os\logs") | Out-Null
 }
 
-$StatusScript = Join-Path $CodexHome "scripts\srednoff-os-status.ps1"
+$StatusScript = Resolve-LocalOrHome "scripts\srednoff-os-status.ps1" "scripts\srednoff-os-status.ps1" "Leaf"
 if (Test-Path -LiteralPath $StatusScript -PathType Leaf) {
     $StatusOutput = & $StatusScript -ProjectPath $ProjectRoot
     Add-Check -Name "status" -Status ($(if ($StatusOutput -match "loaded: OK") { "OK" } else { "WARN" })) -Detail $StatusOutput
@@ -58,7 +77,7 @@ if (Test-Path -LiteralPath $StatusScript -PathType Leaf) {
     Add-Check -Name "status" -Status "FAIL" -Detail "Missing status script" -Fix "Restore scripts\srednoff-os-status.ps1"
 }
 
-$VersionFile = Join-Path $CodexHome "srednoff-os\version.json"
+$VersionFile = Resolve-LocalOrHome ".codex\srednoff-os\version.json" "srednoff-os\version.json" "Leaf"
 if (Test-JsonFile -Path $VersionFile) {
     $Version = (Get-Content -LiteralPath $VersionFile -Raw -Encoding UTF8 | ConvertFrom-Json).version
     Add-Check -Name "version" -Status ($(if ($Version -eq "v2.1.2") { "OK" } else { "WARN" })) -Detail "version=$Version"
@@ -66,16 +85,17 @@ if (Test-JsonFile -Path $VersionFile) {
     Add-Check -Name "version" -Status "FAIL" -Detail "Missing or invalid version manifest"
 }
 
-$Kernel = Join-Path $CodexHome "skills\quality-cost-skill-kernel\references\core-3000-capabilities.json"
+$Kernel = Resolve-LocalOrHome ".codex\skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "Leaf"
 $KernelCount = Count-JsonArray -Path $Kernel
 Add-Check -Name "kernel" -Status ($(if ($KernelCount -eq 3000) { "OK" } else { "FAIL" })) -Detail "records=$KernelCount" -Fix "Run validate-quality-cost-kernel.ps1 -Rebuild"
 
-$SkillIndex = Join-Path $CodexHome "skill-index.json"
+$SkillIndex = Resolve-LocalOrHome ".codex\skill-index.json" "skill-index.json" "Leaf"
 if (Test-JsonFile -Path $SkillIndex) {
     $Index = Get-Content -LiteralPath $SkillIndex -Raw -Encoding UTF8 | ConvertFrom-Json
     $Duplicates = @($Index | Group-Object name | Where-Object Count -gt 1)
     Add-Check -Name "skill-index" -Status ($(if ($Duplicates.Count -eq 0) { "OK" } else { "WARN" })) -Detail "entries=$(@($Index).Count); duplicate_names=$($Duplicates.Count)" -Fix "Rename duplicate SKILL.md frontmatter names, then regenerate skill-index"
-    $SkillFiles = @(Get-ChildItem -LiteralPath (Join-Path $CodexHome "skills") -Recurse -Filter SKILL.md -File -ErrorAction SilentlyContinue)
+    $SkillRoot = Resolve-LocalOrHome ".codex\skills" "skills" "Container"
+    $SkillFiles = @(Get-ChildItem -LiteralPath $SkillRoot -Recurse -Filter SKILL.md -File -ErrorAction SilentlyContinue)
     $DirectNames = foreach ($SkillFile in $SkillFiles) {
         $Head = Get-Content -LiteralPath $SkillFile.FullName -Encoding UTF8 -TotalCount 12
         $NameLine = $Head | Where-Object { $_ -match '^\s*name\s*:' } | Select-Object -First 1
@@ -84,7 +104,9 @@ if (Test-JsonFile -Path $SkillIndex) {
     $DirectDuplicates = @($DirectNames | Group-Object | Where-Object Count -gt 1)
     Add-Check -Name "skill-name-direct-scan" -Status ($(if ($DirectDuplicates.Count -eq 0) { "OK" } else { "WARN" })) -Detail "skill_files=$($SkillFiles.Count); duplicate_names=$($DirectDuplicates.Count)" -Fix "Rename duplicate SKILL.md frontmatter names"
 } else {
-    Add-Check -Name "skill-index" -Status "FAIL" -Detail "Missing or invalid skill-index.json"
+    $SkillRoot = Resolve-LocalOrHome ".codex\skills" "skills" "Container"
+    $SkillFiles = @(Get-ChildItem -LiteralPath $SkillRoot -Recurse -Filter SKILL.md -File -ErrorAction SilentlyContinue)
+    Add-Check -Name "skill-index" -Status ($(if ($SkillFiles.Count -gt 0) { "OK" } else { "FAIL" })) -Detail "missing skill-index.json; direct_skill_files=$($SkillFiles.Count)" -Fix "Run generate-skill-index.ps1"
 }
 
 $HooksJson = Join-Path $CodexHome "hooks.json"
@@ -98,7 +120,7 @@ if (Test-JsonFile -Path $HooksJson) {
     Add-Check -Name "hooks" -Status "WARN" -Detail "Missing hooks.json" -Fix "Install Srednoff OS v2.1 hooks.json"
 }
 
-$HookScript = Join-Path $CodexHome "scripts\srednoff-os-hook.ps1"
+$HookScript = Resolve-LocalOrHome "scripts\srednoff-os-hook.ps1" "scripts\srednoff-os-hook.ps1" "Leaf"
 Add-Check -Name "hook-runner" -Status ($(if (Test-Path -LiteralPath $HookScript -PathType Leaf) { "OK" } else { "FAIL" })) -Detail $HookScript
 
 $Config = Join-Path $CodexHome "config.toml"
@@ -112,7 +134,7 @@ if (Test-Path -LiteralPath $Config -PathType Leaf) {
     Add-Check -Name "codex-config" -Status "WARN" -Detail "No config.toml found"
 }
 
-$InventoryScript = Join-Path $CodexHome "scripts\srednoff-os-mcp-inventory.ps1"
+$InventoryScript = Resolve-LocalOrHome "scripts\srednoff-os-mcp-inventory.ps1" "scripts\srednoff-os-mcp-inventory.ps1" "Leaf"
 if (Test-Path -LiteralPath $InventoryScript -PathType Leaf) {
     if ($FixSafe) { & $InventoryScript | Out-Null }
     $Inventory = Join-Path $CodexHome "srednoff-os\mcp-inventory.json"
@@ -129,16 +151,16 @@ if (Test-Path -LiteralPath $InventoryScript -PathType Leaf) {
     Add-Check -Name "mcp-inventory" -Status "FAIL" -Detail "Missing inventory script"
 }
 
-$Watchlist = Join-Path $CodexHome "srednoff-os\source-watchlist.json"
+$Watchlist = Resolve-LocalOrHome ".codex\srednoff-os\source-watchlist.json" "srednoff-os\source-watchlist.json" "Leaf"
 Add-Check -Name "source-watchlist" -Status ($(if (Test-JsonFile -Path $Watchlist) { "OK" } else { "FAIL" })) -Detail $Watchlist
 
-$DesignRegistry = Join-Path $CodexHome "srednoff-os\design-source-registry.json"
+$DesignRegistry = Resolve-LocalOrHome ".codex\srednoff-os\design-source-registry.json" "srednoff-os\design-source-registry.json" "Leaf"
 Add-Check -Name "design-source-registry" -Status ($(if (Test-JsonFile -Path $DesignRegistry) { "OK" } else { "FAIL" })) -Detail $DesignRegistry
 
-$ModeRouter = Join-Path $CodexHome "scripts\srednoff-os-mode-router.ps1"
-$DomainRouter = Join-Path $CodexHome "scripts\srednoff-os-domain-router.ps1"
-$SourceRanker = Join-Path $CodexHome "scripts\srednoff-os-source-ranker.ps1"
-$DesignBrief = Join-Path $CodexHome "scripts\srednoff-os-design-brief.ps1"
+$ModeRouter = Resolve-LocalOrHome "scripts\srednoff-os-mode-router.ps1" "scripts\srednoff-os-mode-router.ps1" "Leaf"
+$DomainRouter = Resolve-LocalOrHome "scripts\srednoff-os-domain-router.ps1" "scripts\srednoff-os-domain-router.ps1" "Leaf"
+$SourceRanker = Resolve-LocalOrHome "scripts\srednoff-os-source-ranker.ps1" "scripts\srednoff-os-source-ranker.ps1" "Leaf"
+$DesignBrief = Resolve-LocalOrHome "scripts\srednoff-os-design-brief.ps1" "scripts\srednoff-os-design-brief.ps1" "Leaf"
 Add-Check -Name "mode-router" -Status ($(if (Test-Path -LiteralPath $ModeRouter -PathType Leaf) { "OK" } else { "FAIL" })) -Detail $ModeRouter
 Add-Check -Name "domain-router" -Status ($(if (Test-Path -LiteralPath $DomainRouter -PathType Leaf) { "OK" } else { "FAIL" })) -Detail $DomainRouter
 Add-Check -Name "source-ranker" -Status ($(if (Test-Path -LiteralPath $SourceRanker -PathType Leaf) { "OK" } else { "FAIL" })) -Detail $SourceRanker
@@ -174,7 +196,7 @@ $NpmPs1 = Get-Command npm.ps1 -ErrorAction SilentlyContinue
 Add-Check -Name "node-tooling" -Status ($(if ($NpmCmd) { "OK" } else { "WARN" })) -Detail "npm.cmd=$([bool]$NpmCmd); npm.ps1=$([bool]$NpmPs1)"
 
 if ($RunEvals) {
-    $EvalScript = Join-Path $CodexHome "scripts\test-srednoff-os-selector.ps1"
+    $EvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-selector.ps1" "scripts\test-srednoff-os-selector.ps1" "Leaf"
     if (Test-Path -LiteralPath $EvalScript -PathType Leaf) {
         $EvalOutput = & $EvalScript -ProjectPath $ProjectRoot 2>&1
         $EvalOk = $LASTEXITCODE -eq 0
@@ -183,7 +205,7 @@ if ($RunEvals) {
         Add-Check -Name "selector-evals" -Status "FAIL" -Detail "Missing eval script"
     }
 
-    $V211EvalScript = Join-Path $CodexHome "scripts\test-srednoff-os-v211.ps1"
+    $V211EvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-v211.ps1" "scripts\test-srednoff-os-v211.ps1" "Leaf"
     if (Test-Path -LiteralPath $V211EvalScript -PathType Leaf) {
         $V211EvalOutput = & $V211EvalScript -ProjectPath $ProjectRoot 2>&1
         $V211EvalOk = $LASTEXITCODE -eq 0
@@ -192,7 +214,7 @@ if ($RunEvals) {
         Add-Check -Name "v211-evals" -Status "FAIL" -Detail "Missing v2.1.1 eval script"
     }
 
-    $V212EvalScript = Join-Path $CodexHome "scripts\test-srednoff-os-v212.ps1"
+    $V212EvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-v212.ps1" "scripts\test-srednoff-os-v212.ps1" "Leaf"
     if (Test-Path -LiteralPath $V212EvalScript -PathType Leaf) {
         $V212EvalOutput = & $V212EvalScript -ProjectPath $ProjectRoot 2>&1
         $V212EvalOk = $LASTEXITCODE -eq 0

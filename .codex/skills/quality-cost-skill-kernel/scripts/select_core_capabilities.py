@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import difflib
 import json
 import os
 import re
@@ -323,6 +324,52 @@ def load_json(path: Path) -> list[dict]:
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
+def parse_skill_frontmatter(skill_md: Path) -> dict:
+    text = safe_read(skill_md, max_chars=5000)
+    name = skill_md.parent.name
+    description = ""
+
+    if text.startswith("---"):
+        lines = text.splitlines()
+        for line in lines[1:]:
+            if line.strip() == "---":
+                break
+            if line.startswith("name:"):
+                name = line.split(":", 1)[1].strip().strip('"').strip("'")
+            elif line.startswith("description:"):
+                description = line.split(":", 1)[1].strip().strip('"').strip("'")
+
+    return {
+        "name": name,
+        "path": str(skill_md.parent),
+        "description": description,
+        "has_openai_yaml": (skill_md.parent / "agents" / "openai.yaml").exists(),
+        "skill_md_bytes": skill_md.stat().st_size,
+    }
+
+
+def build_skill_index(skills_root: Path) -> list[dict]:
+    if not skills_root.exists():
+        return []
+
+    items: list[dict] = []
+    for skill_md in skills_root.rglob("SKILL.md"):
+        if ".system" in skill_md.parts:
+            continue
+        items.append(parse_skill_frontmatter(skill_md))
+    return sorted(items, key=lambda item: (str(item.get("name", "")), str(item.get("path", ""))))
+
+
+def load_skill_index(skill_index_path: Path, skills_root: Path | None) -> list[dict]:
+    if skills_root is not None:
+        built = build_skill_index(skills_root)
+        if built:
+            return built
+    if skill_index_path.exists():
+        return load_json(skill_index_path)
+    return []
+
+
 def term_score(term: str, haystack: str) -> int:
     term = normalize(term)
     if not term:
@@ -558,33 +605,42 @@ def map_existing_skills(record: dict, skill_index: list[dict], limit: int = 3) -
     return mapped
 
 
-def apply_direct_skill_aliases(enriched: list[dict], skill_index: list[dict], haystack: str) -> None:
+def apply_direct_skill_aliases(enriched: list[dict], skill_index: list[dict], brief_haystack: str) -> None:
     if not enriched:
         return
     skills_by_name = {str(skill.get("name", "")): skill for skill in skill_index}
     target = enriched[0].setdefault("mapped_skills", [])
-    existing_names = {skill.get("name", "") for skill in target}
+    direct: list[dict] = []
+    direct_names: set[str] = set()
     for skill_name, triggers in DIRECT_SKILL_ALIASES:
-        if skill_name in existing_names:
+        if skill_name in direct_names:
             continue
-        if not any(trigger in haystack for trigger in triggers):
+        if not any(trigger in brief_haystack for trigger in triggers):
             continue
         skill = skills_by_name.get(skill_name)
         if not skill:
             continue
-        target.insert(
-            0,
+        direct.append(
             {
                 "score": 99,
                 "name": skill_name,
                 "path": skill.get("path", ""),
                 "description": skill.get("description", ""),
+                "reason": "direct-brief-alias",
             },
         )
-        existing_names.add(skill_name)
+        direct_names.add(skill_name)
+
+    if direct:
+        target[:] = direct + [skill for skill in target if skill.get("name", "") not in direct_names]
 
 
-def enrich_selected(selected: list[tuple[float, dict]], skill_index: list[dict], haystack: str, budget: str) -> list[dict]:
+def enrich_selected(
+    selected: list[tuple[float, dict]],
+    skill_index: list[dict],
+    brief_haystack: str,
+    budget: str,
+) -> list[dict]:
     enriched = []
     for score, record in selected:
         item = dict(record)
@@ -592,8 +648,15 @@ def enrich_selected(selected: list[tuple[float, dict]], skill_index: list[dict],
         item["estimated_context_cost"] = round(estimate_context_cost(record, budget), 2)
         item["estimated_roi"] = round(estimate_roi(score, record, budget, False), 2)
         item["mapped_skills"] = map_existing_skills(record, skill_index)
+        item["direct_skill_matches"] = []
         enriched.append(item)
-    apply_direct_skill_aliases(enriched, skill_index, haystack)
+    apply_direct_skill_aliases(enriched, skill_index, brief_haystack)
+    for item in enriched:
+        item["direct_skill_matches"] = [
+            skill["name"]
+            for skill in item.get("mapped_skills", [])
+            if skill.get("reason") == "direct-brief-alias"
+        ]
     return enriched
 
 
@@ -640,6 +703,25 @@ def render_markdown(selected: list[dict], project: Path, budget: str, brief: str
     else:
         lines.append("- No direct installed skill mapping; use the selected capability ids as routing hints.")
 
+    direct_matches = []
+    seen_direct: set[str] = set()
+    for record in selected:
+        for skill_name in record.get("direct_skill_matches", []):
+            if skill_name not in seen_direct:
+                direct_matches.append(skill_name)
+                seen_direct.add(skill_name)
+    if direct_matches:
+        lines.extend(
+            [
+                "",
+                "## Direct Skill Matches",
+                "",
+                "These skills matched explicit terms in the task brief and are surfaced even when several aliases trigger at once.",
+            ]
+        )
+        for skill_name in direct_matches:
+            lines.append(f"- `{skill_name}`")
+
     lines.extend(
         [
             "",
@@ -678,7 +760,17 @@ def render_ids(selected: list[dict]) -> str:
     lines = ["# Capability IDs", ""]
     for record in selected:
         mapped = record.get("mapped_skills", [])
-        suffix = f" -> {mapped[0]['name']}" if mapped else ""
+        if mapped:
+            skill_names = []
+            seen_names: set[str] = set()
+            for skill in mapped[:3]:
+                name = str(skill.get("name", ""))
+                if name and name not in seen_names:
+                    skill_names.append(name)
+                    seen_names.add(name)
+            suffix = " -> " + ", ".join(skill_names)
+        else:
+            suffix = ""
         lines.append(f"- {record['id']} [{record['group_label']}]{suffix}")
     return "\n".join(lines) + "\n"
 
@@ -689,6 +781,7 @@ def main() -> int:
     codex_home = default_codex_home()
     parser.add_argument("--catalog", default=str(default_root / "references" / "core-3000-capabilities.json"))
     parser.add_argument("--skill-index", default=str(codex_home / "skill-index.json"))
+    parser.add_argument("--skills-root", default="")
     parser.add_argument("--project", default=".")
     parser.add_argument("--brief", default="")
     parser.add_argument("--budget", choices=["lean", "balanced", "deep", "turbo"], default="balanced")
@@ -700,7 +793,19 @@ def main() -> int:
     catalog_path = Path(args.catalog)
     skill_index_path = Path(args.skill_index)
     catalog = load_json(catalog_path)
-    skill_index = load_json(skill_index_path) if skill_index_path.exists() else []
+    skills_root = Path(args.skills_root) if args.skills_root else None
+    if skills_root is None and not skill_index_path.exists():
+        skills_root = default_root.parent
+    skill_index = load_skill_index(skill_index_path, skills_root)
+    skill_names = {str(skill.get("name", "")) for skill in skill_index}
+    for skill_name, _ in DIRECT_SKILL_ALIASES:
+        if skill_name not in skill_names:
+            close = difflib.get_close_matches(skill_name, skill_names, n=3)
+            print(
+                f"warning: direct skill alias '{skill_name}' is not present in the skill index"
+                + (f"; closest={', '.join(close)}" if close else ""),
+                file=os.sys.stderr,
+            )
 
     project = Path(args.project).resolve()
     file_names, ext_counts, snippets = walk_project(project)
@@ -711,7 +816,7 @@ def main() -> int:
     selected = enrich_selected(
         select_records(catalog, brief_haystack, project_haystack, file_names, args.budget, args.max),
         skill_index,
-        haystack,
+        brief_haystack,
         args.budget,
     )
 

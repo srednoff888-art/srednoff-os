@@ -32,13 +32,36 @@ copy_item() {
   printf 'installed template: %s\n' "$rel"
 }
 
+copy_dir_contents() {
+  local src="$1"
+  local dst="$2"
+  local label="$3"
+
+  if [ ! -d "$src" ]; then
+    printf 'skip missing source: %s\n' "$src"
+    return 0
+  fi
+
+  backup_path "$dst"
+  mkdir -p "$dst"
+  cp -R "$src"/. "$dst"/
+  printf 'installed global: %s -> %s\n' "$label" "$dst"
+}
+
 mkdir -p "$codex_home" "$template_dir"
 
 copy_item "AGENTS.md"
 copy_item "code_review.md"
 copy_item ".agent"
 copy_item ".codex/skills"
+copy_item ".codex/srednoff-os"
+copy_item "evals"
 copy_item "scripts"
+
+copy_dir_contents "$package_root/.codex/skills" "$codex_home/skills" "skills"
+copy_dir_contents "$package_root/.codex/srednoff-os" "$codex_home/srednoff-os" "srednoff-os"
+copy_dir_contents "$package_root/scripts" "$codex_home/scripts" "scripts"
+copy_dir_contents "$package_root/evals" "$codex_home/evals" "evals"
 
 backup_path "$codex_home/AGENTS.md"
 cp "$package_root/AGENTS.md" "$codex_home/AGENTS.md"
@@ -52,6 +75,14 @@ fi
 
 chmod +x "$package_root/scripts/init-codex-project.sh" "$package_root/scripts/install-codex-md-os.sh" 2>/dev/null || true
 chmod +x "$template_dir/scripts/init-codex-project.sh" "$template_dir/scripts/install-codex-md-os.sh" 2>/dev/null || true
+
+if [ -f "$package_root/scripts/generate-skill-index.ps1" ] && command -v pwsh >/dev/null 2>&1; then
+  pwsh -NoProfile -ExecutionPolicy Bypass -File "$package_root/scripts/generate-skill-index.ps1" -SkillsRoot "$codex_home/skills" -OutputPath "$codex_home/skill-index.json"
+elif [ -f "$package_root/scripts/generate-skill-index.ps1" ] && command -v powershell >/dev/null 2>&1; then
+  powershell -NoProfile -ExecutionPolicy Bypass -File "$package_root/scripts/generate-skill-index.ps1" -SkillsRoot "$codex_home/skills" -OutputPath "$codex_home/skill-index.json"
+else
+  printf 'skip skill index generation: PowerShell not found\n'
+fi
 
 cat <<EOF
 

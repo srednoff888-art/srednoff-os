@@ -34,13 +34,40 @@ function Copy-TemplateItem {
     Write-Output "installed template: $RelativePath"
 }
 
+function Copy-DirectoryContents {
+    param(
+        [Parameter(Mandatory=$true)][string]$Source,
+        [Parameter(Mandatory=$true)][string]$Destination,
+        [Parameter(Mandatory=$true)][string]$Label
+    )
+
+    if (-not (Test-Path -LiteralPath $Source -PathType Container)) {
+        Write-Output "skip missing source: $Source"
+        return
+    }
+
+    Backup-Path -Path $Destination
+    New-Item -ItemType Directory -Force -Path $Destination | Out-Null
+    Get-ChildItem -LiteralPath $Source -Force | ForEach-Object {
+        Copy-Item -LiteralPath $_.FullName -Destination $Destination -Recurse -Force
+    }
+    Write-Output "installed global: $Label -> $Destination"
+}
+
 New-Item -ItemType Directory -Force -Path $CodexHome, $TemplateDir | Out-Null
 
 Copy-TemplateItem "AGENTS.md"
 Copy-TemplateItem "code_review.md"
 Copy-TemplateItem ".agent"
 Copy-TemplateItem ".codex\skills"
+Copy-TemplateItem ".codex\srednoff-os"
+Copy-TemplateItem "evals"
 Copy-TemplateItem "scripts"
+
+Copy-DirectoryContents -Source (Join-Path $PackageRoot ".codex\skills") -Destination (Join-Path $CodexHome "skills") -Label "skills"
+Copy-DirectoryContents -Source (Join-Path $PackageRoot ".codex\srednoff-os") -Destination (Join-Path $CodexHome "srednoff-os") -Label "srednoff-os"
+Copy-DirectoryContents -Source (Join-Path $PackageRoot "scripts") -Destination (Join-Path $CodexHome "scripts") -Label "scripts"
+Copy-DirectoryContents -Source (Join-Path $PackageRoot "evals") -Destination (Join-Path $CodexHome "evals") -Label "evals"
 
 $GlobalAgents = Join-Path $CodexHome "AGENTS.md"
 Backup-Path -Path $GlobalAgents
@@ -53,6 +80,11 @@ if (Test-Path -LiteralPath $LocalCodeReview) {
     Backup-Path -Path $GlobalCodeReview
     Copy-Item -LiteralPath $LocalCodeReview -Destination $GlobalCodeReview -Force
     Write-Output "installed global: $GlobalCodeReview"
+}
+
+$SkillIndexScript = Join-Path $PackageRoot "scripts\generate-skill-index.ps1"
+if (Test-Path -LiteralPath $SkillIndexScript -PathType Leaf) {
+    & powershell -NoProfile -ExecutionPolicy Bypass -File $SkillIndexScript -SkillsRoot (Join-Path $CodexHome "skills") -OutputPath (Join-Path $CodexHome "skill-index.json") | Out-Host
 }
 
 Write-Output ""
