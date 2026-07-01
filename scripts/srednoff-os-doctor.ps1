@@ -87,7 +87,8 @@ if (Test-JsonFile -Path $VersionFile) {
 
 $Kernel = Resolve-LocalOrHome ".codex\skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "Leaf"
 $KernelCount = Count-JsonArray -Path $Kernel
-Add-Check -Name "kernel" -Status ($(if ($KernelCount -eq 3000) { "OK" } else { "FAIL" })) -Detail "records=$KernelCount" -Fix "Run validate-quality-cost-kernel.ps1 -Rebuild"
+$ExpectedKernelRecords = 4500
+Add-Check -Name "kernel" -Status ($(if ($KernelCount -eq $ExpectedKernelRecords) { "OK" } else { "FAIL" })) -Detail "records=$KernelCount expected=$ExpectedKernelRecords" -Fix "Run validate-quality-cost-kernel.ps1 -Rebuild"
 
 $SkillIndex = Resolve-LocalOrHome ".codex\skill-index.json" "skill-index.json" "Leaf"
 if (Test-JsonFile -Path $SkillIndex) {

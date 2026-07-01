@@ -27,4 +27,4 @@ Srednoff OS v2.1 doctor: OK
 
 - Hooks block high-confidence secrets and high-risk destructive tool commands.
 - Hooks do not log raw prompts or tool payloads; the ledger stores metadata and input hashes only.
-- The 3000-record kernel remains script-only and must not be pasted into model context.
+- The expanded kernel remains script-only and must not be pasted into model context.

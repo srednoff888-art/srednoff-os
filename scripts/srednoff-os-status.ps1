@@ -30,6 +30,7 @@ $TemplateRoot = Resolve-LocalOrHome "." "templates\codex-md-os" "Container"
 $SkillRoot = Resolve-LocalOrHome ".codex\skills" "skills" "Container"
 $KernelRoot = Join-Path $SkillRoot "quality-cost-skill-kernel"
 $KernelCatalog = Join-Path $KernelRoot "references\core-3000-capabilities.json"
+$ExpectedKernelRecords = 4500
 $Selector = Resolve-LocalOrHome "scripts\select-quality-cost-capabilities.ps1" "scripts\select-quality-cost-capabilities.ps1" "Leaf"
 $SkillIndex = Resolve-LocalOrHome ".codex\skill-index.json" "skill-index.json" "Leaf"
 $GlobalAgents = Resolve-LocalOrHome "AGENTS.md" "AGENTS.md" "Leaf"
@@ -83,12 +84,12 @@ $Checks = [ordered]@{
     Hooks = (Test-Path -LiteralPath $HooksJson -PathType Leaf)
     Doctor = (Test-Path -LiteralPath $Doctor -PathType Leaf)
     Template = (Test-Path -LiteralPath $TemplateRoot -PathType Container)
-    Kernel = ($KernelCount -eq 3000)
+    Kernel = ($KernelCount -eq $ExpectedKernelRecords)
     Selector = (Test-Path -LiteralPath $Selector -PathType Leaf)
     SkillIndex = ($SkillIndexCount -gt 0)
     ProjectAgents = (Test-Path -LiteralPath $ProjectAgents -PathType Leaf)
     ProjectNamed = (Test-TextContains -Path $ProjectAgents -Pattern "Srednoff OS")
-    ProjectKernel = ($ProjectKernelCount -eq 3000)
+    ProjectKernel = ($ProjectKernelCount -eq $ExpectedKernelRecords)
 }
 
 $Failed = @($Checks.GetEnumerator() | Where-Object { -not $_.Value } | ForEach-Object { $_.Key })

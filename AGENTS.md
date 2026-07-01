@@ -17,7 +17,7 @@ powershell -ExecutionPolicy Bypass -File "$HOME\.codex\scripts\srednoff-os-statu
 Send one short commentary notification to the user:
 
 ```text
-Srednoff OS v2.1.2 loaded: OK | project=OK | skills=<count> | kernel=3000 | selector=True
+Srednoff OS v2.1.2 loaded: OK | project=OK | skills=<count> | kernel=4500 | selector=True
 ```
 
 If the status is `WARN`, do not ignore it. Run Srednoff OS sync/init for writable project folders, then re-check status:
@@ -27,7 +27,7 @@ powershell -ExecutionPolicy Bypass -File "$HOME\.codex\templates\codex-md-os\scr
 powershell -ExecutionPolicy Bypass -File "$HOME\.codex\scripts\sync-codex-skills-to-projects.ps1" -ProjectPath "<project-path>" -IncludeScripts
 ```
 
-Do not load the full `core-3000-capabilities.json` into model context during startup. Use the selector and read only chosen `SKILL.md` files.
+Do not load the full 4500-record `core-3000-capabilities.json` into model context during startup. Use the selector and read only chosen `SKILL.md` files.
 
 For full v2.1.2 diagnostics before Srednoff OS maintenance, run:
 
@@ -71,7 +71,7 @@ Source ranking must optimize ROI per token and per dependency:
 - for 3D, compare model-viewer, Three.js/R3F, Babylon.js, glTF Transform, Khronos sample assets, Poly Haven, ambientCG, Sketchfab, and project-local assets only when relevant;
 - every copied component or asset needs provenance/license review, dependency cost review, accessibility/performance checks, and visual QA.
 
-The selector remains `legacy-plus`: preserve the old 3000-record catalog, Group 1/2/3 quotas, non-overlap, domain caps, and compact `SKILL.md` reads. v2.1.2 adds brief-weighted scoring, intent-domain boosts, estimated context cost, and estimated ROI; it does not load broad catalogs or every source into context.
+The selector remains `legacy-plus`: preserve the expanded 4500-record catalog, Group 1/2/3 quotas, non-overlap, domain caps, and compact `SKILL.md` reads. v2.1.2 adds brief-weighted scoring, intent-domain boosts, estimated context cost, and estimated ROI; it does not load broad catalogs or every source into context.
 
 # TURBO Mode Rule
 
@@ -586,7 +586,7 @@ powershell -ExecutionPolicy Bypass -File "$HOME\.codex\scripts\project-capabilit
 
 # Global Quality-Cost Skill Kernel Rule
 
-Before substantial work in any new or existing project, select the smallest useful capability set from the 3000-record quality/cost kernel instead of loading broad instructions by default:
+Before substantial work in any new or existing project, select the smallest useful capability set from the 4500-record quality/cost kernel instead of loading broad instructions by default:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File "$HOME\.codex\scripts\select-quality-cost-capabilities.ps1" -ProjectPath "<project-path>" -Brief "<task>" -Budget balanced -Max 24
@@ -594,7 +594,7 @@ powershell -ExecutionPolicy Bypass -File "$HOME\.codex\scripts\select-quality-co
 
 Use `-Budget lean` for small fixes and discovery, `-Budget balanced` for normal implementation, `-Budget deep` for high-risk architecture, production, security, SEO, PPC, crypto, migration, or launch work, and `-Budget turbo -Max 48` only after the user explicitly writes `TURBO`.
 
-Do not load `quality-cost-skill-kernel/references/core-3000-capabilities.json` into context unless explicitly auditing the catalog. Use Group 1 capabilities first, add Group 2 when the quality gain justifies the context, and use Group 3 only when it produces a concrete high-value result. In `TURBO`, allow more Group 3 records, but keep the same non-overlap and safety constraints.
+Do not load the 4500-record `quality-cost-skill-kernel/references/core-3000-capabilities.json` into context unless explicitly auditing the catalog. Use Group 1 capabilities first, add Group 2 when the quality gain justifies the context, and use Group 3 only when it produces a concrete high-value result. In `TURBO`, allow more Group 3 records, but keep the same non-overlap and safety constraints.
 
 If the selected capabilities overlap, keep the narrower one with the stronger project match. If a needed capability is missing or stale, update the kernel and validate it:
 

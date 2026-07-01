@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Build the 3000-record quality/cost capability catalog."""
+"""Build the 4500-record quality/cost capability catalog.
+
+The output file keeps the historical ``core-3000-capabilities.json`` name for
+compatibility with installed wrappers, but the generated catalog now contains
+4500 records.
+"""
 
 from __future__ import annotations
 
@@ -93,6 +98,16 @@ GROUP_1 = [
     ("asset-size-inventory", "Asset size inventory", "skill", ["asset", "bundle", "size"], "List large assets and bundle candidates before optimization.", "asset size notes"),
     ("permission-scope-inventory", "Permission scope inventory", "skill", ["permission", "scope", "role"], "Map permissions, roles, and scopes locally before security-sensitive work.", "permission scope notes"),
     ("stale-artifact-cleanup-plan", "Stale artifact cleanup plan", "skill", ["stale", "cache", "artifact"], "Identify generated caches, backups, and stale artifacts without deleting them.", "cleanup candidate list"),
+    ("selector-preflight-index", "Selector preflight index", "skill", ["selector", "index", "latency", "ranking"], "Build normalized task, file, and domain hints before expensive scoring or reads.", "selector preflight index"),
+    ("duplicate-capability-filter", "Duplicate capability filter", "skill", ["duplicate", "overlap", "dedupe", "similar"], "Detect overlapping capability candidates before loading repeated instructions.", "dedupe notes"),
+    ("schema-contract-lint", "Schema and contract lint", "skill", ["schema", "contract", "lint", "validation"], "Check local schemas, manifests, and contracts for cheap inconsistencies.", "schema contract findings"),
+    ("failure-mode-checklist", "Failure mode checklist", "skill", ["failure mode", "edge case", "risk", "checklist"], "List likely edge cases and failure modes before choosing heavier review.", "failure checklist"),
+    ("changelog-impact-scan", "Changelog impact scan", "skill", ["changelog", "release notes", "impact", "version"], "Scan local changelog and version markers for compatibility implications.", "impact notes"),
+    ("provenance-license-inventory", "Provenance and license inventory", "skill", ["provenance", "license", "source", "copy"], "Record source and license signals before adapting external code or assets.", "provenance inventory"),
+    ("minimal-repro-captor", "Minimal repro captor", "skill", ["repro", "error", "log", "failure"], "Capture the smallest local reproduction path before debugging or changing behavior.", "minimal repro notes"),
+    ("observability-signal-map", "Observability signal map", "skill", ["logs", "metrics", "traces", "observability"], "Map available logs, metrics, traces, and diagnostics before deeper analysis.", "observability signal map"),
+    ("data-classification-map", "Data classification map", "skill", ["pii", "data", "privacy", "classification"], "Identify sensitive data classes and boundaries before using tools or logs.", "data classification notes"),
+    ("cache-key-inventory", "Cache key inventory", "skill", ["cache", "key", "invalidation", "ttl"], "List cache keys, invalidation paths, and TTL hints before changing cached behavior.", "cache key inventory"),
 ]
 
 GROUP_2 = [
@@ -116,6 +131,16 @@ GROUP_2 = [
     ("dependency-choice-review", "Dependency choice review", "skill", ["dependency choice", "library", "sdk"], "Review whether adding or upgrading a dependency is justified.", "dependency decision"),
     ("integration-contract-plan", "Integration contract plan", "skill", ["integration contract", "webhook", "sdk"], "Define request, response, retries, idempotency, and failure contracts.", "integration contract plan"),
     ("rollback-observability-plan", "Rollback observability plan", "skill", ["rollback", "observability", "monitor"], "Pair a change with rollback and monitoring expectations.", "rollback observability plan"),
+    ("source-quality-ranking", "Source quality ranking", "skill", ["source ranking", "quality", "license", "benchmark"], "Rank candidate libraries, examples, assets, or patterns by fit, quality, license, and maintenance.", "ranked source shortlist"),
+    ("benchmark-fixture-design", "Benchmark fixture design", "skill", ["benchmark", "fixture", "eval", "metric"], "Design representative fixtures and metrics that can catch selector or behavior regressions.", "benchmark fixture plan"),
+    ("agent-role-boundary-review", "Agent role boundary review", "agent", ["agent", "role", "boundary", "handoff"], "Review specialist agent responsibilities so selected agents do not duplicate each other.", "agent boundary notes"),
+    ("selector-roi-tuning-pass", "Selector ROI tuning pass", "skill", ["selector", "roi", "scoring", "ranking"], "Tune score terms, quotas, and ROI tie-breakers for the task while preserving compact output.", "selector tuning notes"),
+    ("dependency-weight-benchmark", "Dependency weight benchmark", "skill", ["dependency", "bundle", "weight", "benchmark"], "Compare dependency cost, bundle size, maintenance, and replacement options before adopting a package.", "dependency benchmark"),
+    ("error-handling-resilience-review", "Error handling resilience review", "skill", ["error handling", "resilience", "retry", "fallback"], "Review failures, retries, fallback behavior, and user-visible recovery.", "resilience findings"),
+    ("accessibility-performance-crosscheck", "Accessibility and performance crosscheck", "skill", ["accessibility", "performance", "core web vitals", "keyboard"], "Check accessibility and performance together where improving one can harm the other.", "a11y performance notes"),
+    ("security-abuse-case-review", "Security abuse-case review", "agent", ["abuse case", "security", "misuse", "threat"], "Review likely abuse cases and security boundaries for the changed surface.", "abuse-case findings"),
+    ("release-risk-diff-review", "Release risk diff review", "skill", ["release", "diff", "risk", "regression"], "Compare intended changes against release risk, rollback, and regression surfaces.", "release risk notes"),
+    ("migration-compatibility-probe", "Migration compatibility probe", "skill", ["migration", "compatibility", "version", "deprecation"], "Probe compatibility, deprecated APIs, and transitional states before a migration.", "compatibility findings"),
 ]
 
 GROUP_3 = [
@@ -129,6 +154,11 @@ GROUP_3 = [
     ("large-scale-refactor-plan", "Large-scale refactor plan", "agent", ["large refactor", "incremental migration", "compatibility"], "Plan a multi-step refactor with compatibility and verification strategy.", "refactor execution plan"),
     ("market-competitor-deep-dive", "Market competitor deep dive", "agent", ["market", "competitor", "positioning"], "Do deep current research across competitors, examples, and best practices.", "competitive deep dive"),
     ("resilience-chaos-planning", "Resilience chaos planning", "agent", ["resilience", "chaos", "failure injection"], "Plan high-impact failure, chaos, and recovery validation scenarios.", "resilience plan"),
+    ("frontier-solution-landscape", "Frontier solution landscape", "agent", ["frontier", "best practice", "landscape", "state of the art"], "Research current best-in-class approaches across active repos, official docs, and expert examples.", "frontier landscape report"),
+    ("independent-specialist-panel", "Independent specialist panel", "agent", ["specialist", "panel", "multi agent", "expert review"], "Run multiple independent specialist perspectives and merge only non-overlapping recommendations.", "specialist panel findings"),
+    ("adversarial-eval-suite-design", "Adversarial eval suite design", "agent", ["adversarial", "eval", "benchmark", "regression"], "Design a high-signal adversarial evaluation suite for risky workflows or agent behavior.", "adversarial eval plan"),
+    ("production-readiness-war-room", "Production readiness war room", "agent", ["production readiness", "incident", "launch", "rollback"], "Coordinate launch, incident, rollback, observability, support, and ownership checks for high-stakes work.", "production readiness brief"),
+    ("architecture-evolution-roadmap", "Architecture evolution roadmap", "agent", ["architecture", "roadmap", "evolution", "strategy"], "Plan a staged architecture evolution across constraints, migrations, owners, and validation gates.", "architecture roadmap"),
 ]
 
 

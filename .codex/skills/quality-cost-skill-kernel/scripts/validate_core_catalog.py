@@ -30,7 +30,10 @@ REQUIRED_FIELDS = {
     "non_overlap_boundary",
 }
 
-EXPECTED_GROUPS = {1: 1200, 2: 1200, 3: 600}
+EXPECTED_TOTAL = 4500
+EXPECTED_GROUPS = {1: 1800, 2: 1800, 3: 900}
+EXPECTED_DOMAIN_RECORDS = 75
+EXPECTED_DOMAIN_GROUPS = {1: 30, 2: 30, 3: 15}
 
 
 def fail(message: str) -> None:
@@ -48,8 +51,8 @@ def main() -> int:
         fail(f"catalog not found: {catalog_path}")
 
     catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
-    if len(catalog) != 3000:
-        fail(f"expected 3000 records, got {len(catalog)}")
+    if len(catalog) != EXPECTED_TOTAL:
+        fail(f"expected {EXPECTED_TOTAL} records, got {len(catalog)}")
 
     ids = [record.get("id") for record in catalog]
     names = [record.get("name") for record in catalog]
@@ -67,6 +70,25 @@ def main() -> int:
     domain_slug_pairs = [(record.get("domain_id"), record.get("capability_slug")) for record in catalog]
     if len(domain_slug_pairs) != len(set(domain_slug_pairs)):
         fail("duplicate domain/capability_slug pairs")
+
+    domain_counts = Counter(record.get("domain_id") for record in catalog)
+    bad_domains = {
+        domain: count
+        for domain, count in domain_counts.items()
+        if count != EXPECTED_DOMAIN_RECORDS
+    }
+    if bad_domains:
+        fail(f"domain record counts mismatch: {dict(sorted(bad_domains.items()))}")
+
+    domains = sorted(domain_counts)
+    for domain in domains:
+        domain_group_counts = Counter(record.get("group") for record in catalog if record.get("domain_id") == domain)
+        if dict(domain_group_counts) != EXPECTED_DOMAIN_GROUPS:
+            fail(f"domain {domain} group counts mismatch: expected {EXPECTED_DOMAIN_GROUPS}, got {dict(domain_group_counts)}")
+
+    capability_slugs = {record.get("capability_slug") for record in catalog}
+    if len(capability_slugs) != EXPECTED_DOMAIN_RECORDS:
+        fail(f"expected {EXPECTED_DOMAIN_RECORDS} unique capability slugs, got {len(capability_slugs)}")
 
     kind_counts = Counter(record.get("kind") for record in catalog)
     for index, record in enumerate(catalog, start=1):
@@ -87,7 +109,8 @@ def main() -> int:
     print(f"records: {len(catalog)}")
     print(f"groups: {dict(sorted(group_counts.items()))}")
     print(f"kinds: {dict(sorted(kind_counts.items()))}")
-    print(f"domains: {len(set(record['domain_id'] for record in catalog))}")
+    print(f"domains: {len(domains)}")
+    print(f"capability_slugs: {len(capability_slugs)}")
     return 0
 
 

@@ -73,5 +73,15 @@
       "source-ranking-roi-selector",
       "design-brief-autogenerator"
     ]
+  },
+  {
+    "id": "selector_catalog_speed_roi",
+    "brief": "quality cost selector speed scoring latency indexing ROI tuning dedupe capability overlap benchmark fixture",
+    "budget": "deep",
+    "expectedAll": [
+      "selector-preflight-index",
+      "selector-roi-tuning-pass",
+      "benchmark-fixture-design"
+    ]
   }
 ]

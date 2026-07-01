@@ -109,6 +109,18 @@ foreach ($Project in $ProjectPath) {
         $Result = Copy-SafeFile -Source $File.FullName -Destination $Destination
         $Summary[$Result.Substring(0,1).ToUpper() + $Result.Substring(1)]++
     }
+
+    $ProjectSkillsRoot = Join-Path $Root ".codex\skills"
+    $ProjectSkillIndex = Join-Path $Root ".codex\skill-index.json"
+    $ProjectSkillIndexScript = Join-Path $Root "scripts\generate-skill-index.ps1"
+    $TemplateSkillIndexScript = Join-Path $TemplateRoot "scripts\generate-skill-index.ps1"
+    $SkillIndexScript = if (Test-Path -LiteralPath $ProjectSkillIndexScript -PathType Leaf) { $ProjectSkillIndexScript } else { $TemplateSkillIndexScript }
+    if ((Test-Path -LiteralPath $SkillIndexScript -PathType Leaf) -and (Test-Path -LiteralPath $ProjectSkillsRoot -PathType Container)) {
+        if (Test-Path -LiteralPath $ProjectSkillIndex -PathType Leaf) {
+            Copy-Item -LiteralPath $ProjectSkillIndex -Destination "$ProjectSkillIndex.bak.$Timestamp" -Force
+        }
+        powershell -NoProfile -ExecutionPolicy Bypass -File $SkillIndexScript -SkillsRoot $ProjectSkillsRoot -OutputPath $ProjectSkillIndex -RelativePaths -RelativeBase $Root | Out-Host
+    }
 }
 
 Write-Output ""

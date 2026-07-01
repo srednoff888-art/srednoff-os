@@ -27,7 +27,7 @@ powershell -ExecutionPolicy Bypass -File "$HOME\.codex\scripts\srednoff-os-statu
 Expected healthy output:
 
 ```text
-Srednoff OS loaded: OK | project=OK | skills=<count> | kernel=3000 | selector=True
+Srednoff OS loaded: OK | project=OK | skills=<count> | kernel=4500 | selector=True
 ```
 
 ## V2 Features Selected From Research
@@ -69,5 +69,5 @@ Srednoff OS loaded: OK | project=OK | skills=<count> | kernel=3000 | selector=Tr
 
 - Hooks must be opt-in/trusted and must not run destructive actions.
 - Logs must not include secrets, tokens, cookies, private keys, or full prompt text when sensitive.
-- The full `core-3000-capabilities.json` must stay script-only and must not be pasted into context.
+- The full 4500-record `core-3000-capabilities.json` must stay script-only and must not be pasted into context.
 - V2 should improve routing quality before adding more catalog size.

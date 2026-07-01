@@ -10,7 +10,6 @@ import os
 import re
 from collections import Counter
 from pathlib import Path
-from typing import Iterable
 
 
 IGNORE_DIRS = {
@@ -364,10 +363,23 @@ def load_skill_index(skill_index_path: Path, skills_root: Path | None) -> list[d
     if skills_root is not None:
         built = build_skill_index(skills_root)
         if built:
-            return built
+            return prepare_skill_index(built)
     if skill_index_path.exists():
-        return load_json(skill_index_path)
+        return prepare_skill_index(load_json(skill_index_path))
     return []
+
+
+def prepare_skill_index(skill_index: list[dict]) -> list[dict]:
+    prepared: list[dict] = []
+    for skill in skill_index:
+        item = dict(skill)
+        skill_text = f"{item.get('name', '')} {item.get('description', '')}".lower()
+        item["_text"] = skill_text
+        item["_tokens"] = tokenize(skill_text)
+        item["_name_lower"] = str(item.get("name", "")).lower()
+        item["_path_lower"] = str(item.get("path", "")).lower()
+        prepared.append(item)
+    return prepared
 
 
 def term_score(term: str, haystack: str) -> int:
@@ -417,12 +429,11 @@ def score_record(
     record: dict,
     brief_haystack: str,
     project_haystack: str,
-    file_names: Iterable[str],
+    file_blob: str,
     budget: str,
     intent_domains: set[str],
 ) -> float:
     score = 0.0
-    file_blob = "\n".join(file_names).lower()
     for term in record["selection_terms"]:
         score += term_score(term, brief_haystack) * 2.4
         score += term_score(term, project_haystack) * 0.65
@@ -477,8 +488,9 @@ def select_records(
     max_items: int,
 ) -> list[tuple[float, dict]]:
     intent_domains = infer_intent_domains(brief_haystack)
+    file_blob = "\n".join(file_names).lower()
     scored = [
-        (score_record(record, brief_haystack, project_haystack, file_names, budget, intent_domains), record)
+        (score_record(record, brief_haystack, project_haystack, file_blob, budget, intent_domains), record)
         for record in catalog
     ]
     scored.sort(key=lambda item: (item[0], -item[1]["group"], item[1]["kind"] == "skill"), reverse=True)
@@ -523,9 +535,8 @@ def select_records(
     return selected
 
 
-def score_skill_mapping(record: dict, skill: dict) -> int:
-    skill_text = f"{skill.get('name', '')} {skill.get('description', '')}".lower()
-    record_text = " ".join(
+def record_mapping_text(record: dict) -> str:
+    return " ".join(
         [
             record["domain_id"],
             record["domain"],
@@ -534,12 +545,19 @@ def score_skill_mapping(record: dict, skill: dict) -> int:
             " ".join(record["selection_terms"]),
         ]
     )
-    record_tokens = tokenize(record_text)
-    skill_tokens = tokenize(skill_text)
+
+
+def score_skill_mapping(record: dict, skill: dict, record_tokens: set[str]) -> int:
+    skill_text = str(skill.get("_text", ""))
+    if not record_tokens:
+        record_tokens = tokenize(record_mapping_text(record))
+    skill_tokens = skill.get("_tokens")
+    if not isinstance(skill_tokens, set):
+        skill_tokens = tokenize(skill_text)
     score = len(record_tokens & skill_tokens)
 
-    skill_name = str(skill.get("name", "")).lower()
-    skill_path = str(skill.get("path", "")).lower()
+    skill_name = str(skill.get("_name_lower", skill.get("name", ""))).lower()
+    skill_path = str(skill.get("_path_lower", skill.get("path", ""))).lower()
     for priority, preferred_name in enumerate(DOMAIN_SKILL_HINTS.get(record["domain_id"], [])):
         if skill_name == preferred_name:
             score += 16 - priority
@@ -580,8 +598,9 @@ def score_skill_mapping(record: dict, skill: dict) -> int:
 
 def map_existing_skills(record: dict, skill_index: list[dict], limit: int = 3) -> list[dict]:
     scored: list[tuple[int, dict]] = []
+    record_tokens = tokenize(record_mapping_text(record))
     for skill in skill_index:
-        score = score_skill_mapping(record, skill)
+        score = score_skill_mapping(record, skill, record_tokens)
         if score >= 4:
             scored.append((score, skill))
     scored.sort(key=lambda item: (item[0], -len(str(item[1].get("path", ""))), item[1].get("name", "")), reverse=True)
@@ -694,7 +713,7 @@ def render_markdown(selected: list[dict], project: Path, budget: str, brief: str
             "",
             "## Read Next",
             "",
-            "Open only these mapped `SKILL.md` files when they are relevant to the task. Do not open the full 3000-record catalog.",
+            "Open only these mapped `SKILL.md` files when they are relevant to the task. Do not open the full 4500-record catalog.",
         ]
     )
     if read_paths:

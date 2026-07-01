@@ -19,13 +19,16 @@ $LocalSelector = if ($PackageRoot) { Join-Path $PackageRoot ".codex\skills\quali
 $HomeSelector = Join-Path $CodexHome "skills\quality-cost-skill-kernel\scripts\select_core_capabilities.py"
 $Selector = if ($LocalSelector -and (Test-Path -LiteralPath $LocalSelector -PathType Leaf)) { $LocalSelector } else { $HomeSelector }
 $LocalSkillsRoot = if ($PackageRoot) { Join-Path $PackageRoot ".codex\skills" } else { "" }
+$LocalSkillIndex = if ($PackageRoot) { Join-Path $PackageRoot ".codex\skill-index.json" } else { "" }
 
 if (-not (Test-Path -LiteralPath $Selector)) {
     throw "quality-cost selector not found: $Selector"
 }
 
 $Args = @($Selector, "--project", $ProjectPath, "--budget", $Budget, "--max", "$Max", "--format", $Format)
-if ($LocalSkillsRoot -and (Test-Path -LiteralPath $LocalSkillsRoot -PathType Container) -and $Selector -eq $LocalSelector) {
+if ($LocalSkillIndex -and (Test-Path -LiteralPath $LocalSkillIndex -PathType Leaf) -and $Selector -eq $LocalSelector) {
+    $Args += @("--skill-index", $LocalSkillIndex)
+} elseif ($LocalSkillsRoot -and (Test-Path -LiteralPath $LocalSkillsRoot -PathType Container) -and $Selector -eq $LocalSelector) {
     $Args += @("--skills-root", $LocalSkillsRoot)
 }
 if ($Brief) {

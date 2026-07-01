@@ -6,14 +6,14 @@
 
 <p align="center">
   <strong>A quality/cost-aware operating layer for Codex.</strong><br>
-  Turn a fresh coding agent session into a focused engineering workflow with startup checks, skill routing, review gates, and a 3000-capability selector.
+  Turn a fresh coding agent session into a focused engineering workflow with startup checks, skill routing, review gates, and a 4500-capability selector.
 </p>
 
 <p align="center">
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-111827?style=for-the-badge"></a>
   <img alt="Srednoff OS version" src="https://img.shields.io/badge/Srednoff%20OS-v2.1.2-2563eb?style=for-the-badge">
   <img alt="Skills" src="https://img.shields.io/badge/skills-306-16a34a?style=for-the-badge">
-  <img alt="Kernel" src="https://img.shields.io/badge/kernel-3000-7c3aed?style=for-the-badge">
+  <img alt="Kernel" src="https://img.shields.io/badge/kernel-4500-7c3aed?style=for-the-badge">
   <img alt="Selector" src="https://img.shields.io/badge/selector-ROI%20aware-f59e0b?style=for-the-badge">
 </p>
 
@@ -75,7 +75,7 @@ powershell -ExecutionPolicy Bypass -File "$HOME\.codex\scripts\srednoff-os-statu
 Expected:
 
 ```text
-Srednoff OS v2.1.2 loaded: OK | project=OK | skills=<count> | kernel=3000 | selector=True
+Srednoff OS v2.1.2 loaded: OK | project=OK | skills=<count> | kernel=4500 | selector=True
 ```
 
 ## What It Does
@@ -84,7 +84,7 @@ Srednoff OS v2.1.2 loaded: OK | project=OK | skills=<count> | kernel=3000 | sele
 |---|---|---|
 | Startup check | Confirms Srednoff OS is active before real work starts | Fewer broken or half-configured sessions |
 | Domain router | Detects programming, UI/UX, 3D, SEO/PPC, mobile, security, launch, and migration work | Better task-specific behavior |
-| Quality/cost selector | Picks a compact set from the 3000-capability kernel | More quality per token |
+| Quality/cost selector | Picks a compact set from the 4500-capability kernel | More quality per token |
 | Skill library | Ships reusable `SKILL.md` workflows and agent profiles | Consistent execution across projects |
 | Design/source ranking | Scores UI kits, 3D sources, assets, and external component sources | Less dependency bloat and safer copying |
 | Review gates | Adds security, quality, build, docs, and validation expectations | Cleaner handoff and fewer regressions |

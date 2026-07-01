@@ -5,12 +5,12 @@ description: Token-aware routing kernel for selecting the smallest useful set of
 
 # Quality Cost Skill Kernel
 
-Use this skill to choose capabilities by value per token instead of loading every possible instruction. The selector uses the `legacy-plus` principle: keep the 3000-record catalog, Group 1/2/3 quotas, non-overlap, domain caps, and compact mapped `SKILL.md` reads, then add v2.1.2 ROI/source/design signals on top.
+Use this skill to choose capabilities by value per token instead of loading every possible instruction. The selector uses the `legacy-plus` principle: keep the 4500-record catalog, Group 1/2/3 quotas, non-overlap, domain caps, and compact mapped `SKILL.md` reads, then add v2.1.2 ROI/source/design signals on top.
 
 ## Workflow
 
 1. Restate the outcome, risk level, budget mode, and definition of done.
-2. Run the selector instead of reading the full 3000-record catalog:
+2. Run the selector instead of reading the full 4500-record catalog:
 
 ```bash
 python scripts/select_core_capabilities.py --project <project-path> --brief "<task>" --budget balanced --max 24
@@ -31,7 +31,7 @@ Use `--budget lean` for cheap discovery and small fixes, `balanced` for normal p
 
 ## Resources
 
-- `references/core-3000-capabilities.json`: canonical catalog. Do not load the whole file into context unless explicitly auditing the catalog.
+- `references/core-3000-capabilities.json`: canonical 4500-record catalog. The filename is kept for compatibility. Do not load the whole file into context unless explicitly auditing the catalog.
 - `scripts/select_core_capabilities.py`: project/task-aware selector.
 - `scripts/validate_core_catalog.py`: structural validation for count, uniqueness, groups, and routing fields.
-- `scripts/build_core_catalog.py`: deterministic generator for the 3000-record catalog.
+- `scripts/build_core_catalog.py`: deterministic generator for the 4500-record catalog.

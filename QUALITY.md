@@ -4,15 +4,15 @@ This file documents what is currently verified and what is intentionally not pro
 
 ## Current Smoke Status
 
-Last verified: 2026-07-01.
+Last verified: 2026-07-02.
 
 | Check | Status | Command |
 |---|---:|---|
-| Selector regression suite | PASS, 8/8 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-selector.ps1` |
+| Selector regression suite | PASS, 9/9 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-selector.ps1` |
 | v2.1.1 compatibility evals | PASS, 13/13 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v211.ps1` |
 | v2.1.2 routing/source evals | PASS, 9/9 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v212.ps1` |
 | Fast skill metadata validation | PASS, 306/306 | `powershell -ExecutionPolicy Bypass -File .\scripts\quick-validate-all-skills.ps1 -Mode fast` |
-| Kernel catalog validation | PASS, 3000 records | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-quality-cost-kernel.ps1` |
+| Kernel catalog validation | PASS, 4500 records | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-quality-cost-kernel.ps1` |
 | PowerShell parse check | PASS, 20 scripts | `Get-ChildItem .\scripts -Filter *.ps1` with PowerShell parser |
 | Secret scan | PASS | high-confidence token/path scan before publication |
 
@@ -24,12 +24,14 @@ Last verified: 2026-07-01.
 - Multi-match output: `ids` format now shows up to three mapped skills so one direct match does not hide another.
 - Stronger fixture semantics: selector evals now support `expectedAll`, not only `expectedAny`.
 - Fast validation: skill metadata smoke checks now support YAML block scalar descriptions such as `description: >`.
+- Expanded kernel: deterministic catalog generation now produces 4500 records with 75 capability slugs per domain and 1800/1800/900 Group 1/2/3 distribution.
+- Selector speed: the local wrapper uses portable `.codex/skill-index.json` when present, avoiding repeated `SKILL.md` scans; measured wrapper scenario improved from about 5.9s to about 1.9s on this machine.
 
 ## What This Does Not Promise
 
 - It does not make Codex, Claude, or any model obey instructions with mathematical certainty.
 - It does not replace platform-level permissions, sandboxing, secret management, or human approval.
-- It does not prove all 3000 kernel records are individually optimal.
+- It does not prove all 4500 kernel records are individually optimal.
 - It does not guarantee that every skill improves every project.
 
 ## Known Residual Risks

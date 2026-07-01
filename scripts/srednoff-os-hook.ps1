@@ -154,7 +154,7 @@ if ($Mode -eq "SessionStart") {
         $Status = "Srednoff OS v2.1.2 loaded: WARN | status script failed: $($_.Exception.Message)"
     }
     Write-Ledger -Event $Mode -Cwd $Cwd -Decision "allow" -Findings @()
-    Write-HookContext -Event "SessionStart" -Context "$Status. Use the Srednoff OS selector before substantial work; keep core-3000 script-only."
+    Write-HookContext -Event "SessionStart" -Context "$Status. Use the Srednoff OS selector before substantial work; keep the 4500-record kernel script-only."
     exit 0
 }
 

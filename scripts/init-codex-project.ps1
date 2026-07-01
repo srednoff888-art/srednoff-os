@@ -103,6 +103,18 @@ Write-Output "  updated: $Updated"
 Write-Output "  skipped: $Skipped"
 Write-Output "  missing templates: $Missing"
 
+$ProjectSkillsRoot = Join-Path $ProjectDir ".codex\skills"
+$ProjectSkillIndex = Join-Path $ProjectDir ".codex\skill-index.json"
+$ProjectSkillIndexScript = Join-Path $ProjectDir "scripts\generate-skill-index.ps1"
+$TemplateSkillIndexScript = Join-Path $TemplateDir "scripts\generate-skill-index.ps1"
+$SkillIndexScript = if (Test-Path -LiteralPath $ProjectSkillIndexScript -PathType Leaf) { $ProjectSkillIndexScript } else { $TemplateSkillIndexScript }
+if ((Test-Path -LiteralPath $SkillIndexScript -PathType Leaf) -and (Test-Path -LiteralPath $ProjectSkillsRoot -PathType Container)) {
+    if (Test-Path -LiteralPath $ProjectSkillIndex -PathType Leaf) {
+        Copy-Item -LiteralPath $ProjectSkillIndex -Destination "$ProjectSkillIndex.bak.$Timestamp" -Force
+    }
+    powershell -NoProfile -ExecutionPolicy Bypass -File $SkillIndexScript -SkillsRoot $ProjectSkillsRoot -OutputPath $ProjectSkillIndex -RelativePaths -RelativeBase $ProjectDir | Out-Host
+}
+
 $StatusScript = Join-Path $CodexHome "scripts\srednoff-os-status.ps1"
 if (Test-Path -LiteralPath $StatusScript) {
     powershell -ExecutionPolicy Bypass -File $StatusScript -ProjectPath $ProjectDir
