@@ -1,0 +1,7 @@
+interface:
+  display_name: "Paid Search Risk Agent"
+  short_description: "Growth workflow for Paid Search Risk Agent"
+  default_prompt: "Use $paid-search-risk-agent to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

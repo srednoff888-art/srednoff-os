@@ -1,0 +1,7 @@
+interface:
+  display_name: "Admin Crud UX Patterns"
+  short_description: "Web Design workflow for Admin Crud UX Patterns"
+  default_prompt: "Use $admin-crud-ux-patterns to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

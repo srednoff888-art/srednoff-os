@@ -1,0 +1,4 @@
+interface:
+  display_name: "Record Replay Skill Miner"
+  short_description: "Turn repeated workflows into skills"
+  default_prompt: "Use $record-replay-skill-miner to convert a repeated workflow into a concise reusable Codex skill."

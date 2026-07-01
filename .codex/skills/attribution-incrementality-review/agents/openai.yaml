@@ -1,0 +1,7 @@
+interface:
+  display_name: "Attribution Incrementality Review"
+  short_description: "PPC workflow for Attribution Incrementality Review"
+  default_prompt: "Use $attribution-incrementality-review to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

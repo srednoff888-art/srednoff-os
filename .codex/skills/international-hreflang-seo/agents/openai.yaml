@@ -1,0 +1,7 @@
+interface:
+  display_name: "International Hreflang SEO"
+  short_description: "SEO workflow for International Hreflang SEO"
+  default_prompt: "Use $international-hreflang-seo to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

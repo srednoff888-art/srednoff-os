@@ -1,0 +1,7 @@
+interface:
+  display_name: "Conversion Tracking GTM GA4"
+  short_description: "PPC workflow for Conversion Tracking GTM GA4"
+  default_prompt: "Use $conversion-tracking-gtm-ga4 to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

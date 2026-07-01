@@ -1,0 +1,7 @@
+interface:
+  display_name: "PR Review Response Agent"
+  short_description: "Programming workflow for PR Review Response Agent"
+  default_prompt: "Use $pr-review-response-agent to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

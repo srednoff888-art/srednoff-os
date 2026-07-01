@@ -1,0 +1,7 @@
+interface:
+  display_name: "Observability Instrumentation"
+  short_description: "DevOps workflow for Observability Instrumentation"
+  default_prompt: "Use $observability-instrumentation to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

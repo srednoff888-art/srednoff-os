@@ -1,0 +1,7 @@
+interface:
+  display_name: "Cross Language Test Gate"
+  short_description: "Programming workflow for Cross Language Test Gate"
+  default_prompt: "Use $cross-language-test-gate to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

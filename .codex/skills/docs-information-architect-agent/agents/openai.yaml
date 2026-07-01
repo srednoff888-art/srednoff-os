@@ -1,0 +1,7 @@
+interface:
+  display_name: "Docs Information Architect Agent"
+  short_description: "Specialist agent for Docs Information Architect Agent"
+  default_prompt: "Use $docs-information-architect-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

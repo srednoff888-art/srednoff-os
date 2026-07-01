@@ -1,0 +1,7 @@
+interface:
+  display_name: "Database Schema Migration Auditor"
+  short_description: "Programming workflow for Database Schema Migration Auditor"
+  default_prompt: "Use $database-schema-migration-auditor to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Supply Chain SBOM SCA"
+  short_description: "Security workflow for Supply Chain SBOM SCA"
+  default_prompt: "Use $supply-chain-sbom-sca to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

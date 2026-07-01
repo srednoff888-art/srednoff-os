@@ -1,0 +1,7 @@
+interface:
+  display_name: "Dependency License Risk Audit"
+  short_description: "Security workflow for Dependency License Risk Audit"
+  default_prompt: "Use $dependency-license-risk-audit to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

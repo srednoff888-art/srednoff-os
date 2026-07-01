@@ -1,0 +1,7 @@
+interface:
+  display_name: "Cache Invalidation Design"
+  short_description: "Programming workflow for Cache Invalidation Design"
+  default_prompt: "Use $cache-invalidation-design to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Mobile Architect Agent"
+  short_description: "Specialist agent for Mobile Architect Agent"
+  default_prompt: "Use $mobile-architect-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Source Driven Development"
+  short_description: "Programming workflow for Source Driven Development"
+  default_prompt: "Use $source-driven-development to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

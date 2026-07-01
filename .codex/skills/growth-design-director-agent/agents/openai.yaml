@@ -1,0 +1,7 @@
+interface:
+  display_name: "Growth Design Director Agent"
+  short_description: "Growth workflow for Growth Design Director Agent"
+  default_prompt: "Use $growth-design-director-agent to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

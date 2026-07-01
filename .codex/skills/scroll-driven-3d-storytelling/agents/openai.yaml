@@ -1,0 +1,7 @@
+interface:
+  display_name: "Scroll Driven 3D Storytelling"
+  short_description: "3D Web workflow for Scroll Driven 3D Storytelling"
+  default_prompt: "Use $scroll-driven-3d-storytelling to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

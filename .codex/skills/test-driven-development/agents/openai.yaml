@@ -1,0 +1,7 @@
+interface:
+  display_name: "Test Driven Development"
+  short_description: "Programming workflow for Test Driven Development"
+  default_prompt: "Use $test-driven-development to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

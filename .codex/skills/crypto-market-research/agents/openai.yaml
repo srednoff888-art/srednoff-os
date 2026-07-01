@@ -1,0 +1,7 @@
+interface:
+  display_name: "Crypto Market Research"
+  short_description: "Crypto workflow for Crypto Market Research"
+  default_prompt: "Use $crypto-market-research to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

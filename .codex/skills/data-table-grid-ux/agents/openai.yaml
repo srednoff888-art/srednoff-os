@@ -1,0 +1,7 @@
+interface:
+  display_name: "Data Table Grid UX"
+  short_description: "Web Design workflow for Data Table Grid UX"
+  default_prompt: "Use $data-table-grid-ux to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

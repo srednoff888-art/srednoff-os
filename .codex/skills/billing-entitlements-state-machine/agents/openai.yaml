@@ -1,0 +1,7 @@
+interface:
+  display_name: "Billing Entitlements State Machine"
+  short_description: "Programming workflow for Billing Entitlements State Machine"
+  default_prompt: "Use $billing-entitlements-state-machine to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

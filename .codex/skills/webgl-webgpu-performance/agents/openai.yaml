@@ -1,0 +1,7 @@
+interface:
+  display_name: "Webgl Webgpu Performance"
+  short_description: "3D Web workflow for Webgl Webgpu Performance"
+  default_prompt: "Use $webgl-webgpu-performance to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

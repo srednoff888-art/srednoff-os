@@ -1,0 +1,7 @@
+interface:
+  display_name: "Codebase Map Indexer"
+  short_description: "Programming workflow for Codebase Map Indexer"
+  default_prompt: "Use $codebase-map-indexer to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

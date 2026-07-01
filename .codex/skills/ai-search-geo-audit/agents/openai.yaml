@@ -1,0 +1,7 @@
+interface:
+  display_name: "Ai Search Geo Audit"
+  short_description: "SEO workflow for Ai Search Geo Audit"
+  default_prompt: "Use $ai-search-geo-audit to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

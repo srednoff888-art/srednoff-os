@@ -1,0 +1,7 @@
+interface:
+  display_name: "Turbo Mode Controller"
+  short_description: "TURBO workflow for Turbo Mode Controller"
+  default_prompt: "Use $turbo-mode-controller to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

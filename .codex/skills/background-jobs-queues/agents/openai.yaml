@@ -1,0 +1,7 @@
+interface:
+  display_name: "Background Jobs Queues"
+  short_description: "Programming workflow for Background Jobs Queues"
+  default_prompt: "Use $background-jobs-queues to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

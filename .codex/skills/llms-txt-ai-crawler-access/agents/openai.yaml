@@ -1,0 +1,7 @@
+interface:
+  display_name: "LLMs txt AI Crawler Access"
+  short_description: "SEO workflow for LLMs txt AI Crawler Access"
+  default_prompt: "Use $llms-txt-ai-crawler-access to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

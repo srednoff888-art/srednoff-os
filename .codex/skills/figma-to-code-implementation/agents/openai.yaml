@@ -1,0 +1,7 @@
+interface:
+  display_name: "Figma To Code Implementation"
+  short_description: "UI/UX workflow for Figma To Code Implementation"
+  default_prompt: "Use $figma-to-code-implementation to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

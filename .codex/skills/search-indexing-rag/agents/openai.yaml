@@ -1,0 +1,7 @@
+interface:
+  display_name: "Search Indexing RAG"
+  short_description: "AI Engineering workflow for Search Indexing RAG"
+  default_prompt: "Use $search-indexing-rag to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

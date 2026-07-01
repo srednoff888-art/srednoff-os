@@ -1,0 +1,7 @@
+interface:
+  display_name: "CI CD Automation"
+  short_description: "DevOps workflow for CI CD Automation"
+  default_prompt: "Use $ci-cd-automation to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

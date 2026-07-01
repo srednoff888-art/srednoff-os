@@ -1,0 +1,7 @@
+interface:
+  display_name: "Structured Data Schema Org"
+  short_description: "SEO workflow for Structured Data Schema Org"
+  default_prompt: "Use $structured-data-schema-org to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

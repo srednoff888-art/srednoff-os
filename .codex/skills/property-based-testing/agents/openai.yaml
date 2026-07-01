@@ -1,0 +1,7 @@
+interface:
+  display_name: "Property Based Testing"
+  short_description: "Programming workflow for Property Based Testing"
+  default_prompt: "Use $property-based-testing to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

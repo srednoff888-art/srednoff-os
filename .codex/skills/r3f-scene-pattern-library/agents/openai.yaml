@@ -1,0 +1,7 @@
+interface:
+  display_name: "R3F Scene Pattern Library"
+  short_description: "3D Web workflow for R3F Scene Pattern Library"
+  default_prompt: "Use $r3f-scene-pattern-library to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

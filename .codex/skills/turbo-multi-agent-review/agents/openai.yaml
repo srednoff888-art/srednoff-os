@@ -1,0 +1,7 @@
+interface:
+  display_name: "Turbo Multi Agent Review"
+  short_description: "TURBO workflow for Turbo Multi Agent Review"
+  default_prompt: "Use $turbo-multi-agent-review to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

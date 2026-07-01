@@ -1,0 +1,7 @@
+interface:
+  display_name: "Release Manager Agent"
+  short_description: "Agent Profile workflow for Release Manager Agent"
+  default_prompt: "Use $release-manager-agent to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

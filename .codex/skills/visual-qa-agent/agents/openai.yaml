@@ -1,0 +1,7 @@
+interface:
+  display_name: "Visual QA Agent"
+  short_description: "Specialist agent for Visual QA Agent"
+  default_prompt: "Use $visual-qa-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

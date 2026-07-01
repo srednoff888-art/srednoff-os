@@ -1,0 +1,7 @@
+interface:
+  display_name: "Competitor Serp Gap Analysis"
+  short_description: "SEO workflow for Competitor Serp Gap Analysis"
+  default_prompt: "Use $competitor-serp-gap-analysis to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

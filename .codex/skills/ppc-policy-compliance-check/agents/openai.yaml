@@ -1,0 +1,7 @@
+interface:
+  display_name: "PPC Policy Compliance Check"
+  short_description: "PPC workflow for PPC Policy Compliance Check"
+  default_prompt: "Use $ppc-policy-compliance-check to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

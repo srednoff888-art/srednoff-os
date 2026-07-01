@@ -1,0 +1,7 @@
+interface:
+  display_name: "Operations Automation Agent"
+  short_description: "Specialist agent for Operations Automation Agent"
+  default_prompt: "Use $operations-automation-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Email Deliverability Transactional"
+  short_description: "Programming workflow for Email Deliverability Transactional"
+  default_prompt: "Use $email-deliverability-transactional to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

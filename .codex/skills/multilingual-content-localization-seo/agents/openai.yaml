@@ -1,0 +1,7 @@
+interface:
+  display_name: "Multilingual Content Localization SEO"
+  short_description: "SEO workflow for Multilingual Content Localization SEO"
+  default_prompt: "Use $multilingual-content-localization-seo to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

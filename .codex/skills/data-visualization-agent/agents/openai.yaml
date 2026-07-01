@@ -1,0 +1,7 @@
+interface:
+  display_name: "Data Visualization Agent"
+  short_description: "Specialist agent for Data Visualization Agent"
+  default_prompt: "Use $data-visualization-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

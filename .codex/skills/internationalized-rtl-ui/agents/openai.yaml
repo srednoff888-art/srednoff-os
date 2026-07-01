@@ -1,0 +1,7 @@
+interface:
+  display_name: "Internationalized RTL UI"
+  short_description: "Web Design workflow for Internationalized RTL UI"
+  default_prompt: "Use $internationalized-rtl-ui to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

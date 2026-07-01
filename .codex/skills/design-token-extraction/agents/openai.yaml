@@ -1,0 +1,7 @@
+interface:
+  display_name: "Design Token Extraction"
+  short_description: "Web Design workflow for Design Token Extraction"
+  default_prompt: "Use $design-token-extraction to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

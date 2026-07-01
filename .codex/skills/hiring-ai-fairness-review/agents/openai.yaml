@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hiring AI Fairness Review"
+  short_description: "Review recruiting AI fairness risks"
+  default_prompt: "Use $hiring-ai-fairness-review to assess recruiting or hiring AI workflows for fairness and human-review risks."

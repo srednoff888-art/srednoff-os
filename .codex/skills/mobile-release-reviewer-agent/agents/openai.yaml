@@ -1,0 +1,7 @@
+interface:
+  display_name: "Mobile Release Reviewer Agent"
+  short_description: "Mobile workflow for Mobile Release Reviewer Agent"
+  default_prompt: "Use $mobile-release-reviewer-agent to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

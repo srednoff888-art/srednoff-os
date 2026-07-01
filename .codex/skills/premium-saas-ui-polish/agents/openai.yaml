@@ -1,0 +1,7 @@
+interface:
+  display_name: "Premium Saas UI Polish"
+  short_description: "UI/UX workflow for Premium Saas UI Polish"
+  default_prompt: "Use $premium-saas-ui-polish to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

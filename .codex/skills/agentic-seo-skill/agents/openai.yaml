@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agentic SEO Skill"
+  short_description: "Script-backed SEO audit workflows"
+  default_prompt: "Use $agentic-seo-skill to run an evidence-backed SEO audit or optimization workflow."

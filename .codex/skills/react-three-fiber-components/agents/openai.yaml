@@ -1,0 +1,7 @@
+interface:
+  display_name: "React Three Fiber Components"
+  short_description: "3D Web workflow for React Three Fiber Components"
+  default_prompt: "Use $react-three-fiber-components to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

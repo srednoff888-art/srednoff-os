@@ -1,0 +1,7 @@
+interface:
+  display_name: "Internal Linking Ia"
+  short_description: "SEO workflow for Internal Linking Ia"
+  default_prompt: "Use $internal-linking-ia to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

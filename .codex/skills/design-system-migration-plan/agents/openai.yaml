@@ -1,0 +1,7 @@
+interface:
+  display_name: "Design System Migration Plan"
+  short_description: "Web Design workflow for Design System Migration Plan"
+  default_prompt: "Use $design-system-migration-plan to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

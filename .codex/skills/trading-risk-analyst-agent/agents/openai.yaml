@@ -1,0 +1,7 @@
+interface:
+  display_name: "Trading Risk Analyst Agent"
+  short_description: "Specialist agent for Trading Risk Analyst Agent"
+  default_prompt: "Use $trading-risk-analyst-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

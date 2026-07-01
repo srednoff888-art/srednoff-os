@@ -1,0 +1,7 @@
+interface:
+  display_name: "App Store Aso Metadata"
+  short_description: "Apps workflow for App Store Aso Metadata"
+  default_prompt: "Use $app-store-aso-metadata to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

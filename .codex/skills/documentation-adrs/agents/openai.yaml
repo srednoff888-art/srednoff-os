@@ -1,0 +1,7 @@
+interface:
+  display_name: "Documentation Adrs"
+  short_description: "Programming workflow for Documentation Adrs"
+  default_prompt: "Use $documentation-adrs to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

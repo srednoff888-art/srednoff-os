@@ -1,0 +1,7 @@
+interface:
+  display_name: "Playwright Screenshot Baselines"
+  short_description: "Web Design workflow for Playwright Screenshot Baselines"
+  default_prompt: "Use $playwright-screenshot-baselines to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

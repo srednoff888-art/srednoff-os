@@ -1,0 +1,7 @@
+interface:
+  display_name: "Fullstack Integrator Agent"
+  short_description: "Specialist agent for Fullstack Integrator Agent"
+  default_prompt: "Use $fullstack-integrator-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "App Store Testflight Release"
+  short_description: "Apps workflow for App Store Testflight Release"
+  default_prompt: "Use $app-store-testflight-release to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

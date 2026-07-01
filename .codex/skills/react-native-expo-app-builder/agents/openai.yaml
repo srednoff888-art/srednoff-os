@@ -1,0 +1,7 @@
+interface:
+  display_name: "React Native Expo App Builder"
+  short_description: "Apps workflow for React Native Expo App Builder"
+  default_prompt: "Use $react-native-expo-app-builder to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

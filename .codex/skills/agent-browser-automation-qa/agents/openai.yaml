@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Browser QA"
+  short_description: "Choose and validate browser automation harnesses"
+  default_prompt: "Use $agent-browser-automation-qa to choose a browser automation harness and validate an agentic web workflow."

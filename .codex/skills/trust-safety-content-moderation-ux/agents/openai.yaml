@@ -1,0 +1,7 @@
+interface:
+  display_name: "Trust Safety Content Moderation UX"
+  short_description: "Web Design workflow for Trust Safety Content Moderation UX"
+  default_prompt: "Use $trust-safety-content-moderation-ux to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

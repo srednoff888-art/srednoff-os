@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Instruction Migration"
+  short_description: "Port rules across Codex, Cline, Roo, Continue"
+  default_prompt: "Use $agent-instruction-migration to audit and migrate agent instruction files into Codex skills and AGENTS.md."

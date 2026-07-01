@@ -1,0 +1,7 @@
+interface:
+  display_name: "Solidity Foundry Test Suite"
+  short_description: "Crypto workflow for Solidity Foundry Test Suite"
+  default_prompt: "Use $solidity-foundry-test-suite to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

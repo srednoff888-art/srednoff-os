@@ -1,0 +1,7 @@
+interface:
+  display_name: "Web3 Crypto Security Agent"
+  short_description: "Specialist agent for Web3 Crypto Security Agent"
+  default_prompt: "Use $web3-crypto-security-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

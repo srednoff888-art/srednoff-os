@@ -1,0 +1,7 @@
+interface:
+  display_name: "Wallet Transaction Flow"
+  short_description: "Crypto workflow for Wallet Transaction Flow"
+  default_prompt: "Use $wallet-transaction-flow to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

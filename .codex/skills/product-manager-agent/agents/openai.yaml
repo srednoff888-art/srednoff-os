@@ -1,0 +1,7 @@
+interface:
+  display_name: "Product Manager Agent"
+  short_description: "Specialist agent for Product Manager Agent"
+  default_prompt: "Use $product-manager-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

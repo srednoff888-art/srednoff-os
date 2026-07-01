@@ -1,0 +1,7 @@
+interface:
+  display_name: "Anti Ai Slop Design Critic"
+  short_description: "UI/UX workflow for Anti Ai Slop Design Critic"
+  default_prompt: "Use $anti-ai-slop-design-critic to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

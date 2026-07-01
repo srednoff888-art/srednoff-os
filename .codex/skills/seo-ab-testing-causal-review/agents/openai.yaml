@@ -1,0 +1,7 @@
+interface:
+  display_name: "SEO A/B Testing Causal Review"
+  short_description: "SEO workflow for SEO A/B Testing Causal Review"
+  default_prompt: "Use $seo-ab-testing-causal-review to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

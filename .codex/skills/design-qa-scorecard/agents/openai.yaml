@@ -1,0 +1,7 @@
+interface:
+  display_name: "Design Qa Scorecard"
+  short_description: "Web Design workflow for Design Qa Scorecard"
+  default_prompt: "Use $design-qa-scorecard to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

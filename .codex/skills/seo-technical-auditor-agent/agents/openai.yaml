@@ -1,0 +1,7 @@
+interface:
+  display_name: "SEO Technical Auditor Agent"
+  short_description: "Specialist agent for SEO Technical Auditor Agent"
+  default_prompt: "Use $seo-technical-auditor-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

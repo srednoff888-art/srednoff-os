@@ -1,0 +1,7 @@
+interface:
+  display_name: "Typography Readability System"
+  short_description: "Web Design workflow for Typography Readability System"
+  default_prompt: "Use $typography-readability-system to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

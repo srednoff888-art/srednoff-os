@@ -1,0 +1,7 @@
+interface:
+  display_name: "Trading Strategy Backtesting"
+  short_description: "Crypto workflow for Trading Strategy Backtesting"
+  default_prompt: "Use $trading-strategy-backtesting to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

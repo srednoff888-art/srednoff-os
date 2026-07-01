@@ -1,0 +1,7 @@
+interface:
+  display_name: "In App Purchases Subscriptions"
+  short_description: "Apps workflow for In App Purchases Subscriptions"
+  default_prompt: "Use $in-app-purchases-subscriptions to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

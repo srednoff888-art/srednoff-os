@@ -1,0 +1,7 @@
+interface:
+  display_name: "Firebase Google Cloud Agent"
+  short_description: "Specialist agent for Firebase Google Cloud Agent"
+  default_prompt: "Use $firebase-google-cloud-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

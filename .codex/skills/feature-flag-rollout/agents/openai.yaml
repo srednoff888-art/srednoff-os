@@ -1,0 +1,7 @@
+interface:
+  display_name: "Feature Flag Rollout"
+  short_description: "Programming workflow for Feature Flag Rollout"
+  default_prompt: "Use $feature-flag-rollout to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

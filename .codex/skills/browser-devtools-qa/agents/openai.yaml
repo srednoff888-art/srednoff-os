@@ -1,0 +1,7 @@
+interface:
+  display_name: "Browser Devtools Qa"
+  short_description: "QA workflow for Browser Devtools Qa"
+  default_prompt: "Use $browser-devtools-qa to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Sql Query Plan Optimizer"
+  short_description: "Programming workflow for Sql Query Plan Optimizer"
+  default_prompt: "Use $sql-query-plan-optimizer to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

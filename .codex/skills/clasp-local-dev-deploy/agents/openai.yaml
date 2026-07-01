@@ -1,0 +1,7 @@
+interface:
+  display_name: "Clasp Local Dev Deploy"
+  short_description: "Apps workflow for Clasp Local Dev Deploy"
+  default_prompt: "Use $clasp-local-dev-deploy to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

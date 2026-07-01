@@ -1,0 +1,7 @@
+interface:
+  display_name: "Copy Adapt Component Pipeline"
+  short_description: "UI/UX workflow for Copy Adapt Component Pipeline"
+  default_prompt: "Use $copy-adapt-component-pipeline to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

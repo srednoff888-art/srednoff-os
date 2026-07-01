@@ -1,0 +1,96 @@
+{
+  "name": "Srednoff OS source watchlist",
+  "version": "v2.1",
+  "sources": [
+    {
+      "id": "openai-codex-agents-md",
+      "type": "official-docs",
+      "url": "https://developers.openai.com/codex/guides/agents-md",
+      "reason": "Instruction discovery and global/project AGENTS.md behavior"
+    },
+    {
+      "id": "openai-codex-skills",
+      "type": "official-docs",
+      "url": "https://developers.openai.com/codex/skills",
+      "reason": "Skill format, context budget, and progressive disclosure"
+    },
+    {
+      "id": "openai-codex-record-replay",
+      "type": "official-docs",
+      "url": "https://developers.openai.com/codex/record-and-replay",
+      "reason": "Demonstration-to-skill workflow and reusable process capture"
+    },
+    {
+      "id": "openai-codex-subagents",
+      "type": "official-docs",
+      "url": "https://developers.openai.com/codex/subagents",
+      "reason": "Custom subagent schema, orchestration limits, and specialist agent routing"
+    },
+    {
+      "id": "openai-codex-hooks",
+      "type": "official-docs",
+      "url": "https://developers.openai.com/codex/hooks",
+      "reason": "Lifecycle hooks, hook trust model, and hook output protocol"
+    },
+    {
+      "id": "openai-agents-sdk",
+      "type": "official-docs",
+      "url": "https://openai.github.io/openai-agents-python/",
+      "reason": "Agent handoffs, guardrails, tracing, and eval patterns"
+    },
+    {
+      "id": "openai-codex-repo",
+      "type": "github",
+      "url": "https://github.com/openai/codex",
+      "reason": "Current Codex CLI behavior and release direction"
+    },
+    {
+      "id": "openai-skills-repo",
+      "type": "github",
+      "url": "https://github.com/openai/skills",
+      "reason": "Official Codex skills catalog examples and packaging direction"
+    },
+    {
+      "id": "agent-skills-spec",
+      "type": "official-docs",
+      "url": "https://agentskills.io/specification",
+      "reason": "Open agent skills standard referenced by Codex skills documentation"
+    },
+    {
+      "id": "openai-agents-python-repo",
+      "type": "github",
+      "url": "https://github.com/openai/openai-agents-python",
+      "reason": "Agent workflow implementation patterns"
+    },
+    {
+      "id": "openai-cookbook",
+      "type": "github",
+      "url": "https://github.com/openai/openai-cookbook",
+      "reason": "Agent improvement loop and eval examples"
+    },
+    {
+      "id": "voltagent-awesome-agent-skills",
+      "type": "github",
+      "url": "https://github.com/VoltAgent/awesome-agent-skills",
+      "reason": "Candidate skill discovery and taxonomy comparison"
+    },
+    {
+      "id": "voltagent-awesome-codex-subagents",
+      "type": "github",
+      "url": "https://github.com/VoltAgent/awesome-codex-subagents",
+      "reason": "Codex subagent taxonomy discovery; adapt patterns only after license and quality review"
+    },
+    {
+      "id": "promptfoo",
+      "type": "github",
+      "url": "https://github.com/promptfoo/promptfoo",
+      "reason": "Prompt, agent, and RAG evaluation patterns"
+    },
+    {
+      "id": "mcp-servers",
+      "type": "github",
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "reason": "MCP server ecosystem and trust inventory"
+    }
+  ]
+}

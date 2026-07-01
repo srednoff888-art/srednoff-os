@@ -1,0 +1,7 @@
+interface:
+  display_name: "UI Art Director Agent"
+  short_description: "UI/UX workflow for UI Art Director Agent"
+  default_prompt: "Use $ui-art-director-agent to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

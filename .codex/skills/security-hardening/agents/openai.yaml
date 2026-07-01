@@ -1,0 +1,7 @@
+interface:
+  display_name: "Security Hardening"
+  short_description: "Security workflow for Security Hardening"
+  default_prompt: "Use $security-hardening to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

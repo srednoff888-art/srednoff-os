@@ -1,0 +1,27 @@
+[
+  {
+    "id": "ui_magic",
+    "brief": "TURBO сделай premium SaaS landing UI, можно использовать 21st.dev и shadcn",
+    "expectedDomains": ["ui-ux", "web-design"]
+  },
+  {
+    "id": "three_product",
+    "brief": "создай 3D product configurator на React Three Fiber с glTF моделью",
+    "expectedDomains": ["3d-web", "ui-ux"]
+  },
+  {
+    "id": "mobile_expo",
+    "brief": "собери Expo React Native приложение с offline mode и release через EAS",
+    "expectedDomains": ["mobile-apps"]
+  },
+  {
+    "id": "seo_ppc",
+    "brief": "SEO PPC growth landing page, SERP research, message match and conversion tracking",
+    "expectedDomains": ["seo-ppc-growth"]
+  },
+  {
+    "id": "programming_api",
+    "brief": "спроектируй backend API на Python FastAPI с Postgres и тестами",
+    "expectedDomains": ["programming"]
+  }
+]

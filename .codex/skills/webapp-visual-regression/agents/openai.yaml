@@ -1,0 +1,7 @@
+interface:
+  display_name: "Webapp Visual Regression"
+  short_description: "QA workflow for Webapp Visual Regression"
+  default_prompt: "Use $webapp-visual-regression to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Motion Design System"
+  short_description: "UI/UX workflow for Motion Design System"
+  default_prompt: "Use $motion-design-system to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

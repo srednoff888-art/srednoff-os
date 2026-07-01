@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Builder"
+  short_description: "Build production-ready apps and features"
+  default_prompt: "Use $product-builder to build a production-ready app, workflow, or feature."

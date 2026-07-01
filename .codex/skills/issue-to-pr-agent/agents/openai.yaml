@@ -1,0 +1,7 @@
+interface:
+  display_name: "Issue To PR Agent"
+  short_description: "Programming workflow for Issue To PR Agent"
+  default_prompt: "Use $issue-to-pr-agent to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Monorepo Boundary Architecture"
+  short_description: "Programming workflow for Monorepo Boundary Architecture"
+  default_prompt: "Use $monorepo-boundary-architecture to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Onchain Data Analytics"
+  short_description: "Crypto workflow for Onchain Data Analytics"
+  default_prompt: "Use $onchain-data-analytics to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Healthcare AI Guardrails"
+  short_description: "Source-backed healthcare AI review"
+  default_prompt: "Use $healthcare-ai-research-guardrails to review healthcare AI content or workflows with human-review guardrails."

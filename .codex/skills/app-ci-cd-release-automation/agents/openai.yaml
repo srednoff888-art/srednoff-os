@@ -1,0 +1,7 @@
+interface:
+  display_name: "App CI CD Release Automation"
+  short_description: "Apps workflow for App CI CD Release Automation"
+  default_prompt: "Use $app-ci-cd-release-automation to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

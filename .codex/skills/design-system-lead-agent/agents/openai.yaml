@@ -1,0 +1,7 @@
+interface:
+  display_name: "Design System Lead Agent"
+  short_description: "Specialist agent for Design System Lead Agent"
+  default_prompt: "Use $design-system-lead-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Floating UI Overlay Positioning"
+  short_description: "Web Design workflow for Floating UI Overlay Positioning"
+  default_prompt: "Use $floating-ui-overlay-positioning to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

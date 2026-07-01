@@ -1,0 +1,7 @@
+interface:
+  display_name: "Customer Support Ops Agent"
+  short_description: "Specialist agent for Customer Support Ops Agent"
+  default_prompt: "Use $customer-support-ops-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

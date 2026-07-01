@@ -1,0 +1,7 @@
+interface:
+  display_name: "AI Generated Asset Art Direction"
+  short_description: "Web Design workflow for AI Generated Asset Art Direction"
+  default_prompt: "Use $ai-generated-asset-art-direction to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

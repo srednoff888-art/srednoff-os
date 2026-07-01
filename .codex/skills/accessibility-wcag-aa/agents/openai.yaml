@@ -1,0 +1,7 @@
+interface:
+  display_name: "Accessibility WCAG Aa"
+  short_description: "Web Design workflow for Accessibility WCAG Aa"
+  default_prompt: "Use $accessibility-wcag-aa to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

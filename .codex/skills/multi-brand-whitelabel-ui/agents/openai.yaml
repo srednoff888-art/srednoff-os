@@ -1,0 +1,7 @@
+interface:
+  display_name: "Multi Brand Whitelabel UI"
+  short_description: "Web Design workflow for Multi Brand Whitelabel UI"
+  default_prompt: "Use $multi-brand-whitelabel-ui to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

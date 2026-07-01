@@ -1,0 +1,7 @@
+interface:
+  display_name: "Defi Protocol Analysis"
+  short_description: "Crypto workflow for Defi Protocol Analysis"
+  default_prompt: "Use $defi-protocol-analysis to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

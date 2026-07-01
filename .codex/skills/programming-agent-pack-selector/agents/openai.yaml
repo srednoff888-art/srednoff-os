@@ -1,0 +1,7 @@
+interface:
+  display_name: "Programming Agent Pack Selector"
+  short_description: "Programming workflow for Programming Agent Pack Selector"
+  default_prompt: "Use $programming-agent-pack-selector to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

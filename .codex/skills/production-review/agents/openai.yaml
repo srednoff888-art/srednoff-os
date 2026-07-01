@@ -1,0 +1,4 @@
+interface:
+  display_name: "Production Review"
+  short_description: "Review release risks before shipping"
+  default_prompt: "Use $production-review to review bugs, security, deploy, and rollback risks before shipping."

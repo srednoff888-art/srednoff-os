@@ -1,0 +1,7 @@
+interface:
+  display_name: "Image Video SEO"
+  short_description: "SEO workflow for Image Video SEO"
+  default_prompt: "Use $image-video-seo to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

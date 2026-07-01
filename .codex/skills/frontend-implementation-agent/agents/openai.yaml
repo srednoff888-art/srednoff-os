@@ -1,0 +1,7 @@
+interface:
+  display_name: "Frontend Implementation Agent"
+  short_description: "Specialist agent for Frontend Implementation Agent"
+  default_prompt: "Use $frontend-implementation-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

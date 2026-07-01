@@ -1,0 +1,7 @@
+interface:
+  display_name: "Content Design Microcopy"
+  short_description: "Web Design workflow for Content Design Microcopy"
+  default_prompt: "Use $content-design-microcopy to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

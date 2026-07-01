@@ -1,0 +1,7 @@
+interface:
+  display_name: "Creative Landing Page Builder"
+  short_description: "UI/UX workflow for Creative Landing Page Builder"
+  default_prompt: "Use $creative-landing-page-builder to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

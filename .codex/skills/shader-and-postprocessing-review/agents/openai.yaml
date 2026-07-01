@@ -1,0 +1,7 @@
+interface:
+  display_name: "Shader And Postprocessing Review"
+  short_description: "3D Web workflow for Shader And Postprocessing Review"
+  default_prompt: "Use $shader-and-postprocessing-review to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

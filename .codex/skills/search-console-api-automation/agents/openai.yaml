@@ -1,0 +1,7 @@
+interface:
+  display_name: "Search Console API Automation"
+  short_description: "SEO workflow for Search Console API Automation"
+  default_prompt: "Use $search-console-api-automation to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

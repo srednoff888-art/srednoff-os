@@ -1,0 +1,7 @@
+interface:
+  display_name: "Git Workflow Versioning"
+  short_description: "Programming workflow for Git Workflow Versioning"
+  default_prompt: "Use $git-workflow-versioning to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

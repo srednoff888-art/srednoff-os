@@ -1,0 +1,7 @@
+interface:
+  display_name: "App Store Release Agent"
+  short_description: "Specialist agent for App Store Release Agent"
+  default_prompt: "Use $app-store-release-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

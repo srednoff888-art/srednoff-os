@@ -1,0 +1,7 @@
+interface:
+  display_name: "Component Provenance License Review"
+  short_description: "UI/UX workflow for Component Provenance License Review"
+  default_prompt: "Use $component-provenance-license-review to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

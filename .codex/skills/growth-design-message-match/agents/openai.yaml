@@ -1,0 +1,7 @@
+interface:
+  display_name: "Growth Design Message Match"
+  short_description: "Growth workflow for Growth Design Message Match"
+  default_prompt: "Use $growth-design-message-match to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

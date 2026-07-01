@@ -1,0 +1,7 @@
+interface:
+  display_name: "Mobile E2E Device Testing"
+  short_description: "Apps workflow for Mobile E2E Device Testing"
+  default_prompt: "Use $mobile-e2e-device-testing to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

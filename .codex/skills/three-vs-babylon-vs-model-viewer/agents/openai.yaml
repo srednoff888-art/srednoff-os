@@ -1,0 +1,7 @@
+interface:
+  display_name: "Three Vs Babylon Vs Model Viewer"
+  short_description: "3D Web workflow for Three Vs Babylon Vs Model Viewer"
+  default_prompt: "Use $three-vs-babylon-vs-model-viewer to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Design Qa Agent V2"
+  short_description: "UI/UX workflow for Design Qa Agent V2"
+  default_prompt: "Use $design-qa-agent-v2 to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

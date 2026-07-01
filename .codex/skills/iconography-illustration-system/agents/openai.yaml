@@ -1,0 +1,7 @@
+interface:
+  display_name: "Iconography Illustration System"
+  short_description: "Web Design workflow for Iconography Illustration System"
+  default_prompt: "Use $iconography-illustration-system to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

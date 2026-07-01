@@ -1,0 +1,7 @@
+interface:
+  display_name: "Headless Component Composition"
+  short_description: "Web Design workflow for Headless Component Composition"
+  default_prompt: "Use $headless-component-composition to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

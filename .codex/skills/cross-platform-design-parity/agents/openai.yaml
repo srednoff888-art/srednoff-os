@@ -1,0 +1,7 @@
+interface:
+  display_name: "Cross Platform Design Parity"
+  short_description: "Apps workflow for Cross Platform Design Parity"
+  default_prompt: "Use $cross-platform-design-parity to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

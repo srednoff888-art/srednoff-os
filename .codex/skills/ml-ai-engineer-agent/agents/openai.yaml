@@ -1,0 +1,7 @@
+interface:
+  display_name: "ML AI Engineer Agent"
+  short_description: "Specialist agent for ML AI Engineer Agent"
+  default_prompt: "Use $ml-ai-engineer-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "File Upload Storage Pipeline"
+  short_description: "Programming workflow for File Upload Storage Pipeline"
+  default_prompt: "Use $file-upload-storage-pipeline to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

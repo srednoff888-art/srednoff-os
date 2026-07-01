@@ -1,0 +1,7 @@
+interface:
+  display_name: "UX UX Researcher Agent"
+  short_description: "Specialist agent for UX UX Researcher Agent"
+  default_prompt: "Use $ux-researcher-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

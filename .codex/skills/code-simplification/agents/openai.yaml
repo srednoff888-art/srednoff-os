@@ -1,0 +1,7 @@
+interface:
+  display_name: "Code Simplification"
+  short_description: "Programming workflow for Code Simplification"
+  default_prompt: "Use $code-simplification to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

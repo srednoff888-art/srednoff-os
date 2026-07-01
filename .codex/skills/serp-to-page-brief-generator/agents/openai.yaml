@@ -1,0 +1,7 @@
+interface:
+  display_name: "Serp To Page Brief Generator"
+  short_description: "Growth workflow for Serp To Page Brief Generator"
+  default_prompt: "Use $serp-to-page-brief-generator to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

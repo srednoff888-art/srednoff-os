@@ -1,0 +1,7 @@
+interface:
+  display_name: "MCP Integration Builder"
+  short_description: "Programming workflow for MCP Integration Builder"
+  default_prompt: "Use $mcp-integration-builder to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

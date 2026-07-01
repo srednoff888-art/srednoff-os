@@ -1,0 +1,7 @@
+interface:
+  display_name: "Accessibility Remediation Sprint"
+  short_description: "Web Design workflow for Accessibility Remediation Sprint"
+  default_prompt: "Use $accessibility-remediation-sprint to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

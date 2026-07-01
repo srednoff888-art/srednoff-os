@@ -1,0 +1,7 @@
+interface:
+  display_name: "Log File Crawl Analysis"
+  short_description: "SEO workflow for Log File Crawl Analysis"
+  default_prompt: "Use $log-file-crawl-analysis to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Nuxt SEO Module Workflow"
+  short_description: "SEO workflow for Nuxt SEO Module Workflow"
+  default_prompt: "Use $nuxt-seo-module-workflow to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

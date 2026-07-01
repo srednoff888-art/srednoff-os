@@ -1,0 +1,7 @@
+interface:
+  display_name: "Multi Tenant Saas Architecture"
+  short_description: "Programming workflow for Multi Tenant Saas Architecture"
+  default_prompt: "Use $multi-tenant-saas-architecture to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

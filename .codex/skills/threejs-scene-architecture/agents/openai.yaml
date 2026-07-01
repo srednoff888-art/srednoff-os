@@ -1,0 +1,7 @@
+interface:
+  display_name: "Threejs Scene Architecture"
+  short_description: "3D Web workflow for Threejs Scene Architecture"
+  default_prompt: "Use $threejs-scene-architecture to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

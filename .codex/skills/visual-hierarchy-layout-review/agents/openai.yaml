@@ -1,0 +1,7 @@
+interface:
+  display_name: "Visual Hierarchy Layout Review"
+  short_description: "UI/UX workflow for Visual Hierarchy Layout Review"
+  default_prompt: "Use $visual-hierarchy-layout-review to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

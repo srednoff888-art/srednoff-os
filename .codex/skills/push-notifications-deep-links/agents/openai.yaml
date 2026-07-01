@@ -1,0 +1,7 @@
+interface:
+  display_name: "Push Notifications Deep Links"
+  short_description: "Apps workflow for Push Notifications Deep Links"
+  default_prompt: "Use $push-notifications-deep-links to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

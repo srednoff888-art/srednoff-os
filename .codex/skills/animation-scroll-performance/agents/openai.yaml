@@ -1,0 +1,7 @@
+interface:
+  display_name: "Animation Scroll Performance"
+  short_description: "Web Design workflow for Animation Scroll Performance"
+  default_prompt: "Use $animation-scroll-performance to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

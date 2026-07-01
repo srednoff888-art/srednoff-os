@@ -1,0 +1,7 @@
+interface:
+  display_name: "Content Brief Keyword Map"
+  short_description: "SEO workflow for Content Brief Keyword Map"
+  default_prompt: "Use $content-brief-keyword-map to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

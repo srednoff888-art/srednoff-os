@@ -1,0 +1,7 @@
+interface:
+  display_name: "Spec Driven Development"
+  short_description: "Programming workflow for Spec Driven Development"
+  default_prompt: "Use $spec-driven-development to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,29 @@
+{
+  "name": "Srednoff OS",
+  "version": "v2.1.2",
+  "released_at": "2026-06-30",
+  "baseline": {
+    "kernel_records": 3000,
+    "skill_records": 2220,
+    "agent_records": 780,
+    "domains": 60
+  },
+  "features": [
+    "startup-status-hook",
+    "prompt-secret-preflight",
+    "tool-safety-preflight",
+    "srednoff-os-doctor",
+    "selector-eval-suite",
+    "mcp-trust-inventory",
+    "source-watchlist",
+    "observability-ledger",
+    "duplicate-skill-name-cleanup",
+    "turbo-mode-router",
+    "domain-router",
+    "design-source-registry",
+    "domain-specific-skill-packs",
+    "source-ranking-roi-selector",
+    "design-brief-autogenerator",
+    "selector-legacy-plus-roi-scoring"
+  ]
+}

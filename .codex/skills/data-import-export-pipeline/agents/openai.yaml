@@ -1,0 +1,7 @@
+interface:
+  display_name: "Data Import Export Pipeline"
+  short_description: "Programming workflow for Data Import Export Pipeline"
+  default_prompt: "Use $data-import-export-pipeline to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

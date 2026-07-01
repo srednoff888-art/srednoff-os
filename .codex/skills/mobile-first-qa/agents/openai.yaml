@@ -1,0 +1,7 @@
+interface:
+  display_name: "Mobile First Qa"
+  short_description: "QA workflow for Mobile First Qa"
+  default_prompt: "Use $mobile-first-qa to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

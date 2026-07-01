@@ -1,0 +1,7 @@
+interface:
+  display_name: "iOS Swiftui App Builder"
+  short_description: "Apps workflow for iOS Swiftui App Builder"
+  default_prompt: "Use $ios-swiftui-app-builder to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

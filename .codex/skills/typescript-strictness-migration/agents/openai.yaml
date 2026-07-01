@@ -1,0 +1,7 @@
+interface:
+  display_name: "Typescript Strictness Migration"
+  short_description: "Programming workflow for Typescript Strictness Migration"
+  default_prompt: "Use $typescript-strictness-migration to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

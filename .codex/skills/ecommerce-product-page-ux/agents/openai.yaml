@@ -1,0 +1,7 @@
+interface:
+  display_name: "Ecommerce Product Page UX"
+  short_description: "Web Design workflow for Ecommerce Product Page UX"
+  default_prompt: "Use $ecommerce-product-page-ux to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

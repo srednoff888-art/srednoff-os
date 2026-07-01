@@ -1,0 +1,7 @@
+interface:
+  display_name: "Sitemap Index Sharding"
+  short_description: "SEO workflow for Sitemap Index Sharding"
+  default_prompt: "Use $sitemap-index-sharding to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

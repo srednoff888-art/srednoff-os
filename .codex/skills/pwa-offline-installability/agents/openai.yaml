@@ -1,0 +1,7 @@
+interface:
+  display_name: "PWA Offline Installability"
+  short_description: "Apps workflow for PWA Offline Installability"
+  default_prompt: "Use $pwa-offline-installability to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

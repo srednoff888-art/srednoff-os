@@ -1,0 +1,7 @@
+interface:
+  display_name: "Forms Checkout UX"
+  short_description: "Web Design workflow for Forms Checkout UX"
+  default_prompt: "Use $forms-checkout-ux to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

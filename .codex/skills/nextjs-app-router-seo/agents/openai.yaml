@@ -1,0 +1,7 @@
+interface:
+  display_name: "Nextjs App Router SEO"
+  short_description: "SEO workflow for Nextjs App Router SEO"
+  default_prompt: "Use $nextjs-app-router-seo to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

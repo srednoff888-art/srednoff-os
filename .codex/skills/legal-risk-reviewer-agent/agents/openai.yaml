@@ -1,0 +1,7 @@
+interface:
+  display_name: "Legal Risk Reviewer Agent"
+  short_description: "Specialist agent for Legal Risk Reviewer Agent"
+  default_prompt: "Use $legal-risk-reviewer-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

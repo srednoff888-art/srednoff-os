@@ -1,0 +1,7 @@
+interface:
+  display_name: "Growth Experiment Backlog"
+  short_description: "Growth workflow for Growth Experiment Backlog"
+  default_prompt: "Use $growth-experiment-backlog to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

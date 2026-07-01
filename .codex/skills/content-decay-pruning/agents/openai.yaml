@@ -1,0 +1,7 @@
+interface:
+  display_name: "Content Decay Pruning"
+  short_description: "SEO workflow for Content Decay Pruning"
+  default_prompt: "Use $content-decay-pruning to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

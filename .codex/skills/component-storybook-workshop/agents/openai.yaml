@@ -1,0 +1,7 @@
+interface:
+  display_name: "Component Storybook Workshop"
+  short_description: "Web Design workflow for Component Storybook Workshop"
+  default_prompt: "Use $component-storybook-workshop to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Mobile Asset Budget Audit"
+  short_description: "Mobile workflow for Mobile Asset Budget Audit"
+  default_prompt: "Use $mobile-asset-budget-audit to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

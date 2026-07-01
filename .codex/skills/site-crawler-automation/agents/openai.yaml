@@ -1,0 +1,7 @@
+interface:
+  display_name: "Site Crawler Automation"
+  short_description: "SEO workflow for Site Crawler Automation"
+  default_prompt: "Use $site-crawler-automation to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

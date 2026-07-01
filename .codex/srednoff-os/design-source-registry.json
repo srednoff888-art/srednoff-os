@@ -1,0 +1,177 @@
+{
+  "name": "Srednoff OS design and growth source registry",
+  "version": "v2.1.2",
+  "sources": [
+    {
+      "id": "21st-dev",
+      "name": "21st.dev",
+      "url": "https://21st.dev",
+      "kind": "component-marketplace",
+      "domains": ["ui-ux", "web-design", "3d-web"],
+      "connector": "magic",
+      "risk": "medium",
+      "use_when": ["premium React UI", "modern landing", "animated component", "shadcn/Tailwind project"],
+      "requires_user_prompt": true
+    },
+    {
+      "id": "shadcn-registry",
+      "name": "shadcn/ui registry",
+      "url": "https://ui.shadcn.com/docs/registry",
+      "kind": "component-registry",
+      "domains": ["ui-ux", "web-design", "programming"],
+      "risk": "low",
+      "use_when": ["React", "Next.js", "Tailwind", "Radix", "copy-adapt component workflow"],
+      "requires_user_prompt": false
+    },
+    {
+      "id": "magic-ui",
+      "name": "Magic UI",
+      "url": "https://magicui.design/docs",
+      "kind": "component-library",
+      "domains": ["ui-ux", "web-design"],
+      "risk": "medium",
+      "use_when": ["animated UI", "SaaS landing", "portfolio", "premium visual polish"],
+      "requires_user_prompt": true
+    },
+    {
+      "id": "aceternity-ui",
+      "name": "Aceternity UI",
+      "url": "https://ui.aceternity.com/components",
+      "kind": "component-library",
+      "domains": ["ui-ux", "web-design"],
+      "risk": "medium",
+      "use_when": ["Framer Motion components", "landing page sections", "interactive visual polish"],
+      "requires_user_prompt": true
+    },
+    {
+      "id": "origin-ui",
+      "name": "Origin UI",
+      "url": "https://originui.com",
+      "kind": "component-library",
+      "domains": ["ui-ux", "web-design"],
+      "risk": "medium",
+      "use_when": ["Base UI patterns", "modern blocks", "restrained component library"],
+      "requires_user_prompt": true
+    },
+    {
+      "id": "react-bits",
+      "name": "React Bits",
+      "url": "https://www.reactbits.dev",
+      "kind": "animated-components",
+      "domains": ["ui-ux", "web-design"],
+      "risk": "medium",
+      "use_when": ["animated effects", "visual interactions", "motion details"],
+      "requires_user_prompt": true
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "url": "app://figma",
+      "kind": "design-connector",
+      "domains": ["ui-ux", "mobile-apps", "web-design"],
+      "risk": "medium",
+      "use_when": ["user has design files", "design tokens", "component specs", "visual references"],
+      "requires_user_prompt": true
+    },
+    {
+      "id": "canva",
+      "name": "Canva",
+      "url": "app://canva",
+      "kind": "design-connector",
+      "domains": ["ui-ux", "growth", "marketing"],
+      "risk": "medium",
+      "use_when": ["marketing creative", "presentation", "ad asset", "social visual"],
+      "requires_user_prompt": true
+    },
+    {
+      "id": "threejs",
+      "name": "Three.js",
+      "url": "https://threejs.org",
+      "kind": "3d-library",
+      "domains": ["3d-web"],
+      "risk": "low",
+      "use_when": ["custom WebGL scene", "raw Three.js control", "non-React 3D"],
+      "requires_user_prompt": false
+    },
+    {
+      "id": "react-three-fiber",
+      "name": "React Three Fiber",
+      "url": "https://docs.pmnd.rs/react-three-fiber/getting-started/introduction",
+      "kind": "3d-react-renderer",
+      "domains": ["3d-web", "ui-ux"],
+      "risk": "low",
+      "use_when": ["React app", "interactive 3D UI", "Three.js in React"],
+      "requires_user_prompt": false
+    },
+    {
+      "id": "model-viewer",
+      "name": "model-viewer",
+      "url": "https://modelviewer.dev",
+      "kind": "3d-model-display",
+      "domains": ["3d-web", "ecommerce"],
+      "risk": "low",
+      "use_when": ["lightweight product viewer", "AR preview", "simple glTF display"],
+      "requires_user_prompt": false
+    },
+    {
+      "id": "babylonjs",
+      "name": "Babylon.js",
+      "url": "https://www.babylonjs.com",
+      "kind": "3d-library",
+      "domains": ["3d-web"],
+      "risk": "low",
+      "use_when": ["complex 3D app", "WebGPU path", "viewer tooling", "game-like 3D"],
+      "requires_user_prompt": false
+    },
+    {
+      "id": "gltf-transform",
+      "name": "glTF Transform",
+      "url": "https://gltf-transform.dev",
+      "kind": "3d-asset-optimizer",
+      "domains": ["3d-web"],
+      "risk": "low",
+      "use_when": ["glTF optimization", "GLB compression", "texture transform", "asset pipeline", "Meshopt", "Draco", "KTX2"],
+      "requires_user_prompt": false
+    },
+    {
+      "id": "khronos-gltf-sample-assets",
+      "name": "Khronos glTF Sample Assets",
+      "url": "https://github.com/KhronosGroup/glTF-Sample-Assets",
+      "kind": "3d-sample-assets",
+      "domains": ["3d-web"],
+      "risk": "low",
+      "use_when": ["test model", "sample glTF", "validator fixture", "loader test"],
+      "requires_user_prompt": false
+    },
+    {
+      "id": "poly-haven",
+      "name": "Poly Haven",
+      "url": "https://polyhaven.com",
+      "kind": "3d-asset-library",
+      "domains": ["3d-web", "web-design"],
+      "risk": "medium",
+      "use_when": ["HDRI", "texture", "environment map", "CC0-like asset", "realistic material"],
+      "requires_user_prompt": true
+    },
+    {
+      "id": "ambientcg",
+      "name": "ambientCG",
+      "url": "https://ambientcg.com",
+      "kind": "3d-texture-library",
+      "domains": ["3d-web", "web-design"],
+      "risk": "medium",
+      "use_when": ["PBR material", "texture", "normal map", "roughness", "CC0-like material"],
+      "requires_user_prompt": true
+    },
+    {
+      "id": "sketchfab",
+      "name": "Sketchfab",
+      "url": "https://sketchfab.com",
+      "kind": "3d-asset-marketplace",
+      "domains": ["3d-web", "ecommerce"],
+      "risk": "high",
+      "use_when": ["specific 3D model", "downloadable model", "marketplace asset", "license varies"],
+      "requires_user_prompt": true
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Performance Max Structure"
+  short_description: "PPC workflow for Performance Max Structure"
+  default_prompt: "Use $performance-max-structure to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

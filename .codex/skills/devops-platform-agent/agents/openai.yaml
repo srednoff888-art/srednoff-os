@@ -1,0 +1,7 @@
+interface:
+  display_name: "Devops Platform Agent"
+  short_description: "Specialist agent for Devops Platform Agent"
+  default_prompt: "Use $devops-platform-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

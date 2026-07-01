@@ -1,0 +1,7 @@
+interface:
+  display_name: "Supervisor Orchestrator Agent"
+  short_description: "Specialist agent for Supervisor Orchestrator Agent"
+  default_prompt: "Use $supervisor-orchestrator-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

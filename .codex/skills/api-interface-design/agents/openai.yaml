@@ -1,0 +1,7 @@
+interface:
+  display_name: "API Interface Design"
+  short_description: "Programming workflow for API Interface Design"
+  default_prompt: "Use $api-interface-design to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

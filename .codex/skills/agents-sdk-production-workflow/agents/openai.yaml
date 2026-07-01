@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agents SDK Production"
+  short_description: "Production workflow for OpenAI Agents SDK"
+  default_prompt: "Use $agents-sdk-production-workflow to design a production-ready OpenAI Agents SDK workflow."

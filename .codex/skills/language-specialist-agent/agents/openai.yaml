@@ -1,0 +1,7 @@
+interface:
+  display_name: "Language Specialist Agent"
+  short_description: "Programming workflow for Language Specialist Agent"
+  default_prompt: "Use $language-specialist-agent to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

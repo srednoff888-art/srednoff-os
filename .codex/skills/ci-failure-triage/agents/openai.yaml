@@ -1,0 +1,7 @@
+interface:
+  display_name: "CI Failure Triage"
+  short_description: "Programming workflow for CI Failure Triage"
+  default_prompt: "Use $ci-failure-triage to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

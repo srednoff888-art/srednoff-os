@@ -1,0 +1,7 @@
+interface:
+  display_name: "Storybook Interaction Tests"
+  short_description: "Web Design workflow for Storybook Interaction Tests"
+  default_prompt: "Use $storybook-interaction-tests to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

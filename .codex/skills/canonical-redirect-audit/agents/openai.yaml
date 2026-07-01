@@ -1,0 +1,7 @@
+interface:
+  display_name: "Canonical Redirect Audit"
+  short_description: "SEO workflow for Canonical Redirect Audit"
+  default_prompt: "Use $canonical-redirect-audit to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

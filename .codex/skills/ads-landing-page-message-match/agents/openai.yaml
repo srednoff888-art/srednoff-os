@@ -1,0 +1,7 @@
+interface:
+  display_name: "Ads Landing Page Message Match"
+  short_description: "PPC workflow for Ads Landing Page Message Match"
+  default_prompt: "Use $ads-landing-page-message-match to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

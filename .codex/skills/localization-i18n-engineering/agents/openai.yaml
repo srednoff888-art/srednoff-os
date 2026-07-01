@@ -1,0 +1,7 @@
+interface:
+  display_name: "Localization i18n Engineering"
+  short_description: "Programming workflow for Localization i18n Engineering"
+  default_prompt: "Use $localization-i18n-engineering to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

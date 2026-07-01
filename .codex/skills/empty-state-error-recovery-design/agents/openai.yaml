@@ -1,0 +1,7 @@
+interface:
+  display_name: "Empty State Error Recovery Design"
+  short_description: "Web Design workflow for Empty State Error Recovery Design"
+  default_prompt: "Use $empty-state-error-recovery-design to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

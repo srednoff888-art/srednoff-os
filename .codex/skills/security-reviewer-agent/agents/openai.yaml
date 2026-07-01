@@ -1,0 +1,7 @@
+interface:
+  display_name: "Security Reviewer Agent"
+  short_description: "Agent Profile workflow for Security Reviewer Agent"
+  default_prompt: "Use $security-reviewer-agent to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

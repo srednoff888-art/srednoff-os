@@ -1,0 +1,7 @@
+interface:
+  display_name: "Heuristic Usability Review"
+  short_description: "Web Design workflow for Heuristic Usability Review"
+  default_prompt: "Use $heuristic-usability-review to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Crawl Indexability Sitemaps"
+  short_description: "SEO workflow for Crawl Indexability Sitemaps"
+  default_prompt: "Use $crawl-indexability-sitemaps to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

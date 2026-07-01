@@ -1,0 +1,7 @@
+interface:
+  display_name: "Topical Authority Cluster Builder"
+  short_description: "SEO workflow for Topical Authority Cluster Builder"
+  default_prompt: "Use $topical-authority-cluster-builder to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

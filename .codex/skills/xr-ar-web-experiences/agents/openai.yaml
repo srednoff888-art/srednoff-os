@@ -1,0 +1,7 @@
+interface:
+  display_name: "XR AR Web Experiences"
+  short_description: "3D Web workflow for XR AR Web Experiences"
+  default_prompt: "Use $xr-ar-web-experiences to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

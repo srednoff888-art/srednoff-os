@@ -1,0 +1,7 @@
+interface:
+  display_name: "Auth OAuth Session Architecture"
+  short_description: "Security workflow for Auth OAuth Session Architecture"
+  default_prompt: "Use $auth-oauth-session-architecture to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

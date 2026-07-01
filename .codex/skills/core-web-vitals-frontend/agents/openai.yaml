@@ -1,0 +1,7 @@
+interface:
+  display_name: "Core Web Vitals Frontend"
+  short_description: "SEO workflow for Core Web Vitals Frontend"
+  default_prompt: "Use $core-web-vitals-frontend to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

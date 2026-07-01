@@ -1,0 +1,7 @@
+interface:
+  display_name: "Onboarding Product Tour UX"
+  short_description: "Web Design workflow for Onboarding Product Tour UX"
+  default_prompt: "Use $onboarding-product-tour-ux to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

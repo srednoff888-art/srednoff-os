@@ -1,0 +1,7 @@
+interface:
+  display_name: "3D Art Director Agent"
+  short_description: "3D Web workflow for 3D Art Director Agent"
+  default_prompt: "Use $3d-art-director-agent to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

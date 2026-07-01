@@ -1,0 +1,7 @@
+interface:
+  display_name: "3D Product Configurator"
+  short_description: "3D Web workflow for 3D Product Configurator"
+  default_prompt: "Use $3d-product-configurator to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

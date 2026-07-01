@@ -1,0 +1,7 @@
+interface:
+  display_name: "Brand Art Director Agent"
+  short_description: "Specialist agent for Brand Art Director Agent"
+  default_prompt: "Use $brand-art-director-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

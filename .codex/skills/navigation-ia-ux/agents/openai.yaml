@@ -1,0 +1,7 @@
+interface:
+  display_name: "Navigation Ia UX"
+  short_description: "UI/UX workflow for Navigation Ia UX"
+  default_prompt: "Use $navigation-ia-ux to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

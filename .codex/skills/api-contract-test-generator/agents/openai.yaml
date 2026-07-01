@@ -1,0 +1,7 @@
+interface:
+  display_name: "API Contract Test Generator"
+  short_description: "Programming workflow for API Contract Test Generator"
+  default_prompt: "Use $api-contract-test-generator to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

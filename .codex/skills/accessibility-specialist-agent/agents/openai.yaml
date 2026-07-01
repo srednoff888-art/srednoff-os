@@ -1,0 +1,7 @@
+interface:
+  display_name: "Accessibility Specialist Agent"
+  short_description: "Agent Profile workflow for Accessibility Specialist Agent"
+  default_prompt: "Use $accessibility-specialist-agent to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

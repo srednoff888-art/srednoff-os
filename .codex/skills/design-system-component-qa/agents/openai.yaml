@@ -1,0 +1,7 @@
+interface:
+  display_name: "Design System Component Qa"
+  short_description: "UI/UX workflow for Design System Component Qa"
+  default_prompt: "Use $design-system-component-qa to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Firebase Auth Security Rules"
+  short_description: "Apps workflow for Firebase Auth Security Rules"
+  default_prompt: "Use $firebase-auth-security-rules to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

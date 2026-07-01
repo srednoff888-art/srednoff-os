@@ -1,0 +1,7 @@
+interface:
+  display_name: "3D Interaction Gesture Design"
+  short_description: "3D Web workflow for 3D Interaction Gesture Design"
+  default_prompt: "Use $3d-interaction-gesture-design to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

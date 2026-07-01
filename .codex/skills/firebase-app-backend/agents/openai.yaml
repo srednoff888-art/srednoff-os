@@ -1,0 +1,7 @@
+interface:
+  display_name: "Firebase App Backend"
+  short_description: "Apps workflow for Firebase App Backend"
+  default_prompt: "Use $firebase-app-backend to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

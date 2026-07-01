@@ -1,0 +1,7 @@
+interface:
+  display_name: "Astro Islands SEO"
+  short_description: "SEO workflow for Astro Islands SEO"
+  default_prompt: "Use $astro-islands-seo to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

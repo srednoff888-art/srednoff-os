@@ -1,0 +1,7 @@
+interface:
+  display_name: "Swiftui State Data Flow"
+  short_description: "Apps workflow for Swiftui State Data Flow"
+  default_prompt: "Use $swiftui-state-data-flow to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

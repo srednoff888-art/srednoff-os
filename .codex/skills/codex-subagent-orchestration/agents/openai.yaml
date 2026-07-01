@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Subagent Orchestration"
+  short_description: "Design bounded Codex subagent workflows"
+  default_prompt: "Use $codex-subagent-orchestration to design a bounded Codex subagent workflow with clear responsibilities and safety gates."

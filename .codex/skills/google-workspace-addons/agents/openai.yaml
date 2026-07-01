@@ -1,0 +1,7 @@
+interface:
+  display_name: "Google Workspace Addons"
+  short_description: "Apps workflow for Google Workspace Addons"
+  default_prompt: "Use $google-workspace-addons to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

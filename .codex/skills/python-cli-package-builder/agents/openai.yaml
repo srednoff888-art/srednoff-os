@@ -1,0 +1,7 @@
+interface:
+  display_name: "Python Cli Package Builder"
+  short_description: "Programming workflow for Python Cli Package Builder"
+  default_prompt: "Use $python-cli-package-builder to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Responsive Layout System"
+  short_description: "Web Design workflow for Responsive Layout System"
+  default_prompt: "Use $responsive-layout-system to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

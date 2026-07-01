@@ -1,0 +1,7 @@
+interface:
+  display_name: "Realtime Websockets SSE"
+  short_description: "Programming workflow for Realtime Websockets SSE"
+  default_prompt: "Use $realtime-websockets-sse to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "PPC Budget Bid Optimizer"
+  short_description: "PPC workflow for PPC Budget Bid Optimizer"
+  default_prompt: "Use $ppc-budget-bid-optimizer to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Tokenomics Whitepaper Review"
+  short_description: "Crypto workflow for Tokenomics Whitepaper Review"
+  default_prompt: "Use $tokenomics-whitepaper-review to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

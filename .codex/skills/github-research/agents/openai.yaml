@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Research"
+  short_description: "Compare OSS patterns before non-trivial changes"
+  default_prompt: "Use $github-research to compare open-source implementations before choosing an approach."

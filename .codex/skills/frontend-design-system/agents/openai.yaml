@@ -1,0 +1,7 @@
+interface:
+  display_name: "Frontend Design System"
+  short_description: "Web Design workflow for Frontend Design System"
+  default_prompt: "Use $frontend-design-system to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Ecommerce Faceted Navigation SEO"
+  short_description: "SEO workflow for Ecommerce Faceted Navigation SEO"
+  default_prompt: "Use $ecommerce-faceted-navigation-seo to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Dark Mode Theme System"
+  short_description: "Web Design workflow for Dark Mode Theme System"
+  default_prompt: "Use $dark-mode-theme-system to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

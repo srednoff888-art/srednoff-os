@@ -1,0 +1,7 @@
+interface:
+  display_name: "Crawler Analyst Agent"
+  short_description: "Agent Profile workflow for Crawler Analyst Agent"
+  default_prompt: "Use $crawler-analyst-agent to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

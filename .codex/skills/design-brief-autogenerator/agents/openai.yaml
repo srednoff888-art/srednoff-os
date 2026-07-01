@@ -1,0 +1,7 @@
+interface:
+  display_name: "Design Brief Autogenerator"
+  short_description: "Generate compact UI/UX and 3D briefs with only high-value questions."
+  default_prompt: "Use $design-brief-autogenerator to create a compact UI/UX or 3D design brief before implementation."
+
+policy:
+  allow_implicit_invocation: true

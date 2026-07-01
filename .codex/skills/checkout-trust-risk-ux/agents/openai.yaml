@@ -1,0 +1,7 @@
+interface:
+  display_name: "Checkout Trust Risk UX"
+  short_description: "Web Design workflow for Checkout Trust Risk UX"
+  default_prompt: "Use $checkout-trust-risk-ux to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

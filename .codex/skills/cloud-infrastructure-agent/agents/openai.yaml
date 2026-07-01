@@ -1,0 +1,7 @@
+interface:
+  display_name: "Cloud Infrastructure Agent"
+  short_description: "Specialist agent for Cloud Infrastructure Agent"
+  default_prompt: "Use $cloud-infrastructure-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,4 @@
+interface:
+  display_name: "MCP Security Review"
+  short_description: "Audit MCP server and tool safety"
+  default_prompt: "Use $mcp-security-review to audit an MCP server, connector, or tool workflow for security risks."

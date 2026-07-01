@@ -1,0 +1,7 @@
+interface:
+  display_name: "Javascript SEO Rendering"
+  short_description: "SEO workflow for Javascript SEO Rendering"
+  default_prompt: "Use $javascript-seo-rendering to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

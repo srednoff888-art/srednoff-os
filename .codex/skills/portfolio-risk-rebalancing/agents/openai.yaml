@@ -1,0 +1,7 @@
+interface:
+  display_name: "Portfolio Risk Rebalancing"
+  short_description: "Crypto workflow for Portfolio Risk Rebalancing"
+  default_prompt: "Use $portfolio-risk-rebalancing to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

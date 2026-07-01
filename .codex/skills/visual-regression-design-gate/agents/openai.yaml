@@ -1,0 +1,7 @@
+interface:
+  display_name: "Visual Regression Design Gate"
+  short_description: "UI/UX workflow for Visual Regression Design Gate"
+  default_prompt: "Use $visual-regression-design-gate to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

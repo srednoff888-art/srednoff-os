@@ -1,0 +1,68 @@
+[
+  {
+    "id": "agent_hooks_evals",
+    "brief": "Codex hooks agents evals prompt secret scanner selector regression suite",
+    "budget": "deep",
+    "expectedAny": [
+      "agents-sdk-production-workflow",
+      "observability-instrumentation",
+      "ai-llm-agents-rag"
+    ]
+  },
+  {
+    "id": "technical_seo",
+    "brief": "technical SEO crawl sitemap robots hreflang canonical structured data audit",
+    "budget": "deep",
+    "expectedAny": [
+      "seo",
+      "seo-technical-content",
+      "technical-seo-audit"
+    ]
+  },
+  {
+    "id": "three_d_web",
+    "brief": "three.js webgl webgpu 3d product configurator lighting camera performance",
+    "budget": "balanced",
+    "expectedAny": [
+      "three",
+      "three-d-web-xr-graphics",
+      "threejs-scene-architecture"
+    ]
+  },
+  {
+    "id": "mcp_security",
+    "brief": "MCP connector security review OAuth scopes tool permissions prompt injection",
+    "budget": "deep",
+    "expectedAny": [
+      "mcp-security-review",
+      "security-appsec",
+      "prompt-injection-defense"
+    ]
+  },
+  {
+    "id": "mobile_release",
+    "brief": "ios android expo mobile app store release crash analytics ci cd e2e tests",
+    "budget": "balanced",
+    "expectedAny": [
+      "mobile",
+      "react-native-expo-app-builder",
+      "app-store"
+    ]
+  },
+  {
+    "id": "record_replay_skill_mining",
+    "brief": "Codex Record Replay repeated workflow convert demonstration into reusable skill eval hook automation memory",
+    "budget": "deep",
+    "expectedAny": [
+      "record-replay-skill-miner"
+    ]
+  },
+  {
+    "id": "codex_subagent_orchestration",
+    "brief": "Codex subagents custom agents reviewer explorer context contract sandbox tool limits merge protocol",
+    "budget": "deep",
+    "expectedAny": [
+      "codex-subagent-orchestration"
+    ]
+  }
+]

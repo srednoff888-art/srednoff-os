@@ -1,0 +1,7 @@
+interface:
+  display_name: "Secrets Env Rotation"
+  short_description: "Security workflow for Secrets Env Rotation"
+  default_prompt: "Use $secrets-env-rotation to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

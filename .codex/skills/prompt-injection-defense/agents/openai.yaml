@@ -1,0 +1,7 @@
+interface:
+  display_name: "Prompt Injection Defense"
+  short_description: "AI Security workflow for Prompt Injection Defense"
+  default_prompt: "Use $prompt-injection-defense to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

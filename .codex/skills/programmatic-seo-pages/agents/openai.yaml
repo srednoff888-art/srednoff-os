@@ -1,0 +1,7 @@
+interface:
+  display_name: "Programmatic SEO Pages"
+  short_description: "SEO workflow for Programmatic SEO Pages"
+  default_prompt: "Use $programmatic-seo-pages to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Brand Theme Factory"
+  short_description: "Web Design workflow for Brand Theme Factory"
+  default_prompt: "Use $brand-theme-factory to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

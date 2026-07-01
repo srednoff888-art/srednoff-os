@@ -1,0 +1,7 @@
+interface:
+  display_name: "Release Notes Changelog Automation"
+  short_description: "Programming workflow for Release Notes Changelog Automation"
+  default_prompt: "Use $release-notes-changelog-automation to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Interaction State Matrix"
+  short_description: "UI/UX workflow for Interaction State Matrix"
+  default_prompt: "Use $interaction-state-matrix to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

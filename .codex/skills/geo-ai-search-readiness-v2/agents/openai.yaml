@@ -1,0 +1,7 @@
+interface:
+  display_name: "Geo Ai Search Readiness V2"
+  short_description: "Growth workflow for Geo Ai Search Readiness V2"
+  default_prompt: "Use $geo-ai-search-readiness-v2 to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "AI Evals Regression Suite"
+  short_description: "AI Engineering workflow for AI Evals Regression Suite"
+  default_prompt: "Use $ai-evals-regression-suite to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

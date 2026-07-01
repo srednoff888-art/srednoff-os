@@ -1,0 +1,7 @@
+interface:
+  display_name: "Entity Knowledge Graph SEO"
+  short_description: "SEO workflow for Entity Knowledge Graph SEO"
+  default_prompt: "Use $entity-knowledge-graph-seo to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

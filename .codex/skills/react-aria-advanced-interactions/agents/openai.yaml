@@ -1,0 +1,7 @@
+interface:
+  display_name: "React Aria Advanced Interactions"
+  short_description: "Web Design workflow for React Aria Advanced Interactions"
+  default_prompt: "Use $react-aria-advanced-interactions to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

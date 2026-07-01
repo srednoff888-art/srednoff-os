@@ -1,0 +1,7 @@
+interface:
+  display_name: "SEO Migration Redirects"
+  short_description: "SEO workflow for SEO Migration Redirects"
+  default_prompt: "Use $seo-migration-redirects to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

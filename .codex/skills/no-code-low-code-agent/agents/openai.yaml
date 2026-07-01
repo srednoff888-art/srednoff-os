@@ -1,0 +1,7 @@
+interface:
+  display_name: "No Code Low Code Agent"
+  short_description: "Specialist agent for No Code Low Code Agent"
+  default_prompt: "Use $no-code-low-code-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

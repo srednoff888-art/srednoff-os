@@ -1,0 +1,7 @@
+interface:
+  display_name: "Keyword Query Negative Mining"
+  short_description: "PPC workflow for Keyword Query Negative Mining"
+  default_prompt: "Use $keyword-query-negative-mining to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

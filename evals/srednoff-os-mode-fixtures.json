@@ -1,0 +1,22 @@
+[
+  {
+    "id": "turbo_exact",
+    "brief": "TURBO",
+    "expectedMode": "turbo"
+  },
+  {
+    "id": "turbo_russian",
+    "brief": "включи TURBO для UI лендинга",
+    "expectedMode": "turbo"
+  },
+  {
+    "id": "quality_not_turbo",
+    "brief": "сделай максимально качественно и не экономь токены",
+    "expectedMode": "deep"
+  },
+  {
+    "id": "normal_small_fix",
+    "brief": "исправь опечатку в кнопке",
+    "expectedMode": "normal"
+  }
+]

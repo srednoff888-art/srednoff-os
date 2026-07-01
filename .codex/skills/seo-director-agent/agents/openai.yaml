@@ -1,0 +1,7 @@
+interface:
+  display_name: "SEO Director Agent"
+  short_description: "Agent Profile workflow for SEO Director Agent"
+  default_prompt: "Use $seo-director-agent to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

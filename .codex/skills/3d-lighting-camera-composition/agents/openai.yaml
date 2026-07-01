@@ -1,0 +1,7 @@
+interface:
+  display_name: "3D Lighting Camera Composition"
+  short_description: "3D Web workflow for 3D Lighting Camera Composition"
+  default_prompt: "Use $3d-lighting-camera-composition to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Mutation Testing Strategy"
+  short_description: "Programming workflow for Mutation Testing Strategy"
+  default_prompt: "Use $mutation-testing-strategy to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

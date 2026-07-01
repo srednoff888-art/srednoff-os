@@ -1,0 +1,7 @@
+interface:
+  display_name: "RAG Evaluation Agent"
+  short_description: "Specialist agent for RAG Evaluation Agent"
+  default_prompt: "Use $rag-evaluation-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

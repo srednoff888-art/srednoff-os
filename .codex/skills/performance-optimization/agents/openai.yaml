@@ -1,0 +1,7 @@
+interface:
+  display_name: "Performance Optimization"
+  short_description: "Programming workflow for Performance Optimization"
+  default_prompt: "Use $performance-optimization to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

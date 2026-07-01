@@ -1,0 +1,7 @@
+interface:
+  display_name: "Fuzzing Security Tests"
+  short_description: "Security workflow for Fuzzing Security Tests"
+  default_prompt: "Use $fuzzing-security-tests to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

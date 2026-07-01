@@ -1,0 +1,7 @@
+interface:
+  display_name: "Ads Reporting Roas Dashboard"
+  short_description: "PPC workflow for Ads Reporting Roas Dashboard"
+  default_prompt: "Use $ads-reporting-roas-dashboard to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Gltf Asset Pipeline"
+  short_description: "3D Web workflow for Gltf Asset Pipeline"
+  default_prompt: "Use $gltf-asset-pipeline to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Dashboard UX Information Density"
+  short_description: "UI/UX workflow for Dashboard UX Information Density"
+  default_prompt: "Use $dashboard-ux-information-density to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

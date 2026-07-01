@@ -1,0 +1,7 @@
+interface:
+  display_name: "Dependency Minimalism Gate"
+  short_description: "Programming workflow for Dependency Minimalism Gate"
+  default_prompt: "Use $dependency-minimalism-gate to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

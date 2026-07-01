@@ -1,0 +1,7 @@
+interface:
+  display_name: "Source Ranking ROI Selector"
+  short_description: "Rank UI, design, and 3D sources by fit, risk, cost, and ROI."
+  default_prompt: "Use $source-ranking-roi-selector to rank sources before choosing UI kits, design connectors, 3D libraries, or assets."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Robots X-Robots Meta Controls"
+  short_description: "SEO workflow for Robots X-Robots Meta Controls"
+  default_prompt: "Use $robots-xrobots-meta-controls to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

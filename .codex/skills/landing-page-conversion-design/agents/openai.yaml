@@ -1,0 +1,7 @@
+interface:
+  display_name: "Landing Page Conversion Design"
+  short_description: "Marketing workflow for Landing Page Conversion Design"
+  default_prompt: "Use $landing-page-conversion-design to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

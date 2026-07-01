@@ -1,0 +1,7 @@
+interface:
+  display_name: "Meta Ads Creative Testing"
+  short_description: "PPC workflow for Meta Ads Creative Testing"
+  default_prompt: "Use $meta-ads-creative-testing to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

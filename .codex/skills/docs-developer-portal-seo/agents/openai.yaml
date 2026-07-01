@@ -1,0 +1,7 @@
+interface:
+  display_name: "Docs Developer Portal SEO"
+  short_description: "SEO workflow for Docs Developer Portal SEO"
+  default_prompt: "Use $docs-developer-portal-seo to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

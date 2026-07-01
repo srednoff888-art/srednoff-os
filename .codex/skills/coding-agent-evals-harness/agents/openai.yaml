@@ -1,0 +1,4 @@
+interface:
+  display_name: "Coding Agent Evals Harness"
+  short_description: "Design coding-agent benchmark checks"
+  default_prompt: "Use $coding-agent-evals-harness to design a regression harness for coding-agent workflows."

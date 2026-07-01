@@ -1,0 +1,7 @@
+interface:
+  display_name: "Serp Feature Rich Result Planner"
+  short_description: "SEO workflow for Serp Feature Rich Result Planner"
+  default_prompt: "Use $serp-feature-rich-result-planner to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

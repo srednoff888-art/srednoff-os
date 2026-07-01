@@ -1,0 +1,7 @@
+interface:
+  display_name: "Turbo Source Benchmark"
+  short_description: "TURBO workflow for Turbo Source Benchmark"
+  default_prompt: "Use $turbo-source-benchmark to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

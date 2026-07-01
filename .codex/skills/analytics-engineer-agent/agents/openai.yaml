@@ -1,0 +1,7 @@
+interface:
+  display_name: "Analytics Engineer Agent"
+  short_description: "Specialist agent for Analytics Engineer Agent"
+  default_prompt: "Use $analytics-engineer-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Language Runtime Router"
+  short_description: "Programming workflow for Language Runtime Router"
+  default_prompt: "Use $language-runtime-router to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true

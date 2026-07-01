@@ -1,0 +1,7 @@
+interface:
+  display_name: "Mobile App Permissions Privacy"
+  short_description: "Apps workflow for Mobile App Permissions Privacy"
+  default_prompt: "Use $mobile-app-permissions-privacy to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "SEO CI Quality Gate"
+  short_description: "SEO workflow for SEO CI Quality Gate"
+  default_prompt: "Use $seo-ci-quality-gate to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

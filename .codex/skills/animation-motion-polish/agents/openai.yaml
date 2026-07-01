@@ -1,0 +1,7 @@
+interface:
+  display_name: "Animation Motion Polish"
+  short_description: "Web Design workflow for Animation Motion Polish"
+  default_prompt: "Use $animation-motion-polish to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

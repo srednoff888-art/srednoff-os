@@ -1,0 +1,7 @@
+interface:
+  display_name: "Principal Architect Agent"
+  short_description: "Agent Profile workflow for Principal Architect Agent"
+  default_prompt: "Use $principal-architect-agent to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Prompt Security Agent"
+  short_description: "Specialist agent for Prompt Security Agent"
+  default_prompt: "Use $prompt-security-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

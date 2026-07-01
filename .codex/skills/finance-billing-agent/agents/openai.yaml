@@ -1,0 +1,7 @@
+interface:
+  display_name: "Finance Billing Agent"
+  short_description: "Specialist agent for Finance Billing Agent"
+  default_prompt: "Use $finance-billing-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

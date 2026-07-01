@@ -1,0 +1,7 @@
+interface:
+  display_name: "Web Rendering Edge SSR SEO"
+  short_description: "SEO workflow for Web Rendering Edge SSR SEO"
+  default_prompt: "Use $web-rendering-edge-ssr-seo to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

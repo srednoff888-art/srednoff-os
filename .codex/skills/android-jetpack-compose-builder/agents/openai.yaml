@@ -1,0 +1,7 @@
+interface:
+  display_name: "Android Jetpack Compose Builder"
+  short_description: "Apps workflow for Android Jetpack Compose Builder"
+  default_prompt: "Use $android-jetpack-compose-builder to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

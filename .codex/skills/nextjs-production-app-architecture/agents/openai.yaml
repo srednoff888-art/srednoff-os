@@ -1,0 +1,7 @@
+interface:
+  display_name: "Nextjs Production App Architecture"
+  short_description: "Apps workflow for Nextjs Production App Architecture"
+  default_prompt: "Use $nextjs-production-app-architecture to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

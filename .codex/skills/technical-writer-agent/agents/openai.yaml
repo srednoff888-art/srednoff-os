@@ -1,0 +1,7 @@
+interface:
+  display_name: "Technical Writer Agent"
+  short_description: "Specialist agent for Technical Writer Agent"
+  default_prompt: "Use $technical-writer-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

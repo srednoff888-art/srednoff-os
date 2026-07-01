@@ -1,0 +1,4 @@
+interface:
+  display_name: "Quality Cost Kernel"
+  short_description: "Token-aware routing for skills and agents"
+  default_prompt: "Use $quality-cost-skill-kernel to select the smallest high-value skill and agent set for this project."

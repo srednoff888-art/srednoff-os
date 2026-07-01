@@ -1,0 +1,7 @@
+interface:
+  display_name: "Pricing Onboarding UX"
+  short_description: "UI/UX workflow for Pricing Onboarding UX"
+  default_prompt: "Use $pricing-onboarding-ux to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

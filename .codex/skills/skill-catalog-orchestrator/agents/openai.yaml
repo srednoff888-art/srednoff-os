@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Catalog Orchestrator"
+  short_description: "Route tasks across large Codex skill catalogs"
+  default_prompt: "Use $skill-catalog-orchestrator to select the right skills and agents for a complex task."

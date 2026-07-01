@@ -1,0 +1,7 @@
+interface:
+  display_name: "CMS Editorial Layouts"
+  short_description: "Web Design workflow for CMS Editorial Layouts"
+  default_prompt: "Use $cms-editorial-layouts to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

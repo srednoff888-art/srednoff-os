@@ -1,0 +1,7 @@
+interface:
+  display_name: "Search Console GA4 Diagnostics"
+  short_description: "SEO workflow for Search Console GA4 Diagnostics"
+  default_prompt: "Use $search-console-ga4-diagnostics to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

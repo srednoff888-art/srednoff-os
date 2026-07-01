@@ -1,0 +1,7 @@
+interface:
+  display_name: "Codebase Archaeologist Agent"
+  short_description: "Specialist agent for Codebase Archaeologist Agent"
+  default_prompt: "Use $codebase-archaeologist-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

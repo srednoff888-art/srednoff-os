@@ -1,0 +1,7 @@
+interface:
+  display_name: "iOS Reviewer Agent"
+  short_description: "Specialist agent for iOS Reviewer Agent"
+  default_prompt: "Use $ios-reviewer-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

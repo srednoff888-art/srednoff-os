@@ -1,0 +1,7 @@
+interface:
+  display_name: "Google Ads Account Audit"
+  short_description: "PPC workflow for Google Ads Account Audit"
+  default_prompt: "Use $google-ads-account-audit to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "SRE Incident Commander Agent"
+  short_description: "Specialist agent for SRE Incident Commander Agent"
+  default_prompt: "Use $sre-incident-commander-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

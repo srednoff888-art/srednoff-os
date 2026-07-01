@@ -1,0 +1,7 @@
+interface:
+  display_name: "Shader Material Design"
+  short_description: "3D Web workflow for Shader Material Design"
+  default_prompt: "Use $shader-material-design to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

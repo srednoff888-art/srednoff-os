@@ -1,0 +1,7 @@
+interface:
+  display_name: "Node Package Release Engineering"
+  short_description: "Programming workflow for Node Package Release Engineering"
+  default_prompt: "Use $node-package-release-engineering to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

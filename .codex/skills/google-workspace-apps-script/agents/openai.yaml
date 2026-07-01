@@ -1,0 +1,7 @@
+interface:
+  display_name: "Google Workspace Apps Script"
+  short_description: "Apps workflow for Google Workspace Apps Script"
+  default_prompt: "Use $google-workspace-apps-script to handle this task with a production-ready workflow."
+
+policy:
+  allow_implicit_invocation: true

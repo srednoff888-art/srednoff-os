@@ -1,0 +1,7 @@
+interface:
+  display_name: "Migration Lead Agent"
+  short_description: "Specialist agent for Migration Lead Agent"
+  default_prompt: "Use $migration-lead-agent to review this task from a specialist agent perspective."
+
+policy:
+  allow_implicit_invocation: true

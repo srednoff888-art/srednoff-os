@@ -1,0 +1,7 @@
+interface:
+  display_name: "Turbo Validation Gate"
+  short_description: "TURBO workflow for Turbo Validation Gate"
+  default_prompt: "Use $turbo-validation-gate to handle this task with Srednoff OS v2.1.1."
+
+policy:
+  allow_implicit_invocation: true
