@@ -2,8 +2,8 @@
 set -euo pipefail
 
 timestamp="$(date +%Y%m%d-%H%M%S)"
-script_dir="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)"
-package_root="$(CDPATH= cd -- "$script_dir/.." && pwd -P)"
+script_dir="$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd -P)"
+package_root="$(CDPATH='' cd -- "$script_dir/.." && pwd -P)"
 codex_home="${CODEX_HOME:-$HOME/.codex}"
 template_dir="$codex_home/templates/codex-md-os"
 

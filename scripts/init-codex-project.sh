@@ -2,8 +2,8 @@
 set -euo pipefail
 
 timestamp="$(date +%Y%m%d-%H%M%S)"
-script_dir="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)"
-local_package_root="$(CDPATH= cd -- "$script_dir/.." && pwd -P)"
+script_dir="$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd -P)"
+local_package_root="$(CDPATH='' cd -- "$script_dir/.." && pwd -P)"
 codex_home="${CODEX_HOME:-$HOME/.codex}"
 global_template_dir="$codex_home/templates/codex-md-os"
 
@@ -27,12 +27,12 @@ find_powershell() {
 
 target_input="${1:-.}"
 mkdir -p "$target_input"
-target_dir="$(CDPATH= cd -- "$target_input" && pwd -P)"
+target_dir="$(CDPATH='' cd -- "$target_input" && pwd -P)"
 project_dir="$target_dir"
 
 if git_root="$(git -C "$target_dir" rev-parse --show-toplevel 2>/dev/null)"; then
-  git_root="$(CDPATH= cd -- "$git_root" && pwd -P)"
-  home_dir="$(CDPATH= cd -- "$HOME" && pwd -P)"
+  git_root="$(CDPATH='' cd -- "$git_root" && pwd -P)"
+  home_dir="$(CDPATH='' cd -- "$HOME" && pwd -P)"
   case "$git_root" in
     "$home_dir"|/|[A-Za-z]:/)
       printf 'warning: git root resolved to %s; using requested directory %s instead\n' "$git_root" "$target_dir"

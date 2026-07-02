@@ -53,11 +53,17 @@ foreach ($Fixture in $Domains) {
     $Results += Add-Result -Id ("domain:" + $Fixture.id) -Passed ($Missing.Count -eq 0) -Detail "expected=$($Fixture.expectedDomains -join ','); actual=$($Out.domains -join ','); missing=$($Missing -join ',')"
 }
 
-$Inventory = & $InventoryScript -Json | ConvertFrom-Json
-$FalseEnvServers = @($Inventory.items | Where-Object { $_.kind -eq "mcp_server" -and $_.name -match '\.env$' })
-$Magic = @($Inventory.items | Where-Object { $_.kind -eq "mcp_server" -and $_.name -eq "magic" })
-$Results += Add-Result -Id "mcp:no-env-server" -Passed ($FalseEnvServers.Count -eq 0) -Detail "false_env_servers=$($FalseEnvServers.Count)"
-$Results += Add-Result -Id "mcp:magic-env" -Passed ($Magic.Count -eq 1 -and [bool]$Magic[0].has_env) -Detail "magic_count=$($Magic.Count); magic_has_env=$([bool]$Magic[0].has_env)"
+$ConfigPath = Join-Path $CodexHome "config.toml"
+if (Test-Path -LiteralPath $ConfigPath -PathType Leaf) {
+    $Inventory = & $InventoryScript -Json | ConvertFrom-Json
+    $FalseEnvServers = @($Inventory.items | Where-Object { $_.kind -eq "mcp_server" -and $_.name -match '\.env$' })
+    $Magic = @($Inventory.items | Where-Object { $_.kind -eq "mcp_server" -and $_.name -eq "magic" })
+    $Results += Add-Result -Id "mcp:no-env-server" -Passed ($FalseEnvServers.Count -eq 0) -Detail "false_env_servers=$($FalseEnvServers.Count)"
+    $Results += Add-Result -Id "mcp:magic-env" -Passed ($Magic.Count -eq 1 -and [bool]$Magic[0].has_env) -Detail "magic_count=$($Magic.Count); magic_has_env=$([bool]$Magic[0].has_env)"
+} else {
+    $Results += Add-Result -Id "mcp:no-env-server" -Passed $true -Detail "skipped: config.toml not present in this runner"
+    $Results += Add-Result -Id "mcp:magic-env" -Passed $true -Detail "skipped: config.toml not present in this runner"
+}
 
 $Danger = '{"cwd":"C:\\Users\\Ivan\\Documents\\Codex\\2026-06-28\\new-chat","tool_name":"shell_command","tool_input":{"command":"git reset --hard"}}'
 $DangerOut = $Danger | powershell -NoProfile -ExecutionPolicy Bypass -File $HookScript -Mode PreToolUse | Out-String
