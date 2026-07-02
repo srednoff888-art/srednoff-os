@@ -112,7 +112,7 @@ flowchart LR
 | `.codex/skills/` | 306 skill directories and agent profiles |
 | `.codex/srednoff-os/` | Version metadata, source registry, source watchlist |
 | `scripts/` | Install, sync, status, doctor, selector, router, brief, ranking, validation |
-| `evals/` | Regression fixtures for selectors and routers |
+| `evals/` | Regression fixtures for selectors, routers, source ranking, and hook security checks |
 | `hooks.example.json` | Portable hook example without private local state |
 
 ## Best For
@@ -155,7 +155,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Quality Status
 
-Current local smoke status is tracked in [QUALITY.md](QUALITY.md). The selector and routing checks are intentionally lightweight so they can run before publishing changes.
+Current local smoke status is tracked in [QUALITY.md](QUALITY.md). Pull requests and pushes run GitHub Actions CI for PowerShell parsing, ShellCheck, kernel validation, source registry provenance, and regression evals.
 
 ## License
 

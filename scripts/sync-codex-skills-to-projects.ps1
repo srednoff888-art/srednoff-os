@@ -6,6 +6,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 $Timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
+$TemplateRoot = if (Test-Path -LiteralPath $TemplateRoot -PathType Container) { (Resolve-Path -LiteralPath $TemplateRoot).Path } else { $TemplateRoot }
 $SourceSkills = Join-Path $TemplateRoot ".codex\skills"
 $SourceSrednoff = Join-Path $TemplateRoot ".codex\srednoff-os"
 $SourceScripts = Join-Path $TemplateRoot "scripts"
@@ -20,6 +21,9 @@ function Resolve-ProjectRoot {
 
     New-Item -ItemType Directory -Force -Path $Path | Out-Null
     $Resolved = (Resolve-Path $Path).Path
+    if (Test-Path -LiteralPath (Join-Path $Resolved "AGENTS.md") -PathType Leaf) {
+        return $Resolved
+    }
 
     try {
         $GitRootRaw = git -C $Resolved rev-parse --show-toplevel 2>$null
@@ -86,11 +90,11 @@ foreach ($Project in $ProjectPath) {
     }
 
     foreach ($File in $Files) {
-        $Base = if ($File.FullName.StartsWith($SourceSkills)) {
+        $Base = if ($File.FullName.StartsWith($SourceSkills, [System.StringComparison]::OrdinalIgnoreCase)) {
             $SourceSkills
-        } elseif ($File.FullName.StartsWith($SourceSrednoff)) {
+        } elseif ($File.FullName.StartsWith($SourceSrednoff, [System.StringComparison]::OrdinalIgnoreCase)) {
             $SourceSrednoff
-        } elseif ($File.FullName.StartsWith($SourceEvals)) {
+        } elseif ($File.FullName.StartsWith($SourceEvals, [System.StringComparison]::OrdinalIgnoreCase)) {
             $SourceEvals
         } else {
             $SourceScripts
@@ -119,7 +123,7 @@ foreach ($Project in $ProjectPath) {
         if (Test-Path -LiteralPath $ProjectSkillIndex -PathType Leaf) {
             Copy-Item -LiteralPath $ProjectSkillIndex -Destination "$ProjectSkillIndex.bak.$Timestamp" -Force
         }
-        powershell -NoProfile -ExecutionPolicy Bypass -File $SkillIndexScript -SkillsRoot $ProjectSkillsRoot -OutputPath $ProjectSkillIndex -RelativePaths -RelativeBase $Root | Out-Host
+        & $SkillIndexScript -SkillsRoot $ProjectSkillsRoot -OutputPath $ProjectSkillIndex -RelativePaths -RelativeBase $Root | Out-Host
     }
 }
 

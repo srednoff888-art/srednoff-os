@@ -32,7 +32,7 @@ $Results = @()
 
 foreach ($Fixture in $Fixtures) {
     $Budget = if ($Fixture.budget) { [string]$Fixture.budget } else { "balanced" }
-    $Output = & powershell -NoProfile -ExecutionPolicy Bypass -File $Selector -ProjectPath $ProjectPath -Brief ([string]$Fixture.brief) -Budget $Budget -Max $Max -Format compact 2>&1
+    $Output = & $Selector -ProjectPath $ProjectPath -Brief ([string]$Fixture.brief) -Budget $Budget -Max $Max -Format compact 2>&1
     $Text = ($Output | Out-String)
     $HitList = @()
     $ExpectedAny = if ($Fixture.PSObject.Properties.Name -contains "expectedAny") { @($Fixture.expectedAny) } else { @() }

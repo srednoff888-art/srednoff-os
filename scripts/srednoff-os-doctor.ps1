@@ -12,6 +12,9 @@ $PackageRootPath = Resolve-Path -LiteralPath (Join-Path $ScriptDir "..") -ErrorA
 $PackageRoot = if ($PackageRootPath) { $PackageRootPath.Path } else { "" }
 $CodexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME ".codex" }
 $ProjectRoot = if (Test-Path -LiteralPath $ProjectPath) { (Resolve-Path -LiteralPath $ProjectPath).Path } else { $ProjectPath }
+$ExpectedKernelRecords = 4500
+$ExpectedSkillRecords = 3300
+$ExpectedAgentRecords = 1200
 
 $Checks = New-Object System.Collections.Generic.List[object]
 
@@ -79,15 +82,22 @@ if (Test-Path -LiteralPath $StatusScript -PathType Leaf) {
 
 $VersionFile = Resolve-LocalOrHome ".codex\srednoff-os\version.json" "srednoff-os\version.json" "Leaf"
 if (Test-JsonFile -Path $VersionFile) {
-    $Version = (Get-Content -LiteralPath $VersionFile -Raw -Encoding UTF8 | ConvertFrom-Json).version
-    Add-Check -Name "version" -Status ($(if ($Version -eq "v2.1.2") { "OK" } else { "WARN" })) -Detail "version=$Version"
+    $VersionManifest = Get-Content -LiteralPath $VersionFile -Raw -Encoding UTF8 | ConvertFrom-Json
+    $Version = $VersionManifest.version
+    $Baseline = $VersionManifest.baseline
+    $BaselineOk = (
+        [int]$Baseline.kernel_records -eq $ExpectedKernelRecords -and
+        [int]$Baseline.skill_records -eq $ExpectedSkillRecords -and
+        [int]$Baseline.agent_records -eq $ExpectedAgentRecords
+    )
+    $VersionOk = $Version -eq "v2.1.2" -and $BaselineOk
+    Add-Check -Name "version" -Status ($(if ($VersionOk) { "OK" } else { "WARN" })) -Detail "version=$Version; kernel_records=$($Baseline.kernel_records); skill_records=$($Baseline.skill_records); agent_records=$($Baseline.agent_records)"
 } else {
     Add-Check -Name "version" -Status "FAIL" -Detail "Missing or invalid version manifest"
 }
 
 $Kernel = Resolve-LocalOrHome ".codex\skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "Leaf"
 $KernelCount = Count-JsonArray -Path $Kernel
-$ExpectedKernelRecords = 4500
 Add-Check -Name "kernel" -Status ($(if ($KernelCount -eq $ExpectedKernelRecords) { "OK" } else { "FAIL" })) -Detail "records=$KernelCount expected=$ExpectedKernelRecords" -Fix "Run validate-quality-cost-kernel.ps1 -Rebuild"
 
 $SkillIndex = Resolve-LocalOrHome ".codex\skill-index.json" "skill-index.json" "Leaf"
@@ -129,8 +139,29 @@ if (Test-Path -LiteralPath $Config -PathType Leaf) {
     $ConfigText = Get-Content -LiteralPath $Config -Raw -Encoding UTF8
     $HasMcp = $ConfigText -match "\[mcp_servers\."
     $HasTrusted = $ConfigText -match "trust_level\s*=\s*""trusted"""
-    $HomeTrusted = $ConfigText -match "\[projects\.'c:\\users\\ivan'\]"
-    Add-Check -Name "codex-config" -Status ($(if ($HomeTrusted) { "WARN" } elseif ($HasMcp -and $HasTrusted) { "OK" } else { "WARN" })) -Detail "mcp=$HasMcp; trusted_projects=$HasTrusted; home_root_trusted=$HomeTrusted" -Fix "Consider narrowing trusted project roots instead of trusting <user-home>"
+    $HomeConfigPath = ((Resolve-Path -LiteralPath $HOME).Path.TrimEnd("\")).ToLowerInvariant()
+    $HomeSectionPattern = "(?ms)^\[projects\.'$([regex]::Escape($HomeConfigPath))'\](?:(?!^\[).)*?trust_level\s*=\s*""trusted"""
+    $HomeTrusted = $ConfigText -match $HomeSectionPattern
+    $ConfigFixDetail = ""
+    if ($HomeTrusted -and $FixSafe) {
+        $Backup = "$Config.bak.$(Get-Date -Format 'yyyyMMdd-HHmmss')"
+        Copy-Item -LiteralPath $Config -Destination $Backup -Force
+        $UpdatedConfig = [regex]::Replace(
+            $ConfigText,
+            $HomeSectionPattern,
+            {
+                param($Match)
+                $Match.Value -replace 'trust_level\s*=\s*"trusted"', 'trust_level = "untrusted"'
+            },
+            1
+        )
+        Set-Content -LiteralPath $Config -Value $UpdatedConfig -Encoding UTF8
+        $ConfigText = $UpdatedConfig
+        $HasTrusted = $ConfigText -match "trust_level\s*=\s*""trusted"""
+        $HomeTrusted = $ConfigText -match $HomeSectionPattern
+        $ConfigFixDetail = "; home_root_trust_fixed=True; backup=$Backup"
+    }
+    Add-Check -Name "codex-config" -Status ($(if ($HomeTrusted) { "WARN" } elseif ($HasMcp -and $HasTrusted) { "OK" } else { "WARN" })) -Detail "mcp=$HasMcp; trusted_projects=$HasTrusted; home_root_trusted=$HomeTrusted$ConfigFixDetail" -Fix "Narrow trusted project roots instead of trusting <user-home>"
 } else {
     Add-Check -Name "codex-config" -Status "WARN" -Detail "No config.toml found"
 }
@@ -157,6 +188,22 @@ Add-Check -Name "source-watchlist" -Status ($(if (Test-JsonFile -Path $Watchlist
 
 $DesignRegistry = Resolve-LocalOrHome ".codex\srednoff-os\design-source-registry.json" "srednoff-os\design-source-registry.json" "Leaf"
 Add-Check -Name "design-source-registry" -Status ($(if (Test-JsonFile -Path $DesignRegistry) { "OK" } else { "FAIL" })) -Detail $DesignRegistry
+$SourceRegistryValidator = Resolve-LocalOrHome "scripts\validate-source-registry.ps1" "scripts\validate-source-registry.ps1" "Leaf"
+if ((Test-Path -LiteralPath $SourceRegistryValidator -PathType Leaf) -and (Test-Path -LiteralPath $DesignRegistry -PathType Leaf)) {
+    $global:LASTEXITCODE = 0
+    $RegistryValidationOutput = & $SourceRegistryValidator -RegistryPath $DesignRegistry 2>&1
+    $RegistryValidationOk = $LASTEXITCODE -eq 0
+    Add-Check -Name "source-registry-metadata" -Status ($(if ($RegistryValidationOk) { "OK" } else { "FAIL" })) -Detail (($RegistryValidationOutput | Out-String).Trim()) -Fix "Fill license, provenance, vetted, and copy_policy fields"
+} else {
+    Add-Check -Name "source-registry-metadata" -Status "FAIL" -Detail "Missing source registry validator"
+}
+
+$WorkflowDir = Join-Path $ProjectRoot ".github\workflows"
+$WorkflowFiles = @()
+if (Test-Path -LiteralPath $WorkflowDir -PathType Container) {
+    $WorkflowFiles = @(Get-ChildItem -LiteralPath $WorkflowDir -File -ErrorAction SilentlyContinue | Where-Object { $_.Name -match '\.ya?ml$' })
+}
+Add-Check -Name "github-actions-ci" -Status ($(if ($WorkflowFiles.Count -gt 0) { "OK" } else { "WARN" })) -Detail "workflow_files=$($WorkflowFiles.Count)" -Fix "Add .github/workflows/ci.yml"
 
 $ModeRouter = Resolve-LocalOrHome "scripts\srednoff-os-mode-router.ps1" "scripts\srednoff-os-mode-router.ps1" "Leaf"
 $DomainRouter = Resolve-LocalOrHome "scripts\srednoff-os-domain-router.ps1" "scripts\srednoff-os-domain-router.ps1" "Leaf"
@@ -199,6 +246,7 @@ Add-Check -Name "node-tooling" -Status ($(if ($NpmCmd) { "OK" } else { "WARN" })
 if ($RunEvals) {
     $EvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-selector.ps1" "scripts\test-srednoff-os-selector.ps1" "Leaf"
     if (Test-Path -LiteralPath $EvalScript -PathType Leaf) {
+        $global:LASTEXITCODE = 0
         $EvalOutput = & $EvalScript -ProjectPath $ProjectRoot 2>&1
         $EvalOk = $LASTEXITCODE -eq 0
         Add-Check -Name "selector-evals" -Status ($(if ($EvalOk) { "OK" } else { "FAIL" })) -Detail (($EvalOutput | Out-String).Trim())
@@ -208,6 +256,7 @@ if ($RunEvals) {
 
     $V211EvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-v211.ps1" "scripts\test-srednoff-os-v211.ps1" "Leaf"
     if (Test-Path -LiteralPath $V211EvalScript -PathType Leaf) {
+        $global:LASTEXITCODE = 0
         $V211EvalOutput = & $V211EvalScript -ProjectPath $ProjectRoot 2>&1
         $V211EvalOk = $LASTEXITCODE -eq 0
         Add-Check -Name "v211-evals" -Status ($(if ($V211EvalOk) { "OK" } else { "FAIL" })) -Detail (($V211EvalOutput | Out-String).Trim())
@@ -217,11 +266,22 @@ if ($RunEvals) {
 
     $V212EvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-v212.ps1" "scripts\test-srednoff-os-v212.ps1" "Leaf"
     if (Test-Path -LiteralPath $V212EvalScript -PathType Leaf) {
+        $global:LASTEXITCODE = 0
         $V212EvalOutput = & $V212EvalScript -ProjectPath $ProjectRoot 2>&1
         $V212EvalOk = $LASTEXITCODE -eq 0
         Add-Check -Name "v212-evals" -Status ($(if ($V212EvalOk) { "OK" } else { "FAIL" })) -Detail (($V212EvalOutput | Out-String).Trim())
     } else {
         Add-Check -Name "v212-evals" -Status "FAIL" -Detail "Missing v2.1.2 eval script"
+    }
+
+    $SecurityFixtureScript = Resolve-LocalOrHome "scripts\test-srednoff-os-security-fixtures.ps1" "scripts\test-srednoff-os-security-fixtures.ps1" "Leaf"
+    if (Test-Path -LiteralPath $SecurityFixtureScript -PathType Leaf) {
+        $global:LASTEXITCODE = 0
+        $SecurityFixtureOutput = & $SecurityFixtureScript -ProjectPath $ProjectRoot 2>&1
+        $SecurityFixtureOk = $LASTEXITCODE -eq 0
+        Add-Check -Name "security-fixture-evals" -Status ($(if ($SecurityFixtureOk) { "OK" } else { "FAIL" })) -Detail (($SecurityFixtureOutput | Out-String).Trim())
+    } else {
+        Add-Check -Name "security-fixture-evals" -Status "FAIL" -Detail "Missing security fixture eval script"
     }
 }
 

@@ -16,6 +16,18 @@ backup_path() {
   fi
 }
 
+find_powershell() {
+  if command -v pwsh >/dev/null 2>&1; then
+    printf '%s\n' "pwsh"
+    return 0
+  fi
+  if command -v powershell >/dev/null 2>&1; then
+    printf '%s\n' "powershell"
+    return 0
+  fi
+  return 1
+}
+
 copy_item() {
   local rel="$1"
   local src="$package_root/$rel"
@@ -54,6 +66,7 @@ copy_item "AGENTS.md"
 copy_item "code_review.md"
 copy_item ".agent"
 copy_item ".codex/skills"
+copy_item ".codex/skill-index.json"
 copy_item ".codex/srednoff-os"
 copy_item "evals"
 copy_item "scripts"
@@ -76,10 +89,8 @@ fi
 chmod +x "$package_root/scripts/init-codex-project.sh" "$package_root/scripts/install-codex-md-os.sh" 2>/dev/null || true
 chmod +x "$template_dir/scripts/init-codex-project.sh" "$template_dir/scripts/install-codex-md-os.sh" 2>/dev/null || true
 
-if [ -f "$package_root/scripts/generate-skill-index.ps1" ] && command -v pwsh >/dev/null 2>&1; then
-  pwsh -NoProfile -ExecutionPolicy Bypass -File "$package_root/scripts/generate-skill-index.ps1" -SkillsRoot "$codex_home/skills" -OutputPath "$codex_home/skill-index.json"
-elif [ -f "$package_root/scripts/generate-skill-index.ps1" ] && command -v powershell >/dev/null 2>&1; then
-  powershell -NoProfile -ExecutionPolicy Bypass -File "$package_root/scripts/generate-skill-index.ps1" -SkillsRoot "$codex_home/skills" -OutputPath "$codex_home/skill-index.json"
+if [ -f "$package_root/scripts/generate-skill-index.ps1" ] && powershell_cmd="$(find_powershell)"; then
+  "$powershell_cmd" -NoProfile -ExecutionPolicy Bypass -File "$package_root/scripts/generate-skill-index.ps1" -SkillsRoot "$codex_home/skills" -OutputPath "$codex_home/skill-index.json"
 else
   printf 'skip skill index generation: PowerShell not found\n'
 fi

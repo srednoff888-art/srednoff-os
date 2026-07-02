@@ -60,6 +60,10 @@ $Results += Add-Result -Id "domain-router:helper-scripts" -Passed (($DomainOut.h
 $RegistryData = Get-Content -LiteralPath $Registry -Raw -Encoding UTF8 | ConvertFrom-Json
 $SourceIds = @($RegistryData.sources | ForEach-Object { $_.id })
 $Results += Add-Result -Id "registry:v212-sources" -Passed (($RegistryData.version -eq "v2.1.2") -and ($SourceIds -contains "gltf-transform") -and ($SourceIds -contains "poly-haven") -and ($SourceIds -contains "sketchfab")) -Detail "version=$($RegistryData.version); sources=$(@($SourceIds).Count)"
+$MissingMetadata = @($RegistryData.sources | Where-Object {
+    -not $_.license -or -not $_.provenance -or -not ($_.PSObject.Properties.Name -contains "vetted") -or -not $_.copy_policy
+})
+$Results += Add-Result -Id "registry:v212-source-provenance" -Passed ($MissingMetadata.Count -eq 0) -Detail "missing_metadata=$($MissingMetadata.Count)"
 
 $Failed = @($Results | Where-Object { -not $_.passed })
 $Summary = [ordered]@{

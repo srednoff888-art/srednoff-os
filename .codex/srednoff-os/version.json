@@ -3,9 +3,9 @@
   "version": "v2.1.2",
   "released_at": "2026-06-30",
   "baseline": {
-    "kernel_records": 3000,
-    "skill_records": 2220,
-    "agent_records": 780,
+    "kernel_records": 4500,
+    "skill_records": 3300,
+    "agent_records": 1200,
     "domains": 60
   },
   "features": [
@@ -24,6 +24,10 @@
     "domain-specific-skill-packs",
     "source-ranking-roi-selector",
     "design-brief-autogenerator",
-    "selector-legacy-plus-roi-scoring"
+    "selector-legacy-plus-roi-scoring",
+    "github-actions-ci",
+    "source-registry-provenance-metadata",
+    "independent-security-fixtures",
+    "portable-skill-index-generation"
   ]
 }

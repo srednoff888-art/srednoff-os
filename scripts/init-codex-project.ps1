@@ -112,10 +112,10 @@ if ((Test-Path -LiteralPath $SkillIndexScript -PathType Leaf) -and (Test-Path -L
     if (Test-Path -LiteralPath $ProjectSkillIndex -PathType Leaf) {
         Copy-Item -LiteralPath $ProjectSkillIndex -Destination "$ProjectSkillIndex.bak.$Timestamp" -Force
     }
-    powershell -NoProfile -ExecutionPolicy Bypass -File $SkillIndexScript -SkillsRoot $ProjectSkillsRoot -OutputPath $ProjectSkillIndex -RelativePaths -RelativeBase $ProjectDir | Out-Host
+    & $SkillIndexScript -SkillsRoot $ProjectSkillsRoot -OutputPath $ProjectSkillIndex -RelativePaths -RelativeBase $ProjectDir | Out-Host
 }
 
 $StatusScript = Join-Path $CodexHome "scripts\srednoff-os-status.ps1"
 if (Test-Path -LiteralPath $StatusScript) {
-    powershell -ExecutionPolicy Bypass -File $StatusScript -ProjectPath $ProjectDir
+    & $StatusScript -ProjectPath $ProjectDir
 }

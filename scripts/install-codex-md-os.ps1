@@ -85,7 +85,7 @@ if (Test-Path -LiteralPath $LocalCodeReview) {
 
 $SkillIndexScript = Join-Path $PackageRoot "scripts\generate-skill-index.ps1"
 if (Test-Path -LiteralPath $SkillIndexScript -PathType Leaf) {
-    & powershell -NoProfile -ExecutionPolicy Bypass -File $SkillIndexScript -SkillsRoot (Join-Path $CodexHome "skills") -OutputPath (Join-Path $CodexHome "skill-index.json") | Out-Host
+    & $SkillIndexScript -SkillsRoot (Join-Path $CodexHome "skills") -OutputPath (Join-Path $CodexHome "skill-index.json") | Out-Host
 }
 
 Write-Output ""

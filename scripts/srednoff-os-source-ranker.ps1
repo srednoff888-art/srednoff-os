@@ -131,7 +131,36 @@ $Ranked = foreach ($Source in $Registry.sources) {
         $Reasons.Add("turbo-benchmark") | Out-Null
     }
 
+    $License = ([string]$Source.license).Trim()
+    $Provenance = ([string]$Source.provenance).Trim()
+    $CopyPolicy = ([string]$Source.copy_policy).Trim()
+
     $Score += Get-RiskPenalty -Risk ([string]$Source.risk)
+    if ([bool]$Source.vetted) {
+        $Score += 1.5
+        $Reasons.Add("vetted-source") | Out-Null
+    } else {
+        $Score -= 0.5
+        $Gates.Add("unvetted-source-review") | Out-Null
+    }
+    if (-not $License) {
+        $Score -= 3.0
+        $Gates.Add("missing-license-metadata") | Out-Null
+    } elseif ($License -match 'varies|verify|user-provided') {
+        $Score -= 0.5
+        $Gates.Add("license-provenance-review") | Out-Null
+    } else {
+        $Score += 0.75
+        $Reasons.Add("known-license") | Out-Null
+    }
+    if (-not $Provenance) {
+        $Score -= 2.0
+        $Gates.Add("missing-provenance-metadata") | Out-Null
+    }
+    if (-not $CopyPolicy) {
+        $Score -= 1.0
+        $Gates.Add("missing-copy-policy") | Out-Null
+    }
     if ([bool]$Source.requires_user_prompt) {
         $Score -= 0.5
         $Gates.Add("ask-user-before-connector-or-external-copy") | Out-Null
@@ -164,6 +193,10 @@ $Ranked = foreach ($Source in $Registry.sources) {
         score = [math]::Round($Score, 2)
         reasons = @($Reasons.ToArray() | Select-Object -Unique)
         gates = @($Gates.ToArray() | Select-Object -Unique)
+        license = $License
+        provenance = $Provenance
+        vetted = [bool]$Source.vetted
+        copy_policy = $CopyPolicy
         connector = $Source.connector
         requires_user_prompt = [bool]$Source.requires_user_prompt
     }

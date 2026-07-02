@@ -1,0 +1,111 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    name: Windows validation
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: PowerShell parse check
+        shell: pwsh
+        run: |
+          $Errors = @()
+          Get-ChildItem .\scripts -Filter *.ps1 -File | ForEach-Object {
+            $Tokens = $null
+            $ParseErrors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$Tokens, [ref]$ParseErrors) | Out-Null
+            if ($ParseErrors) {
+              $Errors += $ParseErrors | ForEach-Object { "$($_.Extent.File):$($_.Extent.StartLineNumber): $($_.Message)" }
+            }
+          }
+          if ($Errors.Count -gt 0) {
+            $Errors | ForEach-Object { Write-Error $_ }
+            exit 1
+          }
+
+      - name: PSScriptAnalyzer errors
+        shell: pwsh
+        run: |
+          Install-Module PSScriptAnalyzer -Scope CurrentUser -Force
+          $Results = Invoke-ScriptAnalyzer -Path .\scripts -Recurse -Severity Error
+          if ($Results) {
+            $Results | Format-Table -AutoSize
+            exit 1
+          }
+
+      - name: Kernel and registry validation
+        shell: pwsh
+        run: |
+          .\scripts\validate-quality-cost-kernel.ps1
+          .\scripts\validate-source-registry.ps1
+
+      - name: Srednoff OS evals
+        shell: pwsh
+        run: |
+          .\scripts\test-srednoff-os-selector.ps1
+          .\scripts\test-srednoff-os-v211.ps1
+          .\scripts\test-srednoff-os-v212.ps1
+          .\scripts\test-srednoff-os-security-fixtures.ps1
+
+      - name: Fast skill validation
+        shell: pwsh
+        run: .\scripts\quick-validate-all-skills.ps1 -Mode fast
+
+  ubuntu:
+    name: Ubuntu validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Bash syntax
+        shell: bash
+        run: |
+          mapfile -t sh_files < <(find scripts .codex/skills/agentic-seo-skill/scripts -name '*.sh' -type f)
+          if [ "${#sh_files[@]}" -eq 0 ]; then
+            echo "No shell scripts found"
+            exit 1
+          fi
+          bash -n "${sh_files[@]}"
+
+      - name: ShellCheck
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+          mapfile -t sh_files < <(find scripts .codex/skills/agentic-seo-skill/scripts -name '*.sh' -type f)
+          shellcheck "${sh_files[@]}"
+
+      - name: Kernel and registry validation
+        shell: pwsh
+        run: |
+          ./scripts/validate-quality-cost-kernel.ps1
+          ./scripts/validate-source-registry.ps1
+
+      - name: Srednoff OS portable evals
+        shell: pwsh
+        run: |
+          ./scripts/test-srednoff-os-selector.ps1
+          ./scripts/test-srednoff-os-v212.ps1
+          ./scripts/test-srednoff-os-security-fixtures.ps1

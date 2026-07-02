@@ -10,10 +10,15 @@ Last verified: 2026-07-02.
 |---|---:|---|
 | Selector regression suite | PASS, 9/9 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-selector.ps1` |
 | v2.1.1 compatibility evals | PASS, 13/13 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v211.ps1` |
-| v2.1.2 routing/source evals | PASS, 9/9 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v212.ps1` |
+| v2.1.2 routing/source evals | PASS, 10/10 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v212.ps1` |
+| Independent security fixture evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-security-fixtures.ps1` |
 | Fast skill metadata validation | PASS, 306/306 | `powershell -ExecutionPolicy Bypass -File .\scripts\quick-validate-all-skills.ps1 -Mode fast` |
 | Kernel catalog validation | PASS, 4500 records | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-quality-cost-kernel.ps1` |
-| PowerShell parse check | PASS, 20 scripts | `Get-ChildItem .\scripts -Filter *.ps1` with PowerShell parser |
+| Source registry metadata validation | PASS, 17 sources | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-source-registry.ps1` |
+| PowerShell parse check | PASS, 22 scripts | `Get-ChildItem .\scripts -Filter *.ps1` with PowerShell parser |
+| Bash syntax check | PASS, 3 scripts | `bash -n scripts/init-codex-project.sh scripts/install-codex-md-os.sh .codex/skills/agentic-seo-skill/scripts/pre_commit_seo_check.sh` |
+| Srednoff OS doctor | PASS, 25/25 | `powershell -ExecutionPolicy Bypass -File .\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
+| GitHub Actions CI | PRESENT | `.github/workflows/ci.yml` installs ShellCheck and PSScriptAnalyzer on runners |
 | Secret scan | PASS | high-confidence token/path scan before publication |
 
 ## Selector Changes From Audit
@@ -26,6 +31,9 @@ Last verified: 2026-07-02.
 - Fast validation: skill metadata smoke checks now support YAML block scalar descriptions such as `description: >`.
 - Expanded kernel: deterministic catalog generation now produces 4500 records with 75 capability slugs per domain and 1800/1800/900 Group 1/2/3 distribution.
 - Selector speed: the local wrapper uses portable `.codex/skill-index.json` when present, avoiding repeated `SKILL.md` scans; measured wrapper scenario improved from about 5.9s to about 1.9s on this machine.
+- CI coverage: pull requests and pushes now run Windows PowerShell validation, Ubuntu Bash syntax/ShellCheck, kernel validation, registry validation, and eval suites.
+- Source registry provenance: UI/3D source ranking now includes license, provenance, vetted status, and copy policy metadata for every registered source.
+- Independent security fixtures: hook behavior is now tested from external fixture data instead of only inline/manual cases.
 
 ## What This Does Not Promise
 
@@ -49,6 +57,9 @@ Before publishing a new release, run:
 powershell -ExecutionPolicy Bypass -File ".\scripts\test-srednoff-os-selector.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\test-srednoff-os-v211.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\test-srednoff-os-v212.ps1"
+powershell -ExecutionPolicy Bypass -File ".\scripts\test-srednoff-os-security-fixtures.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\quick-validate-all-skills.ps1" -Mode fast
 powershell -ExecutionPolicy Bypass -File ".\scripts\validate-quality-cost-kernel.ps1"
+powershell -ExecutionPolicy Bypass -File ".\scripts\validate-source-registry.ps1"
+powershell -ExecutionPolicy Bypass -File ".\scripts\srednoff-os-doctor.ps1" -ProjectPath . -RunEvals -FixSafe
 ```
