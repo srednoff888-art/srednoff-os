@@ -33,6 +33,13 @@ function Test-Any {
     return $false
 }
 
+function ConvertTo-MatchKey {
+    param([string]$Value)
+    return ([string]$Value).ToLowerInvariant() -replace '[^a-z0-9]+', ''
+}
+
+$BriefKey = ConvertTo-MatchKey -Value $Brief
+
 $Domains = New-Object System.Collections.Generic.List[string]
 if (Test-Any @('ui/ux','ux','ui\b','web design','landing','dashboard','component','shadcn','figma','canva','21st','magic ui','aceternity','origin ui','react bits','design','interface','ui kit')) {
     $Domains.Add("ui-ux") | Out-Null
@@ -105,6 +112,7 @@ $Ranked = foreach ($Source in $Registry.sources) {
     }
 
     $NameBlob = (($Source.id, $Source.name, $Source.kind) -join " ").ToLowerInvariant()
+    $NameKey = ConvertTo-MatchKey -Value $NameBlob
     foreach ($Term in @($Source.use_when)) {
         if ($Lower.Contains(([string]$Term).ToLowerInvariant())) {
             $Score += 3.0
@@ -112,7 +120,8 @@ $Ranked = foreach ($Source in $Registry.sources) {
         }
     }
     foreach ($Token in @("shadcn","21st","magic","aceternity","origin","react bits","figma","canva","three","r3f","gltf","glb","model-viewer","babylon","sketchfab","poly haven","ambientcg")) {
-        if ($Lower.Contains($Token) -and $NameBlob.Contains($Token.Replace(" ", ""))) {
+        $TokenKey = ConvertTo-MatchKey -Value $Token
+        if (($Lower.Contains($Token) -or $BriefKey.Contains($TokenKey)) -and $NameKey.Contains($TokenKey)) {
             $Score += 6.0
             $Reasons.Add("named:$Token") | Out-Null
         }
@@ -122,7 +131,7 @@ $Ranked = foreach ($Source in $Registry.sources) {
         $Score += 4.0
         $Reasons.Add("ui-source-fit") | Out-Null
     }
-    if (Test-Any @('3d asset','3d assets','gltf','glb','model','texture','hdri','ar') -and ((@($Source.domains) -contains "3d-web") -or ([string]$Source.kind -match '3d|asset|model|texture|optimizer'))) {
+    if (Test-Any @('3d asset','3d assets','gltf','glb','\bmodel\b','\btexture\b','\bhdri\b','\bar\b') -and ((@($Source.domains) -contains "3d-web") -or ([string]$Source.kind -match '3d|asset|model|texture|optimizer'))) {
         $Score += 5.0
         $Reasons.Add("3d-asset-fit") | Out-Null
     }

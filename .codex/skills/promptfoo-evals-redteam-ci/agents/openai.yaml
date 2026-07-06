@@ -1,0 +1,7 @@
+interface:
+  display_name: "Promptfoo Evals Redteam CI"
+  short_description: "Build Promptfoo eval, red-team, and CI gates"
+  default_prompt: "Use $promptfoo-evals-redteam-ci to design or review a Promptfoo eval, red-team scan, or CI gate."
+
+policy:
+  allow_implicit_invocation: true

@@ -75,6 +75,14 @@
     ]
   },
   {
+    "id": "promptfoo_evals_redteam_ci",
+    "brief": "build promptfoo evals redteam CI gate for agent workflow",
+    "budget": "balanced",
+    "expectedAll": [
+      "promptfoo-evals-redteam-ci"
+    ]
+  },
+  {
     "id": "selector_catalog_speed_roi",
     "brief": "quality cost selector speed scoring latency indexing ROI tuning dedupe capability overlap benchmark fixture",
     "budget": "deep",

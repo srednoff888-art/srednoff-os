@@ -1533,6 +1533,13 @@
         "skill_md_bytes":  1792
     },
     {
+        "name":  "promptfoo-evals-redteam-ci",
+        "path":  ".codex\\skills\\promptfoo-evals-redteam-ci",
+        "description":  "Use this skill when building, reviewing, or debugging Promptfoo-based LLM, agent, RAG evals, red-team scans, provider setup, or GitHub Actions CI gates; do not use when ordinary deterministic unit tests are enough.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  2622
+    },
+    {
         "name":  "prompt-injection-defense",
         "path":  ".codex\\skills\\prompt-injection-defense",
         "description":  "Use this skill for prompt injection, tool safety, retrieval boundaries, untrusted content handling, approvals. Trigger when the task involves ai security work related to Prompt Injection Defense, implementation, audits, debugging, strategy, or validation.",

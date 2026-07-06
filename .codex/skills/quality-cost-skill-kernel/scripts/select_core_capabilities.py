@@ -97,6 +97,31 @@ GROUP_VALUE_MULTIPLIER = {
 }
 
 DOMAIN_INTENT_TERMS = {
+    "ai-llm-agents-rag": (
+        "llm",
+        "agent",
+        "agents",
+        "rag",
+        "eval",
+        "evals",
+        "redteam",
+        "red-team",
+        "promptfoo",
+        "prompt evaluation",
+        "agent workflow",
+        "guardrail",
+    ),
+    "testing-qa-quality": (
+        "test",
+        "tests",
+        "testing",
+        "qa",
+        "regression",
+        "ci gate",
+        "quality gate",
+        "eval",
+        "evals",
+    ),
     "repo-intake-context": (
         "selector",
         "skill selector",
@@ -173,6 +198,7 @@ DOMAIN_SKILL_HINTS = {
         "record-replay-skill-miner",
     ],
     "ai-llm-agents-rag": [
+        "promptfoo-evals-redteam-ci",
         "agents-sdk-production-workflow",
         "codex-subagent-orchestration",
         "ai-evals-regression-suite",
@@ -222,6 +248,20 @@ DOMAIN_SKILL_HINTS = {
 }
 
 DIRECT_SKILL_ALIASES = [
+    (
+        "promptfoo-evals-redteam-ci",
+        (
+            "promptfoo",
+            "promptfoo eval",
+            "promptfoo evals",
+            "promptfoo redteam",
+            "promptfoo red-team",
+            "redteam",
+            "red-team",
+            "llm eval ci",
+            "prompt evaluation",
+        ),
+    ),
     (
         "record-replay-skill-miner",
         (
@@ -278,6 +318,15 @@ def default_codex_home() -> Path:
 
 def normalize(text: str) -> str:
     return re.sub(r"\s+", " ", text.lower())
+
+
+def contains_term(haystack: str, term: str) -> bool:
+    term = normalize(term)
+    if not term:
+        return False
+    if re.fullmatch(r"[a-z0-9]+", term) and len(term) <= 3:
+        return re.search(rf"(?<![a-z0-9]){re.escape(term)}(?![a-z0-9])", haystack) is not None
+    return term in haystack
 
 
 def tokenize(text: str) -> set[str]:
@@ -386,7 +435,7 @@ def term_score(term: str, haystack: str) -> int:
     term = normalize(term)
     if not term:
         return 0
-    if term in haystack:
+    if contains_term(haystack, term):
         if " " in term or len(term) > 8:
             return 3
         return 2
@@ -396,7 +445,7 @@ def term_score(term: str, haystack: str) -> int:
 def infer_intent_domains(brief_haystack: str) -> set[str]:
     domains: set[str] = set()
     for domain_id, terms in DOMAIN_INTENT_TERMS.items():
-        if any(term in brief_haystack for term in terms):
+        if any(contains_term(brief_haystack, term) for term in terms):
             domains.add(domain_id)
     return domains
 
@@ -452,7 +501,7 @@ def score_record(
     if record["kind"] == "agent" and budget == "lean":
         score -= 1.0
 
-    if group == 3 and any(term in brief_haystack or term in project_haystack for term in RISK_TERMS):
+    if group == 3 and any(contains_term(brief_haystack, term) or contains_term(project_haystack, term) for term in RISK_TERMS):
         score += 3.0
 
     intent_match = record["domain_id"] in intent_domains
@@ -634,7 +683,7 @@ def apply_direct_skill_aliases(enriched: list[dict], skill_index: list[dict], br
     for skill_name, triggers in DIRECT_SKILL_ALIASES:
         if skill_name in direct_names:
             continue
-        if not any(trigger in brief_haystack for trigger in triggers):
+        if not any(contains_term(brief_haystack, trigger) for trigger in triggers):
             continue
         skill = skills_by_name.get(skill_name)
         if not skill:

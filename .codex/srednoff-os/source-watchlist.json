@@ -1,6 +1,6 @@
 {
   "name": "Srednoff OS source watchlist",
-  "version": "v2.1",
+  "version": "v2.1.2",
   "sources": [
     {
       "id": "openai-codex-agents-md",
@@ -87,10 +87,40 @@
       "reason": "Prompt, agent, and RAG evaluation patterns"
     },
     {
+      "id": "promptfoo-agent-skill-docs",
+      "type": "official-docs",
+      "url": "https://www.promptfoo.dev/docs/integrations/agent-skill/",
+      "reason": "Promptfoo agent-skill bundle, eval authoring, provider setup, red-team setup, and deterministic assertion pitfalls"
+    },
+    {
+      "id": "promptfoo-github-action-docs",
+      "type": "official-docs",
+      "url": "https://www.promptfoo.dev/docs/integrations/github-action/",
+      "reason": "Prompt eval CI pattern for PR-scoped prompt and agent regression checks"
+    },
+    {
       "id": "mcp-servers",
       "type": "github",
       "url": "https://github.com/modelcontextprotocol/servers",
       "reason": "MCP server ecosystem and trust inventory"
+    },
+    {
+      "id": "shadcn-registry-item-spec",
+      "type": "official-docs",
+      "url": "https://ui.shadcn.com/docs/registry/registry-item-json",
+      "reason": "Registry item metadata, dependency, target path, and reproducibility rules for UI source provenance"
+    },
+    {
+      "id": "w3c-webgpu-spec",
+      "type": "official-docs",
+      "url": "https://www.w3.org/TR/webgpu/",
+      "reason": "Current WebGPU platform behavior for 3D/web rendering source ranking and performance guardrails"
+    },
+    {
+      "id": "react-bits-repo",
+      "type": "github",
+      "url": "https://github.com/DavidHDev/react-bits",
+      "reason": "Animated React component source candidate; monitor license clarity, dependency weight, accessibility, and performance risk"
     }
   ]
 }

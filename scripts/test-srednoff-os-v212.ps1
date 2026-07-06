@@ -46,6 +46,14 @@ $RankUI = & $SourceRanker -ProjectPath $ProjectPath -Brief "rank UI kits for sha
 $TopUiIds = @($RankUI.ranked_sources | Select-Object -First 3 | ForEach-Object { $_.id })
 $Results += Add-Result -Id "source-ranker:ui-kit-top3" -Passed (($TopUiIds -contains "shadcn-registry") -or ($TopUiIds -contains "21st-dev")) -Detail "top3=$($TopUiIds -join ',')"
 
+$RankResearch = & $SourceRanker -ProjectPath $ProjectPath -Brief "daily research skills agents selectors source ranking design brief all domains" -Json | ConvertFrom-Json
+$False3DReasons = @($RankResearch.ranked_sources | Where-Object { @($_.reasons) -contains "3d-asset-fit" })
+$Results += Add-Result -Id "source-ranker:no-ar-substring-false-3d" -Passed ($False3DReasons.Count -eq 0) -Detail "false_3d_reasons=$($False3DReasons.Count)"
+
+$RankReactBits = & $SourceRanker -ProjectPath $ProjectPath -Brief "compare React Bits animated components for a landing page" -Json | ConvertFrom-Json
+$ReactBitsSource = @($RankReactBits.ranked_sources | Where-Object { $_.id -eq "react-bits" } | Select-Object -First 1)
+$Results += Add-Result -Id "source-ranker:normalized-named-source" -Passed ($ReactBitsSource.Count -gt 0 -and (@($ReactBitsSource[0].reasons) -contains "named:react bits")) -Detail "react_bits_reasons=$(@($ReactBitsSource[0].reasons) -join ',')"
+
 $BriefSparse = & $DesignBrief -ProjectPath $ProjectPath -Brief "make 3D web landing" -Json | ConvertFrom-Json
 $Results += Add-Result -Id "design-brief:sparse-asks" -Passed ([bool]$BriefSparse.should_ask_user -and @($BriefSparse.questions).Count -gt 0) -Detail "questions=$(@($BriefSparse.questions).Count)"
 
