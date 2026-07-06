@@ -4,15 +4,15 @@ This file documents what is currently verified and what is intentionally not pro
 
 ## Current Smoke Status
 
-Last verified: 2026-07-02.
+Last verified: 2026-07-06.
 
 | Check | Status | Command |
 |---|---:|---|
-| Selector regression suite | PASS, 9/9 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-selector.ps1` |
+| Selector regression suite | PASS, 11/11 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-selector.ps1` |
 | v2.1.1 compatibility evals | PASS, 13/13 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v211.ps1` |
-| v2.1.2 routing/source evals | PASS, 10/10 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v212.ps1` |
+| v2.1.2 routing/source evals | PASS, 12/12 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v212.ps1` |
 | Independent security fixture evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-security-fixtures.ps1` |
-| Fast skill metadata validation | PASS, 306/306 | `powershell -ExecutionPolicy Bypass -File .\scripts\quick-validate-all-skills.ps1 -Mode fast` |
+| Fast skill metadata validation | PASS, 308/308 | `powershell -ExecutionPolicy Bypass -File .\scripts\quick-validate-all-skills.ps1 -Mode fast` |
 | Kernel catalog validation | PASS, 4500 records | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-quality-cost-kernel.ps1` |
 | Source registry metadata validation | PASS, 17 sources | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-source-registry.ps1` |
 | PowerShell parse check | PASS, 22 scripts | `Get-ChildItem .\scripts -Filter *.ps1` with PowerShell parser |
@@ -34,6 +34,7 @@ Last verified: 2026-07-02.
 - CI coverage: pull requests and pushes now run Windows PowerShell validation, Ubuntu Bash syntax/ShellCheck, kernel validation, registry validation, and eval suites.
 - Source registry provenance: UI/3D source ranking now includes license, provenance, vetted status, and copy policy metadata for every registered source.
 - Independent security fixtures: hook behavior is now tested from external fixture data instead of only inline/manual cases.
+- External prompt mining: claimed-leak and prompt-dump repositories are now handled through a provenance-first skill that extracts only abstract, vendor-neutral patterns and rejects verbatim proprietary prompt text.
 
 ## What This Does Not Promise
 

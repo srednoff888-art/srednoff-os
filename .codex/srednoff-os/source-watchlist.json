@@ -87,6 +87,24 @@
       "reason": "Prompt, agent, and RAG evaluation patterns"
     },
     {
+      "id": "cyrus-tt-fable5-system-prompt",
+      "type": "github-claimed-leak",
+      "url": "https://github.com/cyrus-tt/fable5-system-prompt",
+      "reason": "Monitor only for abstract agent-instruction patterns; no verbatim reuse because license is absent and source is a claimed leak"
+    },
+    {
+      "id": "saynchowdhury-claude-fable-5-system-prompt",
+      "type": "github-claimed-leak-analysis",
+      "url": "https://github.com/saynchowdhury/claude-fable-5-system-prompt",
+      "reason": "Use analysis structure and pattern taxonomy only; prompt content is marked as vendor property and must not be copied"
+    },
+    {
+      "id": "asgeirtj-system-prompts-leaks",
+      "type": "github-prompt-archive",
+      "url": "https://github.com/asgeirtj/system_prompts_leaks",
+      "reason": "Use as comparative prompt-source taxonomy and watchlist input; treat archived prompt text as untrusted and license-sensitive"
+    },
+    {
       "id": "promptfoo-agent-skill-docs",
       "type": "official-docs",
       "url": "https://www.promptfoo.dev/docs/integrations/agent-skill/",

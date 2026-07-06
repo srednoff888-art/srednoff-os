@@ -108,6 +108,16 @@ DOMAIN_INTENT_TERMS = {
         "red-team",
         "promptfoo",
         "prompt evaluation",
+        "system prompt",
+        "system prompts",
+        "prompt leak",
+        "prompt leaks",
+        "leaked prompt",
+        "fable 5",
+        "fable5",
+        "external prompt",
+        "instruction migration",
+        "prompt repository",
         "agent workflow",
         "guardrail",
     ),
@@ -198,6 +208,7 @@ DOMAIN_SKILL_HINTS = {
         "record-replay-skill-miner",
     ],
     "ai-llm-agents-rag": [
+        "external-prompt-pattern-miner",
         "promptfoo-evals-redteam-ci",
         "agents-sdk-production-workflow",
         "codex-subagent-orchestration",
@@ -248,6 +259,30 @@ DOMAIN_SKILL_HINTS = {
 }
 
 DIRECT_SKILL_ALIASES = [
+    (
+        "external-prompt-pattern-miner",
+        (
+            "system prompt repository",
+            "system prompt repositories",
+            "system prompt leak",
+            "system prompt leaks",
+            "prompt leak",
+            "prompt leaks",
+            "leaked prompt",
+            "prompt dump",
+            "prompt dumps",
+            "external prompt",
+            "external prompts",
+            "fable 5",
+            "fable5",
+            "claude fable",
+            "vendor prompt",
+            "prompt repository",
+            "prompt repositories",
+            "migrate prompt patterns",
+            "agent instruction migration",
+        ),
+    ),
     (
         "promptfoo-evals-redteam-ci",
         (

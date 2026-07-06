@@ -798,6 +798,13 @@
         "skill_md_bytes":  1760
     },
     {
+        "name":  "external-prompt-pattern-miner",
+        "path":  ".codex\\skills\\external-prompt-pattern-miner",
+        "description":  "Use this skill when reviewing external system-prompt repositories, leaked-prompt archives, agent prompt dumps, Fable/Claude/OpenAI/Codex prompt examples, or prompt-engineering collections to safely improve Srednoff OS without copying proprietary text.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  3953
+    },
+    {
         "name":  "feature-flag-rollout",
         "path":  ".codex\\skills\\feature-flag-rollout",
         "description":  "Use this skill for feature flags, gradual rollout, kill switches, metrics, experiment gates, rollback. Trigger when the task involves programming work related to Feature Flag Rollout, implementation, audits, debugging, strategy, or validation.",

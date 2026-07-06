@@ -91,5 +91,13 @@
       "selector-roi-tuning-pass",
       "benchmark-fixture-design"
     ]
+  },
+  {
+    "id": "external_prompt_pattern_mining",
+    "brief": "review Fable 5 system prompt leak repositories and safely migrate the best agent instruction patterns into Srednoff OS",
+    "budget": "deep",
+    "expectedAll": [
+      "external-prompt-pattern-miner"
+    ]
   }
 ]

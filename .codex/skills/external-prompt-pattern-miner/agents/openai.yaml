@@ -1,0 +1,7 @@
+interface:
+  display_name: "External Prompt Pattern Miner"
+  short_description: "Safely mine external system-prompt repos for reusable agent patterns"
+  default_prompt: "Use $external-prompt-pattern-miner to review external prompt repositories and migrate only safe, abstract, validated patterns into Srednoff OS."
+
+policy:
+  allow_implicit_invocation: true

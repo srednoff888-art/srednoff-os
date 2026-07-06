@@ -18,7 +18,7 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-111827?style=for-the-badge"></a>
   <a href="https://github.com/srednoff888-art/srednoff-os/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/srednoff888-art/srednoff-os/ci.yml?branch=main&style=for-the-badge&label=CI"></a>
   <img alt="Srednoff OS version" src="https://img.shields.io/badge/Srednoff%20OS-v2.1.2-2563eb?style=for-the-badge">
-  <img alt="Skills" src="https://img.shields.io/badge/skills-306-16a34a?style=for-the-badge">
+  <img alt="Skills" src="https://img.shields.io/badge/skills-308-16a34a?style=for-the-badge">
   <img alt="Kernel" src="https://img.shields.io/badge/kernel-4500-7c3aed?style=for-the-badge">
   <img alt="Selector" src="https://img.shields.io/badge/selector-ROI%20aware-f59e0b?style=for-the-badge">
 </p>
@@ -128,6 +128,7 @@ flowchart LR
 | Selector | `select-quality-cost-capabilities.ps1`, `quality-cost-skill-kernel` | Chooses compact capabilities by value per token | Selector fixtures |
 | Routers | `srednoff-os-mode-router.ps1`, `srednoff-os-domain-router.ps1` | Routes normal/deep/TURBO and task domains | v2.1.1/v2.1.2 evals |
 | UI/3D source ranking | `srednoff-os-design-brief.ps1`, `srednoff-os-source-ranker.ps1` | Ranks UI kits, design connectors, 3D libraries, and asset sources | Registry provenance validation |
+| External prompt mining | `external-prompt-pattern-miner` | Extracts only safe, abstract agent patterns from prompt repos/leak archives | Selector fixture plus provenance review |
 | Security hooks | `srednoff-os-hook.ps1` | Blocks high-confidence secrets and dangerous tool actions | Independent security fixtures |
 | CI | `.github/workflows/ci.yml` | Runs validation on Windows and Ubuntu | GitHub Actions |
 | Quality log | `QUALITY.md` | Tracks what is verified and what is not promised | Manual release gate |
@@ -139,13 +140,13 @@ Current release gate, as recorded in [QUALITY.md](QUALITY.md):
 | Check | Result | Command |
 |---|---:|---|
 | Doctor | 25/25 PASS | `.\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
-| Selector evals | 9/9 PASS | `.\scripts\test-srednoff-os-selector.ps1` |
+| Selector evals | 11/11 PASS | `.\scripts\test-srednoff-os-selector.ps1` |
 | v2.1.1 compatibility evals | 13/13 PASS | `.\scripts\test-srednoff-os-v211.ps1` |
-| v2.1.2 routing/source evals | 10/10 PASS | `.\scripts\test-srednoff-os-v212.ps1` |
+| v2.1.2 routing/source evals | 12/12 PASS | `.\scripts\test-srednoff-os-v212.ps1` |
 | Security fixture evals | 5/5 PASS | `.\scripts\test-srednoff-os-security-fixtures.ps1` |
 | Kernel validation | 4500 records PASS | `.\scripts\validate-quality-cost-kernel.ps1` |
 | Source registry validation | 17 sources PASS | `.\scripts\validate-source-registry.ps1` |
-| Skill metadata smoke | 306/306 PASS | `.\scripts\quick-validate-all-skills.ps1 -Mode fast` |
+| Skill metadata smoke | 308/308 PASS | `.\scripts\quick-validate-all-skills.ps1 -Mode fast` |
 
 GitHub Actions adds:
 
