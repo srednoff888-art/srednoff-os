@@ -53,6 +53,7 @@ Current vNext implementation status is tracked in [.agent/SREDNOFF_OS_VNEXT_CHEC
 | Too many instructions waste context | 4500-record quality/cost selector with compact reads | Better ROI per token |
 | UI/3D tasks copy risky assets too quickly | Design brief, source ranking, license/provenance gates | Safer component and asset reuse |
 | Security checks are manual | Prompt/tool hooks plus independent security fixtures | Secrets and dangerous tool actions are blocked earlier |
+| Hook decisions are vague | Explicit allow/ask/block security decisions with audit hash logging | Risky actions require user confirmation or are denied |
 | Public core leaks personal defaults | Public profiles plus local-only private overlays | Shared repo stays portable and reviewable |
 | Quality level is implicit | `fast`, `standard`, `production`, and `critical` quality modes | Validation cost matches task risk |
 | Regressions are easy to miss | GitHub Actions CI plus local doctor/evals | Pull requests are checked automatically |
@@ -135,7 +136,7 @@ flowchart LR
 | Routers | `srednoff-os-mode-router.ps1`, `srednoff-os-domain-router.ps1` | Routes normal/deep/TURBO and task domains | v2.1.1/v2.1.2 evals |
 | UI/3D source ranking | `srednoff-os-design-brief.ps1`, `srednoff-os-source-ranker.ps1` | Ranks UI kits, design connectors, 3D libraries, and asset sources | Registry provenance validation |
 | External prompt mining | `external-prompt-pattern-miner` | Extracts only safe, abstract agent patterns from prompt repos/leak archives | Selector fixture plus provenance review |
-| Security hooks | `srednoff-os-hook.ps1` | Blocks high-confidence secrets and dangerous tool actions | Independent security fixtures |
+| Security hooks | `srednoff-os-hook.ps1` | Blocks high-confidence secrets/destructive actions, asks before publish/deploy/bypass actions, records redacted audit entries | Independent security fixtures |
 | CI | `.github/workflows/ci.yml` | Runs validation on Windows and Ubuntu | GitHub Actions |
 | Quality log | `QUALITY.md` | Tracks what is verified and what is not promised | Manual release gate |
 
@@ -149,7 +150,7 @@ Current release gate, as recorded in [QUALITY.md](QUALITY.md):
 | Selector evals | 11/11 PASS | `.\scripts\test-srednoff-os-selector.ps1` |
 | v2.1.1 compatibility evals | 13/13 PASS | `.\scripts\test-srednoff-os-v211.ps1` |
 | v2.1.2 routing/source evals | 12/12 PASS | `.\scripts\test-srednoff-os-v212.ps1` |
-| Security fixture evals | 5/5 PASS | `.\scripts\test-srednoff-os-security-fixtures.ps1` |
+| Security fixture evals | 12/12 PASS | `.\scripts\test-srednoff-os-security-fixtures.ps1` |
 | Profile evals | 4/4 PASS | `.\scripts\test-srednoff-os-profiles.ps1` |
 | Quality mode evals | 5/5 PASS | `.\scripts\test-srednoff-os-quality-modes.ps1` |
 | Kernel validation | 4500 records PASS | `.\scripts\validate-quality-cost-kernel.ps1` |
@@ -217,6 +218,8 @@ Safety guardrails:
 | Prompt secret preflight | `srednoff-os-hook.ps1` |
 | Tool action preflight | `srednoff-os-hook.ps1` |
 | Dangerous command blocklist | Hook fixture tests |
+| Ask before external/bypass actions | `srednoff-os-hook.ps1` fixtures for force push and `--no-verify` |
+| Redacted audit ledger | `events.jsonl` stores findings and input hash, not raw input |
 | Home-root trust warning/fix | `srednoff-os-doctor.ps1 -FixSafe` |
 | Registry provenance checks | `validate-source-registry.ps1` |
 | CI regression checks | `.github/workflows/ci.yml` |
@@ -238,6 +241,7 @@ Safety guardrails:
 | `AGENTS.md` | Global/project behavior contract for Codex |
 | `code_review.md` | Review rules for bugs, security, performance, and maintainability |
 | `.agent/` | Planning templates, quality gates, connector rules, release notes |
+| `.agent/SREDNOFF_OS_CHECKPOINT_5_SECURITY_HOOK_RESEARCH.md` | Security hook source research and adaptation notes |
 | `.codex/skills/` | 306 skill directories and agent profiles |
 | `.codex/srednoff-os/` | Version metadata, source registry, source watchlist |
 | `.codex/srednoff-os/quality-modes.json` | Fast, standard, production, and critical mode metadata |

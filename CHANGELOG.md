@@ -9,6 +9,7 @@
 - Updated project init/sync/install scripts to propagate the public `profiles/` layer.
 - Updated project init to prefer the local package template when running from a repository checkout, with the global template as fallback.
 - Updated the mode router to expose explicit `quality_mode`, validation gates, and group policy while preserving old `mode` compatibility.
+- Updated the Srednoff OS hook with deny/ask/allow decisions, expanded high-confidence secret patterns, stronger destructive command detection, and redacted audit logging.
 - Removed maintainer-specific Windows home paths from the public hook rule and v2.1.1 hook eval fixture.
 - Added `.agent/SREDNOFF_OS_PUBLIC_CORE_BOUNDARY.md` to define public core vs personal profile boundaries.
 
@@ -19,6 +20,7 @@
 - Added `profiles/` with `public-default`, `ivan`, `agency`, and `ru-market` profile scaffolding.
 - Added `srednoff-os-profile.ps1` and profile fixtures for privacy/default validation.
 - Added `quality-modes.json`, `srednoff-os-quality-mode.ps1`, and quality mode fixtures for `fast`, `standard`, `production`, and `critical`.
+- Added checkpoint 5 security hook research notes in `.agent/SREDNOFF_OS_CHECKPOINT_5_SECURITY_HOOK_RESEARCH.md`.
 
 ### Verified
 
@@ -27,9 +29,10 @@
 - Kernel validation passes: 4500 records.
 - Profile evals pass: 4/4.
 - Quality mode evals pass: 5/5.
+- Security fixture evals pass: 12/12.
 - Srednoff OS doctor passes: 29/29.
 
 ### Notes
 
 - NeuralDeep HTML pages are reachable, but the roadmap API endpoints currently return 404.
-- The next checkpoint is security hook upgrade.
+- The next checkpoint is RU risk policies.

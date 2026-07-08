@@ -6,14 +6,14 @@ This file documents what is currently verified and what is intentionally not pro
 
 Last verified: 2026-07-09.
 
-Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. Checkpoint 1 removed public-core hardcoded personal paths. Checkpoint 2 compacted `AGENTS.md` and moved the full rules to `.agent/SREDNOFF_OS_OPERATING_RULES.md`. Checkpoint 3 added the public profile system. Checkpoint 4 added explicit quality modes.
+Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. Checkpoint 1 removed public-core hardcoded personal paths. Checkpoint 2 compacted `AGENTS.md` and moved the full rules to `.agent/SREDNOFF_OS_OPERATING_RULES.md`. Checkpoint 3 added the public profile system. Checkpoint 4 added explicit quality modes. Checkpoint 5 upgraded security hook decisions and audit coverage.
 
 | Check | Status | Command |
 |---|---:|---|
 | Selector regression suite | PASS, 11/11 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-selector.ps1` |
 | v2.1.1 compatibility evals | PASS, 13/13 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v211.ps1` |
 | v2.1.2 routing/source evals | PASS, 12/12 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v212.ps1` |
-| Independent security fixture evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-security-fixtures.ps1` |
+| Independent security fixture evals | PASS, 12/12 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-security-fixtures.ps1` |
 | Profile evals | PASS, 4/4 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-profiles.ps1` |
 | Quality mode evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-quality-modes.ps1` |
 | Fast skill metadata validation | PASS, 308/308 | `powershell -ExecutionPolicy Bypass -File .\scripts\quick-validate-all-skills.ps1 -Mode fast` |
@@ -41,6 +41,7 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 - External prompt mining: claimed-leak and prompt-dump repositories are now handled through a provenance-first skill that extracts only abstract, vendor-neutral patterns and rejects verbatim proprietary prompt text.
 - Profile system: public defaults, maintainer examples, agency settings, and RU-market settings now live in a portable `profiles/` layer with privacy fixtures and doctor coverage.
 - Quality modes: `fast`, `standard`, `production`, and `critical` now map task risk to selector budget, capability count, and validation gates without changing the old `normal/deep/turbo` compatibility fields.
+- Security hook decisions: high-confidence secrets and destructive actions are blocked, externally visible or bypass-prone actions ask for confirmation, and audit entries store findings plus input hashes without raw prompt/tool input.
 
 ## What This Does Not Promise
 

@@ -29,6 +29,7 @@
     "source-registry-provenance-metadata",
     "independent-security-fixtures",
     "portable-skill-index-generation",
-    "quality-modes"
+    "quality-modes",
+    "security-hook-ask-deny-audit"
   ]
 }

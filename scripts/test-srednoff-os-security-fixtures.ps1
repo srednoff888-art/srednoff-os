@@ -38,44 +38,80 @@ function Get-PowerShellExecutable {
 $PowerShellExecutable = Get-PowerShellExecutable
 $Fixtures = Get-Content -LiteralPath $FixturesPath -Raw -Encoding UTF8 | ConvertFrom-Json
 $Results = @()
+$TempCodexHome = Join-Path ([System.IO.Path]::GetTempPath()) ("srednoff-security-evals-" + [guid]::NewGuid().ToString("N"))
+New-Item -ItemType Directory -Force -Path (Join-Path $TempCodexHome "scripts") | Out-Null
+Copy-Item -LiteralPath $HookScript -Destination (Join-Path $TempCodexHome "scripts\srednoff-os-hook.ps1") -Force
+$OldCodexHome = $env:CODEX_HOME
+$env:CODEX_HOME = $TempCodexHome
 
-foreach ($Fixture in $Fixtures) {
-    $Field = [string]$Fixture.field
-    $Content = (@($Fixture.parts) | ForEach-Object { [string]$_ }) -join ""
-    $Payload = [ordered]@{
-        cwd = $ProjectPath
-    }
-    $Payload[$Field] = $Content
-    $PayloadJson = $Payload | ConvertTo-Json -Compress
-
-    $RawOutput = $PayloadJson | & $PowerShellExecutable -NoProfile -ExecutionPolicy Bypass -File $HookScript -Mode ([string]$Fixture.mode) 2>&1
-    $OutputText = ($RawOutput | Out-String).Trim()
-    $Decision = "allow"
-    $Reason = ""
-    try {
-        if ($OutputText) {
-            $Parsed = $OutputText | ConvertFrom-Json
-            if ($Parsed.decision) { $Decision = [string]$Parsed.decision }
-            if ($Parsed.reason) { $Reason = [string]$Parsed.reason }
+try {
+    foreach ($Fixture in $Fixtures) {
+        $Field = [string]$Fixture.field
+        $Content = (@($Fixture.parts) | ForEach-Object { [string]$_ }) -join ""
+        $Payload = [ordered]@{
+            cwd = $ProjectPath
         }
-    } catch {
-        $Reason = $OutputText
-    }
+        $Payload[$Field] = $Content
+        $PayloadJson = $Payload | ConvertTo-Json -Compress
 
-    $ExpectedDecision = [string]$Fixture.expectedDecision
-    $ExpectedFinding = [string]$Fixture.expectedFinding
-    $Passed = $Decision -eq $ExpectedDecision
-    if ($ExpectedDecision -eq "block" -and $ExpectedFinding) {
-        $Passed = $Passed -and ($Reason -match [regex]::Escape($ExpectedFinding))
-    }
+        $RawOutput = $PayloadJson | & $PowerShellExecutable -NoProfile -ExecutionPolicy Bypass -File $HookScript -Mode ([string]$Fixture.mode) 2>&1
+        $OutputText = ($RawOutput | Out-String).Trim()
+        $Decision = "allow"
+        $Reason = ""
+        try {
+            if ($OutputText) {
+                $Parsed = $OutputText | ConvertFrom-Json
+                if ($Parsed.decision) { $Decision = [string]$Parsed.decision }
+                if ($Parsed.reason) { $Reason = [string]$Parsed.reason }
+            }
+        } catch {
+            $Reason = $OutputText
+        }
 
+        $ExpectedDecision = [string]$Fixture.expectedDecision
+        $ExpectedFinding = [string]$Fixture.expectedFinding
+        $Passed = $Decision -eq $ExpectedDecision
+        if (@("block", "ask") -contains $ExpectedDecision -and $ExpectedFinding) {
+            $Passed = $Passed -and ($Reason -match [regex]::Escape($ExpectedFinding))
+        }
+
+        $Results += [pscustomobject]@{
+            id = [string]$Fixture.id
+            mode = [string]$Fixture.mode
+            expected = $ExpectedDecision
+            decision = $Decision
+            passed = $Passed
+            reason = $Reason
+        }
+    }
+} finally {
+    $env:CODEX_HOME = $OldCodexHome
+}
+
+$LedgerPath = Join-Path $TempCodexHome "srednoff-os\logs\events.jsonl"
+if (-not (Test-Path -LiteralPath $LedgerPath -PathType Leaf)) {
     $Results += [pscustomobject]@{
-        id = [string]$Fixture.id
-        mode = [string]$Fixture.mode
-        expected = $ExpectedDecision
-        decision = $Decision
-        passed = $Passed
-        reason = $Reason
+        id = "audit-ledger:exists"
+        mode = "audit"
+        expected = "present"
+        decision = "missing"
+        passed = $false
+        reason = "ledger not written"
+    }
+} else {
+    $LedgerLines = @(Get-Content -LiteralPath $LedgerPath -Encoding UTF8)
+    $LedgerEntries = @($LedgerLines | ForEach-Object { $_ | ConvertFrom-Json })
+    $RawLeak = @($LedgerLines | Where-Object { $_ -match 'sk-|ghp_|sk_live_|123456789:' })
+    $HasHash = @($LedgerEntries | Where-Object { $_.input_sha256 }).Count -gt 0
+    $HasAsk = @($LedgerEntries | Where-Object { $_.decision -eq "ask" }).Count -gt 0
+    $HasBlock = @($LedgerEntries | Where-Object { $_.decision -eq "block" }).Count -gt 0
+    $Results += [pscustomobject]@{
+        id = "audit-ledger:redacted-hashed"
+        mode = "audit"
+        expected = "redacted"
+        decision = "entries=$($LedgerEntries.Count)"
+        passed = ($RawLeak.Count -eq 0 -and $HasHash -and $HasAsk -and $HasBlock)
+        reason = "raw_leaks=$($RawLeak.Count); has_hash=$HasHash; has_ask=$HasAsk; has_block=$HasBlock"
     }
 }
 
