@@ -1,0 +1,34 @@
+schema: srednoff-os.policy.v1
+id: ru-messaging
+version: v2.1.2
+domain: ru-risk
+risk_level: high
+default_decision: ask
+legal_advice: false
+summary: Messenger, customer communication, payment-document transfer, and personal-data transfer risk gate.
+triggers:
+  - messenger
+  - мессенджер
+  - whatsapp
+  - telegram
+  - max
+  - customer chat
+  - support chat
+  - payment document
+  - персональные данные
+required_gates:
+  - messenger_allowed_use_review
+  - personal_data_transfer_review
+  - payment_document_transfer_review
+  - customer_support_retention_review
+  - human_privacy_legal_review
+blocked_without_confirmation:
+  - send_payment_documents_via_foreign_messenger
+  - send_ru_personal_data_via_unreviewed_messenger
+  - automate_customer_outreach_without_consent_review
+source_refs:
+  - https://rkn.gov.ru/press/news/news74710.htm
+  - https://rkn.gov.ru/press/news/news74922.htm
+notes:
+  - Messaging restrictions are time-sensitive; verify the current regulator list before production work.
+  - Do not route sensitive customer data through unreviewed messengers.

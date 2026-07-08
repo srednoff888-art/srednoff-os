@@ -1,0 +1,27 @@
+[
+  {
+    "id": "ru-personal-data",
+    "brief": "обработать персональные данные клиентов РФ и хранение в CRM",
+    "expectedPolicies": ["ru-data"]
+  },
+  {
+    "id": "ru-payments-sbp",
+    "brief": "подключить оплату СБП и возвраты платежей",
+    "expectedPolicies": ["ru-payments"]
+  },
+  {
+    "id": "ru-messaging-payment-docs",
+    "brief": "отправлять платежные документы клиентам через WhatsApp",
+    "expectedPolicies": ["ru-messaging", "ru-payments"]
+  },
+  {
+    "id": "ru-marketplace-ads",
+    "brief": "запустить рекламу товара на Ozon с маркировкой ЕРИР",
+    "expectedPolicies": ["ru-marketplaces"]
+  },
+  {
+    "id": "neuraldeep-import",
+    "brief": "импортировать NeuralDeep MCP server и включить агента",
+    "expectedPolicies": ["neuraldeep"]
+  }
+]

@@ -1,0 +1,37 @@
+schema: srednoff-os.policy.v1
+id: ru-marketplaces
+version: v2.1.2
+domain: ru-risk
+risk_level: high
+default_decision: ask
+legal_advice: false
+summary: Marketplace, seller account, product data, ad labeling, reviews, pricing, and growth risk gate.
+triggers:
+  - marketplace
+  - маркетплейс
+  - ozon
+  - wildberries
+  - yandex market
+  - avito
+  - erir
+  - ерир
+  - advertising labeling
+  - маркировка рекламы
+required_gates:
+  - marketplace_terms_review
+  - seller_account_permissions_review
+  - ad_labeling_erir_review
+  - product_claims_review
+  - review_manipulation_guard
+  - pricing_and_inventory_change_confirmation
+blocked_without_confirmation:
+  - change_live_prices_or_inventory
+  - publish_unreviewed_ad_creative
+  - manipulate_reviews_or_ratings
+  - scrape_marketplace_against_terms
+source_refs:
+  - https://fas.gov.ru/news/32269
+  - https://fas.gov.ru/attachment/847586/download
+notes:
+  - Internet advertising and marketplace policies change; verify FAS/platform rules before launch.
+  - Treat product claims and reviews as policy-sensitive content.

@@ -1,0 +1,36 @@
+schema: srednoff-os.policy.v1
+id: ru-data
+version: v2.1.2
+domain: ru-risk
+risk_level: critical
+default_decision: ask
+legal_advice: false
+summary: Russian personal-data, localization, consent, retention, and cross-border transfer risk gate.
+triggers:
+  - personal data
+  - персональные данные
+  - 152-fz
+  - 242-fz
+  - localization
+  - локализация
+  - roskomnadzor
+  - rkn
+required_gates:
+  - identify_operator_and_data_subjects
+  - data_minimization_review
+  - consent_or_legal_basis_review
+  - localization_and_storage_review
+  - cross_border_transfer_review
+  - retention_deletion_review
+  - human_legal_privacy_review
+blocked_without_confirmation:
+  - upload_ru_personal_data_to_foreign_service
+  - publish_personal_data
+  - disable_consent_or_deletion_flow
+  - move_primary_personal_data_storage_outside_ru
+source_refs:
+  - https://rkn.gov.ru/activity/personal-data/questions/
+  - https://pd.rkn.gov.ru/docs/Obzor_po_lokalizacii.docx
+notes:
+  - Treat current law and regulator guidance as time-sensitive; verify official sources before production work.
+  - Do not present this policy as legal advice.

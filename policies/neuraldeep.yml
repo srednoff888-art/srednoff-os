@@ -1,0 +1,35 @@
+schema: srednoff-os.policy.v1
+id: neuraldeep
+version: v2.1.2
+domain: agent-source-risk
+risk_level: high
+default_decision: ask
+legal_advice: false
+summary: NeuralDeep/source-import risk gate for skills, agents, MCP servers, CLI tools, and prompt-like instructions.
+triggers:
+  - neuraldeep
+  - agent import
+  - skill import
+  - mcp server
+  - prompt repository
+  - external agent
+  - registry import
+required_gates:
+  - source_provenance_review
+  - license_review
+  - tool_permission_review
+  - prompt_injection_review
+  - secret_exfiltration_review
+  - disabled_by_default_registry_entry
+  - human_install_confirmation
+blocked_without_confirmation:
+  - install_external_mcp_server
+  - run_external_cli_installer
+  - enable_unreviewed_agent
+  - copy_license_unclear_prompt_text
+source_refs:
+  - .agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md
+  - .agent/SREDNOFF_OS_OPERATING_RULES.md
+notes:
+  - NeuralDeep API availability was not assumed in checkpoint 0; future importer work must support source drift.
+  - Extract patterns, not proprietary or license-unclear prompt text.

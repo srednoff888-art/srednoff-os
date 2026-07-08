@@ -1,0 +1,9 @@
+schema: srednoff-os.policies.index.v1
+version: v2.1.2
+default_posture: human-review-before-regulated-action
+policies:
+  - ru-data
+  - ru-payments
+  - ru-messaging
+  - ru-marketplaces
+  - neuraldeep

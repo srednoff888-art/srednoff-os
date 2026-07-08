@@ -56,6 +56,7 @@ Current vNext implementation status is tracked in [.agent/SREDNOFF_OS_VNEXT_CHEC
 | Hook decisions are vague | Explicit allow/ask/block security decisions with audit hash logging | Risky actions require user confirmation or are denied |
 | Public core leaks personal defaults | Public profiles plus local-only private overlays | Shared repo stays portable and reviewable |
 | Quality level is implicit | `fast`, `standard`, `production`, and `critical` quality modes | Validation cost matches task risk |
+| RU-market work needs extra gates | `policies/*.yml` for RU data, payments, messaging, marketplaces, and NeuralDeep imports | Regulated or region-sensitive actions ask for review |
 | Regressions are easy to miss | GitHub Actions CI plus local doctor/evals | Pull requests are checked automatically |
 | Old sessions drift from the global rules | Sync scripts update existing Codex project folders with backups | New and old projects stay aligned |
 
@@ -132,6 +133,7 @@ flowchart LR
 | Sync | `sync-codex-skills-to-projects.ps1` | Updates old Codex folders from the current template with backups | Old-session doctor check |
 | Profiles | `profiles/`, `srednoff-os-profile.ps1` | Separates public defaults, maintainer examples, agency workflows, and RU-market overlays | Profile fixtures and doctor check |
 | Quality modes | `quality-modes.json`, `srednoff-os-quality-mode.ps1` | Maps task risk to budget, capability count, and validation gates | Quality mode fixtures and router coverage |
+| Policies | `policies/*.yml`, `srednoff-os-policy-check.ps1` | Matches RU/NeuralDeep policy gates by brief and keeps default `ask` posture | Policy fixtures and doctor check |
 | Selector | `select-quality-cost-capabilities.ps1`, `quality-cost-skill-kernel` | Chooses compact capabilities by value per token | Selector fixtures |
 | Routers | `srednoff-os-mode-router.ps1`, `srednoff-os-domain-router.ps1` | Routes normal/deep/TURBO and task domains | v2.1.1/v2.1.2 evals |
 | UI/3D source ranking | `srednoff-os-design-brief.ps1`, `srednoff-os-source-ranker.ps1` | Ranks UI kits, design connectors, 3D libraries, and asset sources | Registry provenance validation |
@@ -153,6 +155,7 @@ Current release gate, as recorded in [QUALITY.md](QUALITY.md):
 | Security fixture evals | 12/12 PASS | `.\scripts\test-srednoff-os-security-fixtures.ps1` |
 | Profile evals | 4/4 PASS | `.\scripts\test-srednoff-os-profiles.ps1` |
 | Quality mode evals | 5/5 PASS | `.\scripts\test-srednoff-os-quality-modes.ps1` |
+| Policy evals | 5/5 PASS | `.\scripts\test-srednoff-os-policies.ps1` |
 | Kernel validation | 4500 records PASS | `.\scripts\validate-quality-cost-kernel.ps1` |
 | Source registry validation | 17 sources PASS | `.\scripts\validate-source-registry.ps1` |
 | Skill metadata smoke | 308/308 PASS | `.\scripts\quick-validate-all-skills.ps1 -Mode fast` |
@@ -195,6 +198,20 @@ Every registered source now carries:
 | `provenance` | Records where the component or asset comes from |
 | `vetted` | Lets the selector prefer known lower-risk sources |
 | `copy_policy` | Forces copy-adapt-upgrade instead of blind copying |
+
+## Safety Model
+
+## RU Risk Policies
+
+| Policy | Default | Covers |
+|---|---|---|
+| `ru-data` | ask | personal data, localization, consent/legal basis, cross-border transfer |
+| `ru-payments` | ask | SBP/payment provider, refunds, payment documents, live money movement |
+| `ru-messaging` | ask | foreign messengers, customer data, payment-document transfer |
+| `ru-marketplaces` | ask | marketplace terms, ad labeling, ERIR, product claims, reviews |
+| `neuraldeep` | ask | external skill/agent/MCP/CLI import, source provenance, license, tool risk |
+
+These are risk gates, not legal advice. Current official sources must be rechecked before production or regulated work.
 
 ## Safety Model
 
@@ -246,6 +263,7 @@ Safety guardrails:
 | `.codex/srednoff-os/` | Version metadata, source registry, source watchlist |
 | `.codex/srednoff-os/quality-modes.json` | Fast, standard, production, and critical mode metadata |
 | `profiles/` | Public profile metadata and sanitized overlay examples |
+| `policies/` | RU and NeuralDeep policy gates |
 | `scripts/` | Install, sync, status, doctor, selector, router, brief, ranking, validation |
 | `evals/` | Regression fixtures for selectors, routers, source ranking, and hook security checks |
 | `hooks.example.json` | Portable hook example without private local state |

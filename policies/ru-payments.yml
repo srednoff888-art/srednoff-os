@@ -1,0 +1,37 @@
+schema: srednoff-os.policy.v1
+id: ru-payments
+version: v2.1.2
+domain: ru-risk
+risk_level: critical
+default_decision: ask
+legal_advice: false
+summary: Russian payment, SBP, payment document, refund, and payment-provider risk gate.
+triggers:
+  - payment
+  - платеж
+  - sbp
+  - сбп
+  - bank of russia
+  - банк россии
+  - refund
+  - возврат
+  - payment document
+required_gates:
+  - provider_contract_review
+  - payment_data_minimization
+  - refund_and_dispute_flow_review
+  - fiscal_receipt_or_accounting_review
+  - no_payment_docs_in_banned_messengers
+  - human_finance_legal_review
+blocked_without_confirmation:
+  - process_real_payment
+  - change_payment_provider
+  - send_payment_document_via_foreign_messenger
+  - alter_refund_or_chargeback_logic
+source_refs:
+  - https://cbr.ru/psystem/
+  - https://cbr.ru/Psystem/sfp/
+  - https://cbr.ru/faq/nps/
+notes:
+  - Payment integrations are externally visible and can move money; require explicit user confirmation before live changes.
+  - Verify Bank of Russia and provider documentation before production work.

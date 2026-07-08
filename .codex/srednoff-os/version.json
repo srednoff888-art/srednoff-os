@@ -30,6 +30,7 @@
     "independent-security-fixtures",
     "portable-skill-index-generation",
     "quality-modes",
-    "security-hook-ask-deny-audit"
+    "security-hook-ask-deny-audit",
+    "ru-risk-policies"
   ]
 }

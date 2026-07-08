@@ -25,8 +25,8 @@ Purpose: implement the vNext roadmap in small auditable checkpoints. Every check
 | 3 | Profile system | Add public-default, ivan, agency, and ru-market profile scaffolding | `profiles/` structure and selection rules | Done |
 | 4 | Quality modes | Add fast, standard, production, and critical modes | Mode metadata and router/eval coverage | Done |
 | 5 | Security hook upgrade | Strengthen destructive command, secret leak, ask/deny, and audit-log handling | Hook behavior plus security fixtures | Done |
-| 6 | RU risk policies | Add NeuralDeep, marketplace, payments, messaging, and RU data policies | `policies/*.yml` plus policy evals | Next |
-| 7 | NeuralDeep registry skeleton | Add skills, MCP, CLI, index, trust report, and import log structure | `registry/neuraldeep/` safe disabled registry | Pending |
+| 6 | RU risk policies | Add NeuralDeep, marketplace, payments, messaging, and RU data policies | `policies/*.yml` plus policy evals | Done |
+| 7 | NeuralDeep registry skeleton | Add skills, MCP, CLI, index, trust report, and import log structure | `registry/neuraldeep/` safe disabled registry | Next |
 | 8 | NeuralDeep importer | Add importer, mapper, audit, README; support API when available and HTML fallback when API is absent | `integrations/neuraldeep/` tooling and evals | Pending |
 | 9 | RU bundles | Add ru-seo, ru-marketplaces, ru-enterprise, ru-1c, ru-llm, ru-content, ru-payments, ru-messaging, ru-devops bundles | `bundles/ru-*` metadata | Pending |
 | 10 | RU agents | Add RU specialist agent profiles for SEO, marketplaces, 1C, enterprise, LLM, content, payments, messaging | `agents/ru-*.md` | Pending |
@@ -37,4 +37,4 @@ Purpose: implement the vNext roadmap in small auditable checkpoints. Every check
 
 ## Current Position
 
-Checkpoint 5 is complete. The next implementation checkpoint is checkpoint 6: RU risk policies.
+Checkpoint 6 is complete. The next implementation checkpoint is checkpoint 7: NeuralDeep registry skeleton.

@@ -121,6 +121,18 @@ if (Test-JsonFile -Path $QualityModes) {
     Add-Check -Name "quality-modes" -Status "FAIL" -Detail "Missing or invalid quality-modes.json" -Fix "Install or sync Srednoff OS quality modes"
 }
 
+$PoliciesRoot = Resolve-LocalOrHome "policies" "policies" "Container"
+$PoliciesIndex = Join-Path $PoliciesRoot "index.yml"
+if (Test-Path -LiteralPath $PoliciesIndex -PathType Leaf) {
+    $PolicyFiles = @(Get-ChildItem -LiteralPath $PoliciesRoot -Filter *.yml -File -ErrorAction SilentlyContinue | Where-Object { $_.Name -ne "index.yml" })
+    $PolicyNames = @($PolicyFiles | ForEach-Object { $_.BaseName })
+    $RequiredPolicyNames = @("ru-data", "ru-payments", "ru-messaging", "ru-marketplaces", "neuraldeep")
+    $MissingPolicies = @($RequiredPolicyNames | Where-Object { $PolicyNames -notcontains $_ })
+    Add-Check -Name "policies" -Status ($(if ($MissingPolicies.Count -eq 0) { "OK" } else { "FAIL" })) -Detail "root=$PoliciesRoot; policies=$($PolicyNames.Count); missing=$($MissingPolicies -join ',')" -Fix "Restore policies/*.yml"
+} else {
+    Add-Check -Name "policies" -Status "FAIL" -Detail "Missing policies/index.yml" -Fix "Install or sync Srednoff OS policies"
+}
+
 $Kernel = Resolve-LocalOrHome ".codex\skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "Leaf"
 $KernelCount = Count-JsonArray -Path $Kernel
 Add-Check -Name "kernel" -Status ($(if ($KernelCount -eq $ExpectedKernelRecords) { "OK" } else { "FAIL" })) -Detail "records=$KernelCount expected=$ExpectedKernelRecords" -Fix "Run validate-quality-cost-kernel.ps1 -Rebuild"
@@ -327,6 +339,16 @@ if ($RunEvals) {
         Add-Check -Name "quality-mode-evals" -Status ($(if ($QualityModeEvalOk) { "OK" } else { "FAIL" })) -Detail (($QualityModeEvalOutput | Out-String).Trim())
     } else {
         Add-Check -Name "quality-mode-evals" -Status "FAIL" -Detail "Missing quality mode eval script"
+    }
+
+    $PolicyEvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-policies.ps1" "scripts\test-srednoff-os-policies.ps1" "Leaf"
+    if (Test-Path -LiteralPath $PolicyEvalScript -PathType Leaf) {
+        $global:LASTEXITCODE = 0
+        $PolicyEvalOutput = & $PolicyEvalScript -ProjectPath $ProjectRoot 2>&1
+        $PolicyEvalOk = $LASTEXITCODE -eq 0
+        Add-Check -Name "policy-evals" -Status ($(if ($PolicyEvalOk) { "OK" } else { "FAIL" })) -Detail (($PolicyEvalOutput | Out-String).Trim())
+    } else {
+        Add-Check -Name "policy-evals" -Status "FAIL" -Detail "Missing policy eval script"
     }
 }
 
