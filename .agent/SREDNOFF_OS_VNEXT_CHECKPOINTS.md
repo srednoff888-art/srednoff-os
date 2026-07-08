@@ -21,8 +21,8 @@ Purpose: implement the vNext roadmap in small auditable checkpoints. Every check
 |---:|---|---|---|---|
 | 0 | Preflight audit and baseline | Inspect repo, docs, scripts, evals, CI, NeuralDeep availability, donor repo availability, current risks | `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md` | Done |
 | 1 | Public core vs personal profiles | Remove personal hardcoded paths from public core and define public/private boundaries | Public-safe path handling and profile boundary notes | Done |
-| 2 | AGENTS.md entrypoint | Convert AGENTS.md from full rule dump into a compact entrypoint with linked docs | Smaller startup surface and moved reference docs | Next |
-| 3 | Profile system | Add public-default, ivan, agency, and ru-market profile scaffolding | `profiles/` structure and selection rules | Pending |
+| 2 | AGENTS.md entrypoint | Convert AGENTS.md from full rule dump into a compact entrypoint with linked docs | Smaller startup surface and moved reference docs | Done |
+| 3 | Profile system | Add public-default, ivan, agency, and ru-market profile scaffolding | `profiles/` structure and selection rules | Next |
 | 4 | Quality modes | Add fast, standard, production, and critical modes | Mode metadata and router/eval coverage | Pending |
 | 5 | Security hook upgrade | Strengthen destructive command, secret leak, ask/deny, and audit-log handling | Hook behavior plus security fixtures | Pending |
 | 6 | RU risk policies | Add NeuralDeep, marketplace, payments, messaging, and RU data policies | `policies/*.yml` plus policy evals | Pending |
@@ -37,4 +37,4 @@ Purpose: implement the vNext roadmap in small auditable checkpoints. Every check
 
 ## Current Position
 
-Checkpoint 1 is complete. The next implementation checkpoint is checkpoint 2: AGENTS.md entrypoint.
+Checkpoint 2 is complete. The next implementation checkpoint is checkpoint 3: profile system.

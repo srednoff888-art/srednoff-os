@@ -4,6 +4,9 @@
 
 ### Changed
 
+- Converted root `AGENTS.md` into a compact Srednoff OS entrypoint and preserved the previous full rules in `.agent/SREDNOFF_OS_OPERATING_RULES.md`.
+- Updated project init/sync scripts to propagate all `.agent` reference files.
+- Updated project init to prefer the local package template when running from a repository checkout, with the global template as fallback.
 - Removed maintainer-specific Windows home paths from the public hook rule and v2.1.1 hook eval fixture.
 - Added `.agent/SREDNOFF_OS_PUBLIC_CORE_BOUNDARY.md` to define public core vs personal profile boundaries.
 

@@ -9,7 +9,8 @@ $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $LocalPackageRoot = (Resolve-Path (Join-Path $ScriptDir "..")).Path
 $CodexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME ".codex" }
 $GlobalTemplateDir = Join-Path $CodexHome "templates\codex-md-os"
-$TemplateDir = if (Test-Path -LiteralPath $GlobalTemplateDir) { $GlobalTemplateDir } else { $LocalPackageRoot }
+$LocalTemplateReady = (Test-Path -LiteralPath (Join-Path $LocalPackageRoot "AGENTS.md") -PathType Leaf) -and (Test-Path -LiteralPath (Join-Path $LocalPackageRoot ".codex\skills") -PathType Container)
+$TemplateDir = if ($LocalTemplateReady) { $LocalPackageRoot } elseif (Test-Path -LiteralPath $GlobalTemplateDir) { $GlobalTemplateDir } else { $LocalPackageRoot }
 
 New-Item -ItemType Directory -Force -Path $ProjectPath | Out-Null
 $TargetDir = (Resolve-Path $ProjectPath).Path
@@ -32,18 +33,10 @@ try {
 
 $Files = @(
     "AGENTS.md",
-    "code_review.md",
-    ".agent\PLANS.md",
-    ".agent\TASK_TEMPLATE.md",
-    ".agent\GITHUB_RESEARCH.md",
-    ".agent\CONNECTORS.md",
-    ".agent\QUALITY_GATE.md",
-    ".agent\USER_BRIEFING.md",
-    ".agent\SREDNOFF_OS_V2_BACKLOG.md",
-    ".agent\SREDNOFF_OS_V2_1_RELEASE.md"
+    "code_review.md"
 )
 
-foreach ($Directory in @(".codex\skills", ".codex\srednoff-os", "scripts", "evals")) {
+foreach ($Directory in @(".agent", ".codex\skills", ".codex\srednoff-os", "scripts", "evals")) {
     $SourceDirectory = Join-Path $TemplateDir $Directory
     if (Test-Path -LiteralPath $SourceDirectory) {
         $Files += Get-ChildItem -LiteralPath $SourceDirectory -Recurse -File |

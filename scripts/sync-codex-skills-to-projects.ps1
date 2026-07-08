@@ -9,6 +9,7 @@ $Timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
 $TemplateRoot = if (Test-Path -LiteralPath $TemplateRoot -PathType Container) { (Resolve-Path -LiteralPath $TemplateRoot).Path } else { $TemplateRoot }
 $SourceSkills = Join-Path $TemplateRoot ".codex\skills"
 $SourceSrednoff = Join-Path $TemplateRoot ".codex\srednoff-os"
+$SourceAgent = Join-Path $TemplateRoot ".agent"
 $SourceScripts = Join-Path $TemplateRoot "scripts"
 $SourceEvals = Join-Path $TemplateRoot "evals"
 
@@ -80,7 +81,7 @@ foreach ($Project in $ProjectPath) {
     Write-Output "Project: $Root"
 
     $Files = Get-ChildItem -LiteralPath $SourceSkills -Recurse -File
-    foreach ($ExtraDirectory in @($SourceSrednoff, $SourceEvals)) {
+    foreach ($ExtraDirectory in @($SourceAgent, $SourceSrednoff, $SourceEvals)) {
         if (Test-Path -LiteralPath $ExtraDirectory) {
             $Files += Get-ChildItem -LiteralPath $ExtraDirectory -Recurse -File
         }
@@ -92,6 +93,8 @@ foreach ($Project in $ProjectPath) {
     foreach ($File in $Files) {
         $Base = if ($File.FullName.StartsWith($SourceSkills, [System.StringComparison]::OrdinalIgnoreCase)) {
             $SourceSkills
+        } elseif ($File.FullName.StartsWith($SourceAgent, [System.StringComparison]::OrdinalIgnoreCase)) {
+            $SourceAgent
         } elseif ($File.FullName.StartsWith($SourceSrednoff, [System.StringComparison]::OrdinalIgnoreCase)) {
             $SourceSrednoff
         } elseif ($File.FullName.StartsWith($SourceEvals, [System.StringComparison]::OrdinalIgnoreCase)) {
@@ -102,6 +105,8 @@ foreach ($Project in $ProjectPath) {
         $Relative = $File.FullName.Substring($Base.Length + 1)
         $DestinationPrefix = if ($Base -eq $SourceSkills) {
             ".codex\skills"
+        } elseif ($Base -eq $SourceAgent) {
+            ".agent"
         } elseif ($Base -eq $SourceSrednoff) {
             ".codex\srednoff-os"
         } elseif ($Base -eq $SourceEvals) {
