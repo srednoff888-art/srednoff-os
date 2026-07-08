@@ -4,6 +4,7 @@
 config.toml
 hooks.json
 hooks.state
+.codex/srednoff-os/mcp-inventory.json
 *.log
 *.tmp
 *.bak.*

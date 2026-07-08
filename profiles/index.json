@@ -1,0 +1,35 @@
+{
+  "schema": "srednoff-os.profiles.index.v1",
+  "version": "v2.1.2",
+  "default_profile": "public-default",
+  "profiles": [
+    {
+      "name": "public-default",
+      "path": "public-default/profile.json",
+      "public": true,
+      "default_enabled": true,
+      "risk": "low"
+    },
+    {
+      "name": "ivan",
+      "path": "ivan/profile.example.json",
+      "public": true,
+      "default_enabled": false,
+      "risk": "personal-overlay-example"
+    },
+    {
+      "name": "agency",
+      "path": "agency/profile.json",
+      "public": true,
+      "default_enabled": false,
+      "risk": "client-context"
+    },
+    {
+      "name": "ru-market",
+      "path": "ru-market/profile.json",
+      "public": true,
+      "default_enabled": false,
+      "risk": "regional-policy"
+    }
+  ]
+}

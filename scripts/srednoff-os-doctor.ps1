@@ -96,6 +96,21 @@ if (Test-JsonFile -Path $VersionFile) {
     Add-Check -Name "version" -Status "FAIL" -Detail "Missing or invalid version manifest"
 }
 
+$ProfilesRoot = Resolve-LocalOrHome "profiles" "profiles" "Container"
+$ProfilesIndex = Join-Path $ProfilesRoot "index.json"
+if (Test-JsonFile -Path $ProfilesIndex) {
+    $ProfilesManifest = Get-Content -LiteralPath $ProfilesIndex -Raw -Encoding UTF8 | ConvertFrom-Json
+    $ProfileNames = @($ProfilesManifest.profiles | ForEach-Object { $_.name })
+    $HasPublicDefault = $ProfileNames -contains "public-default"
+    $HasIvanExample = $ProfileNames -contains "ivan"
+    $HasAgency = $ProfileNames -contains "agency"
+    $HasRuMarket = $ProfileNames -contains "ru-market"
+    $ProfilesOk = $HasPublicDefault -and $HasIvanExample -and $HasAgency -and $HasRuMarket
+    Add-Check -Name "profiles" -Status ($(if ($ProfilesOk) { "OK" } else { "WARN" })) -Detail "root=$ProfilesRoot; profiles=$($ProfileNames.Count); public-default=$HasPublicDefault; ivan=$HasIvanExample; agency=$HasAgency; ru-market=$HasRuMarket" -Fix "Restore profiles/index.json and profile JSON files"
+} else {
+    Add-Check -Name "profiles" -Status "FAIL" -Detail "Missing or invalid profiles/index.json" -Fix "Install or sync Srednoff OS profiles"
+}
+
 $Kernel = Resolve-LocalOrHome ".codex\skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "Leaf"
 $KernelCount = Count-JsonArray -Path $Kernel
 Add-Check -Name "kernel" -Status ($(if ($KernelCount -eq $ExpectedKernelRecords) { "OK" } else { "FAIL" })) -Detail "records=$KernelCount expected=$ExpectedKernelRecords" -Fix "Run validate-quality-cost-kernel.ps1 -Rebuild"
@@ -282,6 +297,16 @@ if ($RunEvals) {
         Add-Check -Name "security-fixture-evals" -Status ($(if ($SecurityFixtureOk) { "OK" } else { "FAIL" })) -Detail (($SecurityFixtureOutput | Out-String).Trim())
     } else {
         Add-Check -Name "security-fixture-evals" -Status "FAIL" -Detail "Missing security fixture eval script"
+    }
+
+    $ProfileEvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-profiles.ps1" "scripts\test-srednoff-os-profiles.ps1" "Leaf"
+    if (Test-Path -LiteralPath $ProfileEvalScript -PathType Leaf) {
+        $global:LASTEXITCODE = 0
+        $ProfileEvalOutput = & $ProfileEvalScript -ProjectPath $ProjectRoot 2>&1
+        $ProfileEvalOk = $LASTEXITCODE -eq 0
+        Add-Check -Name "profile-evals" -Status ($(if ($ProfileEvalOk) { "OK" } else { "FAIL" })) -Detail (($ProfileEvalOutput | Out-String).Trim())
+    } else {
+        Add-Check -Name "profile-evals" -Status "FAIL" -Detail "Missing profile eval script"
     }
 }
 

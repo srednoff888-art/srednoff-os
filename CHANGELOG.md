@@ -6,6 +6,7 @@
 
 - Converted root `AGENTS.md` into a compact Srednoff OS entrypoint and preserved the previous full rules in `.agent/SREDNOFF_OS_OPERATING_RULES.md`.
 - Updated project init/sync scripts to propagate all `.agent` reference files.
+- Updated project init/sync/install scripts to propagate the public `profiles/` layer.
 - Updated project init to prefer the local package template when running from a repository checkout, with the global template as fallback.
 - Removed maintainer-specific Windows home paths from the public hook rule and v2.1.1 hook eval fixture.
 - Added `.agent/SREDNOFF_OS_PUBLIC_CORE_BOUNDARY.md` to define public core vs personal profile boundaries.
@@ -14,15 +15,18 @@
 
 - Added the vNext checkpoint plan in `.agent/SREDNOFF_OS_VNEXT_CHECKPOINTS.md`.
 - Added checkpoint 0 preflight audit in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`.
+- Added `profiles/` with `public-default`, `ivan`, `agency`, and `ru-market` profile scaffolding.
+- Added `srednoff-os-profile.ps1` and profile fixtures for privacy/default validation.
 
 ### Verified
 
 - Srednoff OS status check passes for the public repo.
 - Selector evals pass: 11/11.
 - Kernel validation passes: 4500 records.
-- Srednoff OS doctor passes: 25/25.
+- Profile evals pass: 4/4.
+- Srednoff OS doctor passes: 27/27.
 
 ### Notes
 
 - NeuralDeep HTML pages are reachable, but the roadmap API endpoints currently return 404.
-- The next checkpoint is public-core cleanup of personal hardcoded paths.
+- The next checkpoint is quality modes.

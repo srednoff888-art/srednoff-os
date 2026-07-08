@@ -1,0 +1,32 @@
+{
+  "schema": "srednoff-os.profile.v1",
+  "name": "ivan",
+  "version": "v2.1.2",
+  "public": true,
+  "default_enabled": false,
+  "description": "Sanitized example of a maintainer-local overlay. Private values must stay outside the public repo.",
+  "mode_default": "balanced",
+  "selector": {
+    "budget": "balanced",
+    "max_capabilities": 24,
+    "prefer_groups": [1, 2],
+    "allow_group_3": "task_or_turbo_only"
+  },
+  "domains": [
+    "programming",
+    "ui-ux",
+    "3d-web",
+    "mobile",
+    "seo",
+    "ppc",
+    "growth"
+  ],
+  "validation_gates": [
+    "status-check",
+    "doctor-if-system-change",
+    "public-core-boundary-check",
+    "profile-privacy-check"
+  ],
+  "private_overlay_allowed": true,
+  "private_overlay_example": "$HOME/.codex/profiles/ivan.local.json"
+}

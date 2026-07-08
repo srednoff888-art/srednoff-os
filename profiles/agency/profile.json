@@ -1,0 +1,33 @@
+{
+  "schema": "srednoff-os.profile.v1",
+  "name": "agency",
+  "version": "v2.1.2",
+  "public": true,
+  "default_enabled": false,
+  "description": "Agency workflow defaults for client-facing build, design, SEO, and launch work.",
+  "mode_default": "balanced",
+  "selector": {
+    "budget": "balanced",
+    "max_capabilities": 28,
+    "prefer_groups": [1, 2],
+    "allow_group_3": "launch_or_security_or_turbo"
+  },
+  "domains": [
+    "ui-ux",
+    "web-design",
+    "3d-web",
+    "mobile",
+    "seo",
+    "ppc",
+    "growth",
+    "production"
+  ],
+  "validation_gates": [
+    "design-brief-if-visual",
+    "source-ranking-if-external-component",
+    "accessibility-check",
+    "seo-or-growth-check",
+    "handoff-summary"
+  ],
+  "private_overlay_allowed": true
+}

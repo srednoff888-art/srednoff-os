@@ -1,0 +1,26 @@
+[
+  {
+    "id": "public-default-enabled",
+    "profile": "public-default",
+    "expectedDefaultEnabled": true,
+    "expectedPolicyRequired": false
+  },
+  {
+    "id": "ivan-example-disabled",
+    "profile": "ivan",
+    "expectedDefaultEnabled": false,
+    "expectedPrivateOverlayAllowed": true
+  },
+  {
+    "id": "agency-disabled",
+    "profile": "agency",
+    "expectedDefaultEnabled": false,
+    "expectedPrivateOverlayAllowed": true
+  },
+  {
+    "id": "ru-market-policy",
+    "profile": "ru-market",
+    "expectedDefaultEnabled": false,
+    "expectedPolicyRequired": true
+  }
+]

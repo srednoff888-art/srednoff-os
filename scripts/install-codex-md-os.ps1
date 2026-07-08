@@ -63,12 +63,14 @@ Copy-TemplateItem ".codex\skills"
 Copy-TemplateItem ".codex\skill-index.json"
 Copy-TemplateItem ".codex\srednoff-os"
 Copy-TemplateItem "evals"
+Copy-TemplateItem "profiles"
 Copy-TemplateItem "scripts"
 
 Copy-DirectoryContents -Source (Join-Path $PackageRoot ".codex\skills") -Destination (Join-Path $CodexHome "skills") -Label "skills"
 Copy-DirectoryContents -Source (Join-Path $PackageRoot ".codex\srednoff-os") -Destination (Join-Path $CodexHome "srednoff-os") -Label "srednoff-os"
 Copy-DirectoryContents -Source (Join-Path $PackageRoot "scripts") -Destination (Join-Path $CodexHome "scripts") -Label "scripts"
 Copy-DirectoryContents -Source (Join-Path $PackageRoot "evals") -Destination (Join-Path $CodexHome "evals") -Label "evals"
+Copy-DirectoryContents -Source (Join-Path $PackageRoot "profiles") -Destination (Join-Path $CodexHome "profiles") -Label "profiles"
 
 $GlobalAgents = Join-Path $CodexHome "AGENTS.md"
 Backup-Path -Path $GlobalAgents

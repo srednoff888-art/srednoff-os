@@ -1,0 +1,34 @@
+{
+  "schema": "srednoff-os.profile.v1",
+  "name": "ru-market",
+  "version": "v2.1.2",
+  "public": true,
+  "default_enabled": false,
+  "description": "Russian-market workflow defaults with regional SEO, content, marketplace, payment, and policy awareness.",
+  "mode_default": "balanced",
+  "selector": {
+    "budget": "deep",
+    "max_capabilities": 32,
+    "prefer_groups": [1, 2],
+    "allow_group_3": "regional_policy_or_launch_or_turbo"
+  },
+  "domains": [
+    "ru-seo",
+    "ru-content",
+    "ru-marketplaces",
+    "ru-payments",
+    "ru-messaging",
+    "ru-enterprise",
+    "programming",
+    "security"
+  ],
+  "validation_gates": [
+    "regional-policy-review",
+    "localization-review",
+    "seo-risk-review",
+    "payment-risk-review",
+    "privacy-risk-review"
+  ],
+  "policy_required": true,
+  "private_overlay_allowed": true
+}

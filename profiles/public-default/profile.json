@@ -1,0 +1,31 @@
+{
+  "schema": "srednoff-os.profile.v1",
+  "name": "public-default",
+  "version": "v2.1.2",
+  "public": true,
+  "default_enabled": true,
+  "description": "Portable public defaults for Srednoff OS.",
+  "mode_default": "balanced",
+  "selector": {
+    "budget": "balanced",
+    "max_capabilities": 24,
+    "prefer_groups": [1, 2],
+    "allow_group_3": "only_when_concrete_result"
+  },
+  "domains": [
+    "programming",
+    "ui-ux",
+    "web-design",
+    "seo",
+    "security",
+    "production"
+  ],
+  "validation_gates": [
+    "status-check",
+    "doctor-if-system-change",
+    "relevant-tests",
+    "security-risk-review"
+  ],
+  "public_core_boundary": ".agent/SREDNOFF_OS_PUBLIC_CORE_BOUNDARY.md",
+  "private_overlay_allowed": false
+}
