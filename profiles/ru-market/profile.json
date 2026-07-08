@@ -5,7 +5,7 @@
   "public": true,
   "default_enabled": false,
   "description": "Russian-market workflow defaults with regional SEO, content, marketplace, payment, and policy awareness.",
-  "mode_default": "balanced",
+  "mode_default": "production",
   "selector": {
     "budget": "deep",
     "max_capabilities": 32,

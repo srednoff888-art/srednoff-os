@@ -6,7 +6,7 @@ This file documents what is currently verified and what is intentionally not pro
 
 Last verified: 2026-07-09.
 
-Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. Checkpoint 1 removed public-core hardcoded personal paths. Checkpoint 2 compacted `AGENTS.md` and moved the full rules to `.agent/SREDNOFF_OS_OPERATING_RULES.md`. Checkpoint 3 added the public profile system.
+Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. Checkpoint 1 removed public-core hardcoded personal paths. Checkpoint 2 compacted `AGENTS.md` and moved the full rules to `.agent/SREDNOFF_OS_OPERATING_RULES.md`. Checkpoint 3 added the public profile system. Checkpoint 4 added explicit quality modes.
 
 | Check | Status | Command |
 |---|---:|---|
@@ -15,12 +15,13 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 | v2.1.2 routing/source evals | PASS, 12/12 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v212.ps1` |
 | Independent security fixture evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-security-fixtures.ps1` |
 | Profile evals | PASS, 4/4 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-profiles.ps1` |
+| Quality mode evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-quality-modes.ps1` |
 | Fast skill metadata validation | PASS, 308/308 | `powershell -ExecutionPolicy Bypass -File .\scripts\quick-validate-all-skills.ps1 -Mode fast` |
 | Kernel catalog validation | PASS, 4500 records | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-quality-cost-kernel.ps1` |
 | Source registry metadata validation | PASS, 17 sources | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-source-registry.ps1` |
-| PowerShell parse check | PASS, 24 scripts | `Get-ChildItem .\scripts -Filter *.ps1` with PowerShell parser |
+| PowerShell parse check | PASS, 26 scripts | `Get-ChildItem .\scripts -Filter *.ps1` with PowerShell parser |
 | Bash syntax check | PASS, 3 scripts | `bash -n scripts/init-codex-project.sh scripts/install-codex-md-os.sh .codex/skills/agentic-seo-skill/scripts/pre_commit_seo_check.sh` |
-| Srednoff OS doctor | PASS, 27/27 | `powershell -ExecutionPolicy Bypass -File .\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
+| Srednoff OS doctor | PASS, 29/29 | `powershell -ExecutionPolicy Bypass -File .\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
 | GitHub Actions CI | PRESENT | `.github/workflows/ci.yml` installs ShellCheck and PSScriptAnalyzer on runners |
 | Secret scan | PASS | high-confidence token/path scan before publication |
 
@@ -39,6 +40,7 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 - Independent security fixtures: hook behavior is now tested from external fixture data instead of only inline/manual cases.
 - External prompt mining: claimed-leak and prompt-dump repositories are now handled through a provenance-first skill that extracts only abstract, vendor-neutral patterns and rejects verbatim proprietary prompt text.
 - Profile system: public defaults, maintainer examples, agency settings, and RU-market settings now live in a portable `profiles/` layer with privacy fixtures and doctor coverage.
+- Quality modes: `fast`, `standard`, `production`, and `critical` now map task risk to selector budget, capability count, and validation gates without changing the old `normal/deep/turbo` compatibility fields.
 
 ## What This Does Not Promise
 
@@ -64,6 +66,7 @@ powershell -ExecutionPolicy Bypass -File ".\scripts\test-srednoff-os-v211.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\test-srednoff-os-v212.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\test-srednoff-os-security-fixtures.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\test-srednoff-os-profiles.ps1"
+powershell -ExecutionPolicy Bypass -File ".\scripts\test-srednoff-os-quality-modes.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\quick-validate-all-skills.ps1" -Mode fast
 powershell -ExecutionPolicy Bypass -File ".\scripts\validate-quality-cost-kernel.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\validate-source-registry.ps1"

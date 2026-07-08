@@ -5,7 +5,7 @@
   "public": true,
   "default_enabled": true,
   "description": "Portable public defaults for Srednoff OS.",
-  "mode_default": "balanced",
+  "mode_default": "standard",
   "selector": {
     "budget": "balanced",
     "max_capabilities": 24,

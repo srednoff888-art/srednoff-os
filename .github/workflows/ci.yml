@@ -65,6 +65,7 @@ jobs:
           .\scripts\test-srednoff-os-v212.ps1
           .\scripts\test-srednoff-os-security-fixtures.ps1
           .\scripts\test-srednoff-os-profiles.ps1
+          .\scripts\test-srednoff-os-quality-modes.ps1
 
       - name: Fast skill validation
         shell: pwsh
@@ -114,3 +115,4 @@ jobs:
           ./scripts/test-srednoff-os-v212.ps1
           ./scripts/test-srednoff-os-security-fixtures.ps1
           ./scripts/test-srednoff-os-profiles.ps1
+          ./scripts/test-srednoff-os-quality-modes.ps1

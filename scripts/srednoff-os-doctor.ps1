@@ -111,6 +111,16 @@ if (Test-JsonFile -Path $ProfilesIndex) {
     Add-Check -Name "profiles" -Status "FAIL" -Detail "Missing or invalid profiles/index.json" -Fix "Install or sync Srednoff OS profiles"
 }
 
+$QualityModes = Resolve-LocalOrHome ".codex\srednoff-os\quality-modes.json" "srednoff-os\quality-modes.json" "Leaf"
+if (Test-JsonFile -Path $QualityModes) {
+    $QualityManifest = Get-Content -LiteralPath $QualityModes -Raw -Encoding UTF8 | ConvertFrom-Json
+    $QualityNames = @($QualityManifest.modes | ForEach-Object { $_.name })
+    $QualityOk = ($QualityNames -contains "fast") -and ($QualityNames -contains "standard") -and ($QualityNames -contains "production") -and ($QualityNames -contains "critical")
+    Add-Check -Name "quality-modes" -Status ($(if ($QualityOk) { "OK" } else { "FAIL" })) -Detail "modes=$($QualityNames -join ','); default=$($QualityManifest.default_quality_mode)" -Fix "Restore .codex\srednoff-os\quality-modes.json"
+} else {
+    Add-Check -Name "quality-modes" -Status "FAIL" -Detail "Missing or invalid quality-modes.json" -Fix "Install or sync Srednoff OS quality modes"
+}
+
 $Kernel = Resolve-LocalOrHome ".codex\skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "Leaf"
 $KernelCount = Count-JsonArray -Path $Kernel
 Add-Check -Name "kernel" -Status ($(if ($KernelCount -eq $ExpectedKernelRecords) { "OK" } else { "FAIL" })) -Detail "records=$KernelCount expected=$ExpectedKernelRecords" -Fix "Run validate-quality-cost-kernel.ps1 -Rebuild"
@@ -307,6 +317,16 @@ if ($RunEvals) {
         Add-Check -Name "profile-evals" -Status ($(if ($ProfileEvalOk) { "OK" } else { "FAIL" })) -Detail (($ProfileEvalOutput | Out-String).Trim())
     } else {
         Add-Check -Name "profile-evals" -Status "FAIL" -Detail "Missing profile eval script"
+    }
+
+    $QualityModeEvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-quality-modes.ps1" "scripts\test-srednoff-os-quality-modes.ps1" "Leaf"
+    if (Test-Path -LiteralPath $QualityModeEvalScript -PathType Leaf) {
+        $global:LASTEXITCODE = 0
+        $QualityModeEvalOutput = & $QualityModeEvalScript -ProjectPath $ProjectRoot 2>&1
+        $QualityModeEvalOk = $LASTEXITCODE -eq 0
+        Add-Check -Name "quality-mode-evals" -Status ($(if ($QualityModeEvalOk) { "OK" } else { "FAIL" })) -Detail (($QualityModeEvalOutput | Out-String).Trim())
+    } else {
+        Add-Check -Name "quality-mode-evals" -Status "FAIL" -Detail "Missing quality mode eval script"
     }
 }
 

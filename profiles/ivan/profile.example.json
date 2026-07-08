@@ -5,7 +5,7 @@
   "public": true,
   "default_enabled": false,
   "description": "Sanitized example of a maintainer-local overlay. Private values must stay outside the public repo.",
-  "mode_default": "balanced",
+  "mode_default": "standard",
   "selector": {
     "budget": "balanced",
     "max_capabilities": 24,

@@ -54,6 +54,7 @@ Current vNext implementation status is tracked in [.agent/SREDNOFF_OS_VNEXT_CHEC
 | UI/3D tasks copy risky assets too quickly | Design brief, source ranking, license/provenance gates | Safer component and asset reuse |
 | Security checks are manual | Prompt/tool hooks plus independent security fixtures | Secrets and dangerous tool actions are blocked earlier |
 | Public core leaks personal defaults | Public profiles plus local-only private overlays | Shared repo stays portable and reviewable |
+| Quality level is implicit | `fast`, `standard`, `production`, and `critical` quality modes | Validation cost matches task risk |
 | Regressions are easy to miss | GitHub Actions CI plus local doctor/evals | Pull requests are checked automatically |
 | Old sessions drift from the global rules | Sync scripts update existing Codex project folders with backups | New and old projects stay aligned |
 
@@ -129,6 +130,7 @@ flowchart LR
 | Bootstrap | `init-codex-project.*` | Installs project rules, skills, scripts, evals, and project skill index | Project status check |
 | Sync | `sync-codex-skills-to-projects.ps1` | Updates old Codex folders from the current template with backups | Old-session doctor check |
 | Profiles | `profiles/`, `srednoff-os-profile.ps1` | Separates public defaults, maintainer examples, agency workflows, and RU-market overlays | Profile fixtures and doctor check |
+| Quality modes | `quality-modes.json`, `srednoff-os-quality-mode.ps1` | Maps task risk to budget, capability count, and validation gates | Quality mode fixtures and router coverage |
 | Selector | `select-quality-cost-capabilities.ps1`, `quality-cost-skill-kernel` | Chooses compact capabilities by value per token | Selector fixtures |
 | Routers | `srednoff-os-mode-router.ps1`, `srednoff-os-domain-router.ps1` | Routes normal/deep/TURBO and task domains | v2.1.1/v2.1.2 evals |
 | UI/3D source ranking | `srednoff-os-design-brief.ps1`, `srednoff-os-source-ranker.ps1` | Ranks UI kits, design connectors, 3D libraries, and asset sources | Registry provenance validation |
@@ -143,12 +145,13 @@ Current release gate, as recorded in [QUALITY.md](QUALITY.md):
 
 | Check | Result | Command |
 |---|---:|---|
-| Doctor | 27/27 PASS | `.\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
+| Doctor | 29/29 PASS | `.\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
 | Selector evals | 11/11 PASS | `.\scripts\test-srednoff-os-selector.ps1` |
 | v2.1.1 compatibility evals | 13/13 PASS | `.\scripts\test-srednoff-os-v211.ps1` |
 | v2.1.2 routing/source evals | 12/12 PASS | `.\scripts\test-srednoff-os-v212.ps1` |
 | Security fixture evals | 5/5 PASS | `.\scripts\test-srednoff-os-security-fixtures.ps1` |
 | Profile evals | 4/4 PASS | `.\scripts\test-srednoff-os-profiles.ps1` |
+| Quality mode evals | 5/5 PASS | `.\scripts\test-srednoff-os-quality-modes.ps1` |
 | Kernel validation | 4500 records PASS | `.\scripts\validate-quality-cost-kernel.ps1` |
 | Source registry validation | 17 sources PASS | `.\scripts\validate-source-registry.ps1` |
 | Skill metadata smoke | 308/308 PASS | `.\scripts\quick-validate-all-skills.ps1 -Mode fast` |
@@ -159,6 +162,17 @@ GitHub Actions adds:
 |---|---|
 | Windows | PowerShell parsing, PSScriptAnalyzer errors, kernel validation, registry validation, eval suites, fast skill validation |
 | Ubuntu | Bash syntax, ShellCheck, kernel validation, registry validation, portable eval suites |
+
+## Quality Modes
+
+| Mode | Budget | Max capabilities | Use when | Default gates |
+|---|---:|---:|---|---|
+| `fast` | lean | 8 | tiny fixes, quick checks, low-risk docs | status, targeted check |
+| `standard` | balanced | 16 | normal build/debug/review work | status, relevant tests, lint if present |
+| `production` | deep | 24 | launch, deploy, SEO/PPC/growth, mobile, 3D | doctor, tests/build/lint, rollback and release risk |
+| `critical` | deep | 32 | security, auth, data, payments, migrations, audits | security review, rollback, multi-pass review |
+
+`TURBO` remains an explicit override and still requires the literal `TURBO` command.
 
 ## Source Ranking Model
 
@@ -226,6 +240,7 @@ Safety guardrails:
 | `.agent/` | Planning templates, quality gates, connector rules, release notes |
 | `.codex/skills/` | 306 skill directories and agent profiles |
 | `.codex/srednoff-os/` | Version metadata, source registry, source watchlist |
+| `.codex/srednoff-os/quality-modes.json` | Fast, standard, production, and critical mode metadata |
 | `profiles/` | Public profile metadata and sanitized overlay examples |
 | `scripts/` | Install, sync, status, doctor, selector, router, brief, ranking, validation |
 | `evals/` | Regression fixtures for selectors, routers, source ranking, and hook security checks |

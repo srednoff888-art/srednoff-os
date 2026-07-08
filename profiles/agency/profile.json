@@ -5,7 +5,7 @@
   "public": true,
   "default_enabled": false,
   "description": "Agency workflow defaults for client-facing build, design, SEO, and launch work.",
-  "mode_default": "balanced",
+  "mode_default": "standard",
   "selector": {
     "budget": "balanced",
     "max_capabilities": 28,

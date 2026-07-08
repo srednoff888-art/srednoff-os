@@ -1,0 +1,53 @@
+{
+  "schema": "srednoff-os.quality-modes.v1",
+  "version": "v2.1.2",
+  "default_quality_mode": "standard",
+  "modes": [
+    {
+      "name": "fast",
+      "description": "Small low-risk changes where speed and context economy matter most.",
+      "budget": "lean",
+      "max_capabilities": 8,
+      "legacy_mode": "normal",
+      "use_when": ["typo", "small fix", "format", "quick check", "minor docs"],
+      "validation_gates": ["status-check", "targeted-check"],
+      "group_policy": "prefer_group_1_only"
+    },
+    {
+      "name": "standard",
+      "description": "Normal implementation and review work with balanced quality and cost.",
+      "budget": "balanced",
+      "max_capabilities": 16,
+      "legacy_mode": "normal",
+      "use_when": ["build", "debug", "refactor", "review", "normal scoped work"],
+      "validation_gates": ["status-check", "relevant-tests", "lint-if-present"],
+      "group_policy": "groups_1_2_first"
+    },
+    {
+      "name": "production",
+      "description": "Launch, deploy, release, SEO/PPC/growth, app, or production-facing work.",
+      "budget": "deep",
+      "max_capabilities": 24,
+      "legacy_mode": "deep",
+      "use_when": ["production", "launch", "deploy", "release", "seo", "ppc", "growth", "mobile", "3d"],
+      "validation_gates": ["status-check", "doctor-if-system-change", "tests-build-lint", "rollback-review", "release-risk-review"],
+      "group_policy": "allow_group_3_when_result_is_concrete"
+    },
+    {
+      "name": "critical",
+      "description": "High-risk architecture, security, auth, data, payments, migration, or audit work.",
+      "budget": "deep",
+      "max_capabilities": 32,
+      "legacy_mode": "deep",
+      "use_when": ["security", "auth", "payments", "database", "migration", "audit", "data loss", "irreversible", "compliance", "crypto"],
+      "validation_gates": ["status-check", "doctor-if-system-change", "tests-build-lint", "security-risk-review", "rollback-review", "multi-pass-review"],
+      "group_policy": "allow_group_3_for_high_risk_evidence"
+    }
+  ],
+  "turbo_override": {
+    "budget": "turbo",
+    "max_capabilities": 48,
+    "legacy_mode": "turbo",
+    "requires_literal": "TURBO"
+  }
+}

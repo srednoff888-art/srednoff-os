@@ -1,0 +1,37 @@
+[
+  {
+    "id": "fast-small-fix",
+    "brief": "quick small fix typo in button label",
+    "expectedQualityMode": "fast",
+    "expectedBudget": "lean",
+    "expectedMax": 8
+  },
+  {
+    "id": "standard-normal-work",
+    "brief": "implement settings screen and add tests",
+    "expectedQualityMode": "standard",
+    "expectedBudget": "balanced",
+    "expectedMax": 16
+  },
+  {
+    "id": "production-launch",
+    "brief": "prepare production launch deploy release checklist",
+    "expectedQualityMode": "production",
+    "expectedBudget": "deep",
+    "expectedMax": 24
+  },
+  {
+    "id": "critical-security",
+    "brief": "audit auth security database migration payment risk",
+    "expectedQualityMode": "critical",
+    "expectedBudget": "deep",
+    "expectedMax": 32
+  },
+  {
+    "id": "turbo-literal",
+    "brief": "TURBO build the strongest release validation",
+    "expectedQualityMode": "turbo",
+    "expectedBudget": "turbo",
+    "expectedMax": 48
+  }
+]

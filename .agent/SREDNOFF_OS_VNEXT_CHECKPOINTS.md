@@ -23,8 +23,8 @@ Purpose: implement the vNext roadmap in small auditable checkpoints. Every check
 | 1 | Public core vs personal profiles | Remove personal hardcoded paths from public core and define public/private boundaries | Public-safe path handling and profile boundary notes | Done |
 | 2 | AGENTS.md entrypoint | Convert AGENTS.md from full rule dump into a compact entrypoint with linked docs | Smaller startup surface and moved reference docs | Done |
 | 3 | Profile system | Add public-default, ivan, agency, and ru-market profile scaffolding | `profiles/` structure and selection rules | Done |
-| 4 | Quality modes | Add fast, standard, production, and critical modes | Mode metadata and router/eval coverage | Next |
-| 5 | Security hook upgrade | Strengthen destructive command, secret leak, ask/deny, and audit-log handling | Hook behavior plus security fixtures | Pending |
+| 4 | Quality modes | Add fast, standard, production, and critical modes | Mode metadata and router/eval coverage | Done |
+| 5 | Security hook upgrade | Strengthen destructive command, secret leak, ask/deny, and audit-log handling | Hook behavior plus security fixtures | Next |
 | 6 | RU risk policies | Add NeuralDeep, marketplace, payments, messaging, and RU data policies | `policies/*.yml` plus policy evals | Pending |
 | 7 | NeuralDeep registry skeleton | Add skills, MCP, CLI, index, trust report, and import log structure | `registry/neuraldeep/` safe disabled registry | Pending |
 | 8 | NeuralDeep importer | Add importer, mapper, audit, README; support API when available and HTML fallback when API is absent | `integrations/neuraldeep/` tooling and evals | Pending |
@@ -37,4 +37,4 @@ Purpose: implement the vNext roadmap in small auditable checkpoints. Every check
 
 ## Current Position
 
-Checkpoint 3 is complete. The next implementation checkpoint is checkpoint 4: quality modes.
+Checkpoint 4 is complete. The next implementation checkpoint is checkpoint 5: security hook upgrade.

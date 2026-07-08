@@ -5,6 +5,12 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$CodexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME ".codex" }
+$LocalQualityMode = Join-Path $ScriptDir "srednoff-os-quality-mode.ps1"
+$HomeQualityMode = Join-Path $CodexHome "scripts\srednoff-os-quality-mode.ps1"
+$QualityModeScript = if (Test-Path -LiteralPath $LocalQualityMode -PathType Leaf) { $LocalQualityMode } else { $HomeQualityMode }
+
 $Text = $Brief.Trim()
 $Lower = $Text.ToLowerInvariant()
 
@@ -64,17 +70,40 @@ if (-not $IsDeep) {
     }
 }
 
-$Mode = if ($IsTurbo) { "turbo" } elseif ($IsDeep) { "deep" } else { "normal" }
-$Budget = if ($Mode -eq "turbo") { "turbo" } elseif ($Mode -eq "deep") { "deep" } else { "balanced" }
-$MaxCapabilities = if ($Mode -eq "turbo") { 48 } elseif ($Mode -eq "deep") { 24 } else { 16 }
+if (Test-Path -LiteralPath $QualityModeScript -PathType Leaf) {
+    $Quality = & $QualityModeScript -Brief $Brief -Json | ConvertFrom-Json
+    $Mode = [string]$Quality.legacy_mode
+    $Budget = [string]$Quality.budget
+    $MaxCapabilities = [int]$Quality.max_capabilities
+    if (-not $IsTurbo -and $IsDeep -and $Mode -eq "normal" -and [string]$Quality.quality_mode -eq "standard") {
+        $Mode = "deep"
+        $Budget = "deep"
+        $MaxCapabilities = 24
+        $Quality.quality_mode = "production"
+        $Quality.validation_gates = @("status-check", "doctor-if-system-change", "tests-build-lint", "release-risk-review")
+        $Quality.group_policy = "allow_group_3_when_result_is_concrete"
+    }
+} else {
+    $Mode = if ($IsTurbo) { "turbo" } elseif ($IsDeep) { "deep" } else { "normal" }
+    $Budget = if ($Mode -eq "turbo") { "turbo" } elseif ($Mode -eq "deep") { "deep" } else { "balanced" }
+    $MaxCapabilities = if ($Mode -eq "turbo") { 48 } elseif ($Mode -eq "deep") { 24 } else { 16 }
+    $Quality = [pscustomobject]@{
+        quality_mode = if ($IsTurbo) { "turbo" } elseif ($IsDeep) { "production" } else { "standard" }
+        validation_gates = @("status-check")
+        group_policy = "groups_1_2_first"
+    }
+}
 
 $Result = [ordered]@{
     name = "Srednoff OS mode router"
     version = "v2.1.2"
     mode = $Mode
+    quality_mode = [string]$Quality.quality_mode
     budget = $Budget
     max_capabilities = $MaxCapabilities
     turbo = $IsTurbo
+    validation_gates = @($Quality.validation_gates)
+    group_policy = [string]$Quality.group_policy
     reason = if ($IsTurbo) { "explicit TURBO trigger" } elseif ($IsDeep) { "high-value/deep-work trigger without TURBO" } else { "normal scoped work" }
     safety = [ordered]@{
         destructive_confirmation_required = $true
