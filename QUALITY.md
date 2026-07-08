@@ -4,7 +4,9 @@ This file documents what is currently verified and what is intentionally not pro
 
 ## Current Smoke Status
 
-Last verified: 2026-07-06.
+Last verified: 2026-07-09.
+
+Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. It is a documentation baseline for the vNext roadmap; behavior-changing release gates continue to use the checks below.
 
 | Check | Status | Command |
 |---|---:|---|
