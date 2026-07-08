@@ -92,19 +92,40 @@ function Find-SecretSignals {
     return @($Findings | Select-Object -Unique)
 }
 
+function Get-HomeTargetPattern {
+    $HomeCandidates = @(
+        $HOME,
+        $env:USERPROFILE,
+        [Environment]::GetFolderPath("UserProfile")
+    ) | Where-Object { $_ } | ForEach-Object {
+        try {
+            (Resolve-Path -LiteralPath $_ -ErrorAction Stop).Path.TrimEnd("\", "/")
+        } catch {
+            ([string]$_).TrimEnd("\", "/")
+        }
+    } | Sort-Object -Unique
+
+    $Targets = @($HomeCandidates | ForEach-Object { [regex]::Escape($_) })
+    $Targets += @("\`$HOME", "~")
+    return "(?:" + (($Targets | Where-Object { $_ }) -join "|") + ")(?:\\)?(?:\s|`"|''|$)"
+}
+
 function Find-DangerousToolSignals {
     param([string]$Text)
 
+    $NormalizedText = $Text.Replace('\\', '\')
+    $HomeTargetPattern = Get-HomeTargetPattern
+
     $Rules = @(
         @{ Name = "git_reset_hard"; Pattern = '(?i)git\s+reset\s+--hard' },
-        @{ Name = "destructive_home_remove"; Pattern = '(?i)Remove-Item.*-Recurse.*-Force.*(C:\\Users\\Ivan(?:\\)?(?:\s|"|''|$)|\$HOME(?:\s|"|''|$))' },
+        @{ Name = "destructive_home_remove"; Pattern = "(?i)Remove-Item.*-Recurse.*-Force.*$HomeTargetPattern" },
         @{ Name = "destructive_root_rm"; Pattern = '(?i)rm\s+-rf\s+(/|~|\$HOME)' },
         @{ Name = "windows_format"; Pattern = '(?i)\bformat\s+[A-Z]:' }
     )
 
     $Findings = @()
     foreach ($Rule in $Rules) {
-        if ($Text -match $Rule.Pattern) {
+        if ($NormalizedText -match $Rule.Pattern) {
             $Findings += $Rule.Name
         }
     }

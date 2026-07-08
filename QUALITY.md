@@ -6,7 +6,7 @@ This file documents what is currently verified and what is intentionally not pro
 
 Last verified: 2026-07-09.
 
-Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. It is a documentation baseline for the vNext roadmap; behavior-changing release gates continue to use the checks below.
+Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. Checkpoint 1 removed public-core hardcoded personal paths and added `.agent/SREDNOFF_OS_PUBLIC_CORE_BOUNDARY.md`.
 
 | Check | Status | Command |
 |---|---:|---|

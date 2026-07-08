@@ -54,8 +54,8 @@ Recommendation: migrate in layers. Do not move working scripts into the target l
 
 | Finding | Risk | Next checkpoint |
 |---|---|---|
-| `scripts/srednoff-os-hook.ps1` contains a literal `C:\Users\Ivan` destructive-path guard | Medium public-core hygiene risk. It is protective, but user-specific. | Replace with user-home/environment-aware matching |
-| `scripts/test-srednoff-os-v211.ps1` uses `C:\Users\Ivan\Documents\Codex...` fixture paths | Low-medium portability risk. Test fixture is not a secret, but it is machine-specific. | Convert fixtures to temp/project-derived paths |
+| `scripts/srednoff-os-hook.ps1` contained a literal maintainer-specific Windows home path guard | Medium public-core hygiene risk. It was protective, but user-specific. | Resolved in checkpoint 1 with user-home/environment-aware matching |
+| `scripts/test-srednoff-os-v211.ps1` used maintainer-specific Windows fixture paths | Low-medium portability risk. Test fixture was not a secret, but it was machine-specific. | Resolved in checkpoint 1 with temp-path fixtures |
 | README intentionally contains Ivan Srednoff author and `Srednoff.agency` | Intended branding, not a privacy defect | Keep |
 | GitHub remote points to `srednoff888-art/srednoff-os` | Intended public repo | Keep |
 

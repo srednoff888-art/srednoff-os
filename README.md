@@ -45,7 +45,7 @@
 
 Srednoff OS turns a fresh Codex session into a repeatable engineering workflow. It does not try to load every rule into context. It checks the project, selects the smallest useful skill set, routes the task by domain, applies safety gates, and records enough quality evidence to make the result auditable.
 
-Current vNext implementation status is tracked in [.agent/SREDNOFF_OS_VNEXT_CHECKPOINTS.md](.agent/SREDNOFF_OS_VNEXT_CHECKPOINTS.md). Checkpoint 0 captured the preflight baseline before NeuralDeep/RU-layer work.
+Current vNext implementation status is tracked in [.agent/SREDNOFF_OS_VNEXT_CHECKPOINTS.md](.agent/SREDNOFF_OS_VNEXT_CHECKPOINTS.md). Checkpoint 1 defined the [public core boundary](.agent/SREDNOFF_OS_PUBLIC_CORE_BOUNDARY.md) and removed maintainer-specific paths from runtime checks.
 
 | Problem in normal agent work | Srednoff OS response | Practical effect |
 |---|---|---|

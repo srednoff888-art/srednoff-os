@@ -2,6 +2,11 @@
 
 ## 2026-07-09
 
+### Changed
+
+- Removed maintainer-specific Windows home paths from the public hook rule and v2.1.1 hook eval fixture.
+- Added `.agent/SREDNOFF_OS_PUBLIC_CORE_BOUNDARY.md` to define public core vs personal profile boundaries.
+
 ### Added
 
 - Added the vNext checkpoint plan in `.agent/SREDNOFF_OS_VNEXT_CHECKPOINTS.md`.

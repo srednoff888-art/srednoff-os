@@ -65,11 +65,26 @@ if (Test-Path -LiteralPath $ConfigPath -PathType Leaf) {
     $Results += Add-Result -Id "mcp:magic-env" -Passed $true -Detail "skipped: config.toml not present in this runner"
 }
 
-$Danger = '{"cwd":"C:\\Users\\Ivan\\Documents\\Codex\\2026-06-28\\new-chat","tool_name":"shell_command","tool_input":{"command":"git reset --hard"}}'
+$EvalCwd = Join-Path ([System.IO.Path]::GetTempPath()) "srednoff-os-eval"
+$DangerPayload = [ordered]@{
+    cwd = $EvalCwd
+    tool_name = "shell_command"
+    tool_input = @{
+        command = "git reset --" + "hard"
+    }
+}
+$Danger = $DangerPayload | ConvertTo-Json -Compress -Depth 5
 $DangerOut = $Danger | powershell -NoProfile -ExecutionPolicy Bypass -File $HookScript -Mode PreToolUse | Out-String
 $Results += Add-Result -Id "hook:block-danger" -Passed ($DangerOut -match '"decision"\s*:\s*"block"' -and $DangerOut -match "git_reset_hard") -Detail (($DangerOut -replace "\s+", " ").Trim())
 
-$Safe = '{"cwd":"C:\\Users\\Ivan\\Documents\\Codex\\2026-06-28\\new-chat","tool_name":"shell_command","tool_input":{"command":"Get-ChildItem"}}'
+$SafePayload = [ordered]@{
+    cwd = $EvalCwd
+    tool_name = "shell_command"
+    tool_input = @{
+        command = "Get-ChildItem"
+    }
+}
+$Safe = $SafePayload | ConvertTo-Json -Compress -Depth 5
 $SafeOut = $Safe | powershell -NoProfile -ExecutionPolicy Bypass -File $HookScript -Mode PreToolUse | Out-String
 $Results += Add-Result -Id "hook:allow-safe" -Passed ($SafeOut -match "preflight passed") -Detail (($SafeOut -replace "\s+", " ").Trim())
 
