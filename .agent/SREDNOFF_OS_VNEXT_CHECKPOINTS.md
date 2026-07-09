@@ -29,12 +29,12 @@ Purpose: implement the vNext roadmap in small auditable checkpoints. Every check
 | 7 | NeuralDeep registry skeleton | Add skills, MCP, CLI, index, trust report, and import log structure | `registry/neuraldeep/` safe disabled registry | Done |
 | 8 | NeuralDeep importer | Add importer, mapper, audit, README; support API when available and HTML fallback when API is absent | `integrations/neuraldeep/` tooling and evals | Done |
 | 9 | RU bundles | Add ru-seo, ru-marketplaces, ru-enterprise, ru-1c, ru-llm, ru-content, ru-payments, ru-messaging, ru-devops bundles | `bundles/ru-*` metadata | Done |
-| 10 | RU agents | Add RU specialist agent profiles for SEO, marketplaces, 1C, enterprise, LLM, content, payments, messaging | `agents/ru-*.md` | Next |
-| 11 | RU CLI compatibility scripts | Add safe search, import, audit, install wrappers that recommend commands without silent execution | `scripts/srednoff-os-ru-*.ps1` | Pending |
+| 10 | RU agents | Add RU specialist agent profiles for SEO, marketplaces, 1C, enterprise, LLM, content, payments, messaging | `agents/ru-*.md` | Done |
+| 11 | RU CLI compatibility scripts | Add safe search, import, audit, install wrappers that recommend commands without silent execution | `scripts/srednoff-os-ru-*.ps1` | Next |
 | 12 | Donor repository research | Review listed Codex/agent donor repos and adapt only clean-room patterns | Research notes and selected changes | Pending |
 | 13 | Documentation upgrade | Add architecture, security, workflows, profiles, hooks, NeuralDeep, RU integrations, RU risk model docs | `docs/*.md` | Pending |
 | 14 | Full validation and public release note | Run release gate, update README, QUALITY, CHANGELOG, and final report | Green local checks and GitHub Actions | Pending |
 
 ## Current Position
 
-Checkpoint 9 is complete. The next implementation checkpoint is checkpoint 10: RU agents.
+Checkpoint 10 is complete. The next implementation checkpoint is checkpoint 11: RU CLI compatibility scripts.

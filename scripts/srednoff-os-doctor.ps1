@@ -146,6 +146,20 @@ if (Test-JsonFile -Path $BundlesIndex) {
     Add-Check -Name "bundles" -Status "FAIL" -Detail "Missing or invalid bundles/index.json" -Fix "Install or sync Srednoff OS bundles"
 }
 
+$AgentsRoot = Resolve-LocalOrHome "agents" "agents" "Container"
+$AgentsIndex = Join-Path $AgentsRoot "index.json"
+if (Test-JsonFile -Path $AgentsIndex) {
+    $AgentManifest = Get-Content -LiteralPath $AgentsIndex -Raw -Encoding UTF8 | ConvertFrom-Json
+    $RequiredAgents = @("ru-seo-agent", "ru-marketplaces-agent", "ru-1c-agent", "ru-enterprise-agent", "ru-llm-agent", "ru-content-agent", "ru-payments-agent", "ru-messaging-agent")
+    $AgentIds = @($AgentManifest.agents | ForEach-Object { $_.id })
+    $MissingAgents = @($RequiredAgents | Where-Object { $AgentIds -notcontains $_ })
+    $MissingAgentFiles = @($AgentManifest.agents | Where-Object { -not (Test-Path -LiteralPath (Join-Path $AgentsRoot ([string]$_.file)) -PathType Leaf) } | ForEach-Object { $_.id })
+    $AgentsSafe = (-not [bool]$AgentManifest.default_enabled) -and ($MissingAgents.Count -eq 0) -and ($MissingAgentFiles.Count -eq 0)
+    Add-Check -Name "agents" -Status ($(if ($AgentsSafe) { "OK" } else { "FAIL" })) -Detail "root=$AgentsRoot; agents=$($AgentIds.Count); default_enabled=$($AgentManifest.default_enabled); missing=$($MissingAgents -join ','); missing_files=$($MissingAgentFiles -join ',')" -Fix "Restore agents/*.md and agents/index.json"
+} else {
+    Add-Check -Name "agents" -Status "FAIL" -Detail "Missing or invalid agents/index.json" -Fix "Install or sync Srednoff OS agents"
+}
+
 $NeuralDeepRegistry = Resolve-LocalOrHome "registry\neuraldeep" "registry\neuraldeep" "Container"
 $NeuralDeepIndex = Join-Path $NeuralDeepRegistry "index.json"
 if (Test-JsonFile -Path $NeuralDeepIndex) {
@@ -389,6 +403,16 @@ if ($RunEvals) {
         Add-Check -Name "bundle-evals" -Status ($(if ($BundleEvalOk) { "OK" } else { "FAIL" })) -Detail (($BundleEvalOutput | Out-String).Trim())
     } else {
         Add-Check -Name "bundle-evals" -Status "FAIL" -Detail "Missing bundle eval script"
+    }
+
+    $AgentEvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-agents.ps1" "scripts\test-srednoff-os-agents.ps1" "Leaf"
+    if (Test-Path -LiteralPath $AgentEvalScript -PathType Leaf) {
+        $global:LASTEXITCODE = 0
+        $AgentEvalOutput = & $AgentEvalScript -ProjectPath $ProjectRoot 2>&1
+        $AgentEvalOk = $LASTEXITCODE -eq 0
+        Add-Check -Name "agent-evals" -Status ($(if ($AgentEvalOk) { "OK" } else { "FAIL" })) -Detail (($AgentEvalOutput | Out-String).Trim())
+    } else {
+        Add-Check -Name "agent-evals" -Status "FAIL" -Detail "Missing agent eval script"
     }
 
     $NeuralDeepEvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-neuraldeep-registry.ps1" "scripts\test-srednoff-os-neuraldeep-registry.ps1" "Leaf"

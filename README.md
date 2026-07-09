@@ -58,6 +58,7 @@ Current vNext implementation status is tracked in [.agent/SREDNOFF_OS_VNEXT_CHEC
 | Quality level is implicit | `fast`, `standard`, `production`, and `critical` quality modes | Validation cost matches task risk |
 | RU-market work needs extra gates | `policies/*.yml` for RU data, payments, messaging, marketplaces, and NeuralDeep imports | Regulated or region-sensitive actions ask for review |
 | RU workflows repeat across projects | Disabled `bundles/*.json` presets for RU SEO, marketplaces, 1C, payments, messaging, LLM, and DevOps | Selector gets better hints without loading long context |
+| Specialist perspective is inconsistent | Disabled RU agent profiles linked to bundles, policies, and skills | Role-specific review without autonomous execution |
 | External agent catalogs can be unsafe | Disabled NeuralDeep registry plus controlled metadata importer | Candidate tools stay inert until reviewed |
 | Regressions are easy to miss | GitHub Actions CI plus local doctor/evals | Pull requests are checked automatically |
 | Old sessions drift from the global rules | Sync scripts update existing Codex project folders with backups | New and old projects stay aligned |
@@ -137,6 +138,7 @@ flowchart LR
 | Quality modes | `quality-modes.json`, `srednoff-os-quality-mode.ps1` | Maps task risk to budget, capability count, and validation gates | Quality mode fixtures and router coverage |
 | Policies | `policies/*.yml`, `srednoff-os-policy-check.ps1` | Matches RU/NeuralDeep policy gates by brief and keeps default `ask` posture | Policy fixtures and doctor check |
 | Bundles | `bundles/*.json` | Groups RU-market skills, domains, policy gates, and validation gates as disabled selector presets | Bundle fixtures and doctor check |
+| Agent profiles | `agents/*.md` | Provides RU specialist lenses for SEO, marketplaces, 1C, enterprise, LLM, content, payments, and messaging | Agent profile fixtures and doctor check |
 | NeuralDeep registry | `registry/neuraldeep/` | Holds disabled candidate skills, MCP servers, and CLI tools with provenance and trust metadata | Registry fixtures and doctor check |
 | NeuralDeep importer | `integrations/neuraldeep/` | Imports local manifests as disabled metadata after license/provenance/dedupe checks | Importer fixtures and CI |
 | Selector | `select-quality-cost-capabilities.ps1`, `quality-cost-skill-kernel` | Chooses compact capabilities by value per token | Selector fixtures |
@@ -153,7 +155,7 @@ Current release gate, as recorded in [QUALITY.md](QUALITY.md):
 
 | Check | Result | Command |
 |---|---:|---|
-| Doctor | 37/37 PASS | `.\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
+| Doctor | 39/39 PASS | `.\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
 | Selector evals | 11/11 PASS | `.\scripts\test-srednoff-os-selector.ps1` |
 | v2.1.1 compatibility evals | 13/13 PASS | `.\scripts\test-srednoff-os-v211.ps1` |
 | v2.1.2 routing/source evals | 12/12 PASS | `.\scripts\test-srednoff-os-v212.ps1` |
@@ -162,6 +164,7 @@ Current release gate, as recorded in [QUALITY.md](QUALITY.md):
 | Quality mode evals | 5/5 PASS | `.\scripts\test-srednoff-os-quality-modes.ps1` |
 | Policy evals | 5/5 PASS | `.\scripts\test-srednoff-os-policies.ps1` |
 | Bundle evals | 9/9 PASS | `.\scripts\test-srednoff-os-bundles.ps1` |
+| Agent evals | 8/8 PASS | `.\scripts\test-srednoff-os-agents.ps1` |
 | NeuralDeep registry evals | 5/5 PASS | `.\scripts\test-srednoff-os-neuraldeep-registry.ps1` |
 | NeuralDeep importer evals | 5/5 PASS | `.\scripts\test-srednoff-os-neuraldeep-importer.ps1` |
 | Kernel validation | 4500 records PASS | `.\scripts\validate-quality-cost-kernel.ps1` |
@@ -236,6 +239,21 @@ These are risk gates, not legal advice. Current official sources must be recheck
 | `ru-devops` | deployment, env, observability, rollback, data residency | release and rollback gate |
 
 Bundles are selector metadata. They do not install tools, enable agents, or replace human approval.
+
+## RU Agent Profiles
+
+| Agent | Linked bundle | Main lens |
+|---|---|---|
+| `ru-seo-agent` | `ru-seo` | technical SEO, local/entity pages, migrations |
+| `ru-marketplaces-agent` | `ru-marketplaces` | listings, claims, ads, conversion |
+| `ru-1c-agent` | `ru-1c` | 1C-adjacent exchange, operator workflows, rollback |
+| `ru-enterprise-agent` | `ru-enterprise` | B2B architecture, data flows, auth, integrations |
+| `ru-llm-agent` | `ru-llm` | LLM/RAG/agent imports, evals, prompt security |
+| `ru-content-agent` | `ru-content` | editorial SEO, localization, microcopy, claims |
+| `ru-payments-agent` | `ru-payments` | checkout, billing, refunds, payment documents |
+| `ru-messaging-agent` | `ru-messaging` | customer messages, templates, notifications |
+
+Agent profiles are compact role references. They do not start subagents or call connectors by themselves.
 
 ## NeuralDeep Registry
 
@@ -314,6 +332,7 @@ Safety guardrails:
 | `profiles/` | Public profile metadata and sanitized overlay examples |
 | `policies/` | RU and NeuralDeep policy gates |
 | `bundles/` | Disabled RU domain bundle presets |
+| `agents/` | Disabled RU specialist agent profiles |
 | `registry/neuraldeep/` | Disabled NeuralDeep skills/MCP/CLI registry skeleton |
 | `integrations/neuraldeep/` | Controlled NeuralDeep metadata importer |
 | `scripts/` | Install, sync, status, doctor, selector, router, brief, ranking, validation |

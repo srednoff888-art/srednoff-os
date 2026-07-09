@@ -1,0 +1,49 @@
+{
+  "schema": "srednoff-os.agents.index.v1",
+  "version": "v2.1.2",
+  "default_enabled": false,
+  "selection_model": "selector-only",
+  "agents": [
+    {
+      "id": "ru-seo-agent",
+      "file": "ru-seo-agent.md",
+      "bundle": "ru-seo"
+    },
+    {
+      "id": "ru-marketplaces-agent",
+      "file": "ru-marketplaces-agent.md",
+      "bundle": "ru-marketplaces"
+    },
+    {
+      "id": "ru-1c-agent",
+      "file": "ru-1c-agent.md",
+      "bundle": "ru-1c"
+    },
+    {
+      "id": "ru-enterprise-agent",
+      "file": "ru-enterprise-agent.md",
+      "bundle": "ru-enterprise"
+    },
+    {
+      "id": "ru-llm-agent",
+      "file": "ru-llm-agent.md",
+      "bundle": "ru-llm"
+    },
+    {
+      "id": "ru-content-agent",
+      "file": "ru-content-agent.md",
+      "bundle": "ru-content"
+    },
+    {
+      "id": "ru-payments-agent",
+      "file": "ru-payments-agent.md",
+      "bundle": "ru-payments"
+    },
+    {
+      "id": "ru-messaging-agent",
+      "file": "ru-messaging-agent.md",
+      "bundle": "ru-messaging"
+    }
+  ]
+}
+
