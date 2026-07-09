@@ -1,0 +1,12 @@
+{
+  "schema": "srednoff-os.neuraldeep.import-log.v1",
+  "version": "v2.1.2",
+  "events": [
+    {
+      "ts": "2026-07-09T00:00:00Z",
+      "event": "registry-skeleton-created",
+      "decision": "disabled",
+      "details": "Created safe registry skeleton only; no external tool installed or enabled."
+    }
+  ]
+}

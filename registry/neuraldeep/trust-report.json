@@ -1,0 +1,31 @@
+{
+  "schema": "srednoff-os.neuraldeep.trust-report.v1",
+  "version": "v2.1.2",
+  "generated_at": "2026-07-09",
+  "overall_status": "disabled-unvetted",
+  "default_decision": "ask",
+  "auto_install_allowed": false,
+  "trusted_for_execution": false,
+  "required_checks": [
+    "source_provenance_review",
+    "license_review",
+    "repository_activity_review",
+    "tool_permission_review",
+    "prompt_injection_review",
+    "secret_exfiltration_review",
+    "policy_match",
+    "human_install_confirmation"
+  ],
+  "blocked_actions_without_confirmation": [
+    "install_external_mcp_server",
+    "run_external_cli_installer",
+    "enable_unreviewed_agent",
+    "copy_license_unclear_prompt_text"
+  ],
+  "known_risks": [
+    "catalog source can drift",
+    "API endpoints are not treated as stable",
+    "MCP and CLI tools may execute externally visible or local-state-changing actions",
+    "license and repository health are unknown until item-level review"
+  ]
+}

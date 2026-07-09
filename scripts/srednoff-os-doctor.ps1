@@ -133,6 +133,18 @@ if (Test-Path -LiteralPath $PoliciesIndex -PathType Leaf) {
     Add-Check -Name "policies" -Status "FAIL" -Detail "Missing policies/index.yml" -Fix "Install or sync Srednoff OS policies"
 }
 
+$NeuralDeepRegistry = Resolve-LocalOrHome "registry\neuraldeep" "registry\neuraldeep" "Container"
+$NeuralDeepIndex = Join-Path $NeuralDeepRegistry "index.json"
+if (Test-JsonFile -Path $NeuralDeepIndex) {
+    $NeuralDeepManifest = Get-Content -LiteralPath $NeuralDeepIndex -Raw -Encoding UTF8 | ConvertFrom-Json
+    $CatalogFiles = @("skills.json", "mcp.json", "cli.json", "trust-report.json", "import-log.json")
+    $MissingCatalogFiles = @($CatalogFiles | Where-Object { -not (Test-Path -LiteralPath (Join-Path $NeuralDeepRegistry $_) -PathType Leaf) })
+    $RegistrySafe = (-not [bool]$NeuralDeepManifest.enabled) -and (-not [bool]$NeuralDeepManifest.auto_install) -and ($MissingCatalogFiles.Count -eq 0)
+    Add-Check -Name "neuraldeep-registry" -Status ($(if ($RegistrySafe) { "OK" } else { "FAIL" })) -Detail "root=$NeuralDeepRegistry; enabled=$($NeuralDeepManifest.enabled); auto_install=$($NeuralDeepManifest.auto_install); missing=$($MissingCatalogFiles -join ',')" -Fix "Restore disabled registry\neuraldeep skeleton"
+} else {
+    Add-Check -Name "neuraldeep-registry" -Status "FAIL" -Detail "Missing or invalid registry\neuraldeep\index.json" -Fix "Install or sync Srednoff OS NeuralDeep registry"
+}
+
 $Kernel = Resolve-LocalOrHome ".codex\skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "Leaf"
 $KernelCount = Count-JsonArray -Path $Kernel
 Add-Check -Name "kernel" -Status ($(if ($KernelCount -eq $ExpectedKernelRecords) { "OK" } else { "FAIL" })) -Detail "records=$KernelCount expected=$ExpectedKernelRecords" -Fix "Run validate-quality-cost-kernel.ps1 -Rebuild"
@@ -349,6 +361,16 @@ if ($RunEvals) {
         Add-Check -Name "policy-evals" -Status ($(if ($PolicyEvalOk) { "OK" } else { "FAIL" })) -Detail (($PolicyEvalOutput | Out-String).Trim())
     } else {
         Add-Check -Name "policy-evals" -Status "FAIL" -Detail "Missing policy eval script"
+    }
+
+    $NeuralDeepEvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-neuraldeep-registry.ps1" "scripts\test-srednoff-os-neuraldeep-registry.ps1" "Leaf"
+    if (Test-Path -LiteralPath $NeuralDeepEvalScript -PathType Leaf) {
+        $global:LASTEXITCODE = 0
+        $NeuralDeepEvalOutput = & $NeuralDeepEvalScript -ProjectPath $ProjectRoot 2>&1
+        $NeuralDeepEvalOk = $LASTEXITCODE -eq 0
+        Add-Check -Name "neuraldeep-registry-evals" -Status ($(if ($NeuralDeepEvalOk) { "OK" } else { "FAIL" })) -Detail (($NeuralDeepEvalOutput | Out-String).Trim())
+    } else {
+        Add-Check -Name "neuraldeep-registry-evals" -Status "FAIL" -Detail "Missing NeuralDeep registry eval script"
     }
 }
 

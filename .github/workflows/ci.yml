@@ -67,6 +67,7 @@ jobs:
           .\scripts\test-srednoff-os-profiles.ps1
           .\scripts\test-srednoff-os-quality-modes.ps1
           .\scripts\test-srednoff-os-policies.ps1
+          .\scripts\test-srednoff-os-neuraldeep-registry.ps1
 
       - name: Fast skill validation
         shell: pwsh
@@ -118,3 +119,4 @@ jobs:
           ./scripts/test-srednoff-os-profiles.ps1
           ./scripts/test-srednoff-os-quality-modes.ps1
           ./scripts/test-srednoff-os-policies.ps1
+          ./scripts/test-srednoff-os-neuraldeep-registry.ps1

@@ -1,0 +1,27 @@
+{
+  "schema": "srednoff-os.neuraldeep.registry.index.v1",
+  "version": "v2.1.2",
+  "name": "NeuralDeep safe registry",
+  "enabled": false,
+  "auto_install": false,
+  "default_decision": "ask",
+  "last_verified": "2026-07-09",
+  "source": {
+    "home": "https://neuraldeep.ru",
+    "skills": "https://neuraldeep.ru/skills",
+    "mcp": "https://neuraldeep.ru/mcp",
+    "cli": "https://neuraldeep.ru/cli"
+  },
+  "catalogs": {
+    "skills": "skills.json",
+    "mcp": "mcp.json",
+    "cli": "cli.json"
+  },
+  "trust_report": "trust-report.json",
+  "import_log": "import-log.json",
+  "policy": "policies/neuraldeep.yml",
+  "notes": [
+    "The public API contract is not assumed; future importer work must support HTML fallback and source drift.",
+    "This skeleton records source metadata only and does not install external tools."
+  ]
+}

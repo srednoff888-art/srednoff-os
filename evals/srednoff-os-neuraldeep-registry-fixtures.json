@@ -1,0 +1,32 @@
+[
+  {
+    "id": "registry-disabled",
+    "file": "index.json",
+    "expectedEnabled": false,
+    "expectedAutoInstall": false
+  },
+  {
+    "id": "skills-disabled",
+    "file": "skills.json",
+    "expectedEnabled": false,
+    "expectedAutoInstall": false
+  },
+  {
+    "id": "mcp-disabled",
+    "file": "mcp.json",
+    "expectedEnabled": false,
+    "expectedAutoInstall": false
+  },
+  {
+    "id": "cli-disabled",
+    "file": "cli.json",
+    "expectedEnabled": false,
+    "expectedAutoInstall": false
+  },
+  {
+    "id": "trust-report-safe",
+    "file": "trust-report.json",
+    "expectedAutoInstallAllowed": false,
+    "expectedTrustedForExecution": false
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "schema": "srednoff-os.neuraldeep.registry.catalog.v1",
+  "version": "v2.1.2",
+  "kind": "cli",
+  "source_url": "https://neuraldeep.ru/cli",
+  "enabled": false,
+  "auto_install": false,
+  "items": [
+    {
+      "id": "skillsbd",
+      "name": "skillsbd",
+      "source_url": "https://neuraldeep.ru/cli",
+      "kind": "cli-tool",
+      "status": "candidate-unvetted",
+      "enabled": false,
+      "auto_install": false,
+      "risk_level": "high",
+      "license": "unknown",
+      "provenance": "NeuralDeep public CLI catalog page; verify repository, package source, and install behavior",
+      "policy_gates": ["neuraldeep", "tool_permission_review", "license_review", "human_install_confirmation"]
+    }
+  ]
+}

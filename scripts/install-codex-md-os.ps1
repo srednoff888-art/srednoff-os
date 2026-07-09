@@ -65,6 +65,7 @@ Copy-TemplateItem ".codex\srednoff-os"
 Copy-TemplateItem "evals"
 Copy-TemplateItem "profiles"
 Copy-TemplateItem "policies"
+Copy-TemplateItem "registry"
 Copy-TemplateItem "scripts"
 
 Copy-DirectoryContents -Source (Join-Path $PackageRoot ".codex\skills") -Destination (Join-Path $CodexHome "skills") -Label "skills"
@@ -73,6 +74,7 @@ Copy-DirectoryContents -Source (Join-Path $PackageRoot "scripts") -Destination (
 Copy-DirectoryContents -Source (Join-Path $PackageRoot "evals") -Destination (Join-Path $CodexHome "evals") -Label "evals"
 Copy-DirectoryContents -Source (Join-Path $PackageRoot "profiles") -Destination (Join-Path $CodexHome "profiles") -Label "profiles"
 Copy-DirectoryContents -Source (Join-Path $PackageRoot "policies") -Destination (Join-Path $CodexHome "policies") -Label "policies"
+Copy-DirectoryContents -Source (Join-Path $PackageRoot "registry") -Destination (Join-Path $CodexHome "registry") -Label "registry"
 
 $GlobalAgents = Join-Path $CodexHome "AGENTS.md"
 Backup-Path -Path $GlobalAgents

@@ -1,0 +1,36 @@
+{
+  "schema": "srednoff-os.neuraldeep.registry.catalog.v1",
+  "version": "v2.1.2",
+  "kind": "mcp",
+  "source_url": "https://neuraldeep.ru/mcp",
+  "enabled": false,
+  "auto_install": false,
+  "items": [
+    {
+      "id": "1c-lsp-mcp-skill",
+      "name": "1c-lsp-mcp-skill",
+      "source_url": "https://neuraldeep.ru/mcp/1c-lsp-mcp-skill",
+      "kind": "mcp-server",
+      "status": "candidate-unvetted",
+      "enabled": false,
+      "auto_install": false,
+      "risk_level": "high",
+      "license": "unknown",
+      "provenance": "NeuralDeep public catalog page; verify repository, server permissions, and local runtime requirements",
+      "policy_gates": ["neuraldeep", "tool_permission_review", "prompt_injection_review", "human_install_confirmation"]
+    },
+    {
+      "id": "mcp-max-messenger",
+      "name": "mcp-max-messenger",
+      "source_url": "https://neuraldeep.ru/skill/mcp-max-messenger",
+      "kind": "mcp-server",
+      "status": "candidate-unvetted",
+      "enabled": false,
+      "auto_install": false,
+      "risk_level": "critical",
+      "license": "unknown",
+      "provenance": "NeuralDeep public catalog page; messenger actions can be externally visible",
+      "policy_gates": ["neuraldeep", "ru-messaging", "tool_permission_review", "human_install_confirmation"]
+    }
+  ]
+}

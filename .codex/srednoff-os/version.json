@@ -31,6 +31,7 @@
     "portable-skill-index-generation",
     "quality-modes",
     "security-hook-ask-deny-audit",
-    "ru-risk-policies"
+    "ru-risk-policies",
+    "neuraldeep-safe-registry"
   ]
 }

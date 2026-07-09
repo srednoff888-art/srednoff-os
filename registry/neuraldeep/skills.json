@@ -1,0 +1,36 @@
+{
+  "schema": "srednoff-os.neuraldeep.registry.catalog.v1",
+  "version": "v2.1.2",
+  "kind": "skills",
+  "source_url": "https://neuraldeep.ru/skills",
+  "enabled": false,
+  "auto_install": false,
+  "items": [
+    {
+      "id": "find-skills",
+      "name": "find-skills",
+      "source_url": "https://neuraldeep.ru/skill/find-skills",
+      "kind": "skill",
+      "status": "candidate-unvetted",
+      "enabled": false,
+      "auto_install": false,
+      "risk_level": "medium",
+      "license": "unknown",
+      "provenance": "NeuralDeep public catalog page; verify repository and license before use",
+      "policy_gates": ["neuraldeep", "source_provenance_review", "license_review", "human_install_confirmation"]
+    },
+    {
+      "id": "1c-lsp-mcp-skill",
+      "name": "1c-lsp-mcp-skill",
+      "source_url": "https://neuraldeep.ru/skill/1c-lsp-mcp-skill",
+      "kind": "skill",
+      "status": "candidate-unvetted",
+      "enabled": false,
+      "auto_install": false,
+      "risk_level": "high",
+      "license": "unknown",
+      "provenance": "NeuralDeep public catalog page; includes MCP/CLI behavior and must be reviewed before use",
+      "policy_gates": ["neuraldeep", "tool_permission_review", "license_review", "human_install_confirmation"]
+    }
+  ]
+}
