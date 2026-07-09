@@ -26,6 +26,8 @@
 <p align="center">
   <a href="#quick-start">Quick Start</a>
   |
+  <a href="#russian-version">Русская версия</a>
+  |
   <a href="#architecture">Architecture</a>
   |
   <a href="#capability-map">Capability Map</a>
@@ -85,35 +87,109 @@ Expected:
 Srednoff OS v2.1.2 loaded: OK | project=OK | skills=<count> | kernel=4500 | selector=True
 ```
 
+## Russian Version
+
+Srednoff OS - это инженерная надстройка для Codex, которая помогает работать не как случайный чат, а как повторяемый рабочий процесс: проверка проекта, выбор режима, подбор нужных навыков, защита от опасных действий, контроль источников и доказуемая валидация перед коммитом.
+
+Ключевая идея: качество должно расти, но контекст не должен раздуваться. Поэтому каталог на 4500 возможностей не загружается в модель целиком. Его читает селектор, а Codex открывает только те `SKILL.md`, которые реально нужны для текущей задачи.
+
+| Что делает Srednoff OS | Зачем это нужно |
+|---|---|
+| Проверяет загрузку системы в начале работы | Снижает риск работы в неподготовленной сессии |
+| Инициализирует старые и новые проекты | Правила, навыки и проверки остаются одинаковыми |
+| Выбирает режим и домен задачи | Малые задачи не получают лишний контекст, сложные получают усиленную проверку |
+| Подбирает навыки через ROI-селектор | Больше пользы за каждый токен |
+| Проверяет источники, лицензии и происхождение | Меньше риска слепого копирования компонентов, ассетов, промптов и CLI |
+| Запускает doctor, evals, validators и CI | Результат подтверждается командами, а не словами |
+
+Быстрый старт на Windows:
+
+```powershell
+git clone https://github.com/srednoff888-art/srednoff-os.git
+cd srednoff-os
+powershell -ExecutionPolicy Bypass -File ".\scripts\install-codex-md-os.ps1"
+powershell -ExecutionPolicy Bypass -File "$HOME\.codex\scripts\srednoff-os-status.ps1" -ProjectPath "C:\path\to\project"
+```
+
+Для UI/UX, 3D, SEO/PPC, мобильных приложений, архитектуры, безопасности и production-задач система сначала маршрутизирует задачу и выбирает минимальный полезный набор навыков. Режим `TURBO` включается только literal-командой `TURBO` и означает максимальную полезную глубину проверки без отключения safety-правил.
+
 ## Architecture
 
 ```mermaid
-flowchart TD
-    A["User task"] --> B["Startup status"]
-    B --> C{"Project initialized?"}
-    C -- "No" --> D["Init from template"]
-    C -- "Yes" --> E["Mode router"]
-    D --> E
-    E --> F["Domain router"]
-    F --> G["Quality/cost selector"]
-    G --> H["Read selected SKILL.md only"]
-    H --> I["Build, debug, review, research, or deploy"]
-    I --> J["Validation gates"]
-    J --> K["Report, commit, push, CI"]
+flowchart TB
+    subgraph S["1. Session bootstrap"]
+        A["User task"] --> B["srednoff-os-status"]
+        B --> C{"Project ready?"}
+        C -- "No" --> D["Init or sync template"]
+        C -- "Yes" --> E["Use existing project layer"]
+        D --> E
+    end
+
+    subgraph R["2. Routing"]
+        E --> F["Mode router"]
+        F --> G["Domain router"]
+        G --> H["Quality/cost selector"]
+    end
+
+    subgraph W["3. Focused work"]
+        H --> I["Open selected SKILL.md files"]
+        I --> J["Build / debug / review / research"]
+    end
+
+    subgraph V["4. Evidence"]
+        J --> K["Doctor, evals, validators"]
+        K --> L["Commit, push, CI"]
+        L --> M["Short factual report"]
+    end
+
+    classDef phase fill:#eff6ff,stroke:#2563eb,color:#111827;
+    classDef gate fill:#ecfdf5,stroke:#059669,color:#111827;
+    classDef action fill:#f8fafc,stroke:#64748b,color:#111827;
+    class B,C,H,K,L gate;
+    class A,D,E,F,G,I,J,M action;
 ```
 
 ```mermaid
-flowchart LR
-    K["4500 capability kernel"] --> S["Selector"]
-    P["Project signals"] --> S
-    B["Task brief"] --> S
-    S --> G1["Group 1 token-saving"]
-    S --> G2["Group 2 balanced-value"]
-    S --> G3["Group 3 heavyweight-result"]
-    G1 --> R["Compact capability set"]
-    G2 --> R
-    G3 --> R
-    R --> C["Focused context"]
+flowchart TB
+    subgraph INPUT["Inputs"]
+        A["Task brief"]
+        B["Project files"]
+        C["Git signals"]
+        D["Installed skills"]
+    end
+
+    subgraph SELECT["Selector scoring"]
+        E["Intent and domain match"]
+        F["Estimated token cost"]
+        G["Quality gain"]
+        H["Overlap removal"]
+    end
+
+    subgraph OUTPUT["Compact output"]
+        I["Group 1: token-saving"]
+        J["Group 2: balanced-value"]
+        K["Group 3: heavyweight-result"]
+        L["Read only chosen skills"]
+    end
+
+    A --> E
+    B --> E
+    C --> E
+    D --> E
+    E --> F --> G --> H
+    H --> I
+    H --> J
+    H --> K
+    I --> L
+    J --> L
+    K --> L
+
+    classDef input fill:#f8fafc,stroke:#64748b,color:#111827;
+    classDef score fill:#fefce8,stroke:#ca8a04,color:#111827;
+    classDef output fill:#ecfdf5,stroke:#059669,color:#111827;
+    class A,B,C,D input;
+    class E,F,G,H score;
+    class I,J,K,L output;
 ```
 
 Design principle: the kernel is not model context. It is a script-readable catalog. Codex reads only the selected skill files needed for the current task.
@@ -200,14 +276,26 @@ Hooks reduce accidental misuse. They do not replace sandboxing, OS permissions, 
 ## Source Intake Policy
 
 ```mermaid
-flowchart LR
-    A["Candidate source"] --> B["Provenance"]
-    B --> C["License"]
-    C --> D["Risk class"]
-    D --> E["Copy policy"]
-    E --> F["Disabled metadata or adapted pattern"]
-    F --> G["Validator"]
-    G --> H["Human review before enablement"]
+flowchart TB
+    A["Candidate source"] --> B["Identify provenance"]
+    B --> C["Check license"]
+    C --> D{"Allowed to reuse?"}
+    D -- "No or unclear" --> E["Extract abstract pattern only"]
+    D -- "Yes" --> F["Review dependency and security cost"]
+    F --> G{"Project fit?"}
+    G -- "No" --> E
+    G -- "Yes" --> H["Copy-adapt-upgrade or metadata import"]
+    E --> I["Record decision"]
+    H --> I
+    I --> J["Validator"]
+    J --> K["Human review before enablement"]
+
+    classDef risk fill:#fef2f2,stroke:#dc2626,color:#111827;
+    classDef review fill:#fefce8,stroke:#ca8a04,color:#111827;
+    classDef safe fill:#ecfdf5,stroke:#059669,color:#111827;
+    class D,G review;
+    class E risk;
+    class H,I,J,K safe;
 ```
 
 Allowed: pattern extraction, metadata, small project-fit adaptations after review.

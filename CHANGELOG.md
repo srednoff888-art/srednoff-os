@@ -54,6 +54,7 @@
 - Added public release note in `RELEASE.md`.
 - Added checkpoint 14 release closure notes in `.agent/SREDNOFF_OS_CHECKPOINT_14_RELEASE.md`.
 - Updated the GitHub README and banner for the public release.
+- Improved README Mermaid diagrams for readability and added a Russian-language overview section.
 
 ### Verified
 
