@@ -6,14 +6,14 @@ This file documents what is currently verified and what is intentionally not pro
 
 Last verified: 2026-07-09.
 
-Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. Checkpoints 1-13 added the public core boundary, compact entrypoint, profile system, quality modes, security hooks, RU/NeuralDeep gates, donor research validation, and structured docs. Checkpoint 14 closed the release with a full validation pass, public release note, and updated README banner.
+Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. Checkpoints 1-13 added the public core boundary, compact entrypoint, profile system, quality modes, security hooks, RU/NeuralDeep gates, donor research validation, and structured docs. Checkpoint 14 closed the release with a full validation pass, public release note, and updated README banner. The post-release stress test added hook false-positive regressions, empty/no-brief eval coverage, and a selector fast path.
 
 | Check | Status | Command |
 |---|---:|---|
 | Selector regression suite | PASS, 11/11 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-selector.ps1` |
 | v2.1.1 compatibility evals | PASS, 13/13 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v211.ps1` |
-| v2.1.2 routing/source evals | PASS, 12/12 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v212.ps1` |
-| Independent security fixture evals | PASS, 12/12 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-security-fixtures.ps1` |
+| v2.1.2 routing/source evals | PASS, 16/16 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v212.ps1` |
+| Independent security fixture evals | PASS, 14/14 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-security-fixtures.ps1` |
 | Profile evals | PASS, 4/4 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-profiles.ps1` |
 | Quality mode evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-quality-modes.ps1` |
 | Policy evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-policies.ps1` |
@@ -43,10 +43,11 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 - Stronger fixture semantics: selector evals now support `expectedAll`, not only `expectedAny`.
 - Fast validation: skill metadata smoke checks now support YAML block scalar descriptions such as `description: >`.
 - Expanded kernel: deterministic catalog generation now produces 4500 records with 75 capability slugs per domain and 1800/1800/900 Group 1/2/3 distribution.
-- Selector speed: the local wrapper uses portable `.codex/skill-index.json` when present, avoiding repeated `SKILL.md` scans; measured wrapper scenario improved from about 5.9s to about 1.9s on this machine.
+- Selector speed: the local wrapper uses portable `.codex/skill-index.json` when present, avoiding repeated `SKILL.md` scans; the optional `-ProjectScan off` path measured about 3.7s locally for low-context interactive selection while `auto/full` remain available for richer project evidence.
 - CI coverage: pull requests and pushes now run Windows PowerShell validation, Ubuntu Bash syntax/ShellCheck, kernel validation, registry validation, and eval suites.
 - Source registry provenance: UI/3D source ranking now includes license, provenance, vetted status, and copy policy metadata for every registered source.
 - Independent security fixtures: hook behavior is now tested from external fixture data instead of only inline/manual cases.
+- Hook false-positive hardening: OpenAI key detection now avoids blocking ordinary hyphenated text such as source-ranking gate names while still blocking high-confidence key shapes.
 - External prompt mining: claimed-leak and prompt-dump repositories are now handled through a provenance-first skill that extracts only abstract, vendor-neutral patterns and rejects verbatim proprietary prompt text.
 - Profile system: public defaults, maintainer examples, agency settings, and RU-market settings now live in a portable `profiles/` layer with privacy fixtures and doctor coverage.
 - Quality modes: `fast`, `standard`, `production`, and `critical` now map task risk to selector budget, capability count, and validation gates without changing the old `normal/deep/turbo` compatibility fields.

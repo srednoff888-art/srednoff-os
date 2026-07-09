@@ -379,7 +379,7 @@ def safe_read(path: Path, max_chars: int = 20000) -> str:
         return ""
 
 
-def walk_project(project: Path, max_files: int = 700) -> tuple[list[str], Counter[str], str]:
+def walk_project(project: Path, max_files: int = 260, read_snippets: bool = True) -> tuple[list[str], Counter[str], str]:
     names: list[str] = []
     extensions: Counter[str] = Counter()
     snippets: list[str] = []
@@ -396,11 +396,19 @@ def walk_project(project: Path, max_files: int = 700) -> tuple[list[str], Counte
             suffix = Path(file_name).suffix.lower()
             if suffix:
                 extensions[suffix] += 1
-            if file_name in KEY_FILES or rel in KEY_FILES:
+            if read_snippets and (file_name in KEY_FILES or rel in KEY_FILES):
                 snippets.append(f"\n--- {rel} ---\n{safe_read(Path(root) / file_name)}")
             if len(names) >= max_files:
                 return names, extensions, "\n".join(snippets)
     return names, extensions, "\n".join(snippets)
+
+
+def project_scan_settings(mode: str) -> tuple[int, bool]:
+    if mode == "off":
+        return 0, False
+    if mode == "full":
+        return 700, True
+    return 260, True
 
 
 def load_json(path: Path) -> list[dict]:
@@ -891,6 +899,7 @@ def main() -> int:
     parser.add_argument("--max", type=int, default=24)
     parser.add_argument("--json-output", default="")
     parser.add_argument("--format", choices=["compact", "ids"], default="compact")
+    parser.add_argument("--project-scan", choices=["auto", "full", "off"], default="auto")
     args = parser.parse_args()
 
     catalog_path = Path(args.catalog)
@@ -911,7 +920,11 @@ def main() -> int:
             )
 
     project = Path(args.project).resolve()
-    file_names, ext_counts, snippets = walk_project(project)
+    max_files, read_snippets = project_scan_settings(args.project_scan)
+    if max_files > 0:
+        file_names, ext_counts, snippets = walk_project(project, max_files=max_files, read_snippets=read_snippets)
+    else:
+        file_names, ext_counts, snippets = [], Counter(), ""
     brief_haystack = normalize(args.brief)
     project_haystack = normalize("\n".join(file_names) + "\n" + snippets)
     haystack = normalize(args.brief + "\n" + "\n".join(file_names) + "\n" + snippets)

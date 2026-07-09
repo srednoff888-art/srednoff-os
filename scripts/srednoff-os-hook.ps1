@@ -77,7 +77,7 @@ function Find-SecretSignals {
     param([string]$Text)
 
     $Rules = @(
-        @{ Name = "openai_api_key"; Pattern = "sk-[A-Za-z0-9_-]{32,}" },
+        @{ Name = "openai_api_key"; Pattern = "(?<![A-Za-z0-9_-])(?:sk-(?:proj|svcacct|admin)-[A-Za-z0-9_-]{20,}|sk-[A-Za-z0-9]{32,})(?![A-Za-z0-9_-])" },
         @{ Name = "github_token"; Pattern = "gh[pousr]_[A-Za-z0-9_]{32,}" },
         @{ Name = "aws_access_key"; Pattern = "AKIA[0-9A-Z]{16}" },
         @{ Name = "google_api_key"; Pattern = "AIza[0-9A-Za-z_-]{35}" },

@@ -38,6 +38,12 @@ $SelectorOut = & $Selector -ProjectPath $ProjectPath -Brief "source ranking UI k
 $Results += Add-Result -Id "selector:v212-skills" -Passed (($SelectorOut -match "source-ranking-roi-selector") -and ($SelectorOut -match "design-brief-autogenerator")) -Detail (($SelectorOut -replace "\s+", " ").Trim())
 $Results += Add-Result -Id "selector:legacy-plus-output" -Passed (($SelectorOut -match "Capability IDs") -and ($SelectorOut -match "token-saving") -and ($SelectorOut -match "balanced-value|heavyweight-result")) -Detail "legacy ids output retained"
 
+$SelectorEmpty = & $Selector -ProjectPath $ProjectPath -Brief "" -Budget lean -Max 5 -Format ids | Out-String
+$Results += Add-Result -Id "selector:empty-brief" -Passed (($SelectorEmpty -match "Capability IDs") -and ($SelectorEmpty -match "repo-intake-context|documentation-content|testing-qa-quality")) -Detail (($SelectorEmpty -replace "\s+", " ").Trim())
+
+$SelectorOff = & $Selector -ProjectPath $ProjectPath -Brief "debug selector without project scan" -Budget lean -Max 5 -Format ids -ProjectScan off | Out-String
+$Results += Add-Result -Id "selector:project-scan-off" -Passed (($SelectorOff -match "Capability IDs") -and ($SelectorOff -match "repo-intake-context|testing-qa-quality")) -Detail (($SelectorOff -replace "\s+", " ").Trim())
+
 $Rank3D = & $SourceRanker -ProjectPath $ProjectPath -Brief "optimize glTF GLB model texture asset pipeline" -Json | ConvertFrom-Json
 $Top3D = @($Rank3D.ranked_sources)[0]
 $Results += Add-Result -Id "source-ranker:gltf-transform-top" -Passed ($Top3D.id -eq "gltf-transform") -Detail "top=$($Top3D.id); score=$($Top3D.score)"
@@ -57,6 +63,9 @@ $Results += Add-Result -Id "source-ranker:normalized-named-source" -Passed ($Rea
 $BriefSparse = & $DesignBrief -ProjectPath $ProjectPath -Brief "make 3D web landing" -Json | ConvertFrom-Json
 $Results += Add-Result -Id "design-brief:sparse-asks" -Passed ([bool]$BriefSparse.should_ask_user -and @($BriefSparse.questions).Count -gt 0) -Detail "questions=$(@($BriefSparse.questions).Count)"
 
+$BriefEmpty = & $DesignBrief -ProjectPath $ProjectPath -Brief "" -Json | ConvertFrom-Json
+$Results += Add-Result -Id "design-brief:empty-brief" -Passed (($BriefEmpty.name -match "design brief") -and (@($BriefEmpty.domains) -contains "general")) -Detail "ask_user=$($BriefEmpty.should_ask_user); questions=$(@($BriefEmpty.questions).Count)"
+
 $BriefEnough = & $DesignBrief -ProjectPath $ProjectPath -Brief "make premium SaaS landing for CTO users with shadcn" -Json | ConvertFrom-Json
 $Results += Add-Result -Id "design-brief:sufficient-brief" -Passed (-not [bool]$BriefEnough.should_ask_user) -Detail "ask_user=$($BriefEnough.should_ask_user); questions=$(@($BriefEnough.questions).Count)"
 
@@ -64,6 +73,9 @@ $DomainOut = & $DomainRouter -ProjectPath $ProjectPath -Brief "UI/UX 3D web desi
 $SkillPacks = @($DomainOut.skill_packs)
 $Results += Add-Result -Id "domain-router:v212-packs" -Passed (($SkillPacks -contains "source-ranking-roi-selector") -and ($SkillPacks -contains "design-brief-autogenerator")) -Detail "packs=$($SkillPacks -join ',')"
 $Results += Add-Result -Id "domain-router:helper-scripts" -Passed (($DomainOut.helper_scripts.source_ranker -match "source-ranker") -and ($DomainOut.helper_scripts.design_brief -match "design-brief")) -Detail "helpers ok"
+
+$DomainEmpty = & $DomainRouter -ProjectPath $ProjectPath -Brief "" -Json | ConvertFrom-Json
+$Results += Add-Result -Id "domain-router:empty-brief" -Passed (($DomainEmpty.mode -eq "normal") -and (@($DomainEmpty.blocking_questions).Count -eq 0)) -Detail "mode=$($DomainEmpty.mode); domains=$(@($DomainEmpty.domains) -join ',')"
 
 $RegistryData = Get-Content -LiteralPath $Registry -Raw -Encoding UTF8 | ConvertFrom-Json
 $SourceIds = @($RegistryData.sources | ForEach-Object { $_.id })

@@ -27,8 +27,8 @@ Checkpoint 14 verifies and packages the vNext work completed in checkpoints 0-13
 | Status | Srednoff OS loaded OK |
 | Selector evals | 11/11 PASS |
 | v2.1.1 evals | 13/13 PASS |
-| v2.1.2 evals | 12/12 PASS |
-| Security fixtures | 12/12 PASS |
+| v2.1.2 evals | 16/16 PASS |
+| Security fixtures | 14/14 PASS |
 | Profiles | 4/4 PASS |
 | Quality modes | 5/5 PASS |
 | Policies | 5/5 PASS |
@@ -69,4 +69,3 @@ Srednoff OS does not claim:
 ## Next State
 
 The vNext checkpoint run is complete. Future work should use normal issue/PR-sized changes unless a new roadmap is opened.
-

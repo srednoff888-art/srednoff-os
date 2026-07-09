@@ -1,4 +1,5 @@
 param(
+    [AllowEmptyString()]
     [string]$Brief = "",
     [switch]$Json
 )

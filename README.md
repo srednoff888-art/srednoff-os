@@ -24,6 +24,8 @@
 </p>
 
 <p align="center">
+  <a href="#about">About</a>
+  |
   <a href="#quick-start">Quick Start</a>
   |
   <a href="#russian-version">Русская версия</a>
@@ -58,6 +60,20 @@ The public vNext checkpoint run is complete. Release evidence is recorded in [RE
 | Unclear release quality | Doctor, evals, validators, and CI | Evidence-backed changes |
 | Public/private drift | Public profiles and local overlays | Shareable repo without personal state |
 | Old sessions drifting | Sync scripts with timestamped backups | New and old projects stay aligned |
+
+## About
+
+Srednoff OS is built for developers who want coding agents to behave like a disciplined engineering workspace: fast when the task is small, deeper when risk is real, and explicit about validation before changes are published.
+
+| Principle | Implementation |
+|---|---|
+| Quality without context waste | 4500 capabilities stay script-only; selector returns a compact shortlist |
+| Safety before automation | Hooks block high-confidence secrets and destructive commands, and ask before externally visible actions |
+| Source hygiene | UI kits, 3D assets, prompt repos, skills, MCPs, and CLIs pass provenance and license gates |
+| Public shareability | Personal overlays stay out of the public core |
+| Release evidence | CI, doctor, evals, validators, and quality docs back public claims |
+
+Author: Ivan Srednoff (Иван Среднёв), [Srednoff.agency](https://srednoff.agency).
 
 ## Quick Start
 
@@ -233,8 +249,8 @@ Current public release gate:
 | Srednoff OS doctor | PASS, 44/44 |
 | Selector evals | PASS, 11/11 |
 | v2.1.1 evals | PASS, 13/13 |
-| v2.1.2 evals | PASS, 12/12 |
-| Security fixtures | PASS, 12/12 |
+| v2.1.2 evals | PASS, 16/16 |
+| Security fixtures | PASS, 14/14 |
 | Profiles | PASS, 4/4 |
 | Quality modes | PASS, 5/5 |
 | Policies | PASS, 5/5 |
@@ -256,6 +272,19 @@ Release details:
 - [Quality evidence](QUALITY.md)
 - [Changelog](CHANGELOG.md)
 - [Checkpoint report](.agent/SREDNOFF_OS_CHECKPOINT_14_RELEASE.md)
+
+## Release
+
+The current public release is `v2.1.2` plus the stress-test hardening patch from 2026-07-09.
+
+| Release item | Status |
+|---|---|
+| Public package | Published on GitHub |
+| GitHub Actions | Passing on Windows and Ubuntu |
+| Hook false-positive regression | Fixed and covered |
+| Empty-brief script behavior | Covered through no-brief CLI path and v2.1.2 evals |
+| Selector fast path | `-ProjectScan off` available for low-context interactive selection |
+| Release note | [RELEASE.md](RELEASE.md) |
 
 ## Security Model
 

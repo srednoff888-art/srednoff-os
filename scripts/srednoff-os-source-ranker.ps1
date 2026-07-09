@@ -1,5 +1,6 @@
 param(
     [string]$ProjectPath = ".",
+    [AllowEmptyString()]
     [string]$Brief = "",
     [int]$Max = 8,
     [switch]$Json

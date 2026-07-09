@@ -1,12 +1,15 @@
 param(
     [string]$ProjectPath = ".",
+    [AllowEmptyString()]
     [string]$Brief = "",
     [ValidateSet("lean", "balanced", "deep", "turbo")]
     [string]$Budget = "balanced",
     [int]$Max = 24,
     [string]$JsonOutput = "",
     [ValidateSet("compact", "ids")]
-    [string]$Format = "compact"
+    [string]$Format = "compact",
+    [ValidateSet("auto", "full", "off")]
+    [string]$ProjectScan = "auto"
 )
 
 $ErrorActionPreference = "Stop"
@@ -26,6 +29,7 @@ if (-not (Test-Path -LiteralPath $Selector)) {
 }
 
 $Args = @($Selector, "--project", $ProjectPath, "--budget", $Budget, "--max", "$Max", "--format", $Format)
+$Args += @("--project-scan", $ProjectScan)
 if ($LocalSkillIndex -and (Test-Path -LiteralPath $LocalSkillIndex -PathType Leaf) -and $Selector -eq $LocalSelector) {
     $Args += @("--skill-index", $LocalSkillIndex)
 } elseif ($LocalSkillsRoot -and (Test-Path -LiteralPath $LocalSkillsRoot -PathType Container) -and $Selector -eq $LocalSelector) {

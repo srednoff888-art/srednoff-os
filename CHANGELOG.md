@@ -55,6 +55,9 @@
 - Added checkpoint 14 release closure notes in `.agent/SREDNOFF_OS_CHECKPOINT_14_RELEASE.md`.
 - Updated the GitHub README and banner for the public release.
 - Improved README Mermaid diagrams for readability and added a Russian-language overview section.
+- Hardened OpenAI key detection to avoid false positives on ordinary hyphenated text.
+- Added selector `ProjectScan` modes with a fast `off` path for low-context capability selection.
+- Updated README About and Release sections for the public GitHub page.
 
 ### Verified
 
@@ -63,7 +66,8 @@
 - Kernel validation passes: 4500 records.
 - Profile evals pass: 4/4.
 - Quality mode evals pass: 5/5.
-- Security fixture evals pass: 12/12.
+- v2.1.2 evals pass: 16/16.
+- Security fixture evals pass: 14/14.
 - Policy evals pass: 5/5.
 - Bundle evals pass: 9/9.
 - Agent evals pass: 8/8.

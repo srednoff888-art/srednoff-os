@@ -39,6 +39,9 @@
     "ru-cli-compatibility-wrappers",
     "donor-research-provenance-manifest",
     "structured-public-docs",
-    "public-release-note"
+    "public-release-note",
+    "hook-secret-false-positive-regressions",
+    "empty-brief-eval-coverage",
+    "selector-project-scan-modes"
   ]
 }

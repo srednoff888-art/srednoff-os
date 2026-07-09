@@ -4,6 +4,8 @@ Release date: 2026-07-09
 
 Srednoff OS v2.1.2 is a quality/cost-aware operating layer for Codex. This release closes the vNext checkpoint run and packages the public core for sharing, review, and reuse.
 
+Stress-test hardening update, 2026-07-09: the public branch now includes a hook false-positive fix, extra regression fixtures, empty-brief/no-brief eval coverage, and a selector fast path for low-context calls.
+
 ## What Changed
 
 | Area | Result |
@@ -13,6 +15,7 @@ Srednoff OS v2.1.2 is a quality/cost-aware operating layer for Codex. This relea
 | Quality modes | `fast`, `standard`, `production`, `critical`, plus explicit `TURBO` override |
 | Security | Prompt/tool preflight hooks, ask/block decisions, redacted audit logging |
 | Source intake | UI/3D source registry, donor research manifest, provenance/license gates |
+| Selector performance | Optional `-ProjectScan off` path for faster low-context capability selection |
 | RU workflows | RU policies, bundles, agents, and safe CLI wrappers |
 | NeuralDeep | Disabled registry and controlled metadata importer, no auto-install |
 | Documentation | Structured public docs under `docs/` |
@@ -24,8 +27,8 @@ Srednoff OS v2.1.2 is a quality/cost-aware operating layer for Codex. This relea
 |---|---:|
 | Selector evals | PASS, 11/11 |
 | v2.1.1 evals | PASS, 13/13 |
-| v2.1.2 evals | PASS, 12/12 |
-| Security fixtures | PASS, 12/12 |
+| v2.1.2 evals | PASS, 16/16 |
+| Security fixtures | PASS, 14/14 |
 | Profiles | PASS, 4/4 |
 | Quality modes | PASS, 5/5 |
 | Policies | PASS, 5/5 |
@@ -56,4 +59,3 @@ Srednoff OS v2.1.2 is a quality/cost-aware operating layer for Codex. This relea
 - [Quality evidence](QUALITY.md)
 - [Changelog](CHANGELOG.md)
 - [Checkpoint plan](.agent/SREDNOFF_OS_VNEXT_CHECKPOINTS.md)
-
