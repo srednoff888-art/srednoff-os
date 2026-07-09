@@ -28,7 +28,7 @@ jobs:
         shell: pwsh
         run: |
           $Errors = @()
-          Get-ChildItem .\scripts -Filter *.ps1 -File | ForEach-Object {
+          Get-ChildItem .\scripts, .\integrations -Filter *.ps1 -File -Recurse | ForEach-Object {
             $Tokens = $null
             $ParseErrors = $null
             [System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$Tokens, [ref]$ParseErrors) | Out-Null
@@ -45,7 +45,7 @@ jobs:
         shell: pwsh
         run: |
           Install-Module PSScriptAnalyzer -Scope CurrentUser -Force
-          $Results = Invoke-ScriptAnalyzer -Path .\scripts -Recurse -Severity Error
+          $Results = Invoke-ScriptAnalyzer -Path .\scripts, .\integrations -Recurse -Severity Error
           if ($Results) {
             $Results | Format-Table -AutoSize
             exit 1
@@ -68,6 +68,7 @@ jobs:
           .\scripts\test-srednoff-os-quality-modes.ps1
           .\scripts\test-srednoff-os-policies.ps1
           .\scripts\test-srednoff-os-neuraldeep-registry.ps1
+          .\scripts\test-srednoff-os-neuraldeep-importer.ps1
 
       - name: Fast skill validation
         shell: pwsh
@@ -120,3 +121,4 @@ jobs:
           ./scripts/test-srednoff-os-quality-modes.ps1
           ./scripts/test-srednoff-os-policies.ps1
           ./scripts/test-srednoff-os-neuraldeep-registry.ps1
+          ./scripts/test-srednoff-os-neuraldeep-importer.ps1

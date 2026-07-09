@@ -27,8 +27,8 @@ Purpose: implement the vNext roadmap in small auditable checkpoints. Every check
 | 5 | Security hook upgrade | Strengthen destructive command, secret leak, ask/deny, and audit-log handling | Hook behavior plus security fixtures | Done |
 | 6 | RU risk policies | Add NeuralDeep, marketplace, payments, messaging, and RU data policies | `policies/*.yml` plus policy evals | Done |
 | 7 | NeuralDeep registry skeleton | Add skills, MCP, CLI, index, trust report, and import log structure | `registry/neuraldeep/` safe disabled registry | Done |
-| 8 | NeuralDeep importer | Add importer, mapper, audit, README; support API when available and HTML fallback when API is absent | `integrations/neuraldeep/` tooling and evals | Next |
-| 9 | RU bundles | Add ru-seo, ru-marketplaces, ru-enterprise, ru-1c, ru-llm, ru-content, ru-payments, ru-messaging, ru-devops bundles | `bundles/ru-*` metadata | Pending |
+| 8 | NeuralDeep importer | Add importer, mapper, audit, README; support API when available and HTML fallback when API is absent | `integrations/neuraldeep/` tooling and evals | Done |
+| 9 | RU bundles | Add ru-seo, ru-marketplaces, ru-enterprise, ru-1c, ru-llm, ru-content, ru-payments, ru-messaging, ru-devops bundles | `bundles/ru-*` metadata | Next |
 | 10 | RU agents | Add RU specialist agent profiles for SEO, marketplaces, 1C, enterprise, LLM, content, payments, messaging | `agents/ru-*.md` | Pending |
 | 11 | RU CLI compatibility scripts | Add safe search, import, audit, install wrappers that recommend commands without silent execution | `scripts/srednoff-os-ru-*.ps1` | Pending |
 | 12 | Donor repository research | Review listed Codex/agent donor repos and adapt only clean-room patterns | Research notes and selected changes | Pending |
@@ -37,4 +37,4 @@ Purpose: implement the vNext roadmap in small auditable checkpoints. Every check
 
 ## Current Position
 
-Checkpoint 7 is complete. The next implementation checkpoint is checkpoint 8: NeuralDeep importer.
+Checkpoint 8 is complete. The next implementation checkpoint is checkpoint 9: RU bundles.

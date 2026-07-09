@@ -57,7 +57,7 @@ Current vNext implementation status is tracked in [.agent/SREDNOFF_OS_VNEXT_CHEC
 | Public core leaks personal defaults | Public profiles plus local-only private overlays | Shared repo stays portable and reviewable |
 | Quality level is implicit | `fast`, `standard`, `production`, and `critical` quality modes | Validation cost matches task risk |
 | RU-market work needs extra gates | `policies/*.yml` for RU data, payments, messaging, marketplaces, and NeuralDeep imports | Regulated or region-sensitive actions ask for review |
-| External agent catalogs can be unsafe | Disabled NeuralDeep registry with trust report and import log | Candidate tools stay inert until reviewed |
+| External agent catalogs can be unsafe | Disabled NeuralDeep registry plus controlled metadata importer | Candidate tools stay inert until reviewed |
 | Regressions are easy to miss | GitHub Actions CI plus local doctor/evals | Pull requests are checked automatically |
 | Old sessions drift from the global rules | Sync scripts update existing Codex project folders with backups | New and old projects stay aligned |
 
@@ -136,6 +136,7 @@ flowchart LR
 | Quality modes | `quality-modes.json`, `srednoff-os-quality-mode.ps1` | Maps task risk to budget, capability count, and validation gates | Quality mode fixtures and router coverage |
 | Policies | `policies/*.yml`, `srednoff-os-policy-check.ps1` | Matches RU/NeuralDeep policy gates by brief and keeps default `ask` posture | Policy fixtures and doctor check |
 | NeuralDeep registry | `registry/neuraldeep/` | Holds disabled candidate skills, MCP servers, and CLI tools with provenance and trust metadata | Registry fixtures and doctor check |
+| NeuralDeep importer | `integrations/neuraldeep/` | Imports local manifests as disabled metadata after license/provenance/dedupe checks | Importer fixtures and CI |
 | Selector | `select-quality-cost-capabilities.ps1`, `quality-cost-skill-kernel` | Chooses compact capabilities by value per token | Selector fixtures |
 | Routers | `srednoff-os-mode-router.ps1`, `srednoff-os-domain-router.ps1` | Routes normal/deep/TURBO and task domains | v2.1.1/v2.1.2 evals |
 | UI/3D source ranking | `srednoff-os-design-brief.ps1`, `srednoff-os-source-ranker.ps1` | Ranks UI kits, design connectors, 3D libraries, and asset sources | Registry provenance validation |
@@ -150,7 +151,7 @@ Current release gate, as recorded in [QUALITY.md](QUALITY.md):
 
 | Check | Result | Command |
 |---|---:|---|
-| Doctor | 33/33 PASS | `.\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
+| Doctor | 35/35 PASS | `.\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
 | Selector evals | 11/11 PASS | `.\scripts\test-srednoff-os-selector.ps1` |
 | v2.1.1 compatibility evals | 13/13 PASS | `.\scripts\test-srednoff-os-v211.ps1` |
 | v2.1.2 routing/source evals | 12/12 PASS | `.\scripts\test-srednoff-os-v212.ps1` |
@@ -159,6 +160,7 @@ Current release gate, as recorded in [QUALITY.md](QUALITY.md):
 | Quality mode evals | 5/5 PASS | `.\scripts\test-srednoff-os-quality-modes.ps1` |
 | Policy evals | 5/5 PASS | `.\scripts\test-srednoff-os-policies.ps1` |
 | NeuralDeep registry evals | 5/5 PASS | `.\scripts\test-srednoff-os-neuraldeep-registry.ps1` |
+| NeuralDeep importer evals | 5/5 PASS | `.\scripts\test-srednoff-os-neuraldeep-importer.ps1` |
 | Kernel validation | 4500 records PASS | `.\scripts\validate-quality-cost-kernel.ps1` |
 | Source registry validation | 17 sources PASS | `.\scripts\validate-source-registry.ps1` |
 | Skill metadata smoke | 308/308 PASS | `.\scripts\quick-validate-all-skills.ps1 -Mode fast` |
@@ -225,9 +227,21 @@ These are risk gates, not legal advice. Current official sources must be recheck
 | `registry/neuraldeep/mcp.json` | MCP server candidates | disabled and high-risk by default |
 | `registry/neuraldeep/cli.json` | CLI candidates | disabled and high-risk by default |
 | `registry/neuraldeep/trust-report.json` | Trust model | `trusted_for_execution=false` |
-| `registry/neuraldeep/import-log.json` | Import event structure | records skeleton only |
+| `registry/neuraldeep/import-log.json` | Import event structure | records skeleton and controlled imports |
+| `integrations/neuraldeep/import-neuraldeep-registry.ps1` | Controlled importer | local manifest in, disabled metadata out |
 
-The registry does not install anything. It stores candidates for later review and importer work.
+The registry and importer do not install anything. They store candidates for later review.
+
+```mermaid
+flowchart LR
+    M["Local manifest"] --> I["Controlled importer"]
+    I --> G{"Gates pass?"}
+    G -- "No" --> R["Reject report"]
+    G -- "Duplicate" --> D["Duplicate report"]
+    G -- "Yes" --> C["Disabled catalog item"]
+    C --> H["Human review"]
+    H --> A["Ask before any install or enable action"]
+```
 
 ## Safety Model
 
@@ -275,12 +289,13 @@ Safety guardrails:
 | `code_review.md` | Review rules for bugs, security, performance, and maintainability |
 | `.agent/` | Planning templates, quality gates, connector rules, release notes |
 | `.agent/SREDNOFF_OS_CHECKPOINT_5_SECURITY_HOOK_RESEARCH.md` | Security hook source research and adaptation notes |
-| `.codex/skills/` | 306 skill directories and agent profiles |
+| `.codex/skills/` | 308 skill directories and agent profiles |
 | `.codex/srednoff-os/` | Version metadata, source registry, source watchlist |
 | `.codex/srednoff-os/quality-modes.json` | Fast, standard, production, and critical mode metadata |
 | `profiles/` | Public profile metadata and sanitized overlay examples |
 | `policies/` | RU and NeuralDeep policy gates |
 | `registry/neuraldeep/` | Disabled NeuralDeep skills/MCP/CLI registry skeleton |
+| `integrations/neuraldeep/` | Controlled NeuralDeep metadata importer |
 | `scripts/` | Install, sync, status, doctor, selector, router, brief, ranking, validation |
 | `evals/` | Regression fixtures for selectors, routers, source ranking, and hook security checks |
 | `hooks.example.json` | Portable hook example without private local state |

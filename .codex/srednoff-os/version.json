@@ -32,6 +32,7 @@
     "quality-modes",
     "security-hook-ask-deny-audit",
     "ru-risk-policies",
-    "neuraldeep-safe-registry"
+    "neuraldeep-safe-registry",
+    "neuraldeep-controlled-importer"
   ]
 }

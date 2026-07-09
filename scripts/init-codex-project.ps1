@@ -36,7 +36,7 @@ $Files = @(
     "code_review.md"
 )
 
-foreach ($Directory in @(".agent", ".codex\skills", ".codex\srednoff-os", "scripts", "evals", "profiles", "policies", "registry")) {
+foreach ($Directory in @(".agent", ".codex\skills", ".codex\srednoff-os", "scripts", "evals", "profiles", "policies", "registry", "integrations")) {
     $SourceDirectory = Join-Path $TemplateDir $Directory
     if (Test-Path -LiteralPath $SourceDirectory) {
         $Files += Get-ChildItem -LiteralPath $SourceDirectory -Recurse -File |

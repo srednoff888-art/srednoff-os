@@ -145,6 +145,11 @@ if (Test-JsonFile -Path $NeuralDeepIndex) {
     Add-Check -Name "neuraldeep-registry" -Status "FAIL" -Detail "Missing or invalid registry\neuraldeep\index.json" -Fix "Install or sync Srednoff OS NeuralDeep registry"
 }
 
+$NeuralDeepImporter = Resolve-LocalOrHome "integrations\neuraldeep\import-neuraldeep-registry.ps1" "integrations\neuraldeep\import-neuraldeep-registry.ps1" "Leaf"
+$NeuralDeepImporterReadme = Resolve-LocalOrHome "integrations\neuraldeep\README.md" "integrations\neuraldeep\README.md" "Leaf"
+$ImporterOk = (Test-Path -LiteralPath $NeuralDeepImporter -PathType Leaf) -and (Test-Path -LiteralPath $NeuralDeepImporterReadme -PathType Leaf)
+Add-Check -Name "neuraldeep-importer" -Status ($(if ($ImporterOk) { "OK" } else { "FAIL" })) -Detail "script=$NeuralDeepImporter; readme=$NeuralDeepImporterReadme" -Fix "Restore integrations\neuraldeep importer"
+
 $Kernel = Resolve-LocalOrHome ".codex\skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "skills\quality-cost-skill-kernel\references\core-3000-capabilities.json" "Leaf"
 $KernelCount = Count-JsonArray -Path $Kernel
 Add-Check -Name "kernel" -Status ($(if ($KernelCount -eq $ExpectedKernelRecords) { "OK" } else { "FAIL" })) -Detail "records=$KernelCount expected=$ExpectedKernelRecords" -Fix "Run validate-quality-cost-kernel.ps1 -Rebuild"
@@ -371,6 +376,16 @@ if ($RunEvals) {
         Add-Check -Name "neuraldeep-registry-evals" -Status ($(if ($NeuralDeepEvalOk) { "OK" } else { "FAIL" })) -Detail (($NeuralDeepEvalOutput | Out-String).Trim())
     } else {
         Add-Check -Name "neuraldeep-registry-evals" -Status "FAIL" -Detail "Missing NeuralDeep registry eval script"
+    }
+
+    $NeuralDeepImporterEvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-neuraldeep-importer.ps1" "scripts\test-srednoff-os-neuraldeep-importer.ps1" "Leaf"
+    if (Test-Path -LiteralPath $NeuralDeepImporterEvalScript -PathType Leaf) {
+        $global:LASTEXITCODE = 0
+        $NeuralDeepImporterEvalOutput = & $NeuralDeepImporterEvalScript -ProjectPath $ProjectRoot 2>&1
+        $NeuralDeepImporterEvalOk = $LASTEXITCODE -eq 0
+        Add-Check -Name "neuraldeep-importer-evals" -Status ($(if ($NeuralDeepImporterEvalOk) { "OK" } else { "FAIL" })) -Detail (($NeuralDeepImporterEvalOutput | Out-String).Trim())
+    } else {
+        Add-Check -Name "neuraldeep-importer-evals" -Status "FAIL" -Detail "Missing NeuralDeep importer eval script"
     }
 }
 

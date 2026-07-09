@@ -56,7 +56,7 @@ files=(
   ".agent/SREDNOFF_OS_V2_1_RELEASE.md"
 )
 
-for source_dir in "$template_dir/.codex/skills" "$template_dir/.codex/srednoff-os" "$template_dir/scripts" "$template_dir/evals"; do
+for source_dir in "$template_dir/.codex/skills" "$template_dir/.codex/srednoff-os" "$template_dir/scripts" "$template_dir/evals" "$template_dir/profiles" "$template_dir/policies" "$template_dir/registry" "$template_dir/integrations"; do
   if [ -d "$source_dir" ]; then
     while IFS= read -r -d '' file; do
       files+=("${file#"$template_dir/"}")

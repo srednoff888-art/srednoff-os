@@ -1,0 +1,37 @@
+{
+  "schema": "srednoff-os.neuraldeep.import-manifest.v1",
+  "source": "https://neuraldeep.ru/skills",
+  "items": [
+    {
+      "id": "safe-review-skill",
+      "name": "Safe Review Skill",
+      "kind": "skill",
+      "source_url": "https://neuraldeep.ru/skill/safe-review-skill",
+      "repo_url": "https://github.com/example/safe-review-skill",
+      "license": "MIT",
+      "provenance": "NeuralDeep catalog entry with linked public repository metadata.",
+      "description": "Fixture candidate that should import as disabled metadata."
+    },
+    {
+      "id": "unsafe-unknown-license",
+      "name": "Unsafe Unknown License",
+      "kind": "mcp-server",
+      "source_url": "https://neuraldeep.ru/mcp/unsafe-unknown-license",
+      "repo_url": "https://github.com/example/unsafe-unknown-license",
+      "license": "unknown",
+      "provenance": "Fixture candidate with unknown license.",
+      "description": "Fixture candidate that should be rejected."
+    },
+    {
+      "id": "find-skills",
+      "name": "find-skills",
+      "kind": "skill",
+      "source_url": "https://neuraldeep.ru/skill/find-skills",
+      "repo_url": "https://github.com/example/find-skills",
+      "license": "MIT",
+      "provenance": "Fixture duplicate of the existing registry skeleton candidate.",
+      "description": "Fixture candidate that should be treated as duplicate."
+    }
+  ]
+}
+

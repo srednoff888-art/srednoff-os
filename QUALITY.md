@@ -6,7 +6,7 @@ This file documents what is currently verified and what is intentionally not pro
 
 Last verified: 2026-07-09.
 
-Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. Checkpoint 1 removed public-core hardcoded personal paths. Checkpoint 2 compacted `AGENTS.md` and moved the full rules to `.agent/SREDNOFF_OS_OPERATING_RULES.md`. Checkpoint 3 added the public profile system. Checkpoint 4 added explicit quality modes. Checkpoint 5 upgraded security hook decisions and audit coverage. Checkpoint 6 added RU risk policies. Checkpoint 7 added the disabled NeuralDeep registry skeleton.
+Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. Checkpoint 1 removed public-core hardcoded personal paths. Checkpoint 2 compacted `AGENTS.md` and moved the full rules to `.agent/SREDNOFF_OS_OPERATING_RULES.md`. Checkpoint 3 added the public profile system. Checkpoint 4 added explicit quality modes. Checkpoint 5 upgraded security hook decisions and audit coverage. Checkpoint 6 added RU risk policies. Checkpoint 7 added the disabled NeuralDeep registry skeleton. Checkpoint 8 added the controlled NeuralDeep metadata importer.
 
 | Check | Status | Command |
 |---|---:|---|
@@ -18,12 +18,13 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 | Quality mode evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-quality-modes.ps1` |
 | Policy evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-policies.ps1` |
 | NeuralDeep registry evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-neuraldeep-registry.ps1` |
+| NeuralDeep importer evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-neuraldeep-importer.ps1` |
 | Fast skill metadata validation | PASS, 308/308 | `powershell -ExecutionPolicy Bypass -File .\scripts\quick-validate-all-skills.ps1 -Mode fast` |
 | Kernel catalog validation | PASS, 4500 records | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-quality-cost-kernel.ps1` |
 | Source registry metadata validation | PASS, 17 sources | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-source-registry.ps1` |
 | PowerShell parse check | PASS, 29 scripts | `Get-ChildItem .\scripts -Filter *.ps1` with PowerShell parser |
 | Bash syntax check | PASS, 3 scripts | `bash -n scripts/init-codex-project.sh scripts/install-codex-md-os.sh .codex/skills/agentic-seo-skill/scripts/pre_commit_seo_check.sh` |
-| Srednoff OS doctor | PASS, 33/33 | `powershell -ExecutionPolicy Bypass -File .\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
+| Srednoff OS doctor | PASS, 35/35 | `powershell -ExecutionPolicy Bypass -File .\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
 | GitHub Actions CI | PRESENT | `.github/workflows/ci.yml` installs ShellCheck and PSScriptAnalyzer on runners |
 | Secret scan | PASS | high-confidence token/path scan before publication |
 
@@ -46,6 +47,7 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 - Security hook decisions: high-confidence secrets and destructive actions are blocked, externally visible or bypass-prone actions ask for confirmation, and audit entries store findings plus input hashes without raw prompt/tool input.
 - RU policies: Russian-market data, payments, messaging, marketplace, and NeuralDeep/source-import work now has local policy gates with deterministic fixtures.
 - NeuralDeep registry: candidate skills, MCP servers, and CLI tools are represented as disabled metadata with trust report and import log structure; nothing is installed or enabled.
+- NeuralDeep importer: local manifests can be imported as disabled metadata only after license, provenance, HTTPS source, duplicate, and trust-score checks.
 
 ## What This Does Not Promise
 
@@ -74,6 +76,7 @@ powershell -ExecutionPolicy Bypass -File ".\scripts\test-srednoff-os-profiles.ps
 powershell -ExecutionPolicy Bypass -File ".\scripts\test-srednoff-os-quality-modes.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\test-srednoff-os-policies.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\test-srednoff-os-neuraldeep-registry.ps1"
+powershell -ExecutionPolicy Bypass -File ".\scripts\test-srednoff-os-neuraldeep-importer.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\quick-validate-all-skills.ps1" -Mode fast
 powershell -ExecutionPolicy Bypass -File ".\scripts\validate-quality-cost-kernel.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\validate-source-registry.ps1"
