@@ -1,64 +1,90 @@
 <svg width="1280" height="420" viewBox="0 0 1280 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Srednoff OS banner</title>
-  <desc id="desc">A dark technical banner for Srednoff OS with capability and selector motifs.</desc>
+  <desc id="desc">A professional technical banner for Srednoff OS showing Codex workflow routing, quality gates, source provenance, and release evidence.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="420" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0B1120"/>
-      <stop offset="0.45" stop-color="#111827"/>
-      <stop offset="1" stop-color="#172554"/>
+    <linearGradient id="surface" x1="0" y1="0" x2="1280" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#07111F"/>
+      <stop offset="0.46" stop-color="#0D172A"/>
+      <stop offset="1" stop-color="#151B2F"/>
     </linearGradient>
-    <linearGradient id="line" x1="100" y1="80" x2="1180" y2="340" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#38BDF8"/>
-      <stop offset="0.55" stop-color="#8B5CF6"/>
-      <stop offset="1" stop-color="#22C55E"/>
+    <linearGradient id="signal" x1="164" y1="72" x2="1110" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#32D4C0"/>
+      <stop offset="0.43" stop-color="#60A5FA"/>
+      <stop offset="0.72" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#F8C14A"/>
     </linearGradient>
-    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="18" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.22 0 0 0 0 0.62 0 0 0 0 1 0 0 0 0.45 0"/>
-      <feBlend in="SourceGraphic" mode="screen"/>
+    <linearGradient id="panel" x1="420" y1="68" x2="908" y2="342" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111D32"/>
+      <stop offset="1" stop-color="#0B1324"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#94A3B8" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="124%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#020617" flood-opacity="0.45"/>
     </filter>
   </defs>
 
-  <rect width="1280" height="420" rx="28" fill="url(#bg)"/>
-  <path d="M85 320C205 196 300 160 430 196C558 232 603 122 732 116C855 111 899 205 1018 178C1097 160 1158 105 1205 70" stroke="url(#line)" stroke-width="3" opacity="0.75"/>
-  <path d="M110 106H356M110 146H270M110 186H330" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
-  <path d="M916 276H1170M1002 316H1170M952 356H1170" stroke="#22C55E" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+  <rect width="1280" height="420" rx="30" fill="url(#surface)"/>
+  <rect x="1" y="1" width="1278" height="418" rx="29" stroke="#E2E8F0" stroke-opacity="0.08"/>
+  <rect width="1280" height="420" rx="30" fill="url(#grid)"/>
 
-  <g opacity="0.22">
-    <circle cx="216" cy="308" r="88" stroke="#38BDF8"/>
-    <circle cx="216" cy="308" r="54" stroke="#38BDF8"/>
-    <circle cx="1050" cy="132" r="96" stroke="#8B5CF6"/>
-    <circle cx="1050" cy="132" r="58" stroke="#8B5CF6"/>
+  <path d="M78 321C206 225 321 195 449 228C573 260 618 117 751 115C878 113 914 245 1031 206C1105 181 1140 108 1201 81" stroke="url(#signal)" stroke-width="3.4" stroke-linecap="round" opacity="0.82"/>
+  <path d="M77 326C205 230 320 200 448 233C572 265 617 122 750 120C877 118 913 250 1030 211C1104 186 1139 113 1200 86" stroke="#E2E8F0" stroke-width="1" stroke-linecap="round" opacity="0.16"/>
+
+  <g opacity="0.9">
+    <text x="78" y="100" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="800" letter-spacing="3" fill="#67E8F9">CODING AGENT OPERATING LAYER</text>
+    <text x="76" y="163" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="68" font-weight="900" fill="#F8FAFC">Srednoff OS</text>
+    <text x="80" y="206" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="23" font-weight="650" fill="#CBD5E1">Quality/cost routing for Codex projects</text>
+    <text x="80" y="245" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="560" fill="#94A3B8">startup checks / source provenance / safety gates / release evidence</text>
   </g>
-
-  <g filter="url(#soft-glow)">
-    <rect x="474" y="74" width="332" height="272" rx="26" fill="#0F172A" stroke="url(#line)" stroke-width="2"/>
-    <rect x="508" y="112" width="264" height="34" rx="9" fill="#111827" stroke="#38BDF8" stroke-opacity="0.35"/>
-    <rect x="508" y="166" width="126" height="92" rx="14" fill="#111827" stroke="#8B5CF6" stroke-opacity="0.45"/>
-    <rect x="646" y="166" width="126" height="92" rx="14" fill="#111827" stroke="#22C55E" stroke-opacity="0.45"/>
-    <rect x="508" y="278" width="264" height="30" rx="9" fill="#111827" stroke="#F59E0B" stroke-opacity="0.45"/>
-  </g>
-
-  <text x="640" y="138" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#E5E7EB">QUALITY / COST SELECTOR</text>
-  <text x="571" y="210" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="800" fill="#93C5FD">306</text>
-  <text x="571" y="236" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#CBD5E1">SKILLS</text>
-  <text x="709" y="210" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="800" fill="#86EFAC">4500</text>
-  <text x="709" y="236" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#CBD5E1">CAPABILITIES</text>
-  <text x="640" y="299" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#FDE68A">RIGHT SKILL. RIGHT CONTEXT. RIGHT COST.</text>
-
-  <text x="82" y="118" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="64" font-weight="900" fill="#F8FAFC">Srednoff OS</text>
-  <text x="86" y="164" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="600" fill="#BAE6FD">An engineering operating layer for Codex</text>
-  <text x="88" y="208" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#CBD5E1">startup checks  /  skill routing  /  safety gates  /  source ranking</text>
 
   <g>
-    <rect x="88" y="248" width="130" height="36" rx="18" fill="#0F172A" stroke="#38BDF8" stroke-opacity="0.55"/>
-    <text x="153" y="272" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#E0F2FE">CODEX</text>
-    <rect x="230" y="248" width="118" height="36" rx="18" fill="#0F172A" stroke="#8B5CF6" stroke-opacity="0.55"/>
-    <text x="289" y="272" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#EDE9FE">AGENTS</text>
-    <rect x="360" y="248" width="104" height="36" rx="18" fill="#0F172A" stroke="#22C55E" stroke-opacity="0.55"/>
-    <text x="412" y="272" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#DCFCE7">ROI</text>
+    <rect x="80" y="284" width="116" height="38" rx="10" fill="#0B1324" stroke="#32D4C0" stroke-opacity="0.55"/>
+    <text x="138" y="309" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="800" fill="#CCFBF1">CODEX</text>
+    <rect x="208" y="284" width="126" height="38" rx="10" fill="#0B1324" stroke="#60A5FA" stroke-opacity="0.55"/>
+    <text x="271" y="309" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="800" fill="#DBEAFE">SELECTOR</text>
+    <rect x="346" y="284" width="112" height="38" rx="10" fill="#0B1324" stroke="#A78BFA" stroke-opacity="0.55"/>
+    <text x="402" y="309" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="800" fill="#EDE9FE">GATES</text>
+    <rect x="470" y="284" width="106" height="38" rx="10" fill="#0B1324" stroke="#F8C14A" stroke-opacity="0.6"/>
+    <text x="523" y="309" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="800" fill="#FEF3C7">CI</text>
   </g>
 
-  <text x="1160" y="336" text-anchor="end" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="800" fill="#F8FAFC">v2.1.2</text>
-  <text x="1160" y="364" text-anchor="end" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#CBD5E1">shareable public export</text>
+  <g filter="url(#shadow)">
+    <rect x="662" y="62" width="500" height="284" rx="24" fill="url(#panel)" stroke="#CBD5E1" stroke-opacity="0.13"/>
+    <rect x="690" y="92" width="444" height="48" rx="14" fill="#07111F" stroke="#60A5FA" stroke-opacity="0.28"/>
+    <text x="718" y="123" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="850" fill="#E2E8F0">RELEASE CONTROL PLANE</text>
+    <circle cx="1098" cy="116" r="7" fill="#22C55E"/>
+    <text x="1078" y="122" text-anchor="end" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#86EFAC">GREEN</text>
+
+    <g>
+      <rect x="690" y="162" width="134" height="92" rx="16" fill="#0B1324" stroke="#32D4C0" stroke-opacity="0.42"/>
+      <text x="757" y="201" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="900" fill="#99F6E4">308</text>
+      <text x="757" y="226" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#CBD5E1">SKILLS</text>
+    </g>
+    <g>
+      <rect x="844" y="162" width="134" height="92" rx="16" fill="#0B1324" stroke="#60A5FA" stroke-opacity="0.42"/>
+      <text x="911" y="201" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="900" fill="#BFDBFE">4500</text>
+      <text x="911" y="226" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#CBD5E1">KERNEL</text>
+    </g>
+    <g>
+      <rect x="998" y="162" width="136" height="92" rx="16" fill="#0B1324" stroke="#F8C14A" stroke-opacity="0.48"/>
+      <text x="1066" y="201" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="900" fill="#FDE68A">44/44</text>
+      <text x="1066" y="226" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#CBD5E1">DOCTOR</text>
+    </g>
+
+    <rect x="690" y="276" width="444" height="40" rx="12" fill="#07111F" stroke="#A78BFA" stroke-opacity="0.28"/>
+    <text x="912" y="301" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="850" fill="#DDD6FE">RIGHT SKILL / RIGHT CONTEXT / RIGHT COST</text>
+  </g>
+
+  <g opacity="0.44">
+    <circle cx="1088" cy="58" r="3" fill="#F8C14A"/>
+    <circle cx="1144" cy="370" r="3" fill="#32D4C0"/>
+    <circle cx="626" cy="76" r="3" fill="#60A5FA"/>
+    <circle cx="1206" cy="190" r="3" fill="#A78BFA"/>
+    <path d="M626 76L690 116M1088 58L1098 116M1144 370L1112 316M1206 190L1134 190" stroke="#CBD5E1" stroke-opacity="0.22"/>
+  </g>
+
+  <text x="1162" y="382" text-anchor="end" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="900" fill="#F8FAFC">v2.1.2 public release</text>
+  <text x="1162" y="404" text-anchor="end" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="650" fill="#94A3B8">srednoff.agency</text>
 </svg>

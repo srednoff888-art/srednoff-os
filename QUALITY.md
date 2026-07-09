@@ -6,7 +6,7 @@ This file documents what is currently verified and what is intentionally not pro
 
 Last verified: 2026-07-09.
 
-Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. Checkpoint 1 removed public-core hardcoded personal paths. Checkpoint 2 compacted `AGENTS.md` and moved the full rules to `.agent/SREDNOFF_OS_OPERATING_RULES.md`. Checkpoint 3 added the public profile system. Checkpoint 4 added explicit quality modes. Checkpoint 5 upgraded security hook decisions and audit coverage. Checkpoint 6 added RU risk policies. Checkpoint 7 added the disabled NeuralDeep registry skeleton. Checkpoint 8 added the controlled NeuralDeep metadata importer. Checkpoint 9 added RU domain bundles. Checkpoint 10 added RU specialist agent profiles. Checkpoint 11 added safe RU CLI compatibility wrappers. Checkpoint 12 added clean-room donor repository research validation. Checkpoint 13 added structured public documentation.
+Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. Checkpoints 1-13 added the public core boundary, compact entrypoint, profile system, quality modes, security hooks, RU/NeuralDeep gates, donor research validation, and structured docs. Checkpoint 14 closed the release with a full validation pass, public release note, and updated README banner.
 
 | Check | Status | Command |
 |---|---:|---|
@@ -32,6 +32,7 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 | Srednoff OS doctor | PASS, 44/44 | `powershell -ExecutionPolicy Bypass -File .\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
 | GitHub Actions CI | PRESENT | `.github/workflows/ci.yml` installs ShellCheck and PSScriptAnalyzer on runners |
 | Secret scan | PASS | high-confidence token/path scan before publication |
+| Public release note | PRESENT | `RELEASE.md` |
 
 ## Selector Changes From Audit
 
@@ -56,6 +57,7 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 - RU CLI wrappers: search/audit/import/install compatibility scripts are read-only or recommendation-only and do not install external tools.
 - Donor research manifest: claimed-leak and prompt-archive donor repos now have machine-readable provenance, risk, accepted-pattern, rejected-pattern, and copy-policy gates.
 - Structured public docs: `docs/` now separates architecture, security, workflows, profiles, RU/NeuralDeep, risk, and validation docs with a deterministic docs validator.
+- Public release layer: `RELEASE.md`, checkpoint 14 notes, and the GitHub README banner now summarize the validated public package.
 - NeuralDeep registry: candidate skills, MCP servers, and CLI tools are represented as disabled metadata with trust report and import log structure; nothing is installed or enabled.
 - NeuralDeep importer: local manifests can be imported as disabled metadata only after license, provenance, HTTPS source, duplicate, and trust-score checks.
 

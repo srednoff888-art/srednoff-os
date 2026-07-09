@@ -51,6 +51,9 @@
 - Added structured public documentation under `docs/`.
 - Added `validate-docs.ps1` for documentation presence and index validation.
 - Added checkpoint 13 documentation notes in `.agent/SREDNOFF_OS_CHECKPOINT_13_DOCUMENTATION.md`.
+- Added public release note in `RELEASE.md`.
+- Added checkpoint 14 release closure notes in `.agent/SREDNOFF_OS_CHECKPOINT_14_RELEASE.md`.
+- Updated the GitHub README and banner for the public release.
 
 ### Verified
 
@@ -69,8 +72,9 @@
 - NeuralDeep registry evals pass: 5/5.
 - NeuralDeep importer evals pass: 5/5.
 - Srednoff OS doctor passes: 44/44.
+- GitHub Actions pass on Windows and Ubuntu for the public release.
 
 ### Notes
 
 - NeuralDeep HTML pages are reachable, but the roadmap API endpoints currently return 404.
-- The next checkpoint is full validation and public release note.
+- The vNext checkpoint run is closed.

@@ -38,6 +38,7 @@
     "ru-specialist-agent-profiles",
     "ru-cli-compatibility-wrappers",
     "donor-research-provenance-manifest",
-    "structured-public-docs"
+    "structured-public-docs",
+    "public-release-note"
   ]
 }

@@ -33,8 +33,8 @@ Purpose: implement the vNext roadmap in small auditable checkpoints. Every check
 | 11 | RU CLI compatibility scripts | Add safe search, import, audit, install wrappers that recommend commands without silent execution | `scripts/srednoff-os-ru-*.ps1` | Done |
 | 12 | Donor repository research | Review listed Codex/agent donor repos and adapt only clean-room patterns | Research notes and selected changes | Done |
 | 13 | Documentation upgrade | Add architecture, security, workflows, profiles, hooks, NeuralDeep, RU integrations, RU risk model docs | `docs/*.md` | Done |
-| 14 | Full validation and public release note | Run release gate, update README, QUALITY, CHANGELOG, and final report | Green local checks and GitHub Actions | Next |
+| 14 | Full validation and public release note | Run release gate, update README, QUALITY, CHANGELOG, and final report | Green local checks and GitHub Actions | Done |
 
 ## Current Position
 
-Checkpoint 13 is complete. The next implementation checkpoint is checkpoint 14: Full validation and public release note.
+Checkpoint 14 is complete. The vNext checkpoint run is closed.
