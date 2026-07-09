@@ -45,7 +45,12 @@ jobs:
         shell: pwsh
         run: |
           Install-Module PSScriptAnalyzer -Scope CurrentUser -Force
-          $Results = Invoke-ScriptAnalyzer -Path .\scripts, .\integrations -Recurse -Severity Error
+          $Results = @()
+          foreach ($Path in @(".\scripts", ".\integrations")) {
+            if (Test-Path -LiteralPath $Path) {
+              $Results += Invoke-ScriptAnalyzer -Path $Path -Recurse -Severity Error
+            }
+          }
           if ($Results) {
             $Results | Format-Table -AutoSize
             exit 1
