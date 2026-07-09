@@ -15,6 +15,7 @@
 - Updated install/init/sync and doctor to propagate and validate `integrations/`.
 - Updated install/init/sync and doctor to propagate and validate `bundles/`.
 - Updated install/init/sync and doctor to propagate and validate `agents/`.
+- Updated install/init/sync and doctor to propagate and validate `docs/`.
 - Removed maintainer-specific Windows home paths from the public hook rule and v2.1.1 hook eval fixture.
 - Added `.agent/SREDNOFF_OS_PUBLIC_CORE_BOUNDARY.md` to define public core vs personal profile boundaries.
 
@@ -47,6 +48,9 @@
 - Added donor repository research manifest in `.codex/srednoff-os/donor-research.json`.
 - Added `validate-donor-research.ps1` for clean-room donor provenance validation.
 - Added checkpoint 12 donor research notes in `.agent/SREDNOFF_OS_CHECKPOINT_12_DONOR_RESEARCH.md`.
+- Added structured public documentation under `docs/`.
+- Added `validate-docs.ps1` for documentation presence and index validation.
+- Added checkpoint 13 documentation notes in `.agent/SREDNOFF_OS_CHECKPOINT_13_DOCUMENTATION.md`.
 
 ### Verified
 
@@ -61,11 +65,12 @@
 - Agent evals pass: 8/8.
 - RU CLI evals pass: 4/4.
 - Donor research validation passes: 3 sources.
+- Docs validation passes: 8 files.
 - NeuralDeep registry evals pass: 5/5.
 - NeuralDeep importer evals pass: 5/5.
-- Srednoff OS doctor passes: 43/43.
+- Srednoff OS doctor passes: 44/44.
 
 ### Notes
 
 - NeuralDeep HTML pages are reachable, but the roadmap API endpoints currently return 404.
-- The next checkpoint is documentation upgrade.
+- The next checkpoint is full validation and public release note.

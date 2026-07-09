@@ -291,6 +291,17 @@ if ((Test-Path -LiteralPath $SourceRegistryValidator -PathType Leaf) -and (Test-
     Add-Check -Name "source-registry-metadata" -Status "FAIL" -Detail "Missing source registry validator"
 }
 
+$DocsRoot = Resolve-LocalOrHome "docs" "docs" "Container"
+$DocsValidator = Resolve-LocalOrHome "scripts\validate-docs.ps1" "scripts\validate-docs.ps1" "Leaf"
+if ((Test-Path -LiteralPath $DocsValidator -PathType Leaf) -and (Test-Path -LiteralPath $DocsRoot -PathType Container)) {
+    $global:LASTEXITCODE = 0
+    $DocsValidationOutput = & $DocsValidator -DocsRoot $DocsRoot 2>&1
+    $DocsValidationOk = $LASTEXITCODE -eq 0
+    Add-Check -Name "docs" -Status ($(if ($DocsValidationOk) { "OK" } else { "FAIL" })) -Detail (($DocsValidationOutput | Out-String).Trim()) -Fix "Restore docs/*.md and docs/README.md"
+} else {
+    Add-Check -Name "docs" -Status "FAIL" -Detail "Missing docs root or docs validator" -Fix "Restore docs/ and scripts\validate-docs.ps1"
+}
+
 $WorkflowDir = Join-Path $ProjectRoot ".github\workflows"
 $WorkflowFiles = @()
 if (Test-Path -LiteralPath $WorkflowDir -PathType Container) {

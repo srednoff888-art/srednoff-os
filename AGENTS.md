@@ -9,6 +9,7 @@ This file is intentionally compact. Detailed rules live in:
 - `.agent/QUALITY_GATE.md` - validation expectations
 - `.agent/GITHUB_RESEARCH.md` - GitHub research protocol
 - `.agent/CONNECTORS.md` - connector use
+- `docs/README.md` - public documentation index
 - `code_review.md` - review stance
 
 Read only the specific reference file needed for the current task. Do not load broad catalogs or all reference docs by default.
@@ -114,6 +115,14 @@ At the start of work in any repository, check whether the project contains Sredn
 - `.agent/CONNECTORS.md`
 - `.agent/QUALITY_GATE.md`
 - `.agent/USER_BRIEFING.md`
+- `docs/README.md`
+- `docs/architecture.md`
+- `docs/security.md`
+- `docs/workflows.md`
+- `docs/profiles.md`
+- `docs/ru-and-neuraldeep.md`
+- `docs/risk-model.md`
+- `docs/validation.md`
 - `.codex/skills/github-research/SKILL.md`
 - `.codex/skills/product-builder/SKILL.md`
 - `.codex/skills/production-review/SKILL.md`
@@ -129,22 +138,22 @@ For implementation/checkpoint work, finish with:
 ```md
 ## Result
 
-Сделано:
+Done:
 - ...
 
-Проверено:
-- Команда: ...
-- Результат: ...
+Checked:
+- Command: ...
+- Result: ...
 
 GitHub/Docs checked:
 - ...
 
-Изменённые файлы:
+Changed files:
 - ...
 
-Риски:
+Risks:
 - ...
 
-Следующие шаги:
+Next steps:
 - ...
 ```

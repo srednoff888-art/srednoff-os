@@ -61,6 +61,7 @@ Current vNext implementation status is tracked in [.agent/SREDNOFF_OS_VNEXT_CHEC
 | Specialist perspective is inconsistent | Disabled RU agent profiles linked to bundles, policies, and skills | Role-specific review without autonomous execution |
 | CLI compatibility can become unsafe | RU wrappers search, audit, and recommend only; no silent installs | Safer bridge to future CLI workflows |
 | External agent catalogs can be unsafe | Disabled NeuralDeep registry plus controlled metadata importer | Candidate tools stay inert until reviewed |
+| README becomes too dense | Structured docs portal under `docs/` | Architecture, security, workflows, risk, RU/NeuralDeep, and validation are easier to review |
 | Regressions are easy to miss | GitHub Actions CI plus local doctor/evals | Pull requests are checked automatically |
 | Old sessions drift from the global rules | Sync scripts update existing Codex project folders with backups | New and old projects stay aligned |
 
@@ -149,6 +150,7 @@ flowchart LR
 | External prompt mining | `external-prompt-pattern-miner` | Extracts only safe, abstract agent patterns from prompt repos/leak archives | Selector fixture plus provenance review |
 | Security hooks | `srednoff-os-hook.ps1` | Blocks high-confidence secrets/destructive actions, asks before publish/deploy/bypass actions, records redacted audit entries | Independent security fixtures |
 | Donor research | `donor-research.json`, `validate-donor-research.ps1` | Keeps prompt-leak/source-donor research clean-room, provenance-first, and non-verbatim | Donor manifest validation |
+| Documentation portal | `docs/*.md`, `validate-docs.ps1` | Splits architecture, security, workflows, profiles, risk, RU/NeuralDeep, and validation into reviewable pages | Docs validation |
 | CI | `.github/workflows/ci.yml` | Runs validation on Windows and Ubuntu | GitHub Actions |
 | Quality log | `QUALITY.md` | Tracks what is verified and what is not promised | Manual release gate |
 
@@ -174,14 +176,15 @@ Current release gate, as recorded in [QUALITY.md](QUALITY.md):
 | Kernel validation | 4500 records PASS | `.\scripts\validate-quality-cost-kernel.ps1` |
 | Source registry validation | 17 sources PASS | `.\scripts\validate-source-registry.ps1` |
 | Donor research validation | 3 sources PASS | `.\scripts\validate-donor-research.ps1` |
+| Docs validation | 8 files PASS | `.\scripts\validate-docs.ps1` |
 | Skill metadata smoke | 308/308 PASS | `.\scripts\quick-validate-all-skills.ps1 -Mode fast` |
 
 GitHub Actions adds:
 
 | Runner | What it verifies |
 |---|---|
-| Windows | PowerShell parsing, PSScriptAnalyzer errors, kernel validation, registry validation, eval suites, fast skill validation |
-| Ubuntu | Bash syntax, ShellCheck, kernel validation, registry validation, portable eval suites |
+| Windows | PowerShell parsing, PSScriptAnalyzer errors, kernel/source/donor/docs validation, eval suites, fast skill validation |
+| Ubuntu | Bash syntax, ShellCheck, kernel/source/donor/docs validation, portable eval suites |
 
 ## Quality Modes
 
@@ -193,6 +196,20 @@ GitHub Actions adds:
 | `critical` | deep | 32 | security, auth, data, payments, migrations, audits | security review, rollback, multi-pass review |
 
 `TURBO` remains an explicit override and still requires the literal `TURBO` command.
+
+## Documentation
+
+The public documentation portal lives in [docs/README.md](docs/README.md).
+
+| Topic | Link |
+|---|---|
+| Architecture | [docs/architecture.md](docs/architecture.md) |
+| Security | [docs/security.md](docs/security.md) |
+| Workflows | [docs/workflows.md](docs/workflows.md) |
+| Profiles | [docs/profiles.md](docs/profiles.md) |
+| RU and NeuralDeep | [docs/ru-and-neuraldeep.md](docs/ru-and-neuraldeep.md) |
+| Risk model | [docs/risk-model.md](docs/risk-model.md) |
+| Validation | [docs/validation.md](docs/validation.md) |
 
 ## Source Ranking Model
 
@@ -234,8 +251,6 @@ Checkpoint 12 added `.codex/srednoff-os/donor-research.json` and `scripts/valida
 | `asgeirtj/system_prompts_leaks` | CC0 repository license | taxonomy only |
 
 The validation gate requires license/provenance fields, explicit rejected prompt-text reuse, quarantined decisions for claimed leaks, and disabled copy policies.
-
-## Safety Model
 
 ## RU Risk Policies
 

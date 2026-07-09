@@ -37,6 +37,7 @@
     "ru-domain-bundles",
     "ru-specialist-agent-profiles",
     "ru-cli-compatibility-wrappers",
-    "donor-research-provenance-manifest"
+    "donor-research-provenance-manifest",
+    "structured-public-docs"
   ]
 }

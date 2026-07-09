@@ -18,6 +18,7 @@ $SourceRegistry = Join-Path $TemplateRoot "registry"
 $SourceIntegrations = Join-Path $TemplateRoot "integrations"
 $SourceBundles = Join-Path $TemplateRoot "bundles"
 $SourceAgents = Join-Path $TemplateRoot "agents"
+$SourceDocs = Join-Path $TemplateRoot "docs"
 
 if (-not (Test-Path -LiteralPath $SourceSkills)) {
     throw "Template skills directory not found: $SourceSkills"
@@ -87,7 +88,7 @@ foreach ($Project in $ProjectPath) {
     Write-Output "Project: $Root"
 
     $Files = Get-ChildItem -LiteralPath $SourceSkills -Recurse -File
-    foreach ($ExtraDirectory in @($SourceAgent, $SourceSrednoff, $SourceEvals, $SourceProfiles, $SourcePolicies, $SourceRegistry, $SourceIntegrations, $SourceBundles, $SourceAgents)) {
+    foreach ($ExtraDirectory in @($SourceAgent, $SourceSrednoff, $SourceEvals, $SourceProfiles, $SourcePolicies, $SourceRegistry, $SourceIntegrations, $SourceBundles, $SourceAgents, $SourceDocs)) {
         if (Test-Path -LiteralPath $ExtraDirectory) {
             $Files += Get-ChildItem -LiteralPath $ExtraDirectory -Recurse -File
         }
@@ -117,6 +118,8 @@ foreach ($Project in $ProjectPath) {
             $SourceBundles
         } elseif ($File.FullName.StartsWith($SourceAgents, [System.StringComparison]::OrdinalIgnoreCase)) {
             $SourceAgents
+        } elseif ($File.FullName.StartsWith($SourceDocs, [System.StringComparison]::OrdinalIgnoreCase)) {
+            $SourceDocs
         } else {
             $SourceScripts
         }
@@ -141,6 +144,8 @@ foreach ($Project in $ProjectPath) {
             "bundles"
         } elseif ($Base -eq $SourceAgents) {
             "agents"
+        } elseif ($Base -eq $SourceDocs) {
+            "docs"
         } else {
             "scripts"
         }
