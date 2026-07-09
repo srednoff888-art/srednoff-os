@@ -290,10 +290,13 @@ $ModeRouter = Resolve-LocalOrHome "scripts\srednoff-os-mode-router.ps1" "scripts
 $DomainRouter = Resolve-LocalOrHome "scripts\srednoff-os-domain-router.ps1" "scripts\srednoff-os-domain-router.ps1" "Leaf"
 $SourceRanker = Resolve-LocalOrHome "scripts\srednoff-os-source-ranker.ps1" "scripts\srednoff-os-source-ranker.ps1" "Leaf"
 $DesignBrief = Resolve-LocalOrHome "scripts\srednoff-os-design-brief.ps1" "scripts\srednoff-os-design-brief.ps1" "Leaf"
+$RuCliScripts = @("srednoff-os-ru-search.ps1", "srednoff-os-ru-audit.ps1", "srednoff-os-ru-import.ps1", "srednoff-os-ru-install.ps1")
+$MissingRuCliScripts = @($RuCliScripts | Where-Object { -not (Test-Path -LiteralPath (Resolve-LocalOrHome "scripts\$_" "scripts\$_" "Leaf") -PathType Leaf) })
 Add-Check -Name "mode-router" -Status ($(if (Test-Path -LiteralPath $ModeRouter -PathType Leaf) { "OK" } else { "FAIL" })) -Detail $ModeRouter
 Add-Check -Name "domain-router" -Status ($(if (Test-Path -LiteralPath $DomainRouter -PathType Leaf) { "OK" } else { "FAIL" })) -Detail $DomainRouter
 Add-Check -Name "source-ranker" -Status ($(if (Test-Path -LiteralPath $SourceRanker -PathType Leaf) { "OK" } else { "FAIL" })) -Detail $SourceRanker
 Add-Check -Name "design-brief" -Status ($(if (Test-Path -LiteralPath $DesignBrief -PathType Leaf) { "OK" } else { "FAIL" })) -Detail $DesignBrief
+Add-Check -Name "ru-cli-wrappers" -Status ($(if ($MissingRuCliScripts.Count -eq 0) { "OK" } else { "FAIL" })) -Detail "scripts=$($RuCliScripts.Count); missing=$($MissingRuCliScripts -join ',')" -Fix "Restore scripts\srednoff-os-ru-*.ps1"
 
 $Automation = Join-Path $CodexHome "automations\daily-deep-skills-and-agents-research\automation.toml"
 if (Test-Path -LiteralPath $Automation -PathType Leaf) {
@@ -413,6 +416,16 @@ if ($RunEvals) {
         Add-Check -Name "agent-evals" -Status ($(if ($AgentEvalOk) { "OK" } else { "FAIL" })) -Detail (($AgentEvalOutput | Out-String).Trim())
     } else {
         Add-Check -Name "agent-evals" -Status "FAIL" -Detail "Missing agent eval script"
+    }
+
+    $RuCliEvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-ru-cli.ps1" "scripts\test-srednoff-os-ru-cli.ps1" "Leaf"
+    if (Test-Path -LiteralPath $RuCliEvalScript -PathType Leaf) {
+        $global:LASTEXITCODE = 0
+        $RuCliEvalOutput = & $RuCliEvalScript -ProjectPath $ProjectRoot 2>&1
+        $RuCliEvalOk = $LASTEXITCODE -eq 0
+        Add-Check -Name "ru-cli-evals" -Status ($(if ($RuCliEvalOk) { "OK" } else { "FAIL" })) -Detail (($RuCliEvalOutput | Out-String).Trim())
+    } else {
+        Add-Check -Name "ru-cli-evals" -Status "FAIL" -Detail "Missing RU CLI eval script"
     }
 
     $NeuralDeepEvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-neuraldeep-registry.ps1" "scripts\test-srednoff-os-neuraldeep-registry.ps1" "Leaf"

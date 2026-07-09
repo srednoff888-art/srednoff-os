@@ -35,6 +35,7 @@
     "neuraldeep-safe-registry",
     "neuraldeep-controlled-importer",
     "ru-domain-bundles",
-    "ru-specialist-agent-profiles"
+    "ru-specialist-agent-profiles",
+    "ru-cli-compatibility-wrappers"
   ]
 }

@@ -41,6 +41,9 @@
 - Added RU specialist agent profiles in `agents/*.md`.
 - Added `test-srednoff-os-agents.ps1` for agent profile validation.
 - Added checkpoint 10 RU agent notes in `.agent/SREDNOFF_OS_CHECKPOINT_10_RU_AGENTS.md`.
+- Added safe RU CLI compatibility wrappers in `scripts/srednoff-os-ru-*.ps1`.
+- Added `test-srednoff-os-ru-cli.ps1` for read-only/recommendation-only wrapper validation.
+- Added checkpoint 11 RU CLI notes in `.agent/SREDNOFF_OS_CHECKPOINT_11_RU_CLI.md`.
 
 ### Verified
 
@@ -53,11 +56,12 @@
 - Policy evals pass: 5/5.
 - Bundle evals pass: 9/9.
 - Agent evals pass: 8/8.
+- RU CLI evals pass: 4/4.
 - NeuralDeep registry evals pass: 5/5.
 - NeuralDeep importer evals pass: 5/5.
-- Srednoff OS doctor passes: 39/39.
+- Srednoff OS doctor passes: 41/41.
 
 ### Notes
 
 - NeuralDeep HTML pages are reachable, but the roadmap API endpoints currently return 404.
-- The next checkpoint is RU CLI compatibility scripts.
+- The next checkpoint is donor repository research.

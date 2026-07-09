@@ -74,6 +74,7 @@ jobs:
           .\scripts\test-srednoff-os-policies.ps1
           .\scripts\test-srednoff-os-bundles.ps1
           .\scripts\test-srednoff-os-agents.ps1
+          .\scripts\test-srednoff-os-ru-cli.ps1
           .\scripts\test-srednoff-os-neuraldeep-registry.ps1
           .\scripts\test-srednoff-os-neuraldeep-importer.ps1
 
@@ -129,5 +130,6 @@ jobs:
           ./scripts/test-srednoff-os-policies.ps1
           ./scripts/test-srednoff-os-bundles.ps1
           ./scripts/test-srednoff-os-agents.ps1
+          ./scripts/test-srednoff-os-ru-cli.ps1
           ./scripts/test-srednoff-os-neuraldeep-registry.ps1
           ./scripts/test-srednoff-os-neuraldeep-importer.ps1
