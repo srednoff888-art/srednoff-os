@@ -36,6 +36,7 @@
     "neuraldeep-controlled-importer",
     "ru-domain-bundles",
     "ru-specialist-agent-profiles",
-    "ru-cli-compatibility-wrappers"
+    "ru-cli-compatibility-wrappers",
+    "donor-research-provenance-manifest"
   ]
 }

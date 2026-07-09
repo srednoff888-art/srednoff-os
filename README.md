@@ -148,6 +148,7 @@ flowchart LR
 | UI/3D source ranking | `srednoff-os-design-brief.ps1`, `srednoff-os-source-ranker.ps1` | Ranks UI kits, design connectors, 3D libraries, and asset sources | Registry provenance validation |
 | External prompt mining | `external-prompt-pattern-miner` | Extracts only safe, abstract agent patterns from prompt repos/leak archives | Selector fixture plus provenance review |
 | Security hooks | `srednoff-os-hook.ps1` | Blocks high-confidence secrets/destructive actions, asks before publish/deploy/bypass actions, records redacted audit entries | Independent security fixtures |
+| Donor research | `donor-research.json`, `validate-donor-research.ps1` | Keeps prompt-leak/source-donor research clean-room, provenance-first, and non-verbatim | Donor manifest validation |
 | CI | `.github/workflows/ci.yml` | Runs validation on Windows and Ubuntu | GitHub Actions |
 | Quality log | `QUALITY.md` | Tracks what is verified and what is not promised | Manual release gate |
 
@@ -172,6 +173,7 @@ Current release gate, as recorded in [QUALITY.md](QUALITY.md):
 | NeuralDeep importer evals | 5/5 PASS | `.\scripts\test-srednoff-os-neuraldeep-importer.ps1` |
 | Kernel validation | 4500 records PASS | `.\scripts\validate-quality-cost-kernel.ps1` |
 | Source registry validation | 17 sources PASS | `.\scripts\validate-source-registry.ps1` |
+| Donor research validation | 3 sources PASS | `.\scripts\validate-donor-research.ps1` |
 | Skill metadata smoke | 308/308 PASS | `.\scripts\quick-validate-all-skills.ps1 -Mode fast` |
 
 GitHub Actions adds:
@@ -212,6 +214,26 @@ Every registered source now carries:
 | `provenance` | Records where the component or asset comes from |
 | `vetted` | Lets the selector prefer known lower-risk sources |
 | `copy_policy` | Forces copy-adapt-upgrade instead of blind copying |
+
+## Donor Research Model
+
+Srednoff OS treats prompt leaks, prompt dumps, and external agent-instruction repositories as untrusted donor material.
+
+| Source class | Allowed use | Blocked use |
+|---|---|---|
+| Claimed leak repositories | Abstract pattern extraction, provenance notes, risk decisions | Verbatim prompt text, identity claims, hidden policy wording |
+| Analysis repositories | Taxonomy, issue-template ideas, validation-gate shape | Archived vendor prompt content |
+| Prompt archives | Comparative file taxonomy and progressive-disclosure patterns | Large archive context loading or copied prompt blocks |
+
+Checkpoint 12 added `.codex/srednoff-os/donor-research.json` and `scripts/validate-donor-research.ps1`. The manifest currently records three reviewed donor repositories:
+
+| Repo | License signal | Decision |
+|---|---|---|
+| `cyrus-tt/fable5-system-prompt` | none detected | monitor only |
+| `saynchowdhury/claude-fable-5-system-prompt` | GitHub `Other` | adapt analysis structure only |
+| `asgeirtj/system_prompts_leaks` | CC0 repository license | taxonomy only |
+
+The validation gate requires license/provenance fields, explicit rejected prompt-text reuse, quarantined decisions for claimed leaks, and disabled copy policies.
 
 ## Safety Model
 

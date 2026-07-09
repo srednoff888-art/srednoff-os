@@ -1,0 +1,107 @@
+{
+  "name": "Srednoff OS donor repository research",
+  "version": "v2.1.2",
+  "reviewed_at": "2026-07-09",
+  "policy": {
+    "copy_prompt_text": false,
+    "copy_unvetted_code": false,
+    "allowed_extraction": [
+      "abstract_patterns",
+      "file_taxonomy",
+      "validation_gate_design",
+      "tool_contract_shape",
+      "provenance_metadata"
+    ],
+    "required_gates": [
+      "license_review",
+      "provenance_review",
+      "claimed_leak_quarantine",
+      "verbatim_prompt_rejection",
+      "selector_fixture",
+      "doctor_check"
+    ]
+  },
+  "sources": [
+    {
+      "id": "cyrus-tt-fable5-system-prompt",
+      "url": "https://github.com/cyrus-tt/fable5-system-prompt",
+      "owner": "cyrus-tt",
+      "repo": "fable5-system-prompt",
+      "type": "github-claimed-leak",
+      "license": "none-detected",
+      "stars_at_review": 30,
+      "forks_at_review": 18,
+      "pushed_at": "2026-06-15T10:38:52Z",
+      "risk": "high",
+      "decision": "monitor-only",
+      "accepted_patterns": [
+        "full-vs-lite-instruction-distillation",
+        "compact-entrypoint-plus-reference-docs"
+      ],
+      "rejected_patterns": [
+        "verbatim-system-prompt-text",
+        "model-identity-claims",
+        "unlicensed-prompt-content"
+      ],
+      "notes": "No license was detected by GitHub. Treat as claimed leak source material only."
+    },
+    {
+      "id": "saynchowdhury-claude-fable-5-system-prompt",
+      "url": "https://github.com/saynchowdhury/claude-fable-5-system-prompt",
+      "owner": "saynchowdhury",
+      "repo": "claude-fable-5-system-prompt",
+      "type": "github-claimed-leak-analysis",
+      "license": "other",
+      "stars_at_review": 122,
+      "forks_at_review": 55,
+      "pushed_at": "2026-07-04T17:51:23Z",
+      "risk": "high",
+      "decision": "adapt-analysis-structure-only",
+      "accepted_patterns": [
+        "separate-analysis-from-source-material",
+        "issue-template-for-prompt-updates",
+        "verification-script-as-a-release-signal",
+        "tool-definition-review-taxonomy"
+      ],
+      "rejected_patterns": [
+        "archived-vendor-prompt-content",
+        "vendor-specific-policy-wording",
+        "unverified-product-claims"
+      ],
+      "notes": "GitHub reports licenseInfo key 'other'. Do not treat prompt material as reusable code."
+    },
+    {
+      "id": "asgeirtj-system-prompts-leaks",
+      "url": "https://github.com/asgeirtj/system_prompts_leaks",
+      "owner": "asgeirtj",
+      "repo": "system_prompts_leaks",
+      "type": "github-prompt-archive",
+      "license": "cc0-1.0",
+      "stars_at_review": 54637,
+      "forks_at_review": 8894,
+      "pushed_at": "2026-07-08T20:41:15Z",
+      "risk": "medium-high",
+      "decision": "taxonomy-only",
+      "accepted_patterns": [
+        "vendor-and-product-source-taxonomy",
+        "bundled-skill-directory-shape",
+        "reference-file-progressive-disclosure",
+        "multi-level-code-review-depths"
+      ],
+      "rejected_patterns": [
+        "compiled-leaked-prompt-text",
+        "hidden-policy-reconstruction",
+        "large-archive-context-loading"
+      ],
+      "notes": "Repository license is CC0, but archived prompt provenance remains sensitive. Use as taxonomy input only."
+    }
+  ],
+  "adopted_for_srednoff_os": [
+    "Keep external prompt mining in a dedicated skill with provenance-first workflow.",
+    "Store donor source decisions in a machine-readable manifest.",
+    "Validate donor decisions in doctor and CI.",
+    "Prefer compact entrypoints with linked reference docs over long startup prompts.",
+    "Keep claimed leaks quarantined from production instruction text.",
+    "Record rejected patterns explicitly so future imports do not reopen the same risk."
+  ]
+}

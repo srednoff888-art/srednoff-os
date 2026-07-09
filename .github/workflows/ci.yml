@@ -61,6 +61,7 @@ jobs:
         run: |
           .\scripts\validate-quality-cost-kernel.ps1
           .\scripts\validate-source-registry.ps1
+          .\scripts\validate-donor-research.ps1
 
       - name: Srednoff OS evals
         shell: pwsh
@@ -118,6 +119,7 @@ jobs:
         run: |
           ./scripts/validate-quality-cost-kernel.ps1
           ./scripts/validate-source-registry.ps1
+          ./scripts/validate-donor-research.ps1
 
       - name: Srednoff OS portable evals
         shell: pwsh

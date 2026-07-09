@@ -267,6 +267,18 @@ if (Test-Path -LiteralPath $InventoryScript -PathType Leaf) {
 $Watchlist = Resolve-LocalOrHome ".codex\srednoff-os\source-watchlist.json" "srednoff-os\source-watchlist.json" "Leaf"
 Add-Check -Name "source-watchlist" -Status ($(if (Test-JsonFile -Path $Watchlist) { "OK" } else { "FAIL" })) -Detail $Watchlist
 
+$DonorResearch = Resolve-LocalOrHome ".codex\srednoff-os\donor-research.json" "srednoff-os\donor-research.json" "Leaf"
+Add-Check -Name "donor-research" -Status ($(if (Test-JsonFile -Path $DonorResearch) { "OK" } else { "FAIL" })) -Detail $DonorResearch
+$DonorResearchValidator = Resolve-LocalOrHome "scripts\validate-donor-research.ps1" "scripts\validate-donor-research.ps1" "Leaf"
+if ((Test-Path -LiteralPath $DonorResearchValidator -PathType Leaf) -and (Test-Path -LiteralPath $DonorResearch -PathType Leaf)) {
+    $global:LASTEXITCODE = 0
+    $DonorValidationOutput = & $DonorResearchValidator -ManifestPath $DonorResearch 2>&1
+    $DonorValidationOk = $LASTEXITCODE -eq 0
+    Add-Check -Name "donor-research-metadata" -Status ($(if ($DonorValidationOk) { "OK" } else { "FAIL" })) -Detail (($DonorValidationOutput | Out-String).Trim()) -Fix "Fill donor source provenance, risk, decisions, and rejected prompt-text patterns"
+} else {
+    Add-Check -Name "donor-research-metadata" -Status "FAIL" -Detail "Missing donor research validator"
+}
+
 $DesignRegistry = Resolve-LocalOrHome ".codex\srednoff-os\design-source-registry.json" "srednoff-os\design-source-registry.json" "Leaf"
 Add-Check -Name "design-source-registry" -Status ($(if (Test-JsonFile -Path $DesignRegistry) { "OK" } else { "FAIL" })) -Detail $DesignRegistry
 $SourceRegistryValidator = Resolve-LocalOrHome "scripts\validate-source-registry.ps1" "scripts\validate-source-registry.ps1" "Leaf"

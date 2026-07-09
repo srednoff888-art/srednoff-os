@@ -44,6 +44,9 @@
 - Added safe RU CLI compatibility wrappers in `scripts/srednoff-os-ru-*.ps1`.
 - Added `test-srednoff-os-ru-cli.ps1` for read-only/recommendation-only wrapper validation.
 - Added checkpoint 11 RU CLI notes in `.agent/SREDNOFF_OS_CHECKPOINT_11_RU_CLI.md`.
+- Added donor repository research manifest in `.codex/srednoff-os/donor-research.json`.
+- Added `validate-donor-research.ps1` for clean-room donor provenance validation.
+- Added checkpoint 12 donor research notes in `.agent/SREDNOFF_OS_CHECKPOINT_12_DONOR_RESEARCH.md`.
 
 ### Verified
 
@@ -57,11 +60,12 @@
 - Bundle evals pass: 9/9.
 - Agent evals pass: 8/8.
 - RU CLI evals pass: 4/4.
+- Donor research validation passes: 3 sources.
 - NeuralDeep registry evals pass: 5/5.
 - NeuralDeep importer evals pass: 5/5.
-- Srednoff OS doctor passes: 41/41.
+- Srednoff OS doctor passes: 43/43.
 
 ### Notes
 
 - NeuralDeep HTML pages are reachable, but the roadmap API endpoints currently return 404.
-- The next checkpoint is donor repository research.
+- The next checkpoint is documentation upgrade.

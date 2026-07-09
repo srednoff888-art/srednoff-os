@@ -6,7 +6,7 @@ This file documents what is currently verified and what is intentionally not pro
 
 Last verified: 2026-07-09.
 
-Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. Checkpoint 1 removed public-core hardcoded personal paths. Checkpoint 2 compacted `AGENTS.md` and moved the full rules to `.agent/SREDNOFF_OS_OPERATING_RULES.md`. Checkpoint 3 added the public profile system. Checkpoint 4 added explicit quality modes. Checkpoint 5 upgraded security hook decisions and audit coverage. Checkpoint 6 added RU risk policies. Checkpoint 7 added the disabled NeuralDeep registry skeleton. Checkpoint 8 added the controlled NeuralDeep metadata importer. Checkpoint 9 added RU domain bundles. Checkpoint 10 added RU specialist agent profiles. Checkpoint 11 added safe RU CLI compatibility wrappers.
+Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. Checkpoint 1 removed public-core hardcoded personal paths. Checkpoint 2 compacted `AGENTS.md` and moved the full rules to `.agent/SREDNOFF_OS_OPERATING_RULES.md`. Checkpoint 3 added the public profile system. Checkpoint 4 added explicit quality modes. Checkpoint 5 upgraded security hook decisions and audit coverage. Checkpoint 6 added RU risk policies. Checkpoint 7 added the disabled NeuralDeep registry skeleton. Checkpoint 8 added the controlled NeuralDeep metadata importer. Checkpoint 9 added RU domain bundles. Checkpoint 10 added RU specialist agent profiles. Checkpoint 11 added safe RU CLI compatibility wrappers. Checkpoint 12 added clean-room donor repository research validation.
 
 | Check | Status | Command |
 |---|---:|---|
@@ -25,9 +25,10 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 | Fast skill metadata validation | PASS, 308/308 | `powershell -ExecutionPolicy Bypass -File .\scripts\quick-validate-all-skills.ps1 -Mode fast` |
 | Kernel catalog validation | PASS, 4500 records | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-quality-cost-kernel.ps1` |
 | Source registry metadata validation | PASS, 17 sources | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-source-registry.ps1` |
-| PowerShell parse check | PASS, 29 scripts | `Get-ChildItem .\scripts -Filter *.ps1` with PowerShell parser |
+| Donor research metadata validation | PASS, 3 sources | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-donor-research.ps1` |
+| PowerShell parse check | PASS, 39 scripts | `Get-ChildItem .\scripts, .\integrations -Filter *.ps1 -File -Recurse` with PowerShell parser |
 | Bash syntax check | PASS, 3 scripts | `bash -n scripts/init-codex-project.sh scripts/install-codex-md-os.sh .codex/skills/agentic-seo-skill/scripts/pre_commit_seo_check.sh` |
-| Srednoff OS doctor | PASS, 41/41 | `powershell -ExecutionPolicy Bypass -File .\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
+| Srednoff OS doctor | PASS, 43/43 | `powershell -ExecutionPolicy Bypass -File .\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
 | GitHub Actions CI | PRESENT | `.github/workflows/ci.yml` installs ShellCheck and PSScriptAnalyzer on runners |
 | Secret scan | PASS | high-confidence token/path scan before publication |
 
@@ -52,6 +53,7 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 - RU bundles: Russian-market SEO, marketplaces, enterprise, 1C, LLM, content, payments, messaging, and DevOps workflows now have disabled selector metadata presets.
 - RU agents: specialist markdown profiles now provide compact role lenses linked to bundles, policies, and existing skills.
 - RU CLI wrappers: search/audit/import/install compatibility scripts are read-only or recommendation-only and do not install external tools.
+- Donor research manifest: claimed-leak and prompt-archive donor repos now have machine-readable provenance, risk, accepted-pattern, rejected-pattern, and copy-policy gates.
 - NeuralDeep registry: candidate skills, MCP servers, and CLI tools are represented as disabled metadata with trust report and import log structure; nothing is installed or enabled.
 - NeuralDeep importer: local manifests can be imported as disabled metadata only after license, provenance, HTTPS source, duplicate, and trust-score checks.
 
@@ -89,5 +91,6 @@ powershell -ExecutionPolicy Bypass -File ".\scripts\test-srednoff-os-neuraldeep-
 powershell -ExecutionPolicy Bypass -File ".\scripts\quick-validate-all-skills.ps1" -Mode fast
 powershell -ExecutionPolicy Bypass -File ".\scripts\validate-quality-cost-kernel.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\validate-source-registry.ps1"
+powershell -ExecutionPolicy Bypass -File ".\scripts\validate-donor-research.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\srednoff-os-doctor.ps1" -ProjectPath . -RunEvals -FixSafe
 ```
