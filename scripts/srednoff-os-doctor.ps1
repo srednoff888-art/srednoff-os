@@ -133,6 +133,19 @@ if (Test-Path -LiteralPath $PoliciesIndex -PathType Leaf) {
     Add-Check -Name "policies" -Status "FAIL" -Detail "Missing policies/index.yml" -Fix "Install or sync Srednoff OS policies"
 }
 
+$BundlesRoot = Resolve-LocalOrHome "bundles" "bundles" "Container"
+$BundlesIndex = Join-Path $BundlesRoot "index.json"
+if (Test-JsonFile -Path $BundlesIndex) {
+    $BundleManifest = Get-Content -LiteralPath $BundlesIndex -Raw -Encoding UTF8 | ConvertFrom-Json
+    $RequiredBundles = @("ru-seo", "ru-marketplaces", "ru-enterprise", "ru-1c", "ru-llm", "ru-content", "ru-payments", "ru-messaging", "ru-devops")
+    $BundleIds = @($BundleManifest.bundles)
+    $MissingBundles = @($RequiredBundles | Where-Object { $BundleIds -notcontains $_ -or -not (Test-Path -LiteralPath (Join-Path $BundlesRoot "$_.json") -PathType Leaf) })
+    $BundlesSafe = (-not [bool]$BundleManifest.default_enabled) -and ($MissingBundles.Count -eq 0)
+    Add-Check -Name "bundles" -Status ($(if ($BundlesSafe) { "OK" } else { "FAIL" })) -Detail "root=$BundlesRoot; bundles=$($BundleIds.Count); default_enabled=$($BundleManifest.default_enabled); missing=$($MissingBundles -join ',')" -Fix "Restore bundles/*.json"
+} else {
+    Add-Check -Name "bundles" -Status "FAIL" -Detail "Missing or invalid bundles/index.json" -Fix "Install or sync Srednoff OS bundles"
+}
+
 $NeuralDeepRegistry = Resolve-LocalOrHome "registry\neuraldeep" "registry\neuraldeep" "Container"
 $NeuralDeepIndex = Join-Path $NeuralDeepRegistry "index.json"
 if (Test-JsonFile -Path $NeuralDeepIndex) {
@@ -366,6 +379,16 @@ if ($RunEvals) {
         Add-Check -Name "policy-evals" -Status ($(if ($PolicyEvalOk) { "OK" } else { "FAIL" })) -Detail (($PolicyEvalOutput | Out-String).Trim())
     } else {
         Add-Check -Name "policy-evals" -Status "FAIL" -Detail "Missing policy eval script"
+    }
+
+    $BundleEvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-bundles.ps1" "scripts\test-srednoff-os-bundles.ps1" "Leaf"
+    if (Test-Path -LiteralPath $BundleEvalScript -PathType Leaf) {
+        $global:LASTEXITCODE = 0
+        $BundleEvalOutput = & $BundleEvalScript -ProjectPath $ProjectRoot 2>&1
+        $BundleEvalOk = $LASTEXITCODE -eq 0
+        Add-Check -Name "bundle-evals" -Status ($(if ($BundleEvalOk) { "OK" } else { "FAIL" })) -Detail (($BundleEvalOutput | Out-String).Trim())
+    } else {
+        Add-Check -Name "bundle-evals" -Status "FAIL" -Detail "Missing bundle eval script"
     }
 
     $NeuralDeepEvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-neuraldeep-registry.ps1" "scripts\test-srednoff-os-neuraldeep-registry.ps1" "Leaf"

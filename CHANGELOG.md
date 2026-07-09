@@ -13,6 +13,7 @@
 - Updated install/init/sync and doctor to propagate and validate `policies/`.
 - Updated install/init/sync and doctor to propagate and validate `registry/`.
 - Updated install/init/sync and doctor to propagate and validate `integrations/`.
+- Updated install/init/sync and doctor to propagate and validate `bundles/`.
 - Removed maintainer-specific Windows home paths from the public hook rule and v2.1.1 hook eval fixture.
 - Added `.agent/SREDNOFF_OS_PUBLIC_CORE_BOUNDARY.md` to define public core vs personal profile boundaries.
 
@@ -33,6 +34,9 @@
 - Added controlled NeuralDeep metadata importer in `integrations/neuraldeep/`.
 - Added `test-srednoff-os-neuraldeep-importer.ps1` and importer fixture manifest.
 - Added checkpoint 8 NeuralDeep importer notes in `.agent/SREDNOFF_OS_CHECKPOINT_8_NEURALDEEP_IMPORTER.md`.
+- Added RU domain bundles in `bundles/*.json`.
+- Added `test-srednoff-os-bundles.ps1` for bundle metadata validation.
+- Added checkpoint 9 RU bundle notes in `.agent/SREDNOFF_OS_CHECKPOINT_9_RU_BUNDLES.md`.
 
 ### Verified
 
@@ -43,11 +47,12 @@
 - Quality mode evals pass: 5/5.
 - Security fixture evals pass: 12/12.
 - Policy evals pass: 5/5.
+- Bundle evals pass: 9/9.
 - NeuralDeep registry evals pass: 5/5.
 - NeuralDeep importer evals pass: 5/5.
-- Srednoff OS doctor passes: 35/35.
+- Srednoff OS doctor passes: 37/37.
 
 ### Notes
 
 - NeuralDeep HTML pages are reachable, but the roadmap API endpoints currently return 404.
-- The next checkpoint is RU bundles.
+- The next checkpoint is RU agents.

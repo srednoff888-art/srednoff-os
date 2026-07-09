@@ -1,0 +1,21 @@
+{
+  "schema": "srednoff-os.bundle.v1",
+  "id": "ru-payments",
+  "version": "v2.1.2",
+  "title": "RU Payments Bundle",
+  "default_enabled": false,
+  "domains": ["ru-payments", "billing", "ecommerce", "security"],
+  "policy_gates": ["ru-payments", "ru-data", "ru-messaging"],
+  "recommended_skills": [
+    "billing-entitlements-state-machine",
+    "forms-checkout-ux",
+    "checkout-trust-risk-ux",
+    "finance-billing-agent",
+    "privacy-compliance-agent",
+    "security-reviewer-agent"
+  ],
+  "selector_hints": ["require_payment_risk_review", "use_critical_for_live_money", "require_rollback_plan"],
+  "validation_gates": ["payment-flow-review", "refund-review", "receipt-document-review", "security-review"],
+  "blocked_without_confirmation": ["change_live_payment_provider", "run_live_payment", "send_payment_document"]
+}
+

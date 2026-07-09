@@ -67,6 +67,7 @@ Copy-TemplateItem "profiles"
 Copy-TemplateItem "policies"
 Copy-TemplateItem "registry"
 Copy-TemplateItem "integrations"
+Copy-TemplateItem "bundles"
 Copy-TemplateItem "scripts"
 
 Copy-DirectoryContents -Source (Join-Path $PackageRoot ".codex\skills") -Destination (Join-Path $CodexHome "skills") -Label "skills"
@@ -77,6 +78,7 @@ Copy-DirectoryContents -Source (Join-Path $PackageRoot "profiles") -Destination 
 Copy-DirectoryContents -Source (Join-Path $PackageRoot "policies") -Destination (Join-Path $CodexHome "policies") -Label "policies"
 Copy-DirectoryContents -Source (Join-Path $PackageRoot "registry") -Destination (Join-Path $CodexHome "registry") -Label "registry"
 Copy-DirectoryContents -Source (Join-Path $PackageRoot "integrations") -Destination (Join-Path $CodexHome "integrations") -Label "integrations"
+Copy-DirectoryContents -Source (Join-Path $PackageRoot "bundles") -Destination (Join-Path $CodexHome "bundles") -Label "bundles"
 
 $GlobalAgents = Join-Path $CodexHome "AGENTS.md"
 Backup-Path -Path $GlobalAgents

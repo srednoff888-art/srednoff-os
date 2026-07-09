@@ -1,0 +1,21 @@
+{
+  "schema": "srednoff-os.bundle.v1",
+  "id": "ru-messaging",
+  "version": "v2.1.2",
+  "title": "RU Messaging Bundle",
+  "default_enabled": false,
+  "domains": ["ru-messaging", "notifications", "customer-ops", "automation"],
+  "policy_gates": ["ru-messaging", "ru-data", "ru-payments"],
+  "recommended_skills": [
+    "customer-support-ops-agent",
+    "push-notifications-deep-links",
+    "email-deliverability-transactional",
+    "conversion-tracking-gtm-ga4",
+    "privacy-compliance-agent",
+    "security-reviewer-agent"
+  ],
+  "selector_hints": ["require_external_visibility_review", "require_rate_limit_review", "prefer_dry_run"],
+  "validation_gates": ["recipient-review", "template-review", "rate-limit-review", "privacy-review"],
+  "blocked_without_confirmation": ["send_customer_message", "bulk_send_message", "send_payment_document"]
+}
+

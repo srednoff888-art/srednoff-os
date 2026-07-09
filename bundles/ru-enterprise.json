@@ -1,0 +1,21 @@
+{
+  "schema": "srednoff-os.bundle.v1",
+  "id": "ru-enterprise",
+  "version": "v2.1.2",
+  "title": "RU Enterprise Bundle",
+  "default_enabled": false,
+  "domains": ["ru-enterprise", "programming", "security", "data"],
+  "policy_gates": ["ru-data", "ru-messaging"],
+  "recommended_skills": [
+    "principal-architect-agent",
+    "api-interface-design",
+    "auth-oauth-session-architecture",
+    "database-schema-migration-auditor",
+    "observability-instrumentation",
+    "privacy-compliance-agent"
+  ],
+  "selector_hints": ["prefer_architecture_review", "require_data_flow_map", "use_deep_for_integrations"],
+  "validation_gates": ["data-flow-review", "auth-boundary-review", "rollback-review", "privacy-risk-review"],
+  "blocked_without_confirmation": ["disable_auth_or_rls", "move_personal_data_storage", "change_production_integration"]
+}
+

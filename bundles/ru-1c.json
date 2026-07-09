@@ -1,0 +1,20 @@
+{
+  "schema": "srednoff-os.bundle.v1",
+  "id": "ru-1c",
+  "version": "v2.1.2",
+  "title": "RU 1C Bundle",
+  "default_enabled": false,
+  "domains": ["ru-1c", "programming", "enterprise", "automation"],
+  "policy_gates": ["ru-data", "neuraldeep"],
+  "recommended_skills": [
+    "language-runtime-router",
+    "api-interface-design",
+    "data-import-export-pipeline",
+    "database-schema-migration-auditor",
+    "cross-language-test-gate",
+    "security-reviewer-agent"
+  ],
+  "selector_hints": ["prefer_local_project_context", "require_backup_plan", "use_deep_for_data_exchange"],
+  "validation_gates": ["schema-review", "exchange-format-review", "backup-rollback-review", "manual-operator-check"],
+  "blocked_without_confirmation": ["run_live_1c_exchange", "modify_accounting_data", "publish_external_processing"]
+}

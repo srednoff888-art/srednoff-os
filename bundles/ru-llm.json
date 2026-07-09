@@ -1,0 +1,21 @@
+{
+  "schema": "srednoff-os.bundle.v1",
+  "id": "ru-llm",
+  "version": "v2.1.2",
+  "title": "RU LLM Bundle",
+  "default_enabled": false,
+  "domains": ["ru-llm", "ai-llm-agents-rag", "security", "automation"],
+  "policy_gates": ["neuraldeep", "ru-data"],
+  "recommended_skills": [
+    "agents-sdk-production-workflow",
+    "rag-evaluation-agent",
+    "prompt-injection-defense",
+    "prompt-security-agent",
+    "mcp-security-review",
+    "secrets-env-rotation"
+  ],
+  "selector_hints": ["prefer_cli_plus_skill", "require_prompt_security", "require_source_provenance"],
+  "validation_gates": ["provenance-review", "prompt-injection-review", "secret-exfiltration-review", "eval-fixture-review"],
+  "blocked_without_confirmation": ["install_external_mcp_server", "run_external_cli_installer", "upload_private_prompt_or_data"]
+}
+

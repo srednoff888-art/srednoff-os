@@ -1,0 +1,21 @@
+{
+  "schema": "srednoff-os.bundle.v1",
+  "id": "ru-devops",
+  "version": "v2.1.2",
+  "title": "RU DevOps Bundle",
+  "default_enabled": false,
+  "domains": ["ru-devops", "devops-ci-cd-release", "security", "observability"],
+  "policy_gates": ["ru-data", "ru-payments", "ru-messaging"],
+  "recommended_skills": [
+    "ci-cd-automation",
+    "devops-platform-agent",
+    "cloud-infrastructure-agent",
+    "observability-instrumentation",
+    "release-manager-agent",
+    "secrets-env-rotation"
+  ],
+  "selector_hints": ["require_release_gate", "require_env_review", "use_deep_for_production"],
+  "validation_gates": ["env-review", "migration-review", "rollback-review", "monitoring-review"],
+  "blocked_without_confirmation": ["change_production_env", "run_irreversible_migration", "change_dns_or_domain"]
+}
+

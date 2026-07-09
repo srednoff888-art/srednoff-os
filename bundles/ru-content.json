@@ -1,0 +1,21 @@
+{
+  "schema": "srednoff-os.bundle.v1",
+  "id": "ru-content",
+  "version": "v2.1.2",
+  "title": "RU Content Bundle",
+  "default_enabled": false,
+  "domains": ["ru-content", "content", "localization", "seo-ppc-growth"],
+  "policy_gates": ["ru-data", "ru-marketplaces"],
+  "recommended_skills": [
+    "content-strategist-agent",
+    "content-brief-keyword-map",
+    "multilingual-content-localization-seo",
+    "localization-i18n-engineering",
+    "entity-knowledge-graph-seo",
+    "content-design-microcopy"
+  ],
+  "selector_hints": ["prefer_editorial_quality", "require_claim_review", "use_localization_review"],
+  "validation_gates": ["editorial-review", "seo-brief-review", "claims-risk-review", "localization-review"],
+  "blocked_without_confirmation": ["publish_regulated_claims", "publish_personal_data", "mass_generate_public_content"]
+}
+

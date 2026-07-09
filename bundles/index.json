@@ -1,0 +1,22 @@
+{
+  "schema": "srednoff-os.bundles.index.v1",
+  "version": "v2.1.2",
+  "default_enabled": false,
+  "selection_model": "selector-only",
+  "notes": [
+    "Bundles are metadata presets; they do not install, enable, or execute tools.",
+    "RU bundles are risk-aware and require policy review before regulated or externally visible work."
+  ],
+  "bundles": [
+    "ru-seo",
+    "ru-marketplaces",
+    "ru-enterprise",
+    "ru-1c",
+    "ru-llm",
+    "ru-content",
+    "ru-payments",
+    "ru-messaging",
+    "ru-devops"
+  ]
+}
+

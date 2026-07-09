@@ -1,0 +1,21 @@
+{
+  "schema": "srednoff-os.bundle.v1",
+  "id": "ru-seo",
+  "version": "v2.1.2",
+  "title": "RU SEO Bundle",
+  "default_enabled": false,
+  "domains": ["ru-seo", "seo-ppc-growth", "content", "localization"],
+  "policy_gates": ["ru-data", "ru-marketplaces"],
+  "recommended_skills": [
+    "seo-technical-auditor-agent",
+    "local-seo-entity-pages",
+    "content-brief-keyword-map",
+    "programmatic-seo-pages",
+    "javascript-seo-rendering",
+    "search-console-ga4-diagnostics"
+  ],
+  "selector_hints": ["prefer_group_1", "add_group_2_for_launch_or_migration", "avoid_group_3_without_evidence"],
+  "validation_gates": ["crawl-indexability-review", "metadata-review", "analytics-tracking-review", "policy-review"],
+  "blocked_without_confirmation": ["publish_regulated_claims", "upload_personal_data_to_foreign_service"]
+}
+
