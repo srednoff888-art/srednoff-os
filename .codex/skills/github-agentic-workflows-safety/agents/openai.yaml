@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Agentic Workflows Safety"
+  short_description: "Build guarded gh-aw repository automations"
+  default_prompt: "Use $github-agentic-workflows-safety to design or audit this gh aw automation safely."

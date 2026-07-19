@@ -120,7 +120,7 @@ $Ranked = foreach ($Source in $Registry.sources) {
             $Reasons.Add("use_when:$Term") | Out-Null
         }
     }
-    foreach ($Token in @("shadcn","21st","magic","aceternity","origin","react bits","figma","canva","three","r3f","gltf","glb","model-viewer","babylon","sketchfab","poly haven","ambientcg")) {
+    foreach ($Token in @("shadcn","21st","magic","aceternity","origin","react bits","figma","canva","mcp","three","r3f","gltf","glb","model-viewer","babylon","sketchfab","poly haven","ambientcg")) {
         $TokenKey = ConvertTo-MatchKey -Value $Token
         if (($Lower.Contains($Token) -or $BriefKey.Contains($TokenKey)) -and $NameKey.Contains($TokenKey)) {
             $Score += 6.0

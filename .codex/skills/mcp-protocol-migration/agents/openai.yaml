@@ -1,0 +1,4 @@
+interface:
+  display_name: "MCP Protocol Migration"
+  short_description: "Migrate MCP versions with compatibility gates"
+  default_prompt: "Use $mcp-protocol-migration to audit and plan this MCP protocol or SDK migration."
