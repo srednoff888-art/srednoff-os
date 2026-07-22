@@ -1,5 +1,32 @@
 # Changelog
 
+## 2026-07-19
+
+### Added
+
+- Added `mcp-protocol-migration` for the MCP `2026-07-28` stateless protocol, SDK v2 compatibility, Tasks extension, OAuth, schema, conformance, and rollback gates.
+- Added `github-agentic-workflows-safety` for pinned, compiled, least-privilege `gh aw` repository automation.
+- Added MCP Apps UI workflow and current cross-agent instruction migration coverage that had not yet reached the public repository.
+- Added nine high-signal official sources for MCP RC/SDK migration, Microsoft MCP skills, and GitHub Agentic Workflows.
+- Added selector fixtures for MCP protocol migration, `gh aw` safety, and remote MCP skill supply-chain review.
+
+### Changed
+
+- Hardened `mcp-security-review` for remote `skill://` indexes, archive bombs/path traversal, provenance, refresh TTLs, and disabled script execution.
+- Added deterministic direct aliases and domain mappings for MCP migration, remote skills security, and GitHub Agentic Workflows while preserving legacy-plus quotas and non-overlap.
+- Preserved the selector `ProjectScan` fast path and extended UI source ranking to recognize MCP Apps by name.
+- Updated the source watchlist to 52 entries, the design source registry to 21 entries, and the public skill catalog to 311 entries.
+
+### Verified
+
+- Skill metadata validation passes: 311/311.
+- Kernel validation passes: 4500 records with groups 1800/1800/900 and 60 domains.
+- Selector regression suite passes: 16/16.
+- Srednoff OS v2.1.1 evals pass: 13/13.
+- Srednoff OS v2.1.2 public-repo evals pass: 16/16.
+- Full local doctor passes: 44/44.
+- `ProjectScan=off` selected the same MCP migration skill and averaged 0.968s versus 3.894s for `auto` on the local fixture.
+
 ## 2026-07-09
 
 ### Changed

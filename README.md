@@ -18,7 +18,7 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-111827?style=for-the-badge"></a>
   <a href="https://github.com/srednoff888-art/srednoff-os/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/srednoff888-art/srednoff-os/ci.yml?branch=main&style=for-the-badge&label=CI"></a>
   <img alt="Version" src="https://img.shields.io/badge/Srednoff%20OS-v2.1.2-2563eb?style=for-the-badge">
-  <img alt="Skills" src="https://img.shields.io/badge/skills-308-16a34a?style=for-the-badge">
+  <img alt="Skills" src="https://img.shields.io/badge/skills-311-16a34a?style=for-the-badge">
   <img alt="Kernel" src="https://img.shields.io/badge/kernel-4500-7c3aed?style=for-the-badge">
   <img alt="Doctor" src="https://img.shields.io/badge/doctor-44%2F44-059669?style=for-the-badge">
 </p>
@@ -263,7 +263,7 @@ Current public release gate:
 | Source registry | PASS, 17 sources |
 | Donor research | PASS, 3 sources |
 | Docs | PASS, 8 files |
-| Skill metadata smoke | PASS, 308/308 |
+| Skill metadata smoke | PASS, 311/311 |
 | GitHub Actions | PASS, Windows and Ubuntu |
 
 Release details:
@@ -275,7 +275,7 @@ Release details:
 
 ## Release
 
-The current public release is `v2.1.2` plus the stress-test hardening patch from 2026-07-09.
+The current public release is `v2.1.2` plus daily research hardening through 2026-07-19.
 
 | Release item | Status |
 |---|---|

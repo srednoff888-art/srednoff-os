@@ -33,6 +33,12 @@
       "reason": "Lifecycle hooks, hook trust model, and hook output protocol"
     },
     {
+      "id": "openai-codex-llms-txt",
+      "type": "official-docs-index",
+      "url": "https://developers.openai.com/codex/llms.txt",
+      "reason": "Compact official Codex docs index for low-token freshness checks before loading individual pages"
+    },
+    {
       "id": "openai-agents-sdk",
       "type": "official-docs",
       "url": "https://openai.github.io/openai-agents-python/",
@@ -139,6 +145,174 @@
       "type": "github",
       "url": "https://github.com/DavidHDev/react-bits",
       "reason": "Animated React component source candidate; monitor license clarity, dependency weight, accessibility, and performance risk"
+    },
+    {
+      "id": "shadcn-mcp-docs",
+      "type": "official-docs",
+      "url": "https://ui.shadcn.com/docs/mcp",
+      "reason": "Official shadcn MCP server for registry browsing/search/install flows; use for UI source routing with install and provenance gates"
+    },
+    {
+      "id": "figma-mcp-docs",
+      "type": "official-docs",
+      "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server",
+      "reason": "Official Figma MCP design-context workflow; monitor plan/access limits, file rights, design-token extraction, and codegen accuracy"
+    },
+    {
+      "id": "canva-dev-mcp-docs",
+      "type": "official-docs",
+      "url": "https://www.canva.dev/docs/apps/mcp-server/",
+      "reason": "Official Canva Dev MCP server for app/integration development; separate developer docs from user creative connector actions"
+    },
+    {
+      "id": "modelcontextprotocol-registry",
+      "type": "github",
+      "url": "https://github.com/modelcontextprotocol/registry",
+      "reason": "Official/community MCP registry implementation; use for MCP discovery, trust inventory, and server provenance checks"
+    },
+    {
+      "id": "modelcontextprotocol-llms-txt",
+      "type": "official-docs-index",
+      "url": "https://modelcontextprotocol.io/llms.txt",
+      "reason": "Compact MCP docs index including security, registry, extensions, tasks, and MCP Apps pages"
+    },
+    {
+      "id": "modelcontextprotocol-mcp-apps",
+      "type": "official-docs",
+      "url": "https://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/",
+      "reason": "Official MCP Apps launch and client-support direction for interactive UI returned by MCP tools"
+    },
+    {
+      "id": "modelcontextprotocol-sep-1865-mcp-apps",
+      "type": "official-spec",
+      "url": "https://modelcontextprotocol.io/seps/1865-mcp-apps-interactive-user-interfaces-for-mcp",
+      "reason": "Final SEP for MCP Apps UI resource declarations, ui:// resources, JSON-RPC interaction, security, and interoperability"
+    },
+    {
+      "id": "modelcontextprotocol-ext-apps-repo",
+      "type": "github",
+      "url": "https://github.com/modelcontextprotocol/ext-apps",
+      "reason": "Official MCP Apps spec and SDK repository; track implementation maturity, examples, issues, and license metadata"
+    },
+    {
+      "id": "github-copilot-custom-agents-docs",
+      "type": "official-docs",
+      "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/create-custom-agents",
+      "reason": "GitHub Copilot custom agent .agent.md workflow for cross-agent instruction migration and agent profile compatibility"
+    },
+    {
+      "id": "github-copilot-custom-agents-config",
+      "type": "official-docs",
+      "url": "https://docs.github.com/en/copilot/reference/custom-agents-configuration",
+      "reason": "Custom agent frontmatter, tools, MCP server configuration, dedupe precedence, and public-preview caveats"
+    },
+    {
+      "id": "github-copilot-agent-skills-docs",
+      "type": "official-docs",
+      "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills",
+      "reason": "GitHub Copilot Agent Skills behavior and context injection; compare with Codex skill trigger and progressive disclosure rules"
+    },
+    {
+      "id": "vscode-custom-agents-docs",
+      "type": "official-docs",
+      "url": "https://code.visualstudio.com/docs/agent-customization/custom-agents",
+      "reason": "VS Code .agent.md file locations, tool restrictions, handoffs, subagent controls, and diagnostics for migration"
+    },
+    {
+      "id": "vscode-agent-skills-docs",
+      "type": "official-docs",
+      "url": "https://code.visualstudio.com/docs/agent-customization/agent-skills",
+      "reason": "VS Code Agent Skills support across Copilot surfaces and decision matrix against custom instructions"
+    },
+    {
+      "id": "anthropic-claude-code-skills-docs",
+      "type": "official-docs",
+      "url": "https://code.claude.com/docs/en/skills",
+      "reason": "Claude Code skills lifecycle, invocation control, subagent execution, bundled skills, and eval iteration patterns"
+    },
+    {
+      "id": "anthropic-claude-code-subagents-docs",
+      "type": "official-docs",
+      "url": "https://code.claude.com/docs/en/sub-agents",
+      "reason": "Claude Code custom subagents with tool restrictions, permission modes, hooks, and skills; use for migration pattern comparison"
+    },
+    {
+      "id": "anthropic-claude-code-hooks-docs",
+      "type": "official-docs",
+      "url": "https://code.claude.com/docs/en/hooks-guide",
+      "reason": "Claude Code deterministic hook workflows; compare with Srednoff OS hook trust and safe automation boundaries"
+    },
+    {
+      "id": "nsa-mcp-security-design-considerations-2026",
+      "type": "government-guidance",
+      "url": "https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf",
+      "reason": "May 2026 NSA guidance on MCP security design for high-stakes and production agentic automation"
+    },
+    {
+      "id": "owasp-secure-mcp-development",
+      "type": "official-docs",
+      "url": "https://genai.owasp.org/resource/a-practical-guide-for-secure-mcp-server-development/",
+      "reason": "Security guardrails for MCP server architecture, auth, validation, session isolation, and lifecycle controls"
+    },
+    {
+      "id": "arxiv-agent-skills-maintenance-2026",
+      "type": "research-paper",
+      "url": "https://arxiv.org/abs/2607.00911",
+      "reason": "Empirical research on skill reuse, customization, and maintenance; mine only abstract lifecycle and ROI patterns"
+    },
+    {
+      "id": "modelcontextprotocol-2026-07-28-rc",
+      "type": "official-release-candidate",
+      "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+      "reason": "Breaking MCP revision: stateless core, server/discover, routing headers, extensions, auth hardening, deprecations, and JSON Schema 2020-12"
+    },
+    {
+      "id": "modelcontextprotocol-draft-changelog",
+      "type": "official-spec",
+      "url": "https://modelcontextprotocol.io/specification/draft/changelog",
+      "reason": "Authoritative change list for the locked 2026-07-28 RC and final-release drift checks"
+    },
+    {
+      "id": "modelcontextprotocol-python-sdk-v2-migration",
+      "type": "official-sdk-docs",
+      "url": "https://py.sdk.modelcontextprotocol.io/v2/migration/",
+      "reason": "Python SDK v2 migration and exact pre-release/stable compatibility guidance for MCP 2026-07-28"
+    },
+    {
+      "id": "modelcontextprotocol-typescript-sdk-releases",
+      "type": "github-releases",
+      "url": "https://github.com/modelcontextprotocol/typescript-sdk/releases",
+      "reason": "Track TypeScript SDK v2 beta support and package split before recommending MCP 2026-07-28 migration"
+    },
+    {
+      "id": "modelcontextprotocol-go-sdk-releases",
+      "type": "github-releases",
+      "url": "https://github.com/modelcontextprotocol/go-sdk/releases",
+      "reason": "Track Go SDK conformance and pre-release support for the 2026-07-28 protocol"
+    },
+    {
+      "id": "microsoft-agent-framework-mcp-skills",
+      "type": "official-docs",
+      "url": "https://learn.microsoft.com/en-us/agent-framework/agents/skills",
+      "reason": "Experimental MCP skill discovery and archive delivery with size, extraction, caching, and script-execution security boundaries"
+    },
+    {
+      "id": "github-agentic-workflows-docs",
+      "type": "official-docs",
+      "url": "https://github.github.com/gh-aw/",
+      "reason": "Security-first natural-language repository automation compiled into reviewable GitHub Actions workflows"
+    },
+    {
+      "id": "github-agentic-workflows-versioning",
+      "type": "official-docs",
+      "url": "https://github.github.com/gh-aw/reference/releases/",
+      "reason": "Pinned CLI and lock-file versioning, immutable Action SHAs, upgrade codemods, and audit-before-PR workflow"
+    },
+    {
+      "id": "github-agentic-workflows-releases",
+      "type": "github-releases",
+      "url": "https://github.com/github/gh-aw/releases",
+      "reason": "Rapid release and breaking-change watch for gh aw safe-output, sandbox, compiler, and permission behavior"
     }
   ]
 }

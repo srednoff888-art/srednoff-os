@@ -1,0 +1,4 @@
+interface:
+  display_name: "MCP Apps UI Workflow"
+  short_description: "Build safe interactive MCP Apps"
+  default_prompt: "Use $mcp-apps-ui-workflow to plan a secure interactive UI for an MCP server."

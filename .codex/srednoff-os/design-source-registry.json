@@ -32,6 +32,20 @@
       "requires_user_prompt": false
     },
     {
+      "id": "shadcn-mcp",
+      "name": "shadcn MCP server",
+      "url": "https://ui.shadcn.com/docs/mcp",
+      "kind": "component-registry-mcp",
+      "domains": ["ui-ux", "web-design", "programming"],
+      "risk": "medium",
+      "license": "MIT for shadcn/ui source; verify third-party registry item license before copying or installing",
+      "provenance": "official shadcn MCP documentation; inspect registry namespace, item metadata, dependencies, and target paths",
+      "vetted": true,
+      "copy_policy": "use for browse/search before install; install or copy only after project fit, provenance, accessibility, and dependency checks",
+      "use_when": ["AI-assisted shadcn registry search", "component discovery", "registry install", "MCP UI workflow"],
+      "requires_user_prompt": true
+    },
+    {
       "id": "magic-ui",
       "name": "Magic UI",
       "url": "https://magicui.design/docs",
@@ -102,6 +116,20 @@
       "requires_user_prompt": true
     },
     {
+      "id": "figma-mcp",
+      "name": "Figma MCP server",
+      "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server",
+      "kind": "design-context-mcp",
+      "domains": ["ui-ux", "mobile-apps", "web-design"],
+      "risk": "medium",
+      "license": "user-provided file rights; Figma plan, access, and asset rights must be verified",
+      "provenance": "official Figma MCP documentation; preserve file URL, node references, design-token source, and user authorization context",
+      "vetted": true,
+      "copy_policy": "use as design context and token/spec source; export or copy assets only when the user has rights and requests it",
+      "use_when": ["Figma MCP", "design to code", "design tokens", "component specs", "Dev Mode"],
+      "requires_user_prompt": true
+    },
+    {
       "id": "canva",
       "name": "Canva",
       "url": "app://canva",
@@ -113,6 +141,34 @@
       "vetted": false,
       "copy_policy": "use for approved marketing assets; verify rights before export or reuse",
       "use_when": ["marketing creative", "presentation", "ad asset", "social visual"],
+      "requires_user_prompt": true
+    },
+    {
+      "id": "canva-dev-mcp",
+      "name": "Canva Dev MCP server",
+      "url": "https://www.canva.dev/docs/apps/mcp-server/",
+      "kind": "design-app-dev-mcp",
+      "domains": ["ui-ux", "growth", "marketing", "programming"],
+      "risk": "medium",
+      "license": "Canva developer docs and user-owned app assets; verify Canva terms and asset rights before reuse",
+      "provenance": "official Canva Dev MCP documentation for Canva apps and integrations; separate developer tooling from creative connector output",
+      "vetted": true,
+      "copy_policy": "use for Canva app/integration development assistance; do not publish, export, or modify user designs without explicit approval",
+      "use_when": ["Canva MCP", "Canva app", "Canva integration", "marketing creative workflow", "template automation"],
+      "requires_user_prompt": true
+    },
+    {
+      "id": "mcp-apps",
+      "name": "MCP Apps",
+      "url": "https://apps.extensions.modelcontextprotocol.io/api/",
+      "kind": "agentic-ui-extension",
+      "domains": ["ui-ux", "web-design", "programming"],
+      "risk": "medium",
+      "license": "Apache-2.0 for SDK docs site badge; verify repository package/license metadata before copying examples",
+      "provenance": "Official MCP Apps extension docs and SEP-1865; use modelcontextprotocol/ext-apps as implementation source",
+      "vetted": true,
+      "copy_policy": "use for interactive UI returned by MCP tools; keep UI resources sandboxed, typed, auditable, accessible, and backed by text fallback",
+      "use_when": ["MCP Apps", "SEP-1865", "interactive MCP UI", "mcp app", "agentic UI", "tool dashboard", "MCP-UI", "OpenAI Apps SDK migration"],
       "requires_user_prompt": true
     },
     {

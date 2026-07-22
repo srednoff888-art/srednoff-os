@@ -10,7 +10,7 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 
 | Check | Status | Command |
 |---|---:|---|
-| Selector regression suite | PASS, 11/11 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-selector.ps1` |
+| Selector regression suite | PASS, 16/16 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-selector.ps1` |
 | v2.1.1 compatibility evals | PASS, 13/13 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v211.ps1` |
 | v2.1.2 routing/source evals | PASS, 16/16 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v212.ps1` |
 | Independent security fixture evals | PASS, 14/14 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-security-fixtures.ps1` |
@@ -22,7 +22,7 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 | RU CLI evals | PASS, 4/4 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-ru-cli.ps1` |
 | NeuralDeep registry evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-neuraldeep-registry.ps1` |
 | NeuralDeep importer evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-neuraldeep-importer.ps1` |
-| Fast skill metadata validation | PASS, 308/308 | `powershell -ExecutionPolicy Bypass -File .\scripts\quick-validate-all-skills.ps1 -Mode fast` |
+| Fast skill metadata validation | PASS, 311/311 | `powershell -ExecutionPolicy Bypass -File .\scripts\quick-validate-all-skills.ps1 -Mode fast` |
 | Kernel catalog validation | PASS, 4500 records | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-quality-cost-kernel.ps1` |
 | Source registry metadata validation | PASS, 17 sources | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-source-registry.ps1` |
 | Donor research metadata validation | PASS, 3 sources | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-donor-research.ps1` |
@@ -49,6 +49,10 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 - Independent security fixtures: hook behavior is now tested from external fixture data instead of only inline/manual cases.
 - Hook false-positive hardening: OpenAI key detection now avoids blocking ordinary hyphenated text such as source-ranking gate names while still blocking high-confidence key shapes.
 - External prompt mining: claimed-leak and prompt-dump repositories are now handled through a provenance-first skill that extracts only abstract, vendor-neutral patterns and rejects verbatim proprietary prompt text.
+- MCP migration: the selector routes `2026-07-28`, stateless transport, `server/discover`, Tasks extension, and SDK v2 requests to a compatibility-first migration workflow.
+- Agentic workflow safety: `gh aw` repository automations now have a dedicated pin/compile/audit/safe-output workflow with least-privilege and untrusted-trigger gates.
+- Remote skill supply chain: MCP-delivered skill archives require pinned provenance, bounded extraction, traversal protection, refresh TTLs, and no automatic script execution.
+- Selector ROI: `ProjectScan=off` preserves direct task routing without repository scanning; on the 2026-07-19 fixture it averaged 0.968s versus 3.894s for `auto` while selecting the same MCP migration skill.
 - Profile system: public defaults, maintainer examples, agency settings, and RU-market settings now live in a portable `profiles/` layer with privacy fixtures and doctor coverage.
 - Quality modes: `fast`, `standard`, `production`, and `critical` now map task risk to selector budget, capability count, and validation gates without changing the old `normal/deep/turbo` compatibility fields.
 - Security hook decisions: high-confidence secrets and destructive actions are blocked, externally visible or bypass-prone actions ask for confirmation, and audit entries store findings plus input hashes without raw prompt/tool input.

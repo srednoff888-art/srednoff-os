@@ -99,5 +99,48 @@
     "expectedAll": [
       "external-prompt-pattern-miner"
     ]
+  },
+  {
+    "id": "mcp_apps_ui_workflow",
+    "brief": "Build an MCP Apps SEP-1865 interactive UI dashboard for an existing MCP server with secure fallback and security review",
+    "budget": "deep",
+    "expectedAll": [
+      "mcp-apps-ui-workflow",
+      "integration-api-connectors"
+    ]
+  },
+  {
+    "id": "copilot_custom_agent_migration",
+    "brief": "Migrate GitHub Copilot custom agents .agent.md and VS Code .instructions.md rules into concise Codex skills and AGENTS.md",
+    "budget": "deep",
+    "expectedAll": [
+      "agent-instruction-migration"
+    ]
+  },
+  {
+    "id": "mcp_2026_07_28_migration",
+    "brief": "Plan an MCP 2026-07-28 protocol migration from initialize and Mcp-Session-Id to stateless server/discover with SDK v2 compatibility tests",
+    "budget": "deep",
+    "expectedAll": [
+      "mcp-protocol-migration",
+      "integration-api-connectors"
+    ]
+  },
+  {
+    "id": "github_agentic_workflows_safety",
+    "brief": "Build a GitHub Agentic Workflows gh aw scheduled automation with safe outputs pinned compiled workflow locks and least privilege",
+    "budget": "deep",
+    "expectedAll": [
+      "github-agentic-workflows-safety",
+      "devops-ci-cd-release"
+    ]
+  },
+  {
+    "id": "remote_mcp_skill_supply_chain",
+    "brief": "Security review MCP skills from skill://index.json remote skill archives extraction limits provenance and disabled script execution",
+    "budget": "deep",
+    "expectedAll": [
+      "mcp-security-review"
+    ]
   }
 ]

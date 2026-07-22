@@ -114,9 +114,9 @@
     {
         "name":  "agent-instruction-migration",
         "path":  ".codex\\skills\\agent-instruction-migration",
-        "description":  "Use this skill to audit, deduplicate, and migrate coding-agent instructions across AGENTS.md, CLAUDE.md, .clinerules, Cline rules, Roo custom modes, Continue rules, Cursor/Windsurf rules, OpenCode agents, prompt repositories, and Codex skills.",
+        "description":  "Use this skill to audit, deduplicate, and migrate coding-agent instructions across AGENTS.md, CLAUDE.md, GitHub Copilot and VS Code .agent.md custom agents, .instructions.md files, .clinerules, Cline rules, Roo custom modes, Continue rules, Cursor/Windsurf rules, OpenCode agents, prompt repositories, and Codex skills.",
         "has_openai_yaml":  true,
-        "skill_md_bytes":  2720
+        "skill_md_bytes":  3313
     },
     {
         "name":  "agents-sdk-production-workflow",
@@ -917,6 +917,13 @@
         "skill_md_bytes":  1781
     },
     {
+        "name":  "github-agentic-workflows-safety",
+        "path":  ".codex\\skills\\github-agentic-workflows-safety",
+        "description":  "Design, audit, migrate, or debug GitHub Agentic Workflows (`gh aw`) and repository automations that compile natural-language workflow Markdown into GitHub Actions. Use for `.github/workflows/*.md`, generated `.lock.yml`, safe outputs, agent permissions, network policy, workflow version pinning, scheduled AI maintenance, IssueOps, PR automation, or gh-aw upgrades.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  3541
+    },
+    {
         "name":  "github-research",
         "path":  ".codex\\skills\\github-research",
         "description":  "Use this skill before architecture, dependency, integration, parser, bot, UI, deployment, or non-trivial bugfix tasks. It forces Codex to search GitHub, compare open-source solutions, check licenses, and extract reusable patterns without copying unsafe code.",
@@ -1169,6 +1176,13 @@
         "skill_md_bytes":  2031
     },
     {
+        "name":  "mcp-apps-ui-workflow",
+        "path":  ".codex\\skills\\mcp-apps-ui-workflow",
+        "description":  "Use this skill when designing, reviewing, migrating, or debugging MCP Apps / SEP-1865 interactive UI resources for MCP servers, including dashboards, forms, visualizations, tool-driven workflows, OpenAI Apps SDK migration, MCP-UI compatibility, sandboxing, host support, security review, provenance, and fallback UX.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  3688
+    },
+    {
         "name":  "mcp-integration-builder",
         "path":  ".codex\\skills\\mcp-integration-builder",
         "description":  "Use this skill for MCP servers, tools, connector workflows, schemas, auth, safe tool contracts. Trigger when the task involves programming work related to MCP Integration Builder, production implementation, audits, debugging, strategy, or validation.",
@@ -1176,11 +1190,18 @@
         "skill_md_bytes":  1934
     },
     {
+        "name":  "mcp-protocol-migration",
+        "path":  ".codex\\skills\\mcp-protocol-migration",
+        "description":  "Audit, plan, implement, or review Model Context Protocol version and SDK migrations. Use for MCP 2026-07-28, stateless Streamable HTTP, server/discover, removal of initialize or Mcp-Session-Id, MCP Tasks extension changes, full JSON Schema 2020-12 tool schemas, OAuth issuer hardening, deprecated roots/sampling/logging, or cross-version client/server compatibility.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  3590
+    },
+    {
         "name":  "mcp-security-review",
         "path":  ".codex\\skills\\mcp-security-review",
         "description":  "Use this skill when reviewing Model Context Protocol (MCP) servers, clients, connectors, tool manifests, hosted MCP deployments, OAuth flows, prompt/tool boundaries, or MCP marketplace choices for security, least privilege, data exposure, prompt injection, and destructive-action risk.",
         "has_openai_yaml":  true,
-        "skill_md_bytes":  2947
+        "skill_md_bytes":  4118
     },
     {
         "name":  "meta-ads-creative-testing",
