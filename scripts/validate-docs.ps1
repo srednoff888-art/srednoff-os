@@ -27,7 +27,8 @@ $RequiredDocs = @(
     "profiles.md",
     "ru-and-neuraldeep.md",
     "risk-model.md",
-    "validation.md"
+    "validation.md",
+    "benchmark-v2-plan.md"
 )
 
 if (-not (Test-Path -LiteralPath $DocsRoot -PathType Container)) {

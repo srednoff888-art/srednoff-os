@@ -4,7 +4,7 @@ This file documents what is currently verified and what is intentionally not pro
 
 ## Current Smoke Status
 
-Last verified: 2026-07-09.
+Last verified: 2026-07-27.
 
 Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. Checkpoints 1-13 added the public core boundary, compact entrypoint, profile system, quality modes, security hooks, RU/NeuralDeep gates, donor research validation, and structured docs. Checkpoint 14 closed the release with a full validation pass, public release note, and updated README banner. The post-release stress test added hook false-positive regressions, empty/no-brief eval coverage, and a selector fast path.
 
@@ -24,14 +24,16 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 | NeuralDeep importer evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-neuraldeep-importer.ps1` |
 | Fast skill metadata validation | PASS, 311/311 | `powershell -ExecutionPolicy Bypass -File .\scripts\quick-validate-all-skills.ps1 -Mode fast` |
 | Kernel catalog validation | PASS, 4500 records | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-quality-cost-kernel.ps1` |
-| Source registry metadata validation | PASS, 17 sources | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-source-registry.ps1` |
+| Source registry metadata validation | PASS, 21 sources | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-source-registry.ps1` |
 | Donor research metadata validation | PASS, 3 sources | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-donor-research.ps1` |
-| Docs validation | PASS, 8 files | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-docs.ps1` |
+| Docs validation | PASS, 9 files | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-docs.ps1` |
 | PowerShell parse check | PASS, 40 scripts | `Get-ChildItem .\scripts, .\integrations -Filter *.ps1 -File -Recurse` with PowerShell parser |
 | Bash syntax check | PASS, 3 scripts | `bash -n scripts/init-codex-project.sh scripts/install-codex-md-os.sh .codex/skills/agentic-seo-skill/scripts/pre_commit_seo_check.sh` |
 | Srednoff OS doctor | PASS, 44/44 | `powershell -ExecutionPolicy Bypass -File .\scripts\srednoff-os-doctor.ps1 -ProjectPath . -RunEvals -FixSafe` |
 | GitHub Actions CI | PRESENT | `.github/workflows/ci.yml` installs ShellCheck and PSScriptAnalyzer on runners |
 | Secret scan | PASS | high-confidence token/path scan before publication |
+| Benchmark harness regressions | PASS, 9/9 | `python -m unittest discover -s benchmarks -p "test_*.py" -v` |
+| Local Codex benchmark baseline | RECORDED, limited | `benchmarks/results/2026-07-27-local-baseline.md` |
 | Public release note | PRESENT | `RELEASE.md` |
 
 ## Selector Changes From Audit
@@ -79,6 +81,13 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 - Source ranking is heuristic and must be reviewed before copying third-party code or assets.
 - Public forks can become unsafe if users add their own `.env`, `config.toml`, `hooks.state`, tokens, or machine-specific paths.
 - The selector still relies on handcrafted terms and fixtures; broader benchmark coverage is needed before making stronger claims.
+- The first local coding-agent baseline covers one small CLI task. It found no
+  correctness advantage for the Srednoff OS arm and measured higher latency,
+  higher observed token use in completed runs, and one timeout. Broader
+  repository-repair tasks and independent reruns are required before any
+  effectiveness claim.
+- Native Windows results depend on the selected `elevated` or `unelevated`
+  sandbox implementation. Never mix sandbox modes in one aggregate.
 
 ## Release Gate
 
@@ -103,4 +112,5 @@ powershell -ExecutionPolicy Bypass -File ".\scripts\validate-source-registry.ps1
 powershell -ExecutionPolicy Bypass -File ".\scripts\validate-donor-research.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\validate-docs.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\srednoff-os-doctor.ps1" -ProjectPath . -RunEvals -FixSafe
+python -m unittest discover -s benchmarks -p "test_*.py" -v
 ```

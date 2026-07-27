@@ -226,6 +226,7 @@ Design principle: the kernel is not model context. It is a script-readable catal
 | NeuralDeep | `registry/neuraldeep/`, `integrations/neuraldeep/` | Disabled candidate metadata and controlled importer | Registry/importer evals |
 | Donor research | `donor-research.json` | Prompt/source donor clean-room decisions | Donor validator |
 | Documentation | `docs/`, `RELEASE.md`, `QUALITY.md` | Public evidence and usage docs | Docs validator |
+| Agent benchmark | `benchmarks/` | Clean Codex vs Srednoff OS policy-arm evaluation | Hidden oracle and harness regressions |
 | CI | `.github/workflows/ci.yml` | Windows and Ubuntu validation | GitHub Actions |
 
 ## Quality Modes
@@ -247,7 +248,7 @@ Current public release gate:
 | Check | Result |
 |---|---:|
 | Srednoff OS doctor | PASS, 44/44 |
-| Selector evals | PASS, 11/11 |
+| Selector evals | PASS, 16/16 |
 | v2.1.1 evals | PASS, 13/13 |
 | v2.1.2 evals | PASS, 16/16 |
 | Security fixtures | PASS, 14/14 |
@@ -260,10 +261,11 @@ Current public release gate:
 | NeuralDeep registry | PASS, 5/5 |
 | NeuralDeep importer | PASS, 5/5 |
 | Kernel | PASS, 4500 records |
-| Source registry | PASS, 17 sources |
+| Source registry | PASS, 21 sources |
 | Donor research | PASS, 3 sources |
-| Docs | PASS, 8 files |
+| Docs | PASS, 9 files |
 | Skill metadata smoke | PASS, 311/311 |
+| Benchmark harness regressions | PASS, 9/9 |
 | GitHub Actions | PASS, Windows and Ubuntu |
 
 Release details:
@@ -272,6 +274,8 @@ Release details:
 - [Quality evidence](QUALITY.md)
 - [Changelog](CHANGELOG.md)
 - [Checkpoint report](.agent/SREDNOFF_OS_CHECKPOINT_14_RELEASE.md)
+- [Reproducible Codex benchmark](benchmarks/README.md)
+- [Local benchmark baseline](benchmarks/results/2026-07-27-local-baseline.md)
 
 ## Release
 
@@ -343,6 +347,8 @@ Blocked: blind copying, unreviewed installs, prompt-leak text reuse, hidden-poli
 | RU and NeuralDeep | [docs/ru-and-neuraldeep.md](docs/ru-and-neuraldeep.md) |
 | Risk model | [docs/risk-model.md](docs/risk-model.md) |
 | Validation | [docs/validation.md](docs/validation.md) |
+| Reproducible benchmark | [benchmarks/README.md](benchmarks/README.md) |
+| Benchmark and selector v2 plan | [docs/benchmark-v2-plan.md](docs/benchmark-v2-plan.md) |
 
 ## Repository Layout
 
@@ -362,6 +368,7 @@ Blocked: blind copying, unreviewed installs, prompt-leak text reuse, hidden-poli
 | `integrations/neuraldeep/` | Controlled metadata importer |
 | `scripts/` | Install, sync, status, doctor, selector, routers, validators |
 | `evals/` | Regression fixtures |
+| `benchmarks/` | Isolated coding-agent benchmark, hidden oracles, regressions, and public summaries |
 | `.github/workflows/ci.yml` | Cross-platform validation |
 
 ## What It Is Not

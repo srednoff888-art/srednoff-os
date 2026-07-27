@@ -1,5 +1,41 @@
 # Changelog
 
+## 2026-07-27
+
+### Changed
+
+- Hardened the reproducible Codex benchmark against inherited stdin, desktop
+  permission variables, personal Codex homes, non-object JSONL events,
+  unsupported resume arguments, ambiguous `--last` sessions, Windows sandbox
+  fallback failures, partial timeout traces, and misleading partial token
+  averages.
+- Replaced the machine-specific `npx.cmd` path with an explicit or
+  `PATH`-resolved Codex executable and recorded the exact CLI/platform/sandbox
+  metadata.
+- Classified model/CLI timeouts as measured outcomes instead of automatically
+  treating them as invalid infrastructure.
+- Removed two doctor false positives: ignored Python cache directories are now
+  separated from tracked stale artifacts, and generated benchmark workspaces
+  are excluded from the old-session bootstrap audit.
+
+### Added
+
+- Added nine benchmark harness regressions and wired them into Windows and
+  Ubuntu GitHub Actions.
+- Added dedicated clean-`CODEX_HOME` setup instructions and non-publishable
+  one-repeat smoke mode.
+- Added transparent invalid-run evidence and the first limited local benchmark
+  baseline.
+- Added the benchmark and selector v2 plan to the required documentation gate.
+
+### Verified
+
+- Benchmark harness unit suite passes: 9/9.
+- Native Windows `unelevated` workspace-write smoke passed its hidden oracle on
+  the first completed turn.
+- The limited local baseline recorded 3 control runs and 3 OS-arm runs without
+  claiming general superiority.
+
 ## 2026-07-19
 
 ### Added

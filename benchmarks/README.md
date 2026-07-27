@@ -29,27 +29,78 @@ That avoids calling a hand-written toy regression an open-source bugfix.
 | Hallucinated API / runtime defects | Import, attribute, syntax, command, and oracle execution failures. |
 | Observed tokens | CLI-reported `input + output + reasoning`; cached input is retained separately. This is not a money amount. |
 | Time to green | Wall time from the initial call until the hidden oracle first passes. |
+| Timeout | A measured model/CLI outcome, not automatically an invalid environment. A green oracle after timeout is recorded as `green_at_timeout`, not first-pass. |
 
 An unsuccessful run is not silently dropped. It remains in the aggregate with
 `first_pass=false`, `green=false`, and its real elapsed time.
 
 ## Run a pilot
 
-From the repository root:
+Use a dedicated Codex home for the benchmark. It must contain authentication,
+but no `AGENTS.md`, `config.toml`, hooks, plugins, or skills. This prevents both
+arms from inheriting personal Srednoff OS state.
+
+Authenticate once on Windows:
 
 ```powershell
-python benchmarks/run_codex_benchmark.py --model gpt-5.4 --repeats 3 --tasks log_metrics_cli
+$benchmarkHome = Join-Path $env:LOCALAPPDATA "SrednoffCodexBenchmark"
+New-Item -ItemType Directory -Force -Path $benchmarkHome | Out-Null
+$env:CODEX_HOME = $benchmarkHome
+codex login
+```
+
+Authenticate once on macOS or Linux:
+
+```bash
+export CODEX_BENCHMARK_HOME="$HOME/.codex-benchmark-clean"
+mkdir -p "$CODEX_BENCHMARK_HOME"
+CODEX_HOME="$CODEX_BENCHMARK_HOME" codex login
+```
+
+Treat the resulting `auth.json` like a password. Never commit, upload, or share
+the benchmark home.
+
+From the repository root, run the Windows pilot:
+
+```powershell
+python benchmarks/run_codex_benchmark.py `
+  --model gpt-5.4 `
+  --repeats 3 `
+  --tasks log_metrics_cli `
+  --codex-home $benchmarkHome
 ```
 
 Run the complete algorithmic corpus:
 
 ```powershell
-python benchmarks/run_codex_benchmark.py --model gpt-5.4 --repeats 3
+python benchmarks/run_codex_benchmark.py `
+  --model gpt-5.4 `
+  --repeats 3 `
+  --codex-home $benchmarkHome
 ```
 
-The runner uses `npx @openai/codex`. It requires an authenticated official
-Codex CLI account. Results are written outside this repository by default, so
-the control workspace cannot inherit this repository's `AGENTS.md`.
+On macOS or Linux, pass `--codex-home "$CODEX_BENCHMARK_HOME"`.
+
+The runner resolves `codex` from `PATH`, records the exact CLI version, closes
+stdin, strips parent Codex policy variables, applies `workspace-write` with
+non-interactive `never` approvals at the root CLI layer, and resumes by explicit
+session ID. Use `--codex-executable` to pin another installed executable.
+Results are written outside this repository by default, so the control
+workspace cannot inherit this repository's `AGENTS.md`.
+
+On native Windows, the runner records and defaults to
+`--windows-sandbox unelevated`, the documented fallback when elevated sandbox
+setup is unavailable. Use `--windows-sandbox elevated` only after that sandbox
+has been configured successfully. Do not mix the two modes in one comparison.
+
+Before a publishable comparison, run the harness regressions:
+
+```powershell
+python -m unittest discover -s benchmarks -p "test_*.py" -v
+```
+
+For a cheap harness-only smoke, pass `--repeats 1`. The output metadata will
+record `publication_ready=false`; never publish that run as a comparison.
 
 ## Validity rules
 
@@ -57,11 +108,26 @@ the control workspace cannot inherit this repository's `AGENTS.md`.
   sandboxes.
 - A control trace containing `Srednoff OS` or a policy-denied workspace write
   is invalid and must not enter an aggregate.
+- A trace with an external skills-context overflow is invalid.
+- Reusing a benchmark home that already contains memory, session, history, or
+  state databases is invalid. Authenticate in a fresh dedicated directory for
+  each published comparison.
+- A run from a normal personal `CODEX_HOME` is invalid even when
+  `--ignore-user-config` is present; that flag does not make global
+  `AGENTS.md`, hooks, plugins, or skills a valid benchmark input.
 - Do not use model self-reports as a correctness signal.
 - Do not report a proxy control as unmodified Codex.
 - Do not aggregate runs that terminated because auth, network, or the runner
   itself failed; record them as invalid instead.
+- Do not classify a model/CLI timeout as an infrastructure failure by default.
+  Preserve partial traces and report timeout counts separately.
 - Review every green diff for prohibited patterns before publishing a claim.
 
 The runner prints an explicit warning if the CLI trace lacks token telemetry.
 It does not estimate a monetary cost for a ChatGPT subscription.
+
+## Recorded runs
+
+| Run | Status | Meaning |
+|---|---|---|
+| [2026-07-10 invalid pilot](results/2026-07-10-invalid-pilot.md) | Invalid | Captured the isolation and resume defects that runner v2 fixes; contains no comparative claim. |

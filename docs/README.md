@@ -13,6 +13,7 @@ This directory is the public documentation layer for Srednoff OS v2.1.2.
 | [RU And NeuralDeep](ru-and-neuraldeep.md) | RU policies, bundles, agents, CLI wrappers, NeuralDeep registry, and importer rules |
 | [Risk Model](risk-model.md) | Risk classes, allowed actions, blocked actions, residual risks, and review triggers |
 | [Validation](validation.md) | Local and CI release gates, doctor checks, and evidence table |
+| [Benchmark v2 plan](benchmark-v2-plan.md) | Measurement integrity, arm definitions, selector ROI, and public-claim gates |
 
 ## Documentation Principles
 
@@ -21,4 +22,3 @@ This directory is the public documentation layer for Srednoff OS v2.1.2.
 - Mark unverified external sources as untrusted until provenance and license checks pass.
 - Keep personal/local profile state separate from the public repository.
 - Treat docs as release evidence: update docs when behavior, gates, or public claims change.
-

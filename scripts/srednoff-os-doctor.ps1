@@ -333,7 +333,7 @@ if (Test-Path -LiteralPath $Automation -PathType Leaf) {
 $CodexDocsRoot = Join-Path $HOME "Documents\Codex"
 if (Test-Path -LiteralPath $CodexDocsRoot) {
     $AgentFiles = Get-ChildItem -LiteralPath $CodexDocsRoot -Recurse -Filter AGENTS.md -File -ErrorAction SilentlyContinue |
-        Where-Object { $_.FullName -notmatch "\\.git\\|node_modules|plugins\\cache|\\.tmp\\|\\.bak\\." }
+        Where-Object { $_.FullName -notmatch "\\.git\\|node_modules|plugins\\cache|\\codex-benchmark-runs\\|\\.tmp\\|\\.bak\\." }
     $WarnCount = 0
     foreach ($File in $AgentFiles) {
         $Text = Get-Content -LiteralPath $File.FullName -Raw -Encoding UTF8
@@ -344,7 +344,18 @@ if (Test-Path -LiteralPath $CodexDocsRoot) {
 
 $StaleCore1000 = @(Get-ChildItem -LiteralPath $ProjectRoot -Recurse -File -Filter "*core-1000*" -ErrorAction SilentlyContinue).Count
 $PyCache = @(Get-ChildItem -LiteralPath $ProjectRoot -Recurse -Directory -Filter "__pycache__" -ErrorAction SilentlyContinue).Count
-Add-Check -Name "stale-artifacts" -Status ($(if ($StaleCore1000 -eq 0 -and $PyCache -eq 0) { "OK" } else { "WARN" })) -Detail "core-1000=$StaleCore1000; pycache=$PyCache" -Fix "Use safe cleanup dry-run before removal"
+$TrackedPyCache = $PyCache
+$Git = Get-Command git -ErrorAction SilentlyContinue
+if ($Git) {
+    $GitWorkTree = & $Git.Source -C $ProjectRoot rev-parse --is-inside-work-tree 2>$null
+    if ($LASTEXITCODE -eq 0 -and $GitWorkTree -eq "true") {
+        $TrackedPyCache = @(
+            & $Git.Source -C $ProjectRoot ls-files 2>$null |
+                Where-Object { $_ -match '(^|/)__pycache__/' }
+        ).Count
+    }
+}
+Add-Check -Name "stale-artifacts" -Status ($(if ($StaleCore1000 -eq 0 -and $TrackedPyCache -eq 0) { "OK" } else { "WARN" })) -Detail "core-1000=$StaleCore1000; tracked_pycache=$TrackedPyCache; ignored_pycache=$($PyCache - $TrackedPyCache)" -Fix "Use safe cleanup dry-run before removal"
 
 $NpmCmd = Get-Command npm.cmd -ErrorAction SilentlyContinue
 $NpmPs1 = Get-Command npm.ps1 -ErrorAction SilentlyContinue

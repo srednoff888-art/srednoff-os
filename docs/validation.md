@@ -23,6 +23,7 @@ powershell -ExecutionPolicy Bypass -File ".\scripts\validate-donor-research.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\validate-docs.ps1"
 powershell -ExecutionPolicy Bypass -File ".\scripts\quick-validate-all-skills.ps1" -Mode fast
 powershell -ExecutionPolicy Bypass -File ".\scripts\srednoff-os-doctor.ps1" -ProjectPath . -RunEvals -FixSafe
+python -m unittest discover -s benchmarks -p "test_*.py" -v
 ```
 
 ## CI Gate
@@ -31,8 +32,19 @@ GitHub Actions runs on Windows and Ubuntu:
 
 | Runner | Checks |
 |---|---|
-| Windows | PowerShell parse, PSScriptAnalyzer errors, kernel/source/donor/docs validation, evals, fast skill validation |
-| Ubuntu | Bash syntax, ShellCheck, kernel/source/donor/docs validation, portable evals |
+| Windows | Benchmark harness regressions, PowerShell parse, PSScriptAnalyzer errors, kernel/source/donor/docs validation, evals, fast skill validation |
+| Ubuntu | Benchmark harness regressions, Bash syntax, ShellCheck, kernel/source/donor/docs validation, portable evals |
+
+## Coding-Agent Benchmark
+
+The benchmark under `benchmarks/` is separate from deterministic release
+validation. It compares a clean Codex control with a compact Srednoff OS policy
+arm using isolated Codex homes, fresh sessions, hidden oracles, JSONL traces,
+and explicit invalid-run rules.
+
+Benchmark evidence must record model, Codex CLI version, OS, sandbox mode,
+replicate count, tasks, timeout behavior, and missing telemetry. A one-task
+local pilot is not release proof and must not be generalized to all projects.
 
 ## Evidence Files
 
@@ -43,4 +55,5 @@ GitHub Actions runs on Windows and Ubuntu:
 | `.agent/SREDNOFF_OS_VNEXT_CHECKPOINTS.md` | Checkpoint status |
 | `.agent/SREDNOFF_OS_CHECKPOINT_*.md` | Checkpoint-specific research and implementation notes |
 | `.github/workflows/ci.yml` | Cross-platform validation path |
-
+| `benchmarks/README.md` | Reproducible coding-agent benchmark protocol |
+| `benchmarks/results/` | Sanitized local summaries; raw traces remain outside the repository |
