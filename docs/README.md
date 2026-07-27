@@ -14,6 +14,7 @@ This directory is the public documentation layer for Srednoff OS v2.1.2.
 | [Risk Model](risk-model.md) | Risk classes, allowed actions, blocked actions, residual risks, and review triggers |
 | [Validation](validation.md) | Local and CI release gates, doctor checks, and evidence table |
 | [Benchmark v2 plan](benchmark-v2-plan.md) | Measurement integrity, arm definitions, selector ROI, and public-claim gates |
+| [Growth, Web, and Mini Apps pack](growth-web-miniapps-skill-pack.md) | 54 selector-first skills for paid media, SEO, websites, Telegram, and Mini Apps |
 
 ## Documentation Principles
 

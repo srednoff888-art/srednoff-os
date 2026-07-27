@@ -1,0 +1,7 @@
+interface:
+  display_name: "yandex direct bid strategy review"
+  short_description: "PPC specialist workflow"
+  default_prompt: "Use $yandex-direct-bid-strategy-review to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true

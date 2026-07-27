@@ -2,6 +2,16 @@
 
 ## 2026-07-27
 
+### Added
+
+- Added 54 selector-first skills for Yandex Direct, Meta Ads, Google Ads,
+  cross-channel paid media, SEO, production site building, Telegram bots, and
+  Telegram Mini Apps.
+- Added direct Russian and English selector aliases plus seven regression briefs
+  for paid media, Search Console, structured data, websites, and Mini Apps.
+- Added public provenance and safety documentation for the growth, web, and
+  Mini Apps skill pack.
+
 ### Changed
 
 - Hardened the reproducible Codex benchmark against inherited stdin, desktop

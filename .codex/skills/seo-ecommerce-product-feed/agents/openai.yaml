@@ -1,0 +1,7 @@
+interface:
+  display_name: "seo ecommerce product feed"
+  short_description: "SEO specialist workflow"
+  default_prompt: "Use $seo-ecommerce-product-feed to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true

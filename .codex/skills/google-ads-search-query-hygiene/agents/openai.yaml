@@ -1,0 +1,7 @@
+interface:
+  display_name: "google ads search query hygiene"
+  short_description: "PPC specialist workflow"
+  default_prompt: "Use $google-ads-search-query-hygiene to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true

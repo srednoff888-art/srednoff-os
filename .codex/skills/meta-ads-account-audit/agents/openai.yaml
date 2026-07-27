@@ -1,0 +1,7 @@
+interface:
+  display_name: "meta ads account audit"
+  short_description: "PPC specialist workflow"
+  default_prompt: "Use $meta-ads-account-audit to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true

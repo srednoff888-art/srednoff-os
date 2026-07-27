@@ -28,7 +28,8 @@ $RequiredDocs = @(
     "ru-and-neuraldeep.md",
     "risk-model.md",
     "validation.md",
-    "benchmark-v2-plan.md"
+    "benchmark-v2-plan.md",
+    "growth-web-miniapps-skill-pack.md"
 )
 
 if (-not (Test-Path -LiteralPath $DocsRoot -PathType Container)) {

@@ -325,6 +325,70 @@ DOMAIN_SKILL_HINTS = {
 
 DIRECT_SKILL_ALIASES = [
     (
+        "yandex-direct-account-audit",
+        ("yandex direct", "yandex.direct", "яндекс директ", "директ аудит"),
+    ),
+    (
+        "yandex-direct-query-negative-mining",
+        ("yandex direct negatives", "yandex negative keywords", "минус-слова директ", "поисковые запросы директ"),
+    ),
+    (
+        "meta-ads-account-audit",
+        ("meta ads", "facebook ads", "instagram ads", "мета реклама", "фейсбук реклама"),
+    ),
+    (
+        "meta-ads-capi-deduplication",
+        ("conversions api", "meta capi", "facebook capi", "конверсии api meta"),
+    ),
+    (
+        "google-ads-conversion-quality",
+        ("google ads", "гугл реклама", "гугл адс", "enhanced conversions"),
+    ),
+    (
+        "google-ads-pmax-experiment",
+        ("performance max", "pmax", "перформанс макс"),
+    ),
+    (
+        "google-ads-shopping-feed-health",
+        ("google shopping feed", "merchant center feed", "фид merchant center", "товарный фид google"),
+    ),
+    (
+        "telegram-bot-solution-architecture",
+        ("telegram bot", "телеграм бот", "telegram webhook", "телеграм webhook"),
+    ),
+    (
+        "telegram-mini-app-product-brief",
+        ("telegram mini app", "telegram mini apps", "telegram web app", "телеграм мини апп", "телеграм миниапп", "tma"),
+    ),
+    (
+        "telegram-mini-app-init-data-authentication",
+        ("telegram initdata", "telegram init data", "initdata", "init data validation", "валидация initdata"),
+    ),
+    (
+        "search-console-performance-triage",
+        ("search console", "google search console", "gsc", "гугл search console"),
+    ),
+    (
+        "seo-structured-data-validation",
+        ("structured data", "schema markup", "json-ld", "структурированные данные", "микроразметка"),
+    ),
+    (
+        "seo-log-file-crawl-analysis",
+        ("seo log file", "crawl log", "логи краулера", "лог-файлы seo"),
+    ),
+    (
+        "site-platform-architecture",
+        ("build a website", "website architecture", "создать сайт", "сайтостроение", "архитектура сайта"),
+    ),
+    (
+        "site-content-model-cms",
+        ("cms content model", "cms architecture", "контентная модель", "cms сайта"),
+    ),
+    (
+        "site-production-launch-gate",
+        ("website launch", "site launch", "production launch", "запуск сайта", "релиз сайта"),
+    ),
+    (
         "external-prompt-pattern-miner",
         (
             "system prompt repository",

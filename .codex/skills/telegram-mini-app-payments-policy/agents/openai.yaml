@@ -1,0 +1,7 @@
+interface:
+  display_name: "telegram mini app payments policy"
+  short_description: "Telegram specialist workflow"
+  default_prompt: "Use $telegram-mini-app-payments-policy to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true

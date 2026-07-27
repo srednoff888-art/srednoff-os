@@ -1,0 +1,7 @@
+interface:
+  display_name: "meta ads catalog dpa"
+  short_description: "PPC specialist workflow"
+  default_prompt: "Use $meta-ads-catalog-dpa to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true

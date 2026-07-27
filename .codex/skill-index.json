@@ -959,6 +959,41 @@
         "skill_md_bytes":  1928
     },
     {
+        "name":  "google-ads-conversion-quality",
+        "path":  ".codex\\skills\\google-ads-conversion-quality",
+        "description":  "Use for PPC work when Codex should validate Google Ads conversion actions, enhanced conversions, consent, values, deduplication, and import quality.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1317
+    },
+    {
+        "name":  "google-ads-pmax-experiment",
+        "path":  ".codex\\skills\\google-ads-pmax-experiment",
+        "description":  "Use for PPC work when Codex should plan Google Performance Max experiments with asset, feed, goal, brand-safety, and incrementality controls.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1297
+    },
+    {
+        "name":  "google-ads-policy-risk-gate",
+        "path":  ".codex\\skills\\google-ads-policy-risk-gate",
+        "description":  "Use for PPC work when Codex should check Google Ads policy, API constraints, landing experience, and approval risk before changes.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1277
+    },
+    {
+        "name":  "google-ads-search-query-hygiene",
+        "path":  ".codex\\skills\\google-ads-search-query-hygiene",
+        "description":  "Use for PPC work when Codex should analyze Google Ads search terms, negatives, match behavior, and query-to-landing relevance.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1277
+    },
+    {
+        "name":  "google-ads-shopping-feed-health",
+        "path":  ".codex\\skills\\google-ads-shopping-feed-health",
+        "description":  "Use for PPC work when Codex should review Shopping feed quality, product eligibility, price availability, taxonomy, and landing alignment.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1301
+    },
+    {
         "name":  "google-workspace-addons",
         "path":  ".codex\\skills\\google-workspace-addons",
         "description":  "Use this skill for Google Workspace add-ons, cards, manifests, OAuth scopes, Marketplace readiness. Trigger when the task involves apps work related to Google Workspace Addons, production implementation, audits, debugging, strategy, or validation.",
@@ -1204,11 +1239,53 @@
         "skill_md_bytes":  4118
     },
     {
+        "name":  "meta-ads-account-audit",
+        "path":  ".codex\\skills\\meta-ads-account-audit",
+        "description":  "Use for PPC work when Codex should audit Meta Ads account structure, delivery, learning, attribution, creative, audience, and spend evidence.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1289
+    },
+    {
+        "name":  "meta-ads-audience-experiment",
+        "path":  ".codex\\skills\\meta-ads-audience-experiment",
+        "description":  "Use for PPC work when Codex should design Meta audience, placement, optimization-event, and creative experiments without confounded comparisons.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1307
+    },
+    {
+        "name":  "meta-ads-capi-deduplication",
+        "path":  ".codex\\skills\\meta-ads-capi-deduplication",
+        "description":  "Use for PPC work when Codex should design or review Meta Pixel and Conversions API event identity, deduplication, consent, and diagnostics.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1295
+    },
+    {
+        "name":  "meta-ads-catalog-dpa",
+        "path":  ".codex\\skills\\meta-ads-catalog-dpa",
+        "description":  "Use for PPC work when Codex should validate Meta catalog, feed, event, availability, and dynamic product ad readiness.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1239
+    },
+    {
+        "name":  "meta-ads-creative-fatigue",
+        "path":  ".codex\\skills\\meta-ads-creative-fatigue",
+        "description":  "Use for PPC work when Codex should detect Meta creative fatigue, saturation, audience overlap, and a measurable refresh plan.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1263
+    },
+    {
         "name":  "meta-ads-creative-testing",
         "path":  ".codex\\skills\\meta-ads-creative-testing",
         "description":  "Use this skill for Meta ads creative tests, hooks, variants, audiences, learning phase, fatigue signals. Trigger when the task involves ppc work related to Meta Ads Creative Testing, production implementation, audits, debugging, strategy, or validation.",
         "has_openai_yaml":  true,
         "skill_md_bytes":  1916
+    },
+    {
+        "name":  "meta-ads-policy-risk-gate",
+        "path":  ".codex\\skills\\meta-ads-policy-risk-gate",
+        "description":  "Use for PPC work when Codex should check Meta policy, restricted content, personal-attribute language, landing, and account-risk signals.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1287
     },
     {
         "name":  "migration-lead-agent",
@@ -1419,6 +1496,27 @@
         "description":  "Agent profile for automate back-office workflows, approvals, spreadsheets, notifications, recurring tasks, and handoff logs. Use when Codex needs a specialist agent perspective for planning, implementation, review, debugging, validation, or handoff in this domain.",
         "has_openai_yaml":  true,
         "skill_md_bytes":  1791
+    },
+    {
+        "name":  "paid-media-attribution-governance",
+        "path":  ".codex\\skills\\paid-media-attribution-governance",
+        "description":  "Use for PPC work when Codex should define cross-channel attribution, naming, UTMs, conversion ownership, consent, and reconciliation rules.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1307
+    },
+    {
+        "name":  "paid-media-budget-pacing",
+        "path":  ".codex\\skills\\paid-media-budget-pacing",
+        "description":  "Use for PPC work when Codex should analyze paid-media budget pacing, caps, marginal efficiency, and safe reallocation proposals.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1267
+    },
+    {
+        "name":  "paid-media-experiment-design",
+        "path":  ".codex\\skills\\paid-media-experiment-design",
+        "description":  "Use for PPC work when Codex should design paid-media tests with hypotheses, holdouts, success criteria, duration, and stopping rules.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1285
     },
     {
         "name":  "paid-search-risk-agent",
@@ -1743,6 +1841,13 @@
         "skill_md_bytes":  1942
     },
     {
+        "name":  "search-console-performance-triage",
+        "path":  ".codex\\skills\\search-console-performance-triage",
+        "description":  "Use for SEO work when Codex should triage Search Console impressions, clicks, queries, pages, device, country, and anomaly evidence.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1229
+    },
+    {
         "name":  "search-content-editor-agent",
         "path":  ".codex\\skills\\search-content-editor-agent",
         "description":  "Agent profile for edit content for search intent, topical completeness, clarity, internal links, snippets, and freshness. Use when Codex needs a specialist agent perspective for planning, implementation, review, debugging, validation, or handoff in this domain.",
@@ -1792,11 +1897,39 @@
         "skill_md_bytes":  2052
     },
     {
+        "name":  "seo-change-impact-monitoring",
+        "path":  ".codex\\skills\\seo-change-impact-monitoring",
+        "description":  "Use for SEO work when Codex should measure SEO release impact with pre/post baselines, annotations, crawl checks, and rollback criteria.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1227
+    },
+    {
         "name":  "seo-ci-quality-gate",
         "path":  ".codex\\skills\\seo-ci-quality-gate",
         "description":  "Use this skill for SEO checks in CI, metadata, canonicals, links, robots, sitemap, noindex regressions. Trigger when the task involves seo work related to SEO CI Quality Gate, implementation, audits, debugging, strategy, or validation.",
         "has_openai_yaml":  true,
         "skill_md_bytes":  2014
+    },
+    {
+        "name":  "seo-content-authorship-e-e-a-t",
+        "path":  ".codex\\skills\\seo-content-authorship-e-e-a-t",
+        "description":  "Use for SEO work when Codex should improve content ownership, author evidence, firsthand experience, citations, and trust signals.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1219
+    },
+    {
+        "name":  "seo-cwv-rum-observability",
+        "path":  ".codex\\skills\\seo-cwv-rum-observability",
+        "description":  "Use for SEO work when Codex should connect Core Web Vitals lab data, RUM, releases, templates, and SEO impact triage.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1183
+    },
+    {
+        "name":  "seo-digital-pr-link-risk",
+        "path":  ".codex\\skills\\seo-digital-pr-link-risk",
+        "description":  "Use for SEO work when Codex should assess digital PR and link acquisition for relevance, disclosure, spam risk, and durable brand value.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1219
     },
     {
         "name":  "seo-director-agent",
@@ -1806,11 +1939,53 @@
         "skill_md_bytes":  2022
     },
     {
+        "name":  "seo-ecommerce-product-feed",
+        "path":  ".codex\\skills\\seo-ecommerce-product-feed",
+        "description":  "Use for SEO work when Codex should review ecommerce product data, variants, availability, canonicals, structured data, and feed parity.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1221
+    },
+    {
+        "name":  "seo-image-media-pipeline",
+        "path":  ".codex\\skills\\seo-image-media-pipeline",
+        "description":  "Use for SEO work when Codex should optimize images and media for relevance, accessibility, performance, indexing, and rights provenance.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1219
+    },
+    {
+        "name":  "seo-internal-linking-architecture",
+        "path":  ".codex\\skills\\seo-internal-linking-architecture",
+        "description":  "Use for SEO work when Codex should design internal linking, hubs, anchors, crawl paths, and equity flow without manipulative patterns.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1233
+    },
+    {
+        "name":  "seo-log-file-crawl-analysis",
+        "path":  ".codex\\skills\\seo-log-file-crawl-analysis",
+        "description":  "Use for SEO work when Codex should analyze crawler logs for crawl waste, status patterns, bot access, rendering, and indexability evidence.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1231
+    },
+    {
         "name":  "seo-migration-redirects",
         "path":  ".codex\\skills\\seo-migration-redirects",
         "description":  "Use this skill for site migrations, redirect maps, canonical preservation, launch QA, traffic risk mitigation. Trigger when the task involves seo work related to SEO Migration Redirects, production implementation, audits, debugging, strategy, or validation.",
         "has_openai_yaml":  true,
         "skill_md_bytes":  1929
+    },
+    {
+        "name":  "seo-search-intent-clustering",
+        "path":  ".codex\\skills\\seo-search-intent-clustering",
+        "description":  "Use for SEO work when Codex should cluster keywords by intent, entity, funnel, SERP shape, and page ownership without cannibalization.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1223
+    },
+    {
+        "name":  "seo-structured-data-validation",
+        "path":  ".codex\\skills\\seo-structured-data-validation",
+        "description":  "Use for SEO work when Codex should implement and validate structured data against visible content, schema rules, and rich-result risk.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1227
     },
     {
         "name":  "seo-technical-auditor-agent",
@@ -1848,6 +2023,41 @@
         "skill_md_bytes":  1917
     },
     {
+        "name":  "site-accessibility-performance-launch",
+        "path":  ".codex\\skills\\site-accessibility-performance-launch",
+        "description":  "Use for Site Building work when Codex should ship website accessibility, performance, responsive, SEO fallback, and browser QA as one release gate.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1301
+    },
+    {
+        "name":  "site-analytics-consent-instrumentation",
+        "path":  ".codex\\skills\\site-analytics-consent-instrumentation",
+        "description":  "Use for Site Building work when Codex should implement consent-aware analytics events, data layer, attribution, QA, and privacy-safe observability.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1303
+    },
+    {
+        "name":  "site-api-integration-boundaries",
+        "path":  ".codex\\skills\\site-api-integration-boundaries",
+        "description":  "Use for Site Building work when Codex should design resilient site API integration boundaries, failure states, caching, secrets, and contract tests.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1291
+    },
+    {
+        "name":  "site-commerce-conversion-architecture",
+        "path":  ".codex\\skills\\site-commerce-conversion-architecture",
+        "description":  "Use for Site Building work when Codex should design ecommerce discovery, product, cart, checkout, trust, tracking, and recovery flows.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1275
+    },
+    {
+        "name":  "site-content-model-cms",
+        "path":  ".codex\\skills\\site-content-model-cms",
+        "description":  "Use for Site Building work when Codex should design content types, editorial workflows, previews, localization, permissions, and migration-safe CMS models.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1287
+    },
+    {
         "name":  "site-crawler-automation",
         "path":  ".codex\\skills\\site-crawler-automation",
         "description":  "Use this skill for automated site crawling, exports, issue classification, reproducible technical SEO audits. Trigger when the task involves seo work related to Site Crawler Automation, implementation, audits, debugging, strategy, or validation.",
@@ -1855,11 +2065,53 @@
         "skill_md_bytes":  2036
     },
     {
+        "name":  "site-design-system-delivery",
+        "path":  ".codex\\skills\\site-design-system-delivery",
+        "description":  "Use for Site Building work when Codex should turn design tokens and components into an accessible, reusable site delivery system.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1245
+    },
+    {
+        "name":  "site-editorial-governance",
+        "path":  ".codex\\skills\\site-editorial-governance",
+        "description":  "Use for Site Building work when Codex should define editorial ownership, content quality gates, publishing roles, review, and archive rules.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1263
+    },
+    {
+        "name":  "site-forms-lead-capture",
+        "path":  ".codex\\skills\\site-forms-lead-capture",
+        "description":  "Use for Site Building work when Codex should design lead forms, validation, consent, spam prevention, CRM handoff, analytics, and recovery states.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1271
+    },
+    {
+        "name":  "site-i18n-localization-delivery",
+        "path":  ".codex\\skills\\site-i18n-localization-delivery",
+        "description":  "Use for Site Building work when Codex should implement site localization, locale routing, copy expansion, metadata, formatting, and visual QA.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1279
+    },
+    {
         "name":  "sitemap-index-sharding",
         "path":  ".codex\\skills\\sitemap-index-sharding",
         "description":  "Use this skill for large sitemap indexes, sharding, freshness, lastmod hygiene, monitoring, submission strategy. Trigger when the task involves seo work related to Sitemap Index Sharding, implementation, audits, debugging, strategy, or validation.",
         "has_openai_yaml":  true,
         "skill_md_bytes":  2057
+    },
+    {
+        "name":  "site-platform-architecture",
+        "path":  ".codex\\skills\\site-platform-architecture",
+        "description":  "Use for Site Building work when Codex should choose site architecture, rendering, hosting, CMS, integrations, and performance boundaries from product evidence.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1303
+    },
+    {
+        "name":  "site-production-launch-gate",
+        "path":  ".codex\\skills\\site-production-launch-gate",
+        "description":  "Use for Site Building work when Codex should run site launch readiness across environment, redirects, analytics, forms, error monitoring, rollback, and ownership.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1311
     },
     {
         "name":  "skill-catalog-orchestrator",
@@ -1979,6 +2231,83 @@
         "description":  "Agent profile for write developer docs, user docs, API docs, tutorials, changelogs, and concise implementation notes. Use when Codex needs a specialist agent perspective for planning, implementation, review, debugging, validation, or handoff in this domain.",
         "has_openai_yaml":  true,
         "skill_md_bytes":  1742
+    },
+    {
+        "name":  "telegram-bot-api-reliability",
+        "path":  ".codex\\skills\\telegram-bot-api-reliability",
+        "description":  "Use for Telegram work when Codex should implement Telegram Bot API retries, idempotency, update handling, rate limits, errors, and safe logging.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1256
+    },
+    {
+        "name":  "telegram-bot-solution-architecture",
+        "path":  ".codex\\skills\\telegram-bot-solution-architecture",
+        "description":  "Use for Telegram work when Codex should choose Telegram bot, webhook, queue, storage, admin, and observability architecture.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1228
+    },
+    {
+        "name":  "telegram-mini-app-analytics-attribution",
+        "path":  ".codex\\skills\\telegram-mini-app-analytics-attribution",
+        "description":  "Use for Telegram work when Codex should instrument Mini App acquisition, start parameters, funnel events, consent, attribution, and privacy-safe reporting.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1300
+    },
+    {
+        "name":  "telegram-mini-app-backend-contract",
+        "path":  ".codex\\skills\\telegram-mini-app-backend-contract",
+        "description":  "Use for Telegram work when Codex should design Mini App backend contracts, authorization, idempotency, error states, and bot integration boundaries.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1276
+    },
+    {
+        "name":  "telegram-mini-app-growth-loop",
+        "path":  ".codex\\skills\\telegram-mini-app-growth-loop",
+        "description":  "Use for Telegram work when Codex should design Mini App activation, referral, retention, notification-consent, and re-engagement loops responsibly.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1264
+    },
+    {
+        "name":  "telegram-mini-app-init-data-authentication",
+        "path":  ".codex\\skills\\telegram-mini-app-init-data-authentication",
+        "description":  "Use for Telegram work when Codex should validate Telegram Mini App initData on the server, enforce expiry, map identity, and create safe sessions.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1288
+    },
+    {
+        "name":  "telegram-mini-app-payments-policy",
+        "path":  ".codex\\skills\\telegram-mini-app-payments-policy",
+        "description":  "Use for Telegram work when Codex should review Mini App payments, digital-goods constraints, receipts, refunds, policy, and approval gates.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1256
+    },
+    {
+        "name":  "telegram-mini-app-performance-budget",
+        "path":  ".codex\\skills\\telegram-mini-app-performance-budget",
+        "description":  "Use for Telegram work when Codex should set Mini App mobile performance budgets for startup, JS, assets, rendering, network, and low-end devices.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1274
+    },
+    {
+        "name":  "telegram-mini-app-platform-ui",
+        "path":  ".codex\\skills\\telegram-mini-app-platform-ui",
+        "description":  "Use for Telegram work when Codex should build Telegram-native Mini App UI with theme, safe areas, viewport, back button, haptics, and accessibility.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1266
+    },
+    {
+        "name":  "telegram-mini-app-product-brief",
+        "path":  ".codex\\skills\\telegram-mini-app-product-brief",
+        "description":  "Use for Telegram work when Codex should define Telegram Mini App user job, launch surface, platform constraints, trust, and success metrics.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1254
+    },
+    {
+        "name":  "telegram-mini-app-release-gate",
+        "path":  ".codex\\skills\\telegram-mini-app-release-gate",
+        "description":  "Use for Telegram work when Codex should validate Mini App HTTPS, bot configuration, auth, UI states, analytics, security, and rollback readiness.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1262
     },
     {
         "name":  "test-architect-agent",
@@ -2175,5 +2504,54 @@
         "description":  "Use this skill for WebXR, AR previews, model-viewer, mobile sensors, permissions, fallback UX. Trigger when the task involves 3d web work related to XR AR Web Experiences, production implementation, audits, debugging, strategy, or validation.",
         "has_openai_yaml":  true,
         "skill_md_bytes":  1892
+    },
+    {
+        "name":  "yandex-direct-account-audit",
+        "path":  ".codex\\skills\\yandex-direct-account-audit",
+        "description":  "Use for PPC work when Codex should audit Yandex Direct account structure, spend, delivery, conversion evidence, and safe optimization backlog.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1301
+    },
+    {
+        "name":  "yandex-direct-bid-strategy-review",
+        "path":  ".codex\\skills\\yandex-direct-bid-strategy-review",
+        "description":  "Use for PPC work when Codex should review Yandex Direct bidding, learning constraints, conversion volume, and guardrails before bid changes.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1309
+    },
+    {
+        "name":  "yandex-direct-campaign-architecture",
+        "path":  ".codex\\skills\\yandex-direct-campaign-architecture",
+        "description":  "Use for PPC work when Codex should design Yandex Direct campaign, ad group, geo, audience, and naming architecture before build.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1289
+    },
+    {
+        "name":  "yandex-direct-feed-campaigns",
+        "path":  ".codex\\skills\\yandex-direct-feed-campaigns",
+        "description":  "Use for PPC work when Codex should validate feeds, offer data, policy risk, and measurement for Yandex ecommerce campaigns.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1265
+    },
+    {
+        "name":  "yandex-direct-goal-attribution",
+        "path":  ".codex\\skills\\yandex-direct-goal-attribution",
+        "description":  "Use for PPC work when Codex should validate Yandex Metrica goals, attribution, offline conversion evidence, and reporting joins.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1279
+    },
+    {
+        "name":  "yandex-direct-policy-risk-gate",
+        "path":  ".codex\\skills\\yandex-direct-policy-risk-gate",
+        "description":  "Use for PPC work when Codex should check Yandex Direct policy, landing, claims, legal, and moderation risk before publication.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1275
+    },
+    {
+        "name":  "yandex-direct-query-negative-mining",
+        "path":  ".codex\\skills\\yandex-direct-query-negative-mining",
+        "description":  "Use for PPC work when Codex should analyze Yandex search queries, negatives, match intent, and preserve valuable traffic.",
+        "has_openai_yaml":  true,
+        "skill_md_bytes":  1275
     }
 ]

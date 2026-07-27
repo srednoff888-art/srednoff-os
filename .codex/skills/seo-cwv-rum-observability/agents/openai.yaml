@@ -1,0 +1,7 @@
+interface:
+  display_name: "seo cwv rum observability"
+  short_description: "SEO specialist workflow"
+  default_prompt: "Use $seo-cwv-rum-observability to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true

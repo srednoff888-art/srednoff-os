@@ -1,0 +1,7 @@
+interface:
+  display_name: "site forms lead capture"
+  short_description: "Site Building specialist workflow"
+  default_prompt: "Use $site-forms-lead-capture to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true

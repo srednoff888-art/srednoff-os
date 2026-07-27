@@ -142,5 +142,64 @@
     "expectedAll": [
       "mcp-security-review"
     ]
+  },
+  {
+    "id": "yandex_direct_audit",
+    "brief": "Проведи аудит Яндекс Директ: кампании, расходы, цели Метрики, запросы и безопасные рекомендации",
+    "budget": "deep",
+    "expectedAll": [
+      "yandex-direct-account-audit"
+    ]
+  },
+  {
+    "id": "meta_capi",
+    "brief": "Review Meta Ads Conversions API CAPI, Pixel event deduplication, consent and attribution",
+    "budget": "deep",
+    "expectedAll": [
+      "meta-ads-capi-deduplication"
+    ]
+  },
+  {
+    "id": "google_pmax",
+    "brief": "Plan a Google Ads Performance Max PMax experiment with conversion quality and asset controls",
+    "budget": "deep",
+    "expectedAll": [
+      "google-ads-conversion-quality",
+      "google-ads-pmax-experiment"
+    ]
+  },
+  {
+    "id": "telegram_mini_app_auth",
+    "brief": "Создай Telegram Mini App и безопасно проверь initData на сервере перед сессией пользователя",
+    "budget": "deep",
+    "expectedAll": [
+      "telegram-mini-app-product-brief",
+      "telegram-mini-app-init-data-authentication"
+    ]
+  },
+  {
+    "id": "search_console_triage",
+    "brief": "Analyze Google Search Console GSC clicks impressions pages queries and an SEO traffic anomaly",
+    "budget": "deep",
+    "expectedAll": [
+      "search-console-performance-triage"
+    ]
+  },
+  {
+    "id": "structured_data",
+    "brief": "Validate schema markup JSON-LD and structured data against visible ecommerce product content",
+    "budget": "deep",
+    "expectedAll": [
+      "seo-structured-data-validation"
+    ]
+  },
+  {
+    "id": "site_building_architecture",
+    "brief": "Создать сайт: выбрать архитектуру сайта, CMS, SSR, производительность и безопасный production launch",
+    "budget": "deep",
+    "expectedAll": [
+      "site-platform-architecture",
+      "site-production-launch-gate"
+    ]
   }
 ]

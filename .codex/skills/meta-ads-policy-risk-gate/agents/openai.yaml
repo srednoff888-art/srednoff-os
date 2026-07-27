@@ -1,0 +1,7 @@
+interface:
+  display_name: "meta ads policy risk gate"
+  short_description: "PPC specialist workflow"
+  default_prompt: "Use $meta-ads-policy-risk-gate to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true

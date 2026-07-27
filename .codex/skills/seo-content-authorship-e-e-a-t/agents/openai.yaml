@@ -1,0 +1,7 @@
+interface:
+  display_name: "seo content authorship e e a t"
+  short_description: "SEO specialist workflow"
+  default_prompt: "Use $seo-content-authorship-e-e-a-t to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true

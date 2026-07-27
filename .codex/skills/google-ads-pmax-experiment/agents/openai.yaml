@@ -1,0 +1,7 @@
+interface:
+  display_name: "google ads pmax experiment"
+  short_description: "PPC specialist workflow"
+  default_prompt: "Use $google-ads-pmax-experiment to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true

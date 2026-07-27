@@ -1,0 +1,7 @@
+interface:
+  display_name: "telegram mini app release gate"
+  short_description: "Telegram specialist workflow"
+  default_prompt: "Use $telegram-mini-app-release-gate to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true

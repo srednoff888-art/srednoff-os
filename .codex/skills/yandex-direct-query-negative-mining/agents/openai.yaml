@@ -1,0 +1,7 @@
+interface:
+  display_name: "yandex direct query negative mining"
+  short_description: "PPC specialist workflow"
+  default_prompt: "Use $yandex-direct-query-negative-mining to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true

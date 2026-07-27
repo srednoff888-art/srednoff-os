@@ -1,0 +1,7 @@
+interface:
+  display_name: "telegram bot solution architecture"
+  short_description: "Telegram specialist workflow"
+  default_prompt: "Use $telegram-bot-solution-architecture to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true

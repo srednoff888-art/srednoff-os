@@ -1,0 +1,7 @@
+interface:
+  display_name: "site api integration boundaries"
+  short_description: "Site Building specialist workflow"
+  default_prompt: "Use $site-api-integration-boundaries to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "search console performance triage"
+  short_description: "SEO specialist workflow"
+  default_prompt: "Use $search-console-performance-triage to complete this task with evidence and safety gates."
+
+policy:
+  allow_implicit_invocation: true
