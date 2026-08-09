@@ -22,6 +22,7 @@ function Resolve-LocalOrHomeScript {
 $Selector = Resolve-LocalOrHomeScript "select-quality-cost-capabilities.ps1"
 $SourceRanker = Resolve-LocalOrHomeScript "srednoff-os-source-ranker.ps1"
 $DesignBrief = Resolve-LocalOrHomeScript "srednoff-os-design-brief.ps1"
+$ModeRouter = Resolve-LocalOrHomeScript "srednoff-os-mode-router.ps1"
 $DomainRouter = Resolve-LocalOrHomeScript "srednoff-os-domain-router.ps1"
 $LocalRegistry = Join-Path $PackageRoot ".codex\srednoff-os\design-source-registry.json"
 $HomeRegistry = Join-Path $CodexHome "srednoff-os\design-source-registry.json"
@@ -38,11 +39,19 @@ $SelectorOut = & $Selector -ProjectPath $ProjectPath -Brief "source ranking UI k
 $Results += Add-Result -Id "selector:v212-skills" -Passed (($SelectorOut -match "source-ranking-roi-selector") -and ($SelectorOut -match "design-brief-autogenerator")) -Detail (($SelectorOut -replace "\s+", " ").Trim())
 $Results += Add-Result -Id "selector:legacy-plus-output" -Passed (($SelectorOut -match "Capability IDs") -and ($SelectorOut -match "token-saving") -and ($SelectorOut -match "balanced-value|heavyweight-result")) -Detail "legacy ids output retained"
 
-$SelectorEmpty = & $Selector -ProjectPath $ProjectPath -Brief "" -Budget lean -Max 5 -Format ids | Out-String
+$SelectorEmpty = & $Selector -ProjectPath $ProjectPath -Brief "" -Budget lean -Max 5 -Format ids -ProjectScan off | Out-String
 $Results += Add-Result -Id "selector:empty-brief" -Passed (($SelectorEmpty -match "Capability IDs") -and ($SelectorEmpty -match "repo-intake-context|documentation-content|testing-qa-quality")) -Detail (($SelectorEmpty -replace "\s+", " ").Trim())
 
 $SelectorOff = & $Selector -ProjectPath $ProjectPath -Brief "debug selector without project scan" -Budget lean -Max 5 -Format ids -ProjectScan off | Out-String
 $Results += Add-Result -Id "selector:project-scan-off" -Passed (($SelectorOff -match "Capability IDs") -and ($SelectorOff -match "repo-intake-context|testing-qa-quality")) -Detail (($SelectorOff -replace "\s+", " ").Trim())
+
+$ResearchBrief = "daily Srednoff OS v2.1.2 research skills agents selectors source ranking design brief all domains"
+$ResearchMode = & $ModeRouter -Brief $ResearchBrief -Json | ConvertFrom-Json
+$Results += Add-Result -Id "mode-router:daily-research-deep" -Passed (($ResearchMode.mode -eq "deep") -and ($ResearchMode.budget -eq "deep") -and ([int]$ResearchMode.max_capabilities -eq 24) -and (-not [bool]$ResearchMode.turbo)) -Detail "mode=$($ResearchMode.mode); budget=$($ResearchMode.budget); max=$($ResearchMode.max_capabilities); turbo=$($ResearchMode.turbo)"
+
+$ResearchDomain = & $DomainRouter -ProjectPath $ProjectPath -Brief $ResearchBrief -Json | ConvertFrom-Json
+$ResearchPacks = @($ResearchDomain.skill_packs)
+$Results += Add-Result -Id "domain-router:daily-research" -Passed ((@($ResearchDomain.domains) -contains "agents-research") -and ($ResearchPacks -contains "codex-plugin-governance") -and (@($ResearchDomain.blocking_questions).Count -eq 0)) -Detail "domains=$(@($ResearchDomain.domains) -join ','); packs=$($ResearchPacks -join ','); questions=$(@($ResearchDomain.blocking_questions).Count)"
 
 $Rank3D = & $SourceRanker -ProjectPath $ProjectPath -Brief "optimize glTF GLB model texture asset pipeline" -Json | ConvertFrom-Json
 $Top3D = @($Rank3D.ranked_sources)[0]

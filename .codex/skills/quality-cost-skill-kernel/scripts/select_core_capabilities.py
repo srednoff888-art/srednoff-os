@@ -325,6 +325,27 @@ DOMAIN_SKILL_HINTS = {
 
 DIRECT_SKILL_ALIASES = [
     (
+        "yandex-direct-v501-operations",
+        (
+            "yandex direct api",
+            "direct api v501",
+            "yandex direct v501",
+            "unified campaign api",
+            "unifiedcampaign",
+            "unifiedadgroup",
+            "epk api",
+            "yandex metrika api",
+            "yandex wordstat api",
+            "яндекс директ api",
+            "директ api v501",
+            "директ v501",
+            "епк api",
+            "единая перфоманс кампания api",
+            "метрика api",
+            "wordstat api",
+        ),
+    ),
+    (
         "yandex-direct-account-audit",
         ("yandex direct", "yandex.direct", "яндекс директ", "директ аудит"),
     ),
@@ -447,6 +468,21 @@ DIRECT_SKILL_ALIASES = [
             "custom agents",
             "context contract",
             "merge protocol",
+        ),
+    ),
+    (
+        "codex-plugin-governance",
+        (
+            "codex plugin",
+            "codex plugins",
+            "agent plugin",
+            "agent plugins",
+            "plugin manifest",
+            "plugin marketplace",
+            "plugin directory",
+            "workspace plugin",
+            "plugin publishing",
+            "executor-provided skill",
         ),
     ),
     (

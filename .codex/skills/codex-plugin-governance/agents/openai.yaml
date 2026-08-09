@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Plugin Governance"
+  short_description: "Audit Codex plugins, permissions, and publishing"
+  default_prompt: "Use $codex-plugin-governance to audit this plugin before installation or publishing."

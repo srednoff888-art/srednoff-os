@@ -1,6 +1,6 @@
 # Growth, Web, And Mini Apps Skill Pack
 
-This pack adds 54 compact, task-specific skills to Srednoff OS. It is designed
+This pack adds 55 compact, task-specific skills to Srednoff OS. It is designed
 for selector-first use: the relevant `SKILL.md` is opened only after a task
 brief matches a narrow capability.
 
@@ -8,7 +8,7 @@ brief matches a narrow capability.
 
 | Pack | Added | Purpose |
 |---|---:|---|
-| Paid media | 21 | Yandex Direct, Meta Ads, Google Ads, attribution, budget pacing, and experiments |
+| Paid media | 22 | Yandex Direct, Meta Ads, Google Ads, attribution, budget pacing, and experiments |
 | SEO | 11 | Search Console, schema, links, logs, ecommerce, trust, media, CWV, and monitoring |
 | Site building | 11 | Architecture, CMS, design system, forms, i18n, commerce, analytics, integrations, and launch |
 | Telegram and Mini Apps | 11 | Bot architecture, Mini App auth, UI, backend, analytics, payments, performance, release, and growth |
@@ -17,7 +17,7 @@ brief matches a narrow capability.
 
 ### Paid media
 
-`yandex-direct-account-audit`, `yandex-direct-campaign-architecture`,
+`yandex-direct-account-audit`, `yandex-direct-v501-operations`, `yandex-direct-campaign-architecture`,
 `yandex-direct-query-negative-mining`, `yandex-direct-bid-strategy-review`,
 `yandex-direct-goal-attribution`, `yandex-direct-feed-campaigns`,
 `yandex-direct-policy-risk-gate`, `meta-ads-account-audit`,
@@ -72,6 +72,9 @@ and `site-editorial-governance`.
 
 - PPC skills start read-only. Any budget, bid, campaign, audience, creative, or
   account mutation requires explicit owner approval.
+- `yandex-direct-v501-operations` keeps IDs as decimal strings, verifies writes
+  by re-reading the changed object, and treats EPK/API details as account- and
+  API-version-specific until confirmed against current official documentation.
 - SEO skills require a baseline. They do not delete pages, publish redirects,
   or change robots/canonicals without approval.
 - Telegram Mini Apps validate `initData` server-side with a bounded lifetime;

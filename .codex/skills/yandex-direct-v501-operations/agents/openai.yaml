@@ -1,0 +1,4 @@
+interface:
+  display_name: "Yandex Direct v501 Operations"
+  short_description: "ЕПК, Метрика, Wordstat и безопасные API-операции"
+  default_prompt: "Use $yandex-direct-v501-operations to audit or safely modify a Yandex Direct Unified Campaign."

@@ -37,7 +37,10 @@ $DeepPatterns = @(
     'mobile',
     'deploy',
     'migration',
-    'audit'
+    'audit',
+    'daily.*research',
+    'research.*all domains',
+    'deepest'
 )
 
 $DeepLiteralPatterns = @(

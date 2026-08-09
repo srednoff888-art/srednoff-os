@@ -10,7 +10,7 @@ Migrate MCP clients and servers with explicit compatibility, rollout, and rollba
 ## Workflow
 
 1. Inventory the current protocol version, SDK/language, transport, client and server versions, extensions, auth flow, and production topology.
-2. Read the target specification changelog plus the exact SDK migration guide and release notes. Treat RC, beta, and pre-release packages as opt-in only; pin exact versions.
+2. Read the target specification changelog plus the exact SDK migration guide and release notes. MCP `2026-07-28` is a stable specification, but SDK and host support is independent; treat beta or pre-release packages as opt-in only and pin exact versions.
 3. Build a compatibility matrix for old client/new server, new client/old server, and new client/new server. Verify version negotiation rather than assuming simultaneous upgrades.
 4. Map wire and lifecycle changes before editing code: handshake/discovery, session state, routing headers, server-to-client requests, subscriptions, caching, tracing, tasks, errors, and schemas.
 5. Move hidden protocol session state to explicit tool arguments or durable application storage when the target protocol is stateless. Do not expose secrets or authorization state as model-visible handles.
@@ -18,9 +18,13 @@ Migrate MCP clients and servers with explicit compatibility, rollout, and rollba
 7. Run official conformance tests when available, then add project fixtures for mixed versions, cancellation, retries, cache expiry, long-running tasks, and rollback.
 8. Roll out behind an explicit version/feature gate, observe failures and latency, and keep the previous stable path until evidence supports removal.
 
-## 2026-07-28 Gate
+## 2026-07-28 Stable Gate
 
+- Verify the selected SDK, client host, and server framework against the stable specification; do not infer implementation maturity from the final spec tag.
 - Replace Streamable HTTP `initialize`/`initialized` and `Mcp-Session-Id` assumptions with per-request metadata and `server/discover` where supported.
+- Require `resultType` on new-protocol results and preserve legacy compatibility by treating a missing field from older peers as `complete`.
+- Replace the HTTP GET change stream and resource subscribe/unsubscribe calls with `subscriptions/listen`; keep request-scoped progress on the request response stream.
+- Treat broken response streams as failed in-flight requests and retry with a new request ID; do not rely on removed SSE event replay.
 - Require and validate `Mcp-Method` and `Mcp-Name`; reject disagreement with the JSON-RPC body.
 - Model multi-round-trip input as `InputRequiredResult` plus replayed state instead of free-floating server requests.
 - Migrate experimental core Tasks to the Tasks extension; do not depend on removed `tasks/list`.
@@ -39,6 +43,6 @@ Migrate MCP clients and servers with explicit compatibility, rollout, and rollba
 ## Guardrails
 
 - Do not upgrade production, publish packages, rotate credentials, or remove the old protocol path without explicit approval.
-- Do not claim RC/beta behavior is final; re-check official release notes before implementation.
+- Do not treat a stable specification as proof that a selected SDK, client, or host has stable support; verify its release channel and conformance evidence.
 - Do not infer SDK support from the specification alone; verify the selected language SDK and client host independently.
 - Do not copy examples from repositories with unclear or incompatible licenses.

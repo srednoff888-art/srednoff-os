@@ -344,18 +344,26 @@ if (Test-Path -LiteralPath $CodexDocsRoot) {
 
 $StaleCore1000 = @(Get-ChildItem -LiteralPath $ProjectRoot -Recurse -File -Filter "*core-1000*" -ErrorAction SilentlyContinue).Count
 $PyCache = @(Get-ChildItem -LiteralPath $ProjectRoot -Recurse -Directory -Filter "__pycache__" -ErrorAction SilentlyContinue).Count
-$TrackedPyCache = $PyCache
+$TrackedPyCache = 0
 $Git = Get-Command git -ErrorAction SilentlyContinue
 if ($Git) {
-    $GitWorkTree = & $Git.Source -C $ProjectRoot rev-parse --is-inside-work-tree 2>$null
-    if ($LASTEXITCODE -eq 0 -and $GitWorkTree -eq "true") {
+    $PreviousErrorActionPreference = $ErrorActionPreference
+    try {
+        $ErrorActionPreference = "SilentlyContinue"
+        $GitWorkTree = & $Git.Source -C $ProjectRoot rev-parse --is-inside-work-tree 2>$null
+        $GitWorkTreeExitCode = $LASTEXITCODE
+    }
+    finally {
+        $ErrorActionPreference = $PreviousErrorActionPreference
+    }
+    if ($GitWorkTreeExitCode -eq 0 -and $GitWorkTree -eq "true") {
         $TrackedPyCache = @(
             & $Git.Source -C $ProjectRoot ls-files 2>$null |
                 Where-Object { $_ -match '(^|/)__pycache__/' }
         ).Count
     }
 }
-Add-Check -Name "stale-artifacts" -Status ($(if ($StaleCore1000 -eq 0 -and $TrackedPyCache -eq 0) { "OK" } else { "WARN" })) -Detail "core-1000=$StaleCore1000; tracked_pycache=$TrackedPyCache; ignored_pycache=$($PyCache - $TrackedPyCache)" -Fix "Use safe cleanup dry-run before removal"
+Add-Check -Name "stale-artifacts" -Status ($(if ($StaleCore1000 -eq 0 -and $TrackedPyCache -eq 0) { "OK" } else { "WARN" })) -Detail "core-1000=$StaleCore1000; tracked_pycache=$TrackedPyCache; untracked_or_ignored_pycache=$($PyCache - $TrackedPyCache)" -Fix "Use safe cleanup dry-run before removal"
 
 $NpmCmd = Get-Command npm.cmd -ErrorAction SilentlyContinue
 $NpmPs1 = Get-Command npm.ps1 -ErrorAction SilentlyContinue

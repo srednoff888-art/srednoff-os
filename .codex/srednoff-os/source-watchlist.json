@@ -51,6 +51,18 @@
       "reason": "Current Codex CLI behavior and release direction"
     },
     {
+      "id": "openai-codex-releases",
+      "type": "github-releases",
+      "url": "https://github.com/openai/codex/releases",
+      "reason": "Stable Codex feature, plugin, skill-discovery, Windows, MCP, and migration deltas"
+    },
+    {
+      "id": "openai-codex-plugin-governance",
+      "type": "official-docs",
+      "url": "https://help.openai.com/en/articles/20001256-plugins-in-codex/",
+      "reason": "Plugin bundles, required and optional apps, workspace roles, action controls, source-system permissions, publishing, and refresh governance"
+    },
+    {
       "id": "openai-skills-repo",
       "type": "github",
       "url": "https://github.com/openai/skills",
@@ -261,16 +273,16 @@
       "reason": "Empirical research on skill reuse, customization, and maintenance; mine only abstract lifecycle and ROI patterns"
     },
     {
-      "id": "modelcontextprotocol-2026-07-28-rc",
-      "type": "official-release-candidate",
-      "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
-      "reason": "Breaking MCP revision: stateless core, server/discover, routing headers, extensions, auth hardening, deprecations, and JSON Schema 2020-12"
+      "id": "modelcontextprotocol-2026-07-28",
+      "type": "official-release",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2026-07-28",
+      "reason": "Stable breaking MCP revision: stateless core, server/discover, routing headers, extensions, auth hardening, deprecations, and JSON Schema 2020-12"
     },
     {
-      "id": "modelcontextprotocol-draft-changelog",
+      "id": "modelcontextprotocol-2026-07-28-changelog",
       "type": "official-spec",
-      "url": "https://modelcontextprotocol.io/specification/draft/changelog",
-      "reason": "Authoritative change list for the locked 2026-07-28 RC and final-release drift checks"
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/changelog",
+      "reason": "Authoritative change list for the stable 2026-07-28 specification and SDK conformance checks"
     },
     {
       "id": "modelcontextprotocol-python-sdk-v2-migration",

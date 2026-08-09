@@ -4,6 +4,9 @@
 
 ### Added
 
+- Added `yandex-direct-v501-operations` for safe Direct API v501 and EPK work,
+  including 64-bit identifier handling, micro-unit values, reports, Metrika,
+  Wordstat, moderation, and post-write verification.
 - Added 54 selector-first skills for Yandex Direct, Meta Ads, Google Ads,
   cross-channel paid media, SEO, production site building, Telegram bots, and
   Telegram Mini Apps.

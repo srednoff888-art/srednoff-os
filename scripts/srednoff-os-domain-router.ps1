@@ -18,6 +18,7 @@ $HomeRegistryPath = Join-Path $CodexHome "srednoff-os\design-source-registry.jso
 $RegistryPath = if ($LocalRegistryPath -and (Test-Path -LiteralPath $LocalRegistryPath -PathType Leaf)) { $LocalRegistryPath } else { $HomeRegistryPath }
 $Mode = (& $ModeRouter -Brief $Brief -Json | ConvertFrom-Json)
 $Lower = $Brief.ToLowerInvariant()
+$IsSystemResearch = $Lower -match '(daily.*research|srednoff os.*research|skills agents selectors|research.*all domains)'
 
 function Resolve-PathOrLiteral {
     param([string]$Path)
@@ -40,6 +41,10 @@ function Test-Any {
 }
 
 $Domains = New-Object System.Collections.Generic.List[string]
+
+if ($IsSystemResearch) {
+    $Domains.Add("agents-research") | Out-Null
+}
 
 if (Test-Any @('ui/ux','ux','ui\b','web design','landing','dashboard','component','shadcn','figma','canva','21st','magic ui','aceternity','origin ui','react bits','design','interface')) {
     $Domains.Add("ui-ux") | Out-Null
@@ -76,12 +81,14 @@ $SkillPacks = @()
 $ValidationGates = @("status-check", "doctor-if-system-change")
 
 if ($DomainList -contains "ui-ux" -or $DomainList -contains "web-design") {
-    $Questions += "What product/site type, target user, and desired impression?"
-    $Questions += "Which visual direction: premium SaaS, editorial, ecommerce, utilitarian, luxury, playful, brutalist?"
-    $Questions += "Should I offer/use 21st.dev Magic, Figma, Canva, shadcn registry, Magic UI, Aceternity, Origin UI, React Bits?"
-    $ConnectorSuggestions += "magic:21st.dev"
-    $ConnectorSuggestions += "figma"
-    $ConnectorSuggestions += "canva"
+    if (-not $IsSystemResearch) {
+        $Questions += "What product/site type, target user, and desired impression?"
+        $Questions += "Which visual direction: premium SaaS, editorial, ecommerce, utilitarian, luxury, playful, brutalist?"
+        $Questions += "Should I offer/use 21st.dev Magic, Figma, Canva, shadcn registry, Magic UI, Aceternity, Origin UI, React Bits?"
+        $ConnectorSuggestions += "magic:21st.dev"
+        $ConnectorSuggestions += "figma"
+        $ConnectorSuggestions += "canva"
+    }
     $SkillPacks += "design-brief-autogenerator"
     $SkillPacks += "source-ranking-roi-selector"
     $SkillPacks += "design-brief-intake-router"
@@ -92,6 +99,17 @@ if ($DomainList -contains "ui-ux" -or $DomainList -contains "web-design") {
     $ValidationGates += "visual-regression-design-gate"
     $ValidationGates += "accessibility"
     $ValidationGates += "responsive-screenshots"
+}
+
+if ($DomainList -contains "agents-research") {
+    $SkillPacks += "github-research"
+    $SkillPacks += "skill-catalog-orchestrator"
+    $SkillPacks += "codex-plugin-governance"
+    $SkillPacks += "mcp-protocol-migration"
+    $SkillPacks += "promptfoo-evals-redteam-ci"
+    $ValidationGates += "source-provenance-review"
+    $ValidationGates += "selector-regression-evals"
+    $ValidationGates += "release-note-delta"
 }
 
 if ($DomainList -contains "3d-web") {

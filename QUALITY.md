@@ -10,7 +10,7 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 
 | Check | Status | Command |
 |---|---:|---|
-| Selector regression suite | PASS, 23/23 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-selector.ps1` |
+| Selector regression suite | PASS, 25/25 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-selector.ps1` |
 | v2.1.1 compatibility evals | PASS, 13/13 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v211.ps1` |
 | v2.1.2 routing/source evals | PASS, 16/16 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v212.ps1` |
 | Independent security fixture evals | PASS, 14/14 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-security-fixtures.ps1` |
@@ -22,7 +22,7 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 | RU CLI evals | PASS, 4/4 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-ru-cli.ps1` |
 | NeuralDeep registry evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-neuraldeep-registry.ps1` |
 | NeuralDeep importer evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-neuraldeep-importer.ps1` |
-| Fast skill metadata validation | PASS, 365/365 | `powershell -ExecutionPolicy Bypass -File .\scripts\quick-validate-all-skills.ps1 -Mode fast` |
+| Fast skill metadata validation | PASS, 367/367 | `powershell -ExecutionPolicy Bypass -File .\scripts\quick-validate-all-skills.ps1 -Mode fast` |
 | Kernel catalog validation | PASS, 4500 records | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-quality-cost-kernel.ps1` |
 | Source registry metadata validation | PASS, 21 sources | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-source-registry.ps1` |
 | Donor research metadata validation | PASS, 3 sources | `powershell -ExecutionPolicy Bypass -File .\scripts\validate-donor-research.ps1` |

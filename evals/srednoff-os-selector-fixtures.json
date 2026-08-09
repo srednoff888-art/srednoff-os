@@ -144,11 +144,27 @@
     ]
   },
   {
+    "id": "codex_plugin_governance",
+    "brief": "Audit a Codex Agent Plugin manifest and workspace plugin marketplace bundle before install or publishing: skills MCP apps permissions hooks scripts provenance and rollback",
+    "budget": "deep",
+    "expectedAll": [
+      "codex-plugin-governance"
+    ]
+  },
+  {
     "id": "yandex_direct_audit",
     "brief": "Проведи аудит Яндекс Директ: кампании, расходы, цели Метрики, запросы и безопасные рекомендации",
     "budget": "deep",
     "expectedAll": [
       "yandex-direct-account-audit"
+    ]
+  },
+  {
+    "id": "yandex_direct_v501_operations",
+    "brief": "Implement a safe Yandex Direct API v501 UnifiedCampaign and UnifiedAdGroup workflow with 64-bit IDs, reports, Metrika, and Wordstat.",
+    "budget": "deep",
+    "expectedAll": [
+      "yandex-direct-v501-operations"
     ]
   },
   {
