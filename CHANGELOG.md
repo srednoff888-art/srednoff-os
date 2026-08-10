@@ -1,5 +1,33 @@
 # Changelog
 
+## 2026-08-10
+
+### Changed
+
+- Hardened `codex-plugin-governance` for portable Agent Plugins and
+  local/personal/workspace/remote catalogs with artifact identity, bundle-root,
+  symlink, normalized-name collision, sandbox, network, and approval gates.
+- Updated `github-agentic-workflows-safety` for stable release checksums,
+  blocked/minimum compiler versions, generated-workflow Zizmor gating, and
+  safe-output secret/artifact boundaries from `gh-aw` `v0.85.4`.
+- Clarified MCP SDK v2 migration behavior: TypeScript protocol-era negotiation
+  is explicit, Python extension coverage is release-specific, and round-tripped
+  `requestState` is integrity-protected untrusted input.
+- Updated the Three.js source policy for experimental `WebGPURenderer`, WebGL2
+  fallback, asynchronous initialization, and TSL migration risk.
+- Expanded the official source watchlist from 54 to 57 entries and selector
+  fixtures from 25 to 28 without changing the 4500-record legacy-plus kernel,
+  Group 1/2/3 quotas, non-overlap, or domain caps.
+
+### Verified
+
+- Skill metadata validation passes: 367/367.
+- Kernel validation passes: 4500 records with groups 1800/1800/900 and 60 domains.
+- Selector regression suite passes: 28/28.
+- Srednoff OS v2.1.1 evals pass: 13/13.
+- Srednoff OS v2.1.2 evals pass: 18/18.
+- Security fixture evals pass: 14/14.
+
 ## 2026-07-27
 
 ### Added

@@ -127,12 +127,28 @@
     ]
   },
   {
+    "id": "mcp_sdk_v2_era_negotiation",
+    "brief": "Audit TypeScript MCP SDK v2 versionNegotiation auto or pinned 2026-07-28, HMAC-bound requestState expiry, and Python v2 automatic legacy compatibility with extension gaps",
+    "budget": "deep",
+    "expectedAll": [
+      "mcp-protocol-migration"
+    ]
+  },
+  {
     "id": "github_agentic_workflows_safety",
     "brief": "Build a GitHub Agentic Workflows gh aw scheduled automation with safe outputs pinned compiled workflow locks and least privilege",
     "budget": "deep",
     "expectedAll": [
       "github-agentic-workflows-safety",
       "devops-ci-cd-release"
+    ]
+  },
+  {
+    "id": "github_agentic_workflows_security_hardening",
+    "brief": "Audit gh aw security hardening: stable checksum, blocked compiler version, secret masking, safe-output raw logs, generated workflow Zizmor high critical gate",
+    "budget": "deep",
+    "expectedAll": [
+      "github-agentic-workflows-safety"
     ]
   },
   {
@@ -146,6 +162,14 @@
   {
     "id": "codex_plugin_governance",
     "brief": "Audit a Codex Agent Plugin manifest and workspace plugin marketplace bundle before install or publishing: skills MCP apps permissions hooks scripts provenance and rollback",
+    "budget": "deep",
+    "expectedAll": [
+      "codex-plugin-governance"
+    ]
+  },
+  {
+    "id": "codex_portable_agent_plugin",
+    "brief": "Review a portable Codex Agent Plugin from a remote catalog before install: artifact hash, path traversal, symlink escape, normalized tool name collisions, sandbox, network, and approve-for-me boundary",
     "budget": "deep",
     "expectedAll": [
       "codex-plugin-governance"

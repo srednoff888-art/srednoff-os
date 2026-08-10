@@ -153,6 +153,12 @@
       "reason": "Current WebGPU platform behavior for 3D/web rendering source ranking and performance guardrails"
     },
     {
+      "id": "threejs-webgpu-renderer",
+      "type": "official-docs",
+      "url": "https://threejs.org/manual/en/webgpurenderer",
+      "reason": "Three.js WebGPU/WebGL2 fallback, TSL migration, async initialization, unsupported legacy shader/post-processing paths, and experimental-status checks"
+    },
+    {
       "id": "react-bits-repo",
       "type": "github",
       "url": "https://github.com/DavidHDev/react-bits",
@@ -291,10 +297,22 @@
       "reason": "Python SDK v2 migration and exact pre-release/stable compatibility guidance for MCP 2026-07-28"
     },
     {
+      "id": "modelcontextprotocol-python-sdk-v2-release",
+      "type": "official-release",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/releases/tag/v2.0.0",
+      "reason": "Stable Python SDK v2 dual-era negotiation, migration boundaries, and release-specific extension gaps such as Tasks"
+    },
+    {
       "id": "modelcontextprotocol-typescript-sdk-releases",
       "type": "github-releases",
       "url": "https://github.com/modelcontextprotocol/typescript-sdk/releases",
-      "reason": "Track TypeScript SDK v2 beta support and package split before recommending MCP 2026-07-28 migration"
+      "reason": "Track TypeScript SDK v2 package stability, split-package releases, and protocol support before recommending MCP 2026-07-28 migration"
+    },
+    {
+      "id": "modelcontextprotocol-typescript-sdk-2026-migration",
+      "type": "official-sdk-docs",
+      "url": "https://ts.sdk.modelcontextprotocol.io/v2/migration/support-2026-07-28",
+      "reason": "TypeScript v2 explicit protocol-era negotiation, requestState integrity, auth opt-ins, mixed-era codecs, and compatibility fixtures"
     },
     {
       "id": "modelcontextprotocol-go-sdk-releases",
@@ -324,7 +342,7 @@
       "id": "github-agentic-workflows-releases",
       "type": "github-releases",
       "url": "https://github.com/github/gh-aw/releases",
-      "reason": "Rapid release and breaking-change watch for gh aw safe-output, sandbox, compiler, and permission behavior"
+      "reason": "Rapid release and breaking-change watch for gh aw safe-output, sandbox, compiler, permission, secret-masking, Zizmor, and supply-chain behavior"
     }
   ]
 }
