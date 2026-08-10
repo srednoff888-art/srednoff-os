@@ -4,15 +4,15 @@ This file documents what is currently verified and what is intentionally not pro
 
 ## Current Smoke Status
 
-Last verified: 2026-07-27.
+Last verified: 2026-08-10.
 
 Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPOINT_0_PREFLIGHT.md`. Checkpoints 1-13 added the public core boundary, compact entrypoint, profile system, quality modes, security hooks, RU/NeuralDeep gates, donor research validation, and structured docs. Checkpoint 14 closed the release with a full validation pass, public release note, and updated README banner. The post-release stress test added hook false-positive regressions, empty/no-brief eval coverage, and a selector fast path.
 
 | Check | Status | Command |
 |---|---:|---|
-| Selector regression suite | PASS, 25/25 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-selector.ps1` |
+| Selector regression suite | PASS, 28/28 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-selector.ps1` |
 | v2.1.1 compatibility evals | PASS, 13/13 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v211.ps1` |
-| v2.1.2 routing/source evals | PASS, 16/16 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v212.ps1` |
+| v2.1.2 routing/source evals | PASS, 18/18 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-v212.ps1` |
 | Independent security fixture evals | PASS, 14/14 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-security-fixtures.ps1` |
 | Profile evals | PASS, 4/4 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-profiles.ps1` |
 | Quality mode evals | PASS, 5/5 | `powershell -ExecutionPolicy Bypass -File .\scripts\test-srednoff-os-quality-modes.ps1` |
@@ -53,6 +53,10 @@ Checkpoint 0 preflight was recorded on 2026-07-09 in `.agent/SREDNOFF_OS_CHECKPO
 - External prompt mining: claimed-leak and prompt-dump repositories are now handled through a provenance-first skill that extracts only abstract, vendor-neutral patterns and rejects verbatim proprietary prompt text.
 - MCP migration: the selector routes `2026-07-28`, stateless transport, `server/discover`, Tasks extension, and SDK v2 requests to a compatibility-first migration workflow.
 - Agentic workflow safety: `gh aw` repository automations now have a dedicated pin/compile/audit/safe-output workflow with least-privilege and untrusted-trigger gates.
+- Portable plugin governance: remote catalogs are discovery inputs, not trust; bundles require exact artifact identity, bounded paths, no escaping symlinks, normalized capability-name collision checks, and separate approval-policy review.
+- Agentic workflow hardening: pinned stable checksums, compiler-version policy, Zizmor high/critical gating, and safe-output artifact redaction are required before enabling schedules or writes.
+- MCP SDK era negotiation: TypeScript v2 explicit opt-in and Python v2 release-specific extension coverage are tested as distinct migration intents; `requestState` is treated as integrity-protected untrusted input.
+- Three.js WebGPU source policy: `WebGPURenderer` remains experimental, requires WebGL2 fallback validation, asynchronous initialization handling, and TSL migration review for legacy shader/post-processing paths.
 - Remote skill supply chain: MCP-delivered skill archives require pinned provenance, bounded extraction, traversal protection, refresh TTLs, and no automatic script execution.
 - Selector ROI: `ProjectScan=off` preserves direct task routing without repository scanning; on the 2026-07-19 fixture it averaged 0.968s versus 3.894s for `auto` while selecting the same MCP migration skill.
 - Profile system: public defaults, maintainer examples, agency settings, and RU-market settings now live in a portable `profiles/` layer with privacy fixtures and doctor coverage.

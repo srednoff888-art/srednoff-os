@@ -179,10 +179,10 @@
       "domains": ["3d-web"],
       "risk": "low",
       "license": "MIT",
-      "provenance": "official Three.js project and documentation",
+      "provenance": "official Three.js project, API documentation, and WebGPURenderer migration guide",
       "vetted": true,
-      "copy_policy": "use official APIs and examples as patterns; verify example asset licenses separately",
-      "use_when": ["custom WebGL scene", "raw Three.js control", "non-React 3D"],
+      "copy_policy": "use official APIs and examples as patterns; keep WebGPURenderer experimental, test its WebGL2 fallback, budget async initialization, and migrate legacy ShaderMaterial/onBeforeCompile/EffectComposer paths to TSL before adoption; verify example asset licenses separately",
+      "use_when": ["custom WebGL scene", "raw Three.js control", "non-React 3D", "WebGPU with WebGL2 fallback", "TSL migration"],
       "requires_user_prompt": false
     },
     {
