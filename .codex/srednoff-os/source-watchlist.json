@@ -41,8 +41,8 @@
     {
       "id": "openai-agents-sdk",
       "type": "official-docs",
-      "url": "https://openai.github.io/openai-agents-python/",
-      "reason": "Agent handoffs, guardrails, tracing, and eval patterns"
+      "url": "https://developers.openai.com/api/docs/guides/agents/results",
+      "reason": "Official result, continuation, interruption, approval, and resumable-state contract shared across the OpenAI Agents SDKs"
     },
     {
       "id": "openai-codex-repo",
@@ -78,7 +78,25 @@
       "id": "openai-agents-python-repo",
       "type": "github",
       "url": "https://github.com/openai/openai-agents-python",
-      "reason": "Agent workflow implementation patterns"
+      "reason": "Python Agents SDK implementation, tests, release compatibility corpus, MCP interop, RunState, and sandbox safety patterns"
+    },
+    {
+      "id": "openai-agents-python-v020-release",
+      "type": "official-release",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.20.0",
+      "reason": "Default-model change, MCP Python SDK v1/v2 boundary, durable RunState input, canonical approvals, sandbox credential mounts, and schema-depth hardening"
+    },
+    {
+      "id": "openai-agents-js-v015-release",
+      "type": "official-release",
+      "url": "https://github.com/openai/openai-agents-js/releases/tag/v0.15.0",
+      "reason": "OpenAI client 7.2 requirement, default-model change, MCP v2 negotiation with legacy fallback, durable RunState, replay identity, and sandbox credential-mount safety"
+    },
+    {
+      "id": "openai-agents-sandbox-docs",
+      "type": "official-docs",
+      "url": "https://developers.openai.com/api/docs/guides/agents/sandboxes",
+      "reason": "Official sandbox workspace, mount scoping, runtime credential injection, persistence, artifact review, and secret-handling contract"
     },
     {
       "id": "openai-cookbook",
@@ -343,6 +361,12 @@
       "type": "github-releases",
       "url": "https://github.com/github/gh-aw/releases",
       "reason": "Rapid release and breaking-change watch for gh aw safe-output, sandbox, compiler, permission, secret-masking, Zizmor, and supply-chain behavior"
+    },
+    {
+      "id": "github-agentic-workflows-v0862-release",
+      "type": "official-release",
+      "url": "https://github.com/github/gh-aw/releases/tag/v0.86.2",
+      "reason": "Compile-time pinning for non-SHA skill refs, explicit inline skill and sub-agent boundaries, MCP mount allowlists, sandbox runtime provenance, complete MCP inspection, and Windows timeout fixes"
     }
   ]
 }
