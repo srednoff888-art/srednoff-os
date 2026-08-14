@@ -471,6 +471,21 @@ DIRECT_SKILL_ALIASES = [
         ),
     ),
     (
+        "agents-sdk-production-workflow",
+        (
+            "openai agents sdk",
+            "openai agent sdk",
+            "agents sdk python",
+            "agents sdk javascript",
+            "agents sdk typescript",
+            "runstate addinput",
+            "runstate add_input",
+            "durable pending input",
+            "sandbox mount credential",
+            "tool replay approval",
+        ),
+    ),
+    (
         "codex-plugin-governance",
         (
             "codex plugin",
@@ -533,6 +548,7 @@ DIRECT_SKILL_ALIASES = [
             "github agentic workflow",
             "github agentic workflows",
             "gh aw",
+            "gh-aw",
             "agentic workflow markdown",
             "compiled workflow lock",
             "safe outputs",

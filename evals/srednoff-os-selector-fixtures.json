@@ -152,6 +152,14 @@
     ]
   },
   {
+    "id": "github_agentic_workflows_v0862_runtime_mount_provenance",
+    "brief": "Audit gh-aw v0.86.2 for compile-time SHA pinning of skill refs, explicit inline sub-agent end markers, MCP mount allowlists, sandbox runtime evidence, and complete mcp inspect pagination",
+    "budget": "deep",
+    "expectedAll": [
+      "github-agentic-workflows-safety"
+    ]
+  },
+  {
     "id": "remote_mcp_skill_supply_chain",
     "brief": "Security review MCP skills from skill://index.json remote skill archives extraction limits provenance and disabled script execution",
     "budget": "deep",
@@ -173,6 +181,22 @@
     "budget": "deep",
     "expectedAll": [
       "codex-plugin-governance"
+    ]
+  },
+  {
+    "id": "openai_agents_sdk_v020_v015_upgrade",
+    "brief": "Upgrade OpenAI Agents SDK Python v0.20 or TypeScript v0.15 with an explicit model, MCP v1 v2 compatibility, RunState pending input, and canonical tool approval identity",
+    "budget": "deep",
+    "expectedAll": [
+      "agents-sdk-production-workflow"
+    ]
+  },
+  {
+    "id": "openai_agents_sdk_sandbox_resume_safety",
+    "brief": "Harden an OpenAI Agents SDK resumable workflow for sandbox mount credential exposure, unsafe replay approval, structured tool state, and restore-time authorization",
+    "budget": "deep",
+    "expectedAll": [
+      "agents-sdk-production-workflow"
     ]
   },
   {

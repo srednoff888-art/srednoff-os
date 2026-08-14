@@ -13,10 +13,16 @@ Build agentic repository automation as a reviewable proposal-and-apply pipeline 
 2. Check official `gh aw` documentation and release notes. Pin an exact stable CLI version and verify its release checksum; treat pre-releases as experiments. Check blocked, minimum, and recommended compiler versions before reuse or upgrade.
 3. Keep the agent phase read-only where practical. Route writes through typed safe outputs or a separate apply job with least-privilege GitHub permissions and branch/environment protection.
 4. Restrict network destinations, tools, imports, environment variables, and allowed files. Treat issues, PRs, comments, repository content, external pages, and tool output as untrusted instructions.
-5. Compile source Markdown; commit the generated `.lock.yml` and `actions-lock.json`. Never hand-edit generated lock files or replace SHA pins with mutable tags.
+5. Compile source Markdown; commit the generated `.lock.yml` and `actions-lock.json`. Treat non-SHA skill refs as source convenience only: require the compiler to resolve and record an immutable SHA, and reject missing or changed resolution evidence. Never hand-edit generated lock files or replace SHA pins with mutable tags.
 6. Validate locally with compiler/linter checks, Zizmor over generated workflows, deterministic fixtures, dry-run or proposal-only behavior, and malicious-input cases. Fail on high/critical workflow findings before enabling schedules or write permissions.
 7. Upgrade through a review PR. Use codemods/compiler output, inspect permission and network diffs, and preserve a known-good pinned version for rollback.
 8. Monitor tool calls, safe-output decisions, token/cost usage, retries, timeouts, and failed or partial mutations without logging secrets or private content.
+
+## gh-aw v0.86.2 Gate
+
+- Use explicit end markers for inline skills and sub-agents so embedded or untrusted text cannot blur instruction boundaries.
+- Allowlist sandbox and MCP gateway mounts, including safe-output backends; reject implicit mount expansion and inspect the effective compiled policy.
+- Record `sandbox.agent.runtime` provenance and use runtime-filtered `gh aw logs` or `gh aw audit` evidence. Treat truncated `gh aw mcp inspect` pagination as an incomplete audit, not a clean result.
 
 ## Security Checklist
 
@@ -26,12 +32,15 @@ Build agentic repository automation as a reviewable proposal-and-apply pipeline 
 - Treat compiler masking as defense in depth: safe-output artifacts must not retain raw process stdout/stderr, base64 trigger tokens, auth headers, or derived secrets.
 - Require human review for merges, releases, deployments, email, billing, account changes, destructive actions, or broad repository writes.
 - Pin third-party Actions and workflow dependencies by immutable SHA and retain provenance.
+- Keep source refs, resolved SHAs, compiler version, agent runtime, MCP gateway version, and effective mount policy together in the review evidence.
 - Bound concurrency, retries, model turns, artifact retention, and API fan-out.
 
 ## Validation
 
 - Source workflow and generated lock file are in sync.
 - Compiler/audit checks pass on the pinned version.
+- Inline skill/sub-agent boundaries are explicit, and every accepted non-SHA source ref has a compiler-recorded immutable resolution.
+- Runtime-filtered audit/log output matches the compiled runtime, and MCP inspection covers all pages and effective mount allowlists.
 - Generated workflows pass the agreed Zizmor gate with no high/critical findings.
 - Fixtures cover untrusted prompt content, permission escalation, unsafe outputs, secret exfiltration, and cancellation.
 - A reviewer can see the proposed mutation before it is applied.
