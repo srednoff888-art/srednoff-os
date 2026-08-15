@@ -102,6 +102,20 @@
       "requires_user_prompt": true
     },
     {
+      "id": "astryx",
+      "name": "Astryx",
+      "url": "https://github.com/facebook/astryx",
+      "kind": "react-design-system",
+      "domains": ["ui-ux", "web-design", "programming"],
+      "risk": "medium",
+      "license": "MIT",
+      "provenance": "official Meta Open Source repository, Astryx documentation, Storybook, package metadata, and v0.4.1 release notes",
+      "vetted": true,
+      "copy_policy": "install only after React 19, StyleX peer dependency, lockfile, bundle, and pre-1.0 upgrade review; prefer stable core/theme packages, exclude lab and canary charts, and validate focus, live regions, RTL, i18n, RSC boundaries, and visual regressions",
+      "use_when": ["React 19 design system", "enterprise dashboard", "accessible component library", "agent-ready design system", "RSC-safe components", "StyleX"],
+      "requires_user_prompt": true
+    },
+    {
       "id": "figma",
       "name": "Figma",
       "url": "app://figma",

@@ -200,6 +200,14 @@
     ]
   },
   {
+    "id": "openai_agents_sdk_deterministic_testing_v021_v016",
+    "brief": "Build provider-neutral ScriptedModel and scriptedSandboxSession tests for Standard Schema tools, detached interruption snapshots, recursive approvals, MCP lifecycle isolation, and retry ceilings",
+    "budget": "deep",
+    "expectedAll": [
+      "agents-sdk-production-workflow"
+    ]
+  },
+  {
     "id": "yandex_direct_audit",
     "brief": "Проведи аудит Яндекс Директ: кампании, расходы, цели Метрики, запросы и безопасные рекомендации",
     "budget": "deep",
