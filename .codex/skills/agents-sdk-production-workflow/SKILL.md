@@ -1,6 +1,6 @@
 ---
 name: agents-sdk-production-workflow
-description: Use this skill when designing, reviewing, debugging, or productionizing OpenAI Agents SDK, Responses API, or similar agent systems with tools, handoffs, guardrails, tracing, evals, human approval, retries, and deployment safety.
+description: Use this skill when designing, reviewing, debugging, testing, or productionizing OpenAI Agents SDK, Responses API, or similar agent systems with tools, handoffs, guardrails, tracing, deterministic scripted tests, Standard Schema, human approval, retries, and deployment safety.
 ---
 
 # Agents SDK Production Workflow
@@ -20,6 +20,7 @@ Build agent systems as explicit workflows with observable state, typed boundarie
 9. Pin the Agents SDK, OpenAI client, MCP SDK major, and model explicitly. Review release notes before upgrades because implicit model defaults and transport-owned types can change in minor releases.
 10. Treat interrupted runs as durable state transitions. Stage new input only at the documented resume boundary, bind approvals to the canonical tool invocation, preserve structured tool and guardrail state, and reject unsafe replay unless a reviewed application policy explicitly allows it.
 11. Fail closed on sandbox credential mounts. Acknowledge the exact effective in-container path only when exposure is required, keep credentials out of serialized state, and re-authorize mount authority after restore.
+12. Prefer the SDK's provider-neutral scripted testing utilities for deterministic runner, sandbox, Realtime, and Voice fixtures. Keep a separate pinned provider contract smoke test for transport compatibility.
 
 ## OpenAI Agents SDK 2026-08-11 Gate
 
@@ -28,6 +29,14 @@ Build agent systems as explicit workflows with observable state, typed boundarie
 - Serialize paused RunState with a versioned compatibility envelope. Test pending input, repeated interruptions, structured tool output, guardrail state, approval identity, cancellation, and restore across the supported application versions.
 - Keep approveUnsafeReplay or equivalent escape hatches application-controlled, off by default, audited, and unavailable to model instructions or untrusted tool output.
 - Bound strict JSON Schema recursion and validation work, and redact validation errors before logging or returning them across a trust boundary.
+
+## OpenAI Agents SDK 2026-08-15 Gate
+
+- Python v0.21.0 and TypeScript v0.16.0 add provider-neutral testing entry points. Use scripted models, sandbox sessions, Realtime transports, and Voice fixtures to cover streaming, interruptions, approvals, failure cleanup, and retry ceilings without live provider requests.
+- Python v0.21.0 supports `openai>=3,<4` and HTTPX2-aware transports. Re-test custom clients, transports, request/response wrappers, and exception mapping before upgrading the pinned provider stack.
+- TypeScript v0.16.0 accepts supported Standard Schema inputs and outputs only when validation is synchronous and input/output JSON Schemas have object roots. Keep function-tool parameters strict and fall back to Zod, raw JSON Schema, or application validation for unsupported shapes.
+- Treat testing and lifecycle snapshots as immutable evidence: copy inputs before mutation, assert detached RunState checkpoints and recursive approval identity, and verify MCP cache/lifecycle results cannot be mutated by callers.
+- Keep `preserveInputIdentity`-style opt-ins narrow. The SDK does not freeze opted-in items, so application code must own mutation discipline and regression coverage.
 
 ## Design Checklist
 
@@ -42,6 +51,8 @@ Build agent systems as explicit workflows with observable state, typed boundarie
 - Pin and test the model rather than relying on a mutable SDK default.
 - Keep resumable state versioned, integrity-checked, principal-bound, and free of reusable credentials.
 - Cover mixed MCP SDK majors and custom transport/auth factories with explicit compatibility fixtures.
+- Cover scripted provider-neutral tests plus one pinned live-provider contract smoke test; do not let fakes hide transport, auth, or model-contract drift.
+- Assert that invalid typed tool output, sandbox proxy headers, lifecycle snapshots, and interruption state are redacted or detached before crossing trust boundaries.
 
 ## Review Questions
 
@@ -58,3 +69,4 @@ Build agent systems as explicit workflows with observable state, typed boundarie
 - Do not log raw prompts or tool payloads when they may contain secrets or personal data.
 - Do not deploy an agent workflow without tests for tool failures, prompt injection, and schema violations.
 - Do not trust a serialized approval, replay decision, or credential-bearing mount after restore without re-validating its canonical identity and current authorization.
+- Do not treat scripted test success as proof that provider transport, authentication, billing, or production model behavior is compatible.

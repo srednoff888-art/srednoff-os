@@ -367,6 +367,30 @@
       "type": "official-release",
       "url": "https://github.com/github/gh-aw/releases/tag/v0.86.2",
       "reason": "Compile-time pinning for non-SHA skill refs, explicit inline skill and sub-agent boundaries, MCP mount allowlists, sandbox runtime provenance, complete MCP inspection, and Windows timeout fixes"
+    },
+    {
+      "id": "openai-agents-python-v021-release",
+      "type": "official-release",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.0",
+      "reason": "Provider-neutral scripted testing APIs, OpenAI Python v3 and HTTPX2 compatibility, detached RunState checkpoints, recursive approvals, MCP lifecycle isolation, retry ceilings, and sensitive-error redaction"
+    },
+    {
+      "id": "openai-agents-js-v016-release",
+      "type": "official-release",
+      "url": "https://github.com/openai/openai-agents-js/releases/tag/v0.16.0",
+      "reason": "Provider-neutral scripted tests, Standard Schema tool and output contracts, prepared-input identity opt-in, detached interruptions, MCP cache isolation, and typed-output redaction"
+    },
+    {
+      "id": "microsoft-agent-skills-repository",
+      "type": "official-github",
+      "url": "https://github.com/microsoft/skills",
+      "reason": "Official tested Microsoft skills, custom agents, AGENTS.md, and MCP patterns; monitor selectively because the catalog is work in progress and bulk loading would cause context rot"
+    },
+    {
+      "id": "facebook-astryx-releases",
+      "type": "github-releases",
+      "url": "https://github.com/facebook/astryx/releases",
+      "reason": "Track the pre-1.0 React 19 and StyleX design system for accessibility, RSC-safe component boundaries, dependency cost, upgrade risk, and stable versus lab/canary package status"
     }
   ]
 }

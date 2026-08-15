@@ -69,6 +69,10 @@ $RankReactBits = & $SourceRanker -ProjectPath $ProjectPath -Brief "compare React
 $ReactBitsSource = @($RankReactBits.ranked_sources | Where-Object { $_.id -eq "react-bits" } | Select-Object -First 1)
 $Results += Add-Result -Id "source-ranker:normalized-named-source" -Passed ($ReactBitsSource.Count -gt 0 -and (@($ReactBitsSource[0].reasons) -contains "named:react bits")) -Detail "react_bits_reasons=$(@($ReactBitsSource[0].reasons) -join ',')"
 
+$RankAstryx = & $SourceRanker -ProjectPath $ProjectPath -Brief "compare Astryx React 19 accessible design system with RSC-safe components and StyleX for an enterprise dashboard" -Json | ConvertFrom-Json
+$AstryxSource = @($RankAstryx.ranked_sources | Where-Object { $_.id -eq "astryx" } | Select-Object -First 1)
+$Results += Add-Result -Id "source-ranker:astryx-opt-in" -Passed ($AstryxSource.Count -gt 0 -and (@($AstryxSource[0].reasons) -contains "named:astryx") -and ($AstryxSource[0].risk -eq "medium") -and (@($AstryxSource[0].gates) -contains "ask-user-before-connector-or-external-copy")) -Detail "astryx_reasons=$(@($AstryxSource[0].reasons) -join ','); gates=$(@($AstryxSource[0].gates) -join ',')"
+
 $BriefSparse = & $DesignBrief -ProjectPath $ProjectPath -Brief "make 3D web landing" -Json | ConvertFrom-Json
 $Results += Add-Result -Id "design-brief:sparse-asks" -Passed ([bool]$BriefSparse.should_ask_user -and @($BriefSparse.questions).Count -gt 0) -Detail "questions=$(@($BriefSparse.questions).Count)"
 
@@ -88,7 +92,7 @@ $Results += Add-Result -Id "domain-router:empty-brief" -Passed (($DomainEmpty.mo
 
 $RegistryData = Get-Content -LiteralPath $Registry -Raw -Encoding UTF8 | ConvertFrom-Json
 $SourceIds = @($RegistryData.sources | ForEach-Object { $_.id })
-$Results += Add-Result -Id "registry:v212-sources" -Passed (($RegistryData.version -eq "v2.1.2") -and ($SourceIds -contains "gltf-transform") -and ($SourceIds -contains "poly-haven") -and ($SourceIds -contains "sketchfab")) -Detail "version=$($RegistryData.version); sources=$(@($SourceIds).Count)"
+$Results += Add-Result -Id "registry:v212-sources" -Passed (($RegistryData.version -eq "v2.1.2") -and ($SourceIds -contains "gltf-transform") -and ($SourceIds -contains "poly-haven") -and ($SourceIds -contains "sketchfab") -and ($SourceIds -contains "astryx")) -Detail "version=$($RegistryData.version); sources=$(@($SourceIds).Count)"
 $MissingMetadata = @($RegistryData.sources | Where-Object {
     -not $_.license -or -not $_.provenance -or -not ($_.PSObject.Properties.Name -contains "vetted") -or -not $_.copy_policy
 })

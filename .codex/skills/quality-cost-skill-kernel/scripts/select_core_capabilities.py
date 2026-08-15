@@ -483,6 +483,11 @@ DIRECT_SKILL_ALIASES = [
             "durable pending input",
             "sandbox mount credential",
             "tool replay approval",
+            "agents.testing",
+            "@openai/agents/testing",
+            "scriptedmodel",
+            "scriptedsandboxsession",
+            "scripted sandbox session",
         ),
     ),
     (

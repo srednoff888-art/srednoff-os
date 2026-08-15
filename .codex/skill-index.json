@@ -121,9 +121,9 @@
     {
         "name":  "agents-sdk-production-workflow",
         "path":  ".codex\\skills\\agents-sdk-production-workflow",
-        "description":  "Use this skill when designing, reviewing, debugging, or productionizing OpenAI Agents SDK, Responses API, or similar agent systems with tools, handoffs, guardrails, tracing, evals, human approval, retries, and deployment safety.",
+        "description":  "Use this skill when designing, reviewing, debugging, testing, or productionizing OpenAI Agents SDK, Responses API, or similar agent systems with tools, handoffs, guardrails, tracing, deterministic scripted tests, Standard Schema, human approval, retries, and deployment safety.",
         "has_openai_yaml":  true,
-        "skill_md_bytes":  5111
+        "skill_md_bytes":  7030
     },
     {
         "name":  "ai-evals-regression-suite",
@@ -2158,9 +2158,9 @@
     {
         "name":  "source-ranking-roi-selector",
         "path":  ".codex\\skills\\source-ranking-roi-selector",
-        "description":  "Rank UI kit, component registry, design connector, 3D library, 3D asset, texture, model, and optimizer sources by project fit, license/provenance risk, dependency cost, validation burden, and token ROI. Use for UI/UX, web design, 3D web design, 3D assets, source selection, component marketplace comparison, 21st.dev/Magic, shadcn, Figma, Canva, Three.js, R3F, model-viewer, Babylon.js, glTF, Sketchfab, Poly Haven, ambientCG, and similar source decisions.",
+        "description":  "Rank UI kit, design system, component registry, design connector, 3D library, 3D asset, texture, model, and optimizer sources by project fit, license/provenance risk, dependency cost, validation burden, and token ROI. Use for UI/UX, web design, 3D web design, 3D assets, source selection, component marketplace comparison, 21st.dev/Magic, shadcn, Astryx, Figma, Canva, Three.js, R3F, model-viewer, Babylon.js, glTF, Sketchfab, Poly Haven, ambientCG, and similar source decisions.",
         "has_openai_yaml":  true,
-        "skill_md_bytes":  2028
+        "skill_md_bytes":  2311
     },
     {
         "name":  "spec-driven-development",
