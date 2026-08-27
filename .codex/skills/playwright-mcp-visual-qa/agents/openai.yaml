@@ -1,0 +1,4 @@
+interface:
+  display_name: "Playwright MCP Visual QA"
+  short_description: "Run controlled browser visual QA"
+  default_prompt: "Use $playwright-mcp-visual-qa to verify a website through controlled Playwright MCP browser checks."

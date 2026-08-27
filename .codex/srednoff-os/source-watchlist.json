@@ -391,6 +391,36 @@
       "type": "github-releases",
       "url": "https://github.com/facebook/astryx/releases",
       "reason": "Track the pre-1.0 React 19 and StyleX design system for accessibility, RSC-safe component boundaries, dependency cost, upgrade risk, and stable versus lab/canary package status"
+    },
+    {
+      "id": "webflow-mcp-server",
+      "type": "official-github",
+      "url": "https://github.com/webflow/mcp-server",
+      "reason": "Official Webflow MCP and Data/Designer operations; monitor authentication, bridge-app, mutation, publish, and permission boundaries"
+    },
+    {
+      "id": "miro-mcp-server",
+      "type": "official-github",
+      "url": "https://github.com/miroapp/miro-ai",
+      "reason": "Official Miro MCP endpoint, board-access scope, diagram and workflow authoring controls"
+    },
+    {
+      "id": "storybook-mcp",
+      "type": "official-github",
+      "url": "https://github.com/storybookjs/mcp",
+      "reason": "Storybook MCP maturity, component-context contracts, and design-system validation workflows"
+    },
+    {
+      "id": "microsoft-playwright-mcp",
+      "type": "official-github",
+      "url": "https://github.com/microsoft/playwright-mcp",
+      "reason": "Browser QA MCP security flags, token cost tradeoffs, isolated profiles, accessibility snapshots, and visual testing capabilities"
+    },
+    {
+      "id": "mcp-apps-threejs-example",
+      "type": "official-github",
+      "url": "https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/threejs-server",
+      "reason": "Reference for interactive 3D MCP Apps, typed scene contracts, CSP, rendering lifecycle, and streaming preview patterns"
     }
   ]
 }

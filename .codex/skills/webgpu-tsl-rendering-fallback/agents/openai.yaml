@@ -1,0 +1,4 @@
+interface:
+  display_name: "WebGPU TSL Fallback"
+  short_description: "Ship compatible WebGPU rendering"
+  default_prompt: "Use $webgpu-tsl-rendering-fallback to build Three.js WebGPU and TSL rendering with a WebGL2 fallback."

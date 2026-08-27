@@ -1,0 +1,4 @@
+interface:
+  display_name: "Webflow MCP Governance"
+  short_description: "Safe Webflow site operations"
+  default_prompt: "Use $webflow-mcp-site-governance to inspect or safely change a Webflow site through MCP."

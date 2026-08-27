@@ -18,7 +18,7 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-111827?style=for-the-badge"></a>
   <a href="https://github.com/srednoff888-art/srednoff-os/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/srednoff888-art/srednoff-os/ci.yml?branch=main&style=for-the-badge&label=CI"></a>
   <img alt="Version" src="https://img.shields.io/badge/Srednoff%20OS-v2.1.2-2563eb?style=for-the-badge">
-  <img alt="Skills" src="https://img.shields.io/badge/skills-367-16a34a?style=for-the-badge">
+  <img alt="Skills" src="https://img.shields.io/badge/skills-373-16a34a?style=for-the-badge">
   <img alt="Kernel" src="https://img.shields.io/badge/kernel-4500-7c3aed?style=for-the-badge">
   <img alt="Doctor" src="https://img.shields.io/badge/doctor-44%2F44-059669?style=for-the-badge">
 </p>
@@ -248,9 +248,9 @@ Current public release gate:
 | Check | Result |
 |---|---:|
 | Srednoff OS doctor | PASS, 44/44 |
-| Selector evals | PASS, 25/25 |
+| Selector evals | PASS, 34/34 |
 | v2.1.1 evals | PASS, 13/13 |
-| v2.1.2 evals | PASS, 16/16 |
+| v2.1.2 evals | PASS, 19/19 |
 | Security fixtures | PASS, 14/14 |
 | Profiles | PASS, 4/4 |
 | Quality modes | PASS, 5/5 |
@@ -261,10 +261,10 @@ Current public release gate:
 | NeuralDeep registry | PASS, 5/5 |
 | NeuralDeep importer | PASS, 5/5 |
 | Kernel | PASS, 4500 records |
-| Source registry | PASS, 21 sources |
+| Source registry | PASS, 28 sources |
 | Donor research | PASS, 3 sources |
 | Docs | PASS, 10 files |
-| Skill metadata smoke | PASS, 367/367 |
+| Skill metadata smoke | PASS, 373/373 |
 | Benchmark harness regressions | PASS, 9/9 |
 | GitHub Actions | PASS, Windows and Ubuntu |
 

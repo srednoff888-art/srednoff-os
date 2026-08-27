@@ -30,6 +30,26 @@
     ]
   },
   {
+    "id": "website_design_mcp_pack",
+    "brief": "Use Figma MCP and Storybook MCP to deliver a design system, validate it with Playwright MCP visual QA, and prepare a safe Webflow MCP handoff.",
+    "budget": "deep",
+    "expectedAll": [
+      "figma-mcp-design-system-delivery",
+      "storybook-mcp-component-validation",
+      "playwright-mcp-visual-qa",
+      "webflow-mcp-site-governance"
+    ]
+  },
+  {
+    "id": "threejs_mcp_webgpu",
+    "brief": "Build a Three.js MCP Apps preview with WebGPU TSL shaders and a verified WebGL2 fallback.",
+    "budget": "deep",
+    "expectedAll": [
+      "threejs-mcp-apps-preview",
+      "webgpu-tsl-rendering-fallback"
+    ]
+  },
+  {
     "id": "mcp_security",
     "brief": "MCP connector security review OAuth scopes tool permissions prompt injection",
     "budget": "deep",

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Figma MCP Design Systems"
+  short_description: "Deliver Figma design-system changes"
+  default_prompt: "Use $figma-mcp-design-system-delivery to turn approved Figma design context into production-ready components."

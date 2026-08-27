@@ -1,0 +1,4 @@
+interface:
+  display_name: "Three.js MCP Apps Preview"
+  short_description: "Build safe interactive 3D previews"
+  default_prompt: "Use $threejs-mcp-apps-preview to create a secure MCP Apps-based Three.js preview."

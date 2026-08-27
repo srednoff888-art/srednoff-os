@@ -1,0 +1,4 @@
+interface:
+  display_name: "Storybook MCP Validation"
+  short_description: "Validate component behavior and states"
+  default_prompt: "Use $storybook-mcp-component-validation to inspect and validate a component library through Storybook MCP."

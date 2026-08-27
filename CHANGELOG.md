@@ -1,5 +1,32 @@
 # Changelog
 
+## 2026-08-28
+
+### Added
+
+- Added six selector-first skills for Webflow MCP governance, Figma MCP
+  design-system delivery, Storybook MCP component validation, Playwright MCP
+  visual QA, Three.js MCP Apps previews, and WebGPU/TSL WebGL2 fallback work.
+- Added seven UI/UX, website-building, visual QA, and 3D MCP sources to the
+  registry, with source provenance, license posture, write-risk classification,
+  and copy/adoption controls.
+- Added five official sources to the freshness watchlist: Webflow, Miro,
+  Storybook, Playwright MCP, and the official MCP Apps Three.js example.
+- Added selector fixtures for a design-system MCP delivery workflow and a
+  Three.js MCP Apps WebGPU/TSL fallback workflow.
+
+### Changed
+
+- The source registry now distinguishes vetted official MCPs from the unvetted
+  UX research server; no external MCP is installed or granted account access by
+  this release.
+
+### Verified
+
+- Skill metadata validation passes: 373/373.
+- Source registry metadata validation passes: 28 sources.
+- Selector regression suite passes: 34/34.
+
 ## 2026-08-10
 
 ### Changed

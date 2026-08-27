@@ -325,6 +325,30 @@ DOMAIN_SKILL_HINTS = {
 
 DIRECT_SKILL_ALIASES = [
     (
+        "webflow-mcp-site-governance",
+        ("webflow mcp", "webflow designer mcp", "webflow cms mcp", "webflow api mcp"),
+    ),
+    (
+        "figma-mcp-design-system-delivery",
+        ("figma mcp", "figma code connect", "figma design system mcp", "figma canvas mcp"),
+    ),
+    (
+        "storybook-mcp-component-validation",
+        ("storybook mcp", "storybook component validation", "storybook design tokens"),
+    ),
+    (
+        "playwright-mcp-visual-qa",
+        ("playwright mcp", "playwright mcp visual qa", "browser mcp qa", "mcp browser testing"),
+    ),
+    (
+        "threejs-mcp-apps-preview",
+        ("threejs mcp app", "three.js mcp app", "mcp apps threejs", "mcp 3d preview"),
+    ),
+    (
+        "webgpu-tsl-rendering-fallback",
+        ("webgpu tsl", "three webgpu renderer", "webgpu webgl2 fallback", "tsl shader"),
+    ),
+    (
         "yandex-direct-v501-operations",
         (
             "yandex direct api",
