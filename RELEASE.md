@@ -1,6 +1,6 @@
 # Srednoff OS Public Release Note
 
-## October Maintenance: v2.1.2-20261015
+## October Maintenance: v2.1.2-20261015.1
 
 **Code. Design. Advertising. 3D. Websites. UI/UX.**
 
@@ -17,7 +17,7 @@ its runtime-specific hooks or pretending to switch the user's model.
 | 3D | Blender source-to-GLB authoring and target-viewer validation |
 | Catalog | 396 installable skills; 4500 script-only capability records |
 | Deployment | Native profiles, resource hashes, conflicts preserved, backup-first updater |
-| Evidence | 40 routing scenarios, 24 catalog/update tests, 9 harness tests |
+| Evidence | 40 routing scenarios, 25 catalog/update tests, 9 harness tests |
 
 The structural audit passes without errors, catchall triggers, or duplicate
 bodies. This is not a claim that every workflow has been independently

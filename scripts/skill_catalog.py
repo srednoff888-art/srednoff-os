@@ -18,6 +18,11 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ROOT / ".codex" / "skills" if (ROOT / ".codex" / "skills").exists() else ROOT / "skills"
 POLICY = ROOT / ".codex" / "srednoff-os" / "skill-contracts.json"
 NAME = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")
+LEGACY_LAYOUTS = {
+    "agentic-seo-skill": "seo",
+    "claude-imported/ai-sdk/upstream": "ai-sdk-upstream-reference",
+    "claude-imported/chat-sdk/upstream": "chat-sdk-upstream-reference",
+}
 
 
 def digest(path: Path) -> str:
@@ -108,7 +113,8 @@ def audit(skills: Path) -> dict:
             continue
         name, description = values["name"], values["description"]
         findings = []
-        if path.parent.name != name and (path.parent.name, name) != ("agentic-seo-skill", "seo"):
+        relative_folder = path.parent.relative_to(skills).as_posix()
+        if path.parent.name != name and LEGACY_LAYOUTS.get(relative_folder) != name:
             errors.append({"skill": name, "issue": "directory/frontmatter mismatch"})
         if re.search(r"\[TODO|\[TBD|TODO:", body + description):
             errors.append({"skill": name, "issue": "unfinished scaffold"})

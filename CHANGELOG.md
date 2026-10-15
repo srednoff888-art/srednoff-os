@@ -9,7 +9,7 @@
   Google Ads reporting, and model-upgrade task evaluation.
 - Portable catalog audit, hash-based freshness checks, native project profiles,
   ownership-aware installation, and a dry-run-first existing-library updater.
-- 24 catalog/update regression tests and six new selector scenarios.
+- 25 catalog/update regression tests and six new selector scenarios.
 - Russian README and a source/license comparison of the Claude-to-Codex port.
 
 ### Changed
@@ -25,11 +25,13 @@
 
 ### Verified
 
-- Selector 40/40; catalog/update tests 24/24; benchmark harness 9/9.
+- Selector 40/40; catalog/update tests 25/25; benchmark harness 9/9.
 - Metadata 396/396; structural catalog audit and portable index freshness pass.
 - Full local doctor: 45 OK, 1 historical-session warning, 0 FAIL.
 - Native init: explicit brief (4 skills) and empty brief (2 skills).
 - No multi-model behavioral or monetary ROI improvement is asserted.
+- Maintenance patch `.1` preserves the two known legacy upstream-reference
+  directory aliases; arbitrary directory/frontmatter mismatches still fail.
 
 ## 2026-08-28
 

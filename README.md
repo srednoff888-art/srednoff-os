@@ -261,7 +261,7 @@ Current public release gate:
 |---|---:|
 | Srednoff OS doctor | 45 OK, 1 environment WARN, 0 FAIL |
 | Selector evals, actual selected records | PASS, 40/40 |
-| Catalog and safe deployment regressions | PASS, 24/24 |
+| Catalog and safe deployment regressions | PASS, 25/25 |
 | Catalog freshness and structural audit | PASS, 396 workflows; no structural errors |
 | v2.1.1 evals | PASS, 13/13 |
 | v2.1.2 evals | PASS, 19/19 |
@@ -293,7 +293,7 @@ Release details:
 
 ## Release
 
-The October maintenance release is `v2.1.2-20261015`; runtime compatibility remains `v2.1.2`.
+The October maintenance release is `v2.1.2-20261015.1`; runtime compatibility remains `v2.1.2`.
 
 The local doctor's warning reports unsynchronized historical project entrypoints
 in the workstation-wide scan. It is not reported as a pass. Fresh installation

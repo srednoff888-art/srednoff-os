@@ -61,6 +61,7 @@ PowerShell init and sync provision the native set. Bash init accepts the brief a
 - Structural lint proves metadata/reference integrity, not task quality.
 - Selector evals inspect actual mapped records and include negative controls; echoed briefs no longer count as matches.
 - Catalog/deployment tests cover portable paths, drift, full resources, ownership conflicts, and update behavior.
+- Known legacy SEO and upstream-reference directory aliases remain compatible; arbitrary directory/frontmatter mismatches fail validation.
 - No multi-model behavioral win, monetary ROI, or user satisfaction is claimed from these checks.
 - Existing benchmark results retain their original date and scope. Use `agent-model-upgrade-evals` for a pinned, held-out comparison on a supported runtime.
 

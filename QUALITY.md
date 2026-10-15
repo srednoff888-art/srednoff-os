@@ -4,12 +4,12 @@ This file documents what is currently verified and what is intentionally not pro
 
 ## October 2026 Verification
 
-Verified 2026-10-15 for maintenance package `v2.1.2-20261015`.
+Verified 2026-10-15 for maintenance package `v2.1.2-20261015.1`.
 
 | Check | Result |
 |---|---:|
 | Actual-record selector | 40/40 |
-| Catalog and installation regressions | 24/24 |
+| Catalog and installation regressions | 25/25 |
 | Benchmark-harness regressions | 9/9 |
 | Skill metadata | 396/396 |
 | Structural catalog audit and index freshness | PASS |

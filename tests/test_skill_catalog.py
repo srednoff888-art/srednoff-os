@@ -60,6 +60,18 @@ class CatalogTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             catalog.index(self.skills)
 
+    def test_known_reference_layouts_only(self):
+        for layout, name in catalog.LEGACY_LAYOUTS.items():
+            folder = self.skills / layout
+            folder.mkdir(parents=True)
+            (folder / "SKILL.md").write_text(
+                f"---\nname: {name}\ndescription: Reference contract.\n---\n# Reference\n")
+        self.assertEqual(catalog.audit(self.skills)["errors"], [])
+        folder = self.skills / "unrecognized-alias"
+        folder.mkdir()
+        (folder / "SKILL.md").write_text("---\nname: different-name\ndescription: Example.\n---\n# Example\n")
+        self.assertEqual(catalog.audit(self.skills)["errors"][0]["issue"], "directory/frontmatter mismatch")
+
     def test_duplicate_name_rejected(self):
         first = self.skill()
         second = self.skills / "other"
