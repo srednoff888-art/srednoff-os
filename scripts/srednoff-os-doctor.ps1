@@ -369,6 +369,20 @@ $NpmCmd = Get-Command npm.cmd -ErrorAction SilentlyContinue
 $NpmPs1 = Get-Command npm.ps1 -ErrorAction SilentlyContinue
 Add-Check -Name "node-tooling" -Status ($(if ($NpmCmd) { "OK" } else { "WARN" })) -Detail "npm.cmd=$([bool]$NpmCmd); npm.ps1=$([bool]$NpmPs1)"
 
+$CatalogScript = Join-Path $ScriptDir "skill_catalog.py"
+if (Test-Path -LiteralPath $CatalogScript -PathType Leaf) {
+    $CatalogAudit = & python $CatalogScript audit --skills-root $SkillRoot --summary 2>&1
+    Add-Check -Name "skill-catalog-audit" -Status ($(if ($LASTEXITCODE -eq 0) { "OK" } else { "FAIL" })) -Detail (($CatalogAudit | Out-String).Trim())
+    if (Test-Path -LiteralPath $SkillIndex -PathType Leaf) {
+        $CatalogArguments = @($CatalogScript, "index", "--skills-root", $SkillRoot, "--output", $SkillIndex, "--check")
+        if ($PackageRoot -and $SkillRoot -eq (Join-Path $PackageRoot ".codex\skills")) {
+            $CatalogArguments += @("--relative-base", $PackageRoot)
+        }
+        $Freshness = & python @CatalogArguments 2>&1
+        Add-Check -Name "skill-index-freshness" -Status ($(if ($LASTEXITCODE -eq 0) { "OK" } else { "FAIL" })) -Detail (($Freshness | Out-String).Trim())
+    }
+}
+
 if ($RunEvals) {
     $EvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-selector.ps1" "scripts\test-srednoff-os-selector.ps1" "Leaf"
     if (Test-Path -LiteralPath $EvalScript -PathType Leaf) {

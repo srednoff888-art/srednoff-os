@@ -14,6 +14,12 @@ This file is intentionally compact. Detailed rules live in:
 
 Read only the specific reference file needed for the current task. Do not load broad catalogs or all reference docs by default.
 
+Native project skills live in `.agents/skills`; `.codex/skills` is the legacy
+library used by the selector. After selecting a task's workflows, use
+`python scripts/skill_catalog.py profile --project . --brief "<task>" --max-skills 12 --install`
+to provision a bounded native set. The profile is a cache, never a restriction
+on calling a necessary skill. Preserve user-owned resources and instructions.
+
 ---
 
 # Srednoff OS Startup Notification Rule

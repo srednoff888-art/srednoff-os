@@ -1,6 +1,6 @@
 ---
 name: agent-instruction-migration
-description: Use this skill to audit, deduplicate, and migrate coding-agent instructions across AGENTS.md, CLAUDE.md, GitHub Copilot and VS Code .agent.md custom agents, .instructions.md files, .clinerules, Cline rules, Roo custom modes, Continue rules, Cursor/Windsurf rules, OpenCode agents, prompt repositories, and Codex skills.
+description: "Migrate agent rules, custom-agent definitions, and workflow instructions between coding-agent runtimes while preserving authority, scope, and supported features."
 ---
 
 # Agent Instruction Migration

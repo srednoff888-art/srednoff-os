@@ -1,6 +1,6 @@
 ---
 name: ecommerce-product-page-ux
-description: "Use this skill for product detail pages, media galleries, variants, inventory, trust, conversion. Trigger when the task involves web design work related to Ecommerce Product Page UX, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for product detail pages, media galleries, variants, inventory, trust, conversion."
 ---
 
 # Ecommerce Product Page UX

@@ -1,33 +1,13 @@
 ---
 name: code-simplification
-description: "Use this skill for removing accidental complexity, reducing duplication, clarifying boundaries, preserving behavior. Trigger when the task involves programming work related to Code Simplification, production implementation, audits, debugging, strategy, or validation."
+description: "Refactor an existing implementation to remove specific duplication or accidental complexity while preserving observable behavior."
 ---
 
 # Code Simplification
-
-Use this skill to handle Programming tasks focused on removing accidental complexity, reducing duplication, clarifying boundaries, preserving behavior.
-
-## Workflow
-
-1. Clarify the user outcome, constraints, current stack, and definition of done.
-2. Inspect the local repository or provided artifacts before proposing changes.
-3. Check official documentation when APIs, platform rules, SDK versions, policies, or production behavior may have changed.
-4. For non-trivial choices, compare proven open-source patterns or examples and adapt ideas without copying incompatible code.
-5. Implement the smallest production-ready change that satisfies the request.
-6. Validate with the most relevant checks: tests, lint, typecheck, build, browser/device review, audits, or manual scenario.
-7. Report changed files, commands run, remaining risks, and exact next steps.
-
-## Focus Checklist
-
-- Define scope and assumptions explicitly.
-- Prefer existing project conventions and tools.
-- Handle loading, empty, error, permission, and edge states where relevant.
-- Include security, privacy, performance, accessibility, and rollback considerations when they apply.
-- Keep output actionable and evidence-backed.
-
-## Guardrails
-
-- Do not perform cosmetic refactors without a measurable maintenance benefit.
-- Do not perform destructive, paid, production, trading, publishing, or account-changing actions without explicit user confirmation.
-- Do not expose secrets, private keys, tokens, cookies, personal data, or confidential business data.
-- If validation is impossible, state exactly why and provide a manual verification path.
+Identify the maintenance problem and the behavior that must survive, including error types, ordering, serialization, side effects, and cancellation.
+## Decisions
+- Establish characterization coverage for risky paths before editing.
+- Prefer a local simplification over a new shared abstraction unless multiple real callers share the contract.
+- Keep API changes separate from behavior-preserving refactors. Retain intentional compatibility handling and data-format quirks.
+## Acceptance
+Review the diff against the original contract and run affected tests. State the removed complexity and any behavior change explicitly; line-count reduction alone is not a benefit.

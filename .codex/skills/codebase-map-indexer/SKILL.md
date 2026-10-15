@@ -1,6 +1,6 @@
 ---
 name: codebase-map-indexer
-description: "Use this skill for repo mapping, entry points, ownership, dependency graph, risk areas, impact analysis before implementation. Trigger when the task involves programming work related to Codebase Map Indexer, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for repo mapping, entry points, ownership, dependency graph, risk areas, impact analysis before implementation."
 ---
 
 # Codebase Map Indexer

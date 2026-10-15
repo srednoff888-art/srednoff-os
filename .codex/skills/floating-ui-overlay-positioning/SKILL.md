@@ -1,6 +1,6 @@
 ---
 name: floating-ui-overlay-positioning
-description: "Use this skill for tooltips, popovers, dropdowns, menus, collision handling, portals, focus management. Trigger when the task involves web design work related to Floating UI Overlay Positioning, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for tooltips, popovers, dropdowns, menus, collision handling, portals, focus management."
 ---
 
 # Floating UI Overlay Positioning

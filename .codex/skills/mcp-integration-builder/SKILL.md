@@ -1,33 +1,19 @@
 ---
 name: mcp-integration-builder
-description: "Use this skill for MCP servers, tools, connector workflows, schemas, auth, safe tool contracts. Trigger when the task involves programming work related to MCP Integration Builder, production implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for MCP servers, tools, connector workflows, schemas, auth, safe tool contracts."
 ---
 
 # MCP Integration Builder
 
-Use this skill to handle Programming tasks focused on MCP servers, tools, connector workflows, schemas, auth, safe tool contracts.
+## Decisions
 
-## Workflow
+- Inventory server tools/resources, transport, auth, schemas, and host protocol support.
+- Keep tool scope explicit, validate inputs/results, and treat external content as untrusted data.
 
-1. Clarify the user outcome, constraints, current stack, and definition of done.
-2. Inspect the local repository or provided artifacts before proposing changes.
-3. Check official documentation when APIs, platform rules, SDK versions, policies, or production behavior may have changed.
-4. For non-trivial choices, compare proven open-source patterns or examples and adapt ideas without copying incompatible code.
-5. Implement the smallest production-ready change that satisfies the request.
-6. Validate with the most relevant checks: tests, lint, typecheck, build, browser/device review, audits, or manual scenario.
-7. Report changed files, commands run, remaining risks, and exact next steps.
+## Acceptance
 
-## Focus Checklist
+Test handshake/discovery, one authorized tool, error handling, cancellation, and token redaction.
 
-- Define scope and assumptions explicitly.
-- Prefer existing project conventions and tools.
-- Handle loading, empty, error, permission, and edge states where relevant.
-- Include security, privacy, performance, accessibility, and rollback considerations when they apply.
-- Keep output actionable and evidence-backed.
-
-## Guardrails
+## Constraints
 
 - Do not create tools that can perform destructive actions without confirmation gates.
-- Do not perform destructive, paid, production, trading, publishing, or account-changing actions without explicit user confirmation.
-- Do not expose secrets, private keys, tokens, cookies, personal data, or confidential business data.
-- If validation is impossible, state exactly why and provide a manual verification path.

@@ -1,6 +1,6 @@
 ---
 name: release-manager-agent
-description: "Use this skill for release readiness, rollback plans, changelogs, deployment checks, production risk. Trigger when the task involves agent profile work related to Release Manager Agent, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for release readiness, rollback plans, changelogs, deployment checks, production risk."
 ---
 
 # Release Manager Agent

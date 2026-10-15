@@ -1,6 +1,6 @@
 ---
 name: multi-tenant-saas-architecture
-description: "Use this skill for tenant isolation, scoped queries, roles, billing boundaries, admin controls, safety checks. Trigger when the task involves programming work related to Multi Tenant Saas Architecture, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for tenant isolation, scoped queries, roles, billing boundaries, admin controls, safety checks."
 ---
 
 # Multi Tenant Saas Architecture

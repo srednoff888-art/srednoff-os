@@ -1,6 +1,6 @@
 ---
 name: principal-architect-agent
-description: "Use this skill for principal-level architecture decisions, tradeoffs, risk review, phased implementation plans. Trigger when the task involves agent profile work related to Principal Architect Agent, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for principal-level architecture decisions, tradeoffs, risk review, phased implementation plans."
 ---
 
 # Principal Architect Agent

@@ -1,6 +1,6 @@
 ---
 name: internationalized-rtl-ui
-description: "Use this skill for RTL layouts, translated text expansion, locale formats, bidirectional UI QA. Trigger when the task involves web design work related to Internationalized RTL UI, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for RTL layouts, translated text expansion, locale formats, bidirectional UI QA."
 ---
 
 # Internationalized RTL UI

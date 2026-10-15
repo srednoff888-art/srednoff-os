@@ -1,6 +1,6 @@
 ---
 name: sitemap-index-sharding
-description: "Use this skill for large sitemap indexes, sharding, freshness, lastmod hygiene, monitoring, submission strategy. Trigger when the task involves seo work related to Sitemap Index Sharding, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for large sitemap indexes, sharding, freshness, lastmod hygiene, monitoring, submission strategy."
 ---
 
 # Sitemap Index Sharding

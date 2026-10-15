@@ -1,6 +1,6 @@
 ---
 name: frontend-design-critic-agent
-description: "Use this skill for frontend visual critique, UI hierarchy, spacing, responsive behavior, interaction states. Trigger when the task involves agent profile work related to Frontend Design Critic Agent, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for frontend visual critique, UI hierarchy, spacing, responsive behavior, interaction states."
 ---
 
 # Frontend Design Critic Agent

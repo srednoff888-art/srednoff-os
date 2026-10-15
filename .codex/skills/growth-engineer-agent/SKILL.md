@@ -1,6 +1,6 @@
 ---
 name: growth-engineer-agent
-description: "Use this skill for growth funnels, landing pages, analytics, experiments, activation and conversion. Trigger when the task involves agent profile work related to Growth Engineer Agent, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for growth funnels, landing pages, analytics, experiments, activation and conversion."
 ---
 
 # Growth Engineer Agent

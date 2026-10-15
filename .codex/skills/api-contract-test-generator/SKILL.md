@@ -1,6 +1,6 @@
 ---
 name: api-contract-test-generator
-description: "Use this skill for OpenAPI, JSON schema, typed clients, contract tests, compatibility assertions. Trigger when the task involves programming work related to API Contract Test Generator, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for OpenAPI, JSON schema, typed clients, contract tests, compatibility assertions."
 ---
 
 # API Contract Test Generator

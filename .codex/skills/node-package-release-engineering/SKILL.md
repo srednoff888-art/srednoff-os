@@ -1,6 +1,6 @@
 ---
 name: node-package-release-engineering
-description: "Use this skill for npm package exports, ESM/CJS compatibility, semantic versioning, release automation, changelogs. Trigger when the task involves programming work related to Node Package Release Engineering, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for npm package exports, ESM/CJS compatibility, semantic versioning, release automation, changelogs."
 ---
 
 # Node Package Release Engineering

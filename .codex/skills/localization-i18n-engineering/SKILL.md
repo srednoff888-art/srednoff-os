@@ -1,6 +1,6 @@
 ---
 name: localization-i18n-engineering
-description: "Use this skill for i18n architecture, locale routing, ICU messages, formatting, translation QA. Trigger when the task involves programming work related to Localization i18n Engineering, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for i18n architecture, locale routing, ICU messages, formatting, translation QA."
 ---
 
 # Localization i18n Engineering

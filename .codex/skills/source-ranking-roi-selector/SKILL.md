@@ -1,6 +1,6 @@
 ---
 name: source-ranking-roi-selector
-description: Rank UI kit, design system, component registry, design connector, 3D library, 3D asset, texture, model, and optimizer sources by project fit, license/provenance risk, dependency cost, validation burden, and token ROI. Use for UI/UX, web design, 3D web design, 3D assets, source selection, component marketplace comparison, 21st.dev/Magic, shadcn, Astryx, Figma, Canva, Three.js, R3F, model-viewer, Babylon.js, glTF, Sketchfab, Poly Haven, ambientCG, and similar source decisions.
+description: "Compare UI/component/3D sources for task fit, provenance, license, runtime cost, accessibility, and practical validation."
 ---
 
 # Source Ranking ROI Selector

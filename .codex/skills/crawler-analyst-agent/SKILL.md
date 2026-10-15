@@ -1,6 +1,6 @@
 ---
 name: crawler-analyst-agent
-description: "Use this skill for crawler behavior, log files, sitemap/indexation analysis, crawl-budget diagnostics. Trigger when the task involves agent profile work related to Crawler Analyst Agent, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for crawler behavior, log files, sitemap/indexation analysis, crawl-budget diagnostics."
 ---
 
 # Crawler Analyst Agent

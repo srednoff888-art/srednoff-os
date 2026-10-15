@@ -3,6 +3,36 @@
   "version": "v2.1.2",
   "sources": [
     {
+      "id": "vercel-agent-skills",
+      "type": "official-github",
+      "url": "https://github.com/vercel-labs/agent-skills",
+      "reason": "React composition and performance guidance; review per-skill license and version applicability before adaptation"
+    },
+    {
+      "id": "playwright-cli",
+      "type": "official-github",
+      "url": "https://github.com/microsoft/playwright-cli",
+      "reason": "Bounded browser verification workflows and isolated session capabilities"
+    },
+    {
+      "id": "blender-official-mcp",
+      "type": "official-docs",
+      "url": "https://www.blender.org/lab/mcp-server/",
+      "reason": "Blender model authoring interface maturity and unrestricted Python execution risk"
+    },
+    {
+      "id": "google-ads-official-mcp",
+      "type": "official-github",
+      "url": "https://github.com/googleads/google-ads-mcp",
+      "reason": "Read-only account metadata and GAQL reporting contracts; no implicit advertising writes"
+    },
+    {
+      "id": "openai-model-skill-modernization",
+      "type": "official-docs",
+      "url": "https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra",
+      "reason": "Outcome-driven skill design, compact metadata, and progressive disclosure; task benchmarks still required"
+    },
+    {
       "id": "openai-codex-agents-md",
       "type": "official-docs",
       "url": "https://developers.openai.com/codex/guides/agents-md",

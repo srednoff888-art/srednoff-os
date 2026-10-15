@@ -1,6 +1,6 @@
 ---
 name: storybook-interaction-tests
-description: "Use this skill for Storybook play functions, interaction tests, component states, accessibility checks. Trigger when the task involves web design work related to Storybook Interaction Tests, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for Storybook play functions, interaction tests, component states, accessibility checks."
 ---
 
 # Storybook Interaction Tests

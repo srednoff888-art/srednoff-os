@@ -1,6 +1,6 @@
 ---
 name: headless-component-composition
-description: "Use this skill for accessible unstyled components, composition patterns, controlled/uncontrolled state, styling freedom. Trigger when the task involves web design work related to Headless Component Composition, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for accessible unstyled components, composition patterns, controlled/uncontrolled state, styling freedom."
 ---
 
 # Headless Component Composition

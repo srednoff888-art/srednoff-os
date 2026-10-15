@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "donor_repository": "https://github.com/srednoff888-art/srednoff-os-for-claude",
+  "donor_commit": "d529213735d5ed2cf4c8cb80c4c43ce5ce788263",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 Ivan Srednoff",
+  "date": "2026-10-15",
+  "imported_skills": [
+    "alembic-migration-workflows",
+    "docker-compose-local-dev-environments",
+    "dockerfile-best-practices-python",
+    "github-actions-python-ci-pipeline",
+    "kubernetes-deployment-manifests-basics",
+    "legacy-python-codebase-modernization",
+    "memory-leak-detection-python",
+    "pytest-fixtures-and-parametrization",
+    "python-async-await-patterns",
+    "python-dataclasses-pydantic-validation",
+    "python-debugger-pdb-production-debugging",
+    "python-packaging-pyproject-poetry-uv",
+    "python-profiling-cprofile-pyspy",
+    "python-typing-and-mypy-strictness",
+    "sqlalchemy-orm-patterns",
+    "structured-logging-python",
+    "no-ai-slop"
+  ],
+  "adapted_concepts": [
+    "bounded native skill deployment",
+    "fingerprinted project selection cache",
+    "deterministic catalog export with drift checking",
+    "relative-reference validation",
+    "explicit background task outcomes"
+  ],
+  "not_transferred": [
+    {
+      "feature": "Claude hooks and slash commands",
+      "reason": "Runtime-specific; existing Codex hooks must follow the Codex protocol."
+    },
+    {
+      "feature": "name-based skill pruning",
+      "reason": "Can remove user-owned files; this port records hashes and never prunes."
+    },
+    {
+      "feature": "Haiku/Sonnet/Opus routing",
+      "reason": "Model-specific advisory; the port never changes the user's model."
+    },
+    {
+      "feature": "569 external registry references",
+      "reason": "Unvetted discovery data, not reviewed installable workflows."
+    },
+    {
+      "feature": "paid-ads-operating-contract, full advertising audit packages",
+      "reason": "Depend on separate runtime/reference packages; partial copying would break the workflow. Existing platform skills remain canonical."
+    },
+    {
+      "feature": "Telegram ad-platform assertions",
+      "reason": "Date-sensitive format/payment/targeting claims require a dedicated platform review."
+    }
+  ],
+  "behavioral_model_validation": "not-run"
+}

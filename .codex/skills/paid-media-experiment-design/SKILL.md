@@ -1,28 +1,20 @@
 ---
 name: paid-media-experiment-design
-description: Use for PPC work when Codex should design paid-media tests with hypotheses, holdouts, success criteria, duration, and stopping rules.
+description: "Design or review a paid-media experiment with a causal hypothesis, conversion definition, valid comparison, decision rule, and measurement window."
 ---
 
-# paid media experiment design
+# Paid Media Experiment Design
 
-## Workflow
+Start from the business decision the experiment must support and the platform's actual data and experiment capabilities.
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+## Decisions
 
-## Domain Focus
+- Define treatment, control, unit of assignment, primary metric, minimum meaningful effect, duration, and stopping rule before launch.
+- Check conversion lag, attribution window, channel overlap, audience leakage, seasonality, power, and simultaneous account changes.
+- Keep creative, targeting, bidding, and landing changes separable where the hypothesis requires it.
+- Reconcile spend/value units and account timezone; do not combine platform-attributed conversions as if they were independent purchases.
+- Use current official platform documentation for supported experiments and reporting fields.
 
-design paid-media tests with hypotheses, holdouts, success criteria, duration, and stopping rules.
+## Acceptance
 
-## Official Sources
-
-https://yandex.com/dev/direct/doc/en/ | https://developers.google.com/google-ads/api | https://developers.facebook.com/docs/marketing-apis
-
-## Guardrails
-
-- Start with read-only data and recommendations.
-- Require explicit approval before changing spend, bids, audiences, ads, campaigns, or external account settings.
-- Preserve campaign history and report the expected impact, rollback path, and measurement limitation.
+Produce a reviewable experiment specification and a lag-aware readout plan. For completed experiments, report uncertainty, failed checks, and incremental versus attributed results. Campaign creation, spend, and audience changes stay within explicit user authorization.

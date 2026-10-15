@@ -1,6 +1,6 @@
 ---
 name: background-jobs-queues
-description: "Use this skill for queues, retries, idempotency, cron, dead-letter queues, background processing. Trigger when the task involves programming work related to Background Jobs Queues, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for queues, retries, idempotency, cron, dead-letter queues, background processing."
 ---
 
 # Background Jobs Queues

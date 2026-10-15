@@ -1,6 +1,6 @@
 ---
 name: checkout-trust-risk-ux
-description: "Use this skill for checkout trust, fraud friction, payment clarity, policies, risk-reducing UX. Trigger when the task involves web design work related to Checkout Trust Risk UX, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for checkout trust, fraud friction, payment clarity, policies, risk-reducing UX."
 ---
 
 # Checkout Trust Risk UX

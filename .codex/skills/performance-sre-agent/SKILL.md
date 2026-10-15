@@ -1,6 +1,6 @@
 ---
 name: performance-sre-agent
-description: "Use this skill for performance, reliability, observability, SLO risk, production diagnostics. Trigger when the task involves agent profile work related to Performance SRE Agent, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for performance, reliability, observability, SLO risk, production diagnostics."
 ---
 
 # Performance SRE Agent

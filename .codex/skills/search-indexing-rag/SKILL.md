@@ -1,6 +1,6 @@
 ---
 name: search-indexing-rag
-description: "Use this skill for search indexing, embeddings, RAG chunking, freshness, retrieval evaluation, source citations. Trigger when the task involves ai engineering work related to Search Indexing RAG, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for search indexing, embeddings, RAG chunking, freshness, retrieval evaluation, source citations."
 ---
 
 # Search Indexing RAG

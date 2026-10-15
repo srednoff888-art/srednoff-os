@@ -1,6 +1,6 @@
 ---
 name: search-console-api-automation
-description: "Use this skill for Search Console API exports, anomaly checks, page/query dashboards, automated diagnostics. Trigger when the task involves seo work related to Search Console API Automation, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for Search Console API exports, anomaly checks, page/query dashboards, automated diagnostics."
 ---
 
 # Search Console API Automation

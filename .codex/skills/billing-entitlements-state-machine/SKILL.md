@@ -1,6 +1,6 @@
 ---
 name: billing-entitlements-state-machine
-description: "Use this skill for plans, entitlements, subscriptions, trials, invoices, state transitions, access checks. Trigger when the task involves programming work related to Billing Entitlements State Machine, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for plans, entitlements, subscriptions, trials, invoices, state transitions, access checks."
 ---
 
 # Billing Entitlements State Machine

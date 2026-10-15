@@ -1,6 +1,6 @@
 ---
 name: release-notes-changelog-automation
-description: "Use this skill for release notes, changelog generation, PR/commit summarization, public impact review. Trigger when the task involves programming work related to Release Notes Changelog Automation, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for release notes, changelog generation, PR/commit summarization, public impact review."
 ---
 
 # Release Notes Changelog Automation

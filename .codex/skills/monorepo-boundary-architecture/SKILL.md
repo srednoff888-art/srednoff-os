@@ -1,6 +1,6 @@
 ---
 name: monorepo-boundary-architecture
-description: "Use this skill for monorepo package boundaries, workspace dependencies, shared libraries, build graph, ownership rules. Trigger when the task involves programming work related to Monorepo Boundary Architecture, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for monorepo package boundaries, workspace dependencies, shared libraries, build graph, ownership rules."
 ---
 
 # Monorepo Boundary Architecture

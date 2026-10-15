@@ -1,6 +1,6 @@
 ---
 name: cache-invalidation-design
-description: "Use this skill for cache keys, TTLs, invalidation, SWR, consistency, edge/runtime caching. Trigger when the task involves programming work related to Cache Invalidation Design, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for cache keys, TTLs, invalidation, SWR, consistency, edge/runtime caching."
 ---
 
 # Cache Invalidation Design

@@ -1,6 +1,6 @@
 ---
 name: mcp-apps-ui-workflow
-description: Use this skill when designing, reviewing, migrating, or debugging MCP Apps / SEP-1865 interactive UI resources for MCP servers, including dashboards, forms, visualizations, tool-driven workflows, OpenAI Apps SDK migration, MCP-UI compatibility, sandboxing, host support, security review, provenance, and fallback UX.
+description: "Implement an interactive MCP Apps tool UI with typed contracts, host-compatible resources, CSP, accessible fallback, and scoped actions."
 ---
 
 # MCP Apps UI Workflow

@@ -1,6 +1,6 @@
 ---
 name: design-system-migration-plan
-description: "Use this skill for migrating legacy UI to design-system primitives, component mapping, risk sequencing. Trigger when the task involves web design work related to Design System Migration Plan, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for migrating legacy UI to design-system primitives, component mapping, risk sequencing."
 ---
 
 # Design System Migration Plan

@@ -1,6 +1,6 @@
 ---
 name: realtime-websockets-sse
-description: "Use this skill for WebSockets, SSE, realtime auth, reconnects, backpressure, presence, delivery semantics. Trigger when the task involves programming work related to Realtime Websockets SSE, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for WebSockets, SSE, realtime auth, reconnects, backpressure, presence, delivery semantics."
 ---
 
 # Realtime Websockets SSE

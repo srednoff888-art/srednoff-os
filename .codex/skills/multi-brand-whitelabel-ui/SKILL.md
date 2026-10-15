@@ -1,6 +1,6 @@
 ---
 name: multi-brand-whitelabel-ui
-description: "Use this skill for white-label UI, brand tokens, tenant themes, preview workflows, theme isolation. Trigger when the task involves web design work related to Multi Brand Whitelabel UI, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for white-label UI, brand tokens, tenant themes, preview workflows, theme isolation."
 ---
 
 # Multi Brand Whitelabel UI

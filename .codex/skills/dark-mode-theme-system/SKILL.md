@@ -1,6 +1,6 @@
 ---
 name: dark-mode-theme-system
-description: "Use this skill for dark mode tokens, contrast, theme persistence, system preference, color scheme QA. Trigger when the task involves web design work related to Dark Mode Theme System, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for dark mode tokens, contrast, theme persistence, system preference, color scheme QA."
 ---
 
 # Dark Mode Theme System

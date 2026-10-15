@@ -1,6 +1,6 @@
 ---
 name: react-aria-advanced-interactions
-description: "Use this skill for React Aria style interactions, comboboxes, lists, menus, validation, drag and drop. Trigger when the task involves web design work related to React Aria Advanced Interactions, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for React Aria style interactions, comboboxes, lists, menus, validation, drag and drop."
 ---
 
 # React Aria Advanced Interactions

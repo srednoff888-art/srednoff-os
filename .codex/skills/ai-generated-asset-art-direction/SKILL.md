@@ -1,6 +1,6 @@
 ---
 name: ai-generated-asset-art-direction
-description: "Use this skill for art direction for AI-generated images/video, brand safety, prompt iteration, asset QA. Trigger when the task involves web design work related to AI Generated Asset Art Direction, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for art direction for AI-generated images/video, brand safety, prompt iteration, asset QA."
 ---
 
 # AI Generated Asset Art Direction

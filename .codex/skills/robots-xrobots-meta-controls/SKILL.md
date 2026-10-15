@@ -1,6 +1,6 @@
 ---
 name: robots-xrobots-meta-controls
-description: "Use this skill for robots.txt, meta robots, X-Robots-Tag, environment indexing controls. Trigger when the task involves seo work related to Robots X-Robots Meta Controls, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for robots.txt, meta robots, X-Robots-Tag, environment indexing controls."
 ---
 
 # Robots X-Robots Meta Controls

@@ -1,6 +1,6 @@
 ---
 name: nuxt-seo-module-workflow
-description: "Use this skill for Nuxt SEO modules, sitemap, robots, schema, OG images, i18n SEO. Trigger when the task involves seo work related to Nuxt SEO Module Workflow, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for Nuxt SEO modules, sitemap, robots, schema, OG images, i18n SEO."
 ---
 
 # Nuxt SEO Module Workflow

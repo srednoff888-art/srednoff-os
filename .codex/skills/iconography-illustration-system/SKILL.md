@@ -1,6 +1,6 @@
 ---
 name: iconography-illustration-system
-description: "Use this skill for icon systems, illustration style, empty-state visuals, asset consistency, visual language. Trigger when the task involves web design work related to Iconography Illustration System, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for icon systems, illustration style, empty-state visuals, asset consistency, visual language."
 ---
 
 # Iconography Illustration System

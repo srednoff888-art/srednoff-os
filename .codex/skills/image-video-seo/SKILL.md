@@ -1,6 +1,6 @@
 ---
 name: image-video-seo
-description: "Use this skill for image/video metadata, alt strategy, thumbnails, transcripts, media indexing, performance. Trigger when the task involves seo work related to Image Video SEO, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for image/video metadata, alt strategy, thumbnails, transcripts, media indexing, performance."
 ---
 
 # Image Video SEO

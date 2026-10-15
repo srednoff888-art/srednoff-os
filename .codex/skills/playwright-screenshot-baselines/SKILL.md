@@ -1,6 +1,6 @@
 ---
 name: playwright-screenshot-baselines
-description: "Use this skill for Playwright screenshot comparisons, baselines, thresholds, viewport matrix, visual regression. Trigger when the task involves web design work related to Playwright Screenshot Baselines, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for Playwright screenshot comparisons, baselines, thresholds, viewport matrix, visual regression."
 ---
 
 # Playwright Screenshot Baselines

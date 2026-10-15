@@ -46,7 +46,7 @@ if (Test-Any @('ui/ux','ux','ui\b','web design','landing','dashboard','component
     $Domains.Add("ui-ux") | Out-Null
     $Domains.Add("web-design") | Out-Null
 }
-if (Test-Any @('\b3d\b','three','react three fiber','r3f','webgl','webgpu','gltf','glb','model-viewer','babylon','shader','xr','ar\b','configurator','asset','model','texture','hdri')) {
+if (Test-Any @('\b3d\b','three','react three fiber','r3f','webgl','webgpu','gltf','glb','blender','model-viewer','babylon','shader','xr','ar\b','configurator','asset','model','texture','hdri')) {
     $Domains.Add("3d-web") | Out-Null
 }
 if (Test-Any @('seo','ppc','growth','ads','google ads','meta ads','serp','conversion','analytics')) {

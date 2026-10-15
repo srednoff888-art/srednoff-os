@@ -1,6 +1,6 @@
 ---
 name: feature-flag-rollout
-description: "Use this skill for feature flags, gradual rollout, kill switches, metrics, experiment gates, rollback. Trigger when the task involves programming work related to Feature Flag Rollout, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for feature flags, gradual rollout, kill switches, metrics, experiment gates, rollback."
 ---
 
 # Feature Flag Rollout

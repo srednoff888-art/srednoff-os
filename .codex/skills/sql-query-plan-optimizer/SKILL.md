@@ -1,6 +1,6 @@
 ---
 name: sql-query-plan-optimizer
-description: "Use this skill for SQL query plans, indexes, N+1s, pagination, transactions, performance bottlenecks. Trigger when the task involves programming work related to Sql Query Plan Optimizer, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for SQL query plans, indexes, N+1s, pagination, transactions, performance bottlenecks."
 ---
 
 # Sql Query Plan Optimizer

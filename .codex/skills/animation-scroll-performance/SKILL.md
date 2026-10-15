@@ -1,6 +1,6 @@
 ---
 name: animation-scroll-performance
-description: "Use this skill for scroll effects, animation budget, jank diagnosis, reduced motion, frame timing. Trigger when the task involves web design work related to Animation Scroll Performance, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for scroll effects, animation budget, jank diagnosis, reduced motion, frame timing."
 ---
 
 # Animation Scroll Performance

@@ -1,6 +1,6 @@
 ---
 name: topical-authority-cluster-builder
-description: "Use this skill for topic clusters, hub/spoke planning, semantic coverage, editorial prioritization. Trigger when the task involves seo work related to Topical Authority Cluster Builder, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for topic clusters, hub/spoke planning, semantic coverage, editorial prioritization."
 ---
 
 # Topical Authority Cluster Builder

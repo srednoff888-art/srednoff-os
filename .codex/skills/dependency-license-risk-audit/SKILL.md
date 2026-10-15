@@ -1,6 +1,6 @@
 ---
 name: dependency-license-risk-audit
-description: "Use this skill for dependency license review, maintenance health, vulnerability risk, replacement strategy. Trigger when the task involves security work related to Dependency License Risk Audit, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for dependency license review, maintenance health, vulnerability risk, replacement strategy."
 ---
 
 # Dependency License Risk Audit

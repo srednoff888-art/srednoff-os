@@ -112,14 +112,22 @@ else
   skill_index_script="$template_skill_index_script"
 fi
 
+if command -v python3 >/dev/null 2>&1; then
+  python_cmd="python3"
+else
+  python_cmd="python"
+fi
+
 if [ -f "$skill_index_script" ] && [ -d "$project_skills_root" ] && powershell_cmd="$(find_powershell)"; then
   if [ -f "$project_skill_index" ]; then
     cp "$project_skill_index" "$project_skill_index.bak.$timestamp"
   fi
   "$powershell_cmd" -NoProfile -ExecutionPolicy Bypass -File "$skill_index_script" -SkillsRoot "$project_skills_root" -OutputPath "$project_skill_index" -RelativePaths -RelativeBase "$project_dir"
 else
-  printf 'skip project skill index generation: PowerShell not found or skills missing\n'
+  "$python_cmd" "$template_dir/scripts/skill_catalog.py" index --skills-root "$project_skills_root" --relative-base "$project_dir" --output "$project_skill_index"
 fi
+
+"$python_cmd" "$template_dir/scripts/skill_catalog.py" profile --skills-root "$template_dir/.codex/skills" --project "$project_dir" --brief "${2:-}" --max-skills 12 --install
 
 cat <<EOF
 

@@ -1,6 +1,6 @@
 ---
 name: ai-evals-regression-suite
-description: "Use this skill for LLM evals, golden datasets, structured outputs, drift detection, regression gates. Trigger when the task involves ai engineering work related to AI Evals Regression Suite, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for LLM evals, golden datasets, structured outputs, drift detection, regression gates."
 ---
 
 # AI Evals Regression Suite

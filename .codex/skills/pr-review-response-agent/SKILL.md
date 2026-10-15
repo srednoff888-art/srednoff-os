@@ -1,6 +1,6 @@
 ---
 name: pr-review-response-agent
-description: "Use this skill for addressing PR review comments, preserving unrelated changes, responding with evidence and tests. Trigger when the task involves programming work related to PR Review Response Agent, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for addressing PR review comments, preserving unrelated changes, responding with evidence and tests."
 ---
 
 # PR Review Response Agent

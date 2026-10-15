@@ -1,33 +1,14 @@
 ---
 name: frontend-ui-engineering
-description: "Use this skill for production frontend UI, states, layout, responsive behavior, accessibility, polish. Trigger when the task involves web design work related to Frontend UI Engineering, production implementation, audits, debugging, strategy, or validation."
+description: "Implement or repair interactive frontend UI in an existing web application, including async states, responsive layout, semantic controls, and keyboard behavior."
 ---
 
 # Frontend UI Engineering
-
-Use this skill to handle Web Design tasks focused on production frontend UI, states, layout, responsive behavior, accessibility, polish.
-
-## Workflow
-
-1. Clarify the user outcome, constraints, current stack, and definition of done.
-2. Inspect the local repository or provided artifacts before proposing changes.
-3. Check official documentation when APIs, platform rules, SDK versions, policies, or production behavior may have changed.
-4. For non-trivial choices, compare proven open-source patterns or examples and adapt ideas without copying incompatible code.
-5. Implement the smallest production-ready change that satisfies the request.
-6. Validate with the most relevant checks: tests, lint, typecheck, build, browser/device review, audits, or manual scenario.
-7. Report changed files, commands run, remaining risks, and exact next steps.
-
-## Focus Checklist
-
-- Define scope and assumptions explicitly.
-- Prefer existing project conventions and tools.
-- Handle loading, empty, error, permission, and edge states where relevant.
-- Include security, privacy, performance, accessibility, and rollback considerations when they apply.
-- Keep output actionable and evidence-backed.
-
-## Guardrails
-
-- Do not ship static mockups when the user asked for a usable interface.
-- Do not perform destructive, paid, production, trading, publishing, or account-changing actions without explicit user confirmation.
-- Do not expose secrets, private keys, tokens, cookies, personal data, or confidential business data.
-- If validation is impossible, state exactly why and provide a manual verification path.
+Inspect the route, shared components, styling system, and real data contract before changing UI. Reuse the project's tokens and primitives.
+## Decisions
+- Map loading, success, empty, validation, permission, and failure states to the actual request lifecycle. Ignore stale responses; preserve user input after retryable failure.
+- Use native buttons/links/form semantics first. Define focus movement for overlays and validation; support keyboard dismissal and avoid inaccessible click-only containers.
+- Constrain fixed-format boards, toolbars, and media with stable dimensions. Check long labels, localization, 200% zoom, mobile safe areas, and reduced motion.
+- Keep server/client boundaries and hydration deterministic. Avoid shipping a new runtime for a small interaction.
+## Acceptance
+Exercise the primary workflow and at least one failure/retry path. Check mobile and desktop screenshots, keyboard navigation, console errors, and the existing build/type gates. Report mock-only data or unavailable backend paths explicitly.

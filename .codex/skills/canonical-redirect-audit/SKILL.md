@@ -1,6 +1,6 @@
 ---
 name: canonical-redirect-audit
-description: "Use this skill for canonical tags, redirects, duplicates, status codes, consolidation, migration safety. Trigger when the task involves seo work related to Canonical Redirect Audit, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for canonical tags, redirects, duplicates, status codes, consolidation, migration safety."
 ---
 
 # Canonical Redirect Audit

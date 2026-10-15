@@ -1,6 +1,6 @@
 ---
 name: ci-failure-triage
-description: "Use this skill for CI log analysis, local reproduction, root cause isolation, targeted fixes, rerun strategy. Trigger when the task involves programming work related to CI Failure Triage, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for CI log analysis, local reproduction, root cause isolation, targeted fixes, rerun strategy."
 ---
 
 # CI Failure Triage

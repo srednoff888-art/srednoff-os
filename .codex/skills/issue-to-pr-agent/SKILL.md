@@ -1,6 +1,6 @@
 ---
 name: issue-to-pr-agent
-description: "Use this skill for turning issues into implementation plans, branches, code changes, tests, and PR descriptions. Trigger when the task involves programming work related to Issue To PR Agent, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for turning issues into implementation plans, branches, code changes, tests, and PR descriptions."
 ---
 
 # Issue To PR Agent

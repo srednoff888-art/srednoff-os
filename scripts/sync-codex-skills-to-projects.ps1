@@ -1,7 +1,10 @@
 param(
     [string[]]$ProjectPath = @("."),
     [string]$TemplateRoot = "$HOME\.codex\templates\codex-md-os",
-    [switch]$IncludeScripts
+    [switch]$IncludeScripts,
+    [string]$Brief = "",
+    [ValidateRange(1, 48)]
+    [int]$MaxSkills = 12
 )
 
 $ErrorActionPreference = "Stop"
@@ -165,6 +168,8 @@ foreach ($Project in $ProjectPath) {
         }
         & $SkillIndexScript -SkillsRoot $ProjectSkillsRoot -OutputPath $ProjectSkillIndex -RelativePaths -RelativeBase $Root | Out-Host
     }
+    & python (Join-Path $TemplateRoot "scripts\skill_catalog.py") profile --skills-root $SourceSkills --project $Root "--brief=$Brief" --max-skills $MaxSkills --install
+    if ($LASTEXITCODE -ne 0) { throw "Native skill sync conflict; inspect the ownership ledger before retrying." }
 }
 
 Write-Output ""

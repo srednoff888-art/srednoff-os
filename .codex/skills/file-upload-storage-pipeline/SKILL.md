@@ -1,6 +1,6 @@
 ---
 name: file-upload-storage-pipeline
-description: "Use this skill for uploads, storage, validation, metadata, signed URLs, malware checks, quotas. Trigger when the task involves programming work related to File Upload Storage Pipeline, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for uploads, storage, validation, metadata, signed URLs, malware checks, quotas."
 ---
 
 # File Upload Storage Pipeline

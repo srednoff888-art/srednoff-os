@@ -1,6 +1,6 @@
 ---
 name: email-deliverability-transactional
-description: "Use this skill for transactional email, SPF/DKIM/DMARC, templates, retries, bounces, deliverability. Trigger when the task involves programming work related to Email Deliverability Transactional, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for transactional email, SPF/DKIM/DMARC, templates, retries, bounces, deliverability."
 ---
 
 # Email Deliverability Transactional

@@ -1,6 +1,6 @@
 ---
 name: codex-plugin-governance
-description: Audit, install, update, share, or publish Codex plugins with provenance, dependency, permission, app-access, and supply-chain controls. Use for portable Agent Plugins, local/personal/workspace/remote plugin catalogs, Agent Plugin manifests, marketplaces, plugin bundles containing skills/MCP servers/apps/app templates/hooks/scripts, executor-provided skills, plugin permissions, refreshes, removals, or publishing.
+description: "Review, install, update, or publish a Codex plugin with verified artifact identity, bundle paths, permissions, dependencies, and rollback."
 ---
 
 # Codex Plugin Governance

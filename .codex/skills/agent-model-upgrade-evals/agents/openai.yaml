@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Model Upgrade Evals"
+  short_description: "Verify skill behavior across model upgrades"
+  default_prompt: "Use $agent-model-upgrade-evals to adapt and evaluate a skill on the requested model."

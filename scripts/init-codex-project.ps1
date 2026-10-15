@@ -1,5 +1,9 @@
 param(
-    [string]$ProjectPath = "."
+    [string]$ProjectPath = ".",
+    [string]$Brief = "",
+    [ValidateRange(1, 48)]
+    [int]$MaxSkills = 12,
+    [switch]$SkipNativeSkills
 )
 
 $ErrorActionPreference = "Stop"
@@ -106,6 +110,12 @@ if ((Test-Path -LiteralPath $SkillIndexScript -PathType Leaf) -and (Test-Path -L
         Copy-Item -LiteralPath $ProjectSkillIndex -Destination "$ProjectSkillIndex.bak.$Timestamp" -Force
     }
     & $SkillIndexScript -SkillsRoot $ProjectSkillsRoot -OutputPath $ProjectSkillIndex -RelativePaths -RelativeBase $ProjectDir | Out-Host
+}
+
+if (-not $SkipNativeSkills) {
+    $ProfileScript = Join-Path $TemplateDir "scripts\skill_catalog.py"
+    & python $ProfileScript profile --skills-root (Join-Path $TemplateDir ".codex\skills") --project $ProjectDir "--brief=$Brief" --max-skills $MaxSkills --install
+    if ($LASTEXITCODE -ne 0) { throw "Native skill deployment failed; user files were preserved." }
 }
 
 $StatusScript = Join-Path $CodexHome "scripts\srednoff-os-status.ps1"

@@ -1,6 +1,6 @@
 ---
 name: nextjs-app-router-seo
-description: "Use this skill for Next.js App Router metadata, robots.ts, sitemap.ts, OG images, dynamic route SEO. Trigger when the task involves seo work related to Nextjs App Router SEO, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for Next.js App Router metadata, robots.ts, sitemap.ts, OG images, dynamic route SEO."
 ---
 
 # Nextjs App Router SEO

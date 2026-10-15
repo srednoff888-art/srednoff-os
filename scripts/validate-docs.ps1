@@ -29,7 +29,8 @@ $RequiredDocs = @(
     "risk-model.md",
     "validation.md",
     "benchmark-v2-plan.md",
-    "growth-web-miniapps-skill-pack.md"
+    "growth-web-miniapps-skill-pack.md",
+    "skill-modernization-2026-10.md"
 )
 
 if (-not (Test-Path -LiteralPath $DocsRoot -PathType Container)) {

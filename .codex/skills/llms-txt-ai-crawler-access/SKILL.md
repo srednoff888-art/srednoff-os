@@ -1,6 +1,6 @@
 ---
 name: llms-txt-ai-crawler-access
-description: "Use this skill for llms.txt, AI crawler access, policy files, AI search discoverability, content boundaries. Trigger when the task involves seo work related to LLMs txt AI Crawler Access, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for llms.txt, AI crawler access, policy files, AI search discoverability, content boundaries."
 ---
 
 # LLMs txt AI Crawler Access

@@ -1,6 +1,6 @@
 ---
 name: heuristic-usability-review
-description: "Use this skill for Nielsen-style usability heuristics, friction maps, workflow critique, remediation plans. Trigger when the task involves web design work related to Heuristic Usability Review, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for Nielsen-style usability heuristics, friction maps, workflow critique, remediation plans."
 ---
 
 # Heuristic Usability Review

@@ -1,6 +1,6 @@
 ---
 name: playwright-mcp-visual-qa
-description: Use when Playwright MCP is needed for controlled browser inspection, responsive visual QA, accessibility-tree checks, or reproducible UI validation of a website. Prefer normal Playwright tests or CLI for high-throughput local checks; use MCP when persistent exploratory browser context has concrete value.
+description: "Use Playwright MCP for stateful browser inspection and responsive visual QA; prefer focused tests or CLI when they provide equivalent evidence."
 ---
 
 # Playwright MCP Visual QA

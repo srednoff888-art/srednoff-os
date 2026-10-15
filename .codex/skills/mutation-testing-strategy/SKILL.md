@@ -1,6 +1,6 @@
 ---
 name: mutation-testing-strategy
-description: "Use this skill for mutation testing ideas, weak assertion detection, test suite hardening, critical logic coverage. Trigger when the task involves programming work related to Mutation Testing Strategy, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for mutation testing ideas, weak assertion detection, test suite hardening, critical logic coverage."
 ---
 
 # Mutation Testing Strategy

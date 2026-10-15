@@ -70,6 +70,12 @@ if ($Domains -contains "3d-web") {
     $Assumptions.Add("If no 3D stack is specified, choose the simplest stack that proves the product goal: model-viewer before custom Three.js/R3F.") | Out-Null
 }
 
+if ($Domains -contains "agents-research") {
+    $Questions.Clear()
+    $Assumptions.Clear()
+    $Assumptions.Add("System research does not require a project-specific visual interview.") | Out-Null
+}
+
 if ($Questions.Count -eq 0) {
     $Assumptions.Add("The provided brief is sufficient for first-pass implementation; continue with source ranking and validation gates.") | Out-Null
 }

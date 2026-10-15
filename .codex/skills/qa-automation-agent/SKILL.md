@@ -1,6 +1,6 @@
 ---
 name: qa-automation-agent
-description: "Use this skill for test strategy, E2E automation, visual regression, flaky test control, QA evidence. Trigger when the task involves agent profile work related to Qa Automation Agent, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for test strategy, E2E automation, visual regression, flaky test control, QA evidence."
 ---
 
 # Qa Automation Agent

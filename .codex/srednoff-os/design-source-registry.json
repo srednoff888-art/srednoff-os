@@ -394,6 +394,136 @@
       "copy_policy": "use only as a supplementary checklist after provenance review; defer to official standards and project evidence for accessibility, privacy, and compliance claims",
       "use_when": ["heuristic review", "UX audit", "design-system research"],
       "requires_user_prompt": true
+    },
+    {
+      "id": "vercel-agent-skills",
+      "name": "Vercel Agent Skills",
+      "url": "https://github.com/vercel-labs/agent-skills",
+      "kind": "workflow-reference",
+      "domains": [
+        "programming",
+        "ui-ux",
+        "web-design"
+      ],
+      "risk": "low",
+      "license": "Individual reviewed skills declare MIT; verify notices before any verbatim reuse",
+      "provenance": "Vercel repository commit 063bee94c3f4df8453406c830b0a7df0f2860278, inspected 2026-10-15",
+      "vetted": true,
+      "copy_policy": "Adapt targeted workflow concepts; prefer already-installed official plugin skills and verify React/version applicability",
+      "use_when": [
+        "React composition",
+        "React performance",
+        "component contracts"
+      ],
+      "requires_user_prompt": false
+    },
+    {
+      "id": "impeccable-design",
+      "name": "Impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "kind": "design-workflow-reference",
+      "domains": [
+        "ui-ux",
+        "web-design"
+      ],
+      "risk": "medium",
+      "license": "Apache-2.0; include required notices if distributing copied material",
+      "provenance": "Primary repository, skill references and LICENSE reviewed 2026-10-15; runtime binaries not installed",
+      "vetted": true,
+      "copy_policy": "Adapt product-context, critique and polish patterns; never change established design direction without task scope",
+      "use_when": [
+        "design critique",
+        "UI polish",
+        "design context"
+      ],
+      "requires_user_prompt": false
+    },
+    {
+      "id": "ui-ux-pro-max",
+      "name": "UI UX Pro Max",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "kind": "design-intelligence-candidate",
+      "domains": [
+        "ui-ux",
+        "web-design",
+        "3d-web"
+      ],
+      "risk": "medium",
+      "license": "MIT; preserve Next Level Builder copyright on copied resources",
+      "provenance": "Primary repository README and LICENSE inspected 2026-10-15; recommendation corpus not imported",
+      "vetted": false,
+      "copy_policy": "Treat search recommendations as hypotheses; validate against product, existing design system, accessibility and screenshots before use",
+      "use_when": [
+        "design research",
+        "palette typography candidates",
+        "UI UX recommendations"
+      ],
+      "requires_user_prompt": true
+    },
+    {
+      "id": "playwright-cli",
+      "name": "Playwright CLI",
+      "url": "https://github.com/microsoft/playwright-cli",
+      "kind": "browser-qa-cli",
+      "domains": [
+        "programming",
+        "ui-ux",
+        "web-design",
+        "3d-web"
+      ],
+      "risk": "medium",
+      "license": "Apache-2.0",
+      "provenance": "Official Microsoft repository README, current skill source and LICENSE inspected 2026-10-15",
+      "vetted": true,
+      "copy_policy": "Use an installed pinned CLI in task-scoped sessions; inspect current help and keep snapshots compact; prefer available environment browser tools when appropriate",
+      "use_when": [
+        "Playwright CLI",
+        "browser screenshots",
+        "reproducible UI defects"
+      ],
+      "requires_user_prompt": false
+    },
+    {
+      "id": "blender-official-mcp",
+      "name": "Blender Lab MCP",
+      "url": "https://www.blender.org/lab/mcp-server/",
+      "kind": "3d-authoring-mcp",
+      "domains": [
+        "3d-web"
+      ],
+      "risk": "high",
+      "license": "Verify official runtime license and all model/asset rights before installing or copying",
+      "provenance": "Official Blender Lab documentation inspected 2026-10-15 explicitly warns about unrestricted generated Python execution",
+      "vetted": false,
+      "copy_policy": "Use only after an isolated non-sensitive runtime and bounded reviewed operations are established; official status is not a sandbox",
+      "use_when": [
+        "Blender modeling",
+        "Blender scene authoring",
+        "GLB export"
+      ],
+      "requires_user_prompt": true
+    },
+    {
+      "id": "google-ads-official-mcp",
+      "name": "Google Ads MCP",
+      "url": "https://github.com/googleads/google-ads-mcp",
+      "kind": "advertising-reporting-mcp",
+      "domains": [
+        "seo-ppc-growth",
+        "growth",
+        "programming"
+      ],
+      "risk": "medium",
+      "license": "Apache-2.0",
+      "provenance": "Official Google repository and developer announcement inspected 2026-10-15; no account configured",
+      "vetted": true,
+      "copy_policy": "Use authorized reporting and resource metadata first; keep credentials private and do not infer write support or permissions",
+      "use_when": [
+        "Google Ads MCP",
+        "GAQL reporting",
+        "campaign diagnostics"
+      ],
+      "requires_user_prompt": true
     }
   ]
 }

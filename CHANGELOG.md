@@ -1,5 +1,36 @@
 # Changelog
 
+## 2026-10-15
+
+### Added
+
+- 17 provenance-pinned MIT workflows from Srednoff OS for Claude, plus six
+  authored workflows for React composition/performance, browser QA, Blender,
+  Google Ads reporting, and model-upgrade task evaluation.
+- Portable catalog audit, hash-based freshness checks, native project profiles,
+  ownership-aware installation, and a dry-run-first existing-library updater.
+- 24 catalog/update regression tests and six new selector scenarios.
+- Russian README and a source/license comparison of the Claude-to-Codex port.
+
+### Changed
+
+- Narrowed 192 trigger descriptions and specialized 105 existing workflows.
+- Kept the 4500-record kernel script-only; the installable library has 396 skills.
+- Moved the long SEO workflow behind progressive disclosure.
+- Selector tests inspect actual selected records, not echoed task text.
+- Explicit domains survive repository noise; unrelated Blender mappings are penalized.
+- Corrected mobile substring routing and suppressed visual interviews for OS research.
+- Added six sources to the registry and five official freshness-watchlist entries.
+- Preserved existing hooks, private connectors, and the user's model choice.
+
+### Verified
+
+- Selector 40/40; catalog/update tests 24/24; benchmark harness 9/9.
+- Metadata 396/396; structural catalog audit and portable index freshness pass.
+- Full local doctor: 45 OK, 1 historical-session warning, 0 FAIL.
+- Native init: explicit brief (4 skills) and empty brief (2 skills).
+- No multi-model behavioral or monetary ROI improvement is asserted.
+
 ## 2026-08-28
 
 ### Added

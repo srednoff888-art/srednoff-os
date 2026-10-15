@@ -1,6 +1,6 @@
 ---
 name: data-table-grid-ux
-description: "Use this skill for tables, grids, filters, sorting, density, keyboard navigation, responsive behavior. Trigger when the task involves web design work related to Data Table Grid UX, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for tables, grids, filters, sorting, density, keyboard navigation, responsive behavior."
 ---
 
 # Data Table Grid UX

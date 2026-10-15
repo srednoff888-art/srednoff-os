@@ -1,6 +1,6 @@
 ---
 name: staff-debugger-agent
-description: "Use this skill for reproduction-first debugging, root cause isolation, minimal fixes, regression tests. Trigger when the task involves agent profile work related to Staff Debugger Agent, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for reproduction-first debugging, root cause isolation, minimal fixes, regression tests."
 ---
 
 # Staff Debugger Agent

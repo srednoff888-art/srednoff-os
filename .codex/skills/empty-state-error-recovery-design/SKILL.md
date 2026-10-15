@@ -1,6 +1,6 @@
 ---
 name: empty-state-error-recovery-design
-description: "Use this skill for empty states, errors, offline states, partial failures, recovery paths, helpful microcopy. Trigger when the task involves web design work related to Empty State Error Recovery Design, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for empty states, errors, offline states, partial failures, recovery paths, helpful microcopy."
 ---
 
 # Empty State Error Recovery Design

@@ -1,6 +1,6 @@
 ---
 name: log-file-crawl-analysis
-description: "Use this skill for server log crawl analysis, bot behavior, wasted crawl paths, crawl budget, anomalies. Trigger when the task involves seo work related to Log File Crawl Analysis, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for server log crawl analysis, bot behavior, wasted crawl paths, crawl budget, anomalies."
 ---
 
 # Log File Crawl Analysis

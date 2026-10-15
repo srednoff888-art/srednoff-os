@@ -1,6 +1,6 @@
 ---
 name: design-qa-scorecard
-description: "Use this skill for scored UI audit, spacing, alignment, states, contrast, hierarchy, polish checklist. Trigger when the task involves web design work related to Design Qa Scorecard, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for scored UI audit, spacing, alignment, states, contrast, hierarchy, polish checklist."
 ---
 
 # Design Qa Scorecard

@@ -1,6 +1,6 @@
 ---
 name: python-cli-package-builder
-description: "Use this skill for Python CLI/package structure, pyproject.toml, console scripts, tests, linting, distribution. Trigger when the task involves programming work related to Python Cli Package Builder, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for Python CLI/package structure, pyproject.toml, console scripts, tests, linting, distribution."
 ---
 
 # Python Cli Package Builder

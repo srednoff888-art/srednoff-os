@@ -1,6 +1,6 @@
 ---
 name: serp-feature-rich-result-planner
-description: "Use this skill for SERP features, rich result eligibility, schema opportunities, result type strategy. Trigger when the task involves seo work related to Serp Feature Rich Result Planner, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for SERP features, rich result eligibility, schema opportunities, result type strategy."
 ---
 
 # Serp Feature Rich Result Planner

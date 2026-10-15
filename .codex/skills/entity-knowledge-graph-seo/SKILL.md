@@ -1,6 +1,6 @@
 ---
 name: entity-knowledge-graph-seo
-description: "Use this skill for entity clarity, schema graph, sameAs, author/org/product identity, knowledge graph signals. Trigger when the task involves seo work related to Entity Knowledge Graph SEO, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for entity clarity, schema graph, sameAs, author/org/product identity, knowledge graph signals."
 ---
 
 # Entity Knowledge Graph SEO

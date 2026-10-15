@@ -1,6 +1,6 @@
 ---
 name: docs-developer-portal-seo
-description: "Use this skill for documentation SEO, version canonicals, API docs, examples, internal links, freshness. Trigger when the task involves seo work related to Docs Developer Portal SEO, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for documentation SEO, version canonicals, API docs, examples, internal links, freshness."
 ---
 
 # Docs Developer Portal SEO

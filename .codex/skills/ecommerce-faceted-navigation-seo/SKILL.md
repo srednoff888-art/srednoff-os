@@ -1,6 +1,6 @@
 ---
 name: ecommerce-faceted-navigation-seo
-description: "Use this skill for facets, filters, pagination, canonical/noindex strategy, crawl traps, product listing SEO. Trigger when the task involves seo work related to Ecommerce Faceted Navigation SEO, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for facets, filters, pagination, canonical/noindex strategy, crawl traps, product listing SEO."
 ---
 
 # Ecommerce Faceted Navigation SEO

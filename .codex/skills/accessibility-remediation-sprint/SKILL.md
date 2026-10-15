@@ -1,6 +1,6 @@
 ---
 name: accessibility-remediation-sprint
-description: "Use this skill for turning accessibility audit findings into fixes, tasks, tests, and regression checks. Trigger when the task involves web design work related to Accessibility Remediation Sprint, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for turning accessibility audit findings into fixes, tasks, tests, and regression checks."
 ---
 
 # Accessibility Remediation Sprint

@@ -1,6 +1,6 @@
 ---
 name: security-reviewer-agent
-description: "Use this skill for security review, auth, secrets, injection, permissions, data exposure, exploit paths. Trigger when the task involves agent profile work related to Security Reviewer Agent, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for security review, auth, secrets, injection, permissions, data exposure, exploit paths."
 ---
 
 # Security Reviewer Agent

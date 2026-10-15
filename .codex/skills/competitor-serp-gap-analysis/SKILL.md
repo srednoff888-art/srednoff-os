@@ -1,6 +1,6 @@
 ---
 name: competitor-serp-gap-analysis
-description: "Use this skill for SERP competitors, content gaps, backlink/content angles, prioritization, opportunity mapping. Trigger when the task involves seo work related to Competitor Serp Gap Analysis, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for SERP competitors, content gaps, backlink/content angles, prioritization, opportunity mapping."
 ---
 
 # Competitor Serp Gap Analysis

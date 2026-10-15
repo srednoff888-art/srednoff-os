@@ -1,6 +1,6 @@
 ---
 name: trust-safety-content-moderation-ux
-description: "Use this skill for moderation UX, reports, appeals, safety queues, review workflows, user trust. Trigger when the task involves web design work related to Trust Safety Content Moderation UX, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for moderation UX, reports, appeals, safety queues, review workflows, user trust."
 ---
 
 # Trust Safety Content Moderation UX

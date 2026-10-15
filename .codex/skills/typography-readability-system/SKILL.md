@@ -1,6 +1,6 @@
 ---
 name: typography-readability-system
-description: "Use this skill for typographic scale, line height, measure, hierarchy, readability, responsive text. Trigger when the task involves web design work related to Typography Readability System, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for typographic scale, line height, measure, hierarchy, readability, responsive text."
 ---
 
 # Typography Readability System

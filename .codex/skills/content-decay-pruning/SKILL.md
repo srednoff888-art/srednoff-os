@@ -1,6 +1,6 @@
 ---
 name: content-decay-pruning
-description: "Use this skill for content decay analysis, pruning, merging, updating, redirecting, recovery prioritization. Trigger when the task involves seo work related to Content Decay Pruning, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for content decay analysis, pruning, merging, updating, redirecting, recovery prioritization."
 ---
 
 # Content Decay Pruning

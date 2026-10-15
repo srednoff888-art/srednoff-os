@@ -1,6 +1,6 @@
 ---
 name: secrets-env-rotation
-description: "Use this skill for secret inventory, env vars, rotation plans, safe dev/prod separation, leak response. Trigger when the task involves security work related to Secrets Env Rotation, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for secret inventory, env vars, rotation plans, safe dev/prod separation, leak response."
 ---
 
 # Secrets Env Rotation

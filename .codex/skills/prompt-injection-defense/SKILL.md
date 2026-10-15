@@ -1,6 +1,6 @@
 ---
 name: prompt-injection-defense
-description: "Use this skill for prompt injection, tool safety, retrieval boundaries, untrusted content handling, approvals. Trigger when the task involves ai security work related to Prompt Injection Defense, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for prompt injection, tool safety, retrieval boundaries, untrusted content handling, approvals."
 ---
 
 # Prompt Injection Defense

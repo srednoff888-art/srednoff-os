@@ -1,6 +1,6 @@
 ---
 name: typescript-strictness-migration
-description: "Use this skill for TypeScript strict mode, noImplicitAny, type narrowing, migration sequencing, typed APIs. Trigger when the task involves programming work related to Typescript Strictness Migration, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for TypeScript strict mode, noImplicitAny, type narrowing, migration sequencing, typed APIs."
 ---
 
 # Typescript Strictness Migration

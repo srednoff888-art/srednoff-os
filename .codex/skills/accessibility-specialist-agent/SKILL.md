@@ -1,6 +1,6 @@
 ---
 name: accessibility-specialist-agent
-description: "Use this skill for WCAG review, accessibility remediation, keyboard/screen-reader QA, inclusive design. Trigger when the task involves agent profile work related to Accessibility Specialist Agent, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for WCAG review, accessibility remediation, keyboard/screen-reader QA, inclusive design."
 ---
 
 # Accessibility Specialist Agent

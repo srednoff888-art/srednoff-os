@@ -1,33 +1,13 @@
 ---
 name: api-interface-design
-description: "Use this skill for REST/RPC contracts, versioning, error shapes, schemas, backward compatibility. Trigger when the task involves programming work related to API Interface Design, production implementation, audits, debugging, strategy, or validation."
+description: "Design or revise an HTTP/API contract, including errors, validation, pagination, retries, and backward compatibility."
 ---
 
 # API Interface Design
-
-Use this skill to handle Programming tasks focused on REST/RPC contracts, versioning, error shapes, schemas, backward compatibility.
-
-## Workflow
-
-1. Clarify the user outcome, constraints, current stack, and definition of done.
-2. Inspect the local repository or provided artifacts before proposing changes.
-3. Check official documentation when APIs, platform rules, SDK versions, policies, or production behavior may have changed.
-4. For non-trivial choices, compare proven open-source patterns or examples and adapt ideas without copying incompatible code.
-5. Implement the smallest production-ready change that satisfies the request.
-6. Validate with the most relevant checks: tests, lint, typecheck, build, browser/device review, audits, or manual scenario.
-7. Report changed files, commands run, remaining risks, and exact next steps.
-
-## Focus Checklist
-
-- Define scope and assumptions explicitly.
-- Prefer existing project conventions and tools.
-- Handle loading, empty, error, permission, and edge states where relevant.
-- Include security, privacy, performance, accessibility, and rollback considerations when they apply.
-- Keep output actionable and evidence-backed.
-
-## Guardrails
-
-- Do not break public contracts without migration guidance.
-- Do not perform destructive, paid, production, trading, publishing, or account-changing actions without explicit user confirmation.
-- Do not expose secrets, private keys, tokens, cookies, personal data, or confidential business data.
-- If validation is impossible, state exactly why and provide a manual verification path.
+Start from callers and ownership boundaries. Record request/response schemas and expected error semantics.
+## Decisions
+- Specify identifiers, nullability, authorization/tenant scope, pagination ordering, idempotency, timeout, and retry policy.
+- Use machine-readable schemas where the stack supports them. Preserve large integer identifiers without precision loss.
+- Version breaking changes or provide a migration path; do not silently reinterpret existing fields.
+## Acceptance
+Test valid and invalid input, auth failures, empty pages, duplicate retries, and old-client behavior. Confirm implementation matches the documented schema.

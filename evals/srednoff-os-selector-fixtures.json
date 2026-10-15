@@ -1,4 +1,61 @@
 [
+
+  {
+    "id": "python_precise_workflows",
+    "brief": "Review Alembic migration autogenerate and pytest fixtures for a SQLAlchemy service with asyncio cancellation.",
+    "budget": "deep",
+    "expectedAll": [
+      "alembic-migration-workflows",
+      "pytest-fixtures-and-parametrization",
+      "sqlalchemy-orm-patterns",
+      "python-async-await-patterns"
+    ]
+  },
+  {
+    "id": "frontend_workflow_contracts",
+    "brief": "Fix React composition boolean props, profile React performance, and verify with playwright-cli.",
+    "budget": "balanced",
+    "expectedAll": [
+      "react-composition-contracts",
+      "react-performance-investigation",
+      "playwright-cli-task-workflow"
+    ]
+  },
+  {
+    "id": "blender_asset_delivery",
+    "brief": "Model the product in Blender and export GLB with dimensions and tested web materials.",
+    "budget": "deep",
+    "expectedAll": [
+      "blender-web-asset-authoring"
+    ]
+  },
+  {
+    "id": "advertising_account_reporting",
+    "brief": "Use Google Ads MCP to inspect GAQL reports and validate campaign metrics without writes.",
+    "budget": "deep",
+    "expectedAll": [
+      "google-ads-mcp-reporting"
+    ]
+  },
+  {
+    "id": "model_upgrade_quality",
+    "brief": "Run skill behavior evals for model upgrade evals, preserve the user's model and grade actual artifacts.",
+    "budget": "deep",
+    "expectedAll": [
+      "agent-model-upgrade-evals"
+    ]
+  },
+  {
+    "id": "negative_unrelated_workflow",
+    "brief": "Correct a documentation typo in a command example.",
+    "budget": "lean",
+    "excludedSkills": [
+      "blender-web-asset-authoring",
+      "google-ads-mcp-reporting",
+      "react-composition-contracts",
+      "python-async-await-patterns"
+    ]
+  },
   {
     "id": "agent_hooks_evals",
     "brief": "Codex hooks agents evals prompt secret scanner selector regression suite",

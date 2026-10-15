@@ -1,6 +1,6 @@
 ---
 name: seo-ci-quality-gate
-description: "Use this skill for SEO checks in CI, metadata, canonicals, links, robots, sitemap, noindex regressions. Trigger when the task involves seo work related to SEO CI Quality Gate, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for SEO checks in CI, metadata, canonicals, links, robots, sitemap, noindex regressions."
 ---
 
 # SEO CI Quality Gate

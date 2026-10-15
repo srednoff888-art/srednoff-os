@@ -1,33 +1,19 @@
 ---
 name: brand-theme-factory
-description: "Use this skill for brand direction, color systems, typography, tone, reusable visual themes. Trigger when the task involves web design work related to Brand Theme Factory, production implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for brand direction, color systems, typography, tone, reusable visual themes."
 ---
 
 # Brand Theme Factory
 
-Use this skill to handle Web Design tasks focused on brand direction, color systems, typography, tone, reusable visual themes.
+## Decisions
 
-## Workflow
+- Extract semantic color, typography, spacing, and state tokens from the approved brand assets.
+- Map brand tokens to existing components rather than scattering raw colors across pages.
 
-1. Clarify the user outcome, constraints, current stack, and definition of done.
-2. Inspect the local repository or provided artifacts before proposing changes.
-3. Check official documentation when APIs, platform rules, SDK versions, policies, or production behavior may have changed.
-4. For non-trivial choices, compare proven open-source patterns or examples and adapt ideas without copying incompatible code.
-5. Implement the smallest production-ready change that satisfies the request.
-6. Validate with the most relevant checks: tests, lint, typecheck, build, browser/device review, audits, or manual scenario.
-7. Report changed files, commands run, remaining risks, and exact next steps.
+## Acceptance
 
-## Focus Checklist
+Check contrast, theme switching, long content, and representative component screenshots.
 
-- Define scope and assumptions explicitly.
-- Prefer existing project conventions and tools.
-- Handle loading, empty, error, permission, and edge states where relevant.
-- Include security, privacy, performance, accessibility, and rollback considerations when they apply.
-- Keep output actionable and evidence-backed.
-
-## Guardrails
+## Constraints
 
 - Do not create one-note palettes or decorative styling that weakens usability.
-- Do not perform destructive, paid, production, trading, publishing, or account-changing actions without explicit user confirmation.
-- Do not expose secrets, private keys, tokens, cookies, personal data, or confidential business data.
-- If validation is impossible, state exactly why and provide a manual verification path.

@@ -18,7 +18,7 @@ $HomeRegistryPath = Join-Path $CodexHome "srednoff-os\design-source-registry.jso
 $RegistryPath = if ($LocalRegistryPath -and (Test-Path -LiteralPath $LocalRegistryPath -PathType Leaf)) { $LocalRegistryPath } else { $HomeRegistryPath }
 $Mode = (& $ModeRouter -Brief $Brief -Json | ConvertFrom-Json)
 $Lower = $Brief.ToLowerInvariant()
-$IsSystemResearch = $Lower -match '(daily.*research|srednoff os.*research|skills agents selectors|research.*all domains)'
+$IsSystemResearch = $Lower -match '(daily.*research|srednoff os.*(research|maintenance)|skills agents selectors|research.*all domains)'
 
 function Resolve-PathOrLiteral {
     param([string]$Path)
@@ -51,14 +51,14 @@ if (Test-Any @('ui/ux','ux','ui\b','web design','landing','dashboard','component
     $Domains.Add("web-design") | Out-Null
 }
 
-if (Test-Any @('\b3d\b','three','react three fiber','r3f','webgl','webgpu','gltf','model-viewer','babylon','shader','xr','ar\b','configurator')) {
+if (Test-Any @('\b3d\b','three','react three fiber','r3f','webgl','webgpu','gltf','glb','blender','model-viewer','babylon','shader','xr','ar\b','configurator')) {
     $Domains.Add("3d-web") | Out-Null
     if (Test-Any @('configurator','viewer','hero','landing','product','interface','ui\b','ux')) {
         $Domains.Add("ui-ux") | Out-Null
     }
 }
 
-if (Test-Any @('mobile','ios','android','expo','react native','swiftui','kotlin','eas','app store','testflight')) {
+if (Test-Any @('\bmobile\b','\bios\b','\bandroid\b','\bexpo\b','react native','\bswiftui\b','\bkotlin\b','\beas\b','app store','testflight')) {
     $Domains.Add("mobile-apps") | Out-Null
 }
 

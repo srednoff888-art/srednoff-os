@@ -1,6 +1,6 @@
 ---
 name: web-rendering-edge-ssr-seo
-description: "Use this skill for SSR, SSG, edge rendering, streaming, crawlability, speed, cache strategy. Trigger when the task involves seo work related to Web Rendering Edge SSR SEO, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for SSR, SSG, edge rendering, streaming, crawlability, speed, cache strategy."
 ---
 
 # Web Rendering Edge SSR SEO

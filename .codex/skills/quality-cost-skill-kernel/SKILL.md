@@ -1,6 +1,6 @@
 ---
 name: quality-cost-skill-kernel
-description: Token-aware routing kernel for selecting the smallest useful set of Codex skills, agent profiles, scripts, and review passes. Use at the start of new or existing projects, before substantial implementation, audits, research, UI/UX, SEO, PPC, crypto, app, automation, or multi-domain work, when the goal is high quality without unnecessary token spend.
+description: "Select relevant capabilities from the script-only quality/cost catalog while retaining legacy-plus quotas, domain limits, and non-overlap."
 ---
 
 # Quality Cost Skill Kernel

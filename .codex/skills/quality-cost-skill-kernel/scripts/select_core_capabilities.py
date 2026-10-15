@@ -9,6 +9,7 @@ import json
 import os
 import re
 from collections import Counter
+from functools import lru_cache
 from pathlib import Path
 
 
@@ -324,6 +325,29 @@ DOMAIN_SKILL_HINTS = {
 }
 
 DIRECT_SKILL_ALIASES = [
+    ("react-composition-contracts", ("compound components", "boolean props", "react composition")),
+    ("react-performance-investigation", ("react performance", "react waterfall", "nextjs performance")),
+    ("playwright-cli-task-workflow", ("playwright cli", "playwright-cli")),
+    ("blender-web-asset-authoring", ("blender", "blend to glb", "моделирование blender")),
+    ("google-ads-mcp-reporting", ("google ads mcp", "gaql")),
+    ("agent-model-upgrade-evals", ("model upgrade evals", "skill model compatibility", "skill behavior evals")),
+    ("alembic-migration-workflows", ("alembic migration", "alembic autogenerate", "alembic heads")),
+    ("pytest-fixtures-and-parametrization", ("pytest fixture", "pytest fixtures", "pytest parametrize")),
+    ("python-async-await-patterns", ("asyncio", "python taskgroup", "python cancellation")),
+    ("sqlalchemy-orm-patterns", ("sqlalchemy", "orm n+1", "detached instance")),
+    ("python-packaging-pyproject-poetry-uv", ("python packaging", "poetry lock", "uv sync")),
+    ("python-profiling-cprofile-pyspy", ("cprofile", "py-spy")),
+    ("memory-leak-detection-python", ("python memory leak", "tracemalloc")),
+    ("structured-logging-python", ("python structured logging", "structlog")),
+    ("docker-compose-local-dev-environments", ("docker compose", "compose healthcheck")),
+    ("dockerfile-best-practices-python", ("python dockerfile", "python container image")),
+    ("github-actions-python-ci-pipeline", ("python github actions", "python ci pipeline")),
+    ("kubernetes-deployment-manifests-basics", ("kubernetes deployment", "kubernetes rollout")),
+    ("python-typing-and-mypy-strictness", ("mypy", "python strict typing")),
+    ("python-dataclasses-pydantic-validation", ("pydantic validation", "python dataclass")),
+    ("python-debugger-pdb-production-debugging", ("python pdb", "pdb breakpoint")),
+    ("legacy-python-codebase-modernization", ("legacy python", "python modernization")),
+    ("no-ai-slop", ("edit prose", "audit writing", "human writing")),
     (
         "webflow-mcp-site-governance",
         ("webflow mcp", "webflow designer mcp", "webflow cms mcp", "webflow api mcp"),
@@ -733,7 +757,13 @@ def load_skill_index(skill_index_path: Path, skills_root: Path | None) -> list[d
         if built:
             return prepare_skill_index(built)
     if skill_index_path.exists():
-        return prepare_skill_index(load_json(skill_index_path))
+        items = load_json(skill_index_path)
+        base = skill_index_path.parent.parent if skill_index_path.parent.name == ".codex" else skill_index_path.parent
+        for item in items:
+            path = Path(str(item.get("path", "")).replace("\\", "/"))
+            if not path.is_absolute():
+                item["path"] = str((base / path).resolve())
+        return prepare_skill_index(items)
     return []
 
 
@@ -750,6 +780,7 @@ def prepare_skill_index(skill_index: list[dict]) -> list[dict]:
     return prepared
 
 
+@lru_cache(maxsize=8192)
 def term_score(term: str, haystack: str) -> int:
     term = normalize(term)
     if not term:
@@ -871,7 +902,19 @@ def select_records(
     per_domain_limit = {"lean": 3, "balanced": 4, "deep": 6, "turbo": 8}[budget]
     minimum_score = {"lean": 4.0, "balanced": 3.0, "deep": 2.0, "turbo": 1.0}[budget]
 
+    # Reserve a distinct capability for explicit task domains before repo-wide signals.
+    reserved = []
+    reserved_domains = set()
+    reserved_slugs = set()
     for score, record in scored:
+        if (record["domain_id"] in intent_domains and record["domain_id"] not in reserved_domains
+                and record["capability_slug"] not in reserved_slugs and score >= minimum_score
+                and not (record["group"] == 3 and budget == "lean")):
+            reserved.append((score, record))
+            reserved_domains.add(record["domain_id"])
+            reserved_slugs.add(record["capability_slug"])
+
+    for score, record in reserved + scored:
         if score < minimum_score:
             continue
         group = record["group"]
@@ -953,6 +996,8 @@ def score_skill_mapping(record: dict, skill: dict, record_tokens: set[str]) -> i
         "crypto": "crypto-web3-defi",
         "threejs": "three-d-web-xr-graphics",
         "three": "three-d-web-xr-graphics",
+        "blender": "three-d-web-xr-graphics",
+        "google-ads": "ppc-growth-marketing",
     }
     for hint, domain_id in specialized_domains.items():
         if hint in skill_name and record["domain_id"] != domain_id:

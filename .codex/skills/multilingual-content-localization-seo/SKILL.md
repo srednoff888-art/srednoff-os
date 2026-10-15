@@ -1,6 +1,6 @@
 ---
 name: multilingual-content-localization-seo
-description: "Use this skill for translation SEO, locale keyword maps, regional intent, localized metadata and slugs. Trigger when the task involves seo work related to Multilingual Content Localization SEO, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for translation SEO, locale keyword maps, regional intent, localized metadata and slugs."
 ---
 
 # Multilingual Content Localization SEO

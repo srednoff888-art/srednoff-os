@@ -1,6 +1,6 @@
 ---
 name: yandex-direct-v501-operations
-description: "Использовать для технической работы с Яндекс Директом, Метрикой и Wordstat через API: ЕПК/Unified Campaign, v501 JSON, комбинаторные объявления, UTM, отчёты, фиды, ретаргетинг, аудит и безопасные изменения в аккаунте. Требует точной работы с 64-битными ID, пост-проверки каждой записи и явного согласования платных или производственных изменений."
+description: "Use for safe Yandex Direct JSON v501/EPK operations, precise IDs and money values, reports, Metrika, and approved Wordstat research."
 ---
 
 # Яндекс Директ v501: операции

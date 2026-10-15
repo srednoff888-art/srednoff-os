@@ -1,6 +1,6 @@
 ---
 name: supply-chain-sbom-sca
-description: "Use this skill for SBOM, SCA, lockfile review, provenance, package integrity, supply-chain risk. Trigger when the task involves security work related to Supply Chain SBOM SCA, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for SBOM, SCA, lockfile review, provenance, package integrity, supply-chain risk."
 ---
 
 # Supply Chain SBOM SCA

@@ -1,6 +1,6 @@
 ---
 name: github-agentic-workflows-safety
-description: Design, audit, migrate, or debug GitHub Agentic Workflows (`gh aw`) and repository automations that compile natural-language workflow Markdown into GitHub Actions. Use for `.github/workflows/*.md`, generated `.lock.yml`, safe outputs, agent permissions, network policy, workflow version pinning, scheduled AI maintenance, IssueOps, PR automation, or gh-aw upgrades.
+description: "Build or review GitHub Agentic Workflows with pinned tooling, scoped permissions, sandbox provenance, safe outputs, and validated generated workflows."
 ---
 
 # GitHub Agentic Workflows Safety

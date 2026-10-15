@@ -1,6 +1,6 @@
 ---
 name: mcp-protocol-migration
-description: Audit, plan, implement, or review Model Context Protocol version and SDK migrations. Use for MCP 2026-07-28, stateless Streamable HTTP, server/discover, removal of initialize or Mcp-Session-Id, MCP Tasks extension changes, full JSON Schema 2020-12 tool schemas, OAuth issuer hardening, deprecated roots/sampling/logging, or cross-version client/server compatibility.
+description: "Upgrade MCP clients or servers across protocol/SDK versions using documented wire contracts, explicit era negotiation, compatibility tests, and rollback."
 ---
 
 # MCP Protocol Migration

@@ -1,6 +1,6 @@
 ---
 name: international-hreflang-seo
-description: "Use this skill for hreflang clusters, locale canonicals, regional targeting, multilingual page mapping. Trigger when the task involves seo work related to International Hreflang SEO, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for hreflang clusters, locale canonicals, regional targeting, multilingual page mapping."
 ---
 
 # International Hreflang SEO

@@ -1,6 +1,6 @@
 ---
 name: site-crawler-automation
-description: "Use this skill for automated site crawling, exports, issue classification, reproducible technical SEO audits. Trigger when the task involves seo work related to Site Crawler Automation, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for automated site crawling, exports, issue classification, reproducible technical SEO audits."
 ---
 
 # Site Crawler Automation

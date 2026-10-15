@@ -1,6 +1,6 @@
 ---
 name: onboarding-product-tour-ux
-description: "Use this skill for activation, walkthroughs, checklists, progressive disclosure, first-run UX. Trigger when the task involves web design work related to Onboarding Product Tour UX, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for activation, walkthroughs, checklists, progressive disclosure, first-run UX."
 ---
 
 # Onboarding Product Tour UX

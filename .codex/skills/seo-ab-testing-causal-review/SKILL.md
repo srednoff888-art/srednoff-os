@@ -1,6 +1,6 @@
 ---
 name: seo-ab-testing-causal-review
-description: "Use this skill for SEO experiments, causal analysis, rollouts, guardrails, interpretation of noisy organic data. Trigger when the task involves seo work related to SEO A/B Testing Causal Review, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for SEO experiments, causal analysis, rollouts, guardrails, interpretation of noisy organic data."
 ---
 
 # SEO A/B Testing Causal Review

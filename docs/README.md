@@ -17,6 +17,9 @@ This directory is the public documentation layer for Srednoff OS v2.1.2.
 | [Growth, Web, and Mini Apps pack](growth-web-miniapps-skill-pack.md) | 54 selector-first skills for paid media, SEO, websites, Telegram, and Mini Apps |
 
 ## Documentation Principles
+See [October skill modernization](skill-modernization-2026-10.md) for the Claude
+comparison, native deployment, source decisions, and current evidence boundaries.
+
 
 - Keep startup instructions compact and link to deeper references.
 - Document facts that are backed by files, scripts, manifests, or CI evidence.

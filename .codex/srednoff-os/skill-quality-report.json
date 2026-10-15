@@ -1,0 +1,2782 @@
+{
+  "schema_version": 1,
+  "skills": 396,
+  "errors": [],
+  "finding_counts": {},
+  "duplicate_bodies": [],
+  "records": [
+    {
+      "name": "3d-accessibility-fallbacks",
+      "description_chars": 128,
+      "body_words": 227,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "3d-art-director-agent",
+      "description_chars": 131,
+      "body_words": 227,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "3d-asset-pipeline-agent",
+      "description_chars": 107,
+      "body_words": 226,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "3d-experience-brief-intake",
+      "description_chars": 143,
+      "body_words": 230,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "3d-interaction-gesture-design",
+      "description_chars": 102,
+      "body_words": 93,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "3d-lighting-camera-composition",
+      "description_chars": 124,
+      "body_words": 93,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "3d-performance-budget-gate",
+      "description_chars": 89,
+      "body_words": 229,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "3d-product-configurator",
+      "description_chars": 133,
+      "body_words": 100,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "3d-visual-screenshot-validator",
+      "description_chars": 83,
+      "body_words": 227,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "accessibility-remediation-sprint",
+      "description_chars": 104,
+      "body_words": 240,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "accessibility-specialist-agent",
+      "description_chars": 103,
+      "body_words": 234,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "accessibility-wcag-aa",
+      "description_chars": 134,
+      "body_words": 95,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "admin-crud-ux-patterns",
+      "description_chars": 102,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ads-landing-page-message-match",
+      "description_chars": 109,
+      "body_words": 71,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ads-reporting-roas-dashboard",
+      "description_chars": 95,
+      "body_words": 62,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "agent-browser-automation-qa",
+      "description_chars": 256,
+      "body_words": 302,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "agent-instruction-migration",
+      "description_chars": 161,
+      "body_words": 391,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "agent-model-upgrade-evals",
+      "description_chars": 151,
+      "body_words": 143,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo",
+      "description_chars": 152,
+      "body_words": 163,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "agents-sdk-production-workflow",
+      "description_chars": 277,
+      "body_words": 942,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ai-evals-regression-suite",
+      "description_chars": 101,
+      "body_words": 238,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ai-generated-asset-art-direction",
+      "description_chars": 105,
+      "body_words": 241,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ai-search-geo-audit",
+      "description_chars": 108,
+      "body_words": 59,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "alembic-migration-workflows",
+      "description_chars": 132,
+      "body_words": 433,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "analytics-engineer-agent",
+      "description_chars": 266,
+      "body_words": 212,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "android-jetpack-compose-builder",
+      "description_chars": 97,
+      "body_words": 59,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "android-reviewer-agent",
+      "description_chars": 278,
+      "body_words": 213,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "animation-motion-polish",
+      "description_chars": 122,
+      "body_words": 79,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "animation-scroll-performance",
+      "description_chars": 98,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "anti-ai-slop-design-critic",
+      "description_chars": 141,
+      "body_words": 138,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "api-contract-test-generator",
+      "description_chars": 97,
+      "body_words": 238,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "api-interface-design",
+      "description_chars": 117,
+      "body_words": 85,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "api-platform-agent",
+      "description_chars": 258,
+      "body_words": 212,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "app-analytics-crash-reporting",
+      "description_chars": 108,
+      "body_words": 60,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "app-ci-cd-release-automation",
+      "description_chars": 98,
+      "body_words": 58,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "app-store-aso-metadata",
+      "description_chars": 94,
+      "body_words": 57,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "app-store-release-agent",
+      "description_chars": 275,
+      "body_words": 214,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "app-store-testflight-release",
+      "description_chars": 108,
+      "body_words": 62,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "astro-islands-seo",
+      "description_chars": 105,
+      "body_words": 238,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "attribution-incrementality-review",
+      "description_chars": 113,
+      "body_words": 60,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "auth-oauth-session-architecture",
+      "description_chars": 119,
+      "body_words": 88,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "backend-engineer-agent",
+      "description_chars": 263,
+      "body_words": 215,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "background-jobs-queues",
+      "description_chars": 97,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "billing-entitlements-state-machine",
+      "description_chars": 106,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "blender-web-asset-authoring",
+      "description_chars": 152,
+      "body_words": 142,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "brand-art-director-agent",
+      "description_chars": 250,
+      "body_words": 213,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "brand-theme-factory",
+      "description_chars": 92,
+      "body_words": 60,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "browser-devtools-qa",
+      "description_chars": 112,
+      "body_words": 61,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "cache-invalidation-design",
+      "description_chars": 90,
+      "body_words": 232,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "canonical-redirect-audit",
+      "description_chars": 104,
+      "body_words": 233,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "checkout-trust-risk-ux",
+      "description_chars": 95,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ci-cd-automation",
+      "description_chars": 104,
+      "body_words": 62,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ci-failure-triage",
+      "description_chars": 109,
+      "body_words": 238,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "clasp-local-dev-deploy",
+      "description_chars": 102,
+      "body_words": 60,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "cloud-infrastructure-agent",
+      "description_chars": 262,
+      "body_words": 210,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "cms-editorial-layouts",
+      "description_chars": 98,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "code-copy-provenance-review",
+      "description_chars": 137,
+      "body_words": 228,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "code-simplification",
+      "description_chars": 129,
+      "body_words": 94,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "codebase-archaeologist-agent",
+      "description_chars": 261,
+      "body_words": 213,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "codebase-map-indexer",
+      "description_chars": 126,
+      "body_words": 239,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "codex-plugin-governance",
+      "description_chars": 138,
+      "body_words": 534,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "codex-subagent-orchestration",
+      "description_chars": 246,
+      "body_words": 358,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "coding-agent-evals-harness",
+      "description_chars": 254,
+      "body_words": 339,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "competitor-serp-gap-analysis",
+      "description_chars": 112,
+      "body_words": 234,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "component-librarian-agent",
+      "description_chars": 172,
+      "body_words": 225,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "component-provenance-license-review",
+      "description_chars": 160,
+      "body_words": 227,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "component-storybook-workshop",
+      "description_chars": 108,
+      "body_words": 66,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "content-brief-keyword-map",
+      "description_chars": 99,
+      "body_words": 63,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "content-decay-pruning",
+      "description_chars": 108,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "content-design-microcopy",
+      "description_chars": 100,
+      "body_words": 65,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "content-strategist-agent",
+      "description_chars": 107,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "context-engineering",
+      "description_chars": 106,
+      "body_words": 64,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "conversion-rate-optimizer-agent",
+      "description_chars": 259,
+      "body_words": 212,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "conversion-tracking-gtm-ga4",
+      "description_chars": 96,
+      "body_words": 61,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "copy-adapt-component-pipeline",
+      "description_chars": 187,
+      "body_words": 226,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "core-web-vitals-frontend",
+      "description_chars": 99,
+      "body_words": 62,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "crawl-indexability-sitemaps",
+      "description_chars": 103,
+      "body_words": 61,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "crawler-analyst-agent",
+      "description_chars": 102,
+      "body_words": 233,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "creative-landing-page-builder",
+      "description_chars": 104,
+      "body_words": 66,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "cross-language-test-gate",
+      "description_chars": 102,
+      "body_words": 230,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "cross-platform-design-parity",
+      "description_chars": 101,
+      "body_words": 61,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "crypto-market-research",
+      "description_chars": 101,
+      "body_words": 55,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "customer-support-ops-agent",
+      "description_chars": 264,
+      "body_words": 213,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "dark-mode-theme-system",
+      "description_chars": 101,
+      "body_words": 239,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "dashboard-ux-information-density",
+      "description_chars": 93,
+      "body_words": 60,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "data-engineer-agent",
+      "description_chars": 267,
+      "body_words": 212,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "data-import-export-pipeline",
+      "description_chars": 98,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "data-table-grid-ux",
+      "description_chars": 102,
+      "body_words": 239,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "data-visualization-agent",
+      "description_chars": 259,
+      "body_words": 210,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "database-engineer-agent",
+      "description_chars": 272,
+      "body_words": 210,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "database-schema-migration-auditor",
+      "description_chars": 126,
+      "body_words": 79,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "debugging-error-recovery",
+      "description_chars": 98,
+      "body_words": 62,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "defi-protocol-analysis",
+      "description_chars": 109,
+      "body_words": 55,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "dependency-license-risk-audit",
+      "description_chars": 107,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "dependency-minimalism-gate",
+      "description_chars": 111,
+      "body_words": 226,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "dependency-upgrade-agent",
+      "description_chars": 260,
+      "body_words": 213,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "deprecation-migration",
+      "description_chars": 104,
+      "body_words": 59,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "design-brief-autogenerator",
+      "description_chars": 288,
+      "body_words": 195,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "design-brief-intake-router",
+      "description_chars": 215,
+      "body_words": 230,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "design-qa-agent-v2",
+      "description_chars": 103,
+      "body_words": 224,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "design-qa-scorecard",
+      "description_chars": 102,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "design-system-component-qa",
+      "description_chars": 100,
+      "body_words": 53,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "design-system-lead-agent",
+      "description_chars": 253,
+      "body_words": 211,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "design-system-migration-plan",
+      "description_chars": 103,
+      "body_words": 238,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "design-token-compiler",
+      "description_chars": 123,
+      "body_words": 225,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "design-token-extraction",
+      "description_chars": 101,
+      "body_words": 55,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "devops-platform-agent",
+      "description_chars": 259,
+      "body_words": 210,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "docker-compose-local-dev-environments",
+      "description_chars": 148,
+      "body_words": 426,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "dockerfile-best-practices-python",
+      "description_chars": 148,
+      "body_words": 419,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "docs-developer-portal-seo",
+      "description_chars": 104,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "docs-information-architect-agent",
+      "description_chars": 256,
+      "body_words": 211,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "documentation-adrs",
+      "description_chars": 87,
+      "body_words": 56,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ecommerce-faceted-navigation-seo",
+      "description_chars": 109,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ecommerce-product-page-ux",
+      "description_chars": 97,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "education-ai-guardrails",
+      "description_chars": 274,
+      "body_words": 295,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "email-deliverability-transactional",
+      "description_chars": 100,
+      "body_words": 231,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "empty-state-error-recovery-design",
+      "description_chars": 109,
+      "body_words": 238,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "entity-knowledge-graph-seo",
+      "description_chars": 110,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "exchange-api-ccxt-integration",
+      "description_chars": 101,
+      "body_words": 61,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "experiment-analyst-agent",
+      "description_chars": 257,
+      "body_words": 212,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "expo-eas-release-gate",
+      "description_chars": 124,
+      "body_words": 227,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "external-prompt-pattern-miner",
+      "description_chars": 251,
+      "body_words": 481,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "feature-flag-rollout",
+      "description_chars": 102,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "figma-mcp-design-system-delivery",
+      "description_chars": 280,
+      "body_words": 138,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "figma-to-code-implementation",
+      "description_chars": 102,
+      "body_words": 58,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "file-upload-storage-pipeline",
+      "description_chars": 95,
+      "body_words": 234,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "finance-billing-agent",
+      "description_chars": 264,
+      "body_words": 213,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "firebase-app-backend",
+      "description_chars": 99,
+      "body_words": 58,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "firebase-auth-security-rules",
+      "description_chars": 96,
+      "body_words": 57,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "firebase-google-cloud-agent",
+      "description_chars": 256,
+      "body_words": 214,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "floating-ui-overlay-positioning",
+      "description_chars": 103,
+      "body_words": 237,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "forms-checkout-ux",
+      "description_chars": 101,
+      "body_words": 52,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "frontend-design-critic-agent",
+      "description_chars": 108,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "frontend-design-system",
+      "description_chars": 96,
+      "body_words": 61,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "frontend-implementation-agent",
+      "description_chars": 265,
+      "body_words": 211,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "frontend-ui-engineering",
+      "description_chars": 160,
+      "body_words": 143,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "fullstack-integrator-agent",
+      "description_chars": 269,
+      "body_words": 215,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "fuzzing-security-tests",
+      "description_chars": 112,
+      "body_words": 234,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "geo-ai-search-readiness-v2",
+      "description_chars": 127,
+      "body_words": 228,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "git-workflow-versioning",
+      "description_chars": 107,
+      "body_words": 61,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "github-actions-python-ci-pipeline",
+      "description_chars": 134,
+      "body_words": 464,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "github-agentic-workflows-safety",
+      "description_chars": 150,
+      "body_words": 658,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "github-research",
+      "description_chars": 258,
+      "body_words": 123,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "gltf-asset-pipeline",
+      "description_chars": 108,
+      "body_words": 58,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "gltf-optimization-pipeline-v2",
+      "description_chars": 120,
+      "body_words": 228,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "google-ads-account-audit",
+      "description_chars": 102,
+      "body_words": 62,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "google-ads-conversion-quality",
+      "description_chars": 148,
+      "body_words": 134,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "google-ads-mcp-reporting",
+      "description_chars": 142,
+      "body_words": 113,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "google-ads-pmax-experiment",
+      "description_chars": 141,
+      "body_words": 134,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "google-ads-policy-risk-gate",
+      "description_chars": 130,
+      "body_words": 135,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "google-ads-search-query-hygiene",
+      "description_chars": 126,
+      "body_words": 133,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "google-ads-shopping-feed-health",
+      "description_chars": 138,
+      "body_words": 134,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "google-workspace-addons",
+      "description_chars": 99,
+      "body_words": 59,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "google-workspace-apps-script",
+      "description_chars": 97,
+      "body_words": 62,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "growth-design-director-agent",
+      "description_chars": 109,
+      "body_words": 226,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "growth-design-message-match",
+      "description_chars": 107,
+      "body_words": 229,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "growth-engineer-agent",
+      "description_chars": 100,
+      "body_words": 233,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "growth-experiment-backlog",
+      "description_chars": 111,
+      "body_words": 226,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "headless-component-composition",
+      "description_chars": 120,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "healthcare-ai-research-guardrails",
+      "description_chars": 286,
+      "body_words": 314,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "heuristic-usability-review",
+      "description_chars": 107,
+      "body_words": 240,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "hiring-ai-fairness-review",
+      "description_chars": 277,
+      "body_words": 307,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "iconography-illustration-system",
+      "description_chars": 109,
+      "body_words": 237,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "image-video-seo",
+      "description_chars": 108,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "in-app-purchases-subscriptions",
+      "description_chars": 92,
+      "body_words": 52,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "interaction-state-matrix",
+      "description_chars": 103,
+      "body_words": 56,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "internal-linking-ia",
+      "description_chars": 97,
+      "body_words": 59,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "international-hreflang-seo",
+      "description_chars": 103,
+      "body_words": 234,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "internationalized-rtl-ui",
+      "description_chars": 95,
+      "body_words": 234,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ios-reviewer-agent",
+      "description_chars": 269,
+      "body_words": 212,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ios-swiftui-app-builder",
+      "description_chars": 97,
+      "body_words": 58,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "issue-to-pr-agent",
+      "description_chars": 112,
+      "body_words": 240,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "javascript-seo-rendering",
+      "description_chars": 109,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "keyword-query-negative-mining",
+      "description_chars": 88,
+      "body_words": 65,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "kubernetes-deployment-manifests-basics",
+      "description_chars": 123,
+      "body_words": 461,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "landing-page-conversion-design",
+      "description_chars": 107,
+      "body_words": 67,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "language-runtime-router",
+      "description_chars": 146,
+      "body_words": 225,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "language-specialist-agent",
+      "description_chars": 134,
+      "body_words": 227,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "legacy-python-codebase-modernization",
+      "description_chars": 222,
+      "body_words": 431,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "legal-risk-reviewer-agent",
+      "description_chars": 268,
+      "body_words": 219,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "llms-txt-ai-crawler-access",
+      "description_chars": 108,
+      "body_words": 239,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "local-seo-entity-pages",
+      "description_chars": 97,
+      "body_words": 56,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "localization-i18n-engineering",
+      "description_chars": 95,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "localization-lead-agent",
+      "description_chars": 252,
+      "body_words": 211,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "log-file-crawl-analysis",
+      "description_chars": 104,
+      "body_words": 238,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mcp-apps-ui-workflow",
+      "description_chars": 136,
+      "body_words": 494,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mcp-integration-builder",
+      "description_chars": 95,
+      "body_words": 59,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mcp-protocol-migration",
+      "description_chars": 153,
+      "body_words": 629,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mcp-security-review",
+      "description_chars": 285,
+      "body_words": 521,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "memory-leak-detection-python",
+      "description_chars": 226,
+      "body_words": 442,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "meta-ads-account-audit",
+      "description_chars": 141,
+      "body_words": 134,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "meta-ads-audience-experiment",
+      "description_chars": 144,
+      "body_words": 132,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "meta-ads-capi-deduplication",
+      "description_chars": 139,
+      "body_words": 135,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "meta-ads-catalog-dpa",
+      "description_chars": 118,
+      "body_words": 132,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "meta-ads-creative-fatigue",
+      "description_chars": 125,
+      "body_words": 133,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "meta-ads-creative-testing",
+      "description_chars": 104,
+      "body_words": 53,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "meta-ads-policy-risk-gate",
+      "description_chars": 137,
+      "body_words": 133,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "migration-lead-agent",
+      "description_chars": 258,
+      "body_words": 213,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ml-ai-engineer-agent",
+      "description_chars": 261,
+      "body_words": 215,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mobile-app-permissions-privacy",
+      "description_chars": 103,
+      "body_words": 57,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mobile-architect-agent",
+      "description_chars": 275,
+      "body_words": 216,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mobile-asset-budget-audit",
+      "description_chars": 119,
+      "body_words": 227,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mobile-crash-analytics-gate",
+      "description_chars": 122,
+      "body_words": 226,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mobile-e2e-device-testing",
+      "description_chars": 127,
+      "body_words": 89,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mobile-first-qa",
+      "description_chars": 111,
+      "body_words": 59,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mobile-offline-first-review",
+      "description_chars": 132,
+      "body_words": 226,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mobile-performance-agent",
+      "description_chars": 97,
+      "body_words": 227,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mobile-permissions-privacy-gate",
+      "description_chars": 131,
+      "body_words": 226,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mobile-release-reviewer-agent",
+      "description_chars": 105,
+      "body_words": 227,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mobile-ux-platform-parity",
+      "description_chars": 129,
+      "body_words": 225,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "monorepo-boundary-architecture",
+      "description_chars": 119,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "motion-design-agent",
+      "description_chars": 258,
+      "body_words": 210,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "motion-design-system",
+      "description_chars": 103,
+      "body_words": 52,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "multi-brand-whitelabel-ui",
+      "description_chars": 99,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "multi-tenant-saas-architecture",
+      "description_chars": 110,
+      "body_words": 240,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "multilingual-content-localization-seo",
+      "description_chars": 103,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "mutation-testing-strategy",
+      "description_chars": 115,
+      "body_words": 240,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "navigation-ia-ux",
+      "description_chars": 102,
+      "body_words": 59,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "nextjs-app-router-seo",
+      "description_chars": 100,
+      "body_words": 237,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "nextjs-production-app-architecture",
+      "description_chars": 111,
+      "body_words": 56,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "no-ai-slop",
+      "description_chars": 258,
+      "body_words": 529,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "no-code-low-code-agent",
+      "description_chars": 266,
+      "body_words": 214,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "node-package-release-engineering",
+      "description_chars": 115,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "nuxt-seo-module-workflow",
+      "description_chars": 82,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "observability-instrumentation",
+      "description_chars": 108,
+      "body_words": 53,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "onboarding-product-tour-ux",
+      "description_chars": 94,
+      "body_words": 232,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "onchain-data-analytics",
+      "description_chars": 101,
+      "body_words": 54,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "operations-automation-agent",
+      "description_chars": 264,
+      "body_words": 210,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "paid-media-attribution-governance",
+      "description_chars": 139,
+      "body_words": 132,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "paid-media-budget-pacing",
+      "description_chars": 128,
+      "body_words": 132,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "paid-media-experiment-design",
+      "description_chars": 146,
+      "body_words": 137,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "paid-search-risk-agent",
+      "description_chars": 116,
+      "body_words": 225,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "performance-max-structure",
+      "description_chars": 104,
+      "body_words": 54,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "performance-optimization",
+      "description_chars": 143,
+      "body_words": 117,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "performance-sre-agent",
+      "description_chars": 93,
+      "body_words": 233,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "playwright-cli-task-workflow",
+      "description_chars": 154,
+      "body_words": 112,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "playwright-mcp-visual-qa",
+      "description_chars": 143,
+      "body_words": 148,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "playwright-screenshot-baselines",
+      "description_chars": 112,
+      "body_words": 234,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "portfolio-risk-rebalancing",
+      "description_chars": 110,
+      "body_words": 56,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ppc-budget-bid-optimizer",
+      "description_chars": 137,
+      "body_words": 88,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ppc-landing-quality-score-gate",
+      "description_chars": 130,
+      "body_words": 230,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ppc-policy-compliance-check",
+      "description_chars": 102,
+      "body_words": 60,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ppc-strategist-agent",
+      "description_chars": 263,
+      "body_words": 214,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "pr-review-response-agent",
+      "description_chars": 115,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "premium-saas-ui-polish",
+      "description_chars": 97,
+      "body_words": 60,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "pricing-onboarding-ux",
+      "description_chars": 103,
+      "body_words": 54,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "principal-architect-agent",
+      "description_chars": 111,
+      "body_words": 239,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "principal-code-reviewer-agent",
+      "description_chars": 98,
+      "body_words": 229,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "privacy-compliance-agent",
+      "description_chars": 262,
+      "body_words": 210,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "product-builder",
+      "description_chars": 140,
+      "body_words": 126,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "product-manager-agent",
+      "description_chars": 250,
+      "body_words": 212,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "production-review",
+      "description_chars": 175,
+      "body_words": 117,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "programmatic-seo-pages",
+      "description_chars": 111,
+      "body_words": 56,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "programming-agent-pack-selector",
+      "description_chars": 117,
+      "body_words": 228,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "prompt-injection-defense",
+      "description_chars": 110,
+      "body_words": 237,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "prompt-security-agent",
+      "description_chars": 263,
+      "body_words": 216,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "promptfoo-evals-redteam-ci",
+      "description_chars": 214,
+      "body_words": 338,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "property-based-testing",
+      "description_chars": 122,
+      "body_words": 77,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "push-notifications-deep-links",
+      "description_chars": 98,
+      "body_words": 54,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "pwa-offline-installability",
+      "description_chars": 100,
+      "body_words": 54,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "pytest-fixtures-and-parametrization",
+      "description_chars": 200,
+      "body_words": 415,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "python-async-await-patterns",
+      "description_chars": 176,
+      "body_words": 380,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "python-cli-package-builder",
+      "description_chars": 111,
+      "body_words": 237,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "python-dataclasses-pydantic-validation",
+      "description_chars": 211,
+      "body_words": 407,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "python-debugger-pdb-production-debugging",
+      "description_chars": 237,
+      "body_words": 469,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "python-packaging-pyproject-poetry-uv",
+      "description_chars": 221,
+      "body_words": 405,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "python-profiling-cprofile-pyspy",
+      "description_chars": 214,
+      "body_words": 445,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "python-typing-and-mypy-strictness",
+      "description_chars": 173,
+      "body_words": 358,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "qa-automation-agent",
+      "description_chars": 101,
+      "body_words": 239,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "quality-cost-skill-kernel",
+      "description_chars": 138,
+      "body_words": 348,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "r3f-scene-pattern-library",
+      "description_chars": 157,
+      "body_words": 229,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "rag-evaluation-agent",
+      "description_chars": 264,
+      "body_words": 213,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "react-aria-advanced-interactions",
+      "description_chars": 102,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "react-composition-contracts",
+      "description_chars": 119,
+      "body_words": 114,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "react-native-expo-app-builder",
+      "description_chars": 100,
+      "body_words": 57,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "react-performance-investigation",
+      "description_chars": 145,
+      "body_words": 101,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "react-three-fiber-components",
+      "description_chars": 98,
+      "body_words": 60,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "realtime-websockets-sse",
+      "description_chars": 106,
+      "body_words": 233,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "record-replay-skill-miner",
+      "description_chars": 280,
+      "body_words": 371,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "refactoring-coach-agent",
+      "description_chars": 260,
+      "body_words": 210,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "release-manager-agent",
+      "description_chars": 101,
+      "body_words": 234,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "release-notes-changelog-automation",
+      "description_chars": 102,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "requirements-analyst-agent",
+      "description_chars": 264,
+      "body_words": 215,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "responsive-layout-system",
+      "description_chars": 105,
+      "body_words": 50,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "robots-xrobots-meta-controls",
+      "description_chars": 88,
+      "body_words": 233,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "scroll-driven-3d-storytelling",
+      "description_chars": 104,
+      "body_words": 64,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "search-console-api-automation",
+      "description_chars": 108,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "search-console-ga4-diagnostics",
+      "description_chars": 105,
+      "body_words": 59,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "search-console-performance-triage",
+      "description_chars": 132,
+      "body_words": 130,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "search-content-editor-agent",
+      "description_chars": 261,
+      "body_words": 210,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "search-indexing-rag",
+      "description_chars": 112,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "secrets-env-rotation",
+      "description_chars": 103,
+      "body_words": 239,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "security-hardening",
+      "description_chars": 111,
+      "body_words": 58,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "security-reviewer-agent",
+      "description_chars": 104,
+      "body_words": 237,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo-ab-testing-causal-review",
+      "description_chars": 112,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo-change-impact-monitoring",
+      "description_chars": 136,
+      "body_words": 131,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo-ci-quality-gate",
+      "description_chars": 103,
+      "body_words": 238,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo-content-authorship-e-e-a-t",
+      "description_chars": 130,
+      "body_words": 132,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo-cwv-rum-observability",
+      "description_chars": 117,
+      "body_words": 131,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo-digital-pr-link-risk",
+      "description_chars": 136,
+      "body_words": 134,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo-director-agent",
+      "description_chars": 107,
+      "body_words": 232,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo-ecommerce-product-feed",
+      "description_chars": 135,
+      "body_words": 130,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo-image-media-pipeline",
+      "description_chars": 136,
+      "body_words": 130,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo-internal-linking-architecture",
+      "description_chars": 134,
+      "body_words": 131,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo-log-file-crawl-analysis",
+      "description_chars": 139,
+      "body_words": 133,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo-migration-redirects",
+      "description_chars": 110,
+      "body_words": 54,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo-search-intent-clustering",
+      "description_chars": 134,
+      "body_words": 131,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo-structured-data-validation",
+      "description_chars": 134,
+      "body_words": 131,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "seo-technical-auditor-agent",
+      "description_chars": 153,
+      "body_words": 93,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "serp-feature-rich-result-planner",
+      "description_chars": 102,
+      "body_words": 238,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "serp-to-page-brief-generator",
+      "description_chars": 129,
+      "body_words": 230,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "shader-and-postprocessing-review",
+      "description_chars": 124,
+      "body_words": 228,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "shader-material-design",
+      "description_chars": 130,
+      "body_words": 99,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "site-accessibility-performance-launch",
+      "description_chars": 147,
+      "body_words": 138,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "site-analytics-consent-instrumentation",
+      "description_chars": 147,
+      "body_words": 135,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "site-api-integration-boundaries",
+      "description_chars": 148,
+      "body_words": 137,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "site-commerce-conversion-architecture",
+      "description_chars": 134,
+      "body_words": 135,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "site-content-model-cms",
+      "description_chars": 155,
+      "body_words": 136,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "site-crawler-automation",
+      "description_chars": 109,
+      "body_words": 234,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "site-design-system-delivery",
+      "description_chars": 129,
+      "body_words": 136,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "site-editorial-governance",
+      "description_chars": 140,
+      "body_words": 135,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "site-forms-lead-capture",
+      "description_chars": 146,
+      "body_words": 137,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "site-i18n-localization-delivery",
+      "description_chars": 142,
+      "body_words": 136,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "site-platform-architecture",
+      "description_chars": 159,
+      "body_words": 136,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "site-production-launch-gate",
+      "description_chars": 162,
+      "body_words": 138,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "sitemap-index-sharding",
+      "description_chars": 112,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "skill-catalog-orchestrator",
+      "description_chars": 121,
+      "body_words": 159,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "smart-contract-security-review",
+      "description_chars": 104,
+      "body_words": 61,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "solidity-foundry-test-suite",
+      "description_chars": 103,
+      "body_words": 58,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "source-driven-development",
+      "description_chars": 114,
+      "body_words": 61,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "source-first-api-verifier",
+      "description_chars": 142,
+      "body_words": 228,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "source-ranking-roi-selector",
+      "description_chars": 121,
+      "body_words": 246,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "spec-driven-development",
+      "description_chars": 102,
+      "body_words": 56,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "sql-query-plan-optimizer",
+      "description_chars": 101,
+      "body_words": 236,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "sqlalchemy-orm-patterns",
+      "description_chars": 147,
+      "body_words": 399,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "sre-incident-commander-agent",
+      "description_chars": 265,
+      "body_words": 213,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "staff-debugger-agent",
+      "description_chars": 103,
+      "body_words": 232,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "storybook-interaction-tests",
+      "description_chars": 103,
+      "body_words": 237,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "storybook-mcp-component-validation",
+      "description_chars": 265,
+      "body_words": 131,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "structured-data-schema-org",
+      "description_chars": 96,
+      "body_words": 63,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "structured-logging-python",
+      "description_chars": 238,
+      "body_words": 445,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "supervisor-orchestrator-agent",
+      "description_chars": 276,
+      "body_words": 218,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "supply-chain-sbom-sca",
+      "description_chars": 96,
+      "body_words": 233,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "swiftui-state-data-flow",
+      "description_chars": 100,
+      "body_words": 52,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "technical-seo-audit",
+      "description_chars": 108,
+      "body_words": 52,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "technical-writer-agent",
+      "description_chars": 257,
+      "body_words": 210,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "telegram-bot-api-reliability",
+      "description_chars": 144,
+      "body_words": 136,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "telegram-bot-solution-architecture",
+      "description_chars": 124,
+      "body_words": 132,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "telegram-mini-app-analytics-attribution",
+      "description_chars": 155,
+      "body_words": 136,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "telegram-mini-app-backend-contract",
+      "description_chars": 148,
+      "body_words": 136,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "telegram-mini-app-growth-loop",
+      "description_chars": 147,
+      "body_words": 134,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "telegram-mini-app-init-data-authentication",
+      "description_chars": 146,
+      "body_words": 140,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "telegram-mini-app-payments-policy",
+      "description_chars": 139,
+      "body_words": 135,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "telegram-mini-app-performance-budget",
+      "description_chars": 145,
+      "body_words": 138,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "telegram-mini-app-platform-ui",
+      "description_chars": 148,
+      "body_words": 138,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "telegram-mini-app-product-brief",
+      "description_chars": 140,
+      "body_words": 137,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "telegram-mini-app-release-gate",
+      "description_chars": 145,
+      "body_words": 137,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "test-architect-agent",
+      "description_chars": 263,
+      "body_words": 214,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "test-driven-development",
+      "description_chars": 94,
+      "body_words": 61,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "three-vs-babylon-vs-model-viewer",
+      "description_chars": 145,
+      "body_words": 233,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "threejs-mcp-apps-preview",
+      "description_chars": 256,
+      "body_words": 154,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "threejs-scene-architecture",
+      "description_chars": 97,
+      "body_words": 58,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "tokenomics-whitepaper-review",
+      "description_chars": 95,
+      "body_words": 52,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "topical-authority-cluster-builder",
+      "description_chars": 99,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "trading-risk-analyst-agent",
+      "description_chars": 256,
+      "body_words": 211,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "trading-strategy-backtesting",
+      "description_chars": 105,
+      "body_words": 51,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "trust-safety-content-moderation-ux",
+      "description_chars": 96,
+      "body_words": 238,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "turbo-mode-controller",
+      "description_chars": 175,
+      "body_words": 226,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "turbo-multi-agent-review",
+      "description_chars": 114,
+      "body_words": 227,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "turbo-source-benchmark",
+      "description_chars": 177,
+      "body_words": 226,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "turbo-validation-gate",
+      "description_chars": 125,
+      "body_words": 227,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "typescript-strictness-migration",
+      "description_chars": 107,
+      "body_words": 238,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "typography-readability-system",
+      "description_chars": 100,
+      "body_words": 235,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ui-art-director-agent",
+      "description_chars": 130,
+      "body_words": 226,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ui-component-source-router",
+      "description_chars": 169,
+      "body_words": 230,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "ux-researcher-agent",
+      "description_chars": 246,
+      "body_words": 210,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "visual-hierarchy-layout-review",
+      "description_chars": 101,
+      "body_words": 59,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "visual-qa-agent",
+      "description_chars": 271,
+      "body_words": 215,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "visual-regression-design-gate",
+      "description_chars": 135,
+      "body_words": 225,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "wallet-transaction-flow",
+      "description_chars": 99,
+      "body_words": 56,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "web-rendering-edge-ssr-seo",
+      "description_chars": 92,
+      "body_words": 239,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "web3-crypto-security-agent",
+      "description_chars": 248,
+      "body_words": 214,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "webapp-visual-regression",
+      "description_chars": 99,
+      "body_words": 59,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "webflow-mcp-site-governance",
+      "description_chars": 245,
+      "body_words": 167,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "webgl-performance-agent",
+      "description_chars": 91,
+      "body_words": 228,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "webgl-webgpu-performance",
+      "description_chars": 103,
+      "body_words": 60,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "webgpu-tsl-rendering-fallback",
+      "description_chars": 272,
+      "body_words": 138,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "xr-ar-web-experiences",
+      "description_chars": 94,
+      "body_words": 59,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "yandex-direct-account-audit",
+      "description_chars": 142,
+      "body_words": 134,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "yandex-direct-bid-strategy-review",
+      "description_chars": 140,
+      "body_words": 135,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "yandex-direct-campaign-architecture",
+      "description_chars": 128,
+      "body_words": 134,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "yandex-direct-feed-campaigns",
+      "description_chars": 123,
+      "body_words": 133,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "yandex-direct-goal-attribution",
+      "description_chars": 128,
+      "body_words": 132,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "yandex-direct-policy-risk-gate",
+      "description_chars": 126,
+      "body_words": 134,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "yandex-direct-query-negative-mining",
+      "description_chars": 121,
+      "body_words": 133,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "yandex-direct-v501-operations",
+      "description_chars": 132,
+      "body_words": 645,
+      "findings": [],
+      "validation": "structural-only"
+    }
+  ],
+  "claim_boundary": "Metadata and lint do not prove task quality, token ROI, or model compatibility."
+}

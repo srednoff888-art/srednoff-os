@@ -1,33 +1,19 @@
 ---
 name: documentation-adrs
-description: "Use this skill for README, ADRs, runbooks, changelogs, decision records, operator docs. Trigger when the task involves programming work related to Documentation Adrs, production implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for README, ADRs, runbooks, changelogs, decision records, operator docs."
 ---
 
 # Documentation Adrs
 
-Use this skill to handle Programming tasks focused on README, ADRs, runbooks, changelogs, decision records, operator docs.
+## Decisions
 
-## Workflow
+- Record the actual decision, constraints, considered alternatives, consequences, and revisit trigger.
+- Link code or operational evidence and identify the owner; avoid generic architecture essays.
 
-1. Clarify the user outcome, constraints, current stack, and definition of done.
-2. Inspect the local repository or provided artifacts before proposing changes.
-3. Check official documentation when APIs, platform rules, SDK versions, policies, or production behavior may have changed.
-4. For non-trivial choices, compare proven open-source patterns or examples and adapt ideas without copying incompatible code.
-5. Implement the smallest production-ready change that satisfies the request.
-6. Validate with the most relevant checks: tests, lint, typecheck, build, browser/device review, audits, or manual scenario.
-7. Report changed files, commands run, remaining risks, and exact next steps.
+## Acceptance
 
-## Focus Checklist
+Verify references and ensure a reviewer can explain why the chosen option fits.
 
-- Define scope and assumptions explicitly.
-- Prefer existing project conventions and tools.
-- Handle loading, empty, error, permission, and edge states where relevant.
-- Include security, privacy, performance, accessibility, and rollback considerations when they apply.
-- Keep output actionable and evidence-backed.
-
-## Guardrails
+## Constraints
 
 - Do not document unverified behavior as fact.
-- Do not perform destructive, paid, production, trading, publishing, or account-changing actions without explicit user confirmation.
-- Do not expose secrets, private keys, tokens, cookies, personal data, or confidential business data.
-- If validation is impossible, state exactly why and provide a manual verification path.

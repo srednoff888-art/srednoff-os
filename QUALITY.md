@@ -2,7 +2,29 @@
 
 This file documents what is currently verified and what is intentionally not promised.
 
-## Current Smoke Status
+## October 2026 Verification
+
+Verified 2026-10-15 for maintenance package `v2.1.2-20261015`.
+
+| Check | Result |
+|---|---:|
+| Actual-record selector | 40/40 |
+| Catalog and installation regressions | 24/24 |
+| Benchmark-harness regressions | 9/9 |
+| Skill metadata | 396/396 |
+| Structural catalog audit and index freshness | PASS |
+| Source registry | 34 sources |
+| Documentation | 11 files |
+| Native project init, explicit / empty brief | 4 / 2 installed skills |
+| Full local doctor | 45 OK, 1 WARN, 0 FAIL |
+| PowerShell parser / Bash syntax | PASS |
+
+The environment warning is the broad historical-entrypoint scan, including
+donor checkouts. Third-party instructions were not forcibly synchronized.
+Structural checks and deterministic routing do not establish multi-model task
+quality or monetary ROI. CI status is commit-specific in GitHub Actions.
+
+## Historical August Smoke Status
 
 Last verified: 2026-08-28.
 

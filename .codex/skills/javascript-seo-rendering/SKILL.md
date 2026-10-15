@@ -1,6 +1,6 @@
 ---
 name: javascript-seo-rendering
-description: "Use this skill for JavaScript SEO, SSR/SSG, rendered DOM, crawler limitations, hydration and indexing issues. Trigger when the task involves seo work related to Javascript SEO Rendering, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for JavaScript SEO, SSR/SSG, rendered DOM, crawler limitations, hydration and indexing issues."
 ---
 
 # Javascript SEO Rendering

@@ -1,33 +1,13 @@
 ---
 name: shader-material-design
-description: "Use this skill for custom shaders, materials, postprocessing, visual effects, uniforms, GLSL patterns. Trigger when the task involves 3d web work related to Shader Material Design, production implementation, audits, debugging, strategy, or validation."
+description: "Develop or repair a specific real-time shader or material, with explicit renderer, color-space, precision, and device constraints."
 ---
 
 # Shader Material Design
-
-Use this skill to handle 3D Web tasks focused on custom shaders, materials, postprocessing, visual effects, uniforms, GLSL patterns.
-
-## Workflow
-
-1. Clarify the user outcome, constraints, current stack, and definition of done.
-2. Inspect the local repository or provided artifacts before proposing changes.
-3. Check official documentation when APIs, platform rules, SDK versions, policies, or production behavior may have changed.
-4. For non-trivial choices, compare proven open-source patterns or examples and adapt ideas without copying incompatible code.
-5. Implement the smallest production-ready change that satisfies the request.
-6. Validate with the most relevant checks: tests, lint, typecheck, build, browser/device review, audits, or manual scenario.
-7. Report changed files, commands run, remaining risks, and exact next steps.
-
-## Focus Checklist
-
-- Define scope and assumptions explicitly.
-- Prefer existing project conventions and tools.
-- Handle loading, empty, error, permission, and edge states where relevant.
-- Include security, privacy, performance, accessibility, and rollback considerations when they apply.
-- Keep output actionable and evidence-backed.
-
-## Guardrails
-
-- Do not use shader effects that make UI unreadable or inaccessible.
-- Do not perform destructive, paid, production, trading, publishing, or account-changing actions without explicit user confirmation.
-- Do not expose secrets, private keys, tokens, cookies, personal data, or confidential business data.
-- If validation is impossible, state exactly why and provide a manual verification path.
+Identify the target renderer and shader language: WebGL GLSL, WebGPU WGSL, or Three.js TSL. Preserve the selected project stack.
+## Decisions
+- Specify inputs, uniforms, time units, coordinate space, linear/sRGB conversion, tone mapping, blending, and depth behavior.
+- Control precision and texture sampling costs. Avoid unstable divisions, undefined derivatives, and frame-rate-dependent animation.
+- Review provenance before adapting shader code; a public demo is not a reuse license.
+## Acceptance
+Compile on the actual target renderer, inspect console errors, compare screenshots, and capture frame-time on mobile and desktop. Verify reduced motion, canvas visibility, and fallback behavior.

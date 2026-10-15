@@ -27,6 +27,12 @@ jobs:
       - name: Benchmark harness regressions
         run: python -m unittest discover -s benchmarks -p "test_*.py" -v
 
+      - name: Skill catalog regressions and freshness
+        run: |
+          python -m unittest discover -s tests -v
+          python scripts/skill_catalog.py index --relative-base . --output .codex/skill-index.json --check
+          python scripts/skill_catalog.py audit --output .codex/srednoff-os/skill-quality-report.json --check
+
       - name: PowerShell parse check
         shell: pwsh
         run: |
@@ -102,6 +108,12 @@ jobs:
 
       - name: Benchmark harness regressions
         run: python -m unittest discover -s benchmarks -p "test_*.py" -v
+
+      - name: Skill catalog regressions and freshness
+        run: |
+          python -m unittest discover -s tests -v
+          python scripts/skill_catalog.py index --relative-base . --output .codex/skill-index.json --check
+          python scripts/skill_catalog.py audit --output .codex/srednoff-os/skill-quality-report.json --check
 
       - name: Bash syntax
         shell: bash

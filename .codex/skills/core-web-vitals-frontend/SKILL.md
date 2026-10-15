@@ -1,33 +1,19 @@
 ---
 name: core-web-vitals-frontend
-description: "Use this skill for LCP, CLS, INP, rendering performance, image/font loading, frontend vitals fixes. Trigger when the task involves seo work related to Core Web Vitals Frontend, production implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for LCP, CLS, INP, rendering performance, image/font loading, frontend vitals fixes."
 ---
 
 # Core Web Vitals Frontend
 
-Use this skill to handle SEO tasks focused on LCP, CLS, INP, rendering performance, image/font loading, frontend vitals fixes.
+## Decisions
 
-## Workflow
+- Separate field LCP/INP/CLS from lab results and reproduce on representative devices/network profiles.
+- Use a trace to identify critical resources, long tasks, layout shifts, and interaction bottlenecks.
 
-1. Clarify the user outcome, constraints, current stack, and definition of done.
-2. Inspect the local repository or provided artifacts before proposing changes.
-3. Check official documentation when APIs, platform rules, SDK versions, policies, or production behavior may have changed.
-4. For non-trivial choices, compare proven open-source patterns or examples and adapt ideas without copying incompatible code.
-5. Implement the smallest production-ready change that satisfies the request.
-6. Validate with the most relevant checks: tests, lint, typecheck, build, browser/device review, audits, or manual scenario.
-7. Report changed files, commands run, remaining risks, and exact next steps.
+## Acceptance
 
-## Focus Checklist
+Compare repeated measurements and verify the change does not regress accessibility or functionality.
 
-- Define scope and assumptions explicitly.
-- Prefer existing project conventions and tools.
-- Handle loading, empty, error, permission, and edge states where relevant.
-- Include security, privacy, performance, accessibility, and rollback considerations when they apply.
-- Keep output actionable and evidence-backed.
-
-## Guardrails
+## Constraints
 
 - Do not trade accessibility or correctness for synthetic scores.
-- Do not perform destructive, paid, production, trading, publishing, or account-changing actions without explicit user confirmation.
-- Do not expose secrets, private keys, tokens, cookies, personal data, or confidential business data.
-- If validation is impossible, state exactly why and provide a manual verification path.

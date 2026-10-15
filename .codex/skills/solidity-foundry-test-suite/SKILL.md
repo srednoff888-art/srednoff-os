@@ -1,33 +1,19 @@
 ---
 name: solidity-foundry-test-suite
-description: "Use this skill for Solidity development, Foundry tests, fuzzing, invariants, gas snapshots, fork tests. Trigger when the task involves crypto work related to Solidity Foundry Test Suite, production implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for Solidity development, Foundry tests, fuzzing, invariants, gas snapshots, fork tests."
 ---
 
 # Solidity Foundry Test Suite
 
-Use this skill to handle Crypto tasks focused on Solidity development, Foundry tests, fuzzing, invariants, gas snapshots, fork tests.
+## Decisions
 
-## Workflow
+- Define contract invariants, actors, state transitions, and realistic fork block inputs.
+- Use isolated fixtures, adversarial actors, fuzz bounds, and invariant handlers that do not assume the answer.
 
-1. Clarify the user outcome, constraints, current stack, and definition of done.
-2. Inspect the local repository or provided artifacts before proposing changes.
-3. Check official documentation when APIs, platform rules, SDK versions, policies, or production behavior may have changed.
-4. For non-trivial choices, compare proven open-source patterns or examples and adapt ideas without copying incompatible code.
-5. Implement the smallest production-ready change that satisfies the request.
-6. Validate with the most relevant checks: tests, lint, typecheck, build, browser/device review, audits, or manual scenario.
-7. Report changed files, commands run, remaining risks, and exact next steps.
+## Acceptance
 
-## Focus Checklist
+Show a meaningful mutation fails and record seed/fork version.
 
-- Define scope and assumptions explicitly.
-- Prefer existing project conventions and tools.
-- Handle loading, empty, error, permission, and edge states where relevant.
-- Include security, privacy, performance, accessibility, and rollback considerations when they apply.
-- Keep output actionable and evidence-backed.
-
-## Guardrails
+## Constraints
 
 - Do not skip tests for value-bearing contract changes.
-- Do not perform destructive, paid, production, trading, publishing, or account-changing actions without explicit user confirmation.
-- Do not expose secrets, private keys, tokens, cookies, personal data, or confidential business data.
-- If validation is impossible, state exactly why and provide a manual verification path.

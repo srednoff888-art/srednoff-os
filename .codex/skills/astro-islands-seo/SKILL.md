@@ -1,6 +1,6 @@
 ---
 name: astro-islands-seo
-description: "Use this skill for Astro static output, islands hydration, content collections, CWV, schema and metadata. Trigger when the task involves seo work related to Astro Islands SEO, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for Astro static output, islands hydration, content collections, CWV, schema and metadata."
 ---
 
 # Astro Islands SEO

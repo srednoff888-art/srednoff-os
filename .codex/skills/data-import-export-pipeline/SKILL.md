@@ -1,6 +1,6 @@
 ---
 name: data-import-export-pipeline
-description: "Use this skill for CSV/XLSX/JSON import/export, validation, preview, dedupe, rollback, audit logs. Trigger when the task involves programming work related to Data Import Export Pipeline, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for CSV/XLSX/JSON import/export, validation, preview, dedupe, rollback, audit logs."
 ---
 
 # Data Import Export Pipeline

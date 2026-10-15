@@ -1,6 +1,6 @@
 ---
 name: admin-crud-ux-patterns
-description: "Use this skill for admin CRUD flows, bulk actions, confirmations, auditability, permissions, recovery. Trigger when the task involves web design work related to Admin Crud UX Patterns, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for admin CRUD flows, bulk actions, confirmations, auditability, permissions, recovery."
 ---
 
 # Admin Crud UX Patterns

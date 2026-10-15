@@ -1,6 +1,6 @@
 ---
 name: fuzzing-security-tests
-description: "Use this skill for fuzz tests for parsers, APIs, file handlers, encoders, validators, security-sensitive inputs. Trigger when the task involves security work related to Fuzzing Security Tests, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for fuzz tests for parsers, APIs, file handlers, encoders, validators, security-sensitive inputs."
 ---
 
 # Fuzzing Security Tests

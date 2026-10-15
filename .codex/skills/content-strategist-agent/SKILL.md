@@ -1,6 +1,6 @@
 ---
 name: content-strategist-agent
-description: "Use this skill for content strategy, briefs, topical authority, pruning, editorial planning, search intent. Trigger when the task involves agent profile work related to Content Strategist Agent, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for content strategy, briefs, topical authority, pruning, editorial planning, search intent."
 ---
 
 # Content Strategist Agent

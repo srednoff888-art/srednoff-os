@@ -1,6 +1,6 @@
 ---
 name: cms-editorial-layouts
-description: "Use this skill for CMS-driven pages, editorial templates, rich text rendering, content governance. Trigger when the task involves web design work related to CMS Editorial Layouts, implementation, audits, debugging, strategy, or validation."
+description: "Use this skill for CMS-driven pages, editorial templates, rich text rendering, content governance."
 ---
 
 # CMS Editorial Layouts

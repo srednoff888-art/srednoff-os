@@ -1,5 +1,34 @@
 # Srednoff OS Public Release Note
 
+## October Maintenance: v2.1.2-20261015
+
+**Code. Design. Advertising. 3D. Websites. UI/UX.**
+
+By Ivan Srednoff (Иван Среднёв), [Srednoff.agency](https://srednoff.agency).
+
+This update ports useful workflows from the Claude edition without importing
+its runtime-specific hooks or pretending to switch the user's model.
+
+| Area | Delivered |
+|---|---|
+| Code | React composition/performance; 16 focused Python/infra workflows |
+| Design and UI/UX | Specific acceptance criteria, task-based critique, smaller triggers |
+| Advertising | Read-only Google Ads MCP workflow, experiment and attribution rigor |
+| 3D | Blender source-to-GLB authoring and target-viewer validation |
+| Catalog | 396 installable skills; 4500 script-only capability records |
+| Deployment | Native profiles, resource hashes, conflicts preserved, backup-first updater |
+| Evidence | 40 routing scenarios, 24 catalog/update tests, 9 harness tests |
+
+The structural audit passes without errors, catchall triggers, or duplicate
+bodies. This is not a claim that every workflow has been independently
+benchmarked on every model. The local doctor reports 45 OK, 1 historical-session
+warning, and 0 failures. Exact-commit Windows/Ubuntu CI is required for publication.
+
+See [modernization decisions](docs/skill-modernization-2026-10.md),
+[Russian README](README.ru.md), and [current quality evidence](QUALITY.md).
+
+## Original July Release
+
 Release date: 2026-07-09
 
 Srednoff OS v2.1.2 is a quality/cost-aware operating layer for Codex. This release closes the vNext checkpoint run and packages the public core for sharing, review, and reuse.
