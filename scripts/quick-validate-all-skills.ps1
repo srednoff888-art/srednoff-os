@@ -24,6 +24,15 @@ if (-not (Test-Path -LiteralPath $SkillsRoot)) {
 
 $SkillDirs = Get-ChildItem -LiteralPath $SkillsRoot -Directory |
     Where-Object { Test-Path -LiteralPath (Join-Path $_.FullName "SKILL.md") }
+$StateRoot = Join-Path (Split-Path -Parent $SkillsRoot) "srednoff-os"
+$DiscoveryState = Join-Path $StateRoot "discovery-profile.json"
+if ((Test-Path -LiteralPath $DiscoveryState) -and
+    ((Get-Content -LiteralPath $DiscoveryState -Raw | ConvertFrom-Json).mode -eq "compact")) {
+    $ActiveNames = @($SkillDirs | ForEach-Object { $_.Name })
+    $SkillDirs = @($SkillDirs) + @(Get-ChildItem -LiteralPath (Join-Path $StateRoot "library") -Directory |
+        Where-Object { $ActiveNames -notcontains $_.Name -and
+            (Test-Path -LiteralPath (Join-Path $_.FullName "SKILL.md")) })
+}
 
 $Ok = 0
 $Failures = @()

@@ -22,7 +22,13 @@ if ($MissingBundles.Count -gt 0) { throw "Missing bundles in index: $($MissingBu
 if ([bool]$Index.default_enabled) { throw "Bundle index default_enabled must be false" }
 
 $SkillNames = New-Object 'System.Collections.Generic.HashSet[string]'
-Get-ChildItem -LiteralPath $SkillsRoot -Recurse -Filter SKILL.md -File | ForEach-Object {
+$ScanRoots = @($SkillsRoot)
+$DiscoveryState = Join-Path $Root ".codex/srednoff-os/discovery-profile.json"
+if ((Test-Path -LiteralPath $DiscoveryState) -and
+    ((Get-Content -LiteralPath $DiscoveryState -Raw | ConvertFrom-Json).mode -eq "compact")) {
+    $ScanRoots += Join-Path $Root ".codex/srednoff-os/library"
+}
+Get-ChildItem -LiteralPath $ScanRoots -Recurse -Filter SKILL.md -File | ForEach-Object {
     $Head = Get-Content -LiteralPath $_.FullName -Encoding UTF8 -TotalCount 12
     $NameLine = $Head | Where-Object { $_ -match '^\s*name\s*:' } | Select-Object -First 1
     if ($NameLine -match '^\s*name\s*:\s*["'']?([^"'']+)["'']?\s*$') {

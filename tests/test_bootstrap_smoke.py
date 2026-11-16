@@ -41,6 +41,11 @@ class BootstrapTests(unittest.TestCase):
         self.ps(REPO / "scripts/init-codex-project.ps1", "-ProjectPath", project,
                 "-Brief", "Blender product model", "-MaxSkills", 3)
         self.assert_compact(project / ".codex/skills", project / ".codex/skill-index.json")
+        for script in ("test-srednoff-os-bundles.ps1", "test-srednoff-os-agents.ps1"):
+            self.ps(project / "scripts" / script, "-ProjectPath", project)
+        metadata = self.ps(project / "scripts/quick-validate-all-skills.ps1",
+                           "-SkillsRoot", project / ".codex/skills")
+        self.assertIn("416", metadata.stdout)
         result = self.ps(project / "scripts/init-codex-project.ps1", "-ProjectPath", self.root / "other", success=False)
         self.assertIn("distribution template", result.stderr)
 
