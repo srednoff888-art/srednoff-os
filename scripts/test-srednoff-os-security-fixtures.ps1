@@ -1,6 +1,8 @@
 param(
     [string]$ProjectPath = "",
     [string]$FixturesPath = "",
+    [string]$HookPath = "",
+    [string]$PowerShellPath = "",
     [switch]$Json
 )
 
@@ -17,6 +19,7 @@ if (-not $ProjectPath -or $ProjectPath -eq "<project-path>") {
 $LocalHook = Join-Path $ScriptDir "srednoff-os-hook.ps1"
 $HomeHook = Join-Path $CodexHome "scripts\srednoff-os-hook.ps1"
 $HookScript = if (Test-Path -LiteralPath $LocalHook -PathType Leaf) { $LocalHook } else { $HomeHook }
+if ($HookPath) { $HookScript = (Resolve-Path -LiteralPath $HookPath).Path }
 
 if (-not $FixturesPath) {
     $LocalFixtures = Join-Path $PackageRoot "evals\secret-scan-fixtures.json"
@@ -35,7 +38,7 @@ function Get-PowerShellExecutable {
     throw "No PowerShell executable found for hook stdin test"
 }
 
-$PowerShellExecutable = Get-PowerShellExecutable
+$PowerShellExecutable = if ($PowerShellPath) { (Get-Command $PowerShellPath -ErrorAction Stop).Source } else { Get-PowerShellExecutable }
 $Fixtures = Get-Content -LiteralPath $FixturesPath -Raw -Encoding UTF8 | ConvertFrom-Json
 $Results = @()
 $TempCodexHome = Join-Path ([System.IO.Path]::GetTempPath()) ("srednoff-security-evals-" + [guid]::NewGuid().ToString("N"))
@@ -55,22 +58,27 @@ try {
         $PayloadJson = $Payload | ConvertTo-Json -Compress
 
         $RawOutput = $PayloadJson | & $PowerShellExecutable -NoProfile -ExecutionPolicy Bypass -File $HookScript -Mode ([string]$Fixture.mode) 2>&1
+        $HookExitCode = $LASTEXITCODE
         $OutputText = ($RawOutput | Out-String).Trim()
-        $Decision = "allow"
+        $Decision = "error"
         $Reason = ""
         try {
             if ($OutputText) {
                 $Parsed = $OutputText | ConvertFrom-Json
                 if ($Parsed.decision) { $Decision = [string]$Parsed.decision }
+                elseif ($Parsed.hookSpecificOutput.hookEventName -eq "PreToolUse") { $Decision = "allow" }
+                else { $Reason = "Unrecognized hook response" }
                 if ($Parsed.reason) { $Reason = [string]$Parsed.reason }
+            } elseif ($HookExitCode -eq 0 -and [string]$Fixture.mode -ne "PreToolUse") {
+                $Decision = "allow"
             }
         } catch {
-            $Reason = $OutputText
+            $Reason = "Invalid JSON hook response"
         }
 
         $ExpectedDecision = [string]$Fixture.expectedDecision
         $ExpectedFinding = [string]$Fixture.expectedFinding
-        $Passed = $Decision -eq $ExpectedDecision
+        $Passed = $HookExitCode -eq 0 -and $Decision -eq $ExpectedDecision
         if (@("block", "ask") -contains $ExpectedDecision -and $ExpectedFinding) {
             $Passed = $Passed -and ($Reason -match [regex]::Escape($ExpectedFinding))
         }

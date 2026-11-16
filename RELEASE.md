@@ -13,7 +13,7 @@ By **Ivan Srednoff (Иван Среднёв)**, [Srednoff.agency](https://sredno
 | Advertising | MCP tool drift, offline reconciliation, consent and placement audits |
 | Context | Reversible passive library, bounded native profiles, duplication diagnostics |
 | Maintenance | Whole-catalog hashes, source metadata drift, safe project/global updates |
-| Evidence | 53 catalog/update tests; 61 routing cases; 9 harness tests |
+| Evidence | 54 catalog/update tests; 61 routing cases; 18 security fixtures; 9 harness tests |
 
 Runtime compatibility stays v2.1.2. The 4500-record kernel remains script-only.
 No automatic advertising-account connection, upstream engine download, model

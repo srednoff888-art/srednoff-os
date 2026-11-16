@@ -293,11 +293,11 @@ Current public release gate, verified 2026-11-16:
 |---|---:|
 | Srednoff OS doctor | 46 OK, 1 environment WARN, 0 FAIL |
 | Selector evals, actual selected records | PASS, 61/61 |
-| Catalog and safe deployment regressions | PASS, 53/53 |
+| Catalog and safe deployment regressions | PASS, 54/54 |
 | Catalog freshness and structural audit | PASS, 416 workflows; no structural errors |
 | v2.1.1 evals | PASS, 13/13 |
 | v2.1.2 evals | PASS, 19/19 |
-| Security fixtures | PASS, 14/14 |
+| Security fixtures | PASS, 18/18 |
 | Profiles | PASS, 4/4 |
 | Quality modes | PASS, 5/5 |
 | Policies | PASS, 5/5 |

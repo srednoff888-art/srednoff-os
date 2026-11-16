@@ -79,8 +79,8 @@ function Find-SecretSignals {
     $Rules = @(
         @{ Name = "openai_api_key"; Pattern = "(?<![A-Za-z0-9_-])(?:sk-(?:proj|svcacct|admin)-[A-Za-z0-9_-]{20,}|sk-[A-Za-z0-9]{32,})(?![A-Za-z0-9_-])" },
         @{ Name = "github_token"; Pattern = "gh[pousr]_[A-Za-z0-9_]{32,}" },
-        @{ Name = "aws_access_key"; Pattern = "AKIA[0-9A-Z]{16}" },
-        @{ Name = "google_api_key"; Pattern = "AIza[0-9A-Za-z_-]{35}" },
+        @{ Name = "aws_access_key"; Pattern = "(?-i:AKIA[0-9A-Z]{16})" },
+        @{ Name = "google_api_key"; Pattern = "(?-i:AIza[0-9A-Za-z_-]{35})" },
         @{ Name = "stripe_secret_key"; Pattern = "sk_(live|test)_[0-9A-Za-z]{24,}" },
         @{ Name = "slack_token"; Pattern = "xox[baprs]-[0-9A-Za-z-]{20,}" },
         @{ Name = "npm_token"; Pattern = "npm_[A-Za-z0-9]{36,}" },

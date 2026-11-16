@@ -11,7 +11,8 @@ Maintenance release `v2.1.2-20261116`, verified 2026-11-16.
 | Metadata/structural catalog audit | 416/416; no structural errors |
 | Catalog, resource and source-set freshness | PASS |
 | Actual-record selector | 61/61, including all 20 additions and negative controls |
-| Catalog/update/compact regressions | 53/53 |
+| Catalog/update/compact regressions | 54/54 |
+| Security fixtures / broken backend regression | 18/18; malformed, empty and failed hooks rejected |
 | Bootstrap smoke suites | 3 additional platform-specific tests; Windows 2 pass + 1 Unix-only skip |
 | Benchmark harness | 9/9; not a fresh model benchmark |
 | Compact project init/sync | 4 bootstrap manifests, all 416 indexed |

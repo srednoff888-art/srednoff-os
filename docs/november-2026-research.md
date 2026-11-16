@@ -140,8 +140,8 @@ schema changes, context caps and negative selector cases. CI rechecks the full
 inventory on Windows and Ubuntu. Actual release evidence is recorded in
 [QUALITY.md](../QUALITY.md) and [RELEASE.md](../RELEASE.md).
 
-The local Windows run executes 56 tests: 55 pass and one Unix-only Bash smoke
-is skipped. The 53 catalog/update tests are supplemented by three bootstrap
+The local Windows run executes 57 tests: 56 pass and one Unix-only Bash smoke
+is skipped. The 54 catalog/update tests are supplemented by three bootstrap
 smoke suites; routing and benchmark-harness suites are counted separately.
 
 Remaining limitations: no independent multi-model task benchmark, no live ads

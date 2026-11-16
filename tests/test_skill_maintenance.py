@@ -1,5 +1,7 @@
 import copy
 import json
+import shutil
+import subprocess
 from pathlib import Path
 import sys
 import tempfile
@@ -12,6 +14,27 @@ import mcp_capability_diff as mcp
 
 
 class MaintenanceTests(unittest.TestCase):
+    def test_security_harness_rejects_broken_hook_responses(self):
+        shell = shutil.which("pwsh") or shutil.which("powershell")
+        if not shell:
+            self.skipTest("PowerShell is unavailable")
+        fixtures = self.root / "fixture.json"
+        fixtures.write_text(json.dumps([{
+            "id": "ordinary-input", "mode": "PreToolUse", "field": "tool_input",
+            "parts": ["echo ok"], "expectedDecision": "allow"
+        }]), encoding="utf-8")
+        hook = self.root / "hook.ps1"
+        runner = Path(__file__).resolve().parents[1] / "scripts/test-srednoff-os-security-fixtures.ps1"
+        for content in ("Write-Output 'not-json'", "exit 0", "Write-Output '{}'; exit 7"):
+            with self.subTest(content=content):
+                hook.write_text(content, encoding="utf-8")
+                result = subprocess.run([
+                    shell, "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", str(runner),
+                    "-ProjectPath", str(self.root), "-FixturesPath", str(fixtures),
+                    "-HookPath", str(hook), "-PowerShellPath", shell
+                ], capture_output=True, text=True, timeout=60)
+                self.assertNotEqual(result.returncode, 0, result.stdout)
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)

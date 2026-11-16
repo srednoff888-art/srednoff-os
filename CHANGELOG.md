@@ -27,7 +27,8 @@
 
 ### Verified
 
-- 53 catalog/update tests, 61 selector scenarios, 9 benchmark-harness tests.
+- 54 catalog/update tests, 61 selector scenarios, 18 security fixtures, 9 benchmark-harness tests.
+- Preserve case-sensitive AWS/Google key shapes and reject broken hook responses in the fixture harness.
 - Three additional bootstrap smoke suites verify personal instruction retention,
   fresh compact defaults, clean-template selection and the portable Bash path.
 - Full doctor: 46 OK, 1 historical-project warning, 0 FAIL.
