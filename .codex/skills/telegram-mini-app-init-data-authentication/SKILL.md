@@ -5,13 +5,10 @@ description: Use for Telegram work when Codex should validate Telegram Mini App 
 
 # telegram mini app init data authentication
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Distinguish bot-token HMAC validation from third-party Ed25519 verification and follow the exact canonicalization for each.
+2. Enforce auth_date freshness and application replay/session controls; never trust initDataUnsafe or export a bot token to a verifier.
 
 ## Domain Focus
 

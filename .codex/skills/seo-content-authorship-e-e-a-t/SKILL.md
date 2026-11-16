@@ -5,13 +5,10 @@ description: Use for SEO work when Codex should improve content ownership, autho
 
 # seo content authorship e e a t
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Check factual expertise, source attribution, author identity and update ownership against real evidence.
+2. Do not fabricate credentials, first-hand use, endorsements or an E-E-A-T score.
 
 ## Domain Focus
 

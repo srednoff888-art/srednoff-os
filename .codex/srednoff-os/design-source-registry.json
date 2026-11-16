@@ -7,14 +7,23 @@
       "name": "21st.dev",
       "url": "https://21st.dev",
       "kind": "component-marketplace",
-      "domains": ["ui-ux", "web-design", "3d-web"],
+      "domains": [
+        "ui-ux",
+        "web-design",
+        "3d-web"
+      ],
       "connector": "magic",
       "risk": "medium",
       "license": "varies by component; verify at source before copying",
       "provenance": "external component marketplace via Magic/21st.dev; inspect source page and dependency tree before adoption",
       "vetted": false,
       "copy_policy": "copy-adapt-upgrade only after license, provenance, accessibility, dependency, and visual QA checks",
-      "use_when": ["premium React UI", "modern landing", "animated component", "shadcn/Tailwind project"],
+      "use_when": [
+        "premium React UI",
+        "modern landing",
+        "animated component",
+        "shadcn/Tailwind project"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -22,13 +31,23 @@
       "name": "shadcn/ui registry",
       "url": "https://ui.shadcn.com/docs/registry",
       "kind": "component-registry",
-      "domains": ["ui-ux", "web-design", "programming"],
+      "domains": [
+        "ui-ux",
+        "web-design",
+        "programming"
+      ],
       "risk": "low",
       "license": "MIT for shadcn/ui source; verify third-party registry item license before copying",
       "provenance": "official shadcn/ui registry documentation and registry item metadata",
       "vetted": true,
       "copy_policy": "prefer stack-native registry items; adapt locally and keep provenance note for copied code",
-      "use_when": ["React", "Next.js", "Tailwind", "Radix", "copy-adapt component workflow"],
+      "use_when": [
+        "React",
+        "Next.js",
+        "Tailwind",
+        "Radix",
+        "copy-adapt component workflow"
+      ],
       "requires_user_prompt": false
     },
     {
@@ -36,13 +55,22 @@
       "name": "shadcn MCP server",
       "url": "https://ui.shadcn.com/docs/mcp",
       "kind": "component-registry-mcp",
-      "domains": ["ui-ux", "web-design", "programming"],
+      "domains": [
+        "ui-ux",
+        "web-design",
+        "programming"
+      ],
       "risk": "medium",
       "license": "MIT for shadcn/ui source; verify third-party registry item license before copying or installing",
       "provenance": "official shadcn MCP documentation; inspect registry namespace, item metadata, dependencies, and target paths",
       "vetted": true,
       "copy_policy": "use for browse/search before install; install or copy only after project fit, provenance, accessibility, and dependency checks",
-      "use_when": ["AI-assisted shadcn registry search", "component discovery", "registry install", "MCP UI workflow"],
+      "use_when": [
+        "AI-assisted shadcn registry search",
+        "component discovery",
+        "registry install",
+        "MCP UI workflow"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -50,13 +78,21 @@
       "name": "Magic UI",
       "url": "https://magicui.design/docs",
       "kind": "component-library",
-      "domains": ["ui-ux", "web-design"],
+      "domains": [
+        "ui-ux",
+        "web-design"
+      ],
       "risk": "medium",
       "license": "verify at source before copying",
       "provenance": "external animated component documentation; inspect component source and package requirements",
       "vetted": false,
       "copy_policy": "adapt effects selectively; avoid copying if license or dependency cost is unclear",
-      "use_when": ["animated UI", "SaaS landing", "portfolio", "premium visual polish"],
+      "use_when": [
+        "animated UI",
+        "SaaS landing",
+        "portfolio",
+        "premium visual polish"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -64,13 +100,20 @@
       "name": "Aceternity UI",
       "url": "https://ui.aceternity.com/components",
       "kind": "component-library",
-      "domains": ["ui-ux", "web-design"],
+      "domains": [
+        "ui-ux",
+        "web-design"
+      ],
       "risk": "medium",
       "license": "verify at source before copying",
       "provenance": "external component documentation; inspect source, animation dependencies, and usage terms",
       "vetted": false,
       "copy_policy": "copy only with confirmed license; prefer pattern extraction for visual effects",
-      "use_when": ["Framer Motion components", "landing page sections", "interactive visual polish"],
+      "use_when": [
+        "Framer Motion components",
+        "landing page sections",
+        "interactive visual polish"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -78,13 +121,20 @@
       "name": "Origin UI",
       "url": "https://originui.com",
       "kind": "component-library",
-      "domains": ["ui-ux", "web-design"],
+      "domains": [
+        "ui-ux",
+        "web-design"
+      ],
       "risk": "medium",
       "license": "verify at source before copying",
       "provenance": "external component library; inspect component page and any linked repository before reuse",
       "vetted": false,
       "copy_policy": "prefer simple patterns; keep copied code minimal and project-native",
-      "use_when": ["Base UI patterns", "modern blocks", "restrained component library"],
+      "use_when": [
+        "Base UI patterns",
+        "modern blocks",
+        "restrained component library"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -92,13 +142,20 @@
       "name": "React Bits",
       "url": "https://www.reactbits.dev",
       "kind": "animated-components",
-      "domains": ["ui-ux", "web-design"],
+      "domains": [
+        "ui-ux",
+        "web-design"
+      ],
       "risk": "medium",
       "license": "verify at source before copying",
       "provenance": "external animated React component source; inspect animation/runtime dependencies",
       "vetted": false,
       "copy_policy": "copy only small effects with confirmed license and measured performance budget",
-      "use_when": ["animated effects", "visual interactions", "motion details"],
+      "use_when": [
+        "animated effects",
+        "visual interactions",
+        "motion details"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -106,13 +163,24 @@
       "name": "Astryx",
       "url": "https://github.com/facebook/astryx",
       "kind": "react-design-system",
-      "domains": ["ui-ux", "web-design", "programming"],
+      "domains": [
+        "ui-ux",
+        "web-design",
+        "programming"
+      ],
       "risk": "medium",
       "license": "MIT",
       "provenance": "official Meta Open Source repository, Astryx documentation, Storybook, package metadata, and v0.4.1 release notes",
       "vetted": true,
       "copy_policy": "install only after React 19, StyleX peer dependency, lockfile, bundle, and pre-1.0 upgrade review; prefer stable core/theme packages, exclude lab and canary charts, and validate focus, live regions, RTL, i18n, RSC boundaries, and visual regressions",
-      "use_when": ["React 19 design system", "enterprise dashboard", "accessible component library", "agent-ready design system", "RSC-safe components", "StyleX"],
+      "use_when": [
+        "React 19 design system",
+        "enterprise dashboard",
+        "accessible component library",
+        "agent-ready design system",
+        "RSC-safe components",
+        "StyleX"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -120,13 +188,22 @@
       "name": "Figma",
       "url": "app://figma",
       "kind": "design-connector",
-      "domains": ["ui-ux", "mobile-apps", "web-design"],
+      "domains": [
+        "ui-ux",
+        "mobile-apps",
+        "web-design"
+      ],
       "risk": "medium",
       "license": "user-provided file rights; do not copy third-party assets without user rights",
       "provenance": "Figma connector or user-provided design file; preserve source file reference",
       "vetted": false,
       "copy_policy": "use as design specification; export/copy assets only when user rights are explicit",
-      "use_when": ["user has design files", "design tokens", "component specs", "visual references"],
+      "use_when": [
+        "user has design files",
+        "design tokens",
+        "component specs",
+        "visual references"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -134,13 +211,23 @@
       "name": "Figma MCP server",
       "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server",
       "kind": "design-context-mcp",
-      "domains": ["ui-ux", "mobile-apps", "web-design"],
+      "domains": [
+        "ui-ux",
+        "mobile-apps",
+        "web-design"
+      ],
       "risk": "medium",
       "license": "user-provided file rights; Figma plan, access, and asset rights must be verified",
       "provenance": "official Figma MCP documentation; preserve file URL, node references, design-token source, and user authorization context",
       "vetted": true,
       "copy_policy": "use as design context and token/spec source; export or copy assets only when the user has rights and requests it",
-      "use_when": ["Figma MCP", "design to code", "design tokens", "component specs", "Dev Mode"],
+      "use_when": [
+        "Figma MCP",
+        "design to code",
+        "design tokens",
+        "component specs",
+        "Dev Mode"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -148,13 +235,22 @@
       "name": "Canva",
       "url": "app://canva",
       "kind": "design-connector",
-      "domains": ["ui-ux", "growth", "marketing"],
+      "domains": [
+        "ui-ux",
+        "growth",
+        "marketing"
+      ],
       "risk": "medium",
       "license": "user-provided file rights; Canva asset terms may vary",
       "provenance": "Canva connector or user-provided creative; preserve source design reference",
       "vetted": false,
       "copy_policy": "use for approved marketing assets; verify rights before export or reuse",
-      "use_when": ["marketing creative", "presentation", "ad asset", "social visual"],
+      "use_when": [
+        "marketing creative",
+        "presentation",
+        "ad asset",
+        "social visual"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -162,13 +258,24 @@
       "name": "Canva Dev MCP server",
       "url": "https://www.canva.dev/docs/apps/mcp-server/",
       "kind": "design-app-dev-mcp",
-      "domains": ["ui-ux", "growth", "marketing", "programming"],
+      "domains": [
+        "ui-ux",
+        "growth",
+        "marketing",
+        "programming"
+      ],
       "risk": "medium",
       "license": "Canva developer docs and user-owned app assets; verify Canva terms and asset rights before reuse",
       "provenance": "official Canva Dev MCP documentation for Canva apps and integrations; separate developer tooling from creative connector output",
       "vetted": true,
       "copy_policy": "use for Canva app/integration development assistance; do not publish, export, or modify user designs without explicit approval",
-      "use_when": ["Canva MCP", "Canva app", "Canva integration", "marketing creative workflow", "template automation"],
+      "use_when": [
+        "Canva MCP",
+        "Canva app",
+        "Canva integration",
+        "marketing creative workflow",
+        "template automation"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -176,13 +283,26 @@
       "name": "MCP Apps",
       "url": "https://apps.extensions.modelcontextprotocol.io/api/",
       "kind": "agentic-ui-extension",
-      "domains": ["ui-ux", "web-design", "programming"],
+      "domains": [
+        "ui-ux",
+        "web-design",
+        "programming"
+      ],
       "risk": "medium",
       "license": "Apache-2.0 for SDK docs site badge; verify repository package/license metadata before copying examples",
       "provenance": "Official MCP Apps extension docs and SEP-1865; use modelcontextprotocol/ext-apps as implementation source",
       "vetted": true,
       "copy_policy": "use for interactive UI returned by MCP tools; keep UI resources sandboxed, typed, auditable, accessible, and backed by text fallback",
-      "use_when": ["MCP Apps", "SEP-1865", "interactive MCP UI", "mcp app", "agentic UI", "tool dashboard", "MCP-UI", "OpenAI Apps SDK migration"],
+      "use_when": [
+        "MCP Apps",
+        "SEP-1865",
+        "interactive MCP UI",
+        "mcp app",
+        "agentic UI",
+        "tool dashboard",
+        "MCP-UI",
+        "OpenAI Apps SDK migration"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -190,13 +310,21 @@
       "name": "Three.js",
       "url": "https://threejs.org",
       "kind": "3d-library",
-      "domains": ["3d-web"],
+      "domains": [
+        "3d-web"
+      ],
       "risk": "low",
       "license": "MIT",
       "provenance": "official Three.js project, API documentation, and WebGPURenderer migration guide",
       "vetted": true,
       "copy_policy": "use official APIs and examples as patterns; keep WebGPURenderer experimental, test its WebGL2 fallback, budget async initialization, and migrate legacy ShaderMaterial/onBeforeCompile/EffectComposer paths to TSL before adoption; verify example asset licenses separately",
-      "use_when": ["custom WebGL scene", "raw Three.js control", "non-React 3D", "WebGPU with WebGL2 fallback", "TSL migration"],
+      "use_when": [
+        "custom WebGL scene",
+        "raw Three.js control",
+        "non-React 3D",
+        "WebGPU with WebGL2 fallback",
+        "TSL migration"
+      ],
       "requires_user_prompt": false
     },
     {
@@ -204,13 +332,20 @@
       "name": "React Three Fiber",
       "url": "https://docs.pmnd.rs/react-three-fiber/getting-started/introduction",
       "kind": "3d-react-renderer",
-      "domains": ["3d-web", "ui-ux"],
+      "domains": [
+        "3d-web",
+        "ui-ux"
+      ],
       "risk": "low",
       "license": "MIT",
       "provenance": "official pmndrs React Three Fiber documentation",
       "vetted": true,
       "copy_policy": "use when project is React-based; prefer idiomatic hooks/components and profile runtime cost",
-      "use_when": ["React app", "interactive 3D UI", "Three.js in React"],
+      "use_when": [
+        "React app",
+        "interactive 3D UI",
+        "Three.js in React"
+      ],
       "requires_user_prompt": false
     },
     {
@@ -218,13 +353,20 @@
       "name": "model-viewer",
       "url": "https://modelviewer.dev",
       "kind": "3d-model-display",
-      "domains": ["3d-web", "ecommerce"],
+      "domains": [
+        "3d-web",
+        "ecommerce"
+      ],
       "risk": "low",
       "license": "Apache-2.0",
       "provenance": "official model-viewer documentation and project",
       "vetted": true,
       "copy_policy": "prefer for simple glTF/AR display; validate model size, accessibility fallback, and browser support",
-      "use_when": ["lightweight product viewer", "AR preview", "simple glTF display"],
+      "use_when": [
+        "lightweight product viewer",
+        "AR preview",
+        "simple glTF display"
+      ],
       "requires_user_prompt": false
     },
     {
@@ -232,13 +374,20 @@
       "name": "Babylon.js",
       "url": "https://www.babylonjs.com",
       "kind": "3d-library",
-      "domains": ["3d-web"],
+      "domains": [
+        "3d-web"
+      ],
       "risk": "low",
       "license": "Apache-2.0",
       "provenance": "official Babylon.js documentation and project",
       "vetted": true,
       "copy_policy": "use for complex 3D scenes; verify bundle impact and choose over Three.js only when feature fit is stronger",
-      "use_when": ["complex 3D app", "WebGPU path", "viewer tooling", "game-like 3D"],
+      "use_when": [
+        "complex 3D app",
+        "WebGPU path",
+        "viewer tooling",
+        "game-like 3D"
+      ],
       "requires_user_prompt": false
     },
     {
@@ -246,13 +395,23 @@
       "name": "glTF Transform",
       "url": "https://gltf-transform.dev",
       "kind": "3d-asset-optimizer",
-      "domains": ["3d-web"],
+      "domains": [
+        "3d-web"
+      ],
       "risk": "low",
       "license": "MIT",
       "provenance": "official glTF Transform documentation and CLI/API project",
       "vetted": true,
       "copy_policy": "use for optimization pipelines; record compression settings and validate output visually",
-      "use_when": ["glTF optimization", "GLB compression", "texture transform", "asset pipeline", "Meshopt", "Draco", "KTX2"],
+      "use_when": [
+        "glTF optimization",
+        "GLB compression",
+        "texture transform",
+        "asset pipeline",
+        "Meshopt",
+        "Draco",
+        "KTX2"
+      ],
       "requires_user_prompt": false
     },
     {
@@ -260,13 +419,20 @@
       "name": "Khronos glTF Sample Assets",
       "url": "https://github.com/KhronosGroup/glTF-Sample-Assets",
       "kind": "3d-sample-assets",
-      "domains": ["3d-web"],
+      "domains": [
+        "3d-web"
+      ],
       "risk": "low",
       "license": "varies by asset; verify asset license before copying",
       "provenance": "KhronosGroup glTF sample assets repository; inspect per-asset license metadata",
       "vetted": true,
       "copy_policy": "use mainly for tests/fixtures; do not ship without per-asset license confirmation",
-      "use_when": ["test model", "sample glTF", "validator fixture", "loader test"],
+      "use_when": [
+        "test model",
+        "sample glTF",
+        "validator fixture",
+        "loader test"
+      ],
       "requires_user_prompt": false
     },
     {
@@ -274,13 +440,22 @@
       "name": "Poly Haven",
       "url": "https://polyhaven.com",
       "kind": "3d-asset-library",
-      "domains": ["3d-web", "web-design"],
+      "domains": [
+        "3d-web",
+        "web-design"
+      ],
       "risk": "medium",
       "license": "CC0",
       "provenance": "Poly Haven asset library; keep asset URL and downloaded asset metadata",
       "vetted": true,
       "copy_policy": "prefer CC0 HDRI/textures; still record asset URL, file size, and performance budget",
-      "use_when": ["HDRI", "texture", "environment map", "CC0-like asset", "realistic material"],
+      "use_when": [
+        "HDRI",
+        "texture",
+        "environment map",
+        "CC0-like asset",
+        "realistic material"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -288,13 +463,22 @@
       "name": "ambientCG",
       "url": "https://ambientcg.com",
       "kind": "3d-texture-library",
-      "domains": ["3d-web", "web-design"],
+      "domains": [
+        "3d-web",
+        "web-design"
+      ],
       "risk": "medium",
       "license": "CC0",
       "provenance": "ambientCG material library; keep asset URL and chosen texture resolution",
       "vetted": true,
       "copy_policy": "prefer CC0 PBR materials; cap texture resolution to project performance budget",
-      "use_when": ["PBR material", "texture", "normal map", "roughness", "CC0-like material"],
+      "use_when": [
+        "PBR material",
+        "texture",
+        "normal map",
+        "roughness",
+        "CC0-like material"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -302,13 +486,21 @@
       "name": "Sketchfab",
       "url": "https://sketchfab.com",
       "kind": "3d-asset-marketplace",
-      "domains": ["3d-web", "ecommerce"],
+      "domains": [
+        "3d-web",
+        "ecommerce"
+      ],
       "risk": "high",
       "license": "varies by asset; verify per-download license before copying",
       "provenance": "Sketchfab marketplace asset page; record author, asset URL, license, and download date",
       "vetted": false,
       "copy_policy": "do not copy automatically; require explicit user approval plus license, attribution, size, and security review",
-      "use_when": ["specific 3D model", "downloadable model", "marketplace asset", "license varies"],
+      "use_when": [
+        "specific 3D model",
+        "downloadable model",
+        "marketplace asset",
+        "license varies"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -316,13 +508,23 @@
       "name": "Webflow MCP server",
       "url": "https://mcp.webflow.com/mcp",
       "kind": "website-builder-mcp",
-      "domains": ["ui-ux", "web-design", "programming"],
+      "domains": [
+        "ui-ux",
+        "web-design",
+        "programming"
+      ],
       "risk": "high",
       "license": "MIT for the official server; Webflow account, site, and asset terms remain separate",
       "provenance": "official Webflow MCP server and Data API repository",
       "vetted": true,
       "copy_policy": "use read-only discovery first; require a scoped confirmation before site, CMS, style, component, asset, or publish changes",
-      "use_when": ["Webflow site", "Webflow CMS", "Webflow Designer", "Webflow components", "Webflow variables"],
+      "use_when": [
+        "Webflow site",
+        "Webflow CMS",
+        "Webflow Designer",
+        "Webflow components",
+        "Webflow variables"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -330,13 +532,23 @@
       "name": "Miro MCP server",
       "url": "https://mcp.miro.com/",
       "kind": "whiteboard-design-mcp",
-      "domains": ["ui-ux", "web-design", "product"],
+      "domains": [
+        "ui-ux",
+        "web-design",
+        "product"
+      ],
       "risk": "medium",
       "license": "Miro service terms and user-owned board content",
       "provenance": "official Miro AI repository and MCP setup documentation",
       "vetted": true,
       "copy_policy": "read approved boards first; require explicit approval before creating or editing frames, diagrams, cards, tables, or documents",
-      "use_when": ["Miro board", "user flow", "journey map", "wireframe", "design workshop"],
+      "use_when": [
+        "Miro board",
+        "user flow",
+        "journey map",
+        "wireframe",
+        "design workshop"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -344,13 +556,23 @@
       "name": "Storybook MCP",
       "url": "https://github.com/storybookjs/mcp",
       "kind": "component-validation-mcp",
-      "domains": ["ui-ux", "web-design", "programming"],
+      "domains": [
+        "ui-ux",
+        "web-design",
+        "programming"
+      ],
       "risk": "medium",
       "license": "verify repository package license and connected Storybook access before installation",
       "provenance": "Storybook organization MCP repository and its published configuration guidance",
       "vetted": true,
       "copy_policy": "use for component inventory and evidence; validate branch/build currency and do not treat generated examples as production code",
-      "use_when": ["Storybook", "component variants", "design tokens", "component accessibility", "UI states"],
+      "use_when": [
+        "Storybook",
+        "component variants",
+        "design tokens",
+        "component accessibility",
+        "UI states"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -358,13 +580,24 @@
       "name": "Playwright MCP",
       "url": "https://github.com/microsoft/playwright-mcp",
       "kind": "browser-qa-mcp",
-      "domains": ["ui-ux", "web-design", "programming", "3d-web"],
+      "domains": [
+        "ui-ux",
+        "web-design",
+        "programming",
+        "3d-web"
+      ],
       "risk": "medium",
       "license": "Apache-2.0",
       "provenance": "official Microsoft Playwright MCP repository and installation documentation",
       "vetted": true,
       "copy_policy": "prefer isolated contexts, allowed hosts, workspace-scoped outputs, and read-only QA; use CLI/tests where they are cheaper than persistent MCP state",
-      "use_when": ["visual QA", "responsive testing", "accessibility snapshot", "browser debugging", "web screenshot"],
+      "use_when": [
+        "visual QA",
+        "responsive testing",
+        "accessibility snapshot",
+        "browser debugging",
+        "web screenshot"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -372,13 +605,22 @@
       "name": "MCP Apps Three.js example",
       "url": "https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/threejs-server",
       "kind": "interactive-3d-mcp-reference",
-      "domains": ["3d-web", "ui-ux", "programming"],
+      "domains": [
+        "3d-web",
+        "ui-ux",
+        "programming"
+      ],
       "risk": "medium",
       "license": "Apache-2.0 for the official ext-apps repository; verify any copied assets separately",
       "provenance": "official modelcontextprotocol/ext-apps Three.js server example",
       "vetted": true,
       "copy_policy": "adapt concepts only; use typed allowlisted scene inputs, restrictive CSP, accessibility fallback, and measured rendering budgets instead of executing arbitrary scene code",
-      "use_when": ["MCP Apps 3D preview", "Three.js tool UI", "interactive MCP canvas", "shader preview"],
+      "use_when": [
+        "MCP Apps 3D preview",
+        "Three.js tool UI",
+        "interactive MCP canvas",
+        "shader preview"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -386,13 +628,20 @@
       "name": "UX MCP Server",
       "url": "https://github.com/elsahafy/ux-mcp-server",
       "kind": "ux-research-mcp",
-      "domains": ["ui-ux", "web-design"],
+      "domains": [
+        "ui-ux",
+        "web-design"
+      ],
       "risk": "medium",
       "license": "verify repository license, packaged corpus provenance, and network/tool permissions before installation",
       "provenance": "third-party UX knowledge and analysis MCP server; external corpus is not treated as authoritative",
       "vetted": false,
       "copy_policy": "use only as a supplementary checklist after provenance review; defer to official standards and project evidence for accessibility, privacy, and compliance claims",
-      "use_when": ["heuristic review", "UX audit", "design-system research"],
+      "use_when": [
+        "heuristic review",
+        "UX audit",
+        "design-system research"
+      ],
       "requires_user_prompt": true
     },
     {
@@ -507,23 +756,99 @@
       "id": "google-ads-official-mcp",
       "name": "Google Ads MCP",
       "url": "https://github.com/googleads/google-ads-mcp",
-      "kind": "advertising-reporting-mcp",
+      "kind": "advertising-read-write-mcp",
       "domains": [
         "seo-ppc-growth",
         "growth",
         "programming"
       ],
-      "risk": "medium",
+      "risk": "high",
       "license": "Apache-2.0",
-      "provenance": "Official Google repository and developer announcement inspected 2026-10-15; no account configured",
+      "provenance": "Official repository README and immutable commit cda852701fb5787dc4d79281f37da795ac09b97d inspected 2026-11-16; write tools and enabled namespaces reviewed; no account configured",
       "vetted": true,
-      "copy_policy": "Use authorized reporting and resource metadata first; keep credentials private and do not infer write support or permissions",
+      "copy_policy": "Explicitly allowlist reviewed reporting/discovery tools. Disable asset and label namespaces for read-only deployment; default server installation can expose writes. Schema/annotation drift requires review and never grants permission.",
       "use_when": [
         "Google Ads MCP",
         "GAQL reporting",
         "campaign diagnostics"
       ],
       "requires_user_prompt": true
+    },
+    {
+      "id": "dtcg-token-format",
+      "name": "Design Tokens Format",
+      "url": "https://www.designtokens.org/tr/2025.10/format/",
+      "kind": "design-token-specification",
+      "domains": [
+        "ui-ux",
+        "web-design",
+        "programming"
+      ],
+      "risk": "medium",
+      "license": "W3C Community Final Specification Agreement; not a W3C Recommendation",
+      "provenance": "Primary documentation/repository metadata inspected 2026-11-16; no upstream executable installed",
+      "vetted": true,
+      "copy_policy": "Reference token types/aliases and compare generated artifacts; no spec text copied",
+      "use_when": [
+        "Design Tokens Format"
+      ],
+      "requires_user_prompt": false
+    },
+    {
+      "id": "khronos-gltf-validator",
+      "name": "Khronos glTF Validator",
+      "url": "https://github.com/KhronosGroup/glTF-Validator",
+      "kind": "3d-asset-validation",
+      "domains": [
+        "3d-web",
+        "programming"
+      ],
+      "risk": "medium",
+      "license": "Apache-2.0",
+      "provenance": "Primary documentation/repository metadata inspected 2026-11-16; no upstream executable installed",
+      "vetted": true,
+      "copy_policy": "Use a pinned available validator; do not upload confidential models or confuse validity with visual fidelity",
+      "use_when": [
+        "Khronos glTF Validator"
+      ],
+      "requires_user_prompt": false
+    },
+    {
+      "id": "expo-official-skills",
+      "name": "Expo Official Skills",
+      "url": "https://github.com/expo/skills",
+      "kind": "mobile-workflow-reference",
+      "domains": [
+        "mobile-apps",
+        "programming"
+      ],
+      "risk": "medium",
+      "license": "MIT",
+      "provenance": "Primary documentation/repository metadata inspected 2026-11-16; no upstream executable installed",
+      "vetted": true,
+      "copy_policy": "Prefer an already-installed official plugin; verify paid EAS actions and native runtime compatibility; do not duplicate its entire skill bundle",
+      "use_when": [
+        "Expo Official Skills"
+      ],
+      "requires_user_prompt": false
+    },
+    {
+      "id": "supabase-official-skills",
+      "name": "Supabase Official Skills",
+      "url": "https://github.com/supabase/agent-skills",
+      "kind": "database-workflow-reference",
+      "domains": [
+        "programming"
+      ],
+      "risk": "medium",
+      "license": "MIT",
+      "provenance": "Primary documentation/repository metadata inspected 2026-11-16; no upstream executable installed",
+      "vetted": true,
+      "copy_policy": "Prefer existing installed product skills; confirm installed Postgres version and scope database changes; no account connected",
+      "use_when": [
+        "Supabase Official Skills"
+      ],
+      "requires_user_prompt": false
     }
   ]
 }

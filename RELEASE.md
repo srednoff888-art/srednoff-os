@@ -1,5 +1,29 @@
 # Srednoff OS Public Release Note
 
+## November Maintenance: v2.1.2-20261116
+
+By **Ivan Srednoff (Иван Среднёв)**, [Srednoff.agency](https://srednoff.agency).
+
+| Area | Shipped |
+|---|---|
+| Catalog | 416 structurally checked skills; 196 existing workflows improved, 20 added |
+| Code | RSC/cache contracts, Postgres lock budgets, dependency reachability, OIDC provenance |
+| Design/sites/UI/UX | Token drift, annotation feedback, layout stress, font delivery, accessible charts |
+| 3D | Procedural geometry, UV/topology, glTF validation, texture/device checks, GPU lifecycle |
+| Advertising | MCP tool drift, offline reconciliation, consent and placement audits |
+| Context | Reversible passive library, bounded native profiles, duplication diagnostics |
+| Maintenance | Whole-catalog hashes, source metadata drift, safe project/global updates |
+| Evidence | 53 catalog/update tests; 61 routing cases; 9 harness tests |
+
+Runtime compatibility stays v2.1.2. The 4500-record kernel remains script-only.
+No automatic advertising-account connection, upstream engine download, model
+switch or approval bypass is included. Existing chats need discovery refresh
+or a fresh session after compaction; already-read context cannot be erased.
+Independent task-quality gains across models are not claimed.
+
+[Research](docs/november-2026-research.md) · [Quality evidence](QUALITY.md) ·
+[Русский README](README.ru.md).
+
 ## October Maintenance: v2.1.2-20261015.1
 
 **Code. Design. Advertising. 3D. Websites. UI/UX.**

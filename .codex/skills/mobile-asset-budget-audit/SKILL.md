@@ -5,24 +5,12 @@ description: Use for Expo, React Native, iOS, Android, or mobile web projects wi
 
 # Mobile Asset Budget Audit
 
+## Task Decisions
+
+1. Measure cold-start transfer/decode cost, packaged resources and per-density duplication.
+2. Compare optimized assets on representative devices and offline startup; compressed download size is not decoded memory.
+
 Use this skill for Mobile work focused on audit mobile bundle size, static assets, images, fonts, SVGs, videos, and startup cost.
-
-## Workflow
-
-1. Restate the user outcome, target quality level, constraints, and definition of done.
-2. Inspect the current project before proposing code, design, sources, or dependencies.
-3. Use Srednoff OS mode/domain routing; if TURBO is active, compare top sources and run deeper critique.
-4. Prefer existing project conventions and proven sources over generic invention.
-5. Validate with the narrowest checks that prove the result, expanding validation for high-risk or TURBO work.
-6. Report facts, commands, source decisions, remaining risks, and exact next steps.
-
-## Checklist
-
-- Facts separated from assumptions.
-- Source/provenance reviewed when external code, components, assets, or advice are used.
-- Security, privacy, accessibility, performance, and rollback considered when relevant.
-- Token cost justified by concrete quality gain unless TURBO is explicitly active.
-- No broad context loading when a deterministic script or narrow reference is enough.
 
 ## Guardrails
 

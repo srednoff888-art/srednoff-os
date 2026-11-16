@@ -5,6 +5,11 @@ description: "Use this skill for Python data modeling and input validation - Pyd
 
 # Python Dataclasses Pydantic Validation
 
+## Task Decisions
+
+1. Choose coercion versus strict validation deliberately and distinguish missing, null and default values.
+2. Test nested validation, serialization and schema compatibility on the installed Pydantic major version.
+
 Use this skill for Programming tasks focused on modeling data at the boundary: validating untrusted input, turning it into typed domain objects, and serializing it back. For static typing strategy use `python-typing-and-mypy-strictness`; for schema evolution in storage use `database-schema-migration-auditor`.
 
 ## Workflow

@@ -1,11 +1,11 @@
 ---
 name: sqlalchemy-orm-patterns
-description: "Use this skill for SQLAlchemy 2.0 ORM work: session lifecycle, unit of work boundaries, relationship loading strategies, and N+1 query elimination."
+description: "Review SQLAlchemy 2.x session lifecycle, unit-of-work boundaries, relationship loading and N+1 queries on the installed minor version."
 ---
 
 # SQLAlchemy ORM Patterns
 
-Use this skill for backend and data tasks where SQLAlchemy 2.0 models, sessions, and loading strategies decide correctness and latency.
+Use this skill for backend and data tasks where SQLAlchemy 2.x models, sessions, and loading strategies decide correctness and latency. Consult the documentation matching the installed minor; 2.0 and 2.1 are distinct release series.
 
 ## Workflow
 

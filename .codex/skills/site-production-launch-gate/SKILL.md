@@ -5,13 +5,10 @@ description: Use for Site Building work when Codex should run site launch readin
 
 # site production launch gate
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Verify production configuration, approved migrations, DNS/routes/assets, form delivery and observability.
+2. Confirm public behavior after deploy and retain rollback evidence; build success alone is not launch success.
 
 ## Domain Focus
 

@@ -5,13 +5,10 @@ description: Use for SEO work when Codex should connect Core Web Vitals lab data
 
 # seo cwv rum observability
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Segment field LCP/INP/CLS by page/device and reconcile with lab traces from the same user journey.
+2. Report sample/window limitations and diagnose the element/event responsible before proposing a performance change.
 
 ## Domain Focus
 

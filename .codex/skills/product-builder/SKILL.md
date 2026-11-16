@@ -5,6 +5,11 @@ description: Use this skill when the user asks Codex to build an app, website, b
 
 # Product Builder Skill
 
+## Task Decisions
+
+1. Turn the requested user job into a working first screen and a complete primary flow, including failure/recovery states.
+2. Validate real interactions and deployed artifacts; avoid substituting a marketing landing page for the requested application.
+
 Act as a product engineer, not just a code generator.
 
 ## Workflow

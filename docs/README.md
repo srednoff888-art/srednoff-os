@@ -7,6 +7,7 @@ This directory is the public documentation layer for Srednoff OS v2.1.2.
 | Document | Purpose |
 |---|---|
 | [Architecture](architecture.md) | System map, file ownership, startup flow, selector flow, and release evidence path |
+| [November research](november-2026-research.md) | Complete catalog evidence, source comparison, new workflows, reversible compact discovery and safe updates |
 | [Security](security.md) | Hook posture, secret handling, destructive-action gates, provenance, and privacy boundaries |
 | [Workflows](workflows.md) | Daily project workflow, system maintenance, release checkpoint workflow, and TURBO boundaries |
 | [Profiles](profiles.md) | Public profile layer, local overlays, and old-session sync behavior |

@@ -5,13 +5,10 @@ description: Use for Telegram work when Codex should implement Telegram Bot API 
 
 # telegram bot api reliability
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Verify webhook authenticity, update idempotency and retry/backoff behavior against the current Bot API.
+2. Test duplicate updates, rate limiting and partial send failure without sending real messages during diagnosis.
 
 ## Domain Focus
 

@@ -5,24 +5,12 @@ description: Agent profile for art direction and premium UI/UX review across web
 
 # UI Art Director Agent
 
+## Task Decisions
+
+1. Translate the approved product/audience into hierarchy, typography, color, imagery and interaction direction.
+2. Provide concrete component/page examples and critique against the brief; do not force one visual aesthetic onto every domain.
+
 Use this agent for UI/UX work focused on own art direction, visual taste, brand fit, visual hierarchy, and design-system coherence.
-
-## Workflow
-
-1. Restate the user outcome, target quality level, constraints, and definition of done.
-2. Inspect the current project before proposing code, design, sources, or dependencies.
-3. Use Srednoff OS mode/domain routing; if TURBO is active, compare top sources and run deeper critique.
-4. Prefer existing project conventions and proven sources over generic invention.
-5. Validate with the narrowest checks that prove the result, expanding validation for high-risk or TURBO work.
-6. Report facts, commands, source decisions, remaining risks, and exact next steps.
-
-## Checklist
-
-- Facts separated from assumptions.
-- Source/provenance reviewed when external code, components, assets, or advice are used.
-- Security, privacy, accessibility, performance, and rollback considered when relevant.
-- Token cost justified by concrete quality gain unless TURBO is explicitly active.
-- No broad context loading when a deterministic script or narrow reference is enough.
 
 ## Guardrails
 

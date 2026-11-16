@@ -5,24 +5,12 @@ description: Use when the user explicitly enters TURBO, mode TURBO, enable TURBO
 
 # Turbo Mode Controller
 
+## Task Decisions
+
+1. Activate turbo only on the user's explicit command for the current task and keep approval/secret boundaries unchanged.
+2. Choose additional research/review/tests for a stated benefit; do not change the user's model or delegate merely because a role profile exists.
+
 Use this skill for TURBO work focused on activate and govern explicit TURBO mode with maximum-quality workflow and strict safety stops.
-
-## Workflow
-
-1. Restate the user outcome, target quality level, constraints, and definition of done.
-2. Inspect the current project before proposing code, design, sources, or dependencies.
-3. Use Srednoff OS mode/domain routing; if TURBO is active, compare top sources and run deeper critique.
-4. Prefer existing project conventions and proven sources over generic invention.
-5. Validate with the narrowest checks that prove the result, expanding validation for high-risk or TURBO work.
-6. Report facts, commands, source decisions, remaining risks, and exact next steps.
-
-## Checklist
-
-- Facts separated from assumptions.
-- Source/provenance reviewed when external code, components, assets, or advice are used.
-- Security, privacy, accessibility, performance, and rollback considered when relevant.
-- Token cost justified by concrete quality gain unless TURBO is explicitly active.
-- No broad context loading when a deterministic script or narrow reference is enough.
 
 ## Guardrails
 

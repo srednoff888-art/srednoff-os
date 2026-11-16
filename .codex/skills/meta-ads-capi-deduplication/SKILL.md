@@ -5,13 +5,10 @@ description: Use for PPC work when Codex should design or review Meta Pixel and 
 
 # meta ads capi deduplication
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Trace one business event through browser Pixel and server CAPI with stable shared event identity and matching event names.
+2. Test retries, clock skew, consent denial and diagnostics using synthetic events; keep raw personal data out of logs.
 
 ## Domain Focus
 

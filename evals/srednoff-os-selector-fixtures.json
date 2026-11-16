@@ -1,5 +1,191 @@
 [
-
+  {
+    "id": "november_react_server_client_boundary_audit",
+    "brief": "RSC data boundary",
+    "budget": "deep",
+    "expectedAll": [
+      "react-server-client-boundary-audit"
+    ]
+  },
+  {
+    "id": "november_nextjs_cache_invalidation_contracts",
+    "brief": "Next.js cache consistency",
+    "budget": "deep",
+    "expectedAll": [
+      "nextjs-cache-invalidation-contracts"
+    ]
+  },
+  {
+    "id": "november_postgres_lock_budget_migrations",
+    "brief": "PostgreSQL lock budget",
+    "budget": "deep",
+    "expectedAll": [
+      "postgres-lock-budget-migrations"
+    ]
+  },
+  {
+    "id": "november_dependency_reachability_triage",
+    "brief": "dependency reachability",
+    "budget": "deep",
+    "expectedAll": [
+      "dependency-reachability-triage"
+    ]
+  },
+  {
+    "id": "november_oidc_release_provenance",
+    "brief": "OIDC release provenance",
+    "budget": "deep",
+    "expectedAll": [
+      "oidc-release-provenance"
+    ]
+  },
+  {
+    "id": "november_design_token_drift_ci",
+    "brief": "design token drift",
+    "budget": "deep",
+    "expectedAll": [
+      "design-token-drift-ci"
+    ]
+  },
+  {
+    "id": "november_browser_annotation_feedback_loop",
+    "brief": "browser annotation feedback",
+    "budget": "deep",
+    "expectedAll": [
+      "browser-annotation-feedback-loop"
+    ]
+  },
+  {
+    "id": "november_content_layout_stress_fixtures",
+    "brief": "layout stress fixtures",
+    "budget": "deep",
+    "expectedAll": [
+      "content-layout-stress-fixtures"
+    ]
+  },
+  {
+    "id": "november_variable_font_loading_budget",
+    "brief": "font loading budget",
+    "budget": "deep",
+    "expectedAll": [
+      "variable-font-loading-budget"
+    ]
+  },
+  {
+    "id": "november_accessible_data_visualization",
+    "brief": "accessible chart alternative",
+    "budget": "deep",
+    "expectedAll": [
+      "accessible-data-visualization"
+    ]
+  },
+  {
+    "id": "november_blender_procedural_geometry_contracts",
+    "brief": "procedural geometry contract",
+    "budget": "deep",
+    "expectedAll": [
+      "blender-procedural-geometry-contracts"
+    ]
+  },
+  {
+    "id": "november_blender_topology_uv_quality",
+    "brief": "topology UV review",
+    "budget": "deep",
+    "expectedAll": [
+      "blender-topology-uv-quality"
+    ]
+  },
+  {
+    "id": "november_gltf_validation_release_gate",
+    "brief": "glTF validator release",
+    "budget": "deep",
+    "expectedAll": [
+      "gltf-validation-release-gate"
+    ]
+  },
+  {
+    "id": "november_texture_compression_device_matrix",
+    "brief": "texture device matrix",
+    "budget": "deep",
+    "expectedAll": [
+      "texture-compression-device-matrix"
+    ]
+  },
+  {
+    "id": "november_webgl_resource_lifecycle",
+    "brief": "GPU resource lifecycle",
+    "budget": "deep",
+    "expectedAll": [
+      "webgl-resource-lifecycle"
+    ]
+  },
+  {
+    "id": "november_ads_mcp_tool_permission_diff",
+    "brief": "ads MCP tool drift",
+    "budget": "deep",
+    "expectedAll": [
+      "ads-mcp-tool-permission-diff"
+    ]
+  },
+  {
+    "id": "november_google_ads_offline_conversion_reconciliation",
+    "brief": "offline conversion reconciliation",
+    "budget": "deep",
+    "expectedAll": [
+      "google-ads-offline-conversion-reconciliation"
+    ]
+  },
+  {
+    "id": "november_ppc_geo_placement_drift_audit",
+    "brief": "PPC placement drift",
+    "budget": "deep",
+    "expectedAll": [
+      "ppc-geo-placement-drift-audit"
+    ]
+  },
+  {
+    "id": "november_consent_signal_test_matrix",
+    "brief": "consent signal matrix",
+    "budget": "deep",
+    "expectedAll": [
+      "consent-signal-test-matrix"
+    ]
+  },
+  {
+    "id": "november_advertising_creative_rights_inventory",
+    "brief": "creative rights inventory",
+    "budget": "deep",
+    "expectedAll": [
+      "advertising-creative-rights-inventory"
+    ]
+  },
+  {
+    "id": "november_unrelated_typo",
+    "brief": "Correct one punctuation mark in a README example.",
+    "budget": "lean",
+    "excludedSkills": [
+      "react-server-client-boundary-audit",
+      "nextjs-cache-invalidation-contracts",
+      "postgres-lock-budget-migrations",
+      "dependency-reachability-triage",
+      "oidc-release-provenance",
+      "design-token-drift-ci",
+      "browser-annotation-feedback-loop",
+      "content-layout-stress-fixtures",
+      "variable-font-loading-budget",
+      "accessible-data-visualization",
+      "blender-procedural-geometry-contracts",
+      "blender-topology-uv-quality",
+      "gltf-validation-release-gate",
+      "texture-compression-device-matrix",
+      "webgl-resource-lifecycle",
+      "ads-mcp-tool-permission-diff",
+      "google-ads-offline-conversion-reconciliation",
+      "ppc-geo-placement-drift-audit",
+      "consent-signal-test-matrix",
+      "advertising-creative-rights-inventory"
+    ]
+  },
   {
     "id": "python_precise_workflows",
     "brief": "Review Alembic migration autogenerate and pytest fixtures for a SQLAlchemy service with asyncio cancellation.",

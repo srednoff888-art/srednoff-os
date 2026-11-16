@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "skills": 396,
+  "skills": 416,
   "errors": [],
   "finding_counts": {},
   "duplicate_bodies": [],
@@ -8,28 +8,28 @@
     {
       "name": "3d-accessibility-fallbacks",
       "description_chars": 128,
-      "body_words": 227,
+      "body_words": 131,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "3d-art-director-agent",
       "description_chars": 131,
-      "body_words": 227,
+      "body_words": 126,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "3d-asset-pipeline-agent",
       "description_chars": 107,
-      "body_words": 226,
+      "body_words": 127,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "3d-experience-brief-intake",
       "description_chars": 143,
-      "body_words": 230,
+      "body_words": 129,
       "findings": [],
       "validation": "structural-only"
     },
@@ -50,7 +50,7 @@
     {
       "name": "3d-performance-budget-gate",
       "description_chars": 89,
-      "body_words": 229,
+      "body_words": 133,
       "findings": [],
       "validation": "structural-only"
     },
@@ -64,21 +64,21 @@
     {
       "name": "3d-visual-screenshot-validator",
       "description_chars": 83,
-      "body_words": 227,
+      "body_words": 132,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "accessibility-remediation-sprint",
       "description_chars": 104,
-      "body_words": 240,
+      "body_words": 128,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "accessibility-specialist-agent",
       "description_chars": 103,
-      "body_words": 234,
+      "body_words": 118,
       "findings": [],
       "validation": "structural-only"
     },
@@ -90,9 +90,16 @@
       "validation": "structural-only"
     },
     {
+      "name": "accessible-data-visualization",
+      "description_chars": 91,
+      "body_words": 69,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
       "name": "admin-crud-ux-patterns",
       "description_chars": 102,
-      "body_words": 236,
+      "body_words": 121,
       "findings": [],
       "validation": "structural-only"
     },
@@ -104,9 +111,23 @@
       "validation": "structural-only"
     },
     {
+      "name": "ads-mcp-tool-permission-diff",
+      "description_chars": 84,
+      "body_words": 74,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
       "name": "ads-reporting-roas-dashboard",
       "description_chars": 95,
       "body_words": 62,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "advertising-creative-rights-inventory",
+      "description_chars": 81,
+      "body_words": 85,
       "findings": [],
       "validation": "structural-only"
     },
@@ -148,14 +169,14 @@
     {
       "name": "ai-evals-regression-suite",
       "description_chars": 101,
-      "body_words": 238,
+      "body_words": 122,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "ai-generated-asset-art-direction",
       "description_chars": 105,
-      "body_words": 241,
+      "body_words": 128,
       "findings": [],
       "validation": "structural-only"
     },
@@ -204,7 +225,7 @@
     {
       "name": "animation-scroll-performance",
       "description_chars": 98,
-      "body_words": 235,
+      "body_words": 122,
       "findings": [],
       "validation": "structural-only"
     },
@@ -218,7 +239,7 @@
     {
       "name": "api-contract-test-generator",
       "description_chars": 97,
-      "body_words": 238,
+      "body_words": 125,
       "findings": [],
       "validation": "structural-only"
     },
@@ -274,7 +295,7 @@
     {
       "name": "astro-islands-seo",
       "description_chars": 105,
-      "body_words": 238,
+      "body_words": 117,
       "findings": [],
       "validation": "structural-only"
     },
@@ -302,14 +323,28 @@
     {
       "name": "background-jobs-queues",
       "description_chars": 97,
-      "body_words": 236,
+      "body_words": 118,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "billing-entitlements-state-machine",
       "description_chars": 106,
-      "body_words": 236,
+      "body_words": 120,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "blender-procedural-geometry-contracts",
+      "description_chars": 96,
+      "body_words": 66,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "blender-topology-uv-quality",
+      "description_chars": 83,
+      "body_words": 69,
       "findings": [],
       "validation": "structural-only"
     },
@@ -335,6 +370,13 @@
       "validation": "structural-only"
     },
     {
+      "name": "browser-annotation-feedback-loop",
+      "description_chars": 65,
+      "body_words": 79,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
       "name": "browser-devtools-qa",
       "description_chars": 112,
       "body_words": 61,
@@ -344,21 +386,21 @@
     {
       "name": "cache-invalidation-design",
       "description_chars": 90,
-      "body_words": 232,
+      "body_words": 120,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "canonical-redirect-audit",
       "description_chars": 104,
-      "body_words": 233,
+      "body_words": 117,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "checkout-trust-risk-ux",
       "description_chars": 95,
-      "body_words": 235,
+      "body_words": 116,
       "findings": [],
       "validation": "structural-only"
     },
@@ -372,7 +414,7 @@
     {
       "name": "ci-failure-triage",
       "description_chars": 109,
-      "body_words": 238,
+      "body_words": 125,
       "findings": [],
       "validation": "structural-only"
     },
@@ -393,14 +435,14 @@
     {
       "name": "cms-editorial-layouts",
       "description_chars": 98,
-      "body_words": 235,
+      "body_words": 120,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "code-copy-provenance-review",
       "description_chars": 137,
-      "body_words": 228,
+      "body_words": 128,
       "findings": [],
       "validation": "structural-only"
     },
@@ -421,7 +463,7 @@
     {
       "name": "codebase-map-indexer",
       "description_chars": 126,
-      "body_words": 239,
+      "body_words": 123,
       "findings": [],
       "validation": "structural-only"
     },
@@ -449,21 +491,21 @@
     {
       "name": "competitor-serp-gap-analysis",
       "description_chars": 112,
-      "body_words": 234,
+      "body_words": 123,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "component-librarian-agent",
       "description_chars": 172,
-      "body_words": 225,
+      "body_words": 121,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "component-provenance-license-review",
       "description_chars": 160,
-      "body_words": 227,
+      "body_words": 122,
       "findings": [],
       "validation": "structural-only"
     },
@@ -471,6 +513,13 @@
       "name": "component-storybook-workshop",
       "description_chars": 108,
       "body_words": 66,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "consent-signal-test-matrix",
+      "description_chars": 91,
+      "body_words": 73,
       "findings": [],
       "validation": "structural-only"
     },
@@ -484,7 +533,7 @@
     {
       "name": "content-decay-pruning",
       "description_chars": 108,
-      "body_words": 236,
+      "body_words": 120,
       "findings": [],
       "validation": "structural-only"
     },
@@ -496,9 +545,16 @@
       "validation": "structural-only"
     },
     {
+      "name": "content-layout-stress-fixtures",
+      "description_chars": 82,
+      "body_words": 74,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
       "name": "content-strategist-agent",
       "description_chars": 107,
-      "body_words": 235,
+      "body_words": 117,
       "findings": [],
       "validation": "structural-only"
     },
@@ -526,7 +582,7 @@
     {
       "name": "copy-adapt-component-pipeline",
       "description_chars": 187,
-      "body_words": 226,
+      "body_words": 123,
       "findings": [],
       "validation": "structural-only"
     },
@@ -547,7 +603,7 @@
     {
       "name": "crawler-analyst-agent",
       "description_chars": 102,
-      "body_words": 233,
+      "body_words": 116,
       "findings": [],
       "validation": "structural-only"
     },
@@ -561,7 +617,7 @@
     {
       "name": "cross-language-test-gate",
       "description_chars": 102,
-      "body_words": 230,
+      "body_words": 132,
       "findings": [],
       "validation": "structural-only"
     },
@@ -589,7 +645,7 @@
     {
       "name": "dark-mode-theme-system",
       "description_chars": 101,
-      "body_words": 239,
+      "body_words": 123,
       "findings": [],
       "validation": "structural-only"
     },
@@ -610,14 +666,14 @@
     {
       "name": "data-import-export-pipeline",
       "description_chars": 98,
-      "body_words": 236,
+      "body_words": 119,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "data-table-grid-ux",
       "description_chars": 102,
-      "body_words": 239,
+      "body_words": 120,
       "findings": [],
       "validation": "structural-only"
     },
@@ -659,14 +715,21 @@
     {
       "name": "dependency-license-risk-audit",
       "description_chars": 107,
-      "body_words": 235,
+      "body_words": 116,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "dependency-minimalism-gate",
       "description_chars": 111,
-      "body_words": 226,
+      "body_words": 121,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "dependency-reachability-triage",
+      "description_chars": 106,
+      "body_words": 71,
       "findings": [],
       "validation": "structural-only"
     },
@@ -694,21 +757,21 @@
     {
       "name": "design-brief-intake-router",
       "description_chars": 215,
-      "body_words": 230,
+      "body_words": 134,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "design-qa-agent-v2",
       "description_chars": 103,
-      "body_words": 224,
+      "body_words": 119,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "design-qa-scorecard",
       "description_chars": 102,
-      "body_words": 235,
+      "body_words": 116,
       "findings": [],
       "validation": "structural-only"
     },
@@ -729,14 +792,21 @@
     {
       "name": "design-system-migration-plan",
       "description_chars": 103,
-      "body_words": 238,
+      "body_words": 122,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "design-token-compiler",
       "description_chars": 123,
-      "body_words": 225,
+      "body_words": 120,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "design-token-drift-ci",
+      "description_chars": 89,
+      "body_words": 72,
       "findings": [],
       "validation": "structural-only"
     },
@@ -771,7 +841,7 @@
     {
       "name": "docs-developer-portal-seo",
       "description_chars": 104,
-      "body_words": 236,
+      "body_words": 115,
       "findings": [],
       "validation": "structural-only"
     },
@@ -792,14 +862,14 @@
     {
       "name": "ecommerce-faceted-navigation-seo",
       "description_chars": 109,
-      "body_words": 235,
+      "body_words": 114,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "ecommerce-product-page-ux",
       "description_chars": 97,
-      "body_words": 235,
+      "body_words": 117,
       "findings": [],
       "validation": "structural-only"
     },
@@ -813,21 +883,21 @@
     {
       "name": "email-deliverability-transactional",
       "description_chars": 100,
-      "body_words": 231,
+      "body_words": 109,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "empty-state-error-recovery-design",
       "description_chars": 109,
-      "body_words": 238,
+      "body_words": 119,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "entity-knowledge-graph-seo",
       "description_chars": 110,
-      "body_words": 235,
+      "body_words": 116,
       "findings": [],
       "validation": "structural-only"
     },
@@ -848,7 +918,7 @@
     {
       "name": "expo-eas-release-gate",
       "description_chars": 124,
-      "body_words": 227,
+      "body_words": 125,
       "findings": [],
       "validation": "structural-only"
     },
@@ -862,7 +932,7 @@
     {
       "name": "feature-flag-rollout",
       "description_chars": 102,
-      "body_words": 235,
+      "body_words": 113,
       "findings": [],
       "validation": "structural-only"
     },
@@ -883,7 +953,7 @@
     {
       "name": "file-upload-storage-pipeline",
       "description_chars": 95,
-      "body_words": 234,
+      "body_words": 115,
       "findings": [],
       "validation": "structural-only"
     },
@@ -918,7 +988,7 @@
     {
       "name": "floating-ui-overlay-positioning",
       "description_chars": 103,
-      "body_words": 237,
+      "body_words": 121,
       "findings": [],
       "validation": "structural-only"
     },
@@ -932,7 +1002,7 @@
     {
       "name": "frontend-design-critic-agent",
       "description_chars": 108,
-      "body_words": 236,
+      "body_words": 119,
       "findings": [],
       "validation": "structural-only"
     },
@@ -967,14 +1037,14 @@
     {
       "name": "fuzzing-security-tests",
       "description_chars": 112,
-      "body_words": 234,
+      "body_words": 117,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "geo-ai-search-readiness-v2",
       "description_chars": 127,
-      "body_words": 228,
+      "body_words": 128,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1016,7 +1086,14 @@
     {
       "name": "gltf-optimization-pipeline-v2",
       "description_chars": 120,
-      "body_words": 228,
+      "body_words": 122,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "gltf-validation-release-gate",
+      "description_chars": 74,
+      "body_words": 74,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1030,42 +1107,49 @@
     {
       "name": "google-ads-conversion-quality",
       "description_chars": 148,
-      "body_words": 134,
+      "body_words": 104,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "google-ads-mcp-reporting",
       "description_chars": 142,
-      "body_words": 113,
+      "body_words": 182,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "google-ads-offline-conversion-reconciliation",
+      "description_chars": 90,
+      "body_words": 71,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "google-ads-pmax-experiment",
       "description_chars": 141,
-      "body_words": 134,
+      "body_words": 99,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "google-ads-policy-risk-gate",
       "description_chars": 130,
-      "body_words": 135,
+      "body_words": 103,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "google-ads-search-query-hygiene",
       "description_chars": 126,
-      "body_words": 133,
+      "body_words": 100,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "google-ads-shopping-feed-health",
       "description_chars": 138,
-      "body_words": 134,
+      "body_words": 99,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1086,35 +1170,35 @@
     {
       "name": "growth-design-director-agent",
       "description_chars": 109,
-      "body_words": 226,
+      "body_words": 122,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "growth-design-message-match",
       "description_chars": 107,
-      "body_words": 229,
+      "body_words": 120,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "growth-engineer-agent",
       "description_chars": 100,
-      "body_words": 233,
+      "body_words": 113,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "growth-experiment-backlog",
       "description_chars": 111,
-      "body_words": 226,
+      "body_words": 118,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "headless-component-composition",
       "description_chars": 120,
-      "body_words": 236,
+      "body_words": 114,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1128,7 +1212,7 @@
     {
       "name": "heuristic-usability-review",
       "description_chars": 107,
-      "body_words": 240,
+      "body_words": 123,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1142,14 +1226,14 @@
     {
       "name": "iconography-illustration-system",
       "description_chars": 109,
-      "body_words": 237,
+      "body_words": 123,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "image-video-seo",
       "description_chars": 108,
-      "body_words": 235,
+      "body_words": 114,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1177,14 +1261,14 @@
     {
       "name": "international-hreflang-seo",
       "description_chars": 103,
-      "body_words": 234,
+      "body_words": 114,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "internationalized-rtl-ui",
       "description_chars": 95,
-      "body_words": 234,
+      "body_words": 112,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1205,14 +1289,14 @@
     {
       "name": "issue-to-pr-agent",
       "description_chars": 112,
-      "body_words": 240,
+      "body_words": 126,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "javascript-seo-rendering",
       "description_chars": 109,
-      "body_words": 235,
+      "body_words": 117,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1240,14 +1324,14 @@
     {
       "name": "language-runtime-router",
       "description_chars": 146,
-      "body_words": 225,
+      "body_words": 117,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "language-specialist-agent",
       "description_chars": 134,
-      "body_words": 227,
+      "body_words": 121,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1268,7 +1352,7 @@
     {
       "name": "llms-txt-ai-crawler-access",
       "description_chars": 108,
-      "body_words": 239,
+      "body_words": 120,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1282,7 +1366,7 @@
     {
       "name": "localization-i18n-engineering",
       "description_chars": 95,
-      "body_words": 236,
+      "body_words": 112,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1296,7 +1380,7 @@
     {
       "name": "log-file-crawl-analysis",
       "description_chars": 104,
-      "body_words": 238,
+      "body_words": 120,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1338,35 +1422,35 @@
     {
       "name": "meta-ads-account-audit",
       "description_chars": 141,
-      "body_words": 134,
+      "body_words": 102,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "meta-ads-audience-experiment",
       "description_chars": 144,
-      "body_words": 132,
+      "body_words": 97,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "meta-ads-capi-deduplication",
       "description_chars": 139,
-      "body_words": 135,
+      "body_words": 110,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "meta-ads-catalog-dpa",
       "description_chars": 118,
-      "body_words": 132,
+      "body_words": 99,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "meta-ads-creative-fatigue",
       "description_chars": 125,
-      "body_words": 133,
+      "body_words": 99,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1380,7 +1464,7 @@
     {
       "name": "meta-ads-policy-risk-gate",
       "description_chars": 137,
-      "body_words": 133,
+      "body_words": 96,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1415,14 +1499,14 @@
     {
       "name": "mobile-asset-budget-audit",
       "description_chars": 119,
-      "body_words": 227,
+      "body_words": 117,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "mobile-crash-analytics-gate",
       "description_chars": 122,
-      "body_words": 226,
+      "body_words": 122,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1443,42 +1527,42 @@
     {
       "name": "mobile-offline-first-review",
       "description_chars": 132,
-      "body_words": 226,
+      "body_words": 118,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "mobile-performance-agent",
       "description_chars": 97,
-      "body_words": 227,
+      "body_words": 120,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "mobile-permissions-privacy-gate",
       "description_chars": 131,
-      "body_words": 226,
+      "body_words": 120,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "mobile-release-reviewer-agent",
       "description_chars": 105,
-      "body_words": 227,
+      "body_words": 121,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "mobile-ux-platform-parity",
       "description_chars": 129,
-      "body_words": 225,
+      "body_words": 116,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "monorepo-boundary-architecture",
       "description_chars": 119,
-      "body_words": 235,
+      "body_words": 113,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1499,28 +1583,28 @@
     {
       "name": "multi-brand-whitelabel-ui",
       "description_chars": 99,
-      "body_words": 236,
+      "body_words": 116,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "multi-tenant-saas-architecture",
       "description_chars": 110,
-      "body_words": 240,
+      "body_words": 123,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "multilingual-content-localization-seo",
       "description_chars": 103,
-      "body_words": 236,
+      "body_words": 118,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "mutation-testing-strategy",
       "description_chars": 115,
-      "body_words": 240,
+      "body_words": 120,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1534,7 +1618,14 @@
     {
       "name": "nextjs-app-router-seo",
       "description_chars": 100,
-      "body_words": 237,
+      "body_words": 117,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "nextjs-cache-invalidation-contracts",
+      "description_chars": 107,
+      "body_words": 67,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1562,14 +1653,14 @@
     {
       "name": "node-package-release-engineering",
       "description_chars": 115,
-      "body_words": 235,
+      "body_words": 121,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "nuxt-seo-module-workflow",
       "description_chars": 82,
-      "body_words": 236,
+      "body_words": 118,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1581,9 +1672,16 @@
       "validation": "structural-only"
     },
     {
+      "name": "oidc-release-provenance",
+      "description_chars": 83,
+      "body_words": 65,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
       "name": "onboarding-product-tour-ux",
       "description_chars": 94,
-      "body_words": 232,
+      "body_words": 115,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1604,14 +1702,14 @@
     {
       "name": "paid-media-attribution-governance",
       "description_chars": 139,
-      "body_words": 132,
+      "body_words": 94,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "paid-media-budget-pacing",
       "description_chars": 128,
-      "body_words": 132,
+      "body_words": 101,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1625,7 +1723,7 @@
     {
       "name": "paid-search-risk-agent",
       "description_chars": 116,
-      "body_words": 225,
+      "body_words": 119,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1646,7 +1744,7 @@
     {
       "name": "performance-sre-agent",
       "description_chars": 93,
-      "body_words": 233,
+      "body_words": 115,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1667,7 +1765,7 @@
     {
       "name": "playwright-screenshot-baselines",
       "description_chars": 112,
-      "body_words": 234,
+      "body_words": 114,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1679,6 +1777,13 @@
       "validation": "structural-only"
     },
     {
+      "name": "postgres-lock-budget-migrations",
+      "description_chars": 93,
+      "body_words": 70,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
       "name": "ppc-budget-bid-optimizer",
       "description_chars": 137,
       "body_words": 88,
@@ -1686,9 +1791,16 @@
       "validation": "structural-only"
     },
     {
+      "name": "ppc-geo-placement-drift-audit",
+      "description_chars": 81,
+      "body_words": 71,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
       "name": "ppc-landing-quality-score-gate",
       "description_chars": 130,
-      "body_words": 230,
+      "body_words": 122,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1709,7 +1821,7 @@
     {
       "name": "pr-review-response-agent",
       "description_chars": 115,
-      "body_words": 236,
+      "body_words": 121,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1730,14 +1842,14 @@
     {
       "name": "principal-architect-agent",
       "description_chars": 111,
-      "body_words": 239,
+      "body_words": 123,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "principal-code-reviewer-agent",
       "description_chars": 98,
-      "body_words": 229,
+      "body_words": 118,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1751,7 +1863,7 @@
     {
       "name": "product-builder",
       "description_chars": 140,
-      "body_words": 126,
+      "body_words": 165,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1779,14 +1891,14 @@
     {
       "name": "programming-agent-pack-selector",
       "description_chars": 117,
-      "body_words": 228,
+      "body_words": 121,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "prompt-injection-defense",
       "description_chars": 110,
-      "body_words": 237,
+      "body_words": 122,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1828,28 +1940,28 @@
     {
       "name": "pytest-fixtures-and-parametrization",
       "description_chars": 200,
-      "body_words": 415,
+      "body_words": 447,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "python-async-await-patterns",
       "description_chars": 176,
-      "body_words": 380,
+      "body_words": 417,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "python-cli-package-builder",
       "description_chars": 111,
-      "body_words": 237,
+      "body_words": 117,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "python-dataclasses-pydantic-validation",
       "description_chars": 211,
-      "body_words": 407,
+      "body_words": 438,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1863,28 +1975,28 @@
     {
       "name": "python-packaging-pyproject-poetry-uv",
       "description_chars": 221,
-      "body_words": 405,
+      "body_words": 441,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "python-profiling-cprofile-pyspy",
       "description_chars": 214,
-      "body_words": 445,
+      "body_words": 479,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "python-typing-and-mypy-strictness",
       "description_chars": 173,
-      "body_words": 358,
+      "body_words": 395,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "qa-automation-agent",
       "description_chars": 101,
-      "body_words": 239,
+      "body_words": 122,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1898,7 +2010,7 @@
     {
       "name": "r3f-scene-pattern-library",
       "description_chars": 157,
-      "body_words": 229,
+      "body_words": 119,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1912,7 +2024,7 @@
     {
       "name": "react-aria-advanced-interactions",
       "description_chars": 102,
-      "body_words": 235,
+      "body_words": 115,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1938,6 +2050,13 @@
       "validation": "structural-only"
     },
     {
+      "name": "react-server-client-boundary-audit",
+      "description_chars": 112,
+      "body_words": 73,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
       "name": "react-three-fiber-components",
       "description_chars": 98,
       "body_words": 60,
@@ -1947,7 +2066,7 @@
     {
       "name": "realtime-websockets-sse",
       "description_chars": 106,
-      "body_words": 233,
+      "body_words": 109,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1968,14 +2087,14 @@
     {
       "name": "release-manager-agent",
       "description_chars": 101,
-      "body_words": 234,
+      "body_words": 117,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "release-notes-changelog-automation",
       "description_chars": 102,
-      "body_words": 236,
+      "body_words": 117,
       "findings": [],
       "validation": "structural-only"
     },
@@ -1996,7 +2115,7 @@
     {
       "name": "robots-xrobots-meta-controls",
       "description_chars": 88,
-      "body_words": 233,
+      "body_words": 115,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2010,7 +2129,7 @@
     {
       "name": "search-console-api-automation",
       "description_chars": 108,
-      "body_words": 236,
+      "body_words": 114,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2024,7 +2143,7 @@
     {
       "name": "search-console-performance-triage",
       "description_chars": 132,
-      "body_words": 130,
+      "body_words": 95,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2038,14 +2157,14 @@
     {
       "name": "search-indexing-rag",
       "description_chars": 112,
-      "body_words": 236,
+      "body_words": 117,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "secrets-env-rotation",
       "description_chars": 103,
-      "body_words": 239,
+      "body_words": 120,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2059,84 +2178,84 @@
     {
       "name": "security-reviewer-agent",
       "description_chars": 104,
-      "body_words": 237,
+      "body_words": 117,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "seo-ab-testing-causal-review",
       "description_chars": 112,
-      "body_words": 236,
+      "body_words": 118,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "seo-change-impact-monitoring",
       "description_chars": 136,
-      "body_words": 131,
+      "body_words": 98,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "seo-ci-quality-gate",
       "description_chars": 103,
-      "body_words": 238,
+      "body_words": 124,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "seo-content-authorship-e-e-a-t",
       "description_chars": 130,
-      "body_words": 132,
+      "body_words": 94,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "seo-cwv-rum-observability",
       "description_chars": 117,
-      "body_words": 131,
+      "body_words": 97,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "seo-digital-pr-link-risk",
       "description_chars": 136,
-      "body_words": 134,
+      "body_words": 97,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "seo-director-agent",
       "description_chars": 107,
-      "body_words": 232,
+      "body_words": 116,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "seo-ecommerce-product-feed",
       "description_chars": 135,
-      "body_words": 130,
+      "body_words": 93,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "seo-image-media-pipeline",
       "description_chars": 136,
-      "body_words": 130,
+      "body_words": 92,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "seo-internal-linking-architecture",
       "description_chars": 134,
-      "body_words": 131,
+      "body_words": 95,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "seo-log-file-crawl-analysis",
       "description_chars": 139,
-      "body_words": 133,
+      "body_words": 101,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2150,14 +2269,14 @@
     {
       "name": "seo-search-intent-clustering",
       "description_chars": 134,
-      "body_words": 131,
+      "body_words": 101,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "seo-structured-data-validation",
       "description_chars": 134,
-      "body_words": 131,
+      "body_words": 96,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2171,21 +2290,21 @@
     {
       "name": "serp-feature-rich-result-planner",
       "description_chars": 102,
-      "body_words": 238,
+      "body_words": 119,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "serp-to-page-brief-generator",
       "description_chars": 129,
-      "body_words": 230,
+      "body_words": 123,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "shader-and-postprocessing-review",
       "description_chars": 124,
-      "body_words": 228,
+      "body_words": 119,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2199,98 +2318,98 @@
     {
       "name": "site-accessibility-performance-launch",
       "description_chars": 147,
-      "body_words": 138,
+      "body_words": 99,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "site-analytics-consent-instrumentation",
       "description_chars": 147,
-      "body_words": 135,
+      "body_words": 100,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "site-api-integration-boundaries",
       "description_chars": 148,
-      "body_words": 137,
+      "body_words": 103,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "site-commerce-conversion-architecture",
       "description_chars": 134,
-      "body_words": 135,
+      "body_words": 99,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "site-content-model-cms",
       "description_chars": 155,
-      "body_words": 136,
+      "body_words": 97,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "site-crawler-automation",
       "description_chars": 109,
-      "body_words": 234,
+      "body_words": 115,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "site-design-system-delivery",
       "description_chars": 129,
-      "body_words": 136,
+      "body_words": 105,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "site-editorial-governance",
       "description_chars": 140,
-      "body_words": 135,
+      "body_words": 95,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "site-forms-lead-capture",
       "description_chars": 146,
-      "body_words": 137,
+      "body_words": 102,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "site-i18n-localization-delivery",
       "description_chars": 142,
-      "body_words": 136,
+      "body_words": 99,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "site-platform-architecture",
       "description_chars": 159,
-      "body_words": 136,
+      "body_words": 100,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "site-production-launch-gate",
       "description_chars": 162,
-      "body_words": 138,
+      "body_words": 102,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "sitemap-index-sharding",
       "description_chars": 112,
-      "body_words": 236,
+      "body_words": 116,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "skill-catalog-orchestrator",
       "description_chars": 121,
-      "body_words": 159,
+      "body_words": 216,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2318,7 +2437,7 @@
     {
       "name": "source-first-api-verifier",
       "description_chars": 142,
-      "body_words": 228,
+      "body_words": 125,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2339,14 +2458,14 @@
     {
       "name": "sql-query-plan-optimizer",
       "description_chars": 101,
-      "body_words": 236,
+      "body_words": 117,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "sqlalchemy-orm-patterns",
-      "description_chars": 147,
-      "body_words": 399,
+      "description_chars": 134,
+      "body_words": 413,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2360,14 +2479,14 @@
     {
       "name": "staff-debugger-agent",
       "description_chars": 103,
-      "body_words": 232,
+      "body_words": 120,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "storybook-interaction-tests",
       "description_chars": 103,
-      "body_words": 237,
+      "body_words": 116,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2402,7 +2521,7 @@
     {
       "name": "supply-chain-sbom-sca",
       "description_chars": 96,
-      "body_words": 233,
+      "body_words": 113,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2430,77 +2549,77 @@
     {
       "name": "telegram-bot-api-reliability",
       "description_chars": 144,
-      "body_words": 136,
+      "body_words": 102,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "telegram-bot-solution-architecture",
       "description_chars": 124,
-      "body_words": 132,
+      "body_words": 97,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "telegram-mini-app-analytics-attribution",
       "description_chars": 155,
-      "body_words": 136,
+      "body_words": 100,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "telegram-mini-app-backend-contract",
       "description_chars": 148,
-      "body_words": 136,
+      "body_words": 105,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "telegram-mini-app-growth-loop",
       "description_chars": 147,
-      "body_words": 134,
+      "body_words": 99,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "telegram-mini-app-init-data-authentication",
       "description_chars": 146,
-      "body_words": 140,
+      "body_words": 111,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "telegram-mini-app-payments-policy",
       "description_chars": 139,
-      "body_words": 135,
+      "body_words": 101,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "telegram-mini-app-performance-budget",
       "description_chars": 145,
-      "body_words": 138,
+      "body_words": 106,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "telegram-mini-app-platform-ui",
       "description_chars": 148,
-      "body_words": 138,
+      "body_words": 98,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "telegram-mini-app-product-brief",
       "description_chars": 140,
-      "body_words": 137,
+      "body_words": 101,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "telegram-mini-app-release-gate",
       "description_chars": 145,
-      "body_words": 137,
+      "body_words": 106,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2519,9 +2638,16 @@
       "validation": "structural-only"
     },
     {
+      "name": "texture-compression-device-matrix",
+      "description_chars": 77,
+      "body_words": 75,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
       "name": "three-vs-babylon-vs-model-viewer",
       "description_chars": 145,
-      "body_words": 233,
+      "body_words": 132,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2549,7 +2675,7 @@
     {
       "name": "topical-authority-cluster-builder",
       "description_chars": 99,
-      "body_words": 235,
+      "body_words": 119,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2570,63 +2696,63 @@
     {
       "name": "trust-safety-content-moderation-ux",
       "description_chars": 96,
-      "body_words": 238,
+      "body_words": 119,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "turbo-mode-controller",
       "description_chars": 175,
-      "body_words": 226,
+      "body_words": 129,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "turbo-multi-agent-review",
       "description_chars": 114,
-      "body_words": 227,
+      "body_words": 124,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "turbo-source-benchmark",
       "description_chars": 177,
-      "body_words": 226,
+      "body_words": 122,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "turbo-validation-gate",
       "description_chars": 125,
-      "body_words": 227,
+      "body_words": 123,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "typescript-strictness-migration",
       "description_chars": 107,
-      "body_words": 238,
+      "body_words": 125,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "typography-readability-system",
       "description_chars": 100,
-      "body_words": 235,
+      "body_words": 124,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "ui-art-director-agent",
       "description_chars": 130,
-      "body_words": 226,
+      "body_words": 121,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "ui-component-source-router",
       "description_chars": 169,
-      "body_words": 230,
+      "body_words": 126,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2634,6 +2760,13 @@
       "name": "ux-researcher-agent",
       "description_chars": 246,
       "body_words": 210,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "variable-font-loading-budget",
+      "description_chars": 90,
+      "body_words": 71,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2654,7 +2787,7 @@
     {
       "name": "visual-regression-design-gate",
       "description_chars": 135,
-      "body_words": 225,
+      "body_words": 116,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2668,7 +2801,7 @@
     {
       "name": "web-rendering-edge-ssr-seo",
       "description_chars": 92,
-      "body_words": 239,
+      "body_words": 113,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2696,7 +2829,14 @@
     {
       "name": "webgl-performance-agent",
       "description_chars": 91,
-      "body_words": 228,
+      "body_words": 123,
+      "findings": [],
+      "validation": "structural-only"
+    },
+    {
+      "name": "webgl-resource-lifecycle",
+      "description_chars": 83,
+      "body_words": 71,
       "findings": [],
       "validation": "structural-only"
     },
@@ -2724,49 +2864,49 @@
     {
       "name": "yandex-direct-account-audit",
       "description_chars": 142,
-      "body_words": 134,
+      "body_words": 98,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "yandex-direct-bid-strategy-review",
       "description_chars": 140,
-      "body_words": 135,
+      "body_words": 106,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "yandex-direct-campaign-architecture",
       "description_chars": 128,
-      "body_words": 134,
+      "body_words": 99,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "yandex-direct-feed-campaigns",
       "description_chars": 123,
-      "body_words": 133,
+      "body_words": 94,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "yandex-direct-goal-attribution",
       "description_chars": 128,
-      "body_words": 132,
+      "body_words": 102,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "yandex-direct-policy-risk-gate",
       "description_chars": 126,
-      "body_words": 134,
+      "body_words": 101,
       "findings": [],
       "validation": "structural-only"
     },
     {
       "name": "yandex-direct-query-negative-mining",
       "description_chars": 121,
-      "body_words": 133,
+      "body_words": 98,
       "findings": [],
       "validation": "structural-only"
     },

@@ -5,13 +5,10 @@ description: Use for SEO work when Codex should cluster keywords by intent, enti
 
 # seo search intent clustering
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Cluster queries by the user task and likely destination, preserving ambiguous and mixed-intent cases.
+2. Validate a sample against current SERPs and map each cluster to a canonical page rather than generating duplicates.
 
 ## Domain Focus
 

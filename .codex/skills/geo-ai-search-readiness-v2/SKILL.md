@@ -5,24 +5,12 @@ description: Use for GEO/AEO/AI-search readiness, LLM crawler access, citation r
 
 # Geo Ai Search Readiness V2
 
+## Task Decisions
+
+1. Verify crawlability, index eligibility, factual authorship and the availability of meaningful text and citations.
+2. Treat AI visibility as observed evidence, not a guaranteed placement; no special llms.txt or schema is required for Google AI features.
+
 Use this skill for Growth work focused on review AI search readiness, llms.txt, entity clarity, citations, structured content, and answer extraction.
-
-## Workflow
-
-1. Restate the user outcome, target quality level, constraints, and definition of done.
-2. Inspect the current project before proposing code, design, sources, or dependencies.
-3. Use Srednoff OS mode/domain routing; if TURBO is active, compare top sources and run deeper critique.
-4. Prefer existing project conventions and proven sources over generic invention.
-5. Validate with the narrowest checks that prove the result, expanding validation for high-risk or TURBO work.
-6. Report facts, commands, source decisions, remaining risks, and exact next steps.
-
-## Checklist
-
-- Facts separated from assumptions.
-- Source/provenance reviewed when external code, components, assets, or advice are used.
-- Security, privacy, accessibility, performance, and rollback considered when relevant.
-- Token cost justified by concrete quality gain unless TURBO is explicitly active.
-- No broad context loading when a deterministic script or narrow reference is enough.
 
 ## Guardrails
 

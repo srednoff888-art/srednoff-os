@@ -7,10 +7,13 @@ local_package_root="$(CDPATH='' cd -- "$script_dir/.." && pwd -P)"
 codex_home="${CODEX_HOME:-$HOME/.codex}"
 global_template_dir="$codex_home/templates/codex-md-os"
 
-if [ -d "$global_template_dir" ]; then
+if [ -f "$local_package_root/.srednoff-package.json" ] && [ -d "$local_package_root/.codex/skills" ]; then
+  template_dir="$local_package_root"
+elif [ -f "$global_template_dir/.srednoff-package.json" ]; then
   template_dir="$global_template_dir"
 else
-  template_dir="$local_package_root"
+  printf '%s\n' 'Clean Srednoff OS distribution template not found; use the distribution init script.' >&2
+  exit 1
 fi
 
 find_powershell() {
@@ -43,6 +46,8 @@ if git_root="$(git -C "$target_dir" rev-parse --show-toplevel 2>/dev/null)"; the
   esac
 fi
 
+fresh_skills="true"
+if [ -d "$project_dir/.codex/skills" ]; then fresh_skills="false"; fi
 files=(
   "AGENTS.md"
   "code_review.md"
@@ -56,13 +61,24 @@ files=(
   ".agent/SREDNOFF_OS_V2_1_RELEASE.md"
 )
 
-for source_dir in "$template_dir/.codex/skills" "$template_dir/.codex/srednoff-os" "$template_dir/scripts" "$template_dir/evals" "$template_dir/profiles" "$template_dir/policies" "$template_dir/registry" "$template_dir/integrations" "$template_dir/bundles" "$template_dir/agents"; do
+for source_dir in "$template_dir/.agent" "$template_dir/.codex/skills" "$template_dir/.codex/srednoff-os" "$template_dir/scripts" "$template_dir/evals" "$template_dir/profiles" "$template_dir/policies" "$template_dir/registry" "$template_dir/integrations" "$template_dir/bundles" "$template_dir/agents" "$template_dir/docs"; do
   if [ -d "$source_dir" ]; then
     while IFS= read -r -d '' file; do
       files+=("${file#"$template_dir/"}")
-    done < <(find "$source_dir" -type f -print0)
+    done < <(find "$source_dir" -type f ! -path '*/__pycache__/*' ! -name '*.bak.*' ! -name '*.pyc' ! -name '*.log' -print0)
   fi
 done
+
+if command -v python3 >/dev/null 2>&1; then
+  python_cmd="python3"
+else
+  python_cmd="python"
+fi
+compact_mode="false"
+compact_marker="$project_dir/.codex/srednoff-os/discovery-profile.json"
+if [ -f "$compact_marker" ]; then
+  compact_mode="$("$python_cmd" -c 'import json,sys; print(str(json.load(open(sys.argv[1], encoding="utf-8-sig")).get("mode") == "compact").lower())' "$compact_marker")"
+fi
 
 created=0
 updated=0
@@ -72,6 +88,12 @@ missing=0
 for rel in "${files[@]}"; do
   src="$template_dir/$rel"
   dst="$project_dir/$rel"
+  if [ "$compact_mode" = "true" ]; then
+    case "$rel" in
+      .codex/skills/github-research/*|.codex/skills/product-builder/*|.codex/skills/production-review/*|.codex/skills/quality-cost-skill-kernel/*) ;;
+      .codex/skills/*) dst="$project_dir/.codex/srednoff-os/library/${rel#'.codex/skills/'}" ;;
+    esac
+  fi
 
   if [ ! -f "$src" ]; then
     printf 'missing template: %s\n' "$rel"
@@ -128,6 +150,9 @@ else
 fi
 
 "$python_cmd" "$template_dir/scripts/skill_catalog.py" profile --skills-root "$template_dir/.codex/skills" --project "$project_dir" --brief "${2:-}" --max-skills 12 --install
+if [ "$fresh_skills" = "true" ] && [ "${SREDNOFF_LEGACY_DISCOVERY:-0}" != "1" ]; then
+  "$python_cmd" "$template_dir/scripts/compact_skill_discovery.py" --package "$template_dir" --previous-package "$template_dir" --active-root "$project_skills_root" --apply
+fi
 
 cat <<EOF
 

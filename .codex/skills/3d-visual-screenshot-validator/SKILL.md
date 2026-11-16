@@ -5,24 +5,12 @@ description: Use before finishing Three.js, R3F, WebGL, WebGPU, model-viewer, or
 
 # 3D Visual Screenshot Validator
 
+## Task Decisions
+
+1. Capture the intended camera view after model/texture readiness, then move the camera or change a variant and capture again.
+2. Check actual canvas pixel variance, model bounds, clipping, missing textures and UI overlap; a successful HTTP load is not rendering evidence.
+
 Use this skill for 3D Web work focused on validate canvas renders, screenshots, framing, nonblank pixels, mobile viewports, and asset loading.
-
-## Workflow
-
-1. Restate the user outcome, target quality level, constraints, and definition of done.
-2. Inspect the current project before proposing code, design, sources, or dependencies.
-3. Use Srednoff OS mode/domain routing; if TURBO is active, compare top sources and run deeper critique.
-4. Prefer existing project conventions and proven sources over generic invention.
-5. Validate with the narrowest checks that prove the result, expanding validation for high-risk or TURBO work.
-6. Report facts, commands, source decisions, remaining risks, and exact next steps.
-
-## Checklist
-
-- Facts separated from assumptions.
-- Source/provenance reviewed when external code, components, assets, or advice are used.
-- Security, privacy, accessibility, performance, and rollback considered when relevant.
-- Token cost justified by concrete quality gain unless TURBO is explicitly active.
-- No broad context loading when a deterministic script or narrow reference is enough.
 
 ## Guardrails
 

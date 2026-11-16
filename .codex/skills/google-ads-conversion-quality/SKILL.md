@@ -5,13 +5,10 @@ description: Use for PPC work when Codex should validate Google Ads conversion a
 
 # google ads conversion quality
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Reconcile action purpose, primary/secondary status, value/currency, consent and duplicate event identity against the business outcome.
+2. Check current Data Manager eligibility before implementing offline imports; an accepted upload is not proof of attribution.
 
 ## Domain Focus
 

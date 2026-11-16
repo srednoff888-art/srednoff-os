@@ -5,13 +5,10 @@ description: Use for Telegram work when Codex should define Telegram Mini App us
 
 # telegram mini app product brief
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Record the user job, launch surface, identity needs, monetization and permitted bot interaction.
+2. Prototype the smallest complete Mini App journey before choosing backend or payment infrastructure.
 
 ## Domain Focus
 

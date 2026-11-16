@@ -55,11 +55,11 @@
     <rect x="690" y="92" width="444" height="48" rx="14" fill="#07111F" stroke="#60A5FA" stroke-opacity="0.28"/>
     <text x="718" y="123" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="850" fill="#E2E8F0">RELEASE CONTROL PLANE</text>
     <circle cx="1098" cy="116" r="7" fill="#22C55E"/>
-    <text x="1078" y="122" text-anchor="end" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#86EFAC">GREEN</text>
+    <text x="1078" y="122" text-anchor="end" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#86EFAC">TESTED</text>
 
     <g>
       <rect x="690" y="162" width="134" height="92" rx="16" fill="#0B1324" stroke="#32D4C0" stroke-opacity="0.42"/>
-      <text x="757" y="201" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="900" fill="#99F6E4">308</text>
+      <text x="757" y="201" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="900" fill="#99F6E4">416</text>
       <text x="757" y="226" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#CBD5E1">SKILLS</text>
     </g>
     <g>
@@ -69,8 +69,8 @@
     </g>
     <g>
       <rect x="998" y="162" width="136" height="92" rx="16" fill="#0B1324" stroke="#F8C14A" stroke-opacity="0.48"/>
-      <text x="1066" y="201" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="900" fill="#FDE68A">44/44</text>
-      <text x="1066" y="226" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#CBD5E1">DOCTOR</text>
+      <text x="1066" y="201" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="900" fill="#FDE68A">61/61</text>
+      <text x="1066" y="226" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#CBD5E1">ROUTING</text>
     </g>
 
     <rect x="690" y="276" width="444" height="40" rx="12" fill="#07111F" stroke="#A78BFA" stroke-opacity="0.28"/>
@@ -85,6 +85,6 @@
     <path d="M626 76L690 116M1088 58L1098 116M1144 370L1112 316M1206 190L1134 190" stroke="#CBD5E1" stroke-opacity="0.22"/>
   </g>
 
-  <text x="1162" y="382" text-anchor="end" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="900" fill="#F8FAFC">v2.1.2 public release</text>
+  <text x="1162" y="382" text-anchor="end" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="900" fill="#F8FAFC">v2.1.2 / NOV 2026</text>
   <text x="1162" y="404" text-anchor="end" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="650" fill="#94A3B8">srednoff.agency</text>
 </svg>

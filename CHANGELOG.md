@@ -1,5 +1,39 @@
 # Changelog
 
+## 2026-11-16
+
+### Added
+
+- 20 scoped workflows for code, design/UI/UX/sites, advertising and 3D.
+- All-416 catalog/resource inventory, 47 source cards with 11 pinned repos,
+  discovery diagnostics, and review-only upstream metadata comparison.
+- Reversible passive discovery, native body budgets, MCP tool/schema drift
+  review, saved design briefs, and project-scoped three-way updates.
+
+### Changed
+
+- Added concrete task decisions to 196 existing workflows; removed 173715
+  characters of repeated boilerplate from 189 files.
+- Corrected the audit's incomplete template detection and kept native skill
+  manifests out of project stack signals.
+- Corrected Google Ads MCP write exposure and current offline ingestion guidance.
+- Scoped new mappings after a negative fixture exposed irrelevant workflows
+  being selected for a documentation typo.
+- Preserved compact mode through update/init/sync; added a distribution marker
+  to prevent accidental use of a normal initialized project as a clean template.
+- Fresh installations default to compact discovery, preserve personal
+  instructions, and direct existing OS users to the previous-package updater.
+- Kept backups/private overrides and guarded profile, marker and index paths.
+
+### Verified
+
+- 53 catalog/update tests, 61 selector scenarios, 9 benchmark-harness tests.
+- Three additional bootstrap smoke suites verify personal instruction retention,
+  fresh compact defaults, clean-template selection and the portable Bash path.
+- Full doctor: 46 OK, 1 historical-project warning, 0 FAIL.
+- No paid action, model switch, account connection, engine bundle import or
+  claim of independently established multi-model superiority.
+
 ## 2026-10-15
 
 ### Added

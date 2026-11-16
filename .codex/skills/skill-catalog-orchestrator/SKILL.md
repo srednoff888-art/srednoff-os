@@ -11,5 +11,7 @@ Use the library as an indexed discovery surface. Installed metadata consumes con
 - Audit the library with scripts/skill_catalog.py audit; separate structural findings from behavioral model evidence.
 - Generate a project profile with scripts/skill_catalog.py profile --project <path> --brief <task> --max-skills 12 --install. This deploys native .agents/skills and records ownership.
 - Treat the profile as a cache. Recompute when the brief, repository, or skill content changes; never let it forbid a needed capability.
+- Use `skill_maintenance.py discovery` to inspect duplicate discovery candidates and `compact_skill_discovery.py` for dry-run, reversible retirement of known public manifests. Never retire customized skills or mistake the filesystem report for proof of host loading.
+- An optional `--max-entrypoint-chars` bounds selected body text, not reference/tool output or real token usage. Retain private active overrides when resolving a passive library.
 ## Acceptance
 Check selected skill names, source fingerprints, native discovery paths, and user-modified-file conflicts. Only delegate when the user or applicable instructions authorize it; keep final worker outcomes explicit. User instructions override this skill.

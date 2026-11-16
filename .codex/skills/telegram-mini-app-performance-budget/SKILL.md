@@ -5,13 +5,10 @@ description: Use for Telegram work when Codex should set Mini App mobile perform
 
 # telegram mini app performance budget
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Measure bridge readiness, first usable screen, bundle transfer and image decode in a real Telegram client.
+2. Keep loading and offline recovery usable and compare the same device/network workload after optimization.
 
 ## Domain Focus
 

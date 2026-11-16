@@ -1,9 +1,9 @@
 {
   "name": "Srednoff OS",
   "version": "v2.1.2",
-  "maintenance_release": "v2.1.2-20261015.1",
-  "maintained_at": "2026-10-15",
-  "installable_skills": 396,
+  "maintenance_release": "v2.1.2-20261116",
+  "maintained_at": "2026-11-16",
+  "installable_skills": 416,
   "released_at": "2026-06-30",
   "baseline": {
     "kernel_records": 4500,
@@ -45,6 +45,12 @@
     "public-release-note",
     "hook-secret-false-positive-regressions",
     "empty-brief-eval-coverage",
-    "selector-project-scan-modes"
+    "selector-project-scan-modes",
+    "passive-skill-discovery",
+    "whole-catalog-maintenance-evidence",
+    "mcp-tool-inventory-diff",
+    "entrypoint-character-budget",
+    "project-safe-three-way-update",
+    "persisted-design-brief"
   ]
 }

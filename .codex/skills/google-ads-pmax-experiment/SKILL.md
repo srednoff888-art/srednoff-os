@@ -5,13 +5,10 @@ description: Use for PPC work when Codex should plan Google Performance Max expe
 
 # google ads pmax experiment
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Isolate one asset/feed/goal change with a comparable baseline and an explicit learning/conversion-lag window.
+2. Keep brand, inventory and measurement changes from confounding the result; spend changes remain approval-gated.
 
 ## Domain Focus
 

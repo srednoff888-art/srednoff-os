@@ -5,25 +5,12 @@ description: "Use this skill for content decay analysis, pruning, merging, updat
 
 # Content Decay Pruning
 
+## Task Decisions
+
+1. Separate seasonality, demand changes, indexing defects and genuine content decay using comparable periods.
+2. Preserve pages with conversions or useful links unless a justified merge/redirect plan exists; monitor the changed cohort separately.
+
 Use this skill for SEO tasks focused on content decay analysis, pruning, merging, updating, redirecting, recovery prioritization.
-
-## Workflow
-
-1. Clarify the user outcome, constraints, current stack, and definition of done.
-2. Inspect local source, artifacts, analytics exports, logs, designs, or docs before changing anything.
-3. Check official documentation when APIs, SDKs, policies, search behavior, accessibility rules, or production behavior may have changed.
-4. Compare proven open-source patterns for non-trivial choices and adapt ideas without copying incompatible code.
-5. Produce the smallest production-ready change or recommendation that satisfies the request.
-6. Validate with relevant evidence: tests, lint, typecheck, build, screenshots, crawl output, logs, analytics, or manual scenario.
-7. Report commands, files, findings, risks, and next steps clearly.
-
-## Focus Checklist
-
-- Map inputs, owners, dependencies, and constraints.
-- Prefer existing project conventions, design systems, and platform primitives.
-- Include failure states, privacy/security implications, performance impact, and rollback where relevant.
-- Separate facts from assumptions and mark any unverified claims.
-- Keep recommendations actionable and prioritized by impact and risk.
 
 ## Guardrails
 

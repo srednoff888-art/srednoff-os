@@ -5,13 +5,10 @@ description: Use for PPC work when Codex should check Google Ads policy, API con
 
 # google ads policy risk gate
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Check the current policy for the actual product, claim, destination and market, plus account-level restrictions.
+2. Return evidence and a publication gate; passing a local checklist does not guarantee platform approval.
 
 ## Domain Focus
 

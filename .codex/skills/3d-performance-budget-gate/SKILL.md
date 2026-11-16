@@ -5,24 +5,12 @@ description: Use before shipping 3D web, WebGL, WebGPU, Three.js, Babylon.js, R3
 
 # 3D Performance Budget Gate
 
+## Task Decisions
+
+1. Measure first usable frame, p95 frame time, draw calls, texture allocation and asset transfer on an agreed representative device.
+2. Use a repeatable camera/interaction sequence; test the fallback separately and report measured budgets rather than universal polygon or FPS claims.
+
 Use this skill for 3D Web work focused on set and validate frame time, draw calls, texture memory, shader cost, and mobile fallback.
-
-## Workflow
-
-1. Restate the user outcome, target quality level, constraints, and definition of done.
-2. Inspect the current project before proposing code, design, sources, or dependencies.
-3. Use Srednoff OS mode/domain routing; if TURBO is active, compare top sources and run deeper critique.
-4. Prefer existing project conventions and proven sources over generic invention.
-5. Validate with the narrowest checks that prove the result, expanding validation for high-risk or TURBO work.
-6. Report facts, commands, source decisions, remaining risks, and exact next steps.
-
-## Checklist
-
-- Facts separated from assumptions.
-- Source/provenance reviewed when external code, components, assets, or advice are used.
-- Security, privacy, accessibility, performance, and rollback considered when relevant.
-- Token cost justified by concrete quality gain unless TURBO is explicitly active.
-- No broad context loading when a deterministic script or narrow reference is enough.
 
 ## Guardrails
 

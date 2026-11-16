@@ -20,6 +20,13 @@ library used by the selector. After selecting a task's workflows, use
 to provision a bounded native set. The profile is a cache, never a restriction
 on calling a necessary skill. Preserve user-owned resources and instructions.
 
+For managed compact discovery, the full library is passive under
+`srednoff-os/library` beside the active skills root. Keep its discovery marker
+and four bootstrap anchors intact; do not reactivate the full legacy library.
+Use `scripts/skill_maintenance.py` for catalog evidence and discovery/drift
+diagnostics. Evidence levels are distinct: metadata, source review, routing and
+real task validation must not be presented as interchangeable.
+
 ---
 
 # Srednoff OS Startup Notification Rule

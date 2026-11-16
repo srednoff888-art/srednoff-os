@@ -383,6 +383,19 @@ if (Test-Path -LiteralPath $CatalogScript -PathType Leaf) {
     }
 }
 
+$MaintenanceScript = Join-Path $ScriptDir "skill_maintenance.py"
+$MaintenanceSources = Resolve-LocalOrHome ".codex\srednoff-os\maintenance-sources.json" "srednoff-os\maintenance-sources.json" "Leaf"
+$MaintenanceInventory = Resolve-LocalOrHome ".codex\srednoff-os\maintenance-inventory.json" "srednoff-os\maintenance-inventory.json" "Leaf"
+if ((Test-Path -LiteralPath $MaintenanceScript) -and (Test-Path -LiteralPath $MaintenanceInventory)) {
+    $Inventory = Get-Content -LiteralPath $MaintenanceInventory -Raw -Encoding UTF8 | ConvertFrom-Json
+    $MaintenanceRoot = $SkillRoot
+    $PassiveRoot = Join-Path (Split-Path -Parent $SkillRoot) "srednoff-os\library"
+    if (Test-Path -LiteralPath $PassiveRoot -PathType Container) { $MaintenanceRoot = $PassiveRoot }
+    $MaintenanceOutput = & python $MaintenanceScript inventory --skills-root $MaintenanceRoot --sources $MaintenanceSources --checked-on $Inventory.checked_on --output $MaintenanceInventory --check 2>&1
+    $MaintenanceState = if ($LASTEXITCODE -eq 0) { "OK" } elseif (@($Index).Count -gt [int]$Inventory.skills) { "WARN" } else { "FAIL" }
+    Add-Check -Name "maintenance-evidence" -Status $MaintenanceState -Detail (($MaintenanceOutput | Out-String).Trim())
+}
+
 if ($RunEvals) {
     $EvalScript = Resolve-LocalOrHome "scripts\test-srednoff-os-selector.ps1" "scripts\test-srednoff-os-selector.ps1" "Leaf"
     if (Test-Path -LiteralPath $EvalScript -PathType Leaf) {

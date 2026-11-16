@@ -2,7 +2,30 @@
 
 This file documents what is currently verified and what is intentionally not promised.
 
-## October 2026 Verification
+## November 2026 Verification
+
+Maintenance release `v2.1.2-20261116`, verified 2026-11-16.
+
+| Gate | Result |
+|---|---:|
+| Metadata/structural catalog audit | 416/416; no structural errors |
+| Catalog, resource and source-set freshness | PASS |
+| Actual-record selector | 61/61, including all 20 additions and negative controls |
+| Catalog/update/compact regressions | 53/53 |
+| Bootstrap smoke suites | 3 additional platform-specific tests; Windows 2 pass + 1 Unix-only skip |
+| Benchmark harness | 9/9; not a fresh model benchmark |
+| Compact project init/sync | 4 bootstrap manifests, all 416 indexed |
+| Brief default/save | PASS, manual filesystem smoke |
+| Full local doctor | 46 OK, 1 historical-project warning, 0 FAIL |
+| Registry / required docs | 38 / 12 |
+
+Structural, source-family, routing and task-quality evidence remain separate.
+The inventory explicitly marks pending non-priority domain reviews and all
+behavioral evidence as not run. Source mapping does not certify every API claim.
+Exact-commit Windows/Ubuntu CI is required for the published release. Discovery
+diagnostics report filesystem candidates, not exact host token usage.
+
+## Historical October Verification
 
 Verified 2026-10-15 for maintenance package `v2.1.2-20261015.1`.
 

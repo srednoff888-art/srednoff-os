@@ -59,6 +59,15 @@ class UpdateTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             updater.update(self.current, self.previous, self.current, True)
 
+    def test_project_update_preserves_custom_instructions_and_scripts(self):
+        (self.home / "scripts/helper.py").write_text("user script")
+        result = updater.update(self.current, self.previous, self.home, True, project=True)
+        self.assertEqual((self.home / "AGENTS.md").read_text(), "private instructions")
+        self.assertEqual((self.home / "scripts/helper.py").read_text(), "user script")
+        self.assertIn("AGENTS.md", result["preserved_conflicts"])
+        self.assertTrue((self.home / ".codex/skill-index.json").is_file())
+        self.assertFalse((self.home / "templates").exists())
+
 
 if __name__ == "__main__":
     unittest.main()

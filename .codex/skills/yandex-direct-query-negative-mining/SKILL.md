@@ -5,13 +5,10 @@ description: Use for PPC work when Codex should analyze Yandex search queries, n
 
 # yandex direct query negative mining
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Join query intent with spend, lag-adjusted conversions and landing relevance before proposing negatives.
+2. Return scoped drafts with valuable-query counterexamples and apply only after an explicit approved change.
 
 ## Domain Focus
 

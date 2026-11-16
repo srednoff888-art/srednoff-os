@@ -6,6 +6,10 @@ script_dir="$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd -P)"
 package_root="$(CDPATH='' cd -- "$script_dir/.." && pwd -P)"
 codex_home="${CODEX_HOME:-$HOME/.codex}"
 template_dir="$codex_home/templates/codex-md-os"
+if [ -f "$codex_home/srednoff-os/discovery-profile.json" ] || [ -f "$codex_home/srednoff-os/version.json" ]; then
+  printf '%s\n' 'Existing managed discovery profile found. Use update_installed_library.py with a previous public package.' >&2
+  exit 1
+fi
 
 backup_path() {
   local path="$1"
@@ -63,6 +67,7 @@ copy_dir_contents() {
 mkdir -p "$codex_home" "$template_dir"
 
 copy_item "AGENTS.md"
+copy_item ".srednoff-package.json"
 copy_item "code_review.md"
 copy_item ".agent"
 copy_item ".codex/skills"
@@ -88,11 +93,15 @@ copy_dir_contents "$package_root/integrations" "$codex_home/integrations" "integ
 copy_dir_contents "$package_root/bundles" "$codex_home/bundles" "bundles"
 copy_dir_contents "$package_root/agents" "$codex_home/agents" "agents"
 
-backup_path "$codex_home/AGENTS.md"
-cp "$package_root/AGENTS.md" "$codex_home/AGENTS.md"
+if [ ! -f "$codex_home/AGENTS.md" ]; then
+  cp "$package_root/AGENTS.md" "$codex_home/AGENTS.md"
+elif ! grep -q 'Srednoff OS' "$codex_home/AGENTS.md"; then
+  backup_path "$codex_home/AGENTS.md"
+  printf '\n# Srednoff OS Managed Entrypoint\nBefore substantial work, read "%s/AGENTS.md" for Srednoff OS routing and maintenance. Preserve existing personal instructions.\n' "$template_dir" >> "$codex_home/AGENTS.md"
+fi
 printf 'installed global: %s\n' "$codex_home/AGENTS.md"
 
-if [ -f "$package_root/code_review.md" ]; then
+if [ -f "$package_root/code_review.md" ] && [ ! -f "$codex_home/code_review.md" ]; then
   backup_path "$codex_home/code_review.md"
   cp "$package_root/code_review.md" "$codex_home/code_review.md"
   printf 'installed global: %s\n' "$codex_home/code_review.md"
@@ -105,6 +114,11 @@ if [ -f "$package_root/scripts/generate-skill-index.ps1" ] && powershell_cmd="$(
   "$powershell_cmd" -NoProfile -ExecutionPolicy Bypass -File "$package_root/scripts/generate-skill-index.ps1" -SkillsRoot "$codex_home/skills" -OutputPath "$codex_home/skill-index.json"
 else
   printf 'skip skill index generation: PowerShell not found\n'
+fi
+
+if [ "${SREDNOFF_LEGACY_DISCOVERY:-0}" != "1" ]; then
+  if command -v python3 >/dev/null 2>&1; then python_cmd="python3"; else python_cmd="python"; fi
+  "$python_cmd" "$package_root/scripts/compact_skill_discovery.py" --package "$package_root" --previous-package "$package_root" --active-root "$codex_home/skills" --apply
 fi
 
 cat <<EOF

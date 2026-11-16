@@ -5,24 +5,12 @@ description: Use when code changes propose new dependencies, packages, SDKs, UI 
 
 # Dependency Minimalism Gate
 
+## Task Decisions
+
+1. Compare an existing local primitive, a standard-platform option and the proposed package against the actual required behavior.
+2. Measure bundle/runtime/maintenance costs and reject a dependency whose concrete value is not demonstrated.
+
 Use this skill for Programming work focused on reject unnecessary dependencies, prefer existing primitives, and check package risk when adding libraries.
-
-## Workflow
-
-1. Restate the user outcome, target quality level, constraints, and definition of done.
-2. Inspect the current project before proposing code, design, sources, or dependencies.
-3. Use Srednoff OS mode/domain routing; if TURBO is active, compare top sources and run deeper critique.
-4. Prefer existing project conventions and proven sources over generic invention.
-5. Validate with the narrowest checks that prove the result, expanding validation for high-risk or TURBO work.
-6. Report facts, commands, source decisions, remaining risks, and exact next steps.
-
-## Checklist
-
-- Facts separated from assumptions.
-- Source/provenance reviewed when external code, components, assets, or advice are used.
-- Security, privacy, accessibility, performance, and rollback considered when relevant.
-- Token cost justified by concrete quality gain unless TURBO is explicitly active.
-- No broad context loading when a deterministic script or narrow reference is enough.
 
 ## Guardrails
 

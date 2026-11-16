@@ -18,7 +18,7 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-111827?style=for-the-badge"></a>
   <a href="https://github.com/srednoff888-art/srednoff-os/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/srednoff888-art/srednoff-os/ci.yml?branch=main&style=for-the-badge&label=CI"></a>
   <img alt="Version" src="https://img.shields.io/badge/Srednoff%20OS-v2.1.2-2563eb?style=for-the-badge">
-  <img alt="Skills" src="https://img.shields.io/badge/skills-396-16a34a?style=for-the-badge">
+  <img alt="Skills" src="https://img.shields.io/badge/skills-416-16a34a?style=for-the-badge">
   <img alt="Kernel" src="https://img.shields.io/badge/kernel-4500-7c3aed?style=for-the-badge">
   <img alt="Doctor" src="https://img.shields.io/badge/doctor-0%20failures-059669?style=for-the-badge">
 </p>
@@ -243,6 +243,36 @@ TURBO raises useful validation depth. It does not bypass destructive, paid, prod
 
 ## Release Evidence
 
+### November 2026: Quality And Compact Discovery
+
+[Research and decisions](docs/november-2026-research.md), verified 2026-11-16.
+All 416 skills are structurally checked. 196 existing workflows received
+concrete task decisions and 20 scoped workflows were added across code,
+design/UI/UX, websites, advertising and 3D. No upstream executable or prompt
+bundle was blindly imported.
+
+| Function | Result |
+|---|---|
+| Passive library | All skills remain selectable without exposing the entire catalog as active metadata |
+| Reversible migration | Four bootstrap anchors, private overrides and backups remain; no files deleted |
+| Safe updates | Previous-package comparison preserves custom project/global instructions |
+| Maintenance evidence | Whole-catalog resource hashes; 47 source cards and 11 pinned repos |
+| MCP safety | Tool/schema drift gate; Google Ads write tools are not mistaken for reporting-only access |
+| Context control | Optional selected-body character cap; no claim of exact token accounting |
+| Design continuity | Optional saved short brief; default remains read-only |
+
+```powershell
+python scripts/skill_catalog.py profile --project . --brief "Your task" --max-skills 12 --max-entrypoint-chars 16000 --install
+python scripts/compact_skill_discovery.py --package CURRENT --previous-package PREVIOUS --active-root ACTIVE
+```
+
+The second command is dry-run. Review it before `--apply`; `--restore` provides
+conflict-safe rollback. Refresh host discovery/start a fresh session after
+migration: existing chat context is not erased. The startup skills counter is
+catalog availability, not active metadata. [Русский README](README.ru.md).
+
+### October Baseline
+
 The [October 2026 modernization](docs/skill-modernization-2026-10.md) adds bounded
 native `.agents/skills` deployment, content-hash freshness checks, and 23 new
 workflows. It narrows 192 trigger descriptions and specializes 105 existing
@@ -255,14 +285,16 @@ python scripts/skill_catalog.py profile --project . --brief "Your task" --max-sk
 Read the [Russian introduction](README.ru.md). Model effectiveness and monetary
 ROI require actual task benchmarks; structural validation is reported separately.
 
-Current public release gate:
+### Current Validation
+
+Current public release gate, verified 2026-11-16:
 
 | Check | Result |
 |---|---:|
-| Srednoff OS doctor | 45 OK, 1 environment WARN, 0 FAIL |
-| Selector evals, actual selected records | PASS, 40/40 |
-| Catalog and safe deployment regressions | PASS, 25/25 |
-| Catalog freshness and structural audit | PASS, 396 workflows; no structural errors |
+| Srednoff OS doctor | 46 OK, 1 environment WARN, 0 FAIL |
+| Selector evals, actual selected records | PASS, 61/61 |
+| Catalog and safe deployment regressions | PASS, 53/53 |
+| Catalog freshness and structural audit | PASS, 416 workflows; no structural errors |
 | v2.1.1 evals | PASS, 13/13 |
 | v2.1.2 evals | PASS, 19/19 |
 | Security fixtures | PASS, 14/14 |
@@ -275,10 +307,10 @@ Current public release gate:
 | NeuralDeep registry | PASS, 5/5 |
 | NeuralDeep importer | PASS, 5/5 |
 | Kernel | PASS, 4500 records |
-| Source registry | PASS, 34 sources |
+| Source registry | PASS, 38 sources |
 | Donor research | PASS, 3 sources |
-| Docs | PASS, 11 files |
-| Skill metadata smoke | PASS, 396/396 |
+| Docs | PASS, 12 files |
+| Skill metadata smoke | PASS, 416/416 |
 | Benchmark harness regressions | PASS, 9/9 |
 | GitHub Actions | Windows and Ubuntu required; see commit-specific CI |
 
@@ -293,7 +325,7 @@ Release details:
 
 ## Release
 
-The October maintenance release is `v2.1.2-20261015.1`; runtime compatibility remains `v2.1.2`.
+The November maintenance release is `v2.1.2-20261116`; runtime compatibility remains `v2.1.2`.
 
 The local doctor's warning reports unsynchronized historical project entrypoints
 in the workstation-wide scan. It is not reported as a pass. Fresh installation

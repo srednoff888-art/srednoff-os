@@ -4,8 +4,8 @@
     "description": "Use for 3D web experiences that need accessibility, SEO-readable fallback content, keyboard support, or reduced-motion behavior.",
     "path": ".codex/skills/3d-accessibility-fallbacks",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1778,
-    "content_sha256": "1cc5e7cc1b163432e19ba21220bd9afe559ebd9eb91b2587ec58c9fe67a10322",
+    "skill_md_bytes": 1122,
+    "content_sha256": "00d0e729edb91b5f70cc0e45e1f88abf542f86b02ffc0964d46ef5d1a1c0b970",
     "instruction_tier": "workflow"
   },
   {
@@ -13,8 +13,8 @@
     "description": "Agent profile for art direction in 3D web design, product configurators, hero scenes, AR previews, and immersive visual interfaces.",
     "path": ".codex/skills/3d-art-director-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1768,
-    "content_sha256": "a7b3244f7bad12d85acdd1ce528c90c13eb9936de64fe9b333bd0794497aef2d",
+    "skill_md_bytes": 1087,
+    "content_sha256": "32e8628aa3f81cd72999e2a4463040f702e78c05caa60608a8c13b48f1864221",
     "instruction_tier": "workflow"
   },
   {
@@ -22,8 +22,8 @@
     "description": "Agent profile for glTF/GLB/model asset pipeline review in 3D web, ecommerce, AR, and configurator projects.",
     "path": ".codex/skills/3d-asset-pipeline-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1738,
-    "content_sha256": "4f60bf9c92e0d1028696fc4bc7be9102575635da00d9c20ef43393ef42e2d914",
+    "skill_md_bytes": 1070,
+    "content_sha256": "e10cb265b866a9ae7c8cedbb4a5c86b510fb294aac0cc9409a3ebd196c06d6fa",
     "instruction_tier": "workflow"
   },
   {
@@ -31,8 +31,8 @@
     "description": "Use before 3D web design or Three.js work to clarify the experience type, user goal, interaction depth, performance budget, and fallback needs.",
     "path": ".codex/skills/3d-experience-brief-intake",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1804,
-    "content_sha256": "29504e03ca3e63612100f73d9b061218b91ea87948983e87ead9ee5208b2d963",
+    "skill_md_bytes": 1144,
+    "content_sha256": "6b7cb58c2840fb9de34f792796ce413213c0635a460981d29268a9ddb50b2f2d",
     "instruction_tier": "workflow"
   },
   {
@@ -58,8 +58,8 @@
     "description": "Use before shipping 3D web, WebGL, WebGPU, Three.js, Babylon.js, R3F, or shader-heavy UI.",
     "path": ".codex/skills/3d-performance-budget-gate",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1726,
-    "content_sha256": "db99c9c0ce355dc73608376c924b916e584235e5d6daa440dd766d5fb74b420d",
+    "skill_md_bytes": 1062,
+    "content_sha256": "d81de10f195bfb95d8dca889d0c6e57cd765c1d0741b98736c6a610968c0b67a",
     "instruction_tier": "workflow"
   },
   {
@@ -76,8 +76,8 @@
     "description": "Use before finishing Three.js, R3F, WebGL, WebGPU, model-viewer, or 3D web UI work.",
     "path": ".codex/skills/3d-visual-screenshot-validator",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1738,
-    "content_sha256": "8caaa8c6c2c436ea884e387194c6a8e22aa738db6ceaa589015a7c9f914cb1c9",
+    "skill_md_bytes": 1063,
+    "content_sha256": "37e1e4be2a9cd0f6483fb0b4831f0250d9d8d295014bee813217a3ceb0b97e44",
     "instruction_tier": "workflow"
   },
   {
@@ -85,8 +85,8 @@
     "description": "Use this skill for turning accessibility audit findings into fixes, tasks, tests, and regression checks.",
     "path": ".codex/skills/accessibility-remediation-sprint",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1954,
-    "content_sha256": "49124e628b5005eb17165e9d0dfbc47a39412297007c962cf97612422b1cb2ac",
+    "skill_md_bytes": 1099,
+    "content_sha256": "d01a14143706626e3e94e4afea58661b056c165b04fad6c978ad9a2c32b4ee44",
     "instruction_tier": "workflow"
   },
   {
@@ -94,8 +94,8 @@
     "description": "Use this skill for WCAG review, accessibility remediation, keyboard/screen-reader QA, inclusive design.",
     "path": ".codex/skills/accessibility-specialist-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1917,
-    "content_sha256": "94b66ec9039817b8059bc868f0c1ad2bfadc0d3a6021c02ef6202a039183b0ba",
+    "skill_md_bytes": 1037,
+    "content_sha256": "e1136b6f978654722517ef7d7434faceb2b5f6f52b7d65dc5f033541143a77b4",
     "instruction_tier": "workflow"
   },
   {
@@ -108,12 +108,21 @@
     "instruction_tier": "workflow"
   },
   {
+    "name": "accessible-data-visualization",
+    "description": "Provide accessible explanations, values and interaction for charts and complex visual data.",
+    "path": ".codex/skills/accessible-data-visualization",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 710,
+    "content_sha256": "9319d45d697b0441331fb222112a777ca52161d51904724808e33d7169b6879f",
+    "instruction_tier": "workflow"
+  },
+  {
     "name": "admin-crud-ux-patterns",
     "description": "Use this skill for admin CRUD flows, bulk actions, confirmations, auditability, permissions, recovery.",
     "path": ".codex/skills/admin-crud-ux-patterns",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1902,
-    "content_sha256": "a22d8f94d114a26c224e790dba630588ae68bf3dc1405c8916da6965d7037a92",
+    "skill_md_bytes": 1021,
+    "content_sha256": "ec0edf3c082f83f7e38ffc105be4a2bfd86495b787c682ae49067d02eed5bacc",
     "instruction_tier": "workflow"
   },
   {
@@ -126,12 +135,30 @@
     "instruction_tier": "workflow"
   },
   {
+    "name": "ads-mcp-tool-permission-diff",
+    "description": "Review advertising MCP tool inventory and schema drift before read-only diagnostics.",
+    "path": ".codex/skills/ads-mcp-tool-permission-diff",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 748,
+    "content_sha256": "f0f7b727a013424a9ce6293625040214f66511b3fe1d31953b01a721d37fb84f",
+    "instruction_tier": "workflow"
+  },
+  {
     "name": "ads-reporting-roas-dashboard",
     "description": "Use this skill for ROAS dashboards, blended CAC, spend pacing, cohort views, channel reporting.",
     "path": ".codex/skills/ads-reporting-roas-dashboard",
     "has_openai_yaml": true,
     "skill_md_bytes": 630,
     "content_sha256": "1e9565ba74a6593dbe26e17c41f587a83bd3383137a73a724c74fc1533237825",
+    "instruction_tier": "workflow"
+  },
+  {
+    "name": "advertising-creative-rights-inventory",
+    "description": "Review provenance and usage rights of media assembled into advertising creatives.",
+    "path": ".codex/skills/advertising-creative-rights-inventory",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 860,
+    "content_sha256": "c22558731d7d978a1d02b2dacbf984020f555903ea330038e5888f74895c93a2",
     "instruction_tier": "workflow"
   },
   {
@@ -175,8 +202,8 @@
     "description": "Use this skill for LLM evals, golden datasets, structured outputs, drift detection, regression gates.",
     "path": ".codex/skills/ai-evals-regression-suite",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1898,
-    "content_sha256": "865aca4f7a8fa7b37b616c5df818c6dd3d2b11778c480279a71c39e0d6f48efb",
+    "skill_md_bytes": 1043,
+    "content_sha256": "ad1ba9e5a343d90f9efd8ffc2b3c7afb9803bce20dbf650ae304caccc13b80d5",
     "instruction_tier": "workflow"
   },
   {
@@ -184,8 +211,8 @@
     "description": "Use this skill for art direction for AI-generated images/video, brand safety, prompt iteration, asset QA.",
     "path": ".codex/skills/ai-generated-asset-art-direction",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1932,
-    "content_sha256": "ceb149a0d91a745b0867bbfdf17d19923ab0bba2efc754e5e66a95343096b20d",
+    "skill_md_bytes": 1101,
+    "content_sha256": "efeef6774d0ff1ec7ba1c85e6f3d1adb751e45f883cfb800cb5920f99488be7f",
     "instruction_tier": "workflow"
   },
   {
@@ -247,8 +274,8 @@
     "description": "Use this skill for scroll effects, animation budget, jank diagnosis, reduced motion, frame timing.",
     "path": ".codex/skills/animation-scroll-performance",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1892,
-    "content_sha256": "9ff4bd7b3dc264e6803732503b10eafb55295c973eb1d34912e1bd7513e4477c",
+    "skill_md_bytes": 1020,
+    "content_sha256": "aa8bb85be09b95866678e110277c6711cc628b6f86256c89f50b9df821acecc5",
     "instruction_tier": "workflow"
   },
   {
@@ -265,8 +292,8 @@
     "description": "Use this skill for OpenAPI, JSON schema, typed clients, contract tests, compatibility assertions.",
     "path": ".codex/skills/api-contract-test-generator",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1907,
-    "content_sha256": "67f3bdf8682de0694a2d0272f07a59447c00bca66e2dddb69df0fd8f879b0415",
+    "skill_md_bytes": 1047,
+    "content_sha256": "d7a01b3c756fefe5c0e6aa42e8fe7b042b0a044cdeebc6603019550e98d4b568",
     "instruction_tier": "workflow"
   },
   {
@@ -337,8 +364,8 @@
     "description": "Use this skill for Astro static output, islands hydration, content collections, CWV, schema and metadata.",
     "path": ".codex/skills/astro-islands-seo",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1886,
-    "content_sha256": "9f6285d9fd57d081cbc101f25c9a5b7654f31c2962cf858f6044906cad36fda5",
+    "skill_md_bytes": 990,
+    "content_sha256": "8e20877736148ae39f17d72bb586da09bbc382831d01c21943d1cf3843d19085",
     "instruction_tier": "workflow"
   },
   {
@@ -373,8 +400,8 @@
     "description": "Use this skill for queues, retries, idempotency, cron, dead-letter queues, background processing.",
     "path": ".codex/skills/background-jobs-queues",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1900,
-    "content_sha256": "dc0d95a7615ebdf069cff0d67bda8127ff8339b2e06226cbfe005fb815ba25be",
+    "skill_md_bytes": 1025,
+    "content_sha256": "41d46f94319daa8818eddd1e5d375bf2f2a9e0ca4f0dff1ba5e016abe666983e",
     "instruction_tier": "workflow"
   },
   {
@@ -382,8 +409,26 @@
     "description": "Use this skill for plans, entitlements, subscriptions, trials, invoices, state transitions, access checks.",
     "path": ".codex/skills/billing-entitlements-state-machine",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1931,
-    "content_sha256": "044fde705dc0718c70d4e21f7031481d8e0fa3833d42de559954324a50529a40",
+    "skill_md_bytes": 1068,
+    "content_sha256": "6625835589c43a4a220bae6462403ed86775c9547acdb7283173d6db67e15549",
+    "instruction_tier": "workflow"
+  },
+  {
+    "name": "blender-procedural-geometry-contracts",
+    "description": "Build reproducible Blender Geometry Nodes assets with explicit parameters and export boundaries.",
+    "path": ".codex/skills/blender-procedural-geometry-contracts",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 763,
+    "content_sha256": "535d4f05a90b954273e8a34c37459731593872ce57d7a2cca50bfad27c30a077",
+    "instruction_tier": "workflow"
+  },
+  {
+    "name": "blender-topology-uv-quality",
+    "description": "Review topology, normals and UVs before texturing or web export of a Blender model.",
+    "path": ".codex/skills/blender-topology-uv-quality",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 714,
+    "content_sha256": "9cadf4bdb7e025a5e96d4d52b04351c7064d424b619f4f2bf33c9ec5ff55b9a6",
     "instruction_tier": "workflow"
   },
   {
@@ -414,6 +459,15 @@
     "instruction_tier": "workflow"
   },
   {
+    "name": "browser-annotation-feedback-loop",
+    "description": "Turn user browser annotations into scoped, reproducible UI fixes.",
+    "path": ".codex/skills/browser-annotation-feedback-loop",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 731,
+    "content_sha256": "30dde8f069c603b84065398afc500e08859d4fcb4de7cff9f738088e54103c67",
+    "instruction_tier": "workflow"
+  },
+  {
     "name": "browser-devtools-qa",
     "description": "Use this skill for browser verification, console/network errors, layout checks, user-flow QA, DevTools evidence.",
     "path": ".codex/skills/browser-devtools-qa",
@@ -427,8 +481,8 @@
     "description": "Use this skill for cache keys, TTLs, invalidation, SWR, consistency, edge/runtime caching.",
     "path": ".codex/skills/cache-invalidation-design",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1878,
-    "content_sha256": "d9c53be2846cad669b24624e3e8d264bf538d31a3c5f929941c68784e9ae3f86",
+    "skill_md_bytes": 1038,
+    "content_sha256": "e4a15c6b617f60bb7399ae8dcf1be980957af0d356c539b92225666b60158925",
     "instruction_tier": "workflow"
   },
   {
@@ -436,8 +490,8 @@
     "description": "Use this skill for canonical tags, redirects, duplicates, status codes, consolidation, migration safety.",
     "path": ".codex/skills/canonical-redirect-audit",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1894,
-    "content_sha256": "bf28e489ecbdfc350b31ca6944aa3c11d686befbecd58f43382344a7a91b19d3",
+    "skill_md_bytes": 1001,
+    "content_sha256": "955437506ba477bb028fb5d762c7929badf03225ac35a6ffb35d9e2470a440cc",
     "instruction_tier": "workflow"
   },
   {
@@ -445,8 +499,8 @@
     "description": "Use this skill for checkout trust, fraud friction, payment clarity, policies, risk-reducing UX.",
     "path": ".codex/skills/checkout-trust-risk-ux",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1863,
-    "content_sha256": "69f6751ec21558cfff7fa6e0bdd8dd071438f236c4217187b4cfa8bbf1bc12b8",
+    "skill_md_bytes": 972,
+    "content_sha256": "dc9b3c7b4653ff84c932e219e4a51ffcb1a25b29a7ea35e7dacd6d8ea3e2d947",
     "instruction_tier": "workflow"
   },
   {
@@ -463,8 +517,8 @@
     "description": "Use this skill for CI log analysis, local reproduction, root cause isolation, targeted fixes, rerun strategy.",
     "path": ".codex/skills/ci-failure-triage",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1899,
-    "content_sha256": "9c88c285bc310dac81fda0c4124270f31dbe29e998f42a4cac6a8c2698fe2cf9",
+    "skill_md_bytes": 1030,
+    "content_sha256": "1a1326f8ef0431d3d9f36339f0e56b3ddb242eccc205b3d701cded63b0a9058e",
     "instruction_tier": "workflow"
   },
   {
@@ -490,8 +544,8 @@
     "description": "Use this skill for CMS-driven pages, editorial templates, rich text rendering, content governance.",
     "path": ".codex/skills/cms-editorial-layouts",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1883,
-    "content_sha256": "23aa1a7e27ddd50c9640b7ff2f4c9a1b8e50e15e6be8365570e74c6f6d168471",
+    "skill_md_bytes": 979,
+    "content_sha256": "bd9b5a9a6fe9c7bb2ffbc27ff4dc3703c4d30dc5f56da48d99a0ce9ba88eefea",
     "instruction_tier": "workflow"
   },
   {
@@ -499,8 +553,8 @@
     "description": "Use before copying or adapting code from GitHub, docs, Stack Overflow, registries, AI output, UI kits, snippets, or third-party examples.",
     "path": ".codex/skills/code-copy-provenance-review",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1794,
-    "content_sha256": "adc3fd38d5519ff45ee9e292fad94fdbe30009fd3852d47656557eb89d40603f",
+    "skill_md_bytes": 1111,
+    "content_sha256": "5b2926c1dacb9341a49c5ed2bdfa7b2c778be2e1658c6e5fb9cefdae99f5111c",
     "instruction_tier": "workflow"
   },
   {
@@ -526,8 +580,8 @@
     "description": "Use this skill for repo mapping, entry points, ownership, dependency graph, risk areas, impact analysis before implementation.",
     "path": ".codex/skills/codebase-map-indexer",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1939,
-    "content_sha256": "6632279d99e6989a787a30e987665635494b04e309d4f45b24e702de0c40332a",
+    "skill_md_bytes": 1056,
+    "content_sha256": "21d09b54d09b1f82afc15b801acb51146a049408df8dc6ad61e22278df81686d",
     "instruction_tier": "workflow"
   },
   {
@@ -562,8 +616,8 @@
     "description": "Use this skill for SERP competitors, content gaps, backlink/content angles, prioritization, opportunity mapping.",
     "path": ".codex/skills/competitor-serp-gap-analysis",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1911,
-    "content_sha256": "3d422429aa172577721b5eb96c5829159829f50f6df5d8e135cecd654de610e5",
+    "skill_md_bytes": 1034,
+    "content_sha256": "011b4358b233b7e45514b1d89edf71d5289253048e5b92d6dd408463ed1102b6",
     "instruction_tier": "workflow"
   },
   {
@@ -571,8 +625,8 @@
     "description": "Agent profile for researching and selecting UI components from local code, shadcn registry, 21st.dev, Magic UI, Aceternity, Origin UI, React Bits, Figma, Canva, and GitHub.",
     "path": ".codex/skills/component-librarian-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1803,
-    "content_sha256": "b7598d7f4207d2e3e7bb96a33f5e2deee1f9e9fdfd47f12791f6e1ad1faca32c",
+    "skill_md_bytes": 1121,
+    "content_sha256": "418a60f5242ae79c6528c3b94ea6f5779c51a4bcb880ecb1b0137a2f4aa50afd",
     "instruction_tier": "workflow"
   },
   {
@@ -580,8 +634,8 @@
     "description": "Use before copying UI, 3D, mobile, or web component code from external sources, registries, GitHub, snippets, marketplaces, or AI-generated component libraries.",
     "path": ".codex/skills/component-provenance-license-review",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1828,
-    "content_sha256": "d56ed68dc0cd60787e4cc9b0e9bf470e5b1a2445057f086fdad8b5d3d7fee035",
+    "skill_md_bytes": 1110,
+    "content_sha256": "bdd91c6b6370e7cb87c1bd2d881bd8cd882938c3e848bd4a12ec9a86095279a9",
     "instruction_tier": "workflow"
   },
   {
@@ -591,6 +645,15 @@
     "has_openai_yaml": true,
     "skill_md_bytes": 599,
     "content_sha256": "85bd528cb91217604190a0da9e9913208779563fa793826de7b70c7346b2e585",
+    "instruction_tier": "workflow"
+  },
+  {
+    "name": "consent-signal-test-matrix",
+    "description": "Test analytics and advertising signals across denied, granted and withdrawn consent states.",
+    "path": ".codex/skills/consent-signal-test-matrix",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 750,
+    "content_sha256": "00085dd728ebf66a3f778c35f185e6f157331453f32dc434c154bb1a1c02a244",
     "instruction_tier": "workflow"
   },
   {
@@ -607,8 +670,8 @@
     "description": "Use this skill for content decay analysis, pruning, merging, updating, redirecting, recovery prioritization.",
     "path": ".codex/skills/content-decay-pruning",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1899,
-    "content_sha256": "6129610faba7340da3ed58a4b941be3281e5dd2eb32200db163b8e14b523f251",
+    "skill_md_bytes": 1026,
+    "content_sha256": "eb13ff5587569016084a8435c1e3c988feaffd9377532023cd98443b879e90d6",
     "instruction_tier": "workflow"
   },
   {
@@ -621,12 +684,21 @@
     "instruction_tier": "workflow"
   },
   {
+    "name": "content-layout-stress-fixtures",
+    "description": "Stress UI layout with long content, localization, empty data and text enlargement.",
+    "path": ".codex/skills/content-layout-stress-fixtures",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 737,
+    "content_sha256": "327e835eef168ca66d5d3877e4c720ae351fa0ba1f535fc4377bce9d54824c32",
+    "instruction_tier": "workflow"
+  },
+  {
     "name": "content-strategist-agent",
     "description": "Use this skill for content strategy, briefs, topical authority, pruning, editorial planning, search intent.",
     "path": ".codex/skills/content-strategist-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1902,
-    "content_sha256": "ad78b37046fb4546a750bd9164bc97124801cdf781464339598b1b183aca5391",
+    "skill_md_bytes": 1017,
+    "content_sha256": "798ffafc38ccc3ea8a86b75255323ce31e4008230e528c0d2425d5b784c74c44",
     "instruction_tier": "workflow"
   },
   {
@@ -661,8 +733,8 @@
     "description": "Use when Codex may copy or import UI code from registries, GitHub, 21st.dev, shadcn, Magic UI, Aceternity, Origin UI, React Bits, or similar sources, then adapt it to project conventions.",
     "path": ".codex/skills/copy-adapt-component-pipeline",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1821,
-    "content_sha256": "ce54ba1befaf32c2072834024a283e00b5e7060602962d3d2ac56365fbaba92b",
+    "skill_md_bytes": 1124,
+    "content_sha256": "638c2919062274785696424123e3404675bbcd5ebe41cbe5fdee5346075cf074",
     "instruction_tier": "workflow"
   },
   {
@@ -688,8 +760,8 @@
     "description": "Use this skill for crawler behavior, log files, sitemap/indexation analysis, crawl-budget diagnostics.",
     "path": ".codex/skills/crawler-analyst-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1891,
-    "content_sha256": "80c3dfb2d354fa4ec0e1bdabaaadaea2ff4a1d71f1c34f1b2bd2c28a9fde73cd",
+    "skill_md_bytes": 1007,
+    "content_sha256": "d70743cd4cb8cd04c6444ecb1e2dc467ecdf61192b12d0695b9f4ccdbea9278c",
     "instruction_tier": "workflow"
   },
   {
@@ -706,8 +778,8 @@
     "description": "Use before finishing programming work in any language or framework to pick the right validation gates.",
     "path": ".codex/skills/cross-language-test-gate",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1758,
-    "content_sha256": "136eb32b01aa2f6db518331fa70f606f576da167e5cb9d01e85d4b41f029f5a1",
+    "skill_md_bytes": 1102,
+    "content_sha256": "ae51db8bd06cf0aa548a16d264892509c6af0a79a641b700869f41916f0fb846",
     "instruction_tier": "workflow"
   },
   {
@@ -742,8 +814,8 @@
     "description": "Use this skill for dark mode tokens, contrast, theme persistence, system preference, color scheme QA.",
     "path": ".codex/skills/dark-mode-theme-system",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1902,
-    "content_sha256": "b8f7e630d478a334a6038adb4360348df5e0746701303f7112d0a4822af06b52",
+    "skill_md_bytes": 1015,
+    "content_sha256": "812df79cb4ec23712975dd23e9ce42ed7b7bc995c8921c896df335c37dfcee4d",
     "instruction_tier": "workflow"
   },
   {
@@ -769,8 +841,8 @@
     "description": "Use this skill for CSV/XLSX/JSON import/export, validation, preview, dedupe, rollback, audit logs.",
     "path": ".codex/skills/data-import-export-pipeline",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1911,
-    "content_sha256": "70d5bfa62f1537e53098482ac8991303ba3d745ce131057f64ff08e9d4fd0a20",
+    "skill_md_bytes": 1043,
+    "content_sha256": "a6a2f8dfe0cf7446c3e65f86e28a22948119a809c2bfaea7a029a8772c2ef633",
     "instruction_tier": "workflow"
   },
   {
@@ -778,8 +850,8 @@
     "description": "Use this skill for tables, grids, filters, sorting, density, keyboard navigation, responsive behavior.",
     "path": ".codex/skills/data-table-grid-ux",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1894,
-    "content_sha256": "827ea7a1b4ea862d9a5b3f30b096fdb67a81dbe1be41c66d9ad82c00a1c95653",
+    "skill_md_bytes": 998,
+    "content_sha256": "b277d0c44aa4c162d4bf5b1690334ee5933a2829de54843f9ec6cc6b5921a923",
     "instruction_tier": "workflow"
   },
   {
@@ -832,8 +904,8 @@
     "description": "Use this skill for dependency license review, maintenance health, vulnerability risk, replacement strategy.",
     "path": ".codex/skills/dependency-license-risk-audit",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1912,
-    "content_sha256": "c99966648096f8e3dc03ae45e2da9e64486a5e43cc3864c8c8de6153290a60f9",
+    "skill_md_bytes": 1040,
+    "content_sha256": "1535bf83c5642c67dbe6d4b88d0a7039d5d4d9f8d76095488202e52b8ae229bc",
     "instruction_tier": "workflow"
   },
   {
@@ -841,8 +913,17 @@
     "description": "Use when code changes propose new dependencies, packages, SDKs, UI libraries, build tools, or runtime services.",
     "path": ".codex/skills/dependency-minimalism-gate",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1769,
-    "content_sha256": "b8a7f92837243d494935fd75368ee0391cffef0d427f16fbdc7205b00c263c7b",
+    "skill_md_bytes": 1061,
+    "content_sha256": "54dd78337cf258af0b2f2e4d8669e7328c37f7310a51bbcea0e1f70135906c23",
+    "instruction_tier": "workflow"
+  },
+  {
+    "name": "dependency-reachability-triage",
+    "description": "Distinguish resolved vulnerable dependencies from reachable exploitable behavior in the deployed artifact.",
+    "path": ".codex/skills/dependency-reachability-triage",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 728,
+    "content_sha256": "e2419a00d6f8166324e0d207917199c6596ffaa9e8d34b89519355cd97554a9b",
     "instruction_tier": "workflow"
   },
   {
@@ -877,8 +958,8 @@
     "description": "Use for UI/UX, web design, 3D web design, landing pages, dashboards, app screens, redesigns, and visual direction work when Codex should ask a compact product/design brief before choosing components or writing code.",
     "path": ".codex/skills/design-brief-intake-router",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1868,
-    "content_sha256": "577319ac5a368ca06bdcbb8a5b5e200c9caac3c2a9c6e3559a7610656c800d55",
+    "skill_md_bytes": 1210,
+    "content_sha256": "56fe34505734d4c64f99d2d71f887af66f5fb631e1dde24297955e5c355abdde",
     "instruction_tier": "workflow"
   },
   {
@@ -886,8 +967,8 @@
     "description": "Agent profile for final UI/UX QA before shipping visible design, web design, app screens, or 3D web UI.",
     "path": ".codex/skills/design-qa-agent-v2",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1722,
-    "content_sha256": "449b28390ff99a0a30a003e69df90bf2414e4d025c0e12be0cff39c18b359cb0",
+    "skill_md_bytes": 1016,
+    "content_sha256": "880885d9d5f1ccd63ac6b8a239f40892969d1ce84f87bd77e73dc8e7a5146b2c",
     "instruction_tier": "workflow"
   },
   {
@@ -895,8 +976,8 @@
     "description": "Use this skill for scored UI audit, spacing, alignment, states, contrast, hierarchy, polish checklist.",
     "path": ".codex/skills/design-qa-scorecard",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1883,
-    "content_sha256": "63e70b97a45c8f00a8abed0fc25e2e688a19d63f5e3d9b74f7d7b4aa30afff9e",
+    "skill_md_bytes": 981,
+    "content_sha256": "48490ef4c56b194b2484e74ef737cfb8a30f27439a6318222fe07e824dad7572",
     "instruction_tier": "workflow"
   },
   {
@@ -922,8 +1003,8 @@
     "description": "Use this skill for migrating legacy UI to design-system primitives, component mapping, risk sequencing.",
     "path": ".codex/skills/design-system-migration-plan",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1905,
-    "content_sha256": "e7c786c79aaa711c8b769c68d9adc3a6c53727a3aeb602b3197585d30d6816e9",
+    "skill_md_bytes": 1021,
+    "content_sha256": "8f27a5dbf7b176b530a4b4a8cb26165ae94e928c18d2f23c6f5890f8e70690da",
     "instruction_tier": "workflow"
   },
   {
@@ -931,8 +1012,17 @@
     "description": "Use for UI/UX and design-system work when Codex should convert visual direction or existing UI into reusable design tokens.",
     "path": ".codex/skills/design-token-compiler",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1755,
-    "content_sha256": "c94afaa3a6c09d84f13486ab2e0a22e53a3d38ca94c12b0d0680184a1401d097",
+    "skill_md_bytes": 1044,
+    "content_sha256": "64861cd993691b4ce62cf7d9602ebd9fc043c1eb664678085712a965ad5e0371",
+    "instruction_tier": "workflow"
+  },
+  {
+    "name": "design-token-drift-ci",
+    "description": "Detect drift between design-token source, generated theme outputs and consumed UI tokens.",
+    "path": ".codex/skills/design-token-drift-ci",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 694,
+    "content_sha256": "f6d6031d67063752ba3421935b111fd1a0877a790a9776945cb50cdb8822c6c9",
     "instruction_tier": "workflow"
   },
   {
@@ -976,8 +1066,8 @@
     "description": "Use this skill for documentation SEO, version canonicals, API docs, examples, internal links, freshness.",
     "path": ".codex/skills/docs-developer-portal-seo",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1890,
-    "content_sha256": "8c3c83e157b5ebc13381df4641134d5875c7b2f4b735b727716bbaf4578169f3",
+    "skill_md_bytes": 988,
+    "content_sha256": "df4b6d384a8b856fbf8ba2091c65595f520656d18d831aca5354b74b01fd42df",
     "instruction_tier": "workflow"
   },
   {
@@ -1003,8 +1093,8 @@
     "description": "Use this skill for facets, filters, pagination, canonical/noindex strategy, crawl traps, product listing SEO.",
     "path": ".codex/skills/ecommerce-faceted-navigation-seo",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1918,
-    "content_sha256": "ef5dc1f9811635dabb2e797f72ccf77f65533d40cb7daf07bdf5997e4069f50e",
+    "skill_md_bytes": 1027,
+    "content_sha256": "e356e3ef6fb5982b17a315d5c4864f7ea33d723afc9b002cf5ea587a4f855243",
     "instruction_tier": "workflow"
   },
   {
@@ -1012,8 +1102,8 @@
     "description": "Use this skill for product detail pages, media galleries, variants, inventory, trust, conversion.",
     "path": ".codex/skills/ecommerce-product-page-ux",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1897,
-    "content_sha256": "bca0e38c71d3ec0708e74a9f836e768422c4a1fb69ef73fb52f275964d76daac",
+    "skill_md_bytes": 984,
+    "content_sha256": "ecb46e9f4d17934a9ee4ea91f7c900aa00d8977435311b0a869f9cfb9cf1351a",
     "instruction_tier": "workflow"
   },
   {
@@ -1030,8 +1120,8 @@
     "description": "Use this skill for transactional email, SPF/DKIM/DMARC, templates, retries, bounces, deliverability.",
     "path": ".codex/skills/email-deliverability-transactional",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1906,
-    "content_sha256": "f3a1813a4761231fa40f6ea3c6e5c72cb1034acff0f7095a7fddf4914830486e",
+    "skill_md_bytes": 1005,
+    "content_sha256": "a6c555f6bfea212eb4e3cfcae66a517074a0edee65ad6eb3660853a6b31da48d",
     "instruction_tier": "workflow"
   },
   {
@@ -1039,8 +1129,8 @@
     "description": "Use this skill for empty states, errors, offline states, partial failures, recovery paths, helpful microcopy.",
     "path": ".codex/skills/empty-state-error-recovery-design",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1908,
-    "content_sha256": "7df7cec171268b45b273d75aafa00444c8bdf58d67dfd134a0b30b64796ad19b",
+    "skill_md_bytes": 1010,
+    "content_sha256": "c68ac8b4972f38a28b693b1cec50795e810cb06092bd0ef58a228dee48c2d24f",
     "instruction_tier": "workflow"
   },
   {
@@ -1048,8 +1138,8 @@
     "description": "Use this skill for entity clarity, schema graph, sameAs, author/org/product identity, knowledge graph signals.",
     "path": ".codex/skills/entity-knowledge-graph-seo",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1903,
-    "content_sha256": "7ed2e7b515b053926be6c894d1a94577ce7c7b7c496869bc90c04bbe47adba2e",
+    "skill_md_bytes": 1023,
+    "content_sha256": "2d5525315f9493190362fdd957ece30010641b3cfe337312d40418e6399af339",
     "instruction_tier": "workflow"
   },
   {
@@ -1075,8 +1165,8 @@
     "description": "Use before Expo or React Native app release, EAS build/update, TestFlight, Play Store, App Store, or mobile deployment work.",
     "path": ".codex/skills/expo-eas-release-gate",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1760,
-    "content_sha256": "4df7ff44110c0b2d200d7139b1b1ea646d0f6f552af191a4bd528287ce0bfeae",
+    "skill_md_bytes": 1043,
+    "content_sha256": "e1d0c85b03aa7ffc7f02ce5ec285f501ea2e2f12588e7f10416d302c3d64be37",
     "instruction_tier": "workflow"
   },
   {
@@ -1093,8 +1183,8 @@
     "description": "Use this skill for feature flags, gradual rollout, kill switches, metrics, experiment gates, rollback.",
     "path": ".codex/skills/feature-flag-rollout",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1888,
-    "content_sha256": "6cb5080a0e309156478616b3c2f04182aa96e20509831397cf3db2b3ecd537b7",
+    "skill_md_bytes": 962,
+    "content_sha256": "6f1ad7a39a1e327cdd6e1415f19223acac3d690be7b90992a5306e56b7358354",
     "instruction_tier": "workflow"
   },
   {
@@ -1120,8 +1210,8 @@
     "description": "Use this skill for uploads, storage, validation, metadata, signed URLs, malware checks, quotas.",
     "path": ".codex/skills/file-upload-storage-pipeline",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1887,
-    "content_sha256": "66c60613ae894836e1abfc2faccabe582658cdbf730a02885624e725aa68827b",
+    "skill_md_bytes": 1005,
+    "content_sha256": "8e9ca947139d5c1255f07cacf71a6b42afcc083a94f3ba0b0f31d859f23f18fe",
     "instruction_tier": "workflow"
   },
   {
@@ -1165,8 +1255,8 @@
     "description": "Use this skill for tooltips, popovers, dropdowns, menus, collision handling, portals, focus management.",
     "path": ".codex/skills/floating-ui-overlay-positioning",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1927,
-    "content_sha256": "b74e16b5cd0362531a4b75f3e775767c958e0a76974717234ae62d1834c11f5e",
+    "skill_md_bytes": 1058,
+    "content_sha256": "9e197ee7fa98bc9df442a12dc5c06abd19d66c4d069dbb7fdef337867dd2dff7",
     "instruction_tier": "workflow"
   },
   {
@@ -1183,8 +1273,8 @@
     "description": "Use this skill for frontend visual critique, UI hierarchy, spacing, responsive behavior, interaction states.",
     "path": ".codex/skills/frontend-design-critic-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1912,
-    "content_sha256": "0ee13bfbc7f1a6dac0d274015b82382e978f127f64cc3784a1fa74172e0ee8bf",
+    "skill_md_bytes": 1014,
+    "content_sha256": "67153a8d34604da7820d4be1f831fdf4bb5e692651af587ac14f159e00d27ab4",
     "instruction_tier": "workflow"
   },
   {
@@ -1228,8 +1318,8 @@
     "description": "Use this skill for fuzz tests for parsers, APIs, file handlers, encoders, validators, security-sensitive inputs.",
     "path": ".codex/skills/fuzzing-security-tests",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1901,
-    "content_sha256": "34ca13a2714f91cc4aedf177cb056eeb1a996d03b7d51de946f5fe22112e4ced",
+    "skill_md_bytes": 1000,
+    "content_sha256": "2e99b1ad97c3e92c011e921b56c6ee9244bfdba45bd76d29864a86215d3782d5",
     "instruction_tier": "workflow"
   },
   {
@@ -1237,8 +1327,8 @@
     "description": "Use for GEO/AEO/AI-search readiness, LLM crawler access, citation readiness, entity SEO, and answer-friendly content structure.",
     "path": ".codex/skills/geo-ai-search-readiness-v2",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1781,
-    "content_sha256": "afc96eef9b6912f56cc081be4a39ce3c35353965679868a0306d395692c17618",
+    "skill_md_bytes": 1089,
+    "content_sha256": "f9686bf37e4236752ccc4caa49383008249cad76e7e9b790f988b06f1de1f8bf",
     "instruction_tier": "workflow"
   },
   {
@@ -1291,8 +1381,17 @@
     "description": "Use when 3D web work involves glTF/GLB assets, product models, AR models, performance budgets, or asset pipeline review.",
     "path": ".codex/skills/gltf-optimization-pipeline-v2",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1768,
-    "content_sha256": "48b42cf73281eefa85042eaa56f3c55a7f201a73a3caf5c007df383e02c095de",
+    "skill_md_bytes": 1043,
+    "content_sha256": "50125da242a09a07aa8ebc6ba92037c7334bd71a90478aa4b24e1d5ac0f6bb70",
+    "instruction_tier": "workflow"
+  },
+  {
+    "name": "gltf-validation-release-gate",
+    "description": "Gate a glTF/GLB asset release on validator findings and renderer evidence.",
+    "path": ".codex/skills/gltf-validation-release-gate",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 723,
+    "content_sha256": "5b476ee02787ce977363cf4dec2074a5243eab015e09f5a18081e6b0c322a8a1",
     "instruction_tier": "workflow"
   },
   {
@@ -1309,8 +1408,8 @@
     "description": "Use for PPC work when Codex should validate Google Ads conversion actions, enhanced conversions, consent, values, deduplication, and import quality.",
     "path": ".codex/skills/google-ads-conversion-quality",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1317,
-    "content_sha256": "c2664791d2ce16b4d50986c566f2a51016721303d4aedeb8abcc32c4497392b5",
+    "skill_md_bytes": 1099,
+    "content_sha256": "e00ce0b2314abe20913c39114633d45a9104c420afb5fdf6050b7f61954629a2",
     "instruction_tier": "workflow"
   },
   {
@@ -1318,8 +1417,17 @@
     "description": "Use the official Google Ads MCP tools for authorized read-only account discovery, resource metadata, GAQL reporting, and campaign diagnostics.",
     "path": ".codex/skills/google-ads-mcp-reporting",
     "has_openai_yaml": false,
-    "skill_md_bytes": 1040,
-    "content_sha256": "3b90305e27e2ac851257fcda50b707c32939ec3ab4ba81a6537b7ff436e80d0f",
+    "skill_md_bytes": 1675,
+    "content_sha256": "e40b60b3e4e967965731cf263eb4510d713250f855bad925431bf65f9bc812d3",
+    "instruction_tier": "workflow"
+  },
+  {
+    "name": "google-ads-offline-conversion-reconciliation",
+    "description": "Reconcile CRM outcomes with Google offline conversion imports and attribution diagnostics.",
+    "path": ".codex/skills/google-ads-offline-conversion-reconciliation",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 773,
+    "content_sha256": "1aca8de4ab5c81e34864e8deff7069e27bae68266a8ec32d9653c353fa8c6560",
     "instruction_tier": "workflow"
   },
   {
@@ -1327,8 +1435,8 @@
     "description": "Use for PPC work when Codex should plan Google Performance Max experiments with asset, feed, goal, brand-safety, and incrementality controls.",
     "path": ".codex/skills/google-ads-pmax-experiment",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1297,
-    "content_sha256": "2637360f7eecc4601b5f6047d9a2c8504040d0d939187717abc2494334191519",
+    "skill_md_bytes": 1042,
+    "content_sha256": "4bf976b743db119f50cdd9eaedae20ec6c4dad7a77ed050cf524741f0ddd1bb9",
     "instruction_tier": "workflow"
   },
   {
@@ -1336,8 +1444,8 @@
     "description": "Use for PPC work when Codex should check Google Ads policy, API constraints, landing experience, and approval risk before changes.",
     "path": ".codex/skills/google-ads-policy-risk-gate",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1277,
-    "content_sha256": "4f845f0fd5ba07228dd6d0e7b58d04f14a76ce28f0b1a5a66af3484652823cfd",
+    "skill_md_bytes": 1017,
+    "content_sha256": "a3f768ebba067e9d240964fba2758969517db692d6f008057c879f54fac85699",
     "instruction_tier": "workflow"
   },
   {
@@ -1345,8 +1453,8 @@
     "description": "Use for PPC work when Codex should analyze Google Ads search terms, negatives, match behavior, and query-to-landing relevance.",
     "path": ".codex/skills/google-ads-search-query-hygiene",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1277,
-    "content_sha256": "50b9504c2b6a8393ed9765057465612c6f740750b142d12b26bb15058f8423dc",
+    "skill_md_bytes": 1038,
+    "content_sha256": "fbe9430d73879853566ee1305503cc371f805d3228419a4c11b8a497bae1efca",
     "instruction_tier": "workflow"
   },
   {
@@ -1354,8 +1462,8 @@
     "description": "Use for PPC work when Codex should review Shopping feed quality, product eligibility, price availability, taxonomy, and landing alignment.",
     "path": ".codex/skills/google-ads-shopping-feed-health",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1301,
-    "content_sha256": "71563289d3f102ee692c8fa789867e9bcbb0c784aac2a4e940046b665c0ad284",
+    "skill_md_bytes": 1049,
+    "content_sha256": "6110652f38aa8468f58a40be93a164be88af742770d3e9958f237fca49ce0b04",
     "instruction_tier": "workflow"
   },
   {
@@ -1381,8 +1489,8 @@
     "description": "Agent profile for reviewing design decisions through conversion, SEO/PPC, funnel, and business-growth impact.",
     "path": ".codex/skills/growth-design-director-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1755,
-    "content_sha256": "fe5e66c5a9260af3e0564df99325cc3da81d0795fef8cb473927fec4aff6ae58",
+    "skill_md_bytes": 1017,
+    "content_sha256": "413c6129d686189276b437c4500dd3b24fa2d28723473138c0122efa1408adbc",
     "instruction_tier": "workflow"
   },
   {
@@ -1390,8 +1498,8 @@
     "description": "Use for SEO/PPC/growth landing pages, ad traffic pages, conversion optimization, and message-match reviews.",
     "path": ".codex/skills/growth-design-message-match",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1757,
-    "content_sha256": "c0e65451723f5363602ee3cca7d978a4fd3312a1779c4ec55399580fa0b661b3",
+    "skill_md_bytes": 1032,
+    "content_sha256": "19939315996956c66c7b28d044e2d3214570a48834f82285ee8a16a8d0171896",
     "instruction_tier": "workflow"
   },
   {
@@ -1399,8 +1507,8 @@
     "description": "Use this skill for growth funnels, landing pages, analytics, experiments, activation and conversion.",
     "path": ".codex/skills/growth-engineer-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1876,
-    "content_sha256": "e924cae524c7d0863780c1a996c511f1478449014b0a27c4ce3594286c700869",
+    "skill_md_bytes": 977,
+    "content_sha256": "73efc4af3dd3498b8bfec0689e72b67f7267197b526e0641a22631dca09cc77e",
     "instruction_tier": "workflow"
   },
   {
@@ -1408,8 +1516,8 @@
     "description": "Use for growth strategy, CRO, SEO/PPC experiments, landing page tests, funnel improvements, and prioritization.",
     "path": ".codex/skills/growth-experiment-backlog",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1758,
-    "content_sha256": "fe741dd1558d19a35904bfa4f7e576c5a1a3d6312d7ed1c7da3584ba86153c10",
+    "skill_md_bytes": 1034,
+    "content_sha256": "3b78ac57541132153d79af28aefb3bc071d831b269d9e2e049757ffe974bc9a3",
     "instruction_tier": "workflow"
   },
   {
@@ -1417,8 +1525,8 @@
     "description": "Use this skill for accessible unstyled components, composition patterns, controlled/uncontrolled state, styling freedom.",
     "path": ".codex/skills/headless-component-composition",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1958,
-    "content_sha256": "9492f88a8a670c7894804b7e01ec7c975852a36eb148ee3ba6d0b67738453f4e",
+    "skill_md_bytes": 1062,
+    "content_sha256": "0157abb2805fcd0db8b8bca795a13b473240edbe09d170cea916a2afb39eb335",
     "instruction_tier": "workflow"
   },
   {
@@ -1435,8 +1543,8 @@
     "description": "Use this skill for Nielsen-style usability heuristics, friction maps, workflow critique, remediation plans.",
     "path": ".codex/skills/heuristic-usability-review",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1930,
-    "content_sha256": "895250232ad9598ed5bcf5d522cf81451153ba0ccf7510223052da603654d850",
+    "skill_md_bytes": 1038,
+    "content_sha256": "e5373d11f9a9e8a4ebfeebc08aa339339b35e180ffc8880eeb2e7da6191a1882",
     "instruction_tier": "workflow"
   },
   {
@@ -1453,8 +1561,8 @@
     "description": "Use this skill for icon systems, illustration style, empty-state visuals, asset consistency, visual language.",
     "path": ".codex/skills/iconography-illustration-system",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1929,
-    "content_sha256": "35149264fcf859ee59d5823752e94c1f6d9c7dce8ad7a5248e811322dfdc2923",
+    "skill_md_bytes": 1040,
+    "content_sha256": "10c8afcb4e43b366c54faf5142acc2c08590c04c9e5fced9de16f1db333a51b5",
     "instruction_tier": "workflow"
   },
   {
@@ -1462,8 +1570,8 @@
     "description": "Use this skill for image/video metadata, alt strategy, thumbnails, transcripts, media indexing, performance.",
     "path": ".codex/skills/image-video-seo",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1885,
-    "content_sha256": "31b36a4358036918cec5115fb4256d94d1e476cde347763213a5a6b3e8344a9b",
+    "skill_md_bytes": 993,
+    "content_sha256": "ee3315f99caa3958d61c459cb8c1c7c4fd49798f9988a4c496d69096ac4e3fdc",
     "instruction_tier": "workflow"
   },
   {
@@ -1498,8 +1606,8 @@
     "description": "Use this skill for hreflang clusters, locale canonicals, regional targeting, multilingual page mapping.",
     "path": ".codex/skills/international-hreflang-seo",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1906,
-    "content_sha256": "d91ef1f47b0ddfa7168cabe196d23007ceb336690276be73b2cc29fa85e64699",
+    "skill_md_bytes": 1001,
+    "content_sha256": "91cb1298ee8e634788224e144f923ad24756734a0f00e1affdbd7764eaba5b8f",
     "instruction_tier": "workflow"
   },
   {
@@ -1507,8 +1615,8 @@
     "description": "Use this skill for RTL layouts, translated text expansion, locale formats, bidirectional UI QA.",
     "path": ".codex/skills/internationalized-rtl-ui",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1877,
-    "content_sha256": "e4986f5328064b575984381892fb39b2a27c816e05ebdfb1207e9b346f356d8f",
+    "skill_md_bytes": 982,
+    "content_sha256": "f80faaa930df3adc9631c4ddc036eea09c917fe529707068aabee5fd963293a2",
     "instruction_tier": "workflow"
   },
   {
@@ -1534,8 +1642,8 @@
     "description": "Use this skill for turning issues into implementation plans, branches, code changes, tests, and PR descriptions.",
     "path": ".codex/skills/issue-to-pr-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1928,
-    "content_sha256": "faf90f36f4003c56a4660df9ce2db7c0d080292c068e5f55242db2739ef20123",
+    "skill_md_bytes": 1038,
+    "content_sha256": "1d43d1a6c93818344377ed3d60f495d999137ad3284da09eabc25d7139c6e0bd",
     "instruction_tier": "workflow"
   },
   {
@@ -1543,8 +1651,8 @@
     "description": "Use this skill for JavaScript SEO, SSR/SSG, rendered DOM, crawler limitations, hydration and indexing issues.",
     "path": ".codex/skills/javascript-seo-rendering",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1906,
-    "content_sha256": "da304938f1c72ad9753c89f33cda6d859349b4769d7ef33985063f9c53a6737e",
+    "skill_md_bytes": 1037,
+    "content_sha256": "7bd1e18e6e2d49ae80c24bbd408ceceeeede7141276633450c7603decb8af61e",
     "instruction_tier": "workflow"
   },
   {
@@ -1579,8 +1687,8 @@
     "description": "Use at the start of programming tasks across TypeScript, JavaScript, Python, PHP, Go, Rust, Swift, Kotlin, SQL, Bash, PowerShell, and mixed repos.",
     "path": ".codex/skills/language-runtime-router",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1796,
-    "content_sha256": "bc921bc3dfbbbd042e646047aab0c870c623eb418911f28beeb051d7b5596479",
+    "skill_md_bytes": 1088,
+    "content_sha256": "7fa218ddb5c0cdbb4caa6a0cdd5bb98b255ad812d2e083c4a748004aa8010b5f",
     "instruction_tier": "workflow"
   },
   {
@@ -1588,8 +1696,8 @@
     "description": "Agent profile for focused language-specific review across TypeScript, Python, PHP, Go, Rust, Swift, Kotlin, SQL, Bash, and PowerShell.",
     "path": ".codex/skills/language-specialist-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1776,
-    "content_sha256": "92f231d4dd0703c892645ea98ff36fc223ef7de166bbf4589bffb02e42bfffae",
+    "skill_md_bytes": 1063,
+    "content_sha256": "b1abbe04982063cdba8bc91eb7162644b417091347abd46f23d5aeb1776cda7a",
     "instruction_tier": "workflow"
   },
   {
@@ -1615,8 +1723,8 @@
     "description": "Use this skill for llms.txt, AI crawler access, policy files, AI search discoverability, content boundaries.",
     "path": ".codex/skills/llms-txt-ai-crawler-access",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1906,
-    "content_sha256": "60ee17e119971661e3947de50d1c8e460a1c73952068a4ea2a6e28abbfabbfda",
+    "skill_md_bytes": 1017,
+    "content_sha256": "e09645cbe23bc5f50830a3b16038041f0e99b83f408b0d198b3747adab623a8c",
     "instruction_tier": "workflow"
   },
   {
@@ -1633,8 +1741,8 @@
     "description": "Use this skill for i18n architecture, locale routing, ICU messages, formatting, translation QA.",
     "path": ".codex/skills/localization-i18n-engineering",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1900,
-    "content_sha256": "3627d3a70f3565e31e34a708d20a4df8280e2edc59b1e7c20aecf504b1ad3e7a",
+    "skill_md_bytes": 1003,
+    "content_sha256": "37eac53efa181a5adeea10f466b07d0127ffb685b4948e7b550d17ae0803fa06",
     "instruction_tier": "workflow"
   },
   {
@@ -1651,8 +1759,8 @@
     "description": "Use this skill for server log crawl analysis, bot behavior, wasted crawl paths, crawl budget, anomalies.",
     "path": ".codex/skills/log-file-crawl-analysis",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1895,
-    "content_sha256": "4d62ad425214f7867de88f14bfb8478ccebbb288d0de6c4bd12e359bd7c310f6",
+    "skill_md_bytes": 997,
+    "content_sha256": "a648962eda9dfd38ce074f8f950d8f32cf2453482a3bfee59269a70adb177027",
     "instruction_tier": "workflow"
   },
   {
@@ -1705,8 +1813,8 @@
     "description": "Use for PPC work when Codex should audit Meta Ads account structure, delivery, learning, attribution, creative, audience, and spend evidence.",
     "path": ".codex/skills/meta-ads-account-audit",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1289,
-    "content_sha256": "08dcafd94d89a4f91eb99200a214acc04dcf31a5cf39ed4d8f7e378aa30cdd69",
+    "skill_md_bytes": 1049,
+    "content_sha256": "1a8f1cc15aecc62670b55e8556b87bbbe90681a6016528708dc1614c51b7df38",
     "instruction_tier": "workflow"
   },
   {
@@ -1714,8 +1822,8 @@
     "description": "Use for PPC work when Codex should design Meta audience, placement, optimization-event, and creative experiments without confounded comparisons.",
     "path": ".codex/skills/meta-ads-audience-experiment",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1307,
-    "content_sha256": "2f0f9246c2ddd637bf27f3a02237f4fb65ff5637037a6c6886d8d96146eb6e9f",
+    "skill_md_bytes": 1049,
+    "content_sha256": "69e5f70ea02b1abcc3bebdb0c424f6dc30fe53775d2f523f740e1445a973475f",
     "instruction_tier": "workflow"
   },
   {
@@ -1723,8 +1831,8 @@
     "description": "Use for PPC work when Codex should design or review Meta Pixel and Conversions API event identity, deduplication, consent, and diagnostics.",
     "path": ".codex/skills/meta-ads-capi-deduplication",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1295,
-    "content_sha256": "f8d64a64dbebdb955f0061f39411ab50992d9d22b4b2c2bc21d167d9abb0815c",
+    "skill_md_bytes": 1058,
+    "content_sha256": "0a9fe4f48dc978b9ee8ee2f80be7341a74216967a9fb6b5d73658149927dd193",
     "instruction_tier": "workflow"
   },
   {
@@ -1732,8 +1840,8 @@
     "description": "Use for PPC work when Codex should validate Meta catalog, feed, event, availability, and dynamic product ad readiness.",
     "path": ".codex/skills/meta-ads-catalog-dpa",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1239,
-    "content_sha256": "120f47bbf16758b1e851d8e8f58767e8ec7af5a034ec0a61a571bae5df8cff01",
+    "skill_md_bytes": 953,
+    "content_sha256": "49fa704acafe78e553cb7642f76de1d04d698b93e193e31707dcbc3bcc8f526d",
     "instruction_tier": "workflow"
   },
   {
@@ -1741,8 +1849,8 @@
     "description": "Use for PPC work when Codex should detect Meta creative fatigue, saturation, audience overlap, and a measurable refresh plan.",
     "path": ".codex/skills/meta-ads-creative-fatigue",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1263,
-    "content_sha256": "02b2b9db0447b2a5e9877cb841eef94b3e176c53e2c87f51d0a6f2dfd27b992a",
+    "skill_md_bytes": 1015,
+    "content_sha256": "9153812804feab2cf76ebbf098863f1d77c53c610ea79013d580b8cbfcd0fc69",
     "instruction_tier": "workflow"
   },
   {
@@ -1759,8 +1867,8 @@
     "description": "Use for PPC work when Codex should check Meta policy, restricted content, personal-attribute language, landing, and account-risk signals.",
     "path": ".codex/skills/meta-ads-policy-risk-gate",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1287,
-    "content_sha256": "032c89ea42a7d84db3ab11df4969cdf0a2286ce8a80295da7124c4a95874388d",
+    "skill_md_bytes": 1028,
+    "content_sha256": "151a2ad2f55ab4b46d31a77227d2f81761a67ca2987863191e988fddd850fb7f",
     "instruction_tier": "workflow"
   },
   {
@@ -1804,8 +1912,8 @@
     "description": "Use for Expo, React Native, iOS, Android, or mobile web projects with large assets, slow startup, or app size concerns.",
     "path": ".codex/skills/mobile-asset-budget-audit",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1751,
-    "content_sha256": "a01b6b174e30fecd4aaf5dcd8d775db67dce7ef9c547981a522fba677f4d8b98",
+    "skill_md_bytes": 1018,
+    "content_sha256": "7cdacfa0129b5a99b51c44ac440389eb18f9c2ebc9a8a44f31b2f1325d50f8ac",
     "instruction_tier": "workflow"
   },
   {
@@ -1813,8 +1921,8 @@
     "description": "Use for mobile app observability, Sentry/Firebase crash reporting, release diagnostics, and production incident readiness.",
     "path": ".codex/skills/mobile-crash-analytics-gate",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1766,
-    "content_sha256": "4eddb0fb12821e1d88bb764c8e7b93d437faef399d0ec5ede615dc9428380db6",
+    "skill_md_bytes": 1063,
+    "content_sha256": "ae6e25ca8c6cc0aa5a6dc2e0faef5350e67e03b251ec7d7e896e427a5ab9244d",
     "instruction_tier": "workflow"
   },
   {
@@ -1840,8 +1948,8 @@
     "description": "Use for mobile apps or PWAs that need offline behavior, unreliable network handling, local persistence, or sync conflict management.",
     "path": ".codex/skills/mobile-offline-first-review",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1771,
-    "content_sha256": "0f71c111ce5103ada5c44ce9e47374311b89fdea20424e13830f75c3815387e1",
+    "skill_md_bytes": 1043,
+    "content_sha256": "d30b291e3ba6358975d2e472108222f50156836bd2675338b7e00970afb04e76",
     "instruction_tier": "workflow"
   },
   {
@@ -1849,8 +1957,8 @@
     "description": "Agent profile for mobile performance review in Expo, React Native, iOS, Android, and hybrid apps.",
     "path": ".codex/skills/mobile-performance-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1741,
-    "content_sha256": "a8593df97c54918a4ea2917e2d0290de9b7919485138c56111bb27fd6d184205",
+    "skill_md_bytes": 1005,
+    "content_sha256": "4470d52e89fcfd33d11f1bcd28cada46a58a61a5a57f1bece1a4449d9f278586",
     "instruction_tier": "workflow"
   },
   {
@@ -1858,8 +1966,8 @@
     "description": "Use when mobile apps request permissions, collect user data, handle privacy-sensitive flows, or need App Store/Play privacy review.",
     "path": ".codex/skills/mobile-permissions-privacy-gate",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1791,
-    "content_sha256": "1ea8a2077b91ae0dae50e798909a1dd453251471cc5d91ea346ca9962912ceef",
+    "skill_md_bytes": 1050,
+    "content_sha256": "1dfcd01323222c320b4917ab606fe197e40db639d7c89b749c677e37edf75d8b",
     "instruction_tier": "workflow"
   },
   {
@@ -1867,8 +1975,8 @@
     "description": "Agent profile for pre-release review of iOS, Android, Expo, React Native, and cross-platform mobile apps.",
     "path": ".codex/skills/mobile-release-reviewer-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1749,
-    "content_sha256": "1a77caac5829d6ebff35a6a1b75afde815276d3556a00cffc0f45ee4c0af7240",
+    "skill_md_bytes": 1029,
+    "content_sha256": "8043a82a32a753977ff4d5e50b52eff68f1c6201f06e3b4e9016604f71bed0a4",
     "instruction_tier": "workflow"
   },
   {
@@ -1876,8 +1984,8 @@
     "description": "Use for mobile app UI/UX, React Native, Expo, iOS, Android, or cross-platform app screens where native platform behavior matters.",
     "path": ".codex/skills/mobile-ux-platform-parity",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1774,
-    "content_sha256": "5136a7205f4fa0232e3e88486e7cf41cc741c8470bd871735c3e264233b6ecf8",
+    "skill_md_bytes": 1040,
+    "content_sha256": "70ac0511d11de6b46d1331d3b99eb03effda5dbd6a7519a4c2b555a0e8ce23b4",
     "instruction_tier": "workflow"
   },
   {
@@ -1885,8 +1993,8 @@
     "description": "Use this skill for monorepo package boundaries, workspace dependencies, shared libraries, build graph, ownership rules.",
     "path": ".codex/skills/monorepo-boundary-architecture",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1957,
-    "content_sha256": "330ac990ba9d32dfacd43edf2913d8cf30f2d5bbf97790634bcc66db18dbddda",
+    "skill_md_bytes": 1044,
+    "content_sha256": "a44c2c5e1c132870faa556e0772275f5f98a9617d13322c41bab84208b5f2170",
     "instruction_tier": "workflow"
   },
   {
@@ -1912,8 +2020,8 @@
     "description": "Use this skill for white-label UI, brand tokens, tenant themes, preview workflows, theme isolation.",
     "path": ".codex/skills/multi-brand-whitelabel-ui",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1879,
-    "content_sha256": "b982d27f12004c1b037c4b3e8d7440e512947d2100c10ced377ea18d8afbce00",
+    "skill_md_bytes": 960,
+    "content_sha256": "de61d3efa68274b48cdd224121025f1cde7b68f2b4896f4eadf56a5afe41ab9c",
     "instruction_tier": "workflow"
   },
   {
@@ -1921,8 +2029,8 @@
     "description": "Use this skill for tenant isolation, scoped queries, roles, billing boundaries, admin controls, safety checks.",
     "path": ".codex/skills/multi-tenant-saas-architecture",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1941,
-    "content_sha256": "65a2917d11010aa41b05ca68da1441309738cac369e9ccb2dc9de75344ee505c",
+    "skill_md_bytes": 1024,
+    "content_sha256": "160083569df12a7cf3fa37f9b647ea88ea65d906c44ce70d1270a81bc92d8b4c",
     "instruction_tier": "workflow"
   },
   {
@@ -1930,8 +2038,8 @@
     "description": "Use this skill for translation SEO, locale keyword maps, regional intent, localized metadata and slugs.",
     "path": ".codex/skills/multilingual-content-localization-seo",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1926,
-    "content_sha256": "b755ea1c85fb5077e7bb90c6712a4be85b37ceb45b18f66148269c1740fc94fd",
+    "skill_md_bytes": 1039,
+    "content_sha256": "2555c29726ed0cfad5f9bbe8b792098423d14b008969323cb6a01fa2a5e948b0",
     "instruction_tier": "workflow"
   },
   {
@@ -1939,8 +2047,8 @@
     "description": "Use this skill for mutation testing ideas, weak assertion detection, test suite hardening, critical logic coverage.",
     "path": ".codex/skills/mutation-testing-strategy",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1934,
-    "content_sha256": "d02b7bcb35b80f1ea377404fff558e1b936871587b658a9961475e327f8363fb",
+    "skill_md_bytes": 1025,
+    "content_sha256": "8ce294c94174a93692b4b620bc7928b5674c141a4be04151e2d09f9ef40c4da5",
     "instruction_tier": "workflow"
   },
   {
@@ -1957,8 +2065,17 @@
     "description": "Use this skill for Next.js App Router metadata, robots.ts, sitemap.ts, OG images, dynamic route SEO.",
     "path": ".codex/skills/nextjs-app-router-seo",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1886,
-    "content_sha256": "a7cb76905e835fd975f2fe159bb11058acc1f4a53a9e76ecfcba5a96ca417adc",
+    "skill_md_bytes": 993,
+    "content_sha256": "e9310a4bd9c0f390155ec1a52a074720b01c636ea9065adabddcf6aaf5751bab",
+    "instruction_tier": "workflow"
+  },
+  {
+    "name": "nextjs-cache-invalidation-contracts",
+    "description": "Repair Next.js App Router cache scope and mutation/read consistency on the project's installed cache model.",
+    "path": ".codex/skills/nextjs-cache-invalidation-contracts",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 712,
+    "content_sha256": "26eb3982d9c8c2d5931530c89f42c674dc2b77e70842049e5e11e2f1fa63523d",
     "instruction_tier": "workflow"
   },
   {
@@ -1993,8 +2110,8 @@
     "description": "Use this skill for npm package exports, ESM/CJS compatibility, semantic versioning, release automation, changelogs.",
     "path": ".codex/skills/node-package-release-engineering",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1935,
-    "content_sha256": "fa7dcc70f9b55290ffb857b6b8fde8a7c1dcf61386b6ed4de34292e99390312c",
+    "skill_md_bytes": 1053,
+    "content_sha256": "f9ca22da74c40bf08d04a997214314d5b25ba85a1a6612a36a312d89efc1b57e",
     "instruction_tier": "workflow"
   },
   {
@@ -2002,8 +2119,8 @@
     "description": "Use this skill for Nuxt SEO modules, sitemap, robots, schema, OG images, i18n SEO.",
     "path": ".codex/skills/nuxt-seo-module-workflow",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1849,
-    "content_sha256": "9c5d42f5b9d82d1a78f98c21d3b50f689ec31fcae523045c5c448ce3bc32795f",
+    "skill_md_bytes": 957,
+    "content_sha256": "955163c01133a168f7f25d05145a64431cf9a94764c12d601c5cd1b6a4550f16",
     "instruction_tier": "workflow"
   },
   {
@@ -2016,12 +2133,21 @@
     "instruction_tier": "workflow"
   },
   {
+    "name": "oidc-release-provenance",
+    "description": "Review GitHub Actions OIDC identity and artifact provenance for a release workflow.",
+    "path": ".codex/skills/oidc-release-provenance",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 698,
+    "content_sha256": "2c07cbd5cc272f0742f86e8d65c54f596bca95daea269a90d8fd8e2aea5a21a0",
+    "instruction_tier": "workflow"
+  },
+  {
     "name": "onboarding-product-tour-ux",
     "description": "Use this skill for activation, walkthroughs, checklists, progressive disclosure, first-run UX.",
     "path": ".codex/skills/onboarding-product-tour-ux",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1871,
-    "content_sha256": "1a6b483cc02bba82c575dd9705d03bc5c5b8a85a6e138bd3ac2a7a94a02c0f35",
+    "skill_md_bytes": 982,
+    "content_sha256": "495a973c8088a7d541856429d3aeeccf40efe6b824cd32864ef34416779bee58",
     "instruction_tier": "workflow"
   },
   {
@@ -2047,8 +2173,8 @@
     "description": "Use for PPC work when Codex should define cross-channel attribution, naming, UTMs, conversion ownership, consent, and reconciliation rules.",
     "path": ".codex/skills/paid-media-attribution-governance",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1307,
-    "content_sha256": "60acc7ef3d83441e54031b044d5835fbbb68e3fc45dd79830e89a76fac0a0e4a",
+    "skill_md_bytes": 1032,
+    "content_sha256": "6238a41ff9c07472010fa16d50f2973641608da90f2dad43d0a04f7af20eb1ec",
     "instruction_tier": "workflow"
   },
   {
@@ -2056,8 +2182,8 @@
     "description": "Use for PPC work when Codex should analyze paid-media budget pacing, caps, marginal efficiency, and safe reallocation proposals.",
     "path": ".codex/skills/paid-media-budget-pacing",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1267,
-    "content_sha256": "c6e5ee50e2194ca82f3a367b47cfd595a8e8bf7df31df867eb0b2d11189f2d9a",
+    "skill_md_bytes": 1012,
+    "content_sha256": "a3f7daf6851d7a541aefe55b84b5614d8d33b63c3c738e634ebf624912c50318",
     "instruction_tier": "workflow"
   },
   {
@@ -2074,8 +2200,8 @@
     "description": "Agent profile for PPC and paid-growth risk review before changing ads, budgets, bidding, tracking, or landing pages.",
     "path": ".codex/skills/paid-search-risk-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1747,
-    "content_sha256": "0f0e929e75a396a4fdc331d0849d848e2d4e02d6902233b427d0a963dc3073c7",
+    "skill_md_bytes": 1038,
+    "content_sha256": "87001347f2fc383279272685bac3efcb315039b937c3c7a488250fb901fea85f",
     "instruction_tier": "workflow"
   },
   {
@@ -2101,8 +2227,8 @@
     "description": "Use this skill for performance, reliability, observability, SLO risk, production diagnostics.",
     "path": ".codex/skills/performance-sre-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1880,
-    "content_sha256": "d929ce2e4d6a7aa4c7038458088ad4d0fbcdadd506a6450946167467a0e9a1c6",
+    "skill_md_bytes": 985,
+    "content_sha256": "7f21295c5a8ea97ee051e353ff4c38314c00b50e807d95d26272b58d6f337203",
     "instruction_tier": "workflow"
   },
   {
@@ -2128,8 +2254,8 @@
     "description": "Use this skill for Playwright screenshot comparisons, baselines, thresholds, viewport matrix, visual regression.",
     "path": ".codex/skills/playwright-screenshot-baselines",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1930,
-    "content_sha256": "e175b07fada9efe0ac2d764de06302ccdd834a3c69f485e90665b36a3b706416",
+    "skill_md_bytes": 1010,
+    "content_sha256": "7bc33221c3feed678873a81ddd466bc383185962f721cd5a3969590db5b53465",
     "instruction_tier": "workflow"
   },
   {
@@ -2142,6 +2268,15 @@
     "instruction_tier": "workflow"
   },
   {
+    "name": "postgres-lock-budget-migrations",
+    "description": "Plan PostgreSQL schema or index changes with explicit lock, transaction and rollback budgets.",
+    "path": ".codex/skills/postgres-lock-budget-migrations",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 775,
+    "content_sha256": "8ad161d25ba62cffdd87afbe570a9fa362fd7e30d2f7e8c06d00931973ae658e",
+    "instruction_tier": "workflow"
+  },
+  {
     "name": "ppc-budget-bid-optimizer",
     "description": "Analyze or draft changes to paid-media bids and budgets using spend, conversion quality, attribution windows, and explicit account scope.",
     "path": ".codex/skills/ppc-budget-bid-optimizer",
@@ -2151,12 +2286,21 @@
     "instruction_tier": "workflow"
   },
   {
+    "name": "ppc-geo-placement-drift-audit",
+    "description": "Detect changed geography or placement delivery against approved paid-media scope.",
+    "path": ".codex/skills/ppc-geo-placement-drift-audit",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 731,
+    "content_sha256": "33ef6587910556bff41f31440c2648e5baa94a12bd5dfc3df5de4f9224b56ac6",
+    "instruction_tier": "workflow"
+  },
+  {
     "name": "ppc-landing-quality-score-gate",
     "description": "Use before or during PPC landing page work for Google Ads, Meta Ads, paid search, paid social, or performance marketing campaigns.",
     "path": ".codex/skills/ppc-landing-quality-score-gate",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1791,
-    "content_sha256": "f212f7ee0393878b6efca397f28edf980721def61b079e57ec7646ed8646a38f",
+    "skill_md_bytes": 1059,
+    "content_sha256": "30ee97c5d5267b0eb87b05ebff56e6e367f1e4184982e0e5580206cc4c6e84f2",
     "instruction_tier": "workflow"
   },
   {
@@ -2182,8 +2326,8 @@
     "description": "Use this skill for addressing PR review comments, preserving unrelated changes, responding with evidence and tests.",
     "path": ".codex/skills/pr-review-response-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1923,
-    "content_sha256": "10fa49db42ab70afffb9e7fa79b39f901ce762ec06110fd0fcf3c3071838eb57",
+    "skill_md_bytes": 1040,
+    "content_sha256": "8bd3233902a197d52a698010cc6ba54fc69804cc7ffba8482b78ea3cd3d99e8a",
     "instruction_tier": "workflow"
   },
   {
@@ -2209,8 +2353,8 @@
     "description": "Use this skill for principal-level architecture decisions, tradeoffs, risk review, phased implementation plans.",
     "path": ".codex/skills/principal-architect-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1934,
-    "content_sha256": "38d5b52cffb204d5769b1c09633224a7ba0e8984c8b547804f6df923de679e4c",
+    "skill_md_bytes": 1071,
+    "content_sha256": "d2e2c4ee4ba4d9b1cb81ec706d34013d0ef53d8c900e82e1a58b2dc133be21aa",
     "instruction_tier": "workflow"
   },
   {
@@ -2218,8 +2362,8 @@
     "description": "Agent profile for principal-level programming review before merge, release, or production handoff.",
     "path": ".codex/skills/principal-code-reviewer-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1761,
-    "content_sha256": "92d29ad66c03a07b12fb82ebcbc273e9d8064a45c2966124d04ca3e7eca0650a",
+    "skill_md_bytes": 1015,
+    "content_sha256": "405030fe70ab8bc48ac0e60d34ce19d89bae477594ef9a5d8032068cec862199",
     "instruction_tier": "workflow"
   },
   {
@@ -2236,8 +2380,8 @@
     "description": "Use this skill when the user asks Codex to build an app, website, bot, SaaS, dashboard, automation, MVP, integration, or production feature.",
     "path": ".codex/skills/product-builder",
     "has_openai_yaml": true,
-    "skill_md_bytes": 976,
-    "content_sha256": "5ba6348c91a61fc019799e9074c2fffd07736eb4fdb11e5e410843fa1ee6bf59",
+    "skill_md_bytes": 1248,
+    "content_sha256": "93d33a5b7752ab0d8cdf380d33cbf1582fd3e54ce41b0a898e603cc98018f1ba",
     "instruction_tier": "workflow"
   },
   {
@@ -2272,8 +2416,8 @@
     "description": "Use for complex programming work when Codex should choose a narrow set of specialist agents without bloating context.",
     "path": ".codex/skills/programming-agent-pack-selector",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1792,
-    "content_sha256": "89f193f451f753ead7e75a9d624321611c44e93103afdd3450418595cea5788b",
+    "skill_md_bytes": 1047,
+    "content_sha256": "47d265039212d33b6ddb82893cc82f68cf5b53dfc6ec0a058a384de44841cbb9",
     "instruction_tier": "workflow"
   },
   {
@@ -2281,8 +2425,8 @@
     "description": "Use this skill for prompt injection, tool safety, retrieval boundaries, untrusted content handling, approvals.",
     "path": ".codex/skills/prompt-injection-defense",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1920,
-    "content_sha256": "06dce5d6b4650e41f5aeed45b7a1e2b3cbec4c5e348e528534149c1f07e3e874",
+    "skill_md_bytes": 1043,
+    "content_sha256": "3131fc94c5227fddca1fa271ab4f60a39f0cfb8232df63500d2f22547ae6f7c6",
     "instruction_tier": "workflow"
   },
   {
@@ -2335,8 +2479,8 @@
     "description": "Use this skill for pytest structure and mechanics - fixture scope and teardown, conftest layering, parametrize and ids, markers and selection, monkeypatch, and plugin choices for slow or flaky suites.",
     "path": ".codex/skills/pytest-fixtures-and-parametrization",
     "has_openai_yaml": false,
-    "skill_md_bytes": 3012,
-    "content_sha256": "338a9e6dcd3da88d2ca4fe1a54dd7fa1db96581908a6e38e7b66dda16285196c",
+    "skill_md_bytes": 3247,
+    "content_sha256": "e1a1baf45c8fbd513fa152e40df5e9f3dc13820fe68b58f13c5d8712a262971d",
     "instruction_tier": "workflow"
   },
   {
@@ -2344,8 +2488,8 @@
     "description": "Use this skill for asyncio design and repair - TaskGroup, structured concurrency, cancellation and timeouts, blocking calls inside the event loop, and the deadlocks they cause.",
     "path": ".codex/skills/python-async-await-patterns",
     "has_openai_yaml": false,
-    "skill_md_bytes": 2833,
-    "content_sha256": "f6179b0f7377c70e9e799c0132fb6b72103c828caa12179895eb15fb03c92910",
+    "skill_md_bytes": 3104,
+    "content_sha256": "a302d3ca11070afe4c745626a03790b568d987816e4c5e270f1f7bc7b6201389",
     "instruction_tier": "workflow"
   },
   {
@@ -2353,8 +2497,8 @@
     "description": "Use this skill for Python CLI/package structure, pyproject.toml, console scripts, tests, linting, distribution.",
     "path": ".codex/skills/python-cli-package-builder",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1935,
-    "content_sha256": "0101279261c12fcc61950f6c277abc2abffdacd5f837f97ea13ccc369b64d5b9",
+    "skill_md_bytes": 1039,
+    "content_sha256": "213b06bb6889ab733d2b3eedaeb30b533cd8af1aea381946bbdb92d7efa39651",
     "instruction_tier": "workflow"
   },
   {
@@ -2362,8 +2506,8 @@
     "description": "Use this skill for Python data modeling and input validation - Pydantic v2 models, validators and settings, dataclasses versus attrs, request and config schema design, serialization, and clear validation errors.",
     "path": ".codex/skills/python-dataclasses-pydantic-validation",
     "has_openai_yaml": false,
-    "skill_md_bytes": 2956,
-    "content_sha256": "83bcb95a5eb730b9eaba853507313764301cc93f0442134863665a84d7416544",
+    "skill_md_bytes": 3190,
+    "content_sha256": "0bb8da0e42b6822c76693cf4b6743b8002d7446ca9ff16b4dad825eccd61f8e8",
     "instruction_tier": "workflow"
   },
   {
@@ -2380,8 +2524,8 @@
     "description": "Use this skill for Python dependency management and release: pyproject.toml metadata, uv or Poetry workflows, lock files, reproducible environments, version constraints, and publishing to an index with trusted publishing.",
     "path": ".codex/skills/python-packaging-pyproject-poetry-uv",
     "has_openai_yaml": false,
-    "skill_md_bytes": 2980,
-    "content_sha256": "6e280686a4c5e7fec64a5f2040d0f8a1b1be8dbfdd140ae0e96ffd1d35f9e975",
+    "skill_md_bytes": 3238,
+    "content_sha256": "1bb5d90398e821989ded9f82fdda02d368fc03ba27f31817e8b0ad9e31c1abc6",
     "instruction_tier": "workflow"
   },
   {
@@ -2389,8 +2533,8 @@
     "description": "Use this skill to profile Python CPU and wall-clock time with cProfile, py-spy, and flame graphs - choosing the right profiler, sampling a live production process, and reading the output before optimizing anything.",
     "path": ".codex/skills/python-profiling-cprofile-pyspy",
     "has_openai_yaml": false,
-    "skill_md_bytes": 3067,
-    "content_sha256": "bdc2a989966d8d1c05bab80e7afc855c4719a978fe9a894f61e8ee2c4190e113",
+    "skill_md_bytes": 3313,
+    "content_sha256": "eb0b4602eeb2aee4db10d43ff52d4078708bc46a135835de37c8de83ef5273ff",
     "instruction_tier": "workflow"
   },
   {
@@ -2398,8 +2542,8 @@
     "description": "Use this skill for Python type hints, generics, Protocol, TypedDict, overloads, and strict mypy or pyright configuration, including gradual typing of untyped legacy modules.",
     "path": ".codex/skills/python-typing-and-mypy-strictness",
     "has_openai_yaml": false,
-    "skill_md_bytes": 2729,
-    "content_sha256": "2312843568f4b8aba3377d640e8b154ad1884040fca4bffeebfc4079e400c692",
+    "skill_md_bytes": 2982,
+    "content_sha256": "c63f5d2b8f61c2cbd4cdd0eaecbfc056ec80155e8abfc6c378dca9645fb773a1",
     "instruction_tier": "workflow"
   },
   {
@@ -2407,8 +2551,8 @@
     "description": "Use this skill for test strategy, E2E automation, visual regression, flaky test control, QA evidence.",
     "path": ".codex/skills/qa-automation-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1902,
-    "content_sha256": "5fe831e89aefac2f9ba386d4ffc1b43a0e13e84bdc7ccb1e39fc6eb39eb13c1e",
+    "skill_md_bytes": 1020,
+    "content_sha256": "2891e255ee59c4d65e500b9d83cc7c07f837d9e92840dddf0975f11595424d3d",
     "instruction_tier": "workflow"
   },
   {
@@ -2425,8 +2569,8 @@
     "description": "Use for React Three Fiber implementation or review involving scenes, cameras, controls, lighting, assets, Suspense, drei helpers, or React state integration.",
     "path": ".codex/skills/r3f-scene-pattern-library",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1806,
-    "content_sha256": "1a734e89e4719e69b0b7881be127f3c39896b6e6c30c9dfc1cb3e1038beeb3a8",
+    "skill_md_bytes": 1075,
+    "content_sha256": "245974e43edca75352161b1477d16531a33791a492e75c36fe916827d4786132",
     "instruction_tier": "workflow"
   },
   {
@@ -2443,8 +2587,8 @@
     "description": "Use this skill for React Aria style interactions, comboboxes, lists, menus, validation, drag and drop.",
     "path": ".codex/skills/react-aria-advanced-interactions",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1904,
-    "content_sha256": "09dcab35abd67ed93088cec02375ce03f5d5463ae5736be162356ea0ef509a9d",
+    "skill_md_bytes": 1000,
+    "content_sha256": "668898ab3a7724c8332760b131510c06d9cd46651f80ac6cb8b9818bc67f1df6",
     "instruction_tier": "workflow"
   },
   {
@@ -2475,6 +2619,15 @@
     "instruction_tier": "workflow"
   },
   {
+    "name": "react-server-client-boundary-audit",
+    "description": "Audit data exposure and module boundaries between React Server Components, Client Components and server actions.",
+    "path": ".codex/skills/react-server-client-boundary-audit",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 751,
+    "content_sha256": "91d4c8dbb06462bcfe57aacf113d84efa44c7d63ef3430cb7b3d8121f21b44ae",
+    "instruction_tier": "workflow"
+  },
+  {
     "name": "react-three-fiber-components",
     "description": "Use this skill for React Three Fiber components, hooks, suspense, drei helpers, declarative 3D UI.",
     "path": ".codex/skills/react-three-fiber-components",
@@ -2488,8 +2641,8 @@
     "description": "Use this skill for WebSockets, SSE, realtime auth, reconnects, backpressure, presence, delivery semantics.",
     "path": ".codex/skills/realtime-websockets-sse",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1892,
-    "content_sha256": "e6546636150f46402ec9f367ddb703308a877ca196c81c87ed1de8c9ed38fc2e",
+    "skill_md_bytes": 984,
+    "content_sha256": "275e582368967c11a7f929dd6100a1948c9284adbf20a90b053dc7c9d457bb73",
     "instruction_tier": "workflow"
   },
   {
@@ -2515,8 +2668,8 @@
     "description": "Use this skill for release readiness, rollback plans, changelogs, deployment checks, production risk.",
     "path": ".codex/skills/release-manager-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1886,
-    "content_sha256": "fa3c522cd4a49da445f52cde78728debc8175a6ee1d2666e9104e28e504a20a8",
+    "skill_md_bytes": 993,
+    "content_sha256": "44d3e6fb1bd1a8c78053918acfa797b0c8d61f4a5e9daaa70a9bb7c9092f2d20",
     "instruction_tier": "workflow"
   },
   {
@@ -2524,8 +2677,8 @@
     "description": "Use this skill for release notes, changelog generation, PR/commit summarization, public impact review.",
     "path": ".codex/skills/release-notes-changelog-automation",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1927,
-    "content_sha256": "e61ae87421e5686e8318f86369a583f0c101e9883387fd1bd24864d787603cea",
+    "skill_md_bytes": 1019,
+    "content_sha256": "4398794d2f052630c223e3fc48c24635c58a00c463dfde3daec158bdb9d4dbad",
     "instruction_tier": "workflow"
   },
   {
@@ -2551,8 +2704,8 @@
     "description": "Use this skill for robots.txt, meta robots, X-Robots-Tag, environment indexing controls.",
     "path": ".codex/skills/robots-xrobots-meta-controls",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1869,
-    "content_sha256": "4007a37b49dbf5fbf5ce5df7ed3be5219e18be42cce67ef82f3ba641ad0daf90",
+    "skill_md_bytes": 967,
+    "content_sha256": "f7e88c2e61159a2f87efed10519e9227032eac278381f94967048199a048e30b",
     "instruction_tier": "workflow"
   },
   {
@@ -2569,8 +2722,8 @@
     "description": "Use this skill for Search Console API exports, anomaly checks, page/query dashboards, automated diagnostics.",
     "path": ".codex/skills/search-console-api-automation",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1913,
-    "content_sha256": "414d177e12813dea8243eadc91554e0c4d69fd9e45acf6688686e5982ede0be2",
+    "skill_md_bytes": 999,
+    "content_sha256": "01dfcfa389f42fd476c3ea6bba9a18bbd04b725592c25d73cc470825b3bc3803",
     "instruction_tier": "workflow"
   },
   {
@@ -2587,8 +2740,8 @@
     "description": "Use for SEO work when Codex should triage Search Console impressions, clicks, queries, pages, device, country, and anomaly evidence.",
     "path": ".codex/skills/search-console-performance-triage",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1229,
-    "content_sha256": "010086f41bc918770874ed90ff0107878520d60908ad4d5ce6ba221f34dd627f",
+    "skill_md_bytes": 938,
+    "content_sha256": "c8f1e56b29183e14896abf4abc9b12b525c92af5641e25d23d4776dd118b7045",
     "instruction_tier": "workflow"
   },
   {
@@ -2605,8 +2758,8 @@
     "description": "Use this skill for search indexing, embeddings, RAG chunking, freshness, retrieval evaluation, source citations.",
     "path": ".codex/skills/search-indexing-rag",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1915,
-    "content_sha256": "4f3aab6b836a84c762df9fac2f8da4d18be0ad7c3d897112d4414d742d7f3021",
+    "skill_md_bytes": 1024,
+    "content_sha256": "5af9813755e4aa6ce20e1238e2015c440d30e136cdd9cc8c16843b975609510d",
     "instruction_tier": "workflow"
   },
   {
@@ -2614,8 +2767,8 @@
     "description": "Use this skill for secret inventory, env vars, rotation plans, safe dev/prod separation, leak response.",
     "path": ".codex/skills/secrets-env-rotation",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1903,
-    "content_sha256": "b11b052373a917949ac6d0d904dd495298ac1b6ce0e20196d6fa9794bc096228",
+    "skill_md_bytes": 1007,
+    "content_sha256": "3a9f9fe75b0bfaff7ec493fc25a1b9ba8e519f3f420c5f90fed075bc35f58ae4",
     "instruction_tier": "workflow"
   },
   {
@@ -2632,8 +2785,8 @@
     "description": "Use this skill for security review, auth, secrets, injection, permissions, data exposure, exploit paths.",
     "path": ".codex/skills/security-reviewer-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1928,
-    "content_sha256": "6337fc1841f6d45303385096d4c85fb71f06996f74d80216ea59d267d582d28e",
+    "skill_md_bytes": 1032,
+    "content_sha256": "208879d366a02d857ff5b23aa98d7783c779462f9e4856c838264d08729fedbf",
     "instruction_tier": "workflow"
   },
   {
@@ -2650,8 +2803,8 @@
     "description": "Use this skill for SEO experiments, causal analysis, rollouts, guardrails, interpretation of noisy organic data.",
     "path": ".codex/skills/seo-ab-testing-causal-review",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1910,
-    "content_sha256": "8f1b3876bfb1476ce0d2c2ed04622832896f20fa39da17b68c18e1dd8fd931a8",
+    "skill_md_bytes": 1018,
+    "content_sha256": "2c8a78d11ab7d492415e4cc5c2629cf903c27c11abc14b3b0e42f0007ee57d5d",
     "instruction_tier": "workflow"
   },
   {
@@ -2659,8 +2812,8 @@
     "description": "Use for SEO work when Codex should measure SEO release impact with pre/post baselines, annotations, crawl checks, and rollback criteria.",
     "path": ".codex/skills/seo-change-impact-monitoring",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1227,
-    "content_sha256": "eb8b9b3f14f134a939b2c9dc240b192f58a76798d4ec1169f9d5342eb5d98f45",
+    "skill_md_bytes": 951,
+    "content_sha256": "6dff3c600bcaad60b50566a60653fb12473e8dacf5560757be63b4d0bb113e8a",
     "instruction_tier": "workflow"
   },
   {
@@ -2668,8 +2821,8 @@
     "description": "Use this skill for SEO checks in CI, metadata, canonicals, links, robots, sitemap, noindex regressions.",
     "path": ".codex/skills/seo-ci-quality-gate",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1882,
-    "content_sha256": "a011dbefd67759dca228f1a94e7c7c18c1edc71d62c2e6710e723d859705cac3",
+    "skill_md_bytes": 1000,
+    "content_sha256": "6ec085b12b003e1741a2f4e4e403bac9ff45d143f071b43e4b8570f0ad34e578",
     "instruction_tier": "workflow"
   },
   {
@@ -2677,8 +2830,8 @@
     "description": "Use for SEO work when Codex should improve content ownership, author evidence, firsthand experience, citations, and trust signals.",
     "path": ".codex/skills/seo-content-authorship-e-e-a-t",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1219,
-    "content_sha256": "2424f90822513c2abdabfebf60573fcdfc0a3d5a82dc4428826bf5508178b5eb",
+    "skill_md_bytes": 927,
+    "content_sha256": "608224907add3d358ececf1d8a8f5a60bb2233dfb21113ff61a90a1b3f50d2c6",
     "instruction_tier": "workflow"
   },
   {
@@ -2686,8 +2839,8 @@
     "description": "Use for SEO work when Codex should connect Core Web Vitals lab data, RUM, releases, templates, and SEO impact triage.",
     "path": ".codex/skills/seo-cwv-rum-observability",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1183,
-    "content_sha256": "996d0c5e788de26df51dc6d050e5a8bff10d50631e04edc22b4e18a7b0db9795",
+    "skill_md_bytes": 920,
+    "content_sha256": "52e153e04f92e434071494d860563ab029bae7b359dd3cd468832e4f98e9e2a3",
     "instruction_tier": "workflow"
   },
   {
@@ -2695,8 +2848,8 @@
     "description": "Use for SEO work when Codex should assess digital PR and link acquisition for relevance, disclosure, spam risk, and durable brand value.",
     "path": ".codex/skills/seo-digital-pr-link-risk",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1219,
-    "content_sha256": "2122d552459f1adfd157517fe22d853d7643293fc96c89b8912c320ab3dc3701",
+    "skill_md_bytes": 942,
+    "content_sha256": "df43bbc511f1f3b4f7cd3401fe201a80c83da43f2f768c071093dfc9bdac65dd",
     "instruction_tier": "workflow"
   },
   {
@@ -2704,8 +2857,8 @@
     "description": "Use this skill for SEO strategy, technical SEO prioritization, organic growth roadmaps, search risk review.",
     "path": ".codex/skills/seo-director-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1881,
-    "content_sha256": "aff3166649404e1a291b831e519b8d5b8ae20f3940a14b98fce1d122232b1d95",
+    "skill_md_bytes": 998,
+    "content_sha256": "85f86d36dd07eb1efea48efd968eb7b383518159a70bd514bc893c2d9a525f3b",
     "instruction_tier": "workflow"
   },
   {
@@ -2713,8 +2866,8 @@
     "description": "Use for SEO work when Codex should review ecommerce product data, variants, availability, canonicals, structured data, and feed parity.",
     "path": ".codex/skills/seo-ecommerce-product-feed",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1221,
-    "content_sha256": "4553401ef25054f51c0222a8c6e264f720e96f16cb15f63db42fbfd6e0f57f99",
+    "skill_md_bytes": 937,
+    "content_sha256": "a723cb74ac63296c37af642a5b68a11274fedd3fc2731af22a80f7264584dac9",
     "instruction_tier": "workflow"
   },
   {
@@ -2722,8 +2875,8 @@
     "description": "Use for SEO work when Codex should optimize images and media for relevance, accessibility, performance, indexing, and rights provenance.",
     "path": ".codex/skills/seo-image-media-pipeline",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1219,
-    "content_sha256": "b00febaf9ca108ead63e0106c8182922ee374d963d63d3333ac505bf386da9e0",
+    "skill_md_bytes": 937,
+    "content_sha256": "8d3ddd6ac00b155b0270f5ee48382de2169a3cf5bac2faf87149bc7676bf5d74",
     "instruction_tier": "workflow"
   },
   {
@@ -2731,8 +2884,8 @@
     "description": "Use for SEO work when Codex should design internal linking, hubs, anchors, crawl paths, and equity flow without manipulative patterns.",
     "path": ".codex/skills/seo-internal-linking-architecture",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1233,
-    "content_sha256": "f2649a9756b4141ca5ecf4e74c9c47b92c27de92645df8ef613a0abb053ed4ac",
+    "skill_md_bytes": 952,
+    "content_sha256": "138b257d990f7180137a5e46836df160b3fc502b546515253e019225f3131cb8",
     "instruction_tier": "workflow"
   },
   {
@@ -2740,8 +2893,8 @@
     "description": "Use for SEO work when Codex should analyze crawler logs for crawl waste, status patterns, bot access, rendering, and indexability evidence.",
     "path": ".codex/skills/seo-log-file-crawl-analysis",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1231,
-    "content_sha256": "57858719d91236a67388ed541624222f63887b178cbedb5a3e7cd90d0b43e95e",
+    "skill_md_bytes": 951,
+    "content_sha256": "f57ce51b4223088c32f96fcec455bb15ee6f6c027655c0ad900f3195b7a5c728",
     "instruction_tier": "workflow"
   },
   {
@@ -2758,8 +2911,8 @@
     "description": "Use for SEO work when Codex should cluster keywords by intent, entity, funnel, SERP shape, and page ownership without cannibalization.",
     "path": ".codex/skills/seo-search-intent-clustering",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1223,
-    "content_sha256": "38a0ef8ac4ee031a0f29e11b6a3a4a8bafdba102d9a16af67d51f671181dbcea",
+    "skill_md_bytes": 964,
+    "content_sha256": "e905048c8739141842ed1ddb2cfc4b74a65e35b36194e96420562354b617a78d",
     "instruction_tier": "workflow"
   },
   {
@@ -2767,8 +2920,8 @@
     "description": "Use for SEO work when Codex should implement and validate structured data against visible content, schema rules, and rich-result risk.",
     "path": ".codex/skills/seo-structured-data-validation",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1227,
-    "content_sha256": "07e09ccfb918a32cab367f785a2f4c008c75129b9148302ebaa5e093078d7815",
+    "skill_md_bytes": 940,
+    "content_sha256": "f4fff65c70302acc30f0e19e12425d6d21d4b69f6d08cd71476752ffeb2c5636",
     "instruction_tier": "workflow"
   },
   {
@@ -2785,8 +2938,8 @@
     "description": "Use this skill for SERP features, rich result eligibility, schema opportunities, result type strategy.",
     "path": ".codex/skills/serp-feature-rich-result-planner",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1905,
-    "content_sha256": "05dff7a14353b0da59d99592117eab739391c368380c078cc216668467a0e2a4",
+    "skill_md_bytes": 994,
+    "content_sha256": "31853df1ffa23b35f3564f3918fe0fb1da043d1809ecbf3ee183bde1a9246e4c",
     "instruction_tier": "workflow"
   },
   {
@@ -2794,8 +2947,8 @@
     "description": "Use for SEO, GEO, content, landing pages, programmatic SEO, and competitor SERP research that should become a concrete page plan.",
     "path": ".codex/skills/serp-to-page-brief-generator",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1787,
-    "content_sha256": "4bfdb99ab47aa85cb958cfd22f7669f01ffd8f4c087c1b23ccb0da049366fc2a",
+    "skill_md_bytes": 1051,
+    "content_sha256": "22d2e6c9a266c5408de1f6a4e7b88a0bd0d16e4c361c4259cd5e1baf0d64d7f8",
     "instruction_tier": "workflow"
   },
   {
@@ -2803,8 +2956,8 @@
     "description": "Use for 3D web or animated UI work involving shaders, postprocessing, WebGL effects, particles, or expensive visual effects.",
     "path": ".codex/skills/shader-and-postprocessing-review",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1780,
-    "content_sha256": "fb2c7a6bab13c4a42b74120ca5e1d6852daabf8bc588a2cdcfb0b01bf3719e17",
+    "skill_md_bytes": 1052,
+    "content_sha256": "fe27d91c93f8328c0e003ba7e9226a021afae0071b8257b1628ec9d09db59bbc",
     "instruction_tier": "workflow"
   },
   {
@@ -2821,8 +2974,8 @@
     "description": "Use for Site Building work when Codex should ship website accessibility, performance, responsive, SEO fallback, and browser QA as one release gate.",
     "path": ".codex/skills/site-accessibility-performance-launch",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1301,
-    "content_sha256": "78bab1b70b72f15b625fc948e9cf2afaeea2c91a66b0ad29af868c150e057049",
+    "skill_md_bytes": 1028,
+    "content_sha256": "35e982ae8d15527b3d54a24441e753b1bedf55acf141508d7101ca6e6b4e6676",
     "instruction_tier": "workflow"
   },
   {
@@ -2830,8 +2983,8 @@
     "description": "Use for Site Building work when Codex should implement consent-aware analytics events, data layer, attribution, QA, and privacy-safe observability.",
     "path": ".codex/skills/site-analytics-consent-instrumentation",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1303,
-    "content_sha256": "e4bac05e2c038d56a097c1834392fb94bd0a2ddec6c11543e9f4b3e70925e246",
+    "skill_md_bytes": 1046,
+    "content_sha256": "19d7330081adf52fc876069d1c86ec9cd349beeb68ddafd9e2d52810955a434f",
     "instruction_tier": "workflow"
   },
   {
@@ -2839,8 +2992,8 @@
     "description": "Use for Site Building work when Codex should design resilient site API integration boundaries, failure states, caching, secrets, and contract tests.",
     "path": ".codex/skills/site-api-integration-boundaries",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1291,
-    "content_sha256": "ef1ff954db46f638e4aa905a1146a2f5df044f1e9c5b0933e21948c725ab8292",
+    "skill_md_bytes": 1031,
+    "content_sha256": "045d059713ce2036948e5bdd020731be3981a19813f879ca8902a94bddb8985d",
     "instruction_tier": "workflow"
   },
   {
@@ -2848,8 +3001,8 @@
     "description": "Use for Site Building work when Codex should design ecommerce discovery, product, cart, checkout, trust, tracking, and recovery flows.",
     "path": ".codex/skills/site-commerce-conversion-architecture",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1275,
-    "content_sha256": "ecc2af2a6f1907c8375dc16128c3a9a32516f808bf7481a2aa0fd09825697cad",
+    "skill_md_bytes": 993,
+    "content_sha256": "8d33e44b991322f6c7b284ec9d5184a32161d84bd0ae475b8316a4a8d309122b",
     "instruction_tier": "workflow"
   },
   {
@@ -2857,8 +3010,8 @@
     "description": "Use for Site Building work when Codex should design content types, editorial workflows, previews, localization, permissions, and migration-safe CMS models.",
     "path": ".codex/skills/site-content-model-cms",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1287,
-    "content_sha256": "55be6870471e315c1f3dca417ee1345d076fd2db1ba8ab8bd2e8d292c9a70172",
+    "skill_md_bytes": 1004,
+    "content_sha256": "58dfe43e6d3171eaf43f8aa66f9b51d7f94af4e399bcdcbbc38dd6041d8e2800",
     "instruction_tier": "workflow"
   },
   {
@@ -2866,8 +3019,8 @@
     "description": "Use this skill for automated site crawling, exports, issue classification, reproducible technical SEO audits.",
     "path": ".codex/skills/site-crawler-automation",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1900,
-    "content_sha256": "5d86f2ef1141c6dce94cb4ac09bf7a17c1c2a925e3a71cd7d39fed4fc15cd2d7",
+    "skill_md_bytes": 989,
+    "content_sha256": "1d36246b9f61952b35ff08d0a6b713174263dd9aa55ccd08179bb78b1e5ad133",
     "instruction_tier": "workflow"
   },
   {
@@ -2875,8 +3028,8 @@
     "description": "Use for Site Building work when Codex should turn design tokens and components into an accessible, reusable site delivery system.",
     "path": ".codex/skills/site-design-system-delivery",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1245,
-    "content_sha256": "e77dadc0314b8ac1e32c2c8862abf3031ebb9a02f87d5a52ebcb090aa2484c6c",
+    "skill_md_bytes": 971,
+    "content_sha256": "9f978c37e11052a45a4815050c7a56472e21200411e80ed08ad89c38f43d40e8",
     "instruction_tier": "workflow"
   },
   {
@@ -2884,8 +3037,8 @@
     "description": "Use for Site Building work when Codex should define editorial ownership, content quality gates, publishing roles, review, and archive rules.",
     "path": ".codex/skills/site-editorial-governance",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1263,
-    "content_sha256": "3c21eb2a6e03f568355a6a07fa1b46835eb893f8880751015351edc576c2106e",
+    "skill_md_bytes": 978,
+    "content_sha256": "8497d0ff51ddfb528f5a18c04b34ba8fd254297444c07ed5a444b0e252712660",
     "instruction_tier": "workflow"
   },
   {
@@ -2893,8 +3046,8 @@
     "description": "Use for Site Building work when Codex should design lead forms, validation, consent, spam prevention, CRM handoff, analytics, and recovery states.",
     "path": ".codex/skills/site-forms-lead-capture",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1271,
-    "content_sha256": "8c598bef80c571ecc52c10a628fb84dbdee64bf7b66d549caf8099e08f2f3b82",
+    "skill_md_bytes": 995,
+    "content_sha256": "03f52ebb0440a831072657b8000e3f9f05be908bbc0c68cb73d95aaab575228b",
     "instruction_tier": "workflow"
   },
   {
@@ -2902,8 +3055,8 @@
     "description": "Use for Site Building work when Codex should implement site localization, locale routing, copy expansion, metadata, formatting, and visual QA.",
     "path": ".codex/skills/site-i18n-localization-delivery",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1279,
-    "content_sha256": "27b2f572e4afbc7b30ecbfd15c20dc8dd973c67dc9cdbdb31af25df9cc0d38b5",
+    "skill_md_bytes": 989,
+    "content_sha256": "0c8fbe6ec573e4095efca7b9be04c234105ace7e8401f07dd5bcf4e87905cc96",
     "instruction_tier": "workflow"
   },
   {
@@ -2911,8 +3064,8 @@
     "description": "Use for Site Building work when Codex should choose site architecture, rendering, hosting, CMS, integrations, and performance boundaries from product evidence.",
     "path": ".codex/skills/site-platform-architecture",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1303,
-    "content_sha256": "2fb4674b911238360a5d5ee603e413cda0cb367f6f75b9a9c72d134e7cb38846",
+    "skill_md_bytes": 1057,
+    "content_sha256": "f84a7c20f25756ad2093a6be4a0fa8f143032df53b7aee830661832ad50402cd",
     "instruction_tier": "workflow"
   },
   {
@@ -2920,8 +3073,8 @@
     "description": "Use for Site Building work when Codex should run site launch readiness across environment, redirects, analytics, forms, error monitoring, rollback, and ownership.",
     "path": ".codex/skills/site-production-launch-gate",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1311,
-    "content_sha256": "9261d2fc2d02a87c2018a831266b58a8e948aa00a87c261269781ec43de6a558",
+    "skill_md_bytes": 1050,
+    "content_sha256": "286e92921ec950c94d6c56c25ec4610389ecfb1c1fc91d55ca022b6a820209ee",
     "instruction_tier": "workflow"
   },
   {
@@ -2929,8 +3082,8 @@
     "description": "Use this skill for large sitemap indexes, sharding, freshness, lastmod hygiene, monitoring, submission strategy.",
     "path": ".codex/skills/sitemap-index-sharding",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1922,
-    "content_sha256": "d594ff6ba33c8216b58e14acbbddce55b9033abe0b5358f0b9ab14de05403099",
+    "skill_md_bytes": 1006,
+    "content_sha256": "0c628621bb13377266fd084c7ef256339406c7be3d0ca3b3e4dbc2cc52870861",
     "instruction_tier": "workflow"
   },
   {
@@ -2938,8 +3091,8 @@
     "description": "Select, audit, and deploy a bounded set of relevant skills for a project without loading the complete capability library.",
     "path": ".codex/skills/skill-catalog-orchestrator",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1329,
-    "content_sha256": "095c42f3405d5ba9c838c682d6e66fbf98d7be39bcb28480476048c8e57a544c",
+    "skill_md_bytes": 1775,
+    "content_sha256": "af5993a7404aa6d72fb2938d922039d0f181c0af0b7434775a84ed567dafff8c",
     "instruction_tier": "workflow"
   },
   {
@@ -2974,8 +3127,8 @@
     "description": "Use when implementing with APIs, SDKs, libraries, frameworks, or project-local contracts that may differ from memory or have changed recently.",
     "path": ".codex/skills/source-first-api-verifier",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1790,
-    "content_sha256": "489a5b9ece9d0c518d8e7f779fb417e4a7b8693504c218847f0486fa5709ddf3",
+    "skill_md_bytes": 1082,
+    "content_sha256": "2bab08261a05e1911fbfeb8c2c7d117e3680665f96c2cbd6efe14e16484b3770",
     "instruction_tier": "workflow"
   },
   {
@@ -3001,17 +3154,17 @@
     "description": "Use this skill for SQL query plans, indexes, N+1s, pagination, transactions, performance bottlenecks.",
     "path": ".codex/skills/sql-query-plan-optimizer",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1901,
-    "content_sha256": "ef31b90d2bd326849331fb757a1eaba65acd55ef79b8137cd6949fd5ebde2c34",
+    "skill_md_bytes": 999,
+    "content_sha256": "2e2798b6da56f640bf56a563686ef793cd8f34eebaa0987915f6ce62b4e59260",
     "instruction_tier": "workflow"
   },
   {
     "name": "sqlalchemy-orm-patterns",
-    "description": "Use this skill for SQLAlchemy 2.0 ORM work: session lifecycle, unit of work boundaries, relationship loading strategies, and N+1 query elimination.",
+    "description": "Review SQLAlchemy 2.x session lifecycle, unit-of-work boundaries, relationship loading and N+1 queries on the installed minor version.",
     "path": ".codex/skills/sqlalchemy-orm-patterns",
     "has_openai_yaml": false,
-    "skill_md_bytes": 2819,
-    "content_sha256": "087250d5ca343fb7c5e8c4b1aeee00343e0d9f0cf64b7771bfb43d03132443c9",
+    "skill_md_bytes": 2903,
+    "content_sha256": "afc839798c87e474164d93cd8101c8faf3062b231febf610c3f2ff40e192675a",
     "instruction_tier": "workflow"
   },
   {
@@ -3028,8 +3181,8 @@
     "description": "Use this skill for reproduction-first debugging, root cause isolation, minimal fixes, regression tests.",
     "path": ".codex/skills/staff-debugger-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1873,
-    "content_sha256": "72d17764df69c996dbb5321c5ecd78c18a862262835e1c3960cd9fdb506836fb",
+    "skill_md_bytes": 987,
+    "content_sha256": "9e6f314ab4190101086528ede3701aba970a6c89353ffbe66b244a0b047c4c73",
     "instruction_tier": "workflow"
   },
   {
@@ -3037,8 +3190,8 @@
     "description": "Use this skill for Storybook play functions, interaction tests, component states, accessibility checks.",
     "path": ".codex/skills/storybook-interaction-tests",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1896,
-    "content_sha256": "bb8094beb8f536d5162701ce8c1875ea6b0e84a2b4192b848e0f7239e7786cdd",
+    "skill_md_bytes": 984,
+    "content_sha256": "66bb835225a36081dbf7407d966bd145a0a1fe5fedfd2997c486ea33856abe3c",
     "instruction_tier": "workflow"
   },
   {
@@ -3082,8 +3235,8 @@
     "description": "Use this skill for SBOM, SCA, lockfile review, provenance, package integrity, supply-chain risk.",
     "path": ".codex/skills/supply-chain-sbom-sca",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1872,
-    "content_sha256": "36393044038f86d253d88ade2a6f70e35d4599ebeeafe6540fa3ea217c0095af",
+    "skill_md_bytes": 995,
+    "content_sha256": "84bbce468fb89f6946e391eed7b4c2bbf1e03e47a403ebd70f14ba6895157ec5",
     "instruction_tier": "workflow"
   },
   {
@@ -3118,8 +3271,8 @@
     "description": "Use for Telegram work when Codex should implement Telegram Bot API retries, idempotency, update handling, rate limits, errors, and safe logging.",
     "path": ".codex/skills/telegram-bot-api-reliability",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1256,
-    "content_sha256": "a85ef9c2561eb66f1d160ee852fff472a9a96bc3d35aeac33e9fdd1b929c3fa8",
+    "skill_md_bytes": 994,
+    "content_sha256": "9dec93dd018f1a684d950229fd7bf3d88893ed8d11eadee1d9c21603c6176e31",
     "instruction_tier": "workflow"
   },
   {
@@ -3127,8 +3280,8 @@
     "description": "Use for Telegram work when Codex should choose Telegram bot, webhook, queue, storage, admin, and observability architecture.",
     "path": ".codex/skills/telegram-bot-solution-architecture",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1228,
-    "content_sha256": "98458879e994513695aa6430a0912786629f1ec97be833633211fcc63a43a8f0",
+    "skill_md_bytes": 953,
+    "content_sha256": "b87bbae349d3dc95136041cf38f27a72cb0741c1f51e0df05c3d07f9244cf0fb",
     "instruction_tier": "workflow"
   },
   {
@@ -3136,8 +3289,8 @@
     "description": "Use for Telegram work when Codex should instrument Mini App acquisition, start parameters, funnel events, consent, attribution, and privacy-safe reporting.",
     "path": ".codex/skills/telegram-mini-app-analytics-attribution",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1300,
-    "content_sha256": "3c7e8283293c0c5012dcc9a99525db034c67a2abdfff7fa3b121d6c2ba88f874",
+    "skill_md_bytes": 1040,
+    "content_sha256": "cd0f165dad11f21f7385ddfd748b97896f3a87e87a859be2c67b67a4df78f67c",
     "instruction_tier": "workflow"
   },
   {
@@ -3145,8 +3298,8 @@
     "description": "Use for Telegram work when Codex should design Mini App backend contracts, authorization, idempotency, error states, and bot integration boundaries.",
     "path": ".codex/skills/telegram-mini-app-backend-contract",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1276,
-    "content_sha256": "0305c2e726ad86d662574cbe5b36af25c776077b240fa0535a7013e6a3eee0a6",
+    "skill_md_bytes": 1042,
+    "content_sha256": "4a04c44e700527c63274f9dc066e185b362114598a5882fd12b3f2bbfe9a22a4",
     "instruction_tier": "workflow"
   },
   {
@@ -3154,8 +3307,8 @@
     "description": "Use for Telegram work when Codex should design Mini App activation, referral, retention, notification-consent, and re-engagement loops responsibly.",
     "path": ".codex/skills/telegram-mini-app-growth-loop",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1264,
-    "content_sha256": "8c04ff3478964f6516dc2d1e9fca351e3d2757d5d76a9deb175d03760ec05071",
+    "skill_md_bytes": 1010,
+    "content_sha256": "52f90eac9b2653c2787961f21a47e7942a6a82a9de08c0ed3fd10003693ec894",
     "instruction_tier": "workflow"
   },
   {
@@ -3163,8 +3316,8 @@
     "description": "Use for Telegram work when Codex should validate Telegram Mini App initData on the server, enforce expiry, map identity, and create safe sessions.",
     "path": ".codex/skills/telegram-mini-app-init-data-authentication",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1288,
-    "content_sha256": "ff33c651fc56e17110ae74f79d0324dc9f7fc5f144bf810e627f705aad41d7c3",
+    "skill_md_bytes": 1068,
+    "content_sha256": "17ac6c41ce5ce27c4e6fa06f430c53b63ac0d60ba55c5617cf9b0b159e4597f8",
     "instruction_tier": "workflow"
   },
   {
@@ -3172,8 +3325,8 @@
     "description": "Use for Telegram work when Codex should review Mini App payments, digital-goods constraints, receipts, refunds, policy, and approval gates.",
     "path": ".codex/skills/telegram-mini-app-payments-policy",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1256,
-    "content_sha256": "572e056cc208e16897630f8bf323e13718186f8b760da0ea01d7cbe8b3d2e2ab",
+    "skill_md_bytes": 1014,
+    "content_sha256": "eac4fe8ca76a0d5b241e6c08e3d0cae772a3b9112791b6b4fa1781550abbe4ff",
     "instruction_tier": "workflow"
   },
   {
@@ -3181,8 +3334,8 @@
     "description": "Use for Telegram work when Codex should set Mini App mobile performance budgets for startup, JS, assets, rendering, network, and low-end devices.",
     "path": ".codex/skills/telegram-mini-app-performance-budget",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1274,
-    "content_sha256": "468042f8e6b917bd9dfd5b909f81286202681f6a9e20dec41fb4bc13288bd273",
+    "skill_md_bytes": 1010,
+    "content_sha256": "831202f91fadedf4315af39630df00d1ae0feb01949d38e438a0c7dd516a94db",
     "instruction_tier": "workflow"
   },
   {
@@ -3190,8 +3343,8 @@
     "description": "Use for Telegram work when Codex should build Telegram-native Mini App UI with theme, safe areas, viewport, back button, haptics, and accessibility.",
     "path": ".codex/skills/telegram-mini-app-platform-ui",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1266,
-    "content_sha256": "4f1ab8c20ad8beac762dc1b0625f1dc49ae0bc52464d90a913924253ce607145",
+    "skill_md_bytes": 985,
+    "content_sha256": "74926ec660f9a9254a56a06f3070036a5050e7c9a2f10f60f4f0bcb371bfe36e",
     "instruction_tier": "workflow"
   },
   {
@@ -3199,8 +3352,8 @@
     "description": "Use for Telegram work when Codex should define Telegram Mini App user job, launch surface, platform constraints, trust, and success metrics.",
     "path": ".codex/skills/telegram-mini-app-product-brief",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1254,
-    "content_sha256": "2e30b8e537036a57d1f922a793c1d9af4af1c8232edc22e61467bd8ffd4bfd0b",
+    "skill_md_bytes": 974,
+    "content_sha256": "a75a817a0ccfc75e57020e4bd01ccb7903e6043f9809161a248fd8311db1a368",
     "instruction_tier": "workflow"
   },
   {
@@ -3208,8 +3361,8 @@
     "description": "Use for Telegram work when Codex should validate Mini App HTTPS, bot configuration, auth, UI states, analytics, security, and rollback readiness.",
     "path": ".codex/skills/telegram-mini-app-release-gate",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1262,
-    "content_sha256": "d4c59f1c641957d146dfdcfc745f3b8096ab6496c6ab543228895f76beec2e83",
+    "skill_md_bytes": 1028,
+    "content_sha256": "49e8ca912c2b80dd73e84b69a90a720bf4a39ecc6998ac11fd61e7d328d66aa1",
     "instruction_tier": "workflow"
   },
   {
@@ -3231,12 +3384,21 @@
     "instruction_tier": "workflow"
   },
   {
+    "name": "texture-compression-device-matrix",
+    "description": "Validate KTX2/Basis and glTF texture compression on target rendering devices.",
+    "path": ".codex/skills/texture-compression-device-matrix",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 718,
+    "content_sha256": "ba9f4d8dcf9feb6e4448b3fbecb54cc67ae1090b26b53eee131dfd468aa2f4a2",
+    "instruction_tier": "workflow"
+  },
+  {
     "name": "three-vs-babylon-vs-model-viewer",
     "description": "Use when choosing 3D web technology for product viewers, configurators, immersive heroes, AR previews, games, dashboards, or visual storytelling.",
     "path": ".codex/skills/three-vs-babylon-vs-model-viewer",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1814,
-    "content_sha256": "7f000cccda899fbd84506bd3cef135ce88c876624eb388993fe227fe998f56da",
+    "skill_md_bytes": 1138,
+    "content_sha256": "1963577bba4301acb1e27e2f115fd418a7f4e98bc9ae6812623907b699f106b3",
     "instruction_tier": "workflow"
   },
   {
@@ -3271,8 +3433,8 @@
     "description": "Use this skill for topic clusters, hub/spoke planning, semantic coverage, editorial prioritization.",
     "path": ".codex/skills/topical-authority-cluster-builder",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1903,
-    "content_sha256": "7e95cb0b29a9d10fb40782e04a6dbc09a11b53101bc688a3cc27044f5d83c9aa",
+    "skill_md_bytes": 995,
+    "content_sha256": "1da0a88c13ed9d5b49db0073630e6bbf0b6d95310d86e08f2a5cdaf10482bb0d",
     "instruction_tier": "workflow"
   },
   {
@@ -3298,8 +3460,8 @@
     "description": "Use this skill for moderation UX, reports, appeals, safety queues, review workflows, user trust.",
     "path": ".codex/skills/trust-safety-content-moderation-ux",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1917,
-    "content_sha256": "ccdf44b01cc6acd83ae86105aad99e1d802aa344444563d3c34962491167db75",
+    "skill_md_bytes": 1004,
+    "content_sha256": "2edea24ba6319c7ab64d3e5b98e40ce1842662b9dc3063e3c17bf4bfffb07ac4",
     "instruction_tier": "workflow"
   },
   {
@@ -3307,8 +3469,8 @@
     "description": "Use when the user explicitly enters TURBO, mode TURBO, enable TURBO, or TURBO for this task, and Codex should optimize for maximum quality without normal token-cost restraint.",
     "path": ".codex/skills/turbo-mode-controller",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1805,
-    "content_sha256": "a8b8ccbf3320a3ab10d60a4ed94c019820f438f78204d22d080752eab303a351",
+    "skill_md_bytes": 1125,
+    "content_sha256": "8782b42544ce2d9d8d1aca5441e727737890739422bfb40574da15f1f8ad7b47",
     "instruction_tier": "workflow"
   },
   {
@@ -3316,8 +3478,8 @@
     "description": "Agent profile for TURBO mode multi-role critique when maximum result quality is more important than token economy.",
     "path": ".codex/skills/turbo-multi-agent-review",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1758,
-    "content_sha256": "f9cb9519af1d289e91ca192f609bd258a4354eece4c1eee8d58aad89109fa500",
+    "skill_md_bytes": 1065,
+    "content_sha256": "9f8e4747a400b5754f5fcf530d4a443ec43a7f0d6cf74e328f649d0a3c41dd1b",
     "instruction_tier": "workflow"
   },
   {
@@ -3325,8 +3487,8 @@
     "description": "Use in TURBO mode when Codex should compare top current solutions before choosing architecture, UI components, 3D stack, mobile stack, SEO/PPC strategy, or programming patterns.",
     "path": ".codex/skills/turbo-source-benchmark",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1820,
-    "content_sha256": "6bc34af2b5ebd3577c58707540eb25055db58b072650cc8e4377254a16fd602e",
+    "skill_md_bytes": 1093,
+    "content_sha256": "a361dd745ece6793c2afdbed1be000280db9019465380c93d834db2c6777a344",
     "instruction_tier": "workflow"
   },
   {
@@ -3334,8 +3496,8 @@
     "description": "Use in TURBO mode before finalizing implementation, architecture, UI/UX, 3D web, mobile, SEO/PPC/growth, or programming work.",
     "path": ".codex/skills/turbo-validation-gate",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1785,
-    "content_sha256": "6b0c7e81bcba990b3346ecd23a8ed619919a2e88367e33e4af881a038c650cbc",
+    "skill_md_bytes": 1048,
+    "content_sha256": "5d43dc619f6bd1317dfd52010d25e81452106d72737c09d4613f0f801ae1c8ef",
     "instruction_tier": "workflow"
   },
   {
@@ -3343,8 +3505,8 @@
     "description": "Use this skill for TypeScript strict mode, noImplicitAny, type narrowing, migration sequencing, typed APIs.",
     "path": ".codex/skills/typescript-strictness-migration",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1939,
-    "content_sha256": "e10efed3a11a9b74cb9c8cfdbd7008b1d60a4a9cbbc8cbb0c2d4cd8470a39496",
+    "skill_md_bytes": 1068,
+    "content_sha256": "add6e7be5a86dd8a1cc1416eb7918ec4f94be3deb41f3d14e6176a831ccaa6a5",
     "instruction_tier": "workflow"
   },
   {
@@ -3352,8 +3514,8 @@
     "description": "Use this skill for typographic scale, line height, measure, hierarchy, readability, responsive text.",
     "path": ".codex/skills/typography-readability-system",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1901,
-    "content_sha256": "c07ad10795bf8795d67455a705ed7a7e9d39fccfb41bbc9ee8bb7bc1feab5d04",
+    "skill_md_bytes": 1040,
+    "content_sha256": "4d7a017d257a2ab6700a41d76aceec77627210fd78e9c5c53e471e7e9a598de5",
     "instruction_tier": "workflow"
   },
   {
@@ -3361,8 +3523,8 @@
     "description": "Agent profile for art direction and premium UI/UX review across websites, apps, dashboards, 3D web experiences, and landing pages.",
     "path": ".codex/skills/ui-art-director-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1756,
-    "content_sha256": "2aa84e62904d3c7950325dae2690204e80463fee908434d0627f47ef89c28d7f",
+    "skill_md_bytes": 1050,
+    "content_sha256": "e407d11d317699554efd36dfb574ba3c2e4aa53e54d135eed203b68d654ac4a2",
     "instruction_tier": "workflow"
   },
   {
@@ -3370,8 +3532,8 @@
     "description": "Use for UI/UX and web design tasks when Codex should decide which component marketplace, registry, design connector, or local design system to use before implementation.",
     "path": ".codex/skills/ui-component-source-router",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1828,
-    "content_sha256": "67d671d7ce612394c5887679ebc48ba2a260c1ebfcc11e827655ef87e43edec2",
+    "skill_md_bytes": 1126,
+    "content_sha256": "5ec80db447675503c554fb731c53a673214be704f4604fb93bc73f45d1490fa9",
     "instruction_tier": "workflow"
   },
   {
@@ -3381,6 +3543,15 @@
     "has_openai_yaml": true,
     "skill_md_bytes": 1726,
     "content_sha256": "9b4b66b12c169e64e855ccd6d7a1d48b3ca7314ecde80cb555714be3a34c125a",
+    "instruction_tier": "workflow"
+  },
+  {
+    "name": "variable-font-loading-budget",
+    "description": "Optimize variable-font delivery without sacrificing language coverage or layout stability.",
+    "path": ".codex/skills/variable-font-loading-budget",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 716,
+    "content_sha256": "952a4feab2c42690950bcf68052d58179390840847d1cedcf716323cf4054820",
     "instruction_tier": "workflow"
   },
   {
@@ -3406,8 +3577,8 @@
     "description": "Use before finishing UI/UX, web design, mobile web, dashboard, landing page, or component work that changes visible interface behavior.",
     "path": ".codex/skills/visual-regression-design-gate",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1790,
-    "content_sha256": "e30afcc063194dcf9ce4a5376b55b8b61bab47d24a4d2da4886b4fe7e9d8506f",
+    "skill_md_bytes": 1070,
+    "content_sha256": "37957763e764de08a06441578ec1c91074b14be498f2a8bb35a2f2e17dcd8fff",
     "instruction_tier": "workflow"
   },
   {
@@ -3424,8 +3595,8 @@
     "description": "Use this skill for SSR, SSG, edge rendering, streaming, crawlability, speed, cache strategy.",
     "path": ".codex/skills/web-rendering-edge-ssr-seo",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1901,
-    "content_sha256": "d657f306a0bdf5a792494ed14a5a56a85a9b39680e3f5d44a86df19edab5001c",
+    "skill_md_bytes": 975,
+    "content_sha256": "cef411193b584198258ce475fdedb1856153fda8b0a2f8a2d21be4f2651d4104",
     "instruction_tier": "workflow"
   },
   {
@@ -3460,8 +3631,17 @@
     "description": "Agent profile for WebGL/WebGPU/Three.js/R3F performance review before shipping 3D web work.",
     "path": ".codex/skills/webgl-performance-agent",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1740,
-    "content_sha256": "72575694ad8663128d1f667e1bb70c4467a30281148c139a837dce523d2dba57",
+    "skill_md_bytes": 1023,
+    "content_sha256": "532061c790ed39502d42b0b03078c3d32125c7dd1e6ebcc03ab41b688fcb6a17",
+    "instruction_tier": "workflow"
+  },
+  {
+    "name": "webgl-resource-lifecycle",
+    "description": "Diagnose GPU resource retention and context-loss recovery in Three.js/WebGL scenes.",
+    "path": ".codex/skills/webgl-resource-lifecycle",
+    "has_openai_yaml": false,
+    "skill_md_bytes": 732,
+    "content_sha256": "3d2f36594708af9571ec0431686bd14f8bd7d8ecc5532a7220ee364d95dd769c",
     "instruction_tier": "workflow"
   },
   {
@@ -3496,8 +3676,8 @@
     "description": "Use for PPC work when Codex should audit Yandex Direct account structure, spend, delivery, conversion evidence, and safe optimization backlog.",
     "path": ".codex/skills/yandex-direct-account-audit",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1301,
-    "content_sha256": "65b2980d71e98a868bb2fee1a8ffc02b48ae6849575b7d2592a0de56fa5338b5",
+    "skill_md_bytes": 1043,
+    "content_sha256": "fbbdf27c31bb01c265d983bd7172476e6d5cdcbbdecfa5384cd84ca65755e4b8",
     "instruction_tier": "workflow"
   },
   {
@@ -3505,8 +3685,8 @@
     "description": "Use for PPC work when Codex should review Yandex Direct bidding, learning constraints, conversion volume, and guardrails before bid changes.",
     "path": ".codex/skills/yandex-direct-bid-strategy-review",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1309,
-    "content_sha256": "64d77675fc09be2f3fafd59198f94ba38ab658a77e6c262ba76cf6508ee0c676",
+    "skill_md_bytes": 1068,
+    "content_sha256": "ac0cab3da21dc811dc3ee77c4d95dafeecfc79efd8e28eff5fb47cda7c840017",
     "instruction_tier": "workflow"
   },
   {
@@ -3514,8 +3694,8 @@
     "description": "Use for PPC work when Codex should design Yandex Direct campaign, ad group, geo, audience, and naming architecture before build.",
     "path": ".codex/skills/yandex-direct-campaign-architecture",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1289,
-    "content_sha256": "72abea435705471f4614018105696b42de21b6064eef3827e69749112969af9e",
+    "skill_md_bytes": 1037,
+    "content_sha256": "1be929033835666f23a9b99500f7435b42b42c40f36ea2f6d2a92e7bb38772d2",
     "instruction_tier": "workflow"
   },
   {
@@ -3523,8 +3703,8 @@
     "description": "Use for PPC work when Codex should validate feeds, offer data, policy risk, and measurement for Yandex ecommerce campaigns.",
     "path": ".codex/skills/yandex-direct-feed-campaigns",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1265,
-    "content_sha256": "673780bc45884ea512f9b545319ed35d0f32f53119cead58b80744531ce290d5",
+    "skill_md_bytes": 973,
+    "content_sha256": "923a8aa5f5c616b7d01a829b6f8492ca0fe477dab5c3c848ae0cd56a13654de8",
     "instruction_tier": "workflow"
   },
   {
@@ -3532,8 +3712,8 @@
     "description": "Use for PPC work when Codex should validate Yandex Metrica goals, attribution, offline conversion evidence, and reporting joins.",
     "path": ".codex/skills/yandex-direct-goal-attribution",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1279,
-    "content_sha256": "22da4d84692118d3cf90d05bc4eef18155dad15d6c7281d0b7ad2d90db895bbe",
+    "skill_md_bytes": 1052,
+    "content_sha256": "76896da53000ea05888ba78c62876b5a25af9b3533892d341e0dc58baa47bcf0",
     "instruction_tier": "workflow"
   },
   {
@@ -3541,8 +3721,8 @@
     "description": "Use for PPC work when Codex should check Yandex Direct policy, landing, claims, legal, and moderation risk before publication.",
     "path": ".codex/skills/yandex-direct-policy-risk-gate",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1275,
-    "content_sha256": "ed5a1edcbc2a8177cdd42d16b3fa1b4f8fc2969dd432c87885492421dfd63a44",
+    "skill_md_bytes": 1009,
+    "content_sha256": "e7355431609ae4127c92f6572243c8b7dc13574ed320ca900baeb7f79c24ab6b",
     "instruction_tier": "workflow"
   },
   {
@@ -3550,8 +3730,8 @@
     "description": "Use for PPC work when Codex should analyze Yandex search queries, negatives, match intent, and preserve valuable traffic.",
     "path": ".codex/skills/yandex-direct-query-negative-mining",
     "has_openai_yaml": true,
-    "skill_md_bytes": 1275,
-    "content_sha256": "1b6b3c29d655c96fdf330c2fe4a3be460f9a3a9a58b45ef00299a019efbd302e",
+    "skill_md_bytes": 1010,
+    "content_sha256": "c0e33008beea86d03b3119931196726594879c3789911ee06f62af022109a288",
     "instruction_tier": "workflow"
   },
   {

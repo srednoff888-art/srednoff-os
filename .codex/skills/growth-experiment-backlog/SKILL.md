@@ -5,24 +5,12 @@ description: Use for growth strategy, CRO, SEO/PPC experiments, landing page tes
 
 # Growth Experiment Backlog
 
+## Task Decisions
+
+1. Record each hypothesis, evidence, expected decision, effort, owner and minimum useful sample.
+2. Rank by uncertainty reduction and business impact, not invented uplift percentages; archive inconclusive outcomes honestly.
+
 Use this skill for Growth work focused on rank growth experiments by impact, confidence, effort, risk, measurement quality, and dependency cost.
-
-## Workflow
-
-1. Restate the user outcome, target quality level, constraints, and definition of done.
-2. Inspect the current project before proposing code, design, sources, or dependencies.
-3. Use Srednoff OS mode/domain routing; if TURBO is active, compare top sources and run deeper critique.
-4. Prefer existing project conventions and proven sources over generic invention.
-5. Validate with the narrowest checks that prove the result, expanding validation for high-risk or TURBO work.
-6. Report facts, commands, source decisions, remaining risks, and exact next steps.
-
-## Checklist
-
-- Facts separated from assumptions.
-- Source/provenance reviewed when external code, components, assets, or advice are used.
-- Security, privacy, accessibility, performance, and rollback considered when relevant.
-- Token cost justified by concrete quality gain unless TURBO is explicitly active.
-- No broad context loading when a deterministic script or narrow reference is enough.
 
 ## Guardrails
 

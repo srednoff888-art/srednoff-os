@@ -5,13 +5,10 @@ description: Use for PPC work when Codex should design Yandex Direct campaign, a
 
 # yandex direct campaign architecture
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Model campaign/ad-group boundaries around actual product, geography, targeting and conversion goals.
+2. Validate EPK/v501 support and measurement before building; preserve history and avoid splitting solely for cosmetic naming.
 
 ## Domain Focus
 

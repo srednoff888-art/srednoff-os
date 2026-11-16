@@ -5,13 +5,10 @@ description: Use for SEO work when Codex should implement and validate structure
 
 # seo structured data validation
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Match markup to visible factual content and the exact supported rich-result requirements.
+2. Validate rendered JSON-LD and URL eligibility; valid syntax alone does not guarantee a rich result.
 
 ## Domain Focus
 

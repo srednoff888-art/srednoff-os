@@ -9,6 +9,7 @@ from collections import Counter, defaultdict
 import hashlib
 import importlib.util
 import json
+import os
 from pathlib import Path
 import re
 import shutil
@@ -18,6 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ROOT / ".codex" / "skills" if (ROOT / ".codex" / "skills").exists() else ROOT / "skills"
 POLICY = ROOT / ".codex" / "srednoff-os" / "skill-contracts.json"
 NAME = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")
+DISCOVERY_ANCHORS = {"github-research", "product-builder", "production-review", "quality-cost-skill-kernel"}
 LEGACY_LAYOUTS = {
     "agentic-seo-skill": "seo",
     "claude-imported/ai-sdk/upstream": "ai-sdk-upstream-reference",
@@ -31,7 +33,9 @@ def digest(path: Path) -> str:
 
 def resources(folder: Path) -> list[Path]:
     return [p for p in sorted(folder.rglob("*")) if p.is_file()
-            and p.suffix not in {".pyc", ".log"} and "__pycache__" not in p.parts]
+            and p.suffix not in {".pyc", ".log"} and "__pycache__" not in p.parts
+            and not any(".bak." in part for part in p.parts)
+            and p.name != "SKILL.srednoff-passive.md"]
 
 
 def save_json(path: Path, value: object) -> None:
@@ -75,10 +79,43 @@ def metadata(path: Path) -> tuple[dict, str]:
     return values, "\n".join(lines[end + 1:]).strip()
 
 
+def passive_library(skills: Path) -> Path | None:
+    state = skills.parent / "srednoff-os" / "discovery-profile.json"
+    if not state.is_file():
+        return None
+    data = json.loads(state.read_text(encoding="utf-8-sig"))
+    if data.get("mode") != "compact":
+        return None
+    library = state.parent / "library"
+    if library.is_symlink() or not library.resolve().is_relative_to(skills.parent.resolve()):
+        raise ValueError("passive library escapes installation metadata")
+    if not library.is_dir():
+        raise ValueError("compact discovery marker has no passive library")
+    return library
+
+
+def manifests(skills: Path) -> list[Path]:
+    def candidates(root):
+        return [p for p in sorted(root.rglob("SKILL.md")) if ".system" not in p.parts
+                and not any(".bak." in part for part in p.parts)]
+    active = candidates(skills)
+    passive = passive_library(skills)
+    if passive is None:
+        return active
+    # Local/private active workflows intentionally override the passive public copy.
+    active_names = set()
+    for path in active:
+        try:
+            active_names.add(metadata(path)[0]["name"])
+        except ValueError:
+            pass  # Leave malformed manifests visible to the validator.
+    return active + [p for p in candidates(passive) if metadata(p)[0]["name"] not in active_names]
+
+
 def index(skills: Path, base: Path | None = None) -> list[dict]:
     result = []
     names = set()
-    for path in sorted(skills.rglob("SKILL.md")):
+    for path in manifests(skills):
         if ".system" in path.parts or any(".bak." in part for part in path.parts):
             continue
         values, _ = metadata(path)
@@ -86,7 +123,7 @@ def index(skills: Path, base: Path | None = None) -> list[dict]:
             raise ValueError(f"duplicate skill name: {values['name']}")
         names.add(values["name"])
         folder = path.parent.resolve()
-        stored = folder.relative_to(base.resolve()).as_posix() if base else str(folder)
+        stored = os.path.relpath(folder, base.resolve()).replace("\\", "/") if base else str(folder)
         canonical = path.read_text(encoding="utf-8-sig").encode("utf-8")
         result.append({
             **values, "path": stored,
@@ -103,17 +140,18 @@ def index(skills: Path, base: Path | None = None) -> list[dict]:
 def audit(skills: Path) -> dict:
     rows, errors = [], []
     bodies = defaultdict(list)
-    for path in sorted(skills.rglob("SKILL.md")):
+    for path in manifests(skills):
         if ".system" in path.parts or any(".bak." in part for part in path.parts):
             continue
         try:
             values, body = metadata(path)
         except (ValueError, UnicodeError) as exc:
-            errors.append({"path": path.relative_to(skills).as_posix(), "issue": str(exc)})
+            errors.append({"path": path.relative_to(skills.parent).as_posix(), "issue": str(exc)})
             continue
         name, description = values["name"], values["description"]
         findings = []
-        relative_folder = path.parent.relative_to(skills).as_posix()
+        folder_base = skills if path.is_relative_to(skills) else passive_library(skills)
+        relative_folder = path.parent.relative_to(folder_base).as_posix()
         if path.parent.name != name and LEGACY_LAYOUTS.get(relative_folder) != name:
             errors.append({"skill": name, "issue": "directory/frontmatter mismatch"})
         if re.search(r"\[TODO|\[TBD|TODO:", body + description):
@@ -122,7 +160,11 @@ def audit(skills: Path) -> dict:
             findings.append("long-description")
         if "Trigger when the task involves" in description:
             findings.append("catchall-trigger")
-        if "Use this skill to handle " in body:
+        if any(line in body for line in (
+                "Use this skill to handle ",
+                "1. Clarify the user outcome, constraints, current stack, and definition of done.",
+                "1. Restate the user outcome, target quality level, constraints, and definition of done.",
+                "1. Confirm the business outcome, owner, source data, constraints, and success metric.")):
             findings.append("generic-template")
         if len(body.split()) > 1200:
             findings.append("large-entrypoint")
@@ -163,9 +205,12 @@ def selector_module(skills: Path):
     return module
 
 
-def select_profile(skills: Path, project: Path, brief: str, budget: str, maximum: int) -> dict:
+def select_profile(skills: Path, project: Path, brief: str, budget: str, maximum: int,
+                   max_entrypoint_chars: int | None = None) -> dict:
     if not 1 <= maximum <= 48:
         raise ValueError("max-skills must be between 1 and 48")
+    if max_entrypoint_chars is not None and max_entrypoint_chars < 1:
+        raise ValueError("max-entrypoint-chars must be positive")
     module = selector_module(skills)
     catalog = module.load_json(skills / "quality-cost-skill-kernel" / "references" / "core-3000-capabilities.json")
     skills_index = module.prepare_skill_index(index(skills))
@@ -186,23 +231,35 @@ def select_profile(skills: Path, project: Path, brief: str, budget: str, maximum
         candidates = [item for item in record.get("mapped_skills", []) if tiers.get(item["name"]) != "legacy-checklist"]
         if candidates:
             ordered.append(candidates[0])
-    chosen, seen = [], set()
+    chosen, seen, omitted = [], set(), []
+    folders = {item["name"]: Path(item["path"]) for item in skills_index}
+    used_chars = 0
     for skill in ordered:
         if skill["name"] in seen:
             continue
         seen.add(skill["name"])
+        chars = len(metadata(folders[skill["name"]] / "SKILL.md")[1])
+        if max_entrypoint_chars is not None and used_chars + chars > max_entrypoint_chars:
+            omitted.append(skill["name"])
+            continue
         chosen.append(skill["name"])
+        used_chars += chars
         if len(chosen) >= maximum:
             break
     fingerprints = {}
-    folders = {item["name"]: Path(item["path"]) for item in skills_index}
+    if not chosen:
+        raise ValueError("no workflow fits the requested profile; increase the entrypoint budget or refine the brief")
     for name in chosen:
         folder = folders[name]
         fingerprints[name] = {p.relative_to(folder).as_posix(): digest(p) for p in resources(folder)}
     return {
         "schema_version": 1, "budget": budget, "brief": brief,
         "max_skills": maximum, "selected": chosen, "files": fingerprints,
-        "source_paths": {name: folders[name].relative_to(skills.resolve()).as_posix() for name in chosen},
+        "entrypoint_chars": used_chars, "max_entrypoint_chars": max_entrypoint_chars,
+        "omitted_by_entrypoint_budget": omitted,
+        "budget_scope": "Selected SKILL.md bodies only; excludes discovery metadata, references and tool output. Not token accounting.",
+        "source_paths": {name: folders[name].relative_to(skills.resolve()).as_posix()
+                         if folders[name].is_relative_to(skills.resolve()) else str(folders[name]) for name in chosen},
         "catalog_sha256": hashlib.sha256(json.dumps(index(skills, skills), sort_keys=True).encode()).hexdigest(),
         "project_signals_sha256": hashlib.sha256(project_text.encode()).hexdigest(),
         "selection_is_cache": True, "model_switching": "not-performed",
@@ -214,6 +271,8 @@ def install_profile(skills: Path, project: Path, profile: dict) -> None:
     if not destination.resolve().is_relative_to(project.resolve()):
         raise ValueError("native skills destination escapes project")
     state_path = project / ".agent" / "skill-deployment.json"
+    if not state_path.resolve().is_relative_to(project.resolve()):
+        raise ValueError("ownership ledger escapes project")
     previous = json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {"files": {}}
     previous_files = previous.get("files", {})
     operations = []
@@ -223,17 +282,19 @@ def install_profile(skills: Path, project: Path, profile: dict) -> None:
         if source_path.is_symlink():
             raise ValueError(f"symlinked source skill: {name}")
         source = source_path.resolve()
-        if not source.is_relative_to(skills.resolve()):
+        passive = passive_library(skills)
+        if not source.is_relative_to(skills.resolve()) and not (passive and source.is_relative_to(passive.resolve())):
             raise ValueError(f"source escapes library: {name}")
         if source.is_symlink():
             raise ValueError(f"symlinked source skill: {name}")
-        actual = {p.relative_to(source).as_posix(): digest(p) for p in resources(source)}
+        source_resources = set(resources(source))
+        actual = {p.relative_to(source).as_posix(): digest(p) for p in source_resources}
         if actual != profile["files"].get(name):
             raise ValueError(f"stale source fingerprint: {name}")
         for path in sorted(source.rglob("*")):
             if path.is_symlink():
                 raise ValueError(f"symlinked source resource: {name}")
-            if not path.is_file() or path.suffix in {".pyc", ".log"} or "__pycache__" in path.parts:
+            if path not in source_resources:
                 continue
             relative = path.relative_to(source)
             target = destination / name / relative
@@ -267,6 +328,7 @@ def main() -> int:
     parser.add_argument("--brief", default="")
     parser.add_argument("--budget", choices=["lean", "balanced", "deep", "turbo"], default="balanced")
     parser.add_argument("--max-skills", type=int, default=12)
+    parser.add_argument("--max-entrypoint-chars", type=int)
     parser.add_argument("--install", action="store_true")
     args = parser.parse_args()
     try:
@@ -278,9 +340,12 @@ def main() -> int:
             project = args.project.resolve()
             if not project.is_dir():
                 raise ValueError("project directory does not exist")
-            result = select_profile(args.skills_root, project, args.brief, args.budget, args.max_skills)
+            result = select_profile(args.skills_root, project, args.brief, args.budget, args.max_skills,
+                                    args.max_entrypoint_chars)
             if args.install:
                 install_profile(args.skills_root, project, result)
+            if not args.output and not (project / ".agent").resolve().is_relative_to(project):
+                raise ValueError("profile output escapes project")
             args.output = args.output or project / ".agent" / "skill-profile.json"
         if args.check and args.output:
             if not args.output.exists() or json.loads(args.output.read_text(encoding="utf-8-sig")) != result:

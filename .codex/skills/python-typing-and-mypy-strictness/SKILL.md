@@ -5,6 +5,11 @@ description: "Use this skill for Python type hints, generics, Protocol, TypedDic
 
 # Python Typing And Mypy Strictness
 
+## Task Decisions
+
+1. Introduce strictness at a bounded module contract and replace unsafe Any flows with validated types.
+2. Keep runtime compatibility and regression tests; suppressions need a specific reason rather than silencing the whole checker.
+
 Use this skill for Programming tasks focused on Python type annotations, structural typing, and raising type-checker strictness without stalling delivery. For the TypeScript equivalent use `typescript-strictness-migration`; for whole-codebase version upgrades use `legacy-python-codebase-modernization`.
 
 ## Workflow

@@ -2,7 +2,8 @@ param(
     [string]$ProjectPath = ".",
     [AllowEmptyString()]
     [string]$Brief = "",
-    [switch]$Json
+    [switch]$Json,
+    [switch]$Save
 )
 
 $ErrorActionPreference = "Stop"
@@ -89,6 +90,20 @@ $Result = [ordered]@{
     should_ask_user = ($Questions.Count -gt 0)
     questions = @($Questions.ToArray() | Select-Object -First 5)
     assumptions = @($Assumptions.ToArray() | Select-Object -Unique)
+}
+
+if ($Save) {
+    $SaveRoot = (Resolve-Path -LiteralPath $ProjectPath -ErrorAction Stop).Path
+    $ContextDirectory = Join-Path $SaveRoot ".agent"
+    if (-not (Test-Path -LiteralPath $ContextDirectory)) { New-Item -ItemType Directory -Path $ContextDirectory | Out-Null }
+    $ContextPath = Join-Path $ContextDirectory "design-brief.json"
+    foreach ($Path in @($ContextDirectory, $ContextPath)) {
+        if ((Test-Path -LiteralPath $Path) -and ((Get-Item -LiteralPath $Path -Force).Attributes -band [IO.FileAttributes]::ReparsePoint)) {
+            throw "Design brief output must not follow a reparse point."
+        }
+    }
+    $Result["artifact"] = ".agent/design-brief.json"
+    $Result | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath $ContextPath -Encoding UTF8
 }
 
 if ($Json) {

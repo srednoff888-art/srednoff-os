@@ -32,6 +32,7 @@ jobs:
           python -m unittest discover -s tests -v
           python scripts/skill_catalog.py index --relative-base . --output .codex/skill-index.json --check
           python scripts/skill_catalog.py audit --output .codex/srednoff-os/skill-quality-report.json --check
+          python scripts/skill_maintenance.py inventory --checked-on 2026-11-16 --output .codex/srednoff-os/maintenance-inventory.json --check
 
       - name: PowerShell parse check
         shell: pwsh
@@ -114,6 +115,7 @@ jobs:
           python -m unittest discover -s tests -v
           python scripts/skill_catalog.py index --relative-base . --output .codex/skill-index.json --check
           python scripts/skill_catalog.py audit --output .codex/srednoff-os/skill-quality-report.json --check
+          python scripts/skill_maintenance.py inventory --checked-on 2026-11-16 --output .codex/srednoff-os/maintenance-inventory.json --check
 
       - name: Bash syntax
         shell: bash

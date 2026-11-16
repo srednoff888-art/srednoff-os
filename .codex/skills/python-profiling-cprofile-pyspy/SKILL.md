@@ -5,6 +5,11 @@ description: "Use this skill to profile Python CPU and wall-clock time with cPro
 
 # Python Profiling Cprofile Pyspy
 
+## Task Decisions
+
+1. Capture a reproducible workload and distinguish CPU time, wall time, IO wait and allocation growth.
+2. Compare equivalent profiles before/after; do not infer production impact from a single unrepresentative microbenchmark.
+
 Use this skill for Programming tasks focused on measuring where Python time actually goes. For the optimization strategy that follows the measurement use `performance-optimization`; for memory growth rather than CPU time use `memory-leak-detection-python`.
 
 ## Workflow

@@ -5,24 +5,12 @@ description: Use for 3D web or animated UI work involving shaders, postprocessin
 
 # Shader And Postprocessing Review
 
+## Task Decisions
+
+1. Inventory renderer/backend, materials, color management and pass dependencies before modifying effects.
+2. Compare output and frame cost with effects disabled, and verify fallback compatibility and resource disposal.
+
 Use this skill for 3D Web work focused on review shader, postprocessing, bloom, blur, particle, and material effects for value versus cost.
-
-## Workflow
-
-1. Restate the user outcome, target quality level, constraints, and definition of done.
-2. Inspect the current project before proposing code, design, sources, or dependencies.
-3. Use Srednoff OS mode/domain routing; if TURBO is active, compare top sources and run deeper critique.
-4. Prefer existing project conventions and proven sources over generic invention.
-5. Validate with the narrowest checks that prove the result, expanding validation for high-risk or TURBO work.
-6. Report facts, commands, source decisions, remaining risks, and exact next steps.
-
-## Checklist
-
-- Facts separated from assumptions.
-- Source/provenance reviewed when external code, components, assets, or advice are used.
-- Security, privacy, accessibility, performance, and rollback considered when relevant.
-- Token cost justified by concrete quality gain unless TURBO is explicitly active.
-- No broad context loading when a deterministic script or narrow reference is enough.
 
 ## Guardrails
 

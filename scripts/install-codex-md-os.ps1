@@ -1,3 +1,4 @@
+param([switch]$ReplacePersonalInstructions, [switch]$LegacyDiscovery)
 $ErrorActionPreference = "Stop"
 
 $Timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
@@ -5,6 +6,9 @@ $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $PackageRoot = (Resolve-Path (Join-Path $ScriptDir "..")).Path
 $CodexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME ".codex" }
 $TemplateDir = Join-Path $CodexHome "templates\codex-md-os"
+if ((Test-Path -LiteralPath (Join-Path $CodexHome "srednoff-os\discovery-profile.json")) -or (Test-Path -LiteralPath (Join-Path $CodexHome "srednoff-os\version.json"))) {
+    throw "Existing managed discovery profile found. Use update_installed_library.py with the previous public package; the fresh installer will not overwrite it."
+}
 
 function Backup-Path {
     param([Parameter(Mandatory=$true)][string]$Path)
@@ -57,6 +61,7 @@ function Copy-DirectoryContents {
 New-Item -ItemType Directory -Force -Path $CodexHome, $TemplateDir | Out-Null
 
 Copy-TemplateItem "AGENTS.md"
+Copy-TemplateItem ".srednoff-package.json"
 Copy-TemplateItem "code_review.md"
 Copy-TemplateItem ".agent"
 Copy-TemplateItem ".codex\skills"
@@ -85,13 +90,18 @@ Copy-DirectoryContents -Source (Join-Path $PackageRoot "agents") -Destination (J
 Copy-DirectoryContents -Source (Join-Path $PackageRoot "docs") -Destination (Join-Path $CodexHome "docs") -Label "docs"
 
 $GlobalAgents = Join-Path $CodexHome "AGENTS.md"
-Backup-Path -Path $GlobalAgents
-Copy-Item -LiteralPath (Join-Path $PackageRoot "AGENTS.md") -Destination $GlobalAgents -Force
+if (-not (Test-Path -LiteralPath $GlobalAgents) -or $ReplacePersonalInstructions) {
+    Backup-Path -Path $GlobalAgents
+    Copy-Item -LiteralPath (Join-Path $PackageRoot "AGENTS.md") -Destination $GlobalAgents -Force
+} elseif ((Get-Content -LiteralPath $GlobalAgents -Raw -Encoding UTF8) -notmatch 'Srednoff OS') {
+    Backup-Path -Path $GlobalAgents
+    Add-Content -LiteralPath $GlobalAgents -Encoding UTF8 -Value ("`n# Srednoff OS Managed Entrypoint`nBefore substantial work, read `"" + (Join-Path $TemplateDir "AGENTS.md") + "`" for Srednoff OS routing and maintenance. Preserve existing personal instructions.`n")
+}
 Write-Output "installed global: $GlobalAgents"
 
 $GlobalCodeReview = Join-Path $CodexHome "code_review.md"
 $LocalCodeReview = Join-Path $PackageRoot "code_review.md"
-if (Test-Path -LiteralPath $LocalCodeReview) {
+if ((Test-Path -LiteralPath $LocalCodeReview) -and (-not (Test-Path -LiteralPath $GlobalCodeReview) -or $ReplacePersonalInstructions)) {
     Backup-Path -Path $GlobalCodeReview
     Copy-Item -LiteralPath $LocalCodeReview -Destination $GlobalCodeReview -Force
     Write-Output "installed global: $GlobalCodeReview"
@@ -103,6 +113,11 @@ if (Test-Path -LiteralPath $SkillIndexScript -PathType Leaf) {
 }
 
 Write-Output ""
+if (-not $LegacyDiscovery) {
+    & python (Join-Path $PackageRoot "scripts\compact_skill_discovery.py") --package $PackageRoot --previous-package $PackageRoot --active-root (Join-Path $CodexHome "skills") --apply
+    if ($LASTEXITCODE -ne 0) { throw "Fresh compact discovery setup failed." }
+}
+
 Write-Output "Codex MD OS installed."
 Write-Output ""
 Write-Output "Add it to a project:"

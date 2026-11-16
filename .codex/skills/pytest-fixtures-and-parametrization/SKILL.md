@@ -5,6 +5,11 @@ description: "Use this skill for pytest structure and mechanics - fixture scope 
 
 # Pytest Fixtures And Parametrization
 
+## Task Decisions
+
+1. Keep fixture ownership/scope explicit and isolate mutable state between parametrized cases.
+2. Test teardown after assertion failures and fixture setup errors; avoid autouse fixtures that hide test dependencies.
+
 Use this skill for Programming tasks focused on how a pytest suite is organized and executed. For deciding which test layers a system needs use `test-architect-agent`; for randomized input generation use `property-based-testing`.
 
 ## Workflow

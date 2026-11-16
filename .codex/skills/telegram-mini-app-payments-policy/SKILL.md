@@ -5,13 +5,10 @@ description: Use for Telegram work when Codex should review Mini App payments, d
 
 # telegram mini app payments policy
 
-## Workflow
+## Task Decisions
 
-1. Confirm the business outcome, owner, source data, constraints, and success metric.
-2. Inspect the project and available account or analytics evidence before proposing changes.
-3. Use official documentation for current platform behavior and retain source provenance.
-4. Produce an evidence-backed plan with assumptions, dependencies, and measurable validation.
-5. Run only read-only diagnostics by default; gate external, paid, production, or publishing actions behind explicit approval.
+1. Check current Telegram policy and the actual digital/physical product/payment path before implementation.
+2. Use server-confirmed payment identity, idempotency and refund handling; never grant entitlements from a client success callback.
 
 ## Domain Focus
 

@@ -89,6 +89,8 @@ foreach ($Project in $ProjectPath) {
     $Root = Resolve-ProjectRoot -Path $Project
     $Summary.Projects++
     Write-Output "Project: $Root"
+    $CompactMarker = Join-Path $Root ".codex\srednoff-os\discovery-profile.json"
+    $CompactMode = (Test-Path -LiteralPath $CompactMarker) -and ((Get-Content -LiteralPath $CompactMarker -Raw | ConvertFrom-Json).mode -eq "compact")
 
     $Files = Get-ChildItem -LiteralPath $SourceSkills -Recurse -File
     foreach ($ExtraDirectory in @($SourceAgent, $SourceSrednoff, $SourceEvals, $SourceProfiles, $SourcePolicies, $SourceRegistry, $SourceIntegrations, $SourceBundles, $SourceAgents, $SourceDocs)) {
@@ -100,7 +102,7 @@ foreach ($Project in $ProjectPath) {
         $Files += Get-ChildItem -LiteralPath $SourceScripts -Recurse -File
     }
 
-    foreach ($File in $Files) {
+    foreach ($File in ($Files | Where-Object { $_.FullName -notmatch '__pycache__|\.bak\.|\.(pyc|log)$' })) {
         $Base = if ($File.FullName.StartsWith($SourceSkills, [System.StringComparison]::OrdinalIgnoreCase)) {
             $SourceSkills
         } elseif ($File.FullName.StartsWith($SourceAgent, [System.StringComparison]::OrdinalIgnoreCase)) {
@@ -153,6 +155,9 @@ foreach ($Project in $ProjectPath) {
             "scripts"
         }
         $Destination = Join-Path (Join-Path $Root $DestinationPrefix) $Relative
+        if ($CompactMode -and $Base -eq $SourceSkills -and ($Relative -split '[\\/]')[0] -notin @("github-research", "product-builder", "production-review", "quality-cost-skill-kernel")) {
+            $Destination = Join-Path (Join-Path $Root ".codex\srednoff-os\library") $Relative
+        }
         $Result = Copy-SafeFile -Source $File.FullName -Destination $Destination
         $Summary[$Result.Substring(0,1).ToUpper() + $Result.Substring(1)]++
     }
@@ -161,7 +166,7 @@ foreach ($Project in $ProjectPath) {
     $ProjectSkillIndex = Join-Path $Root ".codex\skill-index.json"
     $ProjectSkillIndexScript = Join-Path $Root "scripts\generate-skill-index.ps1"
     $TemplateSkillIndexScript = Join-Path $TemplateRoot "scripts\generate-skill-index.ps1"
-    $SkillIndexScript = if (Test-Path -LiteralPath $ProjectSkillIndexScript -PathType Leaf) { $ProjectSkillIndexScript } else { $TemplateSkillIndexScript }
+    $SkillIndexScript = if ($CompactMode) { $TemplateSkillIndexScript } elseif (Test-Path -LiteralPath $ProjectSkillIndexScript -PathType Leaf) { $ProjectSkillIndexScript } else { $TemplateSkillIndexScript }
     if ((Test-Path -LiteralPath $SkillIndexScript -PathType Leaf) -and (Test-Path -LiteralPath $ProjectSkillsRoot -PathType Container)) {
         if (Test-Path -LiteralPath $ProjectSkillIndex -PathType Leaf) {
             Copy-Item -LiteralPath $ProjectSkillIndex -Destination "$ProjectSkillIndex.bak.$Timestamp" -Force

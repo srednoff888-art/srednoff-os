@@ -5,6 +5,11 @@ description: "Use this skill for Python dependency management and release: pypro
 
 # Python Packaging Pyproject Poetry Uv
 
+## Task Decisions
+
+1. Keep build metadata, dependency groups, lockfile ownership and interpreter constraints aligned with the existing toolchain.
+2. Build/install the wheel in isolation and run the package entrypoint without relying on the source checkout.
+
 Use this skill for Programming tasks focused on dependency resolution, environment reproducibility, and package release. For scaffolding a new CLI package and its console scripts use `python-cli-package-builder`; this skill covers the dependency and publishing side of the same file.
 
 ## Workflow

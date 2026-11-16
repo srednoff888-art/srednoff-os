@@ -5,24 +5,12 @@ description: Use at the start of programming tasks across TypeScript, JavaScript
 
 # Language Runtime Router
 
+## Task Decisions
+
+1. Identify manifests, lockfiles, compiler versions and repository commands before choosing a language-specific workflow.
+2. Respect mixed-runtime boundaries and installed versions; never force an unrequested language or runtime migration.
+
 Use this skill for Programming work focused on detect project languages, runtimes, package managers, frameworks, test commands, and validation surface.
-
-## Workflow
-
-1. Restate the user outcome, target quality level, constraints, and definition of done.
-2. Inspect the current project before proposing code, design, sources, or dependencies.
-3. Use Srednoff OS mode/domain routing; if TURBO is active, compare top sources and run deeper critique.
-4. Prefer existing project conventions and proven sources over generic invention.
-5. Validate with the narrowest checks that prove the result, expanding validation for high-risk or TURBO work.
-6. Report facts, commands, source decisions, remaining risks, and exact next steps.
-
-## Checklist
-
-- Facts separated from assumptions.
-- Source/provenance reviewed when external code, components, assets, or advice are used.
-- Security, privacy, accessibility, performance, and rollback considered when relevant.
-- Token cost justified by concrete quality gain unless TURBO is explicitly active.
-- No broad context loading when a deterministic script or narrow reference is enough.
 
 ## Guardrails
 

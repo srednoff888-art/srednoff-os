@@ -5,6 +5,11 @@ description: "Use this skill for asyncio design and repair - TaskGroup, structur
 
 # Python Async Await Patterns
 
+## Task Decisions
+
+1. Use structured task ownership, bounded concurrency and cancellation-aware cleanup on the supported Python version.
+2. Reproduce starvation or leaked tasks with deterministic shutdown tests; async syntax does not make a blocking client nonblocking.
+
 Use this skill for Programming tasks focused on asyncio correctness: task lifetime, cancellation, structured concurrency, and event-loop starvation. For generic latency and throughput work use `performance-optimization`; for CPU profiling use `python-profiling-cprofile-pyspy`.
 
 ## Workflow

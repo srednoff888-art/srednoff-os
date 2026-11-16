@@ -1,0 +1,601 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-11-16",
+  "claim_boundary": "Repository metadata and source-family coverage are not independent task validation. Stars are discovery context, not quality scores.",
+  "sources": [
+    {
+      "id": "vercel-skills",
+      "repository": "vercel-labs/agent-skills",
+      "url": "https://github.com/vercel-labs/agent-skills",
+      "revision": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "license": null,
+      "stars": 34157,
+      "pushed_at": "2026-11-12T14:09:10Z",
+      "archived": false,
+      "checked_on": "2026-11-16",
+      "adoption": "Authored/adapted concepts only in this refresh; no upstream executable or prompt bundle imported.",
+      "license_scope": "Root metadata does not establish a repository-wide license; no wholesale copying."
+    },
+    {
+      "id": "impeccable",
+      "repository": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "revision": "d41d9860b0094dcb68030657da63461212835aaa",
+      "license": "Apache-2.0",
+      "stars": 111015,
+      "pushed_at": "2026-11-16T07:22:59Z",
+      "archived": false,
+      "checked_on": "2026-11-16",
+      "adoption": "Authored/adapted concepts only in this refresh; no upstream executable or prompt bundle imported.",
+      "license_scope": "Repository metadata; inspect actual files before copying."
+    },
+    {
+      "id": "expo",
+      "repository": "expo/skills",
+      "url": "https://github.com/expo/skills",
+      "revision": "dfdebcc6c4c1bf7a9471cefd6b6f39c7ba6c884d",
+      "license": "MIT",
+      "stars": 4164,
+      "pushed_at": "2026-11-15T22:20:40Z",
+      "archived": false,
+      "checked_on": "2026-11-16",
+      "adoption": "Authored/adapted concepts only in this refresh; no upstream executable or prompt bundle imported.",
+      "license_scope": "Repository metadata; inspect actual files before copying."
+    },
+    {
+      "id": "supabase",
+      "repository": "supabase/agent-skills",
+      "url": "https://github.com/supabase/agent-skills",
+      "revision": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+      "license": "MIT",
+      "stars": 3090,
+      "pushed_at": "2026-11-12T15:32:31Z",
+      "archived": false,
+      "checked_on": "2026-11-16",
+      "adoption": "Authored/adapted concepts only in this refresh; no upstream executable or prompt bundle imported.",
+      "license_scope": "Repository metadata; inspect actual files before copying."
+    },
+    {
+      "id": "google-ads-mcp",
+      "repository": "googleads/google-ads-mcp",
+      "url": "https://github.com/googleads/google-ads-mcp",
+      "revision": "cda852701fb5787dc4d79281f37da795ac09b97d",
+      "license": "Apache-2.0",
+      "stars": 1181,
+      "pushed_at": "2026-11-10T22:03:34Z",
+      "archived": false,
+      "checked_on": "2026-11-16",
+      "adoption": "Authored/adapted concepts only in this refresh; no upstream executable or prompt bundle imported.",
+      "license_scope": "Repository metadata; inspect actual files before copying."
+    },
+    {
+      "id": "playwright",
+      "repository": "microsoft/playwright-cli",
+      "url": "https://github.com/microsoft/playwright-cli",
+      "revision": "b21724888b8100b05ef8dee3a92f2bb03bf4dcde",
+      "license": "Apache-2.0",
+      "stars": 15229,
+      "pushed_at": "2026-11-11T17:10:44Z",
+      "archived": false,
+      "checked_on": "2026-11-16",
+      "adoption": "Authored/adapted concepts only in this refresh; no upstream executable or prompt bundle imported.",
+      "license_scope": "Repository metadata; inspect actual files before copying."
+    },
+    {
+      "id": "gltf-validator",
+      "repository": "KhronosGroup/glTF-Validator",
+      "url": "https://github.com/KhronosGroup/glTF-Validator",
+      "revision": "602c54043ba66856b2e68c40fdf2bced975cdb8a",
+      "license": "Apache-2.0",
+      "stars": 482,
+      "pushed_at": "2026-10-06T19:02:48Z",
+      "archived": false,
+      "checked_on": "2026-11-16",
+      "adoption": "Authored/adapted concepts only in this refresh; no upstream executable or prompt bundle imported.",
+      "license_scope": "Repository metadata; inspect actual files before copying."
+    },
+    {
+      "id": "three",
+      "repository": "mrdoob/three.js",
+      "url": "https://github.com/mrdoob/three.js",
+      "revision": "13a19c91434c8f6e5517790d10bf84fb69d462d5",
+      "license": "MIT",
+      "stars": 118597,
+      "pushed_at": "2026-11-16T09:37:09Z",
+      "archived": false,
+      "checked_on": "2026-11-16",
+      "adoption": "Authored/adapted concepts only in this refresh; no upstream executable or prompt bundle imported.",
+      "license_scope": "Repository metadata; inspect actual files before copying."
+    },
+    {
+      "id": "claude-os",
+      "repository": "srednoff888-art/srednoff-os-for-claude",
+      "url": "https://github.com/srednoff888-art/srednoff-os-for-claude",
+      "revision": "d529213735d5ed2cf4c8cb80c4c43ce5ce788263",
+      "license": "MIT",
+      "stars": 1,
+      "pushed_at": "2026-10-14T20:17:25Z",
+      "archived": false,
+      "checked_on": "2026-11-16",
+      "adoption": "Authored/adapted concepts only in this refresh; no upstream executable or prompt bundle imported.",
+      "license_scope": "Repository metadata; inspect actual files before copying."
+    },
+    {
+      "id": "anthropic-skills",
+      "repository": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "revision": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+      "license": null,
+      "stars": 195596,
+      "pushed_at": "2026-11-14T21:52:49Z",
+      "archived": false,
+      "checked_on": "2026-11-16",
+      "adoption": "Authored/adapted concepts only in this refresh; no upstream executable or prompt bundle imported.",
+      "license_scope": "Root metadata does not establish a repository-wide license; no wholesale copying."
+    },
+    {
+      "id": "openai-skills",
+      "repository": "openai/skills",
+      "url": "https://github.com/openai/skills",
+      "revision": "49f948faa9258a0c61caceaf225e179651397431",
+      "license": null,
+      "stars": 28764,
+      "pushed_at": "2026-10-28T17:31:41Z",
+      "archived": false,
+      "checked_on": "2026-11-16",
+      "adoption": "Authored/adapted concepts only in this refresh; no upstream executable or prompt bundle imported.",
+      "license_scope": "Root metadata does not establish a repository-wide license; no wholesale copying."
+    },
+    {
+      "id": "openai-authoring",
+      "url": "https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "openai-evals",
+      "url": "https://developers.openai.com/blog/eval-skills",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "native-skills",
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "react-rsc",
+      "url": "https://react.dev/reference/rsc/server-components",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "next-cache",
+      "url": "https://nextjs.org/docs/app/getting-started/revalidating",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "postgres",
+      "url": "https://www.postgresql.org/docs/current/sql-createindex.html",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "osv",
+      "url": "https://google.github.io/osv-scanner/",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "oidc",
+      "url": "https://docs.github.com/en/actions/concepts/security/openid-connect",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "dtcg",
+      "url": "https://www.designtokens.org/tr/2025.10/format/",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "wcag",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "fonts",
+      "url": "https://web.dev/articles/font-best-practices",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "blender",
+      "url": "https://docs.blender.org/manual/en/5.1/addons/import_export/scene_gltf2.html",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "blender-uv",
+      "url": "https://docs.blender.org/manual/en/5.1/modeling/meshes/editing/uv.html",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "blender-nodes",
+      "url": "https://docs.blender.org/manual/en/5.1/modeling/geometry_nodes/attributes_reference.html",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "gltf-loader",
+      "url": "https://threejs.org/docs/pages/GLTFLoader.html",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "gpu-lifecycle",
+      "url": "https://threejs.org/manual/pages/how-to-dispose-of-objects.html",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "google-conversions",
+      "url": "https://developers.google.com/google-ads/api/docs/conversions/overview",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "google-data-manager",
+      "url": "https://developers.google.com/data-manager/api",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "consent",
+      "url": "https://developers.google.com/tag-platform/security/guides/consent",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "yandex",
+      "url": "https://yandex.ru/dev/direct/doc/ru/changelog",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "telegram",
+      "url": "https://core.telegram.org/bots/webapps",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "search",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "mcp",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "meta",
+      "url": "https://developers.facebook.com/documentation/ads-commerce/conversions-api",
+      "checked_on": "2026-11-16",
+      "evidence": "Current primary documentation or primary search excerpt inspected; not a blanket compatibility certification.",
+      "adoption": "Authored task guidance; documentation is linked, not vendored."
+    },
+    {
+      "id": "python",
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "checked_on": "2026-11-16",
+      "evidence": "Primary documentation inspected; family reference, not exhaustive API/behavior validation.",
+      "adoption": "Link only; no vendored code."
+    },
+    {
+      "id": "node",
+      "url": "https://nodejs.org/en/about/previous-releases",
+      "checked_on": "2026-11-16",
+      "evidence": "Primary documentation inspected; family reference, not exhaustive API/behavior validation.",
+      "adoption": "Link only; no vendored code."
+    },
+    {
+      "id": "sqlalchemy",
+      "url": "https://www.sqlalchemy.org/",
+      "checked_on": "2026-11-16",
+      "evidence": "Primary documentation inspected; family reference, not exhaustive API/behavior validation.",
+      "adoption": "Link only; no vendored code."
+    },
+    {
+      "id": "docker",
+      "url": "https://docs.docker.com/compose/",
+      "checked_on": "2026-11-16",
+      "evidence": "Primary documentation inspected; family reference, not exhaustive API/behavior validation.",
+      "adoption": "Link only; no vendored code."
+    },
+    {
+      "id": "kubernetes",
+      "url": "https://kubernetes.io/docs/concepts/workloads/",
+      "checked_on": "2026-11-16",
+      "evidence": "Primary documentation inspected; family reference, not exhaustive API/behavior validation.",
+      "adoption": "Link only; no vendored code."
+    },
+    {
+      "id": "ethereum",
+      "url": "https://ethereum.org/developers/docs/",
+      "checked_on": "2026-11-16",
+      "evidence": "Primary documentation inspected; family reference, not exhaustive API/behavior validation.",
+      "adoption": "Link only; no vendored code."
+    },
+    {
+      "id": "apps-script",
+      "url": "https://developers.google.com/apps-script/overview",
+      "checked_on": "2026-11-16",
+      "evidence": "Primary documentation inspected; family reference, not exhaustive API/behavior validation.",
+      "adoption": "Link only; no vendored code."
+    },
+    {
+      "id": "openapi",
+      "url": "https://spec.openapis.org/oas/latest.html",
+      "checked_on": "2026-11-16",
+      "evidence": "Primary documentation inspected; family reference, not exhaustive API/behavior validation.",
+      "adoption": "Link only; no vendored code."
+    },
+    {
+      "id": "owasp",
+      "url": "https://asvs.owasp.org/",
+      "checked_on": "2026-11-16",
+      "evidence": "Primary documentation inspected; family reference, not exhaustive API/behavior validation.",
+      "adoption": "Link only; no vendored code."
+    },
+    {
+      "id": "firebase",
+      "url": "https://firebase.google.com/docs",
+      "checked_on": "2026-11-16",
+      "evidence": "Primary documentation inspected; family reference, not exhaustive API/behavior validation.",
+      "adoption": "Link only; no vendored code."
+    },
+    {
+      "id": "otel",
+      "url": "https://opentelemetry.io/docs/",
+      "checked_on": "2026-11-16",
+      "evidence": "Primary documentation inspected; family reference, not exhaustive API/behavior validation.",
+      "adoption": "Link only; no vendored code."
+    },
+    {
+      "id": "ad-copyright",
+      "url": "https://support.google.com/adspolicy/answer/6018015",
+      "checked_on": "2026-11-16",
+      "evidence": "Primary documentation inspected; family reference, not exhaustive API/behavior validation.",
+      "adoption": "Link only; no vendored code."
+    }
+  ],
+  "families": [
+    {
+      "pattern": "(3d|three|gltf|shader|blender|webgl|webgpu|r3f|texture|geometry|topology|gpu-)",
+      "sources": [
+        "three",
+        "blender",
+        "gltf-validator"
+      ]
+    },
+    {
+      "pattern": "(ui-|ux|design|typography|font|component|layout|theme|animation|accessib|storybook|brand)",
+      "sources": [
+        "dtcg",
+        "wcag",
+        "fonts"
+      ]
+    },
+    {
+      "pattern": "(react|frontend|nextjs|headless)",
+      "sources": [
+        "react-rsc",
+        "vercel-skills",
+        "next-cache"
+      ]
+    },
+    {
+      "pattern": "(seo|search-console|serp|sitemap|robots|crawler|hreflang|canonical|llms-txt|topical|content-decay)",
+      "sources": [
+        "search"
+      ]
+    },
+    {
+      "pattern": "(google-ads|ppc|paid-media|paid-search|attribution|consent|conversion)",
+      "sources": [
+        "google-conversions",
+        "google-data-manager",
+        "consent"
+      ]
+    },
+    {
+      "pattern": "(ads-mcp|google-ads-mcp)",
+      "sources": [
+        "google-ads-mcp"
+      ]
+    },
+    {
+      "pattern": "(meta-ads)",
+      "sources": [
+        "meta",
+        "consent"
+      ]
+    },
+    {
+      "pattern": "(yandex|placement-drift)",
+      "sources": [
+        "yandex"
+      ]
+    },
+    {
+      "pattern": "(telegram|mini-app)",
+      "sources": [
+        "telegram"
+      ]
+    },
+    {
+      "pattern": "(mobile|expo|app-store|android|ios|swiftui)",
+      "sources": [
+        "expo"
+      ]
+    },
+    {
+      "pattern": "(sql|database|postgres|migration)",
+      "sources": [
+        "postgres",
+        "supabase"
+      ]
+    },
+    {
+      "pattern": "(mcp|plugin)",
+      "sources": [
+        "mcp",
+        "native-skills"
+      ]
+    },
+    {
+      "pattern": "(agent|skill|eval|context|turbo|prompt|source-ranking|production-review|release)",
+      "sources": [
+        "openai-authoring",
+        "openai-evals"
+      ]
+    },
+    {
+      "pattern": "(dependency|supply-chain|security|secrets|oidc|ci-cd|github-actions)",
+      "sources": [
+        "oidc",
+        "osv"
+      ]
+    },
+    {
+      "pattern": "(playwright|browser|visual-regression)",
+      "sources": [
+        "playwright"
+      ]
+    },
+    {
+      "pattern": "(python|pytest|alembic|pydantic|sqlalchemy|structured-logging|memory-leak)",
+      "sources": [
+        "python",
+        "sqlalchemy"
+      ]
+    },
+    {
+      "pattern": "(docker|container)",
+      "sources": [
+        "docker"
+      ]
+    },
+    {
+      "pattern": "kubernetes",
+      "sources": [
+        "kubernetes"
+      ]
+    },
+    {
+      "pattern": "(crypto|defi|solidity|onchain|wallet|tokenomics)",
+      "sources": [
+        "ethereum"
+      ]
+    },
+    {
+      "pattern": "(google-workspace|clasp)",
+      "sources": [
+        "apps-script"
+      ]
+    },
+    {
+      "pattern": "(api-|integration-boundaries|realtime|background-jobs)",
+      "sources": [
+        "openapi"
+      ]
+    },
+    {
+      "pattern": "(auth-|tenant|file-upload|billing-|security|email-|secrets)",
+      "sources": [
+        "owasp"
+      ]
+    },
+    {
+      "pattern": "firebase",
+      "sources": [
+        "firebase"
+      ]
+    },
+    {
+      "pattern": "(observability|performance-|crash-reporting)",
+      "sources": [
+        "otel"
+      ]
+    },
+    {
+      "pattern": "(ads-|advertising-|growth-|keyword-query|performance-max)",
+      "sources": [
+        "google-conversions",
+        "consent"
+      ]
+    },
+    {
+      "pattern": "creative-rights",
+      "sources": [
+        "ad-copyright"
+      ]
+    },
+    {
+      "pattern": "(geo-ai|ai-search|internal-link|structured-data|log-file|content-brief)",
+      "sources": [
+        "search"
+      ]
+    },
+    {
+      "pattern": "(creative-|figma-|heuristic|iconography|interaction-state|internationalized|localization|site-|i18n|xr-ar|in-app-|push-notifications)",
+      "sources": [
+        "wcag",
+        "fonts"
+      ]
+    },
+    {
+      "pattern": "(node-|typescript|language-runtime)",
+      "sources": [
+        "node"
+      ]
+    },
+    {
+      "pattern": "(test-driven|property-based|mutation-testing|debugging-|code-simplification|codebase-map|documentation-adrs|git-workflow|github-research|product-builder|cross-language|monorepo|source-driven|spec-driven|source-first|no-ai-slop)",
+      "sources": [
+        "openai-authoring",
+        "openai-evals"
+      ]
+    }
+  ]
+}

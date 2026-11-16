@@ -14,6 +14,8 @@ from pathlib import Path
 
 
 IGNORE_DIRS = {
+    ".agents",
+    ".claude",
     ".git",
     ".codex",
     ".agent",
@@ -324,7 +326,51 @@ DOMAIN_SKILL_HINTS = {
     ],
 }
 
+WORKFLOW_DOMAINS = {
+    "react-server-client-boundary-audit": ["frontend-ui-engineering","backend-api-services","databases-storage","security-appsec","devops-ci-cd-release","package-release-supply-chain"],
+    "nextjs-cache-invalidation-contracts": ["frontend-ui-engineering","backend-api-services","databases-storage","security-appsec","devops-ci-cd-release","package-release-supply-chain"],
+    "postgres-lock-budget-migrations": ["databases-storage","data-engineering-analytics"],
+    "dependency-reachability-triage": ["security-appsec","package-release-supply-chain"],
+    "oidc-release-provenance": ["devops-ci-cd-release","package-release-supply-chain","security-appsec"],
+    "design-token-drift-ci": ["web-design-visual-ui","creative-design-systems","ui-ux-research-product","accessibility-inclusive-design","testing-qa-quality","browser-automation-scraping"],
+    "browser-annotation-feedback-loop": ["web-design-visual-ui","creative-design-systems","ui-ux-research-product","accessibility-inclusive-design","testing-qa-quality","browser-automation-scraping"],
+    "content-layout-stress-fixtures": ["web-design-visual-ui","creative-design-systems","ui-ux-research-product","accessibility-inclusive-design","testing-qa-quality","browser-automation-scraping"],
+    "variable-font-loading-budget": ["web-design-visual-ui","creative-design-systems","ui-ux-research-product","accessibility-inclusive-design","testing-qa-quality","browser-automation-scraping"],
+    "accessible-data-visualization": ["web-design-visual-ui","creative-design-systems","ui-ux-research-product","accessibility-inclusive-design","testing-qa-quality","browser-automation-scraping"],
+    "blender-procedural-geometry-contracts": ["three-d-web-xr-graphics"],
+    "blender-topology-uv-quality": ["three-d-web-xr-graphics"],
+    "gltf-validation-release-gate": ["three-d-web-xr-graphics"],
+    "texture-compression-device-matrix": ["three-d-web-xr-graphics"],
+    "webgl-resource-lifecycle": ["three-d-web-xr-graphics"],
+    "ads-mcp-tool-permission-diff": ["ppc-growth-marketing"],
+    "google-ads-offline-conversion-reconciliation": ["ppc-growth-marketing"],
+    "ppc-geo-placement-drift-audit": ["ppc-growth-marketing"],
+    "consent-signal-test-matrix": ["ppc-growth-marketing"],
+    "advertising-creative-rights-inventory": ["ppc-growth-marketing"],
+}
+
+
 DIRECT_SKILL_ALIASES = [
+    ("react-server-client-boundary-audit", ("rsc data boundary", "react server client boundary audit")),
+    ("nextjs-cache-invalidation-contracts", ("next.js cache consistency", "nextjs cache invalidation contracts")),
+    ("postgres-lock-budget-migrations", ("postgresql lock budget", "postgres lock budget migrations")),
+    ("dependency-reachability-triage", ("dependency reachability", "dependency reachability triage")),
+    ("oidc-release-provenance", ("oidc release provenance", "oidc release provenance")),
+    ("design-token-drift-ci", ("design token drift", "design token drift ci")),
+    ("browser-annotation-feedback-loop", ("browser annotation feedback", "browser annotation feedback loop")),
+    ("content-layout-stress-fixtures", ("layout stress fixtures", "content layout stress fixtures")),
+    ("variable-font-loading-budget", ("font loading budget", "variable font loading budget")),
+    ("accessible-data-visualization", ("accessible chart alternative", "accessible data visualization")),
+    ("blender-procedural-geometry-contracts", ("procedural geometry contract", "blender procedural geometry contracts")),
+    ("blender-topology-uv-quality", ("topology uv review", "blender topology uv quality")),
+    ("gltf-validation-release-gate", ("gltf validator release", "gltf validation release gate")),
+    ("texture-compression-device-matrix", ("texture device matrix", "texture compression device matrix")),
+    ("webgl-resource-lifecycle", ("gpu resource lifecycle", "webgl resource lifecycle")),
+    ("ads-mcp-tool-permission-diff", ("ads mcp tool drift", "ads mcp tool permission diff")),
+    ("google-ads-offline-conversion-reconciliation", ("offline conversion reconciliation", "google ads offline conversion reconciliation")),
+    ("ppc-geo-placement-drift-audit", ("ppc placement drift", "ppc geo placement drift audit")),
+    ("consent-signal-test-matrix", ("consent signal matrix", "consent signal test matrix")),
+    ("advertising-creative-rights-inventory", ("creative rights inventory", "advertising creative rights inventory")),
     ("react-composition-contracts", ("compound components", "boolean props", "react composition")),
     ("react-performance-investigation", ("react performance", "react waterfall", "nextjs performance")),
     ("playwright-cli-task-workflow", ("playwright cli", "playwright-cli")),
@@ -968,6 +1014,8 @@ def score_skill_mapping(record: dict, skill: dict, record_tokens: set[str]) -> i
     score = len(record_tokens & skill_tokens)
 
     skill_name = str(skill.get("_name_lower", skill.get("name", ""))).lower()
+    if skill_name in WORKFLOW_DOMAINS and record["domain_id"] not in WORKFLOW_DOMAINS[skill_name]:
+        return -100
     skill_path = str(skill.get("_path_lower", skill.get("path", ""))).lower()
     for priority, preferred_name in enumerate(DOMAIN_SKILL_HINTS.get(record["domain_id"], [])):
         if skill_name == preferred_name:
